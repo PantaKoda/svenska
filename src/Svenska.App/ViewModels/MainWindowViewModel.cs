@@ -19,17 +19,24 @@ public partial class MainWindowViewModel : ObservableObject
 
     public AppServices Services { get; }
 
+    public ReferenceViewModel Reference { get; }
+
     public string About => $"Svenska {AppUpdater.CurrentVersion} · Data: SALDO, Språkbanken (CC-BY 4.0)";
 
     public MainWindowViewModel(AppServices services)
     {
         Services = services;
+        Reference = new ReferenceViewModel(services);
         ShowHome();
     }
 
     public void ShowHome() => Page = new HomeViewModel(this);
 
-    public void ShowUnit(Unit unit) => Page = new UnitViewModel(this, unit);
+    public void ShowUnit(Unit unit)
+    {
+        Reference.SetLevel(unit.Level);
+        Page = new UnitViewModel(this, unit);
+    }
 
     public void ShowExercises(Unit unit) => Page = new PlayerViewModel(this, unit);
 

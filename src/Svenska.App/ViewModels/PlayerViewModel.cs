@@ -25,6 +25,7 @@ public partial class PlayerViewModel : ObservableObject
     private readonly int _total;
     private int _index;
     private int _rightFirstTime;
+    private GrammarPoint? _grammar;
 
     [ObservableProperty] private string _position = "";
     [ObservableProperty] private string _instruction = "";
@@ -38,8 +39,6 @@ public partial class PlayerViewModel : ObservableObject
     [ObservableProperty] private string _feedback = "";
     [ObservableProperty] private IReadOnlyList<WordMark> _expectedWords = [];
     [ObservableProperty] private string _grammarTitle = "";
-    [ObservableProperty] private string _grammarCard = "";
-    [ObservableProperty] private bool _showCard;
     [ObservableProperty] private bool _isFinished;
     [ObservableProperty] private string _summary = "";
     [ObservableProperty] private string _submitText = "Check";
@@ -79,7 +78,6 @@ public partial class PlayerViewModel : ObservableObject
         IsChecked = false;
         Feedback = "";
         ExpectedWords = [];
-        ShowCard = false;
         SubmitText = "Check";
         IsDictation = item.Type == ExerciseText.Dictation;
         Tokens = [];
@@ -118,10 +116,9 @@ public partial class PlayerViewModel : ObservableObject
                 break;
         }
 
-        var grammar = _main.Services.Course.Grammar.FirstOrDefault(g => item.Grammar.Contains(g.Id) && g.Card != null)
-                      ?? _main.Services.Course.Grammar.FirstOrDefault(g => item.Grammar.Contains(g.Id));
-        GrammarTitle = grammar?.Title ?? "";
-        GrammarCard = grammar?.Card?.TrimEnd() ?? "The card for this point is not written yet.";
+        // Link to the card of the newest grammar point the item practises.
+        _grammar = _main.Services.Course.Grammar.LastOrDefault(g => item.Grammar.Contains(g.Id));
+        GrammarTitle = _grammar?.Title ?? "";
     }
 
     /// <summary>Enter: check the answer, or go to the next item when it is already checked.</summary>
@@ -174,7 +171,11 @@ public partial class PlayerViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void ToggleCard() => ShowCard = !ShowCard;
+    private void ShowGrammar()
+    {
+        if (_grammar != null)
+            _main.Reference.ShowCard(_grammar.Id);
+    }
 
     [RelayCommand]
     private void Back() => _main.ShowUnit(_unit);

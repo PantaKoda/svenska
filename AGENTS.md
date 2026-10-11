@@ -123,6 +123,8 @@ A2:
     ett-word → add -et / -t: ett hus → huset, ett äpple → äpplet
 ```
 A card is at most ~15 lines: the rule, a table or pattern, 3–4 examples. No essays.
+Cards are shown in a fixed-width font in the reference panel, so tables can be lined up
+with spaces. Keep lines to 66 characters (the validator warns above that).
 
 ### tags.yaml – semantic tags
 A small, fixed list (about 20–30). Tags say what a word *is* so frames only combine

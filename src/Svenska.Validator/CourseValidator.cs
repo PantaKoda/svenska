@@ -14,6 +14,7 @@ namespace Svenska.Validator;
 public sealed class CourseValidator
 {
     private const int MaxCardLines = 15;
+    private const int MaxCardWidth = 66;   // what fits in the reference panel
     private const int MaxNewWords = 25;
     private const int MaxNewGrammar = 2;
 
@@ -90,8 +91,14 @@ public sealed class CourseValidator
 
             if (string.IsNullOrWhiteSpace(point.Card))
                 noCard.Add(point.Id);
-            else if (point.Card.TrimEnd().Split('\n').Length > MaxCardLines)
-                Warning(file, $"card of '{point.Id}' is longer than {MaxCardLines} lines");
+            else
+            {
+                var lines = point.Card.TrimEnd().Split('\n');
+                if (lines.Length > MaxCardLines)
+                    Warning(file, $"card of '{point.Id}' is longer than {MaxCardLines} lines");
+                if (lines.Any(l => l.TrimEnd().Length > MaxCardWidth))
+                    Warning(file, $"card of '{point.Id}' has lines wider than {MaxCardWidth} characters");
+            }
         }
         if (noCard.Count > 0)
             Warning(file, $"{noCard.Count} grammar points have no card yet: {string.Join(", ", noCard)}");

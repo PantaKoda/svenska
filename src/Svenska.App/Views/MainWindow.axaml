@@ -4,7 +4,7 @@
         xmlns:views="using:Svenska.App.Views"
         x:Class="Svenska.App.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Title="Svenska" Width="960" Height="720" MinWidth="560" MinHeight="480">
+        Title="Svenska" Width="1280" Height="780" MinWidth="560" MinHeight="480">
     <Window.DataTemplates>
         <DataTemplate DataType="vm:HomeViewModel"><views:HomeView /></DataTemplate>
         <DataTemplate DataType="vm:UnitViewModel"><views:UnitView /></DataTemplate>
@@ -16,11 +16,20 @@
                 BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
             <DockPanel>
                 <Button DockPanel.Dock="Right" Content="Update" Command="{Binding UpdateCommand}" />
+                <Button DockPanel.Dock="Right" Content="Reference (F1)" Margin="0,0,8,0"
+                        Command="{Binding Reference.ToggleCommand}" />
                 <TextBlock DockPanel.Dock="Right" Text="{Binding UpdateStatus}" VerticalAlignment="Center"
-                           Margin="12,0" FontSize="12" TextWrapping="Wrap" MaxWidth="480" />
+                           Margin="12,0" FontSize="12" TextWrapping="Wrap" MaxWidth="420" />
                 <TextBlock Text="{Binding About}" Opacity="0.6" FontSize="12" VerticalAlignment="Center" />
             </DockPanel>
         </Border>
+
+        <!-- The reference panel sits beside the page and never covers it. -->
+        <Border DockPanel.Dock="Right" Width="560" BorderThickness="1,0,0,0" IsVisible="{Binding Reference.IsOpen}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+            <views:ReferenceView x:Name="ReferencePanel" DataContext="{Binding Reference}" />
+        </Border>
+
         <ContentControl Content="{Binding Page}" />
     </DockPanel>
 </Window>

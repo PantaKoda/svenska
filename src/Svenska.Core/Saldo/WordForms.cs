@@ -37,6 +37,9 @@ public static class WordForms
         ["conj"] = "kn", ["subj"] = "sn", ["interj"] = "in", ["num"] = "nl", ["article"] = "al",
     };
 
+    /// <summary>"noun" → "nn". Null for an unknown part of speech.</summary>
+    public static string? SaldoCode(string pos) => SaldoPos.GetValueOrDefault(pos);
+
     /// <summary>The values allowed for `pos` in a theme pack.</summary>
     public static IEnumerable<string> PartsOfSpeech => SaldoPos.Keys;
 

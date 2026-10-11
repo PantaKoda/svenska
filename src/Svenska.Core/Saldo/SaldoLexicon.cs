@@ -17,6 +17,9 @@ public interface ISaldoLexicon
 
     /// <summary>All forms of a lemma, optionally limited to one SALDO part of speech.</summary>
     IReadOnlyList<SaldoForm> FormsOf(string lemma, string? pos = null);
+
+    /// <summary>All forms of one lemma, by the id that <see cref="SaldoForm.LemmaId"/> gives.</summary>
+    IReadOnlyList<SaldoForm> FormsOfLemma(long lemmaId);
 }
 
 /// <summary>Read-only access to data/saldo.db (tables lemma and form, built by tools/saldo_to_sqlite.py).</summary>
@@ -58,6 +61,9 @@ public sealed class SaldoLexicon : ISaldoLexicon, IDisposable
         pos == null
             ? Query($"{Select} WHERE l.word = $a ORDER BY l.id, f.rowid", lemma)
             : Query($"{Select} WHERE l.word = $a AND l.pos = $b ORDER BY l.id, f.rowid", lemma, pos);
+
+    public IReadOnlyList<SaldoForm> FormsOfLemma(long lemmaId) =>
+        Query($"{Select} WHERE l.id = $a ORDER BY f.rowid", lemmaId.ToString());
 
     private List<SaldoForm> Query(string sql, string a, string? b = null)
     {

@@ -1,127 +1,393 @@
-# Grammar points. Cards are written in M3; a point without a card is a validator warning.
+# Grammar points and their reference cards. A card is one screen: the rule, a pattern
+# or table, a few examples. Cards are shown in a fixed-width font, so columns line up.
 
 # ---- A1 ----
 - id: pron_subject
   level: A1
   title: "Subject pronouns (jag, du, han, hon, vi, ni, de)"
+  card: |
+    jag  I            vi  we
+    du   you (one)    ni  you (several)
+    han  he           de  they   (say "dom")
+    hon  she
+    hen  they (one person, no gender)
+    den / det  it     (den for en-words, det for ett-words)
+
+    The verb is the same for every person:
+    jag bor, du bor, hon bor, vi bor, de bor
+    Jag heter Sara. Vi bor i Göteborg. De kommer från Grekland.
 
 - id: present_tense
   level: A1
   title: "Present tense (talar, köper, bor)"
+  card: |
+    One form for all persons. Almost every verb ends in -r.
+
+    infinitive   present
+    tala         talar     -a verbs: add -r
+    köpa         köper     other -a verbs: -a becomes -er
+    bo           bor       short verbs: add -r
+
+    Irregular: vara → är, ha → har, göra → gör, veta → vet
+    Also for what is happening now:
+    Jag köper mjölk = I am buying milk.
+    Jag talar svenska. Hon köper bröd. Vi bor i Göteborg.
 
 - id: en_ett
   level: A1
   title: "En-words and ett-words (en bil, ett hus)"
+  card: |
+    Every noun is an en-word or an ett-word.
+    Learn each noun together with its article.
+
+    en bil, en kaka, en påse        (about three nouns out of four)
+    ett hus, ett äpple, ett kvitto
+
+    People and animals are mostly en: en man, en kvinna, en hund.
+    But: ett barn.
+    En or ett decides other words too:
+    bilen / huset · den / det · min / mitt · stor / stort
 
 - id: def_singular
   level: A1
   requires: [en_ett]
   title: "Definite form, singular (bilen, huset)"
   card: |
-    en-word → add -en / -n: en bil → bilen, en kaka → kakan
-    ett-word → add -et / -t: ett hus → huset, ett äpple → äpplet
+    Swedish has no word for "the". The noun gets an ending.
+
+    en-word    + en   en bil → bilen       en ost → osten
+               + n    en kaka → kakan      en påse → påsen
+    ett-word   + et   ett hus → huset      ett ägg → ägget
+               + t    ett äpple → äpplet   ett kvitto → kvittot
+
+    Only -n or -t when the word already ends in a vowel.
+
+    Var finns mjölken? Vad kostar brödet?
 
 - id: plural_indef
   level: A1
   requires: [en_ett]
   title: "Indefinite plural (bilar, kakor, hus)"
+  card: |
+    Five patterns. Learn the plural with the word.
+
+    -or   en-words in -a             en kaka → kakor
+    -ar   many en-words              en bil → bilar, en påse → påsar
+    -er   many en-words, loanwords   en telefon → telefoner
+    -n    ett-words in a vowel       ett äpple → äpplen
+    –     ett-words in a consonant   ett hus → hus, ett ägg → ägg
+
+    Irregular: en man → män, en bok → böcker, en hand → händer
+    två bilar, tre äpplen, fyra hus
 
 - id: v2_word_order
   level: A1
   requires: [present_tense]
   title: "The verb comes second (Idag köper jag mjölk)"
+  card: |
+    In a statement the verb is always in second place.
+
+    1            2        3
+    Jag          köper    mjölk idag.
+    Idag         köper    jag mjölk.
+    På måndag    jobbar   hon inte.
+
+    If something other than the subject comes first,
+    the subject moves to after the verb.
 
 - id: yes_no_question
   level: A1
   requires: [present_tense]
   title: "Yes/no questions (Har du en påse?)"
+  card: |
+    Start with the verb. The subject comes second.
+
+    Du har en påse.   →   Har du en påse?
+    Hon bor här.      →   Bor hon här?
+    Det finns ägg.    →   Finns det ägg?
+
+    Answer: Ja. / Nej.
+    After a question with inte, yes is "jo":
+    Har du inte kvittot? – Jo, här är det.
 
 - id: wh_question
   level: A1
   requires: [v2_word_order]
   title: "Question words (vad, var, när, vem, hur)"
+  card: |
+    Question word first, then the verb, then the subject.
+
+    vad   what      var    where        vart  where to
+    vem   who       när    when         hur   how
+    varför  why     vilken / vilket / vilka   which
+
+    Vad kostar osten?      Var finns mjölken?
+    När kommer bussen?     Hur mår du?
+    hur mycket = how much · hur många = how many
 
 - id: negation_inte
   level: A1
   requires: [present_tense]
   title: "Negation with inte"
+  card: |
+    inte comes after the verb.
+
+    Jag köper inte mjölk.
+    Hon är inte hemma.
+
+    In a question it comes after the subject:
+    Har du inte kvittot?
+    With two verbs it comes after the first:
+    Jag kan inte komma.
 
 - id: numbers_0_1000
   level: A1
   title: "Numbers 0–1000"
+  card: |
+    0 noll     1 en/ett   2 två     3 tre      4 fyra    5 fem
+    6 sex      7 sju      8 åtta    9 nio     10 tio    11 elva
+    12 tolv   13 tretton 14 fjorton 15 femton 16 sexton 17 sjutton
+    18 arton  19 nitton  20 tjugo   30 trettio 40 fyrtio 50 femtio
+    60 sextio 70 sjuttio 80 åttio   90 nittio
+    100 (ett) hundra     1000 (ett) tusen
+
+    As one word: 25 tjugofem, 87 åttiosju, 350 trehundrafemtio.
+    1 follows the noun: en krona, ett äpple.
+    tjugo is usually said "tjugi" or "tju": tjugofem = "tjufem".
 
 - id: time_clock
   level: A1
   requires: [numbers_0_1000]
   title: "Telling the time (Klockan är halv tre)"
+  card: |
+    Vad är klockan? – Klockan är … / Den är …
+
+    3.00  tre               3.30  halv fyra
+    3.05  fem över tre      3.35  fem över halv fyra
+    3.15  kvart över tre    3.45  kvart i fyra
+    3.25  fem i halv fyra   3.55  fem i fyra
+
+    halv fyra = half an hour BEFORE four (3.30).
+    Timetables use 24 hours: 15.30 = femton och trettio.
+    När går bussen? – Klockan kvart över åtta.
 
 - id: modal_vill_kan_ska
   level: A1
   requires: [present_tense]
   title: "Vill, kan, ska + infinitive"
+  card: |
+    vill, kan, ska + infinitive, without "att".
+
+    vill   want to        Jag vill betala med kort.
+    kan    can            Kan du hjälpa mig?
+    ska    am going to    Vi ska handla idag.
+    Also:  måste (must), får (may), behöver (need to)
+
+    inte comes after the modal: Jag kan inte komma.
+    vill ha + a thing = want: Vill du ha kvittot?
 
 - id: possessive_basic
   level: A1
   requires: [en_ett]
   title: "Possessives (min, mitt, mina; din, ditt, dina)"
+  card: |
+    The form follows the thing that is owned.
+
+             en-word   ett-word   plural
+    jag      min       mitt       mina
+    du       din       ditt       dina
+    vi       vår       vårt       våra
+    ni       er        ert        era
+    han → hans · hon → hennes · de → deras   (never change)
+
+    The noun stays indefinite: min bil, mitt hus, mina böcker.
+    Det är min påse. Var är ditt kort? Hennes bror bor här.
 
 - id: adjective_agreement_basic
   level: A1
   requires: [en_ett]
   title: "Adjective after är (stor, stort, stora)"
+  card: |
+    After är the adjective follows the noun.
+
+    en-word    Bilen är stor.       basic form
+    ett-word   Huset är stort.      + t
+    plural     Bilarna är stora.    + a
+
+    The same before an indefinite noun:
+    en stor bil · ett stort hus · två stora bilar
+    Special: bra → bra, bra · ny → nytt, nya · liten → litet, små
 
 # ---- A2 ----
 - id: past_tense
   level: A2
   requires: [present_tense]
   title: "Past tense (talade, köpte, bodde, gick)"
+  card: |
+    One form for all persons. Four groups:
+
+    1   tala → talade      -a verbs with -ar in the present: + de
+    2a  ringa → ringde     -er verbs: stem + de
+    2b  köpa → köpte       stem + te after k, p, s, t
+    3   bo → bodde         short verbs: + dde
+    4   irregular: gå → gick, vara → var, ha → hade,
+        se → såg, äta → åt, komma → kom, göra → gjorde
+
+    For a finished time: igår, förra veckan, 2020.
+    Igår köpte jag mjölk. Vi bodde i Malmö.
 
 - id: perfect_tense
   level: A2
   requires: [present_tense]
   title: "Perfect: har + supine (har talat, har köpt)"
+  card: |
+    har + supine: it happened before now.
+    The time is not said, or it is not over (idag, den här veckan).
+
+    tala → har talat     ringa → har ringt
+    köpa → har köpt      bo → har bott
+    irregular: gå → har gått, vara → har varit,
+               se → har sett, äta → har ätit
+
+    Jag har redan betalat. Har du varit i Stockholm?
+    inte comes after har: Jag har inte ätit.
+    With a finished time use the past: Igår betalade jag.
 
 - id: future_ska_kommer_att
   level: A2
   requires: [modal_vill_kan_ska]
   title: "Future: ska and kommer att"
+  card: |
+    ska + infinitive          a plan or decision
+        Jag ska handla i morgon.
+    kommer att + infinitive   what you think will happen
+        Det kommer att regna.
+    present tense + time      very common for fixed times
+        Bussen går klockan tre. Jag åker på fredag.
+    tänker + infinitive       intend to
+        Jag tänker flytta.
 
 - id: plural_def
   level: A2
   requires: [plural_indef, def_singular]
   title: "Definite plural (bilarna, kakorna, husen)"
+  card: |
+    Start from the indefinite plural.
+
+    -or, -ar, -er  + na   kakor → kakorna, bilar → bilarna,
+                          telefoner → telefonerna
+    -n             + a    äpplen → äpplena
+    (no ending)    + en   hus → husen, ägg → äggen
+
+    Irregular: män → männen, barn → barnen
+    Var är påsarna? Äpplena kostar 20 kronor.
 
 - id: adjective_agreement_full
   level: A2
   requires: [adjective_agreement_basic, def_singular]
   title: "Adjective before a noun (en stor bil, den stora bilen)"
+  card: |
+    indefinite   en stor bil · ett stort hus · två stora bilar
+    definite     den stora bilen · det stora huset · de stora bilarna
+
+    In the definite the adjective ends in -a, and you need both
+    den / det / de and the definite ending on the noun.
+
+    After a possessive: -a, but the noun stays indefinite:
+    min stora bil, mitt stora hus
+    liten: en liten bil, ett litet hus, den lilla bilen, små bilar
 
 - id: comparison
   level: A2
   requires: [adjective_agreement_basic]
   title: "Comparison (stor, större, störst)"
+  card: |
+    Regular: -are, -ast
+    dyr – dyrare – dyrast      billig – billigare – billigast
+
+    Irregular:
+    stor – större – störst     liten – mindre – minst
+    bra – bättre – bäst        dålig – sämre – sämst
+    gammal – äldre – äldst     ung – yngre – yngst
+
+    Long adjectives and those in -isk: mer, mest (mer praktisk).
+    än = than: Osten är dyrare än mjölken.
+    Definite: den billigaste påsen, det bästa brödet.
 
 - id: inversion_after_adverb
   level: A2
   requires: [v2_word_order]
   title: "Inversion after an adverbial (Sedan åker jag hem)"
+  card: |
+    When a time, a place or another adverbial starts the sentence,
+    the verb comes before the subject.
+
+    Jag åker hem sedan.      →   Sedan åker jag hem.
+    Vi handlar på lördag.    →   På lördag handlar vi.
+    Det finns mjölk här.     →   Här finns det mjölk.
+
+    Not after och, men, eller, för, så:
+    … och jag åker hem.
 
 - id: subordinate_clause_basic
   level: A2
   requires: [v2_word_order, negation_inte]
   title: "Subordinate clauses (att, eftersom, när; … att jag inte kan)"
+  card: |
+    A clause that starts with att, eftersom, när, om, som …
+
+    Order: subjunction + subject + inte + verb.
+    inte comes BEFORE the verb here.
+
+    Jag vet att han inte kommer.
+    Hon stannar hemma eftersom hon är sjuk.
+
+    If the subordinate clause comes first, the main clause
+    starts with its verb:
+    När jag kommer hem, äter jag.
 
 - id: imperative
   level: A2
   requires: [present_tense]
   title: "Imperative (Vänta! Kom hit!)"
+  card: |
+    present in -ar   same as the infinitive   vänta → Vänta!
+    present in -er   the stem, without -a     köpa → Köp!
+                                              ringa → Ring!
+    short verbs      same as the infinitive   gå → Gå!      ta → Ta!
+
+    Irregular: vara → Var!, komma → Kom!, göra → Gör!
+    Negative: Vänta inte!
+    Softer and more usual when you ask someone: Kan du vänta?
 
 - id: reflexive_basic
   level: A2
   requires: [pron_subject]
   title: "Reflexive verbs (jag tvättar mig, hon sätter sig)"
+  card: |
+    Some verbs need a pronoun that points back to the subject.
+
+    jag … mig     vi … oss
+    du … dig      ni … er
+    han / hon / den / det … sig     de … sig
+
+    Jag tvättar mig. Hon sätter sig. Vi skyndar oss.
+    Common: känna sig (feel), lägga sig (go to bed),
+            klä på sig (get dressed), lära sig (learn)
+    mig, dig, sig are said "mej, dej, sej".
+    inte comes after the pronoun: Jag känner mig inte bra.
 
 - id: preposition_time
   level: A2
   requires: [time_clock]
   title: "Prepositions of time (i, på, om, för … sedan)"
+  card: |
+    i + how long            Jag har bott här i två år.
+    på + how long, with inte   Jag har inte ätit på två dagar.
+    om + time from now      Bussen går om tio minuter.
+    för … sedan = ago       Jag kom för tre år sedan.
+
+    på + day                på måndag, på lördagar
+    i + month               i maj
+    på + season, part of day   på sommaren, på morgonen
+    klockan, no preposition    Vi ses klockan tre.

@@ -38,6 +38,8 @@ public sealed class FakeSaldo : ISaldoLexicon
     public IReadOnlyList<SaldoForm> Lookup(string form) =>
         _forms.Where(f => f.Form == form.Trim() || f.Form == form.Trim().ToLowerInvariant()).ToList();
 
+    public IReadOnlyList<SaldoForm> FormsOfLemma(long lemmaId) => _forms.Where(f => f.LemmaId == lemmaId).ToList();
+
     public IReadOnlyList<SaldoForm> FormsOf(string lemma, string? pos = null) =>
         _forms.Where(f => f.Lemma == lemma && (pos == null || f.Pos == pos)).ToList();
 }

@@ -80,13 +80,9 @@
 
                     <StackPanel Spacing="6" Margin="0,8,0,0"
                                 IsVisible="{Binding GrammarTitle, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
-                        <Button Command="{Binding ToggleCardCommand}" Focusable="False">
+                        <Button Command="{Binding ShowGrammarCommand}" Focusable="False" ToolTip.Tip="Open the grammar card">
                             <TextBlock Text="{Binding GrammarTitle, StringFormat='Grammar: {0}'}" />
                         </Button>
-                        <Border IsVisible="{Binding ShowCard}" Padding="12" CornerRadius="6" BorderThickness="1"
-                                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
-                            <TextBlock Text="{Binding GrammarCard}" TextWrapping="Wrap" />
-                        </Border>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

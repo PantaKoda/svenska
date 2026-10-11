@@ -10,7 +10,7 @@ namespace Svenska.App.Views;
 
 /// <summary>
 /// Keyboard for the exercise player: Enter = check / next, Ctrl+Space = play again,
-/// Ctrl+Shift+Space = play slowly, Alt+A / Alt+E / Alt+O = å / ä / ö (with Shift: Å / Ä / Ö).
+/// Ctrl+Shift+Space = play slowly. (å ä ö shortcuts are handled by the window.)
 /// </summary>
 public partial class PlayerView : UserControl
 {
@@ -66,32 +66,11 @@ public partial class PlayerView : UserControl
             vm.PlaySlowCommand.Execute(null);
             e.Handled = true;
         }
-        else if ((modifiers & ~KeyModifiers.Shift) == KeyModifiers.Alt && e.Key is Key.A or Key.E or Key.O)
-        {
-            var letter = e.Key switch { Key.A => "å", Key.E => "ä", _ => "ö" };
-            Insert(modifiers.HasFlag(KeyModifiers.Shift) ? letter.ToUpperInvariant() : letter);
-            e.Handled = true;
-        }
     }
 
     private void OnLetterClick(object? sender, RoutedEventArgs e)
     {
         if (sender is Button { Tag: string letter })
-            Insert(letter);
-    }
-
-    private void Insert(string letter)
-    {
-        if (AnswerBox.IsReadOnly)
-            return;
-        var text = AnswerBox.Text ?? "";
-        var start = Math.Min(AnswerBox.SelectionStart, AnswerBox.SelectionEnd);
-        var end = Math.Max(AnswerBox.SelectionStart, AnswerBox.SelectionEnd);
-        start = Math.Clamp(start, 0, text.Length);
-        end = Math.Clamp(end, start, text.Length);
-        AnswerBox.Text = text[..start] + letter + text[end..];
-        AnswerBox.Focus();
-        AnswerBox.CaretIndex = start + letter.Length;
-        AnswerBox.SelectionStart = AnswerBox.SelectionEnd = start + letter.Length;
+            SwedishLetters.Insert(AnswerBox, letter);
     }
 }

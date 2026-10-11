@@ -443,6 +443,22 @@ items:
   words:
   - sova
 - type: inflect
+  answer: gjorde
+  grammar:
+  - past_tense
+  lemma: göra
+  form: past
+  words:
+  - göra
+- type: inflect
+  answer: tränat
+  grammar:
+  - perfect_tense
+  lemma: träna
+  form: sup
+  words:
+  - träna
+- type: inflect
   answer: en onsdag
   grammar:
   - en_ett
@@ -451,58 +467,381 @@ items:
   words:
   - onsdag
 - type: inflect
-  answer: en lördag
-  grammar:
-  - en_ett
-  lemma: lördag
-  form: a
-  words:
-  - lördag
-- type: inflect
-  answer: middagar
-  grammar:
-  - plural_indef
-  lemma: middag
-  form: pl
-  words:
-  - middag
-- type: inflect
-  answer: söndagar
-  grammar:
-  - plural_indef
-  lemma: söndag
-  form: pl
-  words:
-  - söndag
-- type: inflect
-  answer: fredagar
-  grammar:
-  - plural_indef
-  lemma: fredag
-  form: pl
-  words:
-  - fredag
-- type: inflect
-  answer: gör
+  answer: jobbar
   grammar:
   - present_tense
-  lemma: göra
+  lemma: jobba
   form: pres
   words:
-  - göra
+  - jobba
 - type: inflect
-  answer: äter
+  answer: dagen
   grammar:
-  - present_tense
-  lemma: äta
-  form: pres
-  words:
-  - äta
-- type: inflect
-  answer: dagar
-  grammar:
-  - plural_indef
+  - def_singular
   lemma: dag
-  form: pl
+  form: def
   words:
   - dag
+- type: inflect
+  answer: handla
+  grammar:
+  - imperative
+  lemma: handla
+  form: imp
+  words:
+  - handla
+- type: inflect
+  answer: måndagen
+  grammar:
+  - def_singular
+  lemma: måndag
+  form: def
+  words:
+  - måndag
+- type: inflect
+  answer: torsdagar
+  grammar:
+  - plural_indef
+  lemma: torsdag
+  form: pl
+  words:
+  - torsdag
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to shower today?
+  answer: Duschar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: duscha
+  frame: gen-013
+  words:
+  - duscha
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can shower tomorrow.
+  answer: duscha
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: duscha
+  frame: gen-015
+  words:
+  - duscha
+- type: cloze
+  sv: När ___ du?
+  en: When do you shower?
+  answer: duschar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: duscha
+  frame: gen-014
+  words:
+  - duscha
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to shower tonight?
+  answer: duscha
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: duscha
+  frame: gen-016
+  words:
+  - duscha
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to shower today.
+  answer: duschar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: duscha
+  frame: gen-012
+  words:
+  - duscha
+- type: dictation
+  sv: Duschar du idag?
+  en: Are you going to shower today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - duscha
+- type: dictation
+  sv: Vi kan duscha imorgon.
+  en: We can shower tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - duscha
+- type: dictation
+  sv: När duschar du?
+  en: When do you shower?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - duscha
+- type: dictation
+  sv: Vill du duscha ikväll?
+  en: Do you want to shower tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - duscha
+- type: dictation
+  sv: Jag duschar inte idag.
+  en: I am not going to shower today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - duscha
+- type: word_order
+  sv: Duschar du idag?
+  en: Are you going to shower today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - duscha
+- type: word_order
+  sv: Vi kan duscha imorgon.
+  en: We can shower tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - duscha
+- type: word_order
+  sv: När duschar du?
+  en: When do you shower?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - duscha
+- type: word_order
+  sv: Vill du duscha ikväll?
+  en: Do you want to shower tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - duscha
+- type: word_order
+  sv: Jag duschar inte idag.
+  en: I am not going to shower today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - duscha
+- type: translate
+  sv: Duschar du idag?
+  en: Are you going to shower today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - duscha
+- type: translate
+  sv: Vi kan duscha imorgon.
+  en: We can shower tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - duscha
+- type: translate
+  sv: När duschar du?
+  en: When do you shower?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - duscha
+- type: translate
+  sv: Vill du duscha ikväll?
+  en: Do you want to shower tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - duscha
+- type: translate
+  sv: Jag duschar inte idag.
+  en: I am not going to shower today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - duscha
+- type: listen_choose
+  sv: Duschar du idag?
+  answer: Are you going to shower today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to shower today?
+  - We can shower tomorrow.
+  - When do you shower?
+  frame: gen-013
+  words:
+  - duscha
+- type: listen_choose
+  sv: Vi kan duscha imorgon.
+  answer: We can shower tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can shower tomorrow.
+  - Are you going to shower today?
+  - When do you shower?
+  frame: gen-015
+  words:
+  - duscha
+- type: listen_choose
+  sv: När duschar du?
+  answer: When do you shower?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you shower?
+  - Are you going to shower today?
+  - We can shower tomorrow.
+  frame: gen-014
+  words:
+  - duscha
+- type: listen_choose
+  sv: Vill du duscha ikväll?
+  answer: Do you want to shower tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to shower tonight?
+  - Are you going to shower today?
+  - We can shower tomorrow.
+  frame: gen-016
+  words:
+  - duscha
+- type: listen_choose
+  sv: Jag duschar inte idag.
+  answer: I am not going to shower today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to shower today.
+  - Are you going to shower today?
+  - We can shower tomorrow.
+  frame: gen-012
+  words:
+  - duscha
+- type: inflect
+  answer: klädde
+  grammar:
+  - past_tense
+  lemma: klä
+  form: past
+  words:
+  - klä
+- type: inflect
+  answer: vaknar
+  grammar:
+  - present_tense
+  lemma: vakna
+  form: pres
+  words:
+  - vakna
+- type: inflect
+  answer: lagt
+  grammar:
+  - perfect_tense
+  lemma: lägga
+  form: sup
+  words:
+  - lägga
+- type: inflect
+  answer: tvätta
+  grammar:
+  - imperative
+  lemma: tvätta
+  form: imp
+  words:
+  - tvätta
+- type: inflect
+  answer: månaderna
+  grammar:
+  - plural_def
+  lemma: månad
+  form: pl_def
+  words:
+  - månad
+- type: inflect
+  answer: en mat
+  grammar:
+  - en_ett
+  lemma: mat
+  form: a
+  words:
+  - mat
+- type: inflect
+  answer: tv:n
+  grammar:
+  - def_singular
+  lemma: tv
+  form: def
+  words:
+  - tv
+- type: inflect
+  answer: veckor
+  grammar:
+  - plural_indef
+  lemma: vecka
+  form: pl
+  words:
+  - vecka

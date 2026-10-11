@@ -1,0 +1,116 @@
+id: a2-07
+level: A2
+theme: halsa
+title: "Hos läkaren och på apoteket"
+task: "Understand what the doctor and the pharmacist tell you to do, and ask how to take your medicine."
+can_do: "I can follow simple instructions about my health and ask about my medicine."
+names: [Sara]
+
+new_words: [apotek, medicin, recept, gång, näsa, öra, öga, bröst, mun,
+            hosta, andas, ligga, sitta, visa, glömma, tillbaka, innan,
+            förkyld, allergisk, stark, djup]
+new_grammar: [imperative]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: läkare,    sv: "Hej! Sitt här. Hur länge har du hostat?",              en: "Hello! Sit here. How long have you been coughing?" }
+  - { speaker: du,        sv: "I en vecka. Jag är förkyld och har ont i bröstet.",    en: "For a week. I have a cold and my chest hurts." }
+  - { speaker: läkare,    sv: "Öppna munnen. Bra. Andas djupt och igen.",             en: "Open your mouth. Good. Breathe deeply, and again." }
+  - { speaker: läkare,    sv: "Du behöver en stark medicin. Ta den 3 gånger om dagen.", en: "You need a strong medicine. Take it 3 times a day." }
+  - { speaker: du,        sv: "Kan jag jobba?",                                       en: "Can I work?" }
+  - { speaker: läkare,    sv: "Nej. Vila hemma och drick mycket vatten. Kom tillbaka om en vecka.", en: "No. Rest at home and drink a lot of water. Come back in a week." }
+  - { speaker: apotekare, sv: "Hej! Har du ett recept?",                              en: "Hello! Do you have a prescription?" }
+  - { speaker: du,        sv: "Ja, här.",                                             en: "Yes, here." }
+  - { speaker: apotekare, sv: "Tack. Glöm inte: 3 gånger om dagen, efter maten.",     en: "Thanks. Don't forget: 3 times a day, after food." }
+
+exercises:
+  # the imperative of verbs you know
+  - { type: inflect, lemma: ta, form: imp, answer: ta, grammar: [imperative] }
+  - { type: inflect, lemma: komma, form: imp, answer: kom, grammar: [imperative] }
+  - { type: inflect, lemma: dricka, form: imp, answer: drick, grammar: [imperative] }
+  - { type: inflect, lemma: äta, form: imp, answer: ät, grammar: [imperative] }
+  - { type: inflect, lemma: vänta, form: imp, answer: vänta, grammar: [imperative] }
+
+  - { type: cloze, sv: "___ en tablett varje morgon.", hint: ta, answer: Ta, en: "Take one tablet every morning.", grammar: [imperative] }
+  - { type: cloze, sv: "___ mycket vatten.", hint: dricka, answer: Drick, en: "Drink a lot of water.", grammar: [imperative] }
+  - { type: cloze, sv: "___ här.", hint: sitta, answer: Sitt, en: "Sit here.", grammar: [imperative] }
+  - { type: cloze, sv: "___ inte medicinen!", hint: glömma, answer: Glöm, en: "Don't forget the medicine!", grammar: [imperative] }
+  - { type: cloze, sv: "___ tillbaka om en vecka.", hint: komma, answer: Kom, en: "Come back in a week.", grammar: [imperative] }
+
+  # instructions: what do they mean?
+  - { type: listen_choose, sv: "Ta medicinen 2 gånger om dagen.", en: "Take the medicine twice a day.",
+      options: ["Take the medicine twice a day.", "Take 2 tablets a day.", "Take the medicine for 2 days."],
+      answer: "Take the medicine twice a day." }
+  - { type: listen_choose, sv: "Ligg på rygg.", en: "Lie on your back.",
+      options: ["Lie on your back.", "Sit on the chair.", "Stand up."], answer: "Lie on your back." }
+  - { type: listen_choose, sv: "Ät inte innan du tar medicinen.", en: "Do not eat before you take the medicine.",
+      options: ["Do not eat before you take the medicine.", "Eat before you take the medicine.", "Do not take the medicine before you eat."],
+      answer: "Do not eat before you take the medicine." }
+  - { type: listen_choose, sv: "Visa receptet i kassan.", en: "Show the prescription at the checkout.",
+      options: ["Show the prescription at the checkout.", "Pay for the prescription at the checkout.", "The prescription is at the checkout."],
+      answer: "Show the prescription at the checkout." }
+
+  # listen for the number
+  - { type: numbers, sv: "Ta medicinen 4 gånger om dagen.", hint: "how many times a day", answer: "4",
+      en: "Take the medicine 4 times a day.", grammar: [imperative] }
+  - { type: numbers, sv: "Kom tillbaka om 10 dagar.", hint: "in how many days", answer: "10",
+      en: "Come back in 10 days.", grammar: [imperative, preposition_time] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag är förkyld och hostar mycket.", en: "I have a cold and I cough a lot." }
+  - { type: dictation, sv: "Har du ett recept?", en: "Do you have a prescription?" }
+  - { type: dictation, sv: "Jag har ont i ögat och i örat.", en: "My eye and my ear hurt." }
+  - { type: dictation, sv: "Öppna munnen och andas djupt.", en: "Open your mouth and breathe deeply.", grammar: [imperative] }
+
+  # build the sentence
+  - { type: word_order, sv: "Glöm inte att ta medicinen.", en: "Don't forget to take the medicine.", grammar: [imperative] }
+  - { type: word_order, sv: "Jag har hostat i en vecka.", en: "I have been coughing for a week.", grammar: [perfect_tense, preposition_time] }
+  - { type: word_order, sv: "Vila hemma och kom tillbaka på måndag.", en: "Rest at home and come back on Monday.", grammar: [imperative] }
+  - { type: word_order, sv: "Är du allergisk?", en: "Are you allergic?" }
+
+  # say it in Swedish
+  - { type: translate, en: "I have a cold.", sv: "Jag är förkyld." }
+  - { type: translate, en: "The medicine is strong.", sv: "Medicinen är stark." }
+  - { type: translate, en: "Don't work today.", sv: "Jobba inte idag.", accept: ["Arbeta inte idag."], grammar: [imperative] }
+  - { type: translate, en: "The pharmacy closes at 6.", sv: "Apoteket stänger klockan 6." }
+  - { type: translate, en: "My nose hurts.", sv: "Jag har ont i näsan." }
+
+  # words from earlier units
+  - { type: dictation, sv: "Jag känner mig alltid trött på morgonen.", en: "I always feel tired in the morning.", grammar: [reflexive_basic] }
+  - { type: word_order, sv: "Lägg dig tidigt och sov länge.", en: "Go to bed early and sleep for a long time.", grammar: [imperative, reflexive_basic] }
+  - { type: translate, en: "I woke up at 4 and coughed a lot.", sv: "Jag vaknade klockan 4 och hostade mycket.", grammar: [past_tense] }
+  - { type: cloze, sv: "Jag ___ duscha varje morgon.", hint: bruka, answer: brukar, en: "I usually shower every morning." }
+  - { type: translate, en: "He is often ill.", sv: "Han är ofta sjuk." }
+
+  - { type: dictation, sv: "Jag har feber och ont i halsen och huvudet.", en: "I have a fever and my throat and head hurt." }
+  - { type: word_order, sv: "Läkaren på vårdcentralen har en tid imorgon.", en: "The doctor at the health centre has a time tomorrow." }
+  - { type: translate, en: "Can you help me to the pharmacy?", sv: "Kan du hjälpa mig till apoteket?" }
+  - { type: translate, en: "Show your arm and your leg.", sv: "Visa armen och benet.", grammar: [imperative] }
+  - { type: dictation, sv: "Ät mycket frukt och fisk.", en: "Eat a lot of fruit and fish.", grammar: [imperative] }
+  - { type: cloze, sv: "Min mormor är förkyld och ___.", hint: ledsen, answer: ledsen, en: "My grandmother has a cold and is sad." }
+  - { type: translate, en: "I think that my stomach hurts because I ate the cake.", sv: "Jag tror att jag har ont i magen eftersom jag åt tårtan.",
+      grammar: [subordinate_clause_basic], review: true }
+
+# The task itself: at the pharmacy.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: apotekare, sv: "Hej! Kan jag hjälpa dig?", en: "Hello! Can I help you?" }
+    - { speaker: du, en: "Say that you need your medicine.", answer: "Jag behöver min medicin.",
+        accept: ["Jag behöver medicin.", "Jag har ett recept."] }
+    - { speaker: apotekare, sv: "Har du ett recept?", en: "Do you have a prescription?" }
+    - { speaker: du, en: "Say yes, here.", options: ["Ja, här.", "Ja, där igår.", "Nej, sitt här."], answer: "Ja, här." }
+    - { speaker: apotekare, sv: "Tack. Ta en tablett 3 gånger om dagen.", en: "Thanks. Take one tablet 3 times a day." }
+    - { speaker: du, en: "Ask if you should take it after food.",
+        options: ["Ska jag ta den efter maten?", "Ska jag tar den efter maten?", "Ska jag den ta efter maten?"],
+        answer: "Ska jag ta den efter maten?" }
+    - { speaker: apotekare, sv: "Ja, efter maten. Och drick mycket vatten.", en: "Yes, after food. And drink a lot of water." }
+    - { speaker: du, en: "Ask how long you should take it.", answer: "Hur länge ska jag ta den?",
+        accept: ["Hur länge ska jag ta medicinen?"] }
+    - { speaker: apotekare, sv: "I 10 dagar. Glöm inte!", en: "For 10 days. Don't forget!" }
+    - { speaker: du, en: "Say thanks and goodbye.", answer: "Tack! Hej då!", accept: ["Tack, hej då!"] }
+
+speaking_prompt: "Say aloud: what is wrong with you and for how long, and repeat the instructions you got."

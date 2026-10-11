@@ -24,3 +24,22 @@ words:
   - { lemma: spela,  pos: verb, level: A1, gloss: to play }
   - { lemma: se,     pos: verb, level: A1, gloss: "to see, to watch; past: saw; pp: seen" }
   - { lemma: gilla,  pos: verb, level: A1, gloss: to like }
+
+  # A2: trips and forecasts
+  - { lemma: snö,     pos: noun, gender: en,  level: A2, gloss: snow }
+  - { lemma: snöa,    pos: verb, level: A2, gloss: to snow }
+  - { lemma: blåsa,   pos: verb, level: A2, gloss: "to blow, to be windy" }
+  - { lemma: grad,    pos: noun, gender: en,  level: A2, gloss: degree }
+  - { lemma: moln,    pos: noun, gender: ett, level: A2, gloss: cloud }
+  - { lemma: utflykt, pos: noun, gender: en,  level: A2, gloss: "outing, trip" }
+  - { lemma: strand,  pos: noun, gender: en,  tags: [place], level: A2, gloss: beach, forms: { pl: stränder } }
+  - { lemma: skog,    pos: noun, gender: en,  tags: [place], level: A2, gloss: "forest, woods" }
+  - { lemma: sjö,     pos: noun, gender: en,  tags: [place], level: A2, gloss: lake }
+  - { lemma: hav,     pos: noun, gender: ett, level: A2, gloss: sea }
+  - { lemma: cykel,   pos: noun, gender: en,  level: A2, gloss: "bicycle, bike" }
+  - { lemma: cykla,   pos: verb, tags: [action_intrans], level: A2, gloss: "to cycle" }
+  - { lemma: vandra,  pos: verb, tags: [action_intrans], level: A2, gloss: "to hike" }
+  - { lemma: matsäck, pos: noun, gender: en,  level: A2, gloss: "packed lunch" }
+  - { lemma: passa,   pos: verb, level: A2, gloss: "to suit (passar det? = does that suit you?)" }
+  - { lemma: sommar,  pos: noun, gender: en,  level: A2, gloss: summer, forms: { def: sommaren, pl: somrar } }
+  - { lemma: vinter,  pos: noun, gender: en,  level: A2, gloss: winter }

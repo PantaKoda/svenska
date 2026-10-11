@@ -485,22 +485,6 @@ items:
   - torka
   - bord
 - type: inflect
-  answer: en trasa
-  grammar:
-  - en_ett
-  lemma: trasa
-  form: a
-  words:
-  - trasa
-- type: inflect
-  answer: toaletter
-  grammar:
-  - plural_indef
-  lemma: toalett
-  form: pl
-  words:
-  - toalett
-- type: inflect
   answer: hinken
   grammar:
   - def_singular
@@ -509,61 +493,592 @@ items:
   words:
   - hink
 - type: inflect
-  answer: golvet
+  answer: dammsugarna
   grammar:
-  - def_singular
+  - plural_def
+  lemma: dammsugare
+  form: pl_def
+  words:
+  - dammsugare
+- type: inflect
+  answer: en toalett
+  grammar:
+  - en_ett
+  lemma: toalett
+  form: a
+  words:
+  - toalett
+- type: inflect
+  answer: torka
+  grammar:
+  - imperative
+  lemma: torka
+  form: imp
+  words:
+  - torka
+- type: inflect
+  answer: golv
+  grammar:
+  - plural_indef
   lemma: golv
-  form: def
+  form: pl
   words:
   - golv
 - type: inflect
-  answer: en soppåse
+  answer: en trasa
   grammar:
   - en_ett
-  lemma: soppåse
+  lemma: trasa
   form: a
+  words:
+  - trasa
+- type: inflect
+  answer: soppåsen
+  grammar:
+  - def_singular
+  lemma: soppåse
+  form: def
   words:
   - soppåse
 - type: inflect
-  answer: moppen
+  answer: städa
   grammar:
-  - def_singular
-  lemma: mopp
-  form: def
-  words:
-  - mopp
-- type: inflect
-  answer: moppar
-  grammar:
-  - present_tense
-  lemma: moppa
-  form: pres
-  words:
-  - moppa
-- type: inflect
-  answer: städar
-  grammar:
-  - present_tense
+  - imperative
   lemma: städa
-  form: pres
+  form: imp
   words:
   - städa
+- type: cloze
+  sv: Jag ska torka ___.
+  en: I am going to wipe the mirror.
+  answer: spegeln
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  hint: spegel
+  frame: stad-01
+  words:
+  - torka
+  - spegel
+- type: cloze
+  sv: Vi tar inte ___.
+  en: We don't take the wastepaper basket.
+  answer: papperskorgen
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: papperskorg
+  frame: gen-011
+  words:
+  - ta
+  - papperskorg
+- type: cloze
+  sv: ___ är rent.
+  en: The washbasin is clean.
+  answer: Handfatet
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: handfat
+  frame: gen-003
+  words:
+  - handfat
+  - ren
+- type: cloze
+  sv: Jag tog ___.
+  en: I took the wastepaper basket.
+  answer: papperskorgen
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: papperskorg
+  frame: gen-021
+  words:
+  - ta
+  - papperskorg
+- type: cloze
+  sv: Kan du torka ___?
+  en: Can you wipe the mirror?
+  answer: spegeln
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: spegel
+  frame: stad-03
+  words:
+  - torka
+  - spegel
+- type: cloze
+  sv: Jag har redan dammsugit ___.
+  en: I have already vacuumed the washbasin.
+  answer: handfatet
+  grammar:
+  - perfect_tense
+  - def_singular
+  review: true
+  hint: handfat
+  frame: gen-020
+  words:
+  - dammsuga
+  - handfat
+- type: cloze
+  sv: Jag tar ___.
+  en: I take the wastepaper basket.
+  answer: papperskorgen
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: papperskorg
+  frame: gen-010
+  words:
+  - ta
+  - papperskorg
+- type: cloze
+  sv: ___ är ren.
+  en: The mirror is clean.
+  answer: Spegeln
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: spegel
+  frame: gen-003
+  words:
+  - spegel
+  - ren
+- type: dictation
+  sv: Kan du köpa papperskorgen?
+  en: Can you buy the wastepaper basket?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - köpa
+  - papperskorg
+- type: dictation
+  sv: Kan du moppa handfatet?
+  en: Can you mop the washbasin?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: stad-03
+  words:
+  - moppa
+  - handfat
+- type: dictation
+  sv: Jag ska moppa handfatet.
+  en: I am going to mop the washbasin.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - moppa
+  - handfat
+- type: dictation
+  sv: Jag har redan torkat spegeln.
+  en: I have already wiped the mirror.
+  grammar:
+  - perfect_tense
+  - def_singular
+  review: true
+  frame: gen-020
+  words:
+  - torka
+  - spegel
+- type: dictation
+  sv: Jag har inte papperskorgen.
+  en: I don't have the wastepaper basket.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - papperskorg
+- type: dictation
+  sv: Har du papperskorgen?
+  en: Do you have the wastepaper basket?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - papperskorg
+- type: dictation
+  sv: Spegeln är stor.
+  en: The mirror is big.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - spegel
+  - stor
+- type: dictation
+  sv: Jag ska torka handfatet.
+  en: I am going to wipe the washbasin.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - torka
+  - handfat
+- type: word_order
+  sv: Var är papperskorgen?
+  en: Where is the wastepaper basket?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - papperskorg
+- type: word_order
+  sv: Kan du dammsuga spegeln?
+  en: Can you vacuum the mirror?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: stad-03
+  words:
+  - dammsuga
+  - spegel
+- type: word_order
+  sv: Jag har redan moppat handfatet.
+  en: I have already mopped the washbasin.
+  grammar:
+  - perfect_tense
+  - def_singular
+  review: true
+  frame: gen-020
+  words:
+  - moppa
+  - handfat
+- type: word_order
+  sv: Har du en papperskorg?
+  en: Do you have a wastepaper basket?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - papperskorg
+- type: word_order
+  sv: Papperskorgen är där.
+  en: The wastepaper basket is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - papperskorg
+- type: word_order
+  sv: Handfatet är litet.
+  en: The washbasin is small.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - handfat
+  - liten
+- type: word_order
+  sv: Kan du moppa spegeln?
+  en: Can you mop the mirror?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: stad-03
+  words:
+  - moppa
+  - spegel
+- type: word_order
+  sv: Jag vill ha en papperskorg.
+  en: I want a wastepaper basket.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - papperskorg
+- type: translate
+  sv: Jag ska dammsuga handfatet.
+  en: I am going to vacuum the washbasin.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - dammsuga
+  - handfat
+- type: translate
+  sv: Jag har redan dammsugit spegeln.
+  en: I have already vacuumed the mirror.
+  grammar:
+  - perfect_tense
+  - def_singular
+  review: true
+  frame: gen-020
+  words:
+  - dammsuga
+  - spegel
+- type: translate
+  sv: Jag behöver en papperskorg.
+  en: I need a wastepaper basket.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - papperskorg
+- type: translate
+  sv: Spegeln är gammal.
+  en: The mirror is old.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - spegel
+  - gammal
+- type: translate
+  sv: Kan du dammsuga handfatet?
+  en: Can you vacuum the washbasin?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: stad-03
+  words:
+  - dammsuga
+  - handfat
+- type: translate
+  sv: Jag köper papperskorgen.
+  en: I buy the wastepaper basket.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - köpa
+  - papperskorg
+- type: translate
+  sv: Jag hittade papperskorgen.
+  en: I found the wastepaper basket.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - hitta
+  - papperskorg
+- type: translate
+  sv: Jag ska moppa spegeln.
+  en: I am going to mop the mirror.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - moppa
+  - spegel
+- type: listen_choose
+  sv: Jag har redan torkat handfatet.
+  answer: I have already wiped the washbasin.
+  grammar:
+  - perfect_tense
+  - def_singular
+  review: true
+  options:
+  - I have already wiped the washbasin.
+  - I have already vacuumed the washbasin.
+  - I have already mopped the washbasin.
+  frame: gen-020
+  words:
+  - torka
+  - handfat
+- type: listen_choose
+  sv: Vi köper inte papperskorgen.
+  answer: We don't buy the wastepaper basket.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't buy the wastepaper basket.
+  - We don't take the wastepaper basket.
+  - We don't find the wastepaper basket.
+  frame: gen-011
+  words:
+  - köpa
+  - papperskorg
+- type: listen_choose
+  sv: Spegeln är ny.
+  answer: The mirror is new.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  options:
+  - The mirror is new.
+  - The mirror is clean.
+  - The wastepaper basket is dirty.
+  frame: gen-003
+  words:
+  - spegel
+  - ny
+- type: listen_choose
+  sv: Kan du torka handfatet?
+  answer: Can you wipe the washbasin?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you wipe the washbasin?
+  - Can you wipe the mirror?
+  - Can you mop the washbasin?
+  frame: stad-03
+  words:
+  - torka
+  - handfat
+- type: listen_choose
+  sv: Kan du hitta papperskorgen?
+  answer: Can you find the wastepaper basket?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you find the wastepaper basket?
+  - Can you buy the wastepaper basket?
+  - Can you take the wastepaper basket?
+  frame: gen-009
+  words:
+  - hitta
+  - papperskorg
+- type: listen_choose
+  sv: Jag ska dammsuga spegeln.
+  answer: I am going to vacuum the mirror.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  options:
+  - I am going to vacuum the mirror.
+  - I am going to wipe the mirror.
+  - I am going to mop the washbasin.
+  frame: stad-01
+  words:
+  - dammsuga
+  - spegel
+- type: listen_choose
+  sv: Handfatet är smutsigt.
+  answer: The washbasin is dirty.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  options:
+  - The washbasin is dirty.
+  - The mirror is clean.
+  - The wastepaper basket is dirty.
+  frame: gen-003
+  words:
+  - handfat
+  - smutsig
+- type: listen_choose
+  sv: Jag hittar papperskorgen.
+  answer: I find the wastepaper basket.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I find the wastepaper basket.
+  - I take the wastepaper basket.
+  - I buy the wastepaper basket.
+  frame: gen-010
+  words:
+  - hitta
+  - papperskorg
 - type: inflect
-  answer: ett rengöringsmedel
+  answer: en handske
   grammar:
   - en_ett
-  lemma: rengöringsmedel
+  lemma: handske
   form: a
   words:
-  - rengöringsmedel
+  - handske
 - type: inflect
-  answer: rengöringsmedlen
+  answer: en papperskorg
   grammar:
-  - plural_def
-  lemma: rengöringsmedel
-  form: pl_def
+  - en_ett
+  lemma: papperskorg
+  form: a
   words:
-  - rengöringsmedel
+  - papperskorg
+- type: inflect
+  answer: en spegel
+  grammar:
+  - en_ett
+  lemma: spegel
+  form: a
+  words:
+  - spegel
+- type: inflect
+  answer: ett handfat
+  grammar:
+  - en_ett
+  lemma: handfat
+  form: a
+  words:
+  - handfat
+- type: inflect
+  answer: tömmer
+  grammar:
+  - present_tense
+  lemma: tömma
+  form: pres
+  words:
+  - tömma
 - type: inflect
   answer: rengöringsmedlet
   grammar:
@@ -573,10 +1088,18 @@ items:
   words:
   - rengöringsmedel
 - type: inflect
-  answer: rengöringsmedel
+  answer: papperskorgarna
   grammar:
-  - plural_indef
-  lemma: rengöringsmedel
-  form: pl
+  - plural_def
+  lemma: papperskorg
+  form: pl_def
   words:
-  - rengöringsmedel
+  - papperskorg
+- type: inflect
+  answer: speglarna
+  grammar:
+  - plural_def
+  lemma: spegel
+  form: pl_def
+  words:
+  - spegel

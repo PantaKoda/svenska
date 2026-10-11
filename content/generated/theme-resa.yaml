@@ -465,6 +465,62 @@ items:
   - spårvagn
   - hållplats
 - type: inflect
+  answer: väntat
+  grammar:
+  - perfect_tense
+  lemma: vänta
+  form: sup
+  words:
+  - vänta
+- type: inflect
+  answer: spårvagnen
+  grammar:
+  - def_singular
+  lemma: spårvagn
+  form: def
+  words:
+  - spårvagn
+- type: inflect
+  answer: biljetterna
+  grammar:
+  - plural_def
+  lemma: biljett
+  form: pl_def
+  words:
+  - biljett
+- type: inflect
+  answer: gick
+  grammar:
+  - past_tense
+  lemma: gå
+  form: past
+  words:
+  - gå
+- type: inflect
+  answer: spåret
+  grammar:
+  - def_singular
+  lemma: spår
+  form: def
+  words:
+  - spår
+- type: inflect
+  answer: tågen
+  grammar:
+  - plural_def
+  lemma: tåg
+  form: pl_def
+  words:
+  - tåg
+- type: inflect
+  answer: bussarna
+  grammar:
+  - plural_def
+  lemma: buss
+  form: pl_def
+  words:
+  - buss
+- type: inflect
   answer: stationen
   grammar:
   - def_singular
@@ -472,59 +528,507 @@ items:
   form: def
   words:
   - station
-- type: inflect
-  answer: väntar
+- type: cloze
+  sv: När ___ du?
+  en: When do you travel?
+  answer: reser
   grammar:
   - present_tense
-  lemma: vänta
-  form: pres
+  - wh_question
+  review: true
+  hint: resa
+  frame: gen-014
   words:
-  - vänta
-- type: inflect
-  answer: kvarten
-  grammar:
-  - def_singular
-  lemma: kvart
-  form: def
-  words:
-  - kvart
-- type: inflect
-  answer: biljetter
-  grammar:
-  - plural_indef
-  lemma: biljett
-  form: pl
-  words:
-  - biljett
-- type: inflect
-  answer: åker
+  - resa
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to stop today.
+  answer: stannar
   grammar:
   - present_tense
-  lemma: åka
+  - negation_inte
+  review: true
+  hint: stanna
+  frame: gen-012
+  words:
+  - stanna
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to travel tonight?
+  answer: resa
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: resa
+  frame: gen-016
+  words:
+  - resa
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to stop today?
+  answer: Stannar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: stanna
+  frame: gen-013
+  words:
+  - stanna
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can stop tomorrow.
+  answer: stanna
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: stanna
+  frame: gen-015
+  words:
+  - stanna
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to travel today?
+  answer: Reser
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: resa
+  frame: gen-013
+  words:
+  - resa
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to travel today.
+  answer: reser
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: resa
+  frame: gen-012
+  words:
+  - resa
+- type: cloze
+  sv: När ___ du?
+  en: When do you stop?
+  answer: stannar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: stanna
+  frame: gen-014
+  words:
+  - stanna
+- type: dictation
+  sv: Vi kan resa imorgon.
+  en: We can travel tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - resa
+- type: dictation
+  sv: Vill du stanna ikväll?
+  en: Do you want to stop tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - stanna
+- type: dictation
+  sv: När reser du?
+  en: When do you travel?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - resa
+- type: dictation
+  sv: Jag stannar inte idag.
+  en: I am not going to stop today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - stanna
+- type: dictation
+  sv: Vill du resa ikväll?
+  en: Do you want to travel tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - resa
+- type: dictation
+  sv: Stannar du idag?
+  en: Are you going to stop today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - stanna
+- type: dictation
+  sv: Vi kan stanna imorgon.
+  en: We can stop tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - stanna
+- type: dictation
+  sv: Reser du idag?
+  en: Are you going to travel today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - resa
+- type: word_order
+  sv: Jag reser inte idag.
+  en: I am not going to travel today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - resa
+- type: word_order
+  sv: När stannar du?
+  en: When do you stop?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - stanna
+- type: word_order
+  sv: Vi kan resa imorgon.
+  en: We can travel tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - resa
+- type: word_order
+  sv: Vill du stanna ikväll?
+  en: Do you want to stop tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - stanna
+- type: word_order
+  sv: När reser du?
+  en: When do you travel?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - resa
+- type: word_order
+  sv: Jag stannar inte idag.
+  en: I am not going to stop today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - stanna
+- type: word_order
+  sv: Vill du resa ikväll?
+  en: Do you want to travel tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - resa
+- type: word_order
+  sv: Stannar du idag?
+  en: Are you going to stop today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - stanna
+- type: translate
+  sv: Vi kan stanna imorgon.
+  en: We can stop tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - stanna
+- type: translate
+  sv: Reser du idag?
+  en: Are you going to travel today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - resa
+- type: translate
+  sv: Jag reser inte idag.
+  en: I am not going to travel today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - resa
+- type: translate
+  sv: När stannar du?
+  en: When do you stop?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - stanna
+- type: translate
+  sv: Vi kan resa imorgon.
+  en: We can travel tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - resa
+- type: translate
+  sv: Vill du stanna ikväll?
+  en: Do you want to stop tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - stanna
+- type: translate
+  sv: När reser du?
+  en: When do you travel?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - resa
+- type: translate
+  sv: Jag stannar inte idag.
+  en: I am not going to stop today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - stanna
+- type: listen_choose
+  sv: Vill du resa ikväll?
+  answer: Do you want to travel tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to travel tonight?
+  - Do you want to stop tonight?
+  - When do you travel?
+  frame: gen-016
+  words:
+  - resa
+- type: listen_choose
+  sv: Stannar du idag?
+  answer: Are you going to stop today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to stop today?
+  - Are you going to travel today?
+  - I am not going to stop today.
+  frame: gen-013
+  words:
+  - stanna
+- type: listen_choose
+  sv: Vi kan stanna imorgon.
+  answer: We can stop tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can stop tomorrow.
+  - We can travel tomorrow.
+  - I am not going to stop today.
+  frame: gen-015
+  words:
+  - stanna
+- type: listen_choose
+  sv: Reser du idag?
+  answer: Are you going to travel today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to travel today?
+  - Are you going to stop today?
+  - When do you travel?
+  frame: gen-013
+  words:
+  - resa
+- type: listen_choose
+  sv: Jag reser inte idag.
+  answer: I am not going to travel today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to travel today.
+  - I am not going to stop today.
+  - When do you travel?
+  frame: gen-012
+  words:
+  - resa
+- type: listen_choose
+  sv: När stannar du?
+  answer: When do you stop?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you stop?
+  - When do you travel?
+  - I am not going to stop today.
+  frame: gen-014
+  words:
+  - stanna
+- type: listen_choose
+  sv: Vi kan resa imorgon.
+  answer: We can travel tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can travel tomorrow.
+  - We can stop tomorrow.
+  - When do you travel?
+  frame: gen-015
+  words:
+  - resa
+- type: listen_choose
+  sv: Vill du stanna ikväll?
+  answer: Do you want to stop tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to stop tonight?
+  - Do you want to travel tonight?
+  - I am not going to stop today.
+  frame: gen-016
+  words:
+  - stanna
+- type: inflect
+  answer: res
+  grammar:
+  - imperative
+  lemma: resa
+  form: imp
+  words:
+  - resa
+- type: inflect
+  answer: en information
+  grammar:
+  - en_ett
+  lemma: information
+  form: a
+  words:
+  - information
+- type: inflect
+  answer: avgången
+  grammar:
+  - def_singular
+  lemma: avgång
+  form: def
+  words:
+  - avgång
+- type: inflect
+  answer: stannar
+  grammar:
+  - present_tense
+  lemma: stanna
   form: pres
   words:
-  - åka
+  - stanna
 - type: inflect
-  answer: tåget
+  answer: hunnit
   grammar:
-  - def_singular
-  lemma: tåg
-  form: def
+  - perfect_tense
+  lemma: hinna
+  form: sup
   words:
-  - tåg
+  - hinna
 - type: inflect
-  answer: bussen
+  answer: missade
   grammar:
-  - def_singular
-  lemma: buss
-  form: def
+  - past_tense
+  lemma: missa
+  form: past
   words:
-  - buss
+  - missa
 - type: inflect
-  answer: spårvagnar
+  answer: problemen
   grammar:
-  - plural_indef
-  lemma: spårvagn
-  form: pl
+  - plural_def
+  lemma: problem
+  form: pl_def
   words:
-  - spårvagn
+  - problem
+- type: inflect
+  answer: reser
+  grammar:
+  - present_tense
+  lemma: resa
+  form: pres
+  words:
+  - resa

@@ -1,0 +1,121 @@
+id: a2-01
+level: A2
+theme: jag
+title: "Min historia"
+task: "Tell someone your story: where you were born, what you did before and when you came to Sweden."
+can_do: "I can talk about my past: where I lived, studied and worked, and for how long."
+names: [Sara, Grekland, Sverige, Stockholm, Göteborg]
+
+new_words: [igår, förra, vecka, månad, först, efter, länge, hit, här, att,
+            född, flytta, studera, träffa, land, stad, universitet, språk,
+            svår, lätt, mycket, lite]
+new_grammar: [past_tense, preposition_time]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Var är du född?",                                     en: "Where were you born?" }
+  - { speaker: du,   sv: "Jag är född i Grekland, i en liten stad.",            en: "I was born in Greece, in a small town." }
+  - { speaker: Sara, sv: "När kom du till Sverige?",                            en: "When did you come to Sweden?" }
+  - { speaker: du,   sv: "Jag kom hit för 3 år sedan.",                         en: "I came here 3 years ago." }
+  - { speaker: Sara, sv: "Vad gjorde du i Grekland?",                           en: "What did you do in Greece?" }
+  - { speaker: du,   sv: "Jag studerade på universitetet i 4 år. Sedan arbetade jag som lärare.", en: "I studied at university for 4 years. Then I worked as a teacher." }
+  - { speaker: Sara, sv: "Var det svårt att flytta?",                           en: "Was it hard to move?" }
+  - { speaker: du,   sv: "Ja, först var det svårt. Jag talade inte svenska.",   en: "Yes, at first it was hard. I did not speak Swedish." }
+  - { speaker: Sara, sv: "Men nu talar du mycket bra svenska!",                 en: "But now you speak very good Swedish!" }
+  - { speaker: du,   sv: "Tack! Jag läste svenska varje dag i 2 år.",           en: "Thanks! I studied Swedish every day for 2 years." }
+  - { speaker: Sara, sv: "Var bodde du först?",                                 en: "Where did you live at first?" }
+  - { speaker: du,   sv: "Först bodde jag i Stockholm i 6 månader. Efter det flyttade jag till Göteborg.", en: "First I lived in Stockholm for 6 months. After that I moved to Gothenburg." }
+
+exercises:
+  # the past of verbs you know
+  - { type: inflect, lemma: komma, form: past, answer: kom, grammar: [past_tense] }
+  - { type: inflect, lemma: vara, form: past, answer: var, grammar: [past_tense] }
+  - { type: inflect, lemma: ha, form: past, answer: hade, grammar: [past_tense] }
+  - { type: inflect, lemma: göra, form: past, answer: gjorde, grammar: [past_tense] }
+  - { type: inflect, lemma: bo, form: past, answer: bodde, grammar: [past_tense] }
+  - { type: inflect, lemma: jobba, form: past, answer: jobbade, grammar: [past_tense] }
+  - { type: inflect, lemma: läsa, form: past, answer: läste, grammar: [past_tense] }
+
+  - { type: cloze, sv: "Igår ___ jag till jobbet klockan 7.", hint: gå, answer: gick, en: "Yesterday I went to work at 7.",
+      grammar: [past_tense] }
+  - { type: cloze, sv: "Förra veckan ___ vi i Stockholm.", hint: vara, answer: var, en: "Last week we were in Stockholm.",
+      grammar: [past_tense] }
+  - { type: cloze, sv: "Vi ___ till Göteborg för 3 år sedan.", hint: flytta, answer: flyttade, en: "We moved to Gothenburg 3 years ago.",
+      grammar: [past_tense] }
+  - { type: cloze, sv: "Jag ___ min fru på universitetet.", hint: träffa, answer: träffade, en: "I met my wife at university.",
+      grammar: [past_tense] }
+
+  # i, för … sedan or om?
+  - { type: cloze, sv: "Jag kom hit ___ 3 år sedan.", answer: för, en: "I came here 3 years ago.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag bodde där ___ 6 månader.", answer: i, en: "I lived there for 6 months.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Tåget går ___ 10 minuter.", answer: om, en: "The train leaves in 10 minutes.", grammar: [preposition_time] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag är född i Grekland.", en: "I was born in Greece." }
+  - { type: dictation, sv: "Jag kom till Sverige för 3 år sedan.", en: "I came to Sweden 3 years ago.", grammar: [past_tense, preposition_time] }
+  - { type: dictation, sv: "Först bodde jag i en liten stad.", en: "At first I lived in a small town.", grammar: [past_tense] }
+  - { type: dictation, sv: "Det var svårt att flytta till ett nytt land.", en: "It was hard to move to a new country.", grammar: [past_tense] }
+
+  # build the sentence
+  - { type: word_order, sv: "Igår jobbade jag inte.", en: "Yesterday I did not work.", grammar: [past_tense, v2_word_order] }
+  - { type: word_order, sv: "Vad gjorde du igår?", en: "What did you do yesterday?", grammar: [past_tense] }
+  - { type: word_order, sv: "Jag studerade engelska på universitetet.", en: "I studied English at university.", grammar: [past_tense] }
+  - { type: word_order, sv: "Efter en månad talade jag lite svenska.", en: "After a month I spoke a little Swedish.",
+      grammar: [past_tense, v2_word_order] }
+
+  # say it in Swedish
+  - { type: translate, en: "I moved here 2 years ago.", sv: "Jag flyttade hit för 2 år sedan.", grammar: [past_tense, preposition_time] }
+  - { type: translate, en: "Swedish was not easy.", sv: "Svenska var inte lätt.", grammar: [past_tense] }
+  - { type: translate, en: "We lived there for a long time.", sv: "Vi bodde där länge.", grammar: [past_tense] }
+  - { type: translate, en: "What languages do you speak?", sv: "Vad talar du för språk?" }
+  - { type: translate, en: "I worked a lot last week.", sv: "Jag jobbade mycket förra veckan.",
+      accept: ["Förra veckan jobbade jag mycket.", "Jag arbetade mycket förra veckan."], grammar: [past_tense] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "När kom du till Sverige?", en: "When did you come to Sweden?",
+      options: ["För 3 år sedan.", "I 3 år.", "Om 3 år."], answer: "För 3 år sedan." }
+  - { type: listen_choose, sv: "Hur länge studerade du?", en: "How long did you study?",
+      options: ["I 4 år.", "För 4 år sedan.", "Om 4 år."], answer: "I 4 år." }
+  - { type: listen_choose, sv: "Jag arbetade som kock här i 5 år.", en: "I worked as a cook here for 5 years.",
+      options: ["I worked as a cook here for 5 years.", "I worked as a cook here 5 years ago.", "I work as a cook here."],
+      answer: "I worked as a cook here for 5 years." }
+
+  # listen for the number
+  - { type: numbers, sv: "Jag kom hit för 4 år sedan.", hint: "how many years ago", answer: "4",
+      en: "I came here 4 years ago.", grammar: [preposition_time] }
+  - { type: numbers, sv: "Jag bodde i Stockholm i 18 månader.", hint: "how many months", answer: "18",
+      en: "I lived in Stockholm for 18 months.", grammar: [preposition_time] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Jag arbetade på ett kontor och hade en bra chef.", en: "I worked at an office and had a good boss.", grammar: [past_tense] }
+  - { type: translate, en: "I was a nurse at a hospital.", sv: "Jag var sjuksköterska på ett sjukhus.", grammar: [past_tense] }
+  - { type: word_order, sv: "Min pappa var snickare och min bror var chaufför.", en: "My dad was a carpenter and my brother was a driver.",
+      grammar: [past_tense] }
+  - { type: translate, en: "First I worked in a shop.", sv: "Först arbetade jag i en butik.", accept: ["Först jobbade jag i en butik."],
+      grammar: [past_tense, v2_word_order] }
+  - { type: dictation, sv: "Jag slutade på restaurangen för 2 år sedan.", en: "I left the restaurant 2 years ago.", grammar: [past_tense, preposition_time] }
+  - { type: word_order, sv: "Igår var jag ledig och träffade en kollega.", en: "Yesterday I was off and met a colleague.", grammar: [past_tense] }
+
+# The task itself: an official asks about your background.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: handläggare, sv: "Var är du född?", en: "Where were you born?" }
+    - { speaker: du, en: "Say that you were born in Greece.", answer: "Jag är född i Grekland.", accept: ["I Grekland."] }
+    - { speaker: handläggare, sv: "När kom du till Sverige?", en: "When did you come to Sweden?" }
+    - { speaker: du, en: "Say that you came here 3 years ago.",
+        options: ["Jag kom hit för 3 år sedan.", "Jag kom hit i 3 år.", "Jag kommer hit om 3 år."],
+        answer: "Jag kom hit för 3 år sedan." }
+    - { speaker: handläggare, sv: "Vad gjorde du i Grekland?", en: "What did you do in Greece?" }
+    - { speaker: du, en: "Say that you worked as a teacher.", answer: "Jag arbetade som lärare.",
+        accept: ["Jag jobbade som lärare."] }
+    - { speaker: handläggare, sv: "Hur länge studerade du?", en: "How long did you study?" }
+    - { speaker: du, en: "Say: for 4 years.", options: ["I 4 år.", "För 4 år sedan.", "Om 4 år."], answer: "I 4 år." }
+    - { speaker: handläggare, sv: "Var det svårt att flytta hit?", en: "Was it hard to move here?" }
+    - { speaker: du, en: "Say yes, at first it was hard.", answer: "Ja, först var det svårt.",
+        accept: ["Ja, det var svårt först.", "Ja, det var svårt."] }
+
+speaking_prompt: "Say aloud: where you were born, where you lived and what you did there, and when you came to Sweden."

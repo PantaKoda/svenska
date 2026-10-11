@@ -1,0 +1,127 @@
+id: a2-09
+level: A2
+theme: arbete
+title: "Söka jobb"
+task: "Answer the usual questions in a job interview: your experience, your education and when you can work."
+can_do: "I can talk about what I have done and what I can do, and ask about pay and hours."
+names: [Sara, Grekland, Sverige]
+
+new_words: [söka, ansökan, intervju, erfarenhet, utbildning, körkort, lön, schema, semester,
+            kund, företag, natt, lära, trivas, snabb, noggrann, intresserad, av]
+new_grammar: []
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: chef, sv: "Hej! Du har sökt jobbet som städare. Har du erfarenhet?",   en: "Hello! You have applied for the job as a cleaner. Do you have experience?" }
+  - { speaker: du,   sv: "Ja, jag har arbetat som städare i 2 år på ett sjukhus.",    en: "Yes, I have worked as a cleaner for 2 years at a hospital." }
+  - { speaker: chef, sv: "Vilken utbildning har du?",                                 en: "What education do you have?" }
+  - { speaker: du,   sv: "Jag har studerat på universitetet i Grekland. Och jag har läst svenska i 2 år.", en: "I have studied at university in Greece. And I have studied Swedish for 2 years." }
+  - { speaker: chef, sv: "Har du körkort?",                                           en: "Do you have a driving licence?" }
+  - { speaker: du,   sv: "Ja, sedan 10 år.",                                          en: "Yes, for 10 years." }
+  - { speaker: chef, sv: "Kan du arbeta på natten?",                                  en: "Can you work at night?" }
+  - { speaker: du,   sv: "Ja, det går bra. Jag är noggrann och jag lär mig snabbt.",  en: "Yes, that is fine. I am thorough and I learn fast." }
+  - { speaker: chef, sv: "Varför är du intresserad av jobbet?",                       en: "Why are you interested in the job?" }
+  - { speaker: du,   sv: "Eftersom jag vill arbeta heltid på ett stort företag.",     en: "Because I want to work full time at a big company." }
+  - { speaker: chef, sv: "Lönen är 150 kronor i timmen. Du får schemat nästa vecka.", en: "The pay is 150 kronor an hour. You will get the schedule next week." }
+
+exercises:
+  # have done (har + supine) or did (past)?
+  - { type: cloze, sv: "Jag har ___ som kock i 3 år.", hint: arbeta, answer: arbetat, en: "I have worked as a cook for 3 years.",
+      grammar: [perfect_tense] }
+  - { type: cloze, sv: "Har du ___ jobbet?", hint: söka, answer: sökt, en: "Have you applied for the job?", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Jag har ___ svenska i 2 år.", hint: läsa, answer: läst, en: "I have studied Swedish for 2 years.",
+      grammar: [perfect_tense] }
+  - { type: cloze, sv: "Förra året ___ jag på ett företag.", hint: arbeta, answer: arbetade, en: "Last year I worked at a company.",
+      grammar: [past_tense] }
+
+  # fill the gap
+  - { type: cloze, sv: "Jag är intresserad ___ jobbet.", answer: av, en: "I am interested in the job." }
+  - { type: cloze, sv: "Jag lär ___ snabbt.", answer: mig, en: "I learn fast.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Vi är ___.", hint: noggrann, answer: noggranna, en: "We are thorough.", grammar: [adjective_agreement_basic] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag har sökt ett nytt jobb.", en: "I have applied for a new job.", grammar: [perfect_tense] }
+  - { type: dictation, sv: "Har du erfarenhet?", en: "Do you have experience?" }
+  - { type: dictation, sv: "Jag trivs på mitt jobb.", en: "I like it at my job." }
+  - { type: dictation, sv: "Vi har många kunder på kvällen.", en: "We have many customers in the evening." }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag har arbetat på natten i 2 år.", en: "I have worked nights for 2 years.", grammar: [perfect_tense] }
+  - { type: word_order, sv: "Varför är du intresserad av jobbet?", en: "Why are you interested in the job?" }
+  - { type: word_order, sv: "Jag vill ha semester på sommaren.", en: "I want a holiday in the summer." }
+  - { type: word_order, sv: "Du får schemat på måndag.", en: "You will get the schedule on Monday." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have a driving licence.", sv: "Jag har körkort." }
+  - { type: translate, en: "I learn fast.", sv: "Jag lär mig snabbt.", grammar: [reflexive_basic] }
+  - { type: translate, en: "The interview is on Tuesday.", sv: "Intervjun är på tisdag." }
+  - { type: translate, en: "I have written an application.", sv: "Jag har skrivit en ansökan.", grammar: [perfect_tense] }
+  - { type: translate, en: "My education is from Greece.", sv: "Min utbildning är från Grekland." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Har du erfarenhet?", en: "Do you have experience?",
+      options: ["Ja, jag har arbetat i 3 år.", "Ja, på tisdag.", "Nej, lönen."], answer: "Ja, jag har arbetat i 3 år." }
+  - { type: listen_choose, sv: "Du börjar klockan 6 på morgonen nästa vecka.", en: "You start at 6 in the morning next week.",
+      options: ["You start at 6 in the morning next week.", "You start at 6 in the evening next week.", "You started at 6 in the morning last week."],
+      answer: "You start at 6 in the morning next week." }
+
+  # listen for the number
+  - { type: numbers, sv: "Lönen är 165 kronor i timmen.", hint: "kronor per hour", answer: "165",
+      en: "The pay is 165 kronor an hour.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Intervjun är klockan kvart i 10.", hint: "the time, like 8.15", answer: "9.45",
+      en: "The interview is at quarter to 10.", grammar: [time_clock] }
+  - { type: numbers, sv: "Du får 25 dagar semester.", hint: "how many days", answer: "25",
+      en: "You get 25 days of holiday.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Jag talar 3 språk och har bott i 2 länder.", en: "I speak 3 languages and have lived in 2 countries.",
+      grammar: [perfect_tense] }
+  - { type: translate, en: "It was not easy to study in a new country.", sv: "Det var inte lätt att studera i ett nytt land.",
+      grammar: [past_tense] }
+  - { type: word_order, sv: "Jag flyttade till en stor stad för en månad sedan.", en: "I moved to a big city a month ago.",
+      grammar: [past_tense, preposition_time] }
+  - { type: cloze, sv: "Jag går ___ klockan 5 varje morgon.", answer: upp, en: "I get up at 5 every morning." }
+  - { type: translate, en: "I always hurry in the morning.", sv: "Jag skyndar mig alltid på morgonen.",
+      accept: ["På morgonen skyndar jag mig alltid."], grammar: [reflexive_basic] }
+
+  - { type: dictation, sv: "Jag har arbetat i en butik och på ett kontor.", en: "I have worked in a shop and at an office.", grammar: [perfect_tense] }
+  - { type: translate, en: "I left the restaurant because the pay was bad.", sv: "Jag slutade på restaurangen eftersom lönen var dålig.",
+      grammar: [past_tense, subordinate_clause_basic] }
+  - { type: word_order, sv: "Mina kollegor säger att jag är noggrann.", en: "My colleagues say that I am thorough.", grammar: [subordinate_clause_basic] }
+  - { type: translate, en: "I think that the company is good.", sv: "Jag tycker att företaget är bra.", accept: ["Jag tror att företaget är bra."],
+      grammar: [subordinate_clause_basic] }
+  - { type: dictation, sv: "Bussen var försenad, men jag hann till intervjun.", en: "The bus was late, but I made it to the interview.", grammar: [past_tense] }
+  - { type: word_order, sv: "Jag har aldrig missat en dag på jobbet.", en: "I have never missed a day at work.", grammar: [perfect_tense] }
+  - { type: translate, en: "The customers ask and I answer.", sv: "Kunderna frågar och jag svarar.", grammar: [plural_def] }
+  - { type: dictation, sv: "Chefen är ung och snäll.", en: "The boss is young and kind." }
+  - { type: translate, en: "I was happy when I got the job.", sv: "Jag blev glad när jag fick jobbet.", accept: ["Jag var glad när jag fick jobbet."],
+      grammar: [past_tense, subordinate_clause_basic] }
+  - { type: word_order, sv: "Jag ringde företaget igår, men de svarade inte.", en: "I called the company yesterday, but they did not answer.",
+      grammar: [past_tense] }
+  - { type: translate, en: "I want to be off at the weekend.", sv: "Jag vill vara ledig på helgen." }
+  - { type: dictation, sv: "Jag har sökt jobbet 3 gånger.", en: "I have applied for the job 3 times.", grammar: [perfect_tense] }
+
+# The task itself: the job interview.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: chef, sv: "Har du erfarenhet?", en: "Do you have experience?" }
+    - { speaker: du, en: "Say yes, you have worked as a cleaner for 2 years.", answer: "Ja, jag har arbetat som städare i 2 år.",
+        accept: ["Ja, jag har jobbat som städare i 2 år.", "Jag har arbetat som städare i 2 år."] }
+    - { speaker: chef, sv: "Vilken utbildning har du?", en: "What education do you have?" }
+    - { speaker: du, en: "Say that you have studied at university.",
+        options: ["Jag har studerat på universitetet.", "Jag har studera på universitetet.", "Jag studerat har på universitetet."],
+        answer: "Jag har studerat på universitetet." }
+    - { speaker: chef, sv: "Har du körkort?", en: "Do you have a driving licence?" }
+    - { speaker: du, en: "Say yes, you have a driving licence.", answer: "Ja, jag har körkort.", accept: ["Ja."] }
+    - { speaker: chef, sv: "Varför söker du jobbet?", en: "Why are you applying for the job?" }
+    - { speaker: du, en: "Say: because you want to work full time.",
+        options: ["Eftersom jag vill arbeta heltid.", "Eftersom vill jag arbeta heltid.", "Att jag vill arbeta heltid."],
+        answer: "Eftersom jag vill arbeta heltid." }
+    - { speaker: chef, sv: "Bra. Du kan börja på måndag!", en: "Good. You can start on Monday!" }
+    - { speaker: du, en: "Say thanks and ask when you start.", answer: "Tack! När börjar jag?", accept: ["Tack. När börjar jag på måndag?"] }
+
+speaking_prompt: "Say aloud: what work you have done and for how long, what you have studied, and why you want the job."

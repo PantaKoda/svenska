@@ -469,61 +469,21 @@ items:
   words:
   - mjölk
 - type: inflect
-  answer: kaffen
+  answer: köpte
+  grammar:
+  - past_tense
+  lemma: köpa
+  form: past
+  words:
+  - köpa
+- type: inflect
+  answer: kvitton
   grammar:
   - plural_indef
-  lemma: kaffe
+  lemma: kvitto
   form: pl
   words:
-  - kaffe
-- type: inflect
-  answer: ett kvitto
-  grammar:
-  - en_ett
-  lemma: kvitto
-  form: a
-  words:
   - kvitto
-- type: inflect
-  answer: ett smör
-  grammar:
-  - en_ett
-  lemma: smör
-  form: a
-  words:
-  - smör
-- type: inflect
-  answer: osten
-  grammar:
-  - def_singular
-  lemma: ost
-  form: def
-  words:
-  - ost
-- type: inflect
-  answer: en kassa
-  grammar:
-  - en_ett
-  lemma: kassa
-  form: a
-  words:
-  - kassa
-- type: inflect
-  answer: kronan
-  grammar:
-  - def_singular
-  lemma: krona
-  form: def
-  words:
-  - krona
-- type: inflect
-  answer: kortet
-  grammar:
-  - def_singular
-  lemma: kort
-  form: def
-  words:
-  - kort
 - type: inflect
   answer: kostar
   grammar:
@@ -532,3 +492,575 @@ items:
   form: pres
   words:
   - kosta
+- type: inflect
+  answer: äpplet
+  grammar:
+  - def_singular
+  lemma: äpple
+  form: def
+  words:
+  - äpple
+- type: inflect
+  answer: betalar
+  grammar:
+  - present_tense
+  lemma: betala
+  form: pres
+  words:
+  - betala
+- type: inflect
+  answer: kaffen
+  grammar:
+  - plural_indef
+  lemma: kaffe
+  form: pl
+  words:
+  - kaffe
+- type: inflect
+  answer: fanns
+  grammar:
+  - past_tense
+  lemma: finnas
+  form: past
+  words:
+  - finnas
+- type: inflect
+  answer: ägg
+  grammar:
+  - plural_indef
+  lemma: ägg
+  form: pl
+  words:
+  - ägg
+- type: cloze
+  sv: Kan du ___ påsen?
+  en: Can you find the bag?
+  answer: hitta
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: hitta
+  frame: gen-009
+  words:
+  - hitta
+  - påse
+- type: cloze
+  sv: Jag köper ___ och kaffe.
+  en: I'm buying meat and coffee.
+  answer: kött
+  grammar:
+  - present_tense
+  review: true
+  hint: kött
+  frame: mat-03
+  words:
+  - kött
+  - kaffe
+- type: cloze
+  sv: Jag köpte ___.
+  en: I bought the vegetable.
+  answer: grönsaken
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: grönsak
+  frame: gen-021
+  words:
+  - köpa
+  - grönsak
+- type: cloze
+  sv: ___ är nytt.
+  en: The packet is new.
+  answer: Paketet
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: paket
+  frame: gen-003
+  words:
+  - paket
+  - ny
+- type: cloze
+  sv: Jag tar ___.
+  en: I take the banana.
+  answer: bananen
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: banan
+  frame: gen-010
+  words:
+  - ta
+  - banan
+- type: cloze
+  sv: Vi tar inte ___.
+  en: We don't take the tomato.
+  answer: tomaten
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: tomat
+  frame: gen-011
+  words:
+  - ta
+  - tomat
+- type: cloze
+  sv: Vad kostar ___?
+  en: What does the bottle cost?
+  answer: flaskan
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: flaska
+  frame: mat-01
+  words:
+  - flaska
+- type: cloze
+  sv: ___ finns inte där.
+  en: The fruit is not there.
+  answer: Frukten
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: frukt
+  frame: mat-05
+  words:
+  - frukt
+- type: dictation
+  sv: Fisken är där.
+  en: The fish is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - fisk
+- type: dictation
+  sv: Var är potatisen?
+  en: Where is the potato?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - potatis
+- type: dictation
+  sv: Jag behöver ett paket.
+  en: I need a packet.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - paket
+- type: dictation
+  sv: Var finns bananen?
+  en: Where is the banana?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-02
+  words:
+  - banan
+- type: dictation
+  sv: Har du en flaska?
+  en: Do you have a bottle?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - flaska
+- type: dictation
+  sv: Har ni tomat?
+  en: Do you have tomato? (asking a shop)
+  grammar:
+  - yes_no_question
+  review: true
+  frame: mat-04
+  words:
+  - tomat
+- type: dictation
+  sv: Jag köper bröd och frukt.
+  en: I'm buying bread and fruit.
+  grammar:
+  - present_tense
+  review: true
+  frame: mat-03
+  words:
+  - bröd
+  - frukt
+- type: dictation
+  sv: Jag hittar smöret.
+  en: I find the butter.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - hitta
+  - smör
+- type: word_order
+  sv: Kan du ta fisken?
+  en: Can you take the fish?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - ta
+  - fisk
+- type: word_order
+  sv: Vi köper inte grönsaken.
+  en: We don't buy the vegetable.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - grönsak
+- type: word_order
+  sv: Jag köpte köttet.
+  en: I bought the meat.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - köpa
+  - kött
+- type: word_order
+  sv: Potatisen finns inte där.
+  en: The potato is not there.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: mat-05
+  words:
+  - potatis
+- type: word_order
+  sv: Jag har inte paketet.
+  en: I don't have the packet.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - paket
+- type: word_order
+  sv: Jag vill ha en flaska.
+  en: I want a bottle.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - flaska
+- type: word_order
+  sv: Har du paketet?
+  en: Do you have the packet?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - paket
+- type: word_order
+  sv: Var finns grönsaken?
+  en: Where is the vegetable?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-02
+  words:
+  - grönsak
+- type: translate
+  sv: Vad kostar fisken?
+  en: What does the fish cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-01
+  words:
+  - fisk
+- type: translate
+  sv: Frukten är där.
+  en: The fruit is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - frukt
+- type: translate
+  sv: Var är tomaten?
+  en: Where is the tomato?
+  accept:
+  - Var finns tomaten?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - tomat
+- type: translate
+  sv: Har ni potatis?
+  en: Do you have potato? (asking a shop)
+  grammar:
+  - yes_no_question
+  review: true
+  frame: mat-04
+  words:
+  - potatis
+- type: translate
+  sv: Kan du hitta mjölken?
+  en: Can you find the milk?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - hitta
+  - mjölk
+- type: translate
+  sv: Jag köper mjölk och banan.
+  en: I'm buying milk and banana.
+  grammar:
+  - present_tense
+  review: true
+  frame: mat-03
+  words:
+  - mjölk
+  - banan
+- type: translate
+  sv: Jag tar köttet.
+  en: I take the meat.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - kött
+- type: translate
+  sv: Flaskan är gammal.
+  en: The bottle is old.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - flaska
+  - gammal
+- type: listen_choose
+  sv: Jag hittade papperskorgen.
+  answer: I found the wastepaper basket.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  options:
+  - I found the wastepaper basket.
+  - I bought the vegetable.
+  - I found the fruit.
+  frame: gen-021
+  words:
+  - hitta
+  - papperskorg
+- type: listen_choose
+  sv: Vi tar inte fisken.
+  answer: We don't take the fish.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the fish.
+  - We don't find the banana.
+  - We don't take the tomato.
+  frame: gen-011
+  words:
+  - ta
+  - fisk
+- type: listen_choose
+  sv: Jag behöver en flaska.
+  answer: I need a bottle.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need a bottle.
+  - I need a packet.
+  - What does the bottle cost?
+  frame: gen-005
+  words:
+  - flaska
+- type: listen_choose
+  sv: Bananen finns inte där.
+  answer: The banana is not there.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - The banana is not there.
+  - The fruit is not there.
+  - The potato is not there.
+  frame: mat-05
+  words:
+  - banan
+- type: listen_choose
+  sv: Vad kostar grönsaken?
+  answer: What does the vegetable cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - What does the vegetable cost?
+  - What does the bottle cost?
+  - What does the fish cost?
+  frame: mat-01
+  words:
+  - grönsak
+- type: listen_choose
+  sv: Har du ett paket?
+  answer: Do you have a packet?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a packet?
+  - Do you have a bottle?
+  - The packet is new.
+  frame: gen-002
+  words:
+  - paket
+- type: listen_choose
+  sv: Var finns köttet?
+  answer: Where is the meat?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the meat?
+  - Where is the banana?
+  - Where is the vegetable?
+  frame: mat-02
+  words:
+  - kött
+- type: listen_choose
+  sv: Var är frukten?
+  answer: Where is the fruit?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the fruit?
+  - Where is the bottle?
+  - Where is the potato?
+  frame: gen-001
+  words:
+  - frukt
+- type: inflect
+  answer: stäng
+  grammar:
+  - imperative
+  lemma: stänga
+  form: imp
+  words:
+  - stänga
+- type: inflect
+  answer: bananerna
+  grammar:
+  - plural_def
+  lemma: banan
+  form: pl_def
+  words:
+  - banan
+- type: inflect
+  answer: ett kött
+  grammar:
+  - en_ett
+  lemma: kött
+  form: a
+  words:
+  - kött
+- type: inflect
+  answer: öppnar
+  grammar:
+  - present_tense
+  lemma: öppna
+  form: pres
+  words:
+  - öppna
+- type: inflect
+  answer: frukten
+  grammar:
+  - def_singular
+  lemma: frukt
+  form: def
+  words:
+  - frukt
+- type: inflect
+  answer: en flaska
+  grammar:
+  - en_ett
+  lemma: flaska
+  form: a
+  words:
+  - flaska
+- type: inflect
+  answer: potatisen
+  grammar:
+  - def_singular
+  lemma: potatis
+  form: def
+  words:
+  - potatis
+- type: inflect
+  answer: kilona
+  grammar:
+  - plural_def
+  lemma: kilo
+  form: pl_def
+  words:
+  - kilo

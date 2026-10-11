@@ -396,6 +396,21 @@ Conventions used in the units:
 
 A2 revisits the same themes with harder tasks (e.g. Bostad: book the tvättstuga,
 report a fault to the landlord; Buss & tåg: understand announcements and delays).
+
+## A2 unit plan (written after M6)
+
+| # | Theme (pack) | Task | New grammar |
+|---|---|---|---|
+| 01 | Jag (`jag`) | Tell your story: born, studied, worked, came to Sweden | past_tense, preposition_time |
+| 02 | Vardag (`vardag`) | Describe your day in order and how often you do things | reflexive_basic, inversion_after_adverb |
+| 03 | Matbutiken (`matbutiken`) | Compare products and prices, ask about opening hours | comparison, plural_def |
+| 04 | Buss & tåg (`resa`) | Understand announcements about delays, ask what to do | future_ska_kommer_att |
+| 05 | Bostad (`bostad`) | Report a fault to the landlord, book the tvättstuga | perfect_tense, adjective_agreement_full |
+| 06 | Familjen (`familjen`) | Tell about a family party: what happened, reasons, opinions | subordinate_clause_basic |
+| 07 | Hälsa (`halsa`) | Follow instructions from the doctor and the pharmacy | imperative |
+| 08 | Fritid & väder (`fritid`) | Plan a trip from the forecast, change and decline plans | – |
+| 09 | Arbete (`arbete`) | Answer the usual questions in a job interview | – |
+| 10 | Städning (`stadning`) | Follow a cleaning checklist and report what is done | – |
 Work themes (städning, bygg, vård, data) are added as theme packs and used both in
 units and in Theme practice.
 

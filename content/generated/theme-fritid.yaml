@@ -443,38 +443,6 @@ items:
   words:
   - fika
 - type: inflect
-  answer: vädret
-  grammar:
-  - def_singular
-  lemma: väder
-  form: def
-  words:
-  - väder
-- type: inflect
-  answer: simmar
-  grammar:
-  - present_tense
-  lemma: simma
-  form: pres
-  words:
-  - simma
-- type: inflect
-  answer: filmer
-  grammar:
-  - plural_indef
-  lemma: film
-  form: pl
-  words:
-  - film
-- type: inflect
-  answer: promenaden
-  grammar:
-  - def_singular
-  lemma: promenad
-  form: def
-  words:
-  - promenad
-- type: inflect
   answer: ser
   grammar:
   - present_tense
@@ -483,26 +451,562 @@ items:
   words:
   - se
 - type: inflect
-  answer: bion
+  answer: regnat
   grammar:
-  - def_singular
-  lemma: bio
-  form: def
+  - perfect_tense
+  lemma: regna
+  form: sup
   words:
-  - bio
+  - regna
 - type: inflect
-  answer: en helg
+  answer: väder
+  grammar:
+  - plural_indef
+  lemma: väder
+  form: pl
+  words:
+  - väder
+- type: inflect
+  answer: promenaderna
+  grammar:
+  - plural_def
+  lemma: promenad
+  form: pl_def
+  words:
+  - promenad
+- type: inflect
+  answer: en film
   grammar:
   - en_ett
-  lemma: helg
+  lemma: film
   form: a
+  words:
+  - film
+- type: inflect
+  answer: solar
+  grammar:
+  - plural_indef
+  lemma: sol
+  form: pl
+  words:
+  - sol
+- type: inflect
+  answer: helgerna
+  grammar:
+  - plural_def
+  lemma: helg
+  form: pl_def
   words:
   - helg
 - type: inflect
-  answer: ett regn
+  answer: gillade
   grammar:
-  - en_ett
-  lemma: regn
-  form: a
+  - past_tense
+  lemma: gilla
+  form: past
   words:
-  - regn
+  - gilla
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can cycle tomorrow.
+  answer: cykla
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: cykla
+  frame: gen-015
+  words:
+  - cykla
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to hike today?
+  answer: Vandrar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: vandra
+  frame: gen-013
+  words:
+  - vandra
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to cycle tonight?
+  answer: cykla
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: cykla
+  frame: gen-016
+  words:
+  - cykla
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to hike today.
+  answer: vandrar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: vandra
+  frame: gen-012
+  words:
+  - vandra
+- type: cloze
+  sv: När ___ du?
+  en: When do you cycle?
+  answer: cyklar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: cykla
+  frame: gen-014
+  words:
+  - cykla
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can hike tomorrow.
+  answer: vandra
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: vandra
+  frame: gen-015
+  words:
+  - vandra
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to cycle today.
+  answer: cyklar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: cykla
+  frame: gen-012
+  words:
+  - cykla
+- type: cloze
+  sv: När ___ du?
+  en: When do you hike?
+  answer: vandrar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: vandra
+  frame: gen-014
+  words:
+  - vandra
+- type: dictation
+  sv: Vill du vandra ikväll?
+  en: Do you want to hike tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - vandra
+- type: dictation
+  sv: Cyklar du idag?
+  en: Are you going to cycle today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - cykla
+- type: dictation
+  sv: Vi kan cykla imorgon.
+  en: We can cycle tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - cykla
+- type: dictation
+  sv: Vandrar du idag?
+  en: Are you going to hike today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - vandra
+- type: dictation
+  sv: Vill du cykla ikväll?
+  en: Do you want to cycle tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - cykla
+- type: dictation
+  sv: Jag vandrar inte idag.
+  en: I am not going to hike today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - vandra
+- type: dictation
+  sv: När cyklar du?
+  en: When do you cycle?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - cykla
+- type: dictation
+  sv: Vi kan vandra imorgon.
+  en: We can hike tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - vandra
+- type: word_order
+  sv: Jag cyklar inte idag.
+  en: I am not going to cycle today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - cykla
+- type: word_order
+  sv: När vandrar du?
+  en: When do you hike?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - vandra
+- type: word_order
+  sv: Vill du vandra ikväll?
+  en: Do you want to hike tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - vandra
+- type: word_order
+  sv: Cyklar du idag?
+  en: Are you going to cycle today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - cykla
+- type: word_order
+  sv: Vi kan cykla imorgon.
+  en: We can cycle tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - cykla
+- type: word_order
+  sv: Vandrar du idag?
+  en: Are you going to hike today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - vandra
+- type: word_order
+  sv: Vill du cykla ikväll?
+  en: Do you want to cycle tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - cykla
+- type: word_order
+  sv: Jag vandrar inte idag.
+  en: I am not going to hike today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - vandra
+- type: translate
+  sv: När cyklar du?
+  en: When do you cycle?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - cykla
+- type: translate
+  sv: Vi kan vandra imorgon.
+  en: We can hike tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - vandra
+- type: translate
+  sv: Jag cyklar inte idag.
+  en: I am not going to cycle today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - cykla
+- type: translate
+  sv: När vandrar du?
+  en: When do you hike?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - vandra
+- type: translate
+  sv: Vill du vandra ikväll?
+  en: Do you want to hike tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - vandra
+- type: translate
+  sv: Cyklar du idag?
+  en: Are you going to cycle today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - cykla
+- type: translate
+  sv: Vi kan cykla imorgon.
+  en: We can cycle tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - cykla
+- type: translate
+  sv: Vandrar du idag?
+  en: Are you going to hike today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - vandra
+- type: listen_choose
+  sv: Vill du cykla ikväll?
+  answer: Do you want to cycle tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to cycle tonight?
+  - Do you want to hike tonight?
+  - We can cycle tomorrow.
+  frame: gen-016
+  words:
+  - cykla
+- type: listen_choose
+  sv: Jag vandrar inte idag.
+  answer: I am not going to hike today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to hike today.
+  - I am not going to cycle today.
+  - Are you going to hike today?
+  frame: gen-012
+  words:
+  - vandra
+- type: listen_choose
+  sv: När cyklar du?
+  answer: When do you cycle?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you cycle?
+  - When do you hike?
+  - We can cycle tomorrow.
+  frame: gen-014
+  words:
+  - cykla
+- type: listen_choose
+  sv: Vi kan vandra imorgon.
+  answer: We can hike tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can hike tomorrow.
+  - We can cycle tomorrow.
+  - Are you going to hike today?
+  frame: gen-015
+  words:
+  - vandra
+- type: listen_choose
+  sv: Jag cyklar inte idag.
+  answer: I am not going to cycle today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to cycle today.
+  - I am not going to hike today.
+  - We can cycle tomorrow.
+  frame: gen-012
+  words:
+  - cykla
+- type: listen_choose
+  sv: När vandrar du?
+  answer: When do you hike?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you hike?
+  - When do you cycle?
+  - Are you going to hike today?
+  frame: gen-014
+  words:
+  - vandra
+- type: listen_choose
+  sv: Vill du vandra ikväll?
+  answer: Do you want to hike tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to hike tonight?
+  - Do you want to cycle tonight?
+  - Are you going to hike today?
+  frame: gen-016
+  words:
+  - vandra
+- type: listen_choose
+  sv: Cyklar du idag?
+  answer: Are you going to cycle today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to cycle today?
+  - Are you going to hike today?
+  - We can cycle tomorrow.
+  frame: gen-013
+  words:
+  - cykla
+- type: inflect
+  answer: blås
+  grammar:
+  - imperative
+  lemma: blåsa
+  form: imp
+  words:
+  - blåsa
+- type: inflect
+  answer: sommaren
+  grammar:
+  - def_singular
+  lemma: sommar
+  form: def
+  words:
+  - sommar
+- type: inflect
+  answer: cyklat
+  grammar:
+  - perfect_tense
+  lemma: cykla
+  form: sup
+  words:
+  - cykla
+- type: inflect
+  answer: snöade
+  grammar:
+  - past_tense
+  lemma: snöa
+  form: past
+  words:
+  - snöa
+- type: inflect
+  answer: passat
+  grammar:
+  - perfect_tense
+  lemma: passa
+  form: sup
+  words:
+  - passa
+- type: inflect
+  answer: vintern
+  grammar:
+  - def_singular
+  lemma: vinter
+  form: def
+  words:
+  - vinter
+- type: inflect
+  answer: utflykten
+  grammar:
+  - def_singular
+  lemma: utflykt
+  form: def
+  words:
+  - utflykt
+- type: inflect
+  answer: sjöar
+  grammar:
+  - plural_indef
+  lemma: sjö
+  form: pl
+  words:
+  - sjö

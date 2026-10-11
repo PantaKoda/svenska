@@ -1,0 +1,108 @@
+id: a2-04
+level: A2
+theme: resa
+title: "Förseningar"
+task: "Understand announcements about delays and cancellations, and ask what you should do."
+can_do: "I can understand travel announcements and talk about what will happen."
+names: [Stockholm, Göteborg, Hisingen]
+
+new_words: [försenad, inställd, avgång, problem, information, hinna, missa, stanna, resa,
+            tyvärr, ungefär, snart, igen, fram, fråga, svara]
+new_grammar: [future_ska_kommer_att]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: högtalare, sv: "Tåget till Stockholm är tyvärr försenat. Det kommer att gå ungefär 20 minuter senare.", en: "The train to Stockholm is unfortunately delayed. It will leave about 20 minutes later." }
+  - { speaker: du,        sv: "Hej! Jag ska byta tåg i Stockholm. Kommer jag att hinna?",  en: "Hi! I am going to change trains in Stockholm. Will I make it?" }
+  - { speaker: personal,  sv: "När går nästa tåg?",                                        en: "When does your next train leave?" }
+  - { speaker: du,        sv: "Klockan 5.",                                                en: "At 5." }
+  - { speaker: personal,  sv: "Då kommer du att hinna. Men du måste skynda dig.",          en: "Then you will make it. But you must hurry." }
+  - { speaker: du,        sv: "Och när kommer vi fram till Stockholm?",                    en: "And when do we arrive in Stockholm?" }
+  - { speaker: personal,  sv: "Ungefär kvart i 5. Det finns mer information här snart.",   en: "At about quarter to 5. There will be more information here soon." }
+  - { speaker: du,        sv: "Tack. Jag frågar igen om 10 minuter.",                      en: "Thanks. I'll ask again in 10 minutes." }
+
+exercises:
+  # announcements: what do they mean?
+  - { type: listen_choose, sv: "Buss 16 är inställd idag.", en: "Bus 16 is cancelled today.",
+      options: ["Bus 16 is cancelled today.", "Bus 16 is delayed today.", "Bus 16 leaves now."],
+      answer: "Bus 16 is cancelled today." }
+  - { type: listen_choose, sv: "Tåget kommer att gå 20 minuter senare.", en: "The train will leave 20 minutes later.",
+      options: ["The train will leave 20 minutes later.", "The train left 20 minutes ago.", "The train leaves in 20 minutes, on time."],
+      answer: "The train will leave 20 minutes later." }
+  - { type: listen_choose, sv: "Nästa spårvagn kommer om 3 minuter.", en: "The next tram comes in 3 minutes.",
+      options: ["The next tram comes in 3 minutes.", "The next tram came 3 minutes ago.", "The next tram is cancelled."],
+      answer: "The next tram comes in 3 minutes." }
+  - { type: listen_choose, sv: "Tåget stannar inte i Göteborg idag.", en: "The train does not stop in Gothenburg today.",
+      options: ["The train does not stop in Gothenburg today.", "The train stops in Gothenburg today.", "The train is late in Gothenburg today."],
+      answer: "The train does not stop in Gothenburg today." }
+
+  # listen for the number
+  - { type: numbers, sv: "Tåget är 25 minuter försenat.", hint: "how many minutes late", answer: "25",
+      en: "The train is 25 minutes late.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Det kommer att gå klockan kvart över 6.", hint: "the time, like 8.15", answer: "6.15",
+      en: "It will leave at quarter past 6.", grammar: [time_clock, future_ska_kommer_att] }
+  - { type: numbers, sv: "Nästa avgång är från spår 14.", hint: "the platform", answer: "14",
+      en: "The next departure is from platform 14.", grammar: [numbers_0_1000] }
+
+  # ska or kommer att?
+  - { type: cloze, sv: "Imorgon ___ jag åka till Stockholm.", answer: ska, en: "Tomorrow I am going to travel to Stockholm (my plan).",
+      grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Tåget ___ att vara försenat.", answer: kommer, en: "The train will be late.", grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Du kommer inte ___ hinna.", answer: att, en: "You will not make it.", grammar: [future_ska_kommer_att] }
+
+  # försenad, försenat, försenade
+  - { type: cloze, sv: "Tåget är ___.", hint: försenad, answer: försenat, en: "The train is delayed.", grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Bussarna är ___ idag.", hint: inställd, answer: inställda, en: "The buses are cancelled today.",
+      grammar: [adjective_agreement_basic, plural_def] }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag kommer inte att hinna.", en: "I will not make it.", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Kommer tåget att stanna i Göteborg?", en: "Will the train stop in Gothenburg?", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Tyvärr är bussen inställd.", en: "Unfortunately the bus is cancelled.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Vi ska resa till Stockholm på fredag.", en: "We are going to travel to Stockholm on Friday.",
+      grammar: [future_ska_kommer_att] }
+
+  # listen and write
+  - { type: dictation, sv: "Tåget är försenat igen.", en: "The train is delayed again." }
+  - { type: dictation, sv: "Jag missade bussen igår.", en: "I missed the bus yesterday.", grammar: [past_tense] }
+  - { type: dictation, sv: "Det är ett problem med tåget.", en: "There is a problem with the train." }
+  - { type: dictation, sv: "Vi kommer fram ungefär klockan 8.", en: "We arrive at about 8." }
+
+  # say it in Swedish
+  - { type: translate, en: "The bus is cancelled.", sv: "Bussen är inställd." }
+  - { type: translate, en: "I will miss the train.", sv: "Jag kommer att missa tåget.", grammar: [future_ska_kommer_att] }
+  - { type: translate, en: "There is information at the checkout.", sv: "Det finns information i kassan.",
+      accept: ["Information finns i kassan."] }
+  - { type: translate, en: "He did not answer.", sv: "Han svarade inte.", grammar: [past_tense] }
+  - { type: translate, en: "You can ask at the checkout.", sv: "Du kan fråga i kassan.", grammar: [modal_vill_kan_ska] }
+  - { type: translate, en: "A new bus is leaving soon.", sv: "Det går snart en ny buss.", accept: ["En ny buss går snart."] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Vädret är dåligt och tåget är försenat.", en: "The weather is bad and the train is delayed." }
+  - { type: word_order, sv: "Igår väntade jag länge på bussen.", en: "Yesterday I waited a long time for the bus.", grammar: [past_tense] }
+  - { type: translate, en: "I usually take the tram, but today I am taking the bus.", sv: "Jag brukar ta spårvagnen, men idag tar jag bussen.",
+      grammar: [inversion_after_adverb] }
+  - { type: cloze, sv: "Vi måste skynda ___, tåget går om 2 minuter.", answer: oss, en: "We must hurry, the train leaves in 2 minutes.",
+      grammar: [reflexive_basic] }
+  - { type: translate, en: "The tickets are more expensive than last month.", sv: "Biljetterna är dyrare än förra månaden.",
+      grammar: [comparison, plural_def] }
+
+# The task itself: at the station, after an announcement.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: högtalare, sv: "Tåget till Stockholm är tyvärr försenat. Det kommer att gå 30 minuter senare.", en: "The train to Stockholm is unfortunately delayed. It will leave 30 minutes later." }
+    - { speaker: du, en: "Ask when the train will leave.",
+        options: ["När kommer tåget att gå?", "När kommer att tåget gå?", "När tåget kommer att gå?"],
+        answer: "När kommer tåget att gå?" }
+    - { speaker: personal, sv: "Klockan halv 5.", en: "At half past 4." }
+    - { speaker: du, en: "Say that you are going to change trains in Stockholm.", answer: "Jag ska byta tåg i Stockholm." }
+    - { speaker: personal, sv: "När går nästa tåg?", en: "When does your next train leave?" }
+    - { speaker: du, en: "Say that it leaves at 8.", answer: "Det går klockan 8.", accept: ["Klockan 8.", "Tåget går klockan 8."] }
+    - { speaker: personal, sv: "Då kommer du att hinna.", en: "Then you will make it." }
+    - { speaker: du, en: "Say: good, thanks.", options: ["Bra, tack!", "Tyvärr.", "Jag missade tåget."], answer: "Bra, tack!" }
+
+speaking_prompt: "Say aloud: that your train is late, how many minutes, and what you are going to do."

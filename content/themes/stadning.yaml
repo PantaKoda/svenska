@@ -26,6 +26,15 @@ words:
   - { lemma: ren,     pos: adj, tags: [state], level: A1, gloss: clean }
   - { lemma: smutsig, pos: adj, tags: [state], level: A1, gloss: dirty }
 
+
+  # A2: the cleaning job
+  - { lemma: papperskorg, pos: noun, gender: en,  tags: [container], level: A2, gloss: wastepaper basket }
+  - { lemma: spegel,      pos: noun, gender: en,  tags: [surface],   level: A2, gloss: mirror }
+  - { lemma: handfat,     pos: noun, gender: ett, tags: [surface],   level: A2, gloss: washbasin }
+  - { lemma: handske,     pos: noun, gender: en,  level: A2, gloss: glove }
+  - { lemma: tömma,       pos: verb, level: A2, gloss: "to empty" }
+  - { lemma: farlig,      pos: adj,  level: A2, gloss: dangerous }
+
 frames:
   - { id: stad-01, level: A1, grammar: [modal_vill_kan_ska, def_singular], review: true,
       sv: "Jag ska {action_surface.inf} {surface.def}.", en: "I am going to {1} the {2}." }

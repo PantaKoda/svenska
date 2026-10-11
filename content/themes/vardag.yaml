@@ -27,3 +27,19 @@ words:
   - { lemma: lunch,   pos: noun, gender: en, level: A1, gloss: lunch }
   - { lemma: middag,  pos: noun, gender: en, level: A1, gloss: dinner }
   - { lemma: hemma,   pos: adv,  level: A1, gloss: at home }
+
+  # A2: the day in detail
+  - { lemma: vecka,  pos: noun, gender: en, tags: [time_unit], level: A2, gloss: week }
+  - { lemma: månad,  pos: noun, gender: en, tags: [time_unit], level: A2, gloss: month }
+  - { lemma: vakna,  pos: verb, level: A2, gloss: "to wake up; past: woke up; pp: woken up" }
+  - { lemma: duscha, pos: verb, tags: [action_intrans], level: A2, gloss: "to shower, to have a shower" }
+  - { lemma: klä,    pos: verb, level: A2, gloss: "to dress (klä på sig = get dressed)", forms: { pres: klär, imp: klä } }
+  - { lemma: tvätta, pos: verb, level: A2, gloss: "to wash" }
+  - { lemma: lägga,  pos: verb, level: A2, gloss: "to put, to lay (lägga sig = go to bed)", forms: { past: lade } }
+  - { lemma: skynda, pos: verb, level: A2, gloss: "to hurry (skynda sig = hurry up)" }
+  - { lemma: känna,  pos: verb, level: A2, gloss: "to feel (känna sig = feel); past: felt; pp: felt", forms: { past: kände } }
+  - { lemma: laga,   pos: verb, level: A2, gloss: "to cook (laga mat); to repair" }
+  - { lemma: titta,  pos: verb, level: A2, gloss: "to look, to watch (titta på tv)" }
+  - { lemma: mat,    pos: noun, gender: en, level: A2, gloss: food }
+  - { lemma: tv,     pos: noun, gender: en, level: A2, gloss: TV, forms: { indef: tv, def: "tv:n" } }
+  - { lemma: pigg,   pos: adj,  level: A2, gloss: "alert, full of energy" }

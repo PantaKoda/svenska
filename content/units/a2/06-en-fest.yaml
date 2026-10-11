@@ -1,0 +1,111 @@
+id: a2-06
+level: A2
+theme: familjen
+title: "En fest i familjen"
+task: "Tell someone about a family party: who came, what happened, and what people said and thought."
+can_do: "I can tell what happened at an event and give reasons and opinions."
+names: [Sara, Grekland, Sverige]
+
+new_words: [födelsedag, fest, present, tårta, gäst, mormor, farmor,
+            fira, fylla, bjuda, ge, få, säga, tro, tycka, veta,
+            eftersom, varför, glad, ledsen, ung, snäll, rolig]
+new_grammar: [subordinate_clause_basic]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vad gjorde du i helgen?",                                 en: "What did you do at the weekend?" }
+  - { speaker: du,   sv: "Vi firade min mormor. Hon fyllde 80 år!",                 en: "We celebrated my grandmother. She turned 80!" }
+  - { speaker: Sara, sv: "Hade ni en stor fest?",                                   en: "Did you have a big party?" }
+  - { speaker: du,   sv: "Ja, vi bjöd 30 gäster. Men min bror kom inte eftersom han var sjuk.", en: "Yes, we invited 30 guests. But my brother did not come because he was ill." }
+  - { speaker: Sara, sv: "Vad fick hon i present?",                                 en: "What did she get as a present?" }
+  - { speaker: du,   sv: "Hon fick en resa till Grekland. Hon sa att hon var mycket glad.", en: "She got a trip to Greece. She said that she was very happy." }
+  - { speaker: Sara, sv: "Åt ni tårta?",                                            en: "Did you eat cake?" }
+  - { speaker: du,   sv: "Ja! Jag tycker att min mammas tårta är bäst.",            en: "Yes! I think my mum's cake is the best." }
+  - { speaker: Sara, sv: "Jag tror att jag vill komma på nästa fest!",              en: "I think I want to come to the next party!" }
+  - { speaker: du,   sv: "Du vet att du alltid kan komma!",                         en: "You know you can always come!" }
+
+exercises:
+  # after att and eftersom: inte comes before the verb
+  - { type: word_order, sv: "Jag vet att han inte kan komma.", en: "I know that he cannot come.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Hon säger att festen var rolig.", en: "She says that the party was fun.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Vi firar hemma eftersom mormor inte mår bra.", en: "We are celebrating at home because grandma is not well.",
+      grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Jag tror att de kommer imorgon.", en: "I think that they are coming tomorrow.", grammar: [subordinate_clause_basic] }
+
+  # att, eftersom or när?
+  - { type: cloze, sv: "Jag tror ___ hon är glad.", answer: att, en: "I think that she is happy.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Han kom inte ___ han var sjuk.", answer: eftersom, en: "He did not come because he was ill.",
+      grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "___ gästerna kom, åt vi tårta.", answer: När, en: "When the guests came, we ate cake.",
+      grammar: [subordinate_clause_basic] }
+
+  # what happened: the past
+  - { type: cloze, sv: "Hon ___ en present.", hint: få, answer: fick, en: "She got a present.", grammar: [past_tense] }
+  - { type: cloze, sv: "Vi ___ 30 gäster.", hint: bjuda, answer: bjöd, en: "We invited 30 guests.", grammar: [past_tense] }
+  - { type: cloze, sv: "Han ___ att han var ledsen.", hint: säga, answer: sa, accept: [sade], en: "He said that he was sad.",
+      grammar: [past_tense, subordinate_clause_basic] }
+  - { type: cloze, sv: "Vi ___ henne en present.", hint: ge, answer: gav, en: "We gave her a present.", grammar: [past_tense] }
+
+  # listen and write
+  - { type: dictation, sv: "Min mormor fyller 80 år på lördag.", en: "My grandmother turns 80 on Saturday." }
+  - { type: dictation, sv: "Jag tycker att tårtan är god.", en: "I think the cake is tasty.", grammar: [subordinate_clause_basic] }
+  - { type: dictation, sv: "Min farmor är snäll och rolig.", en: "My grandmother is kind and funny." }
+  - { type: dictation, sv: "Jag vet inte varför han är ledsen.", en: "I do not know why he is sad.", grammar: [subordinate_clause_basic] }
+
+  # say it in Swedish
+  - { type: translate, en: "I think that he is young.", sv: "Jag tror att han är ung.", accept: ["Jag tycker att han är ung."],
+      grammar: [subordinate_clause_basic] }
+  - { type: translate, en: "She is sad because he is not coming.", sv: "Hon är ledsen eftersom han inte kommer.",
+      grammar: [subordinate_clause_basic] }
+  - { type: translate, en: "We are celebrating my birthday.", sv: "Vi firar min födelsedag." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Han säger att han inte kan komma.", en: "He says that he cannot come.",
+      options: ["He says that he cannot come.", "He says that he can come.", "He knows that he cannot come."],
+      answer: "He says that he cannot come." }
+  - { type: listen_choose, sv: "Varför kom han inte?", en: "Why did he not come?",
+      options: ["Eftersom han var sjuk.", "Att han var sjuk.", "För 3 år sedan."], answer: "Eftersom han var sjuk." }
+
+  # listen for the number
+  - { type: numbers, sv: "Hon fyller 75 år.", hint: "the age", answer: "75", en: "She turns 75.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Vi bjöd 40 gäster.", hint: "how many guests", answer: "40", en: "We invited 40 guests.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Förra veckan träffade jag min familj.", en: "Last week I met my family.", grammar: [past_tense] }
+  - { type: translate, en: "My grandmother was born in a small town.", sv: "Min mormor är född i en liten stad.",
+      accept: ["Min farmor är född i en liten stad."] }
+  - { type: word_order, sv: "Först åt vi tårta, sedan gav vi henne presenten.", en: "First we ate cake, then we gave her the present.",
+      grammar: [inversion_after_adverb, past_tense] }
+  - { type: translate, en: "She moved here a long time ago.", sv: "Hon flyttade hit för länge sedan.", grammar: [past_tense, preposition_time] }
+
+  - { type: dictation, sv: "Mina syskon kom också, och de var glada.", en: "My siblings came too, and they were happy.", grammar: [past_tense] }
+  - { type: translate, en: "My grandmother was married for 50 years.", sv: "Min farmor var gift i 50 år.", accept: ["Min mormor var gift i 50 år."],
+      grammar: [past_tense, preposition_time] }
+  - { type: word_order, sv: "Tårtan var dyr, men den var god.", en: "The cake was expensive, but it was tasty.", grammar: [past_tense] }
+  - { type: translate, en: "We bought fruit and a cheap present.", sv: "Vi köpte frukt och en billig present.", grammar: [past_tense] }
+
+# The task itself: Sara asks about the party.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vad gjorde du i helgen?", en: "What did you do at the weekend?" }
+    - { speaker: du, en: "Say that you (all) celebrated your grandmother.", answer: "Vi firade min mormor.",
+        accept: ["Vi firade min mormors födelsedag.", "Vi firade min farmor."] }
+    - { speaker: Sara, sv: "Hade ni en fest?", en: "Did you have a party?" }
+    - { speaker: du, en: "Say yes, you invited many guests.",
+        options: ["Ja, vi bjöd många gäster.", "Ja, vi bjuder många gäster igår.", "Ja, vi många gäster bjöd."],
+        answer: "Ja, vi bjöd många gäster." }
+    - { speaker: Sara, sv: "Kom din bror?", en: "Did your brother come?" }
+    - { speaker: du, en: "Say no, because he was ill.",
+        options: ["Nej, eftersom han var sjuk.", "Nej, eftersom var han sjuk.", "Nej, att han var sjuk."],
+        answer: "Nej, eftersom han var sjuk." }
+    - { speaker: Sara, sv: "Vad fick din mormor?", en: "What did your grandmother get?" }
+    - { speaker: du, en: "Say that she got a trip.", answer: "Hon fick en resa.", accept: ["Hon fick en resa till Grekland.", "En resa."] }
+    - { speaker: Sara, sv: "Var hon glad?", en: "Was she happy?" }
+    - { speaker: du, en: "Say yes, she said that she was happy.", answer: "Ja, hon sa att hon var glad.",
+        accept: ["Ja, hon sade att hon var glad.", "Ja, hon sa att hon var mycket glad.", "Ja, hon var glad."] }
+
+speaking_prompt: "Say aloud: a party you went to, who came and who did not and why, and what you think about it."

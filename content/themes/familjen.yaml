@@ -17,6 +17,24 @@ words:
   - { lemma: fru,    pos: noun, gender: en,  tags: [person], level: A1, gloss: "wife; pl: wives" }
   - { lemma: gift,   pos: adj,  level: A1, gloss: married }
 
+
+  # A2: a family party
+  - { lemma: mormor,     pos: noun, gender: en, level: A2, gloss: "grandmother (mother's mother)", forms: { pl: mormödrar } }
+  - { lemma: farmor,     pos: noun, gender: en, level: A2, gloss: "grandmother (father's mother)", forms: { pl: farmödrar } }
+  - { lemma: gäst,       pos: noun, gender: en, level: A2, gloss: guest }
+  - { lemma: födelsedag, pos: noun, gender: en, level: A2, gloss: birthday }
+  - { lemma: fest,       pos: noun, gender: en, level: A2, gloss: party }
+  - { lemma: present,    pos: noun, gender: en, level: A2, gloss: "present, gift" }
+  - { lemma: tårta,      pos: noun, gender: en, tags: [food], level: A2, gloss: cake }
+  - { lemma: fira,       pos: verb, level: A2, gloss: to celebrate }
+  - { lemma: fylla,      pos: verb, level: A2, gloss: "to turn (an age): hon fyller 70 år; to fill" }
+  - { lemma: bjuda,      pos: verb, level: A2, gloss: "to invite; past: invited; pp: invited" }
+  - { lemma: glad,       pos: adj,  level: A2, gloss: happy }
+  - { lemma: ledsen,     pos: adj,  level: A2, gloss: sad }
+  - { lemma: ung,        pos: adj,  level: A2, gloss: young }
+  - { lemma: snäll,      pos: adj,  level: A2, gloss: kind }
+  - { lemma: rolig,      pos: adj,  level: A2, gloss: "fun, funny" }
+
 frames:
   - { id: fam-01, level: A1, grammar: [present_tense, en_ett], review: true,
       sv: "Jag har {person.a}.", en: "I have {1.a}." }

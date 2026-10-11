@@ -472,66 +472,604 @@ items:
   - soffa
   - stor
 - type: inflect
-  answer: badrummet
-  grammar:
-  - def_singular
-  lemma: badrum
-  form: def
-  words:
-  - badrum
-- type: inflect
-  answer: hallen
-  grammar:
-  - def_singular
-  lemma: hall
-  form: def
-  words:
-  - hall
-- type: inflect
-  answer: kylskåp
+  answer: bord
   grammar:
   - plural_indef
-  lemma: kylskåp
-  form: pl
-  words:
-  - kylskåp
-- type: inflect
-  answer: ett bord
-  grammar:
-  - en_ett
   lemma: bord
-  form: a
+  form: pl
   words:
   - bord
 - type: inflect
-  answer: soffor
+  answer: lampan
+  grammar:
+  - def_singular
+  lemma: lampa
+  form: def
+  words:
+  - lampa
+- type: inflect
+  answer: ett fönster
+  grammar:
+  - en_ett
+  lemma: fönster
+  form: a
+  words:
+  - fönster
+- type: inflect
+  answer: kök
   grammar:
   - plural_indef
-  lemma: soffa
+  lemma: kök
   form: pl
   words:
-  - soffa
+  - kök
 - type: inflect
-  answer: en säng
+  answer: stått
+  grammar:
+  - perfect_tense
+  lemma: stå
+  form: sup
+  words:
+  - stå
+- type: inflect
+  answer: hallar
+  grammar:
+  - plural_indef
+  lemma: hall
+  form: pl
+  words:
+  - hall
+- type: inflect
+  answer: stolen
+  grammar:
+  - def_singular
+  lemma: stol
+  form: def
+  words:
+  - stol
+- type: inflect
+  answer: balkongen
+  grammar:
+  - def_singular
+  lemma: balkong
+  form: def
+  words:
+  - balkong
+- type: cloze
+  sv: ___ står i vardagsrummet.
+  en: The washing machine is in the living room.
+  answer: Tvättmaskinen
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: tvättmaskin
+  frame: bos-01
+  words:
+  - tvättmaskin
+  - vardagsrum
+- type: cloze
+  sv: ___ är smutsig.
+  en: The key is dirty.
+  answer: Nyckeln
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: nyckel
+  frame: gen-003
+  words:
+  - nyckel
+  - smutsig
+- type: cloze
+  sv: Jag har inte ___.
+  en: I don't have the list.
+  answer: listan
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: lista
+  frame: gen-004
+  words:
+  - lista
+- type: cloze
+  sv: Var står ___?
+  en: Where is the radiator?
+  answer: elementet
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: element
+  frame: bos-04
+  words:
+  - element
+- type: cloze
+  sv: Vi hittar inte ___.
+  en: We don't find the key.
+  answer: nyckeln
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: nyckel
+  frame: gen-011
+  words:
+  - hitta
+  - nyckel
+- type: cloze
+  sv: Jag vill ha ___.
+  en: I want a list.
+  answer: en lista
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  hint: lista
+  frame: gen-008
+  words:
+  - lista
+- type: cloze
+  sv: Har du ___?
+  en: Do you have a washing machine?
+  answer: en tvättmaskin
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  hint: tvättmaskin
+  frame: gen-002
+  words:
+  - tvättmaskin
+- type: cloze
+  sv: ___ är där.
+  en: The radiator is there.
+  answer: Elementet
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: element
+  frame: gen-007
+  words:
+  - element
+- type: dictation
+  sv: Jag tar nyckeln.
+  en: I take the key.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - nyckel
+- type: dictation
+  sv: Var är listan?
+  en: Where is the list?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - lista
+- type: dictation
+  sv: Jag behöver ett element.
+  en: I need a radiator.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - element
+- type: dictation
+  sv: Tvättmaskinen står i toaletten.
+  en: The washing machine is in the toilet.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: bos-01
+  words:
+  - tvättmaskin
+  - toalett
+- type: dictation
+  sv: Kan du ta nyckeln?
+  en: Can you take the key?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - ta
+  - nyckel
+- type: dictation
+  sv: Har du listan?
+  en: Do you have the list?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - lista
+- type: dictation
+  sv: Tvättmaskinen är liten.
+  en: The washing machine is small.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - tvättmaskin
+  - liten
+- type: dictation
+  sv: Jag tog nyckeln.
+  en: I took the key.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - ta
+  - nyckel
+- type: word_order
+  sv: Har du ett element?
+  en: Do you have a radiator?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - element
+- type: word_order
+  sv: Var står tvättmaskinen?
+  en: Where is the washing machine?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: bos-04
+  words:
+  - tvättmaskin
+- type: word_order
+  sv: Jag behöver en lista.
+  en: I need a list.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - lista
+- type: word_order
+  sv: Jag vill ha ett element.
+  en: I want a radiator.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - element
+- type: word_order
+  sv: Vi tar inte nyckeln.
+  en: We don't take the key.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - ta
+  - nyckel
+- type: word_order
+  sv: Var är tvättmaskinen?
+  en: Where is the washing machine?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - tvättmaskin
+- type: word_order
+  sv: Listan är där.
+  en: The list is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - lista
+- type: word_order
+  sv: Elementet står i toaletten.
+  en: The radiator is in the toilet.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: bos-01
+  words:
+  - element
+  - toalett
+- type: translate
+  sv: Jag köper nyckeln.
+  en: I buy the key.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - köpa
+  - nyckel
+- type: translate
+  sv: Tvättmaskinen är gammal.
+  en: The washing machine is old.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - tvättmaskin
+  - gammal
+- type: translate
+  sv: Kan du hitta nyckeln?
+  en: Can you find the key?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - hitta
+  - nyckel
+- type: translate
+  sv: Har du en lista?
+  en: Do you have a list?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - lista
+- type: translate
+  sv: Var är elementet?
+  en: Where is the radiator?
+  accept:
+  - Var står elementet?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - element
+- type: translate
+  sv: Jag köpte nyckeln.
+  en: I bought the key.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - köpa
+  - nyckel
+- type: translate
+  sv: Jag behöver en tvättmaskin.
+  en: I need a washing machine.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - tvättmaskin
+- type: translate
+  sv: Elementet är litet.
+  en: The radiator is small.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - element
+  - liten
+- type: listen_choose
+  sv: Har du nyckeln?
+  answer: Do you have the key?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Do you have the key?
+  - Do you have the list?
+  - The key is dirty.
+  frame: gen-006
+  words:
+  - nyckel
+- type: listen_choose
+  sv: Jag vill ha en tvättmaskin.
+  answer: I want a washing machine.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a washing machine.
+  - I want a list.
+  - I want a radiator.
+  frame: gen-008
+  words:
+  - tvättmaskin
+- type: listen_choose
+  sv: Elementet står i vardagsrummet.
+  answer: The radiator is in the living room.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The radiator is in the living room.
+  - The washing machine is in the living room.
+  - The washing machine is in the toilet.
+  frame: bos-01
+  words:
+  - element
+  - vardagsrum
+- type: listen_choose
+  sv: Jag har inte nyckeln.
+  answer: I don't have the key.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the key.
+  - I don't have the list.
+  - The key is dirty.
+  frame: gen-004
+  words:
+  - nyckel
+- type: listen_choose
+  sv: Tvättmaskinen är där.
+  answer: The washing machine is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The washing machine is there.
+  - The key is there.
+  - The radiator is there.
+  frame: gen-007
+  words:
+  - tvättmaskin
+- type: listen_choose
+  sv: Elementet är smutsigt.
+  answer: The radiator is dirty.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  options:
+  - The radiator is dirty.
+  - The key is dirty.
+  - The washing machine is small.
+  frame: gen-003
+  words:
+  - element
+  - smutsig
+- type: listen_choose
+  sv: Vi köper inte nyckeln.
+  answer: We don't buy the key.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't buy the key.
+  - We don't find the key.
+  - We don't take the key.
+  frame: gen-011
+  words:
+  - köpa
+  - nyckel
+- type: listen_choose
+  sv: Tvättmaskinen står i hallen.
+  answer: The washing machine is in the hall.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The washing machine is in the hall.
+  - The washing machine is in the living room.
+  - The washing machine is in the toilet.
+  frame: bos-01
+  words:
+  - tvättmaskin
+  - hall
+- type: inflect
+  answer: tappade
+  grammar:
+  - past_tense
+  lemma: tappa
+  form: past
+  words:
+  - tappa
+- type: inflect
+  answer: tvättar
+  grammar:
+  - plural_indef
+  lemma: tvätt
+  form: pl
+  words:
+  - tvätt
+- type: inflect
+  answer: en tvättstuga
   grammar:
   - en_ett
-  lemma: säng
+  lemma: tvättstuga
   form: a
   words:
-  - säng
+  - tvättstuga
 - type: inflect
-  answer: ett sovrum
+  answer: grannen
   grammar:
-  - en_ett
-  lemma: sovrum
-  form: a
+  - def_singular
+  lemma: granne
+  form: def
   words:
-  - sovrum
+  - granne
 - type: inflect
-  answer: en dörr
+  answer: fel
   grammar:
-  - en_ett
-  lemma: dörr
-  form: a
+  - plural_indef
+  lemma: fel
+  form: pl
   words:
-  - dörr
+  - fel
+- type: inflect
+  answer: elementen
+  grammar:
+  - plural_def
+  lemma: element
+  form: pl_def
+  words:
+  - element
+- type: inflect
+  answer: kranarna
+  grammar:
+  - plural_def
+  lemma: kran
+  form: pl_def
+  words:
+  - kran
+- type: inflect
+  answer: hände
+  grammar:
+  - past_tense
+  lemma: hända
+  form: past
+  words:
+  - hända

@@ -1,0 +1,109 @@
+id: a2-03
+level: A2
+theme: matbutiken
+title: "Handla smart"
+task: "Find things in the shop, compare products and prices, and ask about opening hours."
+can_do: "I can compare things, ask which is cheaper or better, and talk about several things at once."
+names: [Sara]
+
+new_words: [tomat, banan, potatis, frukt, grönsak, kött, fisk, kilo, pris, flaska, paket,
+            billig, dyr, god, färsk, än, vilken, bli, hitta, stänga, öppna]
+new_grammar: [comparison, plural_def]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: du,       sv: "Hej! Jag hittar inte tomaterna.",                 en: "Hi! I can't find the tomatoes." }
+  - { speaker: personal, sv: "De finns där, vid frukten.",                      en: "They are there, by the fruit." }
+  - { speaker: du,       sv: "Vilka tomater är billigast?",                     en: "Which tomatoes are cheapest?" }
+  - { speaker: personal, sv: "De här kostar 25 kronor kilot. De där är dyrare, men de är godare.", en: "These cost 25 kronor a kilo. Those are more expensive, but they taste better." }
+  - { speaker: du,       sv: "Är fisken färsk?",                                en: "Is the fish fresh?" }
+  - { speaker: personal, sv: "Ja, den kom idag.",                               en: "Yes, it came today." }
+  - { speaker: du,       sv: "Bra. Och äpplena? Är de billigare än bananerna?", en: "Good. And the apples? Are they cheaper than the bananas?" }
+  - { speaker: personal, sv: "Ja, idag är de billigare.",                       en: "Yes, today they are cheaper." }
+  - { speaker: du,       sv: "När stänger ni ikväll?",                          en: "When do you close tonight?" }
+  - { speaker: personal, sv: "Vi stänger klockan 9. Imorgon öppnar vi klockan 7.", en: "We close at 9. Tomorrow we open at 7." }
+
+exercises:
+  # compare: -are, -ast
+  - { type: cloze, sv: "Fisken är ___ än köttet.", hint: dyr, answer: dyrare, en: "The fish is more expensive than the meat.",
+      grammar: [comparison] }
+  - { type: cloze, sv: "Vilken ost är ___?", hint: billig, answer: billigast, en: "Which cheese is cheapest?", grammar: [comparison] }
+  - { type: cloze, sv: "Mitt paket är ___ än ditt.", hint: stor, answer: större, en: "My packet is bigger than yours.",
+      grammar: [comparison] }
+  - { type: cloze, sv: "Det här brödet är ___.", hint: bra, answer: bäst, en: "This bread is the best.", grammar: [comparison] }
+  - { type: cloze, sv: "De här äpplena är ___ än de där.", hint: god, answer: godare, en: "These apples taste better than those.",
+      grammar: [comparison] }
+
+  # the …s: definite plural
+  - { type: cloze, sv: "Var finns ___?", hint: tomat, answer: tomaterna, en: "Where are the tomatoes?", grammar: [plural_def] }
+  - { type: cloze, sv: "___ är färska idag.", hint: grönsak, answer: Grönsakerna, en: "The vegetables are fresh today.",
+      grammar: [plural_def] }
+  - { type: cloze, sv: "Jag hittar inte ___.", hint: ägg, answer: äggen, en: "I can't find the eggs.", grammar: [plural_def] }
+  - { type: cloze, sv: "___ kostar 30 kronor kilot.", hint: banan, answer: Bananerna, en: "The bananas cost 30 kronor a kilo.",
+      grammar: [plural_def] }
+
+  # listen and write
+  - { type: dictation, sv: "Vilken är billigast?", en: "Which one is cheapest?", grammar: [comparison] }
+  - { type: dictation, sv: "De här tomaterna är dyrare än de där.", en: "These tomatoes are more expensive than those.",
+      grammar: [comparison, plural_def] }
+  - { type: dictation, sv: "Jag hittar inte potatisen.", en: "I can't find the potatoes." }
+  - { type: dictation, sv: "Vad är priset på köttet?", en: "What is the price of the meat?" }
+
+  # build the sentence
+  - { type: word_order, sv: "Äpplena är billigare än bananerna.", en: "The apples are cheaper than the bananas.",
+      grammar: [comparison, plural_def] }
+  - { type: word_order, sv: "När öppnar ni imorgon?", en: "When do you open tomorrow?" }
+  - { type: word_order, sv: "Fisken är inte färsk idag.", en: "The fish is not fresh today." }
+  - { type: word_order, sv: "Jag vill ha en flaska vatten och ett paket kaffe.", en: "I want a bottle of water and a packet of coffee." }
+
+  # say it in Swedish
+  - { type: translate, en: "The meat is more expensive than the fish.", sv: "Köttet är dyrare än fisken.", grammar: [comparison] }
+  - { type: translate, en: "Where are the vegetables?", sv: "Var finns grönsakerna?", accept: ["Var är grönsakerna?"],
+      grammar: [plural_def] }
+  - { type: translate, en: "I need 2 kilos of potatoes.", sv: "Jag behöver 2 kilo potatis." }
+  - { type: translate, en: "The fruit is cheap today.", sv: "Frukten är billig idag." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "De här är billigare än de där.", en: "These are cheaper than those.",
+      options: ["These are cheaper than those.", "Those are cheaper than these.", "These are more expensive than those."],
+      answer: "These are cheaper than those." }
+  - { type: listen_choose, sv: "Vilken frukt är godast?", en: "Which fruit tastes best?",
+      options: ["Äpplena.", "Klockan 9.", "25 kronor kilot."], answer: "Äpplena." }
+  - { type: listen_choose, sv: "När stänger ni?", en: "When do you close?",
+      options: ["Vi stänger klockan 9.", "Vi öppnar inte fisken.", "De är färska."], answer: "Vi stänger klockan 9." }
+
+  # listen for the number
+  - { type: numbers, sv: "Tomaterna kostar 35 kronor kilot.", hint: "the price per kilo", answer: "35",
+      en: "The tomatoes cost 35 kronor a kilo.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Vi stänger klockan halv 9.", hint: "the time, like 8.15", answer: "8.30",
+      en: "We close at half past 8.", grammar: [time_clock] }
+  - { type: numbers, sv: "Det blir 289 kronor.", hint: "the price in kronor", answer: "289",
+      en: "That comes to 289 kronor.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Jag behöver kvittot, tack.", en: "I need the receipt, please." }
+  - { type: translate, en: "After work I always shop.", sv: "Efter jobbet handlar jag alltid.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Förra veckan var köttet billigare.", en: "Last week the meat was cheaper.", grammar: [past_tense, comparison] }
+  - { type: translate, en: "It is not easy to find the potatoes.", sv: "Det är inte lätt att hitta potatisen." }
+
+# The task itself: you shop for vegetables.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: du, en: "Ask where the vegetables are.", answer: "Var finns grönsakerna?", accept: ["Var är grönsakerna?"] }
+    - { speaker: personal, sv: "De finns där, vid frukten.", en: "They are there, by the fruit." }
+    - { speaker: du, en: "Ask which tomatoes are cheapest.",
+        options: ["Vilka tomater är billigast?", "Vilken tomater är billigare?", "Vilka tomater är billig?"],
+        answer: "Vilka tomater är billigast?" }
+    - { speaker: personal, sv: "De här. De kostar 25 kronor kilot.", en: "These. They cost 25 kronor a kilo." }
+    - { speaker: du, en: "Ask if they are fresh.", answer: "Är de färska?" }
+    - { speaker: personal, sv: "Ja, de kom idag.", en: "Yes, they came today." }
+    - { speaker: du, en: "Say that you will take 2 kilos.", answer: "Jag tar 2 kilo.", accept: ["Då tar jag 2 kilo.", "2 kilo, tack."] }
+    - { speaker: personal, sv: "Det blir 50 kronor.", en: "That comes to 50 kronor." }
+    - { speaker: du, en: "Say that you pay by card.",
+        options: ["Jag betalar med kort.", "Jag betalar dyrare.", "Jag hittar inte kortet."], answer: "Jag betalar med kort." }
+
+speaking_prompt: "Say aloud: compare three things you buy (cheaper, better, bigger) and ask when the shop closes."

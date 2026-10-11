@@ -25,6 +25,18 @@ words:
   - { lemma: över,   pos: prep, level: A1, gloss: "past (5 över 3 = 3.05)" }
   - { lemma: nästa,  pos: adj,  level: A1, gloss: next }
 
+
+  # A2: delays and announcements
+  - { lemma: försenad,    pos: adj,  level: A2, gloss: "delayed, late" }
+  - { lemma: inställd,    pos: adj,  level: A2, gloss: cancelled }
+  - { lemma: avgång,      pos: noun, gender: en,  level: A2, gloss: departure }
+  - { lemma: problem,     pos: noun, gender: ett, tags: [problem], level: A2, gloss: problem }
+  - { lemma: information, pos: noun, gender: en,  level: A2, gloss: information }
+  - { lemma: hinna,       pos: verb, level: A2, gloss: "to make it, to have time; past: made it; pp: made it" }
+  - { lemma: missa,       pos: verb, level: A2, gloss: to miss }
+  - { lemma: stanna,      pos: verb, tags: [action_intrans], level: A2, gloss: "to stop, to stay; past: stopped; pp: stopped" }
+  - { lemma: resa,        pos: verb, tags: [action_intrans], level: A2, gloss: "to travel; past: travelled; pp: travelled" }
+
 frames:
   - { id: res-01, level: A1, grammar: [wh_question, def_singular], review: true,
       sv: "När går {vehicle.def}?", en: "When does the {1} leave?" }

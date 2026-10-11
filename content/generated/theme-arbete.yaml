@@ -443,13 +443,29 @@ items:
   words:
   - sluta
 - type: inflect
-  answer: en lärare
+  answer: restaurangen
+  grammar:
+  - def_singular
+  lemma: restaurang
+  form: def
+  words:
+  - restaurang
+- type: inflect
+  answer: en butik
   grammar:
   - en_ett
-  lemma: lärare
+  lemma: butik
   form: a
   words:
-  - lärare
+  - butik
+- type: inflect
+  answer: kontoret
+  grammar:
+  - def_singular
+  lemma: kontor
+  form: def
+  words:
+  - kontor
 - type: inflect
   answer: ett jobb
   grammar:
@@ -459,30 +475,6 @@ items:
   words:
   - jobb
 - type: inflect
-  answer: sjukhuset
-  grammar:
-  - def_singular
-  lemma: sjukhus
-  form: def
-  words:
-  - sjukhus
-- type: inflect
-  answer: en snickare
-  grammar:
-  - en_ett
-  lemma: snickare
-  form: a
-  words:
-  - snickare
-- type: inflect
-  answer: en restaurang
-  grammar:
-  - en_ett
-  lemma: restaurang
-  form: a
-  words:
-  - restaurang
-- type: inflect
   answer: en städare
   grammar:
   - en_ett
@@ -491,18 +483,538 @@ items:
   words:
   - städare
 - type: inflect
-  answer: kvällar
-  grammar:
-  - plural_indef
-  lemma: kväll
-  form: pl
-  words:
-  - kväll
-- type: inflect
-  answer: kollegan
+  answer: kocken
   grammar:
   - def_singular
-  lemma: kollega
+  lemma: kock
   form: def
   words:
+  - kock
+- type: inflect
+  answer: sjuksköterskan
+  grammar:
+  - def_singular
+  lemma: sjuksköterska
+  form: def
+  words:
+  - sjuksköterska
+- type: inflect
+  answer: en kollega
+  grammar:
+  - en_ett
+  lemma: kollega
+  form: a
+  words:
   - kollega
+- type: cloze
+  sv: Jag behöver ___.
+  en: I need a driving licence.
+  answer: ett körkort
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  hint: körkort
+  frame: gen-005
+  words:
+  - körkort
+- type: cloze
+  sv: Jag har inte ___.
+  en: I don't have the schedule.
+  answer: schemat
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: schema
+  frame: gen-004
+  words:
+  - schema
+- type: cloze
+  sv: Var är ___?
+  en: Where is the driving licence?
+  answer: körkortet
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: körkort
+  frame: gen-001
+  words:
+  - körkort
+- type: cloze
+  sv: Har du ___?
+  en: Do you have the schedule?
+  answer: schemat
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: schema
+  frame: gen-006
+  words:
+  - schema
+- type: cloze
+  sv: Har du ___?
+  en: Do you have a driving licence?
+  answer: ett körkort
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  hint: körkort
+  frame: gen-002
+  words:
+  - körkort
+- type: cloze
+  sv: Jag vill ha ___.
+  en: I want a schedule.
+  answer: ett schema
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  hint: schema
+  frame: gen-008
+  words:
+  - schema
+- type: cloze
+  sv: ___ är där.
+  en: The driving licence is there.
+  answer: Körkortet
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: körkort
+  frame: gen-007
+  words:
+  - körkort
+- type: cloze
+  sv: Jag behöver ___.
+  en: I need a schedule.
+  answer: ett schema
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  hint: schema
+  frame: gen-005
+  words:
+  - schema
+- type: dictation
+  sv: Jag har inte körkortet.
+  en: I don't have the driving licence.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - körkort
+- type: dictation
+  sv: Har du ett schema?
+  en: Do you have a schedule?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - schema
+- type: dictation
+  sv: Jag vill ha ett körkort.
+  en: I want a driving licence.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - körkort
+- type: dictation
+  sv: Schemat är där.
+  en: The schedule is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - schema
+- type: dictation
+  sv: Har du körkortet?
+  en: Do you have the driving licence?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - körkort
+- type: dictation
+  sv: Var är schemat?
+  en: Where is the schedule?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - schema
+- type: dictation
+  sv: Jag behöver ett körkort.
+  en: I need a driving licence.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - körkort
+- type: dictation
+  sv: Jag har inte schemat.
+  en: I don't have the schedule.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - schema
+- type: word_order
+  sv: Var är körkortet?
+  en: Where is the driving licence?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - körkort
+- type: word_order
+  sv: Har du schemat?
+  en: Do you have the schedule?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - schema
+- type: word_order
+  sv: Har du ett körkort?
+  en: Do you have a driving licence?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - körkort
+- type: word_order
+  sv: Jag vill ha ett schema.
+  en: I want a schedule.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - schema
+- type: word_order
+  sv: Körkortet är där.
+  en: The driving licence is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - körkort
+- type: word_order
+  sv: Jag behöver ett schema.
+  en: I need a schedule.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - schema
+- type: word_order
+  sv: Jag har inte körkortet.
+  en: I don't have the driving licence.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - körkort
+- type: word_order
+  sv: Har du ett schema?
+  en: Do you have a schedule?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - schema
+- type: translate
+  sv: Jag vill ha ett körkort.
+  en: I want a driving licence.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - körkort
+- type: translate
+  sv: Schemat är där.
+  en: The schedule is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - schema
+- type: translate
+  sv: Har du körkortet?
+  en: Do you have the driving licence?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - körkort
+- type: translate
+  sv: Var är schemat?
+  en: Where is the schedule?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - schema
+- type: translate
+  sv: Jag behöver ett körkort.
+  en: I need a driving licence.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - körkort
+- type: translate
+  sv: Jag har inte schemat.
+  en: I don't have the schedule.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - schema
+- type: translate
+  sv: Var är körkortet?
+  en: Where is the driving licence?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - körkort
+- type: translate
+  sv: Har du schemat?
+  en: Do you have the schedule?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - schema
+- type: listen_choose
+  sv: Har du ett körkort?
+  answer: Do you have a driving licence?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a driving licence?
+  - Do you have a schedule?
+  - I need a driving licence.
+  frame: gen-002
+  words:
+  - körkort
+- type: listen_choose
+  sv: Jag vill ha ett schema.
+  answer: I want a schedule.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a schedule.
+  - I want a driving licence.
+  - I don't have the schedule.
+  frame: gen-008
+  words:
+  - schema
+- type: listen_choose
+  sv: Körkortet är där.
+  answer: The driving licence is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The driving licence is there.
+  - The schedule is there.
+  - I need a driving licence.
+  frame: gen-007
+  words:
+  - körkort
+- type: listen_choose
+  sv: Jag behöver ett schema.
+  answer: I need a schedule.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need a schedule.
+  - I need a driving licence.
+  - I don't have the schedule.
+  frame: gen-005
+  words:
+  - schema
+- type: listen_choose
+  sv: Jag har inte körkortet.
+  answer: I don't have the driving licence.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the driving licence.
+  - I don't have the schedule.
+  - I need a driving licence.
+  frame: gen-004
+  words:
+  - körkort
+- type: listen_choose
+  sv: Har du ett schema?
+  answer: Do you have a schedule?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a schedule?
+  - Do you have a driving licence?
+  - I don't have the schedule.
+  frame: gen-002
+  words:
+  - schema
+- type: listen_choose
+  sv: Jag vill ha ett körkort.
+  answer: I want a driving licence.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a driving licence.
+  - I want a schedule.
+  - I need a driving licence.
+  frame: gen-008
+  words:
+  - körkort
+- type: listen_choose
+  sv: Schemat är där.
+  answer: The schedule is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The schedule is there.
+  - The driving licence is there.
+  - I don't have the schedule.
+  frame: gen-007
+  words:
+  - schema
+- type: inflect
+  answer: söker
+  grammar:
+  - present_tense
+  lemma: söka
+  form: pres
+  words:
+  - söka
+- type: inflect
+  answer: utbildningen
+  grammar:
+  - def_singular
+  lemma: utbildning
+  form: def
+  words:
+  - utbildning
+- type: inflect
+  answer: en semester
+  grammar:
+  - en_ett
+  lemma: semester
+  form: a
+  words:
+  - semester
+- type: inflect
+  answer: ett körkort
+  grammar:
+  - en_ett
+  lemma: körkort
+  form: a
+  words:
+  - körkort
+- type: inflect
+  answer: ansökningar
+  grammar:
+  - plural_indef
+  lemma: ansökan
+  form: pl
+  words:
+  - ansökan
+- type: inflect
+  answer: trivts
+  grammar:
+  - perfect_tense
+  lemma: trivas
+  form: sup
+  words:
+  - trivas
+- type: inflect
+  answer: en kund
+  grammar:
+  - en_ett
+  lemma: kund
+  form: a
+  words:
+  - kund
+- type: inflect
+  answer: lär
+  grammar:
+  - present_tense
+  lemma: lära
+  form: pres
+  words:
+  - lära

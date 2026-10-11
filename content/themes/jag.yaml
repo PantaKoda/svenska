@@ -20,3 +20,15 @@ words:
   - { lemma: telefonnummer, pos: noun, gender: ett, level: A1, gloss: phone number }
   - { lemma: personnummer,  pos: noun, gender: ett, level: A1, gloss: "personal identity number" }
   - { lemma: år,            pos: noun, gender: ett, level: A1, gloss: year }
+
+  # A2: your story
+  - { lemma: född,        pos: adj,  level: A2, gloss: born }
+  - { lemma: flytta,      pos: verb, tags: [action_intrans], level: A2, gloss: to move }
+  - { lemma: studera,     pos: verb, tags: [action_intrans], level: A2, gloss: "to study; past: studied; pp: studied" }
+  - { lemma: träffa,      pos: verb, level: A2, gloss: "to meet; past: met; pp: met" }
+  - { lemma: land,        pos: noun, gender: ett, level: A2, gloss: country, forms: { pl: länder } }
+  - { lemma: stad,        pos: noun, gender: en,  level: A2, gloss: "town, city", forms: { def: staden, pl: städer } }
+  - { lemma: universitet, pos: noun, gender: ett, level: A2, gloss: university }
+  - { lemma: språk,       pos: noun, gender: ett, level: A2, gloss: language }
+  - { lemma: svår,        pos: adj,  level: A2, gloss: "difficult, hard" }
+  - { lemma: lätt,        pos: adj,  level: A2, gloss: easy }

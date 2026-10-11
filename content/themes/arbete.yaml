@@ -28,3 +28,22 @@ words:
   - { lemma: morgon, pos: noun, gender: en, level: A1, gloss: morning, forms: { pl: morgnar } }
   - { lemma: kväll,  pos: noun, gender: en, level: A1, gloss: evening }
   - { lemma: heltid, pos: adv,  level: A1, gloss: "full time (jobba heltid = work full time)" }
+
+  # A2: applying for a job
+  - { lemma: söka,        pos: verb, level: A2, gloss: "to apply for, to look for; past: applied for; pp: applied for" }
+  - { lemma: ansökan,     pos: noun, gender: en,  level: A2, gloss: application, forms: { def: ansökan, pl: ansökningar } }
+  - { lemma: intervju,    pos: noun, gender: en,  level: A2, gloss: interview }
+  - { lemma: erfarenhet,  pos: noun, gender: en,  level: A2, gloss: experience }
+  - { lemma: utbildning,  pos: noun, gender: en,  level: A2, gloss: education }
+  - { lemma: körkort,     pos: noun, gender: ett, tags: [document], level: A2, gloss: driving licence }
+  - { lemma: lön,         pos: noun, gender: en,  level: A2, gloss: "pay, salary" }
+  - { lemma: schema,      pos: noun, gender: ett, tags: [document], level: A2, gloss: schedule }
+  - { lemma: semester,    pos: noun, gender: en,  level: A2, gloss: "holiday, leave" }
+  - { lemma: kund,        pos: noun, gender: en,  level: A2, gloss: customer }
+  - { lemma: företag,     pos: noun, gender: ett, level: A2, gloss: company }
+  - { lemma: natt,        pos: noun, gender: en,  level: A2, gloss: night, forms: { pl: nätter } }
+  - { lemma: lära,        pos: verb, level: A2, gloss: "to teach (lära sig = learn); past: taught; pp: taught", forms: { pres: lär } }
+  - { lemma: trivas,      pos: verb, level: A2, gloss: "to like it (somewhere), to be happy" }
+  - { lemma: snabb,       pos: adj,  level: A2, gloss: fast }
+  - { lemma: noggrann,    pos: adj,  level: A2, gloss: "careful, thorough" }
+  - { lemma: intresserad, pos: adj,  level: A2, gloss: interested }

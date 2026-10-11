@@ -1,0 +1,118 @@
+id: a2-08
+level: A2
+theme: fritid
+title: "En utflykt"
+task: "Plan a trip with a friend from the weather forecast, suggest something else, and agree on a time."
+can_do: "I can understand a simple weather forecast and make, change and decline plans."
+names: [Sara]
+
+new_words: [snö, snöa, blåsa, grad, moln, utflykt, strand, skog, sjö, hav,
+            cykel, cykla, vandra, matsäck, passa, sommar, vinter, inne, ute, istället]
+new_grammar: []
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vad ska vi göra på lördag? Det kommer att bli 25 grader och sol!", en: "What shall we do on Saturday? It is going to be 25 degrees and sunny!" }
+  - { speaker: du,   sv: "Då kan vi göra en utflykt till havet.",                   en: "Then we can go on a trip to the sea." }
+  - { speaker: Sara, sv: "Jag vill hellre cykla till sjön. Den är mindre, men vattnet är varmare.", en: "I would rather cycle to the lake. It is smaller, but the water is warmer." }
+  - { speaker: du,   sv: "Bra! Jag tar med matsäck.",                               en: "Good! I'll bring a packed lunch." }
+  - { speaker: Sara, sv: "Men på söndag kommer det att regna och blåsa.",           en: "But on Sunday it is going to rain and be windy." }
+  - { speaker: du,   sv: "Då stannar vi inne och ser en film istället.",            en: "Then we'll stay in and watch a film instead." }
+  - { speaker: Sara, sv: "Passar det klockan 10 på lördag?",                        en: "Does 10 o'clock on Saturday suit you?" }
+  - { speaker: du,   sv: "Tyvärr, jag jobbar till klockan 11. Passar klockan 12?",  en: "Unfortunately I work until 11. Does 12 suit you?" }
+  - { speaker: Sara, sv: "Ja, det passar bra.",                                     en: "Yes, that suits me fine." }
+
+exercises:
+  # the forecast: what does it mean?
+  - { type: listen_choose, sv: "Imorgon kommer det att snöa.", en: "Tomorrow it is going to snow.",
+      options: ["Tomorrow it is going to snow.", "Tomorrow it is going to rain.", "It snowed yesterday."],
+      answer: "Tomorrow it is going to snow." }
+  - { type: listen_choose, sv: "På söndag blir det sol och 20 grader.", en: "On Sunday it will be sunny and 20 degrees.",
+      options: ["On Sunday it will be sunny and 20 degrees.", "On Sunday it will be cloudy and 20 degrees.", "On Saturday it will be sunny and 20 degrees."],
+      answer: "On Sunday it will be sunny and 20 degrees." }
+  - { type: listen_choose, sv: "Det blåser mycket vid havet idag.", en: "It is very windy by the sea today.",
+      options: ["It is very windy by the sea today.", "It is very warm by the sea today.", "It is not windy by the sea today."],
+      answer: "It is very windy by the sea today." }
+  - { type: listen_choose, sv: "Passar det på lördag?", en: "Does Saturday suit you?",
+      options: ["Ja, det passar bra.", "Ja, det snöar.", "I skogen."], answer: "Ja, det passar bra." }
+
+  # listen for the number
+  - { type: numbers, sv: "Det är 18 grader idag.", hint: "how many degrees", answer: "18", en: "It is 18 degrees today.",
+      grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Imorgon kommer det att bli 3 grader.", hint: "how many degrees", answer: "3",
+      en: "Tomorrow it is going to be 3 degrees.", grammar: [future_ska_kommer_att] }
+
+  # fill the gap
+  - { type: cloze, sv: "På sommaren är det ___ än på vintern.", hint: varm, answer: varmare, en: "In summer it is warmer than in winter.",
+      grammar: [comparison] }
+  - { type: cloze, sv: "Imorgon ___ det att regna.", answer: kommer, en: "Tomorrow it is going to rain.", grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Vi stannar ___ eftersom det regnar.", answer: inne, en: "We are staying in because it is raining.",
+      grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Sjön är ___ än havet.", hint: liten, answer: mindre, en: "The lake is smaller than the sea.", grammar: [comparison] }
+
+  # listen and write
+  - { type: dictation, sv: "Vi gör en utflykt till skogen.", en: "We are going on a trip to the forest." }
+  - { type: dictation, sv: "På vintern snöar det ofta.", en: "In winter it often snows.", grammar: [inversion_after_adverb] }
+  - { type: dictation, sv: "Jag tar med matsäck och vatten.", en: "I'll bring a packed lunch and water." }
+  - { type: dictation, sv: "Det är mycket moln och snö idag.", en: "There are a lot of clouds and snow today." }
+
+  # build the sentence
+  - { type: word_order, sv: "Imorgon kommer det att blåsa.", en: "Tomorrow it is going to be windy.", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Vi kan vandra i skogen istället.", en: "We can hike in the forest instead." }
+  - { type: word_order, sv: "Jag cyklar hellre till stranden.", en: "I would rather cycle to the beach." }
+  - { type: word_order, sv: "Eftersom det regnar stannar vi inne.", en: "Because it is raining, we are staying in.",
+      grammar: [subordinate_clause_basic] }
+
+  # say it in Swedish
+  - { type: translate, en: "It is snowing.", sv: "Det snöar." }
+  - { type: translate, en: "We eat outside in the summer.", sv: "Vi äter ute på sommaren.", accept: ["På sommaren äter vi ute."] }
+  - { type: translate, en: "I have a new bike.", sv: "Jag har en ny cykel." }
+  - { type: translate, en: "The lake is bigger than the park.", sv: "Sjön är större än parken.", grammar: [comparison] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Ibland lagar vi mat ute.", en: "Sometimes we cook outside.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Klä på dig varmt, det är kallt ute.", en: "Dress warmly, it is cold outside.", grammar: [imperative, reflexive_basic] }
+  - { type: translate, en: "I never watch TV in the summer.", sv: "Jag tittar aldrig på tv på sommaren.",
+      accept: ["På sommaren tittar jag aldrig på tv."] }
+  - { type: cloze, sv: "Förra sommaren ___ vi vid havet i en månad.", hint: bo, answer: bodde, en: "Last summer we stayed by the sea for a month.",
+      grammar: [past_tense] }
+  - { type: translate, en: "It was difficult to cycle in the snow.", sv: "Det var svårt att cykla i snön.", grammar: [past_tense] }
+
+  - { type: dictation, sv: "Bussen till stranden är inställd idag.", en: "The bus to the beach is cancelled today." }
+  - { type: word_order, sv: "Vi kommer fram ungefär klockan 2.", en: "We arrive at about 2." }
+  - { type: translate, en: "Maybe it will rain at the weekend.", sv: "Kanske blir det regn i helgen.", accept: ["Det blir kanske regn i helgen.", "Kanske regnar det i helgen."] }
+  - { type: translate, en: "I like swimming in the sea.", sv: "Jag gillar att simma i havet." }
+  - { type: dictation, sv: "Vi tar en promenad och fikar vid sjön.", en: "We go for a walk and have a coffee by the lake." }
+  - { type: word_order, sv: "Vädret är fint och vi spelar fotboll.", en: "The weather is nice and we are playing football." }
+  - { type: translate, en: "My grandmother turns 70 on Sunday.", sv: "Min farmor fyller 70 år på söndag.", accept: ["Min mormor fyller 70 år på söndag."] }
+  - { type: dictation, sv: "Cykeln var en present från min mormor.", en: "The bike was a present from my grandmother.", grammar: [past_tense] }
+  - { type: word_order, sv: "Glöm inte matsäcken och kom tillbaka innan det blir kallt.", en: "Don't forget the packed lunch and come back before it gets cold.",
+      grammar: [imperative, subordinate_clause_basic] }
+  - { type: translate, en: "I have a cold, I cannot swim.", sv: "Jag är förkyld, jag kan inte simma." }
+  - { type: dictation, sv: "Vi firar min födelsedag med en rolig fest på stranden.", en: "We are celebrating my birthday with a fun party on the beach." }
+  - { type: translate, en: "The fish from the lake is fresh.", sv: "Fisken från sjön är färsk." }
+
+# The task itself: you and Sara plan the weekend.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vad ska vi göra på lördag?", en: "What shall we do on Saturday?" }
+    - { speaker: du, en: "Say that you can go on a trip.", answer: "Vi kan göra en utflykt.",
+        accept: ["Vi kan göra en utflykt till havet."] }
+    - { speaker: Sara, sv: "Det kommer att regna på lördag.", en: "It is going to rain on Saturday." }
+    - { speaker: du, en: "Say: then we'll stay in instead.",
+        options: ["Då stannar vi inne istället.", "Då vi stannar inne istället.", "Då stannar vi ute istället."],
+        answer: "Då stannar vi inne istället." }
+    - { speaker: Sara, sv: "Och på söndag? Då blir det sol.", en: "And on Sunday? It will be sunny then." }
+    - { speaker: du, en: "Say: then we can cycle to the lake.", answer: "Då kan vi cykla till sjön.", accept: ["Då cyklar vi till sjön."] }
+    - { speaker: Sara, sv: "Passar klockan 10?", en: "Does 10 o'clock suit you?" }
+    - { speaker: du, en: "Say that unfortunately you work until 11.",
+        options: ["Tyvärr, jag jobbar till klockan 11.", "Ja, det snöar klockan 10.", "Nej, jag passar inte."],
+        answer: "Tyvärr, jag jobbar till klockan 11." }
+    - { speaker: Sara, sv: "Passar klockan 12 då?", en: "Does 12 suit you then?" }
+    - { speaker: du, en: "Say yes, that suits you fine.", answer: "Ja, det passar bra.", accept: ["Ja, det passar.", "Det passar bra."] }
+
+speaking_prompt: "Say aloud: tomorrow's weather, what you want to do, and what you will do instead if it rains."

@@ -278,51 +278,11 @@ items:
   words:
   - komma
 - type: inflect
-  answer: engelskor
+  answer: ett personnummer
   grammar:
-  - plural_indef
-  lemma: engelska
-  form: pl
-  words:
-  - engelska
-- type: inflect
-  answer: adressen
-  grammar:
-  - def_singular
-  lemma: adress
-  form: def
-  words:
-  - adress
-- type: inflect
-  answer: året
-  grammar:
-  - def_singular
-  lemma: år
-  form: def
-  words:
-  - år
-- type: inflect
-  answer: talar
-  grammar:
-  - present_tense
-  lemma: tala
-  form: pres
-  words:
-  - tala
-- type: inflect
-  answer: efternamn
-  grammar:
-  - plural_indef
-  lemma: efternamn
-  form: pl
-  words:
-  - efternamn
-- type: inflect
-  answer: personnumret
-  grammar:
-  - def_singular
+  - en_ett
   lemma: personnummer
-  form: def
+  form: a
   words:
   - personnummer
 - type: inflect
@@ -334,10 +294,554 @@ items:
   words:
   - må
 - type: inflect
-  answer: ett postnummer
+  answer: adressen
   grammar:
-  - en_ett
+  - def_singular
+  lemma: adress
+  form: def
+  words:
+  - adress
+- type: inflect
+  answer: svenskan
+  grammar:
+  - def_singular
+  lemma: svenska
+  form: def
+  words:
+  - svenska
+- type: inflect
+  answer: postnummer
+  grammar:
+  - plural_indef
   lemma: postnummer
-  form: a
+  form: pl
   words:
   - postnummer
+- type: inflect
+  answer: efternamnet
+  grammar:
+  - def_singular
+  lemma: efternamn
+  form: def
+  words:
+  - efternamn
+- type: inflect
+  answer: bott
+  grammar:
+  - perfect_tense
+  lemma: bo
+  form: sup
+  words:
+  - bo
+- type: inflect
+  answer: het
+  grammar:
+  - imperative
+  lemma: heta
+  form: imp
+  words:
+  - heta
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to move today.
+  answer: flyttar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: flytta
+  frame: gen-012
+  words:
+  - flytta
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to study tonight?
+  answer: studera
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: studera
+  frame: gen-016
+  words:
+  - studera
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can study tomorrow.
+  answer: studera
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: studera
+  frame: gen-015
+  words:
+  - studera
+- type: cloze
+  sv: När ___ du?
+  en: When do you move?
+  answer: flyttar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: flytta
+  frame: gen-014
+  words:
+  - flytta
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to study today?
+  answer: Studerar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: studera
+  frame: gen-013
+  words:
+  - studera
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to move tonight?
+  answer: flytta
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: flytta
+  frame: gen-016
+  words:
+  - flytta
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to study today.
+  answer: studerar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: studera
+  frame: gen-012
+  words:
+  - studera
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can move tomorrow.
+  answer: flytta
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: flytta
+  frame: gen-015
+  words:
+  - flytta
+- type: dictation
+  sv: När studerar du?
+  en: When do you study?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - studera
+- type: dictation
+  sv: Flyttar du idag?
+  en: Are you going to move today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - flytta
+- type: dictation
+  sv: Jag flyttar inte idag.
+  en: I am not going to move today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - flytta
+- type: dictation
+  sv: Vill du studera ikväll?
+  en: Do you want to study tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - studera
+- type: dictation
+  sv: Vi kan studera imorgon.
+  en: We can study tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - studera
+- type: dictation
+  sv: När flyttar du?
+  en: When do you move?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - flytta
+- type: dictation
+  sv: Studerar du idag?
+  en: Are you going to study today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - studera
+- type: dictation
+  sv: Vill du flytta ikväll?
+  en: Do you want to move tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - flytta
+- type: word_order
+  sv: Jag studerar inte idag.
+  en: I am not going to study today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - studera
+- type: word_order
+  sv: Vi kan flytta imorgon.
+  en: We can move tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - flytta
+- type: word_order
+  sv: När studerar du?
+  en: When do you study?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - studera
+- type: word_order
+  sv: Flyttar du idag?
+  en: Are you going to move today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - flytta
+- type: word_order
+  sv: Jag flyttar inte idag.
+  en: I am not going to move today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - flytta
+- type: word_order
+  sv: Vill du studera ikväll?
+  en: Do you want to study tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - studera
+- type: word_order
+  sv: Vi kan studera imorgon.
+  en: We can study tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - studera
+- type: word_order
+  sv: När flyttar du?
+  en: When do you move?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - flytta
+- type: translate
+  sv: Studerar du idag?
+  en: Are you going to study today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - studera
+- type: translate
+  sv: Vill du flytta ikväll?
+  en: Do you want to move tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - flytta
+- type: translate
+  sv: Jag studerar inte idag.
+  en: I am not going to study today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - studera
+- type: translate
+  sv: Vi kan flytta imorgon.
+  en: We can move tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - flytta
+- type: translate
+  sv: När studerar du?
+  en: When do you study?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - studera
+- type: translate
+  sv: Flyttar du idag?
+  en: Are you going to move today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - flytta
+- type: translate
+  sv: Jag flyttar inte idag.
+  en: I am not going to move today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - flytta
+- type: translate
+  sv: Vill du studera ikväll?
+  en: Do you want to study tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - studera
+- type: listen_choose
+  sv: Vi kan studera imorgon.
+  answer: We can study tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can study tomorrow.
+  - We can move tomorrow.
+  - Do you want to study tonight?
+  frame: gen-015
+  words:
+  - studera
+- type: listen_choose
+  sv: När flyttar du?
+  answer: When do you move?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you move?
+  - When do you study?
+  - I am not going to move today.
+  frame: gen-014
+  words:
+  - flytta
+- type: listen_choose
+  sv: Studerar du idag?
+  answer: Are you going to study today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to study today?
+  - Are you going to move today?
+  - Do you want to study tonight?
+  frame: gen-013
+  words:
+  - studera
+- type: listen_choose
+  sv: Vill du flytta ikväll?
+  answer: Do you want to move tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to move tonight?
+  - Do you want to study tonight?
+  - I am not going to move today.
+  frame: gen-016
+  words:
+  - flytta
+- type: listen_choose
+  sv: Jag studerar inte idag.
+  answer: I am not going to study today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to study today.
+  - I am not going to move today.
+  - Do you want to study tonight?
+  frame: gen-012
+  words:
+  - studera
+- type: listen_choose
+  sv: Vi kan flytta imorgon.
+  answer: We can move tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can move tomorrow.
+  - We can study tomorrow.
+  - I am not going to move today.
+  frame: gen-015
+  words:
+  - flytta
+- type: listen_choose
+  sv: När studerar du?
+  answer: When do you study?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you study?
+  - When do you move?
+  - Do you want to study tonight?
+  frame: gen-014
+  words:
+  - studera
+- type: listen_choose
+  sv: Flyttar du idag?
+  answer: Are you going to move today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to move today?
+  - Are you going to study today?
+  - I am not going to move today.
+  frame: gen-013
+  words:
+  - flytta
+- type: inflect
+  answer: staden
+  grammar:
+  - def_singular
+  lemma: stad
+  form: def
+  words:
+  - stad
+- type: inflect
+  answer: träffat
+  grammar:
+  - perfect_tense
+  lemma: träffa
+  form: sup
+  words:
+  - träffa
+- type: inflect
+  answer: flytta
+  grammar:
+  - imperative
+  lemma: flytta
+  form: imp
+  words:
+  - flytta
+- type: inflect
+  answer: universitet
+  grammar:
+  - plural_indef
+  lemma: universitet
+  form: pl
+  words:
+  - universitet
+- type: inflect
+  answer: språken
+  grammar:
+  - plural_def
+  lemma: språk
+  form: pl_def
+  words:
+  - språk
+- type: inflect
+  answer: ett land
+  grammar:
+  - en_ett
+  lemma: land
+  form: a
+  words:
+  - land
+- type: inflect
+  answer: studera
+  grammar:
+  - imperative
+  lemma: studera
+  form: imp
+  words:
+  - studera
+- type: inflect
+  answer: städerna
+  grammar:
+  - plural_def
+  lemma: stad
+  form: pl_def
+  words:
+  - stad

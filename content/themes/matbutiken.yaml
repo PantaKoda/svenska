@@ -25,6 +25,27 @@ words:
   - { lemma: finnas, pos: verb, level: A1, gloss: "to be there, to exist",
       forms: { pres: finns } }
 
+
+  # A2: compare and choose
+  - { lemma: tomat,   pos: noun, gender: en,  tags: [food], level: A2, gloss: "tomato; pl: tomatoes" }
+  - { lemma: banan,   pos: noun, gender: en,  tags: [food], level: A2, gloss: banana }
+  - { lemma: potatis, pos: noun, gender: en,  tags: [food], level: A2, gloss: "potato; pl: potatoes", forms: { pl: potatisar } }
+  - { lemma: frukt,   pos: noun, gender: en,  tags: [food], level: A2, gloss: fruit }
+  - { lemma: grönsak, pos: noun, gender: en,  tags: [food], level: A2, gloss: vegetable }
+  - { lemma: kött,    pos: noun, gender: ett, tags: [food], level: A2, gloss: meat }
+  - { lemma: fisk,    pos: noun, gender: en,  tags: [food], level: A2, gloss: "fish; pl: fish" }
+  - { lemma: kilo,    pos: noun, gender: ett, level: A2, gloss: kilo, forms: { pl: kilo } }
+  - { lemma: pris,    pos: noun, gender: ett, level: A2, gloss: price, forms: { pl: priser } }
+  - { lemma: flaska,  pos: noun, gender: en,  tags: [container], level: A2, gloss: bottle }
+  - { lemma: paket,   pos: noun, gender: ett, tags: [container], level: A2, gloss: "packet, pack" }
+  - { lemma: billig,  pos: adj,  level: A2, gloss: cheap }
+  - { lemma: dyr,     pos: adj,  level: A2, gloss: expensive }
+  - { lemma: god,     pos: adj,  level: A2, gloss: "tasty, good" }
+  - { lemma: färsk,   pos: adj,  level: A2, gloss: fresh }
+  - { lemma: hitta,   pos: verb, tags: [action_object], level: A2, gloss: "to find; past: found; pp: found" }
+  - { lemma: stänga,  pos: verb, level: A2, gloss: "to close; past: closed; pp: closed" }
+  - { lemma: öppna,   pos: verb, level: A2, gloss: to open }
+
 frames:
   - { id: mat-01, level: A1, grammar: [wh_question, def_singular], review: true,
       sv: "Vad kostar {food|drink|container.def}?", en: "What does the {1} cost?" }

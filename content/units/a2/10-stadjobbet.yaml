@@ -1,0 +1,134 @@
+id: a2-10
+level: A2
+theme: stadning
+title: "Städjobbet"
+task: "Understand cleaning instructions at work, find your tools and report what you have done."
+can_do: "I can follow a work checklist, ask about tools and say what is finished."
+names: [Storgatan]
+
+new_words: [dammsugare, hink, mopp, trasa, soppåse, golv, toalett, papperskorg, spegel, handfat, handske,
+            rengöringsmedel, städa, dammsuga, torka, moppa, tömma, använda,
+            ren, smutsig, farlig, klar, all]
+new_grammar: []
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: chef, sv: "Hej! Idag städar du kontoret på Storgatan. Här är listan.",   en: "Hello! Today you are cleaning the office on Storgatan. Here is the list." }
+  - { speaker: du,   sv: "Tack. Var finns dammsugaren och moppen?",                     en: "Thanks. Where are the vacuum cleaner and the mop?" }
+  - { speaker: chef, sv: "I rummet vid toaletterna. Hinken står där också.",            en: "In the room by the toilets. The bucket is there too." }
+  - { speaker: chef, sv: "Dammsug golven först. Moppa sedan köket och toaletterna.",    en: "Vacuum the floors first. Then mop the kitchen and the toilets." }
+  - { speaker: du,   sv: "Ska jag torka borden också?",                                 en: "Should I wipe the tables too?" }
+  - { speaker: chef, sv: "Ja, torka alla bord med en ren trasa. Och töm papperskorgarna.", en: "Yes, wipe all the tables with a clean cloth. And empty the wastepaper baskets." }
+  - { speaker: du,   sv: "Vilket rengöringsmedel ska jag använda på speglarna?",        en: "Which detergent should I use on the mirrors?" }
+  - { speaker: chef, sv: "Det här. Men använd handskar. Det är starkt.",                en: "This one. But use gloves. It is strong." }
+  - { speaker: du,   sv: "Jag är klar. Jag har dammsugit, moppat golven och tömt papperskorgarna.", en: "I am done. I have vacuumed, mopped the floors and emptied the wastepaper baskets." }
+  - { speaker: chef, sv: "Har du bytt soppåsar?",                                       en: "Have you changed the rubbish bags?" }
+  - { speaker: du,   sv: "Ja, och jag har torkat handfaten och speglarna.",             en: "Yes, and I have wiped the washbasins and the mirrors." }
+
+exercises:
+  # instructions: what do they mean?
+  - { type: listen_choose, sv: "Töm papperskorgarna i köket.", en: "Empty the wastepaper baskets in the kitchen.",
+      options: ["Empty the wastepaper baskets in the kitchen.", "Wipe the tables in the kitchen.", "Change the rubbish bags in the kitchen."],
+      answer: "Empty the wastepaper baskets in the kitchen." }
+  - { type: listen_choose, sv: "Moppa golvet i hallen, men dammsug först.", en: "Mop the floor in the hall, but vacuum first.",
+      options: ["Mop the floor in the hall, but vacuum first.", "Vacuum the floor in the hall, but mop first.", "Do not mop the floor in the hall."],
+      answer: "Mop the floor in the hall, but vacuum first." }
+  - { type: listen_choose, sv: "Använd handskar, det är farligt.", en: "Use gloves, it is dangerous.",
+      options: ["Use gloves, it is dangerous.", "Do not use gloves, it is dangerous.", "Use a cloth, it is dirty."],
+      answer: "Use gloves, it is dangerous." }
+  - { type: listen_choose, sv: "Byt soppåse på toaletten.", en: "Change the rubbish bag in the toilet.",
+      options: ["Change the rubbish bag in the toilet.", "Empty the bucket in the toilet.", "Clean the mirror in the toilet."],
+      answer: "Change the rubbish bag in the toilet." }
+
+  # give the instruction
+  - { type: cloze, sv: "___ golvet i köket.", hint: moppa, answer: Moppa, en: "Mop the floor in the kitchen.", grammar: [imperative] }
+  - { type: cloze, sv: "___ papperskorgen.", hint: tömma, answer: Töm, en: "Empty the wastepaper basket.", grammar: [imperative] }
+  - { type: cloze, sv: "___ handskar!", hint: använda, answer: Använd, en: "Use gloves!", grammar: [imperative] }
+  - { type: cloze, sv: "___ borden med en ren trasa.", hint: torka, answer: Torka, en: "Wipe the tables with a clean cloth.",
+      grammar: [imperative, plural_def] }
+
+  # say what you have done
+  - { type: cloze, sv: "Jag har ___ golven.", hint: dammsuga, answer: dammsugit, en: "I have vacuumed the floors.",
+      grammar: [perfect_tense, plural_def] }
+  - { type: cloze, sv: "Har du ___ toaletterna?", hint: städa, answer: städat, en: "Have you cleaned the toilets?",
+      grammar: [perfect_tense, plural_def] }
+  - { type: cloze, sv: "Hon har redan ___ papperskorgarna.", hint: tömma, answer: tömt, en: "She has already emptied the wastepaper baskets.",
+      grammar: [perfect_tense, plural_def] }
+
+  # ren, rent, rena
+  - { type: cloze, sv: "Golvet är ___.", hint: ren, answer: rent, en: "The floor is clean.", grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Speglarna är ___.", hint: ren, answer: rena, en: "The mirrors are clean.", grammar: [adjective_agreement_basic, plural_def] }
+  - { type: cloze, sv: "Det är ___.", hint: farlig, answer: farligt, en: "It is dangerous.", grammar: [adjective_agreement_basic] }
+
+  # listen and write
+  - { type: dictation, sv: "Var finns dammsugaren?", en: "Where is the vacuum cleaner?" }
+  - { type: dictation, sv: "Hinken och moppen står i hallen.", en: "The bucket and the mop are in the hall." }
+  - { type: dictation, sv: "Jag har torkat handfatet och spegeln.", en: "I have wiped the washbasin and the mirror.", grammar: [perfect_tense] }
+  - { type: dictation, sv: "Jag behöver en ny soppåse.", en: "I need a new rubbish bag." }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag har redan moppat golvet.", en: "I have already mopped the floor.", grammar: [perfect_tense] }
+  - { type: word_order, sv: "Använd inte den smutsiga trasan.", en: "Do not use the dirty cloth.", grammar: [imperative, adjective_agreement_full] }
+  - { type: word_order, sv: "Vilket rengöringsmedel ska jag använda?", en: "Which detergent should I use?" }
+  - { type: word_order, sv: "Är du klar med alla toaletter?", en: "Are you done with all the toilets?" }
+
+  # say it in Swedish
+  - { type: translate, en: "The floor is clean.", sv: "Golvet är rent.", grammar: [adjective_agreement_basic] }
+  - { type: translate, en: "I am done.", sv: "Jag är klar." }
+  - { type: translate, en: "Clean the kitchen first.", sv: "Städa köket först.", accept: ["Städa först köket."], grammar: [imperative] }
+  - { type: translate, en: "The gloves are dirty.", sv: "Handskarna är smutsiga.", grammar: [plural_def] }
+
+  # listen for the number
+  - { type: numbers, sv: "Du städar 12 rum idag.", hint: "how many rooms", answer: "12", en: "You are cleaning 12 rooms today.",
+      grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Du börjar klockan halv 6.", hint: "the time, like 8.15", answer: "5.30", en: "You start at half past 5.",
+      grammar: [time_clock] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Först tvättar jag alla smutsiga trasor.", en: "First I wash all the dirty cloths.", grammar: [inversion_after_adverb] }
+  - { type: translate, en: "The washing machine is in the laundry room.", sv: "Tvättmaskinen står i tvättstugan.",
+      accept: ["Tvättmaskinen finns i tvättstugan.", "Tvättmaskinen är i tvättstugan."] }
+  - { type: word_order, sv: "Kranen på toaletten har gått sönder.", en: "The tap in the toilet has broken.", grammar: [perfect_tense] }
+  - { type: translate, en: "I have lost my key.", sv: "Jag har tappat min nyckel.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Kunderna kommer klockan 8. Vi måste skynda ___.", answer: oss,
+      en: "The customers come at 8. We must hurry.", grammar: [reflexive_basic] }
+
+  - { type: dictation, sv: "Chefen sa att golven var rena.", en: "The boss said that the floors were clean.", grammar: [subordinate_clause_basic, past_tense] }
+  - { type: translate, en: "I know where the bucket is.", sv: "Jag vet var hinken står.", accept: ["Jag vet var hinken är.", "Jag vet var hinken finns."],
+      grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Hon gav mig nya trasor och handskar.", en: "She gave me new cloths and gloves.", grammar: [past_tense] }
+  - { type: dictation, sv: "Öppna fönstret innan du använder rengöringsmedlet.", en: "Open the window before you use the detergent.",
+      grammar: [imperative, subordinate_clause_basic] }
+  - { type: translate, en: "Come back and show me the toilets.", sv: "Kom tillbaka och visa mig toaletterna.", grammar: [imperative, plural_def] }
+  - { type: dictation, sv: "Det är fel på dammsugaren och handfatet läcker.", en: "There is something wrong with the vacuum cleaner and the washbasin is leaking." }
+  - { type: word_order, sv: "Jag har skrivit det på listan till hyresvärden.", en: "I have written it on the list for the landlord.", grammar: [perfect_tense] }
+  - { type: translate, en: "Do you have a problem? Ask the boss.", sv: "Har du ett problem? Fråga chefen.", grammar: [imperative] }
+  - { type: dictation, sv: "Jag är snart klar, det tar ungefär 2 timmar.", en: "I am nearly done, it takes about 2 hours." }
+  - { type: word_order, sv: "Dammsug hallen igen efter festen.", en: "Vacuum the hall again after the party.", grammar: [imperative] }
+  - { type: translate, en: "I am allergic. I must use gloves.", sv: "Jag är allergisk. Jag måste använda handskar." }
+  - { type: dictation, sv: "Gästerna åt tårta i alla rum.", en: "The guests ate cake in every room.", grammar: [past_tense, plural_def] }
+
+# The task itself: your boss checks your work.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: chef, sv: "Hej! Är du klar?", en: "Hello! Are you done?" }
+    - { speaker: du, en: "Say yes, you are done.", answer: "Ja, jag är klar.", accept: ["Ja."] }
+    - { speaker: chef, sv: "Har du dammsugit golven?", en: "Have you vacuumed the floors?" }
+    - { speaker: du, en: "Say yes, you have vacuumed the floors.",
+        options: ["Ja, jag har dammsugit golven.", "Ja, jag har dammsuga golven.", "Ja, jag dammsugit har golven."],
+        answer: "Ja, jag har dammsugit golven." }
+    - { speaker: chef, sv: "Och toaletterna?", en: "And the toilets?" }
+    - { speaker: du, en: "Say that you have cleaned the toilets.", answer: "Jag har städat toaletterna.",
+        accept: ["Ja, jag har städat toaletterna.", "Jag har städat alla toaletter."] }
+    - { speaker: chef, sv: "Har du tömt papperskorgarna?", en: "Have you emptied the wastepaper baskets?" }
+    - { speaker: du, en: "Say no, not yet, you are doing it now.",
+        options: ["Nej, inte än. Jag gör det nu.", "Nej, inte än. Jag gjorde det imorgon.", "Ja, inte än."],
+        answer: "Nej, inte än. Jag gör det nu." }
+    - { speaker: chef, sv: "Bra. Glöm inte att byta soppåsar.", en: "Good. Don't forget to change the rubbish bags." }
+    - { speaker: du, en: "Say that you need new rubbish bags.", answer: "Jag behöver nya soppåsar." }
+
+speaking_prompt: "Say aloud: five cleaning instructions, and then what you have already done."

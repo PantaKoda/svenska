@@ -1,0 +1,106 @@
+id: a2-02
+level: A2
+theme: vardag
+title: "En vanlig dag"
+task: "Describe your day from morning to night, in the right order, and say how often you do things."
+can_do: "I can describe my routines step by step and say how I feel."
+names: [Sara]
+
+new_words: [vakna, upp, duscha, klä, tvätta, lägga, skynda, känna, sig, bruka,
+            laga, mat, titta, tv, tidig, sen, alltid, ofta, ibland, aldrig, pigg]
+new_grammar: [reflexive_basic, inversion_after_adverb]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "När vaknar du på morgonen?",                            en: "When do you wake up in the morning?" }
+  - { speaker: du,   sv: "Jag brukar vakna klockan 6. Sedan duschar jag och klär på mig.", en: "I usually wake up at 6. Then I shower and get dressed." }
+  - { speaker: Sara, sv: "Äter du frukost hemma?",                                en: "Do you eat breakfast at home?" }
+  - { speaker: du,   sv: "Ja, alltid. Efter frukost tar jag bussen till jobbet.", en: "Yes, always. After breakfast I take the bus to work." }
+  - { speaker: Sara, sv: "Vad gör du efter jobbet?",                              en: "What do you do after work?" }
+  - { speaker: du,   sv: "Ibland tränar jag. Sedan lagar jag mat och tittar på tv.", en: "Sometimes I exercise. Then I cook and watch TV." }
+  - { speaker: Sara, sv: "När lägger du dig?",                                    en: "When do you go to bed?" }
+  - { speaker: du,   sv: "Jag lägger mig tidigt, klockan 10. Och du?",            en: "I go to bed early, at 10. And you?" }
+  - { speaker: Sara, sv: "Jag lägger mig sent. På morgonen måste jag skynda mig!", en: "I go to bed late. In the morning I have to hurry!" }
+  - { speaker: Sara, sv: "Jag känner mig aldrig pigg.",                           en: "I never feel awake." }
+
+exercises:
+  # mig, dig, sig, oss?
+  - { type: cloze, sv: "Jag tvättar ___.", answer: mig, en: "I wash (myself).", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Hon lägger ___ klockan 11.", answer: sig, en: "She goes to bed at 11.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Vi måste skynda ___.", answer: oss, en: "We must hurry.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Känner du ___ trött?", answer: dig, en: "Do you feel tired?", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "De klär på ___.", answer: sig, en: "They get dressed.", grammar: [reflexive_basic] }
+
+  # after sedan, efter …, ibland: verb before subject
+  - { type: word_order, sv: "Sedan lagar jag mat.", en: "Then I cook.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Efter frukost tar jag bussen.", en: "After breakfast I take the bus.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "På kvällen tittar vi på tv.", en: "In the evening we watch TV.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Ibland lägger jag mig sent.", en: "Sometimes I go to bed late.",
+      grammar: [inversion_after_adverb, reflexive_basic] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag brukar vakna klockan 6.", en: "I usually wake up at 6." }
+  - { type: dictation, sv: "Jag duschar och klär på mig.", en: "I shower and get dressed.", grammar: [reflexive_basic] }
+  - { type: dictation, sv: "Hon känner sig aldrig pigg på morgonen.", en: "She never feels awake in the morning.", grammar: [reflexive_basic] }
+  - { type: dictation, sv: "Vi går upp tidigt varje dag.", en: "We get up early every day." }
+
+  # yesterday
+  - { type: cloze, sv: "Igår ___ jag klockan 5.", hint: vakna, answer: vaknade, en: "Yesterday I woke up at 5.", grammar: [past_tense] }
+  - { type: cloze, sv: "Igår ___ jag mig sent.", hint: lägga, answer: lade, accept: [la], en: "Yesterday I went to bed late.",
+      grammar: [past_tense, reflexive_basic] }
+
+  # say it in Swedish
+  - { type: translate, en: "I go to bed early.", sv: "Jag lägger mig tidigt.", grammar: [reflexive_basic] }
+  - { type: translate, en: "He often cooks.", sv: "Han lagar ofta mat.", accept: ["Han lagar mat ofta."] }
+  - { type: translate, en: "Then I have a shower.", sv: "Sedan duschar jag.", grammar: [inversion_after_adverb] }
+  - { type: translate, en: "We wash on Saturday.", sv: "Vi tvättar på lördag." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Jag lägger mig aldrig tidigt.", en: "I never go to bed early.",
+      options: ["I never go to bed early.", "I always go to bed early.", "I never get up early."],
+      answer: "I never go to bed early." }
+  - { type: listen_choose, sv: "När vaknar du?", en: "When do you wake up?",
+      options: ["Klockan 6.", "I sängen.", "Aldrig mat."], answer: "Klockan 6." }
+  - { type: listen_choose, sv: "Efter jobbet handlar jag och lagar mat.", en: "After work I shop and cook.",
+      options: ["After work I shop and cook.", "Before work I shop and cook.", "After work I eat at a restaurant."],
+      answer: "After work I shop and cook." }
+
+  # listen for the time
+  - { type: numbers, sv: "Jag går upp kvart i 6.", hint: "the time, like 8.15", answer: "5.45",
+      en: "I get up at quarter to 6.", grammar: [time_clock] }
+  - { type: numbers, sv: "Hon lägger sig halv 12.", hint: "the time, like 8.15", answer: "11.30",
+      en: "She goes to bed at half past 11.", grammar: [time_clock] }
+
+  # words from earlier units
+  - { type: word_order, sv: "På lördag spelar jag ofta fotboll.", en: "On Saturdays I often play football.", grammar: [inversion_after_adverb] }
+  - { type: dictation, sv: "Ibland ser vi en film på bio.", en: "Sometimes we watch a film at the cinema.", grammar: [inversion_after_adverb] }
+  - { type: translate, en: "I usually have a coffee at 3.", sv: "Jag brukar fika klockan 3." }
+  - { type: dictation, sv: "På helgen tar vi alltid en promenad.", en: "At the weekend we always go for a walk.", grammar: [inversion_after_adverb] }
+  - { type: translate, en: "I do not like getting up early.", sv: "Jag gillar inte att gå upp tidigt." }
+  - { type: word_order, sv: "Jag simmar ibland på morgonen.", en: "I sometimes swim in the morning." }
+
+# The task itself: Sara asks about your day.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "När vaknar du?", en: "When do you wake up?" }
+    - { speaker: du, en: "Say that you wake up at 6.", answer: "Jag vaknar klockan 6.",
+        accept: ["Klockan 6.", "Jag brukar vakna klockan 6."] }
+    - { speaker: Sara, sv: "Vad gör du sedan?", en: "What do you do then?" }
+    - { speaker: du, en: "Say that then you shower and get dressed.",
+        options: ["Sedan duschar jag och klär på mig.", "Sedan jag duschar och klär på mig.", "Sedan duschar jag och klär på sig."],
+        answer: "Sedan duschar jag och klär på mig." }
+    - { speaker: Sara, sv: "Lagar du mat på kvällen?", en: "Do you cook in the evening?" }
+    - { speaker: du, en: "Say yes, you always cook.", answer: "Ja, jag lagar alltid mat.",
+        accept: ["Ja, alltid.", "Ja, jag lagar mat."] }
+    - { speaker: Sara, sv: "När lägger du dig?", en: "When do you go to bed?" }
+    - { speaker: du, en: "Say that you go to bed at 10.",
+        options: ["Jag lägger mig klockan 10.", "Jag lägger dig klockan 10.", "Jag lägger klockan 10."],
+        answer: "Jag lägger mig klockan 10." }
+    - { speaker: Sara, sv: "Känner du dig pigg på morgonen?", en: "Do you feel awake in the morning?" }
+    - { speaker: du, en: "Say no, you feel tired.", answer: "Nej, jag känner mig trött.", accept: ["Nej, jag är trött."] }
+
+speaking_prompt: "Say aloud: your whole day in order, using först, sedan and efter det, and how often you do three things."

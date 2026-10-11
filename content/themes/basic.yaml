@@ -50,6 +50,61 @@ words:
   - { lemma: som,    pos: adv,     level: A1, gloss: "as (jobba som = work as)" }
   - { lemma: redan,  pos: adv,     level: A2, gloss: already }
 
+  # A2
+  - { lemma: att,      pos: subj, level: A2, gloss: "that; to (before a verb)" }
+  - { lemma: eftersom, pos: subj, level: A2, gloss: because }
+  - { lemma: varför,   pos: adv,  level: A2, gloss: why }
+  - { lemma: än,       pos: adv,  level: A2, gloss: "than (billigare än); yet (inte än = not yet)" }
+  - { lemma: av,       pos: prep, level: A2, gloss: "of, by" }
+  - { lemma: sig,      pos: pron, level: A2, gloss: "himself, herself, themselves" }
+  - { lemma: all,      pos: pron, level: A2, gloss: "all (all, allt, alla)" }
+  - { lemma: vilken,   pos: pron, level: A2, gloss: "which (vilken, vilket, vilka)" }
+  - { lemma: bli,      pos: verb, level: A2, gloss: "to become, to be; past: became; pp: become",
+      forms: { pres: blir, imp: bli } }
+  - { lemma: få,       pos: verb, level: A2, gloss: "to get, to be allowed to; past: got; pp: got" }
+  - { lemma: ge,       pos: verb, level: A2, gloss: "to give; past: gave; pp: given", forms: { inf: ge, pres: ger, sup: gett, imp: ge } }
+  - { lemma: säga,     pos: verb, level: A2, gloss: "to say; past: said; pp: said",
+      forms: { pres: säger, past: sa, imp: säg } }
+  - { lemma: tro,      pos: verb, level: A2, gloss: "to think, to believe; past: thought; pp: thought" }
+  - { lemma: tycka,    pos: verb, level: A2, gloss: "to think (have an opinion); past: thought; pp: thought" }
+  - { lemma: veta,     pos: verb, level: A2, gloss: "to know; past: knew; pp: known" }
+  - { lemma: fråga,    pos: verb, level: A2, gloss: to ask }
+  - { lemma: svara,    pos: verb, level: A2, gloss: to answer }
+  - { lemma: skriva,   pos: verb, level: A2, gloss: "to write; past: wrote; pp: written" }
+  - { lemma: ringa,    pos: verb, level: A2, gloss: "to call, to phone; past: called; pp: called",
+      forms: { pres: ringer, past: ringde, sup: ringt, imp: ring } }
+  - { lemma: använda,  pos: verb, level: A2, gloss: "to use" }
+  - { lemma: glömma,   pos: verb, level: A2, gloss: "to forget; past: forgot; pp: forgotten" }
+  - { lemma: bruka,    pos: verb, level: A2, gloss: "to usually do (jag brukar … = I usually …)" }
+  - { lemma: mycket,   pos: adv,  level: A2, gloss: "much, a lot, very" }
+  - { lemma: lite,     pos: adv,  level: A2, gloss: "a little" }
+  - { lemma: här,      pos: adv,  level: A2, gloss: here }
+  - { lemma: hit,      pos: adv,  level: A2, gloss: "here (to this place)" }
+  - { lemma: upp,      pos: adv,  level: A2, gloss: up }
+  - { lemma: inne,     pos: adv,  level: A2, gloss: "inside, indoors" }
+  - { lemma: ute,      pos: adv,  level: A2, gloss: "outside, outdoors" }
+  - { lemma: fram,     pos: adv,  level: A2, gloss: "forward (komma fram = arrive)" }
+  - { lemma: tillbaka, pos: adv,  level: A2, gloss: back }
+  - { lemma: sönder,   pos: adv,  level: A2, gloss: "broken (gå sönder = break)" }
+  - { lemma: istället, pos: adv,  level: A2, gloss: instead }
+  - { lemma: tyvärr,   pos: adv,  level: A2, gloss: unfortunately }
+  - { lemma: ungefär,  pos: adv,  level: A2, gloss: "about, roughly" }
+  - { lemma: igår,     pos: adv,  level: A2, gloss: yesterday }
+  - { lemma: förra,    pos: adj,  level: A2, gloss: "last (förra veckan = last week)" }
+  - { lemma: först,    pos: adv,  level: A2, gloss: first }
+  - { lemma: efter,    pos: prep, level: A2, gloss: after }
+  - { lemma: innan,    pos: prep, level: A2, gloss: before }
+  - { lemma: länge,    pos: adv,  level: A2, gloss: "for a long time" }
+  - { lemma: snart,    pos: adv,  level: A2, gloss: soon }
+  - { lemma: igen,     pos: adv,  level: A2, gloss: again }
+  - { lemma: alltid,   pos: adv,  level: A2, gloss: always }
+  - { lemma: ofta,     pos: adv,  level: A2, gloss: often }
+  - { lemma: ibland,   pos: adv,  level: A2, gloss: sometimes }
+  - { lemma: aldrig,   pos: adv,  level: A2, gloss: never }
+  - { lemma: tidig,    pos: adj,  level: A2, gloss: early }
+  - { lemma: sen,      pos: adj,  level: A2, gloss: late }
+  - { lemma: klar,     pos: adj,  level: A2, gloss: "ready, done" }
+
   # place and direction
   - { lemma: i,    pos: prep, level: A1, gloss: in }
   - { lemma: på,   pos: prep, level: A1, gloss: "on, at" }

@@ -28,6 +28,27 @@ words:
   - { lemma: vila,        pos: verb, tags: [action_intrans], level: A1, gloss: to rest }
   - { lemma: dricka,      pos: verb, tags: [consume], level: A1, gloss: "to drink; past: drank; pp: drunk" }
 
+
+  # A2: at the doctor's and the pharmacy
+  - { lemma: apotek,    pos: noun, gender: ett, level: A2, gloss: pharmacy }
+  - { lemma: medicin,   pos: noun, gender: en,  level: A2, gloss: medicine }
+  - { lemma: recept,    pos: noun, gender: ett, tags: [document], level: A2, gloss: prescription }
+  - { lemma: gång,      pos: noun, gender: en,  level: A2, gloss: "time (3 gånger om dagen = 3 times a day)", forms: { pl: gånger } }
+  - { lemma: näsa,      pos: noun, gender: en,  tags: [body_part], level: A2, gloss: nose }
+  - { lemma: öra,       pos: noun, gender: ett, tags: [body_part], level: A2, gloss: ear }
+  - { lemma: öga,       pos: noun, gender: ett, tags: [body_part], level: A2, gloss: eye }
+  - { lemma: bröst,     pos: noun, gender: ett, tags: [body_part], level: A2, gloss: chest }
+  - { lemma: mun,       pos: noun, gender: en,  tags: [body_part], level: A2, gloss: mouth, forms: { def: munnen } }
+  - { lemma: hosta,     pos: verb, level: A2, gloss: to cough }
+  - { lemma: andas,     pos: verb, level: A2, gloss: to breathe }
+  - { lemma: ligga,     pos: verb, level: A2, gloss: "to lie, to be lying; past: lay; pp: lain" }
+  - { lemma: sitta,     pos: verb, level: A2, gloss: "to sit; past: sat; pp: sat" }
+  - { lemma: visa,      pos: verb, level: A2, gloss: "to show; past: showed; pp: shown" }
+  - { lemma: förkyld,   pos: adj,  level: A2, gloss: "having a cold" }
+  - { lemma: allergisk, pos: adj,  level: A2, gloss: allergic }
+  - { lemma: stark,     pos: adj,  level: A2, gloss: strong }
+  - { lemma: djup,      pos: adj,  level: A2, gloss: "deep (andas djupt = breathe deeply)" }
+
 frames:
   - { id: hal-01, level: A1, grammar: [present_tense, def_singular], review: true,
       sv: "Jag har ont i {body_part.def}.", en: "My {1} hurts." }

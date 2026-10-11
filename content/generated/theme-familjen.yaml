@@ -451,13 +451,45 @@ items:
   words:
   - son
 - type: inflect
-  answer: män
+  answer: frun
+  grammar:
+  - def_singular
+  lemma: fru
+  form: def
+  words:
+  - fru
+- type: inflect
+  answer: en son
+  grammar:
+  - en_ett
+  lemma: son
+  form: a
+  words:
+  - son
+- type: inflect
+  answer: systrar
   grammar:
   - plural_indef
-  lemma: man
+  lemma: syster
   form: pl
   words:
-  - man
+  - syster
+- type: inflect
+  answer: mammorna
+  grammar:
+  - plural_def
+  lemma: mamma
+  form: pl_def
+  words:
+  - mamma
+- type: inflect
+  answer: syskon
+  grammar:
+  - plural_indef
+  lemma: syskon
+  form: pl
+  words:
+  - syskon
 - type: inflect
   answer: familjen
   grammar:
@@ -467,21 +499,13 @@ items:
   words:
   - familj
 - type: inflect
-  answer: en pappa
+  answer: brodern
   grammar:
-  - en_ett
-  lemma: pappa
-  form: a
+  - def_singular
+  lemma: bror
+  form: def
   words:
-  - pappa
-- type: inflect
-  answer: söner
-  grammar:
-  - plural_indef
-  lemma: son
-  form: pl
-  words:
-  - son
+  - bror
 - type: inflect
   answer: barnet
   grammar:
@@ -490,27 +514,566 @@ items:
   form: def
   words:
   - barn
+- type: cloze
+  sv: Jag tog ___.
+  en: I took the cake.
+  answer: tårtan
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-021
+  words:
+  - ta
+  - tårta
+- type: cloze
+  sv: Jag tar ___.
+  en: I take the cake.
+  answer: tårtan
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-010
+  words:
+  - ta
+  - tårta
+- type: cloze
+  sv: Vi tar inte ___.
+  en: We don't take the cake.
+  answer: tårtan
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-011
+  words:
+  - ta
+  - tårta
+- type: cloze
+  sv: Kan du ta ___?
+  en: Can you take the cake?
+  answer: tårtan
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-009
+  words:
+  - ta
+  - tårta
+- type: cloze
+  sv: Var är ___?
+  en: Where is the cake?
+  answer: tårtan
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-001
+  words:
+  - tårta
+- type: cloze
+  sv: ___ är där.
+  en: The cake is there.
+  answer: Tårtan
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-007
+  words:
+  - tårta
+- type: cloze
+  sv: Jag köpte ___.
+  en: I bought the cake.
+  answer: tårtan
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-021
+  words:
+  - köpa
+  - tårta
+- type: cloze
+  sv: Vi hittar inte ___.
+  en: We don't find the cake.
+  answer: tårtan
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: tårta
+  frame: gen-011
+  words:
+  - hitta
+  - tårta
+- type: dictation
+  sv: Jag köper tårtan.
+  en: I buy the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - köpa
+  - tårta
+- type: dictation
+  sv: Kan du köpa tårtan?
+  en: Can you buy the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - köpa
+  - tårta
+- type: dictation
+  sv: Jag hittade tårtan.
+  en: I found the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - hitta
+  - tårta
+- type: dictation
+  sv: Kan du hitta tårtan?
+  en: Can you find the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - hitta
+  - tårta
+- type: dictation
+  sv: Jag hittar tårtan.
+  en: I find the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - hitta
+  - tårta
+- type: dictation
+  sv: Vi köper inte tårtan.
+  en: We don't buy the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - tårta
+- type: dictation
+  sv: Var är tårtan?
+  en: Where is the cake?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - tårta
+- type: dictation
+  sv: Tårtan är där.
+  en: The cake is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - tårta
+- type: word_order
+  sv: Jag tog tårtan.
+  en: I took the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - ta
+  - tårta
+- type: word_order
+  sv: Jag tar tårtan.
+  en: I take the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - tårta
+- type: word_order
+  sv: Vi tar inte tårtan.
+  en: We don't take the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - ta
+  - tårta
+- type: word_order
+  sv: Kan du ta tårtan?
+  en: Can you take the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - ta
+  - tårta
+- type: word_order
+  sv: Jag köpte tårtan.
+  en: I bought the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - köpa
+  - tårta
+- type: word_order
+  sv: Vi hittar inte tårtan.
+  en: We don't find the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - hitta
+  - tårta
+- type: word_order
+  sv: Jag köper tårtan.
+  en: I buy the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - köpa
+  - tårta
+- type: word_order
+  sv: Kan du köpa tårtan?
+  en: Can you buy the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - köpa
+  - tårta
+- type: translate
+  sv: Jag hittade tårtan.
+  en: I found the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - hitta
+  - tårta
+- type: translate
+  sv: Kan du hitta tårtan?
+  en: Can you find the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - hitta
+  - tårta
+- type: translate
+  sv: Jag hittar tårtan.
+  en: I find the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - hitta
+  - tårta
+- type: translate
+  sv: Vi köper inte tårtan.
+  en: We don't buy the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - tårta
+- type: translate
+  sv: Var är tårtan?
+  en: Where is the cake?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - tårta
+- type: translate
+  sv: Tårtan är där.
+  en: The cake is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - tårta
+- type: translate
+  sv: Jag tog tårtan.
+  en: I took the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - ta
+  - tårta
+- type: translate
+  sv: Jag tar tårtan.
+  en: I take the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - tårta
+- type: listen_choose
+  sv: Vi tar inte tårtan.
+  answer: We don't take the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the cake.
+  - We don't find the cake.
+  - We don't buy the cake.
+  frame: gen-011
+  words:
+  - ta
+  - tårta
+- type: listen_choose
+  sv: Kan du ta tårtan?
+  answer: Can you take the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the cake?
+  - Can you buy the cake?
+  - Can you find the cake?
+  frame: gen-009
+  words:
+  - ta
+  - tårta
+- type: listen_choose
+  sv: Jag köpte tårtan.
+  answer: I bought the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  options:
+  - I bought the cake.
+  - I took the cake.
+  - I found the cake.
+  frame: gen-021
+  words:
+  - köpa
+  - tårta
+- type: listen_choose
+  sv: Vi hittar inte tårtan.
+  answer: We don't find the cake.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't find the cake.
+  - We don't take the cake.
+  - We don't buy the cake.
+  frame: gen-011
+  words:
+  - hitta
+  - tårta
+- type: listen_choose
+  sv: Jag köper tårtan.
+  answer: I buy the cake.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I buy the cake.
+  - I take the cake.
+  - I find the cake.
+  frame: gen-010
+  words:
+  - köpa
+  - tårta
+- type: listen_choose
+  sv: Kan du köpa tårtan?
+  answer: Can you buy the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you buy the cake?
+  - Can you take the cake?
+  - Can you find the cake?
+  frame: gen-009
+  words:
+  - köpa
+  - tårta
+- type: listen_choose
+  sv: Jag hittade tårtan.
+  answer: I found the cake.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  options:
+  - I found the cake.
+  - I took the cake.
+  - I bought the cake.
+  frame: gen-021
+  words:
+  - hitta
+  - tårta
+- type: listen_choose
+  sv: Kan du hitta tårtan?
+  answer: Can you find the cake?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you find the cake?
+  - Can you take the cake?
+  - Can you buy the cake?
+  frame: gen-009
+  words:
+  - hitta
+  - tårta
 - type: inflect
-  answer: bröder
+  answer: en fest
+  grammar:
+  - en_ett
+  lemma: fest
+  form: a
+  words:
+  - fest
+- type: inflect
+  answer: bjudit
+  grammar:
+  - perfect_tense
+  lemma: bjuda
+  form: sup
+  words:
+  - bjuda
+- type: inflect
+  answer: födelsedagen
+  grammar:
+  - def_singular
+  lemma: födelsedag
+  form: def
+  words:
+  - födelsedag
+- type: inflect
+  answer: fyllde
+  grammar:
+  - past_tense
+  lemma: fylla
+  form: past
+  words:
+  - fylla
+- type: inflect
+  answer: presenter
   grammar:
   - plural_indef
-  lemma: bror
+  lemma: present
   form: pl
   words:
-  - bror
+  - present
 - type: inflect
-  answer: mamman
+  answer: firat
+  grammar:
+  - perfect_tense
+  lemma: fira
+  form: sup
+  words:
+  - fira
+- type: inflect
+  answer: farmodern
   grammar:
   - def_singular
-  lemma: mamma
+  lemma: farmor
   form: def
   words:
-  - mamma
+  - farmor
 - type: inflect
-  answer: frun
+  answer: tårtor
   grammar:
-  - def_singular
-  lemma: fru
-  form: def
+  - plural_indef
+  lemma: tårta
+  form: pl
   words:
-  - fru
+  - tårta

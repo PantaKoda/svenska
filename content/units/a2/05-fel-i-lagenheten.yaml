@@ -1,0 +1,112 @@
+id: a2-05
+level: A2
+theme: bostad
+title: "Fel i lägenheten"
+task: "Report a fault to your landlord and book the laundry room."
+can_do: "I can say what has broken, what I have already done, and book a time."
+names: [Sara]
+
+new_words: [tvättstuga, tvätt, tvättmaskin, hyresvärd, fel, kran, element, nyckel, granne, lista,
+            läcka, fungera, hända, tappa, skriva, ringa, sönder, trasig, redan]
+new_grammar: [perfect_tense, adjective_agreement_full]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: hyresvärd, sv: "Hej, det är hyresvärden. Vad har hänt?",                    en: "Hello, this is the landlord. What has happened?" }
+  - { speaker: du,        sv: "Hej! Kranen i köket har gått sönder. Den läcker.",          en: "Hi! The tap in the kitchen has broken. It is leaking." }
+  - { speaker: hyresvärd, sv: "Har den läckt länge?",                                      en: "Has it been leaking long?" }
+  - { speaker: du,        sv: "Sedan igår. Och det gamla elementet i sovrummet fungerar inte.", en: "Since yesterday. And the old radiator in the bedroom does not work." }
+  - { speaker: hyresvärd, sv: "Har du skrivit på listan i hallen?",                        en: "Have you written on the list in the hall?" }
+  - { speaker: du,        sv: "Ja, jag har redan skrivit det.",                            en: "Yes, I have already written it." }
+  - { speaker: hyresvärd, sv: "Bra. Vi kommer och lagar den trasiga kranen imorgon.",      en: "Good. We will come and repair the broken tap tomorrow." }
+  - { speaker: du,        sv: "Tack. Och tvättstugan? Jag har inte bokat en tid.",         en: "Thanks. And the laundry room? I have not booked a time." }
+  - { speaker: hyresvärd, sv: "Du bokar på listan i tvättstugan. Det finns lediga tider på torsdag.", en: "You book on the list in the laundry room. There are free times on Thursday." }
+  - { speaker: du,        sv: "Bra. Den nya tvättmaskinen fungerar mycket bra!",           en: "Good. The new washing machine works very well!" }
+
+exercises:
+  # har + supine, with verbs you know
+  - { type: inflect, lemma: gå, form: sup, answer: gått, grammar: [perfect_tense] }
+  - { type: inflect, lemma: vara, form: sup, answer: varit, grammar: [perfect_tense] }
+  - { type: inflect, lemma: göra, form: sup, answer: gjort, grammar: [perfect_tense] }
+  - { type: inflect, lemma: boka, form: sup, answer: bokat, grammar: [perfect_tense] }
+  - { type: inflect, lemma: köpa, form: sup, answer: köpt, grammar: [perfect_tense] }
+
+  - { type: cloze, sv: "Jag har ___ hyresvärden.", hint: ringa, answer: ringt, en: "I have called the landlord.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Kranen har ___ sönder.", hint: gå, answer: gått, en: "The tap has broken.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Har du ___ tvättstugan?", hint: boka, answer: bokat, en: "Have you booked the laundry room?", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Vad har ___?", hint: hända, answer: hänt, en: "What has happened?", grammar: [perfect_tense] }
+
+  # den / det / de + adjective in -a + definite noun
+  - { type: cloze, sv: "Den ___ kranen läcker.", hint: trasig, answer: trasiga, en: "The broken tap is leaking.",
+      grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Det ___ elementet fungerar inte.", hint: gammal, answer: gamla, en: "The old radiator does not work.",
+      grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Var är den ___ nyckeln?", hint: ny, answer: nya, en: "Where is the new key?", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Jag har en ___ granne.", hint: ny, answer: ny, en: "I have a new neighbour.", grammar: [adjective_agreement_basic] }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag har redan ringt hyresvärden.", en: "I have already called the landlord.", grammar: [perfect_tense] }
+  - { type: word_order, sv: "Har du tappat din nyckel?", en: "Have you lost your key?", grammar: [perfect_tense] }
+  - { type: word_order, sv: "Tvättmaskinen har inte fungerat sedan igår.", en: "The washing machine has not worked since yesterday.",
+      grammar: [perfect_tense] }
+  - { type: word_order, sv: "Den nya grannen bor i den stora lägenheten.", en: "The new neighbour lives in the big flat.",
+      grammar: [adjective_agreement_full] }
+
+  # listen and write
+  - { type: dictation, sv: "Kranen i köket läcker.", en: "The tap in the kitchen is leaking." }
+  - { type: dictation, sv: "Jag har skrivit på listan.", en: "I have written on the list.", grammar: [perfect_tense] }
+  - { type: dictation, sv: "Det är fel på elementet.", en: "There is something wrong with the radiator." }
+  - { type: dictation, sv: "Vi har mycket tvätt idag.", en: "We have a lot of laundry today." }
+
+  # say it in Swedish
+  - { type: translate, en: "The washing machine is broken.", sv: "Tvättmaskinen är trasig.", accept: ["Tvättmaskinen är sönder."] }
+  - { type: translate, en: "I have booked the laundry room.", sv: "Jag har bokat tvättstugan.", grammar: [perfect_tense] }
+  - { type: translate, en: "What has happened?", sv: "Vad har hänt?", grammar: [perfect_tense] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Vi kommer och lagar kranen på fredag.", en: "We will come and repair the tap on Friday.",
+      options: ["We will come and repair the tap on Friday.", "We repaired the tap on Friday.", "We cannot repair the tap on Friday."],
+      answer: "We will come and repair the tap on Friday." }
+  - { type: listen_choose, sv: "Vad har hänt?", en: "What has happened?",
+      options: ["Kranen har gått sönder.", "Klockan 3.", "Ja, gärna."], answer: "Kranen har gått sönder." }
+
+  # listen for the number
+  - { type: numbers, sv: "Du har tvättstugan klockan kvart över 5.", hint: "the time, like 8.15", answer: "5.15",
+      en: "You have the laundry room at quarter past 5.", grammar: [time_clock] }
+  - { type: numbers, sv: "Vi kommer om 3 dagar.", hint: "in how many days", answer: "3",
+      en: "We are coming in 3 days.", grammar: [preposition_time] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Dörren till badrummet är trasig.", en: "The door to the bathroom is broken." }
+  - { type: translate, en: "The lamp in the living room does not work.", sv: "Lampan i vardagsrummet fungerar inte." }
+  - { type: word_order, sv: "Jag kommer att vara hemma på torsdag.", en: "I will be at home on Thursday.", grammar: [future_ska_kommer_att] }
+  - { type: translate, en: "Unfortunately the washing machine is broken again.", sv: "Tyvärr är tvättmaskinen trasig igen.",
+      accept: ["Tvättmaskinen är tyvärr trasig igen."], grammar: [inversion_after_adverb] }
+  - { type: cloze, sv: "Det nya elementet är ___ än det gamla.", hint: varm, answer: varmare, en: "The new radiator is warmer than the old one.",
+      grammar: [comparison, adjective_agreement_full] }
+
+# The task itself: you call your landlord.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: hyresvärd, sv: "Hej, det är hyresvärden. Vad har hänt?", en: "Hello, this is the landlord. What has happened?" }
+    - { speaker: du, en: "Say that the tap in the kitchen is leaking.", answer: "Kranen i köket läcker.",
+        accept: ["Kranen läcker.", "Kranen i köket har gått sönder."] }
+    - { speaker: hyresvärd, sv: "Har du skrivit på listan?", en: "Have you written on the list?" }
+    - { speaker: du, en: "Say yes, you have already written on the list.",
+        options: ["Ja, jag har redan skrivit på listan.", "Ja, jag har redan skriver på listan.", "Ja, jag redan har skrivit på listan."],
+        answer: "Ja, jag har redan skrivit på listan." }
+    - { speaker: hyresvärd, sv: "Vi kommer imorgon klockan 8.", en: "We will come tomorrow at 8." }
+    - { speaker: du, en: "Say that unfortunately you work tomorrow, and ask if they can come on Thursday.",
+        options: ["Tyvärr jobbar jag imorgon. Kan ni komma på torsdag?", "Tyvärr jag jobbar imorgon. Kan ni komma på torsdag?", "Tyvärr har jag jobbat imorgon. Kan ni kom på torsdag?"],
+        answer: "Tyvärr jobbar jag imorgon. Kan ni komma på torsdag?" }
+    - { speaker: hyresvärd, sv: "Ja, på torsdag klockan 10.", en: "Yes, on Thursday at 10." }
+    - { speaker: du, en: "Say thanks, and that you also want to book the laundry room.",
+        answer: "Tack! Jag vill också boka tvättstugan.", accept: ["Jag vill också boka tvättstugan.", "Tack. Jag vill boka tvättstugan också."] }
+    - { speaker: hyresvärd, sv: "Du bokar på listan i tvättstugan.", en: "You book on the list in the laundry room." }
+    - { speaker: du, en: "Say thanks and goodbye.", answer: "Tack! Hej då!", accept: ["Tack, hej då!"] }
+
+speaking_prompt: "Say aloud: two things that have broken at home, what you have already done, and when someone can come."

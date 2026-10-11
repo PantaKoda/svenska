@@ -503,37 +503,21 @@ items:
   - golv
   - gammal
 - type: inflect
-  answer: vill
+  answer: haft
   grammar:
-  - present_tense
-  lemma: vilja
-  form: pres
+  - perfect_tense
+  lemma: ha
+  form: sup
   words:
-  - vilja
+  - ha
 - type: inflect
-  answer: måste
+  answer: skola
   grammar:
-  - present_tense
-  lemma: måste
-  form: pres
+  - imperative
+  lemma: skola
+  form: imp
   words:
-  - måste
-- type: inflect
-  answer: kan
-  grammar:
-  - present_tense
-  lemma: kunna
-  form: pres
-  words:
-  - kunna
-- type: inflect
-  answer: är
-  grammar:
-  - present_tense
-  lemma: vara
-  form: pres
-  words:
-  - vara
+  - skola
 - type: inflect
   answer: behöver
   grammar:
@@ -543,26 +527,106 @@ items:
   words:
   - behöva
 - type: inflect
-  answer: ska
+  answer: velat
+  grammar:
+  - perfect_tense
+  lemma: vilja
+  form: sup
+  words:
+  - vilja
+- type: inflect
+  answer: kan
   grammar:
   - present_tense
-  lemma: skola
+  lemma: kunna
   form: pres
   words:
-  - skola
+  - kunna
 - type: inflect
-  answer: har
+  answer: tog
   grammar:
-  - present_tense
-  lemma: ha
-  form: pres
-  words:
-  - ha
-- type: inflect
-  answer: tar
-  grammar:
-  - present_tense
+  - past_tense
   lemma: ta
-  form: pres
+  form: past
   words:
   - ta
+- type: inflect
+  answer: måste
+  grammar:
+  - past_tense
+  lemma: måste
+  form: past
+  words:
+  - måste
+- type: inflect
+  answer: var
+  grammar:
+  - past_tense
+  lemma: vara
+  form: past
+  words:
+  - vara
+- type: inflect
+  answer: vet
+  grammar:
+  - imperative
+  lemma: veta
+  form: imp
+  words:
+  - veta
+- type: inflect
+  answer: trott
+  grammar:
+  - perfect_tense
+  lemma: tro
+  form: sup
+  words:
+  - tro
+- type: inflect
+  answer: svarar
+  grammar:
+  - present_tense
+  lemma: svara
+  form: pres
+  words:
+  - svara
+- type: inflect
+  answer: brukat
+  grammar:
+  - perfect_tense
+  lemma: bruka
+  form: sup
+  words:
+  - bruka
+- type: inflect
+  answer: använde
+  grammar:
+  - past_tense
+  lemma: använda
+  form: past
+  words:
+  - använda
+- type: inflect
+  answer: ringde
+  grammar:
+  - past_tense
+  lemma: ringa
+  form: past
+  words:
+  - ringa
+- type: inflect
+  answer: skrev
+  grammar:
+  - past_tense
+  lemma: skriva
+  form: past
+  words:
+  - skriva
+- type: inflect
+  answer: tyckte
+  grammar:
+  - past_tense
+  lemma: tycka
+  form: past
+  words:
+  - tycka

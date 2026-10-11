@@ -459,66 +459,578 @@ items:
   words:
   - ben
 - type: inflect
-  answer: armen
+  answer: vilade
   grammar:
-  - def_singular
-  lemma: arm
-  form: def
+  - past_tense
+  lemma: vila
+  form: past
   words:
-  - arm
+  - vila
 - type: inflect
-  answer: en läkare
+  answer: en rygg
   grammar:
   - en_ett
-  lemma: läkare
+  lemma: rygg
   form: a
   words:
-  - läkare
+  - rygg
 - type: inflect
-  answer: ett ben
+  answer: benen
   grammar:
-  - en_ett
+  - plural_def
   lemma: ben
-  form: a
+  form: pl_def
   words:
   - ben
 - type: inflect
-  answer: ontet
-  grammar:
-  - def_singular
-  lemma: ont
-  form: def
-  words:
-  - ont
-- type: inflect
-  answer: vårdcentralen
-  grammar:
-  - def_singular
-  lemma: vårdcentral
-  form: def
-  words:
-  - vårdcentral
-- type: inflect
-  answer: halsen
-  grammar:
-  - def_singular
-  lemma: hals
-  form: def
-  words:
-  - hals
-- type: inflect
-  answer: febrar
+  answer: vatten
   grammar:
   - plural_indef
-  lemma: feber
+  lemma: vatten
   form: pl
   words:
-  - feber
+  - vatten
 - type: inflect
-  answer: bokar
+  answer: huvuden
+  grammar:
+  - plural_indef
+  lemma: huvud
+  form: pl
+  words:
+  - huvud
+- type: inflect
+  answer: en arm
+  grammar:
+  - en_ett
+  lemma: arm
+  form: a
+  words:
+  - arm
+- type: inflect
+  answer: druckit
+  grammar:
+  - perfect_tense
+  lemma: dricka
+  form: sup
+  words:
+  - dricka
+- type: inflect
+  answer: hjälper
   grammar:
   - present_tense
-  lemma: boka
+  lemma: hjälpa
   form: pres
   words:
-  - boka
+  - hjälpa
+- type: cloze
+  sv: Har du ___?
+  en: Do you have a prescription?
+  answer: ett recept
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  hint: recept
+  frame: gen-002
+  words:
+  - recept
+- type: cloze
+  sv: Har du ont i ___?
+  en: Does your chest hurt?
+  answer: bröstet
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: bröst
+  frame: hal-02
+  words:
+  - bröst
+- type: cloze
+  sv: Jag har inte ont i ___.
+  en: My mouth does not hurt.
+  answer: munnen
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: mun
+  frame: hal-03
+  words:
+  - mun
+- type: cloze
+  sv: Jag har ont i ___.
+  en: My eye hurts.
+  answer: ögat
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: öga
+  frame: hal-01
+  words:
+  - öga
+- type: cloze
+  sv: Jag har inte ont i ___.
+  en: My nose does not hurt.
+  answer: näsan
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: näsa
+  frame: hal-03
+  words:
+  - näsa
+- type: cloze
+  sv: Jag vill ha ___.
+  en: I want a prescription.
+  answer: ett recept
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  hint: recept
+  frame: gen-008
+  words:
+  - recept
+- type: cloze
+  sv: Har du ont i ___?
+  en: Does your ear hurt?
+  answer: örat
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: öra
+  frame: hal-02
+  words:
+  - öra
+- type: cloze
+  sv: Jag har ont i ___.
+  en: My chest hurts.
+  answer: bröstet
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: bröst
+  frame: hal-01
+  words:
+  - bröst
+- type: dictation
+  sv: Var är receptet?
+  en: Where is the prescription?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - recept
+- type: dictation
+  sv: Har du ont i ögat?
+  en: Does your eye hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - öga
+- type: dictation
+  sv: Jag har ont i munnen.
+  en: My mouth hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - mun
+- type: dictation
+  sv: Jag behöver ett recept.
+  en: I need a prescription.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - recept
+- type: dictation
+  sv: Jag har inte ont i örat.
+  en: My ear does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - öra
+- type: dictation
+  sv: Har du receptet?
+  en: Do you have the prescription?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - recept
+- type: dictation
+  sv: Jag har ont i näsan.
+  en: My nose hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - näsa
+- type: dictation
+  sv: Jag har inte ont i bröstet.
+  en: My chest does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - bröst
+- type: word_order
+  sv: Har du ont i munnen?
+  en: Does your mouth hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - mun
+- type: word_order
+  sv: Jag har inte receptet.
+  en: I don't have the prescription.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - recept
+- type: word_order
+  sv: Jag har ont i örat.
+  en: My ear hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - öra
+- type: word_order
+  sv: Jag har inte ont i ögat.
+  en: My eye does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - öga
+- type: word_order
+  sv: Receptet är där.
+  en: The prescription is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - recept
+- type: word_order
+  sv: Har du ont i näsan?
+  en: Does your nose hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - näsa
+- type: word_order
+  sv: Har du ett recept?
+  en: Do you have a prescription?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - recept
+- type: word_order
+  sv: Har du ont i bröstet?
+  en: Does your chest hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - bröst
+- type: translate
+  sv: Jag har inte ont i munnen.
+  en: My mouth does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - mun
+- type: translate
+  sv: Jag har ont i ögat.
+  en: My eye hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - öga
+- type: translate
+  sv: Jag har inte ont i näsan.
+  en: My nose does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - näsa
+- type: translate
+  sv: Jag vill ha ett recept.
+  en: I want a prescription.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - recept
+- type: translate
+  sv: Har du ont i örat?
+  en: Does your ear hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - öra
+- type: translate
+  sv: Jag har ont i bröstet.
+  en: My chest hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - bröst
+- type: translate
+  sv: Var är receptet?
+  en: Where is the prescription?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - recept
+- type: translate
+  sv: Har du ont i ögat?
+  en: Does your eye hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - öga
+- type: listen_choose
+  sv: Jag har ont i munnen.
+  answer: My mouth hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - My mouth hurts.
+  - My chest hurts.
+  - My eye hurts.
+  frame: hal-01
+  words:
+  - mun
+- type: listen_choose
+  sv: Jag behöver ett recept.
+  answer: I need a prescription.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need a prescription.
+  - Do you have a prescription?
+  - I want a prescription.
+  frame: gen-005
+  words:
+  - recept
+- type: listen_choose
+  sv: Jag har inte ont i örat.
+  answer: My ear does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - My ear does not hurt.
+  - My mouth does not hurt.
+  - My chest does not hurt.
+  frame: hal-03
+  words:
+  - öra
+- type: listen_choose
+  sv: Har du receptet?
+  answer: Do you have the prescription?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Do you have the prescription?
+  - Do you have a prescription?
+  - I want a prescription.
+  frame: gen-006
+  words:
+  - recept
+- type: listen_choose
+  sv: Jag har ont i näsan.
+  answer: My nose hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - My nose hurts.
+  - My chest hurts.
+  - My mouth hurts.
+  frame: hal-01
+  words:
+  - näsa
+- type: listen_choose
+  sv: Jag har inte ont i bröstet.
+  answer: My chest does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - My chest does not hurt.
+  - My mouth does not hurt.
+  - My nose does not hurt.
+  frame: hal-03
+  words:
+  - bröst
+- type: listen_choose
+  sv: Har du ont i munnen?
+  answer: Does your mouth hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Does your mouth hurt?
+  - Does your chest hurt?
+  - Does your eye hurt?
+  frame: hal-02
+  words:
+  - mun
+- type: listen_choose
+  sv: Jag har inte receptet.
+  answer: I don't have the prescription.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the prescription.
+  - Do you have a prescription?
+  - I want a prescription.
+  frame: gen-004
+  words:
+  - recept
+- type: inflect
+  answer: en mun
+  grammar:
+  - en_ett
+  lemma: mun
+  form: a
+  words:
+  - mun
+- type: inflect
+  answer: en näsa
+  grammar:
+  - en_ett
+  lemma: näsa
+  form: a
+  words:
+  - näsa
+- type: inflect
+  answer: suttit
+  grammar:
+  - perfect_tense
+  lemma: sitta
+  form: sup
+  words:
+  - sitta
+- type: inflect
+  answer: ögonen
+  grammar:
+  - plural_def
+  lemma: öga
+  form: pl_def
+  words:
+  - öga
+- type: inflect
+  answer: andas
+  grammar:
+  - imperative
+  lemma: andas
+  form: imp
+  words:
+  - andas
+- type: inflect
+  answer: medicinen
+  grammar:
+  - def_singular
+  lemma: medicin
+  form: def
+  words:
+  - medicin
+- type: inflect
+  answer: öronen
+  grammar:
+  - plural_def
+  lemma: öra
+  form: pl_def
+  words:
+  - öra
+- type: inflect
+  answer: bröstet
+  grammar:
+  - def_singular
+  lemma: bröst
+  form: def
+  words:
+  - bröst

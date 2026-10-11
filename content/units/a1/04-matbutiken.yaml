@@ -16,8 +16,14 @@ scene: svg/matbutik.svg
 glosses:
   bli: "det blir 149 kronor = that comes to 149 kronor"
 
+phrases:
+  - { sv: "Varsågod.", en: "Here you are." }
+  - { sv: "Tack så mycket!", en: "Thank you very much!" }
+  - { sv: "Tack detsamma!", en: "The same to you!" }
+  - { sv: "Ha en bra dag!", en: "Have a nice day!" }
+
 core:
-  templates: [scene_click, inflect, cloze, dictation, word_order, translate, listen_choose]
+  templates: [phrases, scene_click, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 6
 
 model_dialogue:

@@ -21,8 +21,15 @@ public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
     private static readonly string[] SentenceTemplates =
         [ExerciseText.Cloze, ExerciseText.Dictation, ExerciseText.WordOrder, ExerciseText.Translate, ExerciseText.ListenChoose];
 
+    /// <summary>Drills on the unit's phrases: hear and choose the meaning, say it in Swedish, write it.</summary>
+    public const string PhraseTemplate = "phrases";
+
+    /// <summary>What a generated phrase item has in its `frame` field.</summary>
+    public const string PhraseSource = "phrase";
+
     /// <summary>The templates a unit may list under core.templates.</summary>
-    public static readonly string[] Templates = [.. SentenceTemplates, ExerciseText.Inflect, ExerciseText.SceneClick];
+    public static readonly string[] Templates =
+        [.. SentenceTemplates, ExerciseText.Inflect, ExerciseText.SceneClick, PhraseTemplate];
 
     private readonly Vocabulary _vocabulary = new(course, saldo);
 
@@ -48,6 +55,8 @@ public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
         {
             if (template == ExerciseText.Inflect)
                 items.AddRange(InflectItems(unit, core.ItemsPerTemplate, random, notes));
+            else if (template == PhraseTemplate)
+                items.AddRange(PhraseItems(unit));
             else if (template == ExerciseText.SceneClick)
                 items.AddRange(unit.NewWords.Select(_vocabulary.Find).Where(w => w?.Svg != null)
                     .Take(core.ItemsPerTemplate)
@@ -304,6 +313,40 @@ public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
         if (!first)
             item.Sv = Capitalize(item.Sv);
         return item;
+    }
+
+    // ---- phrases ----
+
+    /// <summary>
+    /// For each phrase of the unit: hear it and choose the meaning (among the meanings of
+    /// other known phrases), say it in Swedish, and write it from hearing.
+    /// </summary>
+    private List<ExerciseItem> PhraseItems(Unit unit)
+    {
+        var phrases = unit.Phrases; // all of them: a unit has few, and each must be practised
+        // Wrong meanings: first the unit's other phrases, then those of earlier units, newest first.
+        var others = unit.Phrases.Concat(_vocabulary.KnownPhrases(unit).AsEnumerable().Reverse()).ToList();
+
+        var items = new List<ExerciseItem>();
+        foreach (var phrase in phrases)
+        {
+            var wrong = others.Where(p => p.En != phrase.En).Select(p => p.En).Distinct().Take(2).ToList();
+            if (wrong.Count == 2)
+                items.Add(new ExerciseItem
+                {
+                    Type = ExerciseText.ListenChoose, Sv = phrase.Sv, Answer = phrase.En, Options = [phrase.En, .. wrong],
+                    Review = phrase.Review, Frame = PhraseSource,
+                });
+        }
+        items.AddRange(phrases.Select(p => new ExerciseItem
+        {
+            Type = ExerciseText.Translate, En = p.En, Sv = p.Sv, Accept = [.. p.Accept], Review = p.Review, Frame = PhraseSource,
+        }));
+        items.AddRange(phrases.Select(p => new ExerciseItem
+        {
+            Type = ExerciseText.Dictation, Sv = p.Sv, En = p.En, Review = p.Review, Frame = PhraseSource,
+        }));
+        return items;
     }
 
     // ---- single words ----

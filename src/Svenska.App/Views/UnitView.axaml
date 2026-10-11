@@ -18,8 +18,8 @@
                 <StackPanel Spacing="14">
                     <StackPanel Orientation="Horizontal" Spacing="12">
                         <Border Classes="step"><TextBlock Classes="accent" Text="1" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
-                        <TextBlock Classes="h2" Text="Words" VerticalAlignment="Center" />
-                        <TextBlock Classes="muted" Text="click a word to hear it" VerticalAlignment="Center" FontSize="12" />
+                        <TextBlock Classes="h2" Text="Words and phrases" VerticalAlignment="Center" />
+                        <TextBlock Classes="muted" Text="click one to hear it" VerticalAlignment="Center" FontSize="12" />
                     </StackPanel>
                     <ItemsControl ItemsSource="{Binding Words}">
                         <ItemsControl.ItemsPanel>
@@ -36,6 +36,26 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
+
+                    <!-- everyday phrases, learnt as a whole -->
+                    <StackPanel Spacing="10" IsVisible="{Binding HasPhrases}">
+                        <TextBlock Classes="label" Text="PHRASES" Margin="0,4,0,0" />
+                        <ItemsControl ItemsSource="{Binding Phrases}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="vm:WordRow">
+                                    <Button Classes="chip" Command="{Binding Play}" Margin="0,0,8,8" Width="364">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                            <TextBlock Classes="muted" Text="{Binding Gloss}" FontSize="12" TextTrimming="CharacterEllipsis" />
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
                 </StackPanel>
             </Border>
 

@@ -222,6 +222,17 @@ final_task:                  # authored
   turns: [...]
 speaking_prompt: "Say aloud: ask where the milk is, then ask what the cheese costs."
 ```
+A unit may teach up to 8 everyday phrases, learnt and counted as known as a whole:
+```yaml
+phrases:
+  - { sv: "Jag förstår inte.", en: "I don't understand." }
+  - { sv: "Ursäkta.", en: "Excuse me.", accept: ["Ursäkta mig."] }
+```
+The words inside a phrase need not be taught, and stay unknown outside it. Add `phrases`
+to `core.templates` and the generator makes three drills per phrase (hear and choose the
+meaning, say it in Swedish, write it). Phrases get audio, appear on the unit page and in
+the word lookup, and enter the review queue like words.
+
 Temporary: a unit may have `assumes: { words: [..], grammar: [..] }` for what it takes as
 known from earlier units that are not written yet. The validator warns while it exists;
 remove it when units 01–03 are written (M6).

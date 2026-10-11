@@ -2,6 +2,54 @@
 # and run the generator again.
 unit: a1-10
 items:
+- type: listen_choose
+  sv: Lycka till!
+  answer: Good luck!
+  options:
+  - Good luck!
+  - Congratulations!
+  - Well done!
+  frame: phrase
+- type: listen_choose
+  sv: Grattis!
+  answer: Congratulations!
+  options:
+  - Congratulations!
+  - Good luck!
+  - Well done!
+  frame: phrase
+- type: listen_choose
+  sv: Bra jobbat!
+  answer: Well done!
+  options:
+  - Well done!
+  - Good luck!
+  - Congratulations!
+  frame: phrase
+- type: translate
+  sv: Lycka till!
+  en: Good luck!
+  frame: phrase
+- type: translate
+  sv: Grattis!
+  en: Congratulations!
+  frame: phrase
+- type: translate
+  sv: Bra jobbat!
+  en: Well done!
+  frame: phrase
+- type: dictation
+  sv: Lycka till!
+  en: Good luck!
+  frame: phrase
+- type: dictation
+  sv: Grattis!
+  en: Congratulations!
+  frame: phrase
+- type: dictation
+  sv: Bra jobbat!
+  en: Well done!
+  frame: phrase
 - type: inflect
   answer: en kväll
   grammar:

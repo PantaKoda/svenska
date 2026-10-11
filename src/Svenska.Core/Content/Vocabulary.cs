@@ -56,12 +56,42 @@ public sealed class Vocabulary
         return lemmas;
     }
 
-    /// <summary>The words of a text that are neither known, a number, nor one of the given names.</summary>
-    public List<string> UnknownTokens(string text, HashSet<string> known, IReadOnlyCollection<string> names) =>
-        Tokenizer.Tokens(text)
-            .Where(t => !Tokenizer.IsNumber(t) && !names.Contains(t) && !LemmasOf(t).Overlaps(known))
+    /// <summary>The phrases taught up to and including the unit.</summary>
+    public List<Phrase> KnownPhrases(Unit unit) => UnitsUpTo(unit).SelectMany(u => u.Phrases).ToList();
+
+    /// <summary>
+    /// The words of a text that are neither known, a number, one of the given names, nor
+    /// part of a known phrase that occurs in the text as a whole.
+    /// </summary>
+    public List<string> UnknownTokens(string text, HashSet<string> known, IReadOnlyCollection<string> names,
+        IReadOnlyCollection<Phrase>? phrases = null)
+    {
+        var tokens = Tokenizer.Tokens(text);
+        var covered = new bool[tokens.Count];
+        foreach (var phrase in phrases ?? [])
+        {
+            var words = Tokenizer.Tokens(phrase.Sv);
+            for (var i = 0; words.Count > 0 && i + words.Count <= tokens.Count; i++)
+                if (words.Select((w, k) => string.Equals(w, tokens[i + k], StringComparison.OrdinalIgnoreCase)).All(same => same))
+                    for (var k = 0; k < words.Count; k++)
+                        covered[i + k] = true;
+        }
+        return tokens
+            .Where((t, i) => !covered[i] && !Tokenizer.IsNumber(t) && !names.Contains(t) && !LemmasOf(t).Overlaps(known))
             .Distinct()
             .ToList();
+    }
+
+    /// <summary>True if the phrase occurs in the text as a whole (same words, any capitals).</summary>
+    public static bool ContainsPhrase(string text, Phrase phrase)
+    {
+        var tokens = Tokenizer.Tokens(text);
+        var words = Tokenizer.Tokens(phrase.Sv);
+        for (var i = 0; words.Count > 0 && i + words.Count <= tokens.Count; i++)
+            if (words.Select((w, k) => string.Equals(w, tokens[i + k], StringComparison.OrdinalIgnoreCase)).All(same => same))
+                return true;
+        return false;
+    }
 
     private IEnumerable<Unit> UnitsUpTo(Unit unit) => _course.Units.TakeWhile(u => u != unit).Append(unit);
 }

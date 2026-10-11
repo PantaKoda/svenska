@@ -12,8 +12,16 @@ new_words: [hej, då, tack, jag, du, den, och,
             svenska, engelska]
 new_grammar: [pron_subject, present_tense]
 
+# Everyday phrases, learnt as a whole.
+phrases:
+  - { sv: "God morgon!", en: "Good morning!" }
+  - { sv: "Trevligt att träffas!", en: "Nice to meet you!" }
+  - { sv: "Välkommen!", en: "Welcome!" }
+  - { sv: "Vi ses!", en: "See you!" }
+  - { sv: "Ha det bra!", en: "Take care!" }
+
 core:
-  templates: [inflect]
+  templates: [inflect, phrases]
   items_per_template: 6
 
 model_dialogue:

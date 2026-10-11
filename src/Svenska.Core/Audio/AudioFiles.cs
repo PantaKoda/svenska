@@ -32,7 +32,7 @@ public static class AudioFiles
             foreach (var word in unit.NewWords)
                 lines.Add((word, false));
 
-            Both(unit.ModelDialogue.Select(l => l.Sv).Concat(Heard(unit.Exercises)));
+            Both(unit.ModelDialogue.Select(l => l.Sv).Concat(Heard(unit.Exercises)).Concat(unit.Phrases.Select(p => p.Sv)));
             if (unit.FinalTask != null)
                 Both(DialogueTask.Steps(unit.FinalTask).SelectMany(s => s.Heard).Select(l => l.Sv));
         }

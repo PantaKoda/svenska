@@ -18,6 +18,7 @@ public sealed class CourseValidator
     private const int MaxCardWidth = 66;   // what fits in the reference panel
     private const int MaxNewWords = 25;
     private const int MaxNewGrammar = 2;
+    private const int MaxNewPhrases = 8;
 
     private readonly Course _course;
     private readonly ISaldoLexicon? _saldo;
@@ -320,6 +321,7 @@ public sealed class CourseValidator
             Error($"generated/{generated.Unit}", "there is no unit or theme pack with this id");
 
         var introduced = new HashSet<string>();
+        var phrasesSoFar = new HashSet<string>();
         var knownGrammar = new HashSet<string>();
         foreach (var unit in _course.Units)
         {
@@ -335,6 +337,7 @@ public sealed class CourseValidator
                               "from units that are not written yet");
 
             CheckUnitWords(unit, file, introduced);
+            CheckPhrases(unit, file, phrasesSoFar);
             CheckUnitGrammar(unit, file, knownGrammar);
 
             CheckFinalTask(unit, file);
@@ -362,6 +365,20 @@ public sealed class CourseValidator
                 Error(file, $"word '{lemma}' is {word.Level} in its pack, above this {unit.Level} unit", 5);
             if (!introduced.Add(lemma))
                 Error(file, $"word '{lemma}' is already introduced (listed twice or in an earlier unit)");
+        }
+    }
+
+    /// <summary>Phrases: complete, not too many at once, taught once.</summary>
+    private void CheckPhrases(Unit unit, string file, HashSet<string> phrasesSoFar)
+    {
+        if (unit.Phrases.Count > MaxNewPhrases)
+            Error(file, $"{unit.Phrases.Count} new phrases (at most {MaxNewPhrases})", 5);
+        foreach (var phrase in unit.Phrases)
+        {
+            if (string.IsNullOrWhiteSpace(phrase.Sv) || string.IsNullOrWhiteSpace(phrase.En))
+                Error(file, $"phrase \"{phrase.Sv}\": needs sv and en");
+            else if (!phrasesSoFar.Add(phrase.Sv.ToLowerInvariant()))
+                Error(file, $"phrase \"{phrase.Sv}\" is already taught (listed twice or in an earlier unit)");
         }
     }
 
@@ -578,18 +595,22 @@ public sealed class CourseValidator
         if (_vocabulary == null)
             return;
         var known = _vocabulary.KnownWords(unit);
+        var phrases = _vocabulary.KnownPhrases(unit);
 
         // Rule 2. What the learner writes: the written exercise types, and the replies of
         // the final task. A chosen reply (a listen_choose without sv) has Swedish options.
         static bool IsChosenReply(ExerciseItem i) => i.Type == ExerciseText.ListenChoose && string.IsNullOrEmpty(i.Sv);
         foreach (var item in items.Where(i => ExerciseText.Written.Contains(i.Type) || IsChosenReply(i)))
         {
+            // A phrase drill is the phrase itself (and its accepted variants): known as a whole.
+            if (item.Frame == DrillGenerator.PhraseSource)
+                continue;
             var texts = new[] { ExerciseText.FullSentence(item), item.Answer ?? "" }.Concat(item.Accept);
             if (item.Type == ExerciseText.Cloze)
                 texts = texts.Append(item.Hint ?? "");
             if (IsChosenReply(item))
                 texts = texts.Concat(item.Options);
-            var unknown = texts.SelectMany(t => _vocabulary.UnknownTokens(t, known, unit.Names)).Distinct().ToList();
+            var unknown = texts.SelectMany(t => _vocabulary.UnknownTokens(t, known, unit.Names, phrases)).Distinct().ToList();
             if (unknown.Count > 0)
                 Error(file, $"{Describe(item)}: not known yet: {string.Join(", ", unknown)}", 2);
         }
@@ -606,7 +627,7 @@ public sealed class CourseValidator
         foreach (var text in heard)
         {
             total += Tokenizer.Tokens(text).Count(t => !Tokenizer.IsNumber(t));
-            var unknown = _vocabulary.UnknownTokens(text, known, unit.Names);
+            var unknown = _vocabulary.UnknownTokens(text, known, unit.Names, phrases);
             unknownCount += unknown.Count;
             var noGloss = unknown.Where(t => !HasGloss(unit, t)).ToList();
             if (noGloss.Count > 0)
@@ -629,6 +650,12 @@ public sealed class CourseValidator
         var unused = unit.NewWords.Where(w => !used.Contains(w)).ToList();
         if (unused.Count > 0)
             Error(file, $"new words never used in an exercise: {string.Join(", ", unused)}", 9);
+
+        // The same for phrases: each must come up as a whole in some exercise.
+        var texts = items.Select(i => $"{ExerciseText.FullSentence(i)} | {i.Answer}").ToList();
+        var unusedPhrases = unit.Phrases.Where(p => !texts.Any(t => Vocabulary.ContainsPhrase(t, p))).Select(p => p.Sv).ToList();
+        if (unusedPhrases.Count > 0)
+            Error(file, $"phrases never used in an exercise (add `{DrillGenerator.PhraseTemplate}` to core.templates): {string.Join(" / ", unusedPhrases)}", 9);
     }
 
     /// <summary>Rule 10: a word introduced three or more units ago should have come back since.</summary>

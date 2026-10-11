@@ -25,6 +25,9 @@ public partial class UnitViewModel : ObservableObject
     public string? SpeakingPrompt => _unit.SpeakingPrompt;
     public IReadOnlyList<WordRow> Words { get; }
     public IReadOnlyList<LineRow> Dialogue { get; }
+    /// <summary>The everyday phrases of the unit (the same row type as the words: Swedish, meaning, play).</summary>
+    public IReadOnlyList<WordRow> Phrases { get; }
+    public bool HasPhrases => Phrases.Count > 0;
     public string StartText { get; }
     public bool HasExercises { get; }
     public string ProgressText { get; }
@@ -47,6 +50,8 @@ public partial class UnitViewModel : ObservableObject
             var swedish = word is { Pos: "noun", Gender: not null } ? $"{word.Gender} {lemma}" : lemma;
             return new WordRow(swedish, word == null ? "" : English.Meaning(word), new RelayCommand(() => services.Play(lemma)));
         }).ToList();
+
+        Phrases = unit.Phrases.Select(p => new WordRow(p.Sv, p.En, new RelayCommand(() => services.Play(p.Sv)))).ToList();
 
         Dialogue = unit.ModelDialogue.Select(line => new LineRow(line.Speaker, line.Sv, line.En,
             new RelayCommand(() => services.Play(line.Sv)),

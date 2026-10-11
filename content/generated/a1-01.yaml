@@ -50,3 +50,83 @@ items:
   form: pres
   words:
   - bo
+- type: listen_choose
+  sv: God morgon!
+  answer: Good morning!
+  options:
+  - Good morning!
+  - Nice to meet you!
+  - Welcome!
+  frame: phrase
+- type: listen_choose
+  sv: Trevligt att träffas!
+  answer: Nice to meet you!
+  options:
+  - Nice to meet you!
+  - Good morning!
+  - Welcome!
+  frame: phrase
+- type: listen_choose
+  sv: Välkommen!
+  answer: Welcome!
+  options:
+  - Welcome!
+  - Good morning!
+  - Nice to meet you!
+  frame: phrase
+- type: listen_choose
+  sv: Vi ses!
+  answer: See you!
+  options:
+  - See you!
+  - Good morning!
+  - Nice to meet you!
+  frame: phrase
+- type: listen_choose
+  sv: Ha det bra!
+  answer: Take care!
+  options:
+  - Take care!
+  - Good morning!
+  - Nice to meet you!
+  frame: phrase
+- type: translate
+  sv: God morgon!
+  en: Good morning!
+  frame: phrase
+- type: translate
+  sv: Trevligt att träffas!
+  en: Nice to meet you!
+  frame: phrase
+- type: translate
+  sv: Välkommen!
+  en: Welcome!
+  frame: phrase
+- type: translate
+  sv: Vi ses!
+  en: See you!
+  frame: phrase
+- type: translate
+  sv: Ha det bra!
+  en: Take care!
+  frame: phrase
+- type: dictation
+  sv: God morgon!
+  en: Good morning!
+  frame: phrase
+- type: dictation
+  sv: Trevligt att träffas!
+  en: Nice to meet you!
+  frame: phrase
+- type: dictation
+  sv: Välkommen!
+  en: Welcome!
+  frame: phrase
+- type: dictation
+  sv: Vi ses!
+  en: See you!
+  frame: phrase
+- type: dictation
+  sv: Ha det bra!
+  en: Take care!
+  frame: phrase

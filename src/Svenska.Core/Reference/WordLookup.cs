@@ -64,6 +64,7 @@ public sealed class WordLookup(Course course, ISaldoLexicon saldo)
             return new([], []);
 
         var entries = Entries(text);
+        entries.AddRange(PhraseEntries(text));
         if (entries.Count > 0)
             return new(entries, []);
 
@@ -106,6 +107,20 @@ public sealed class WordLookup(Course course, ISaldoLexicon saldo)
         // SALDO sometimes has the same word twice (two senses with the same forms).
         return entries.OrderBy(e => e.Rank).Select(e => e.Entry)
             .DistinctBy(e => (e.Headword, e.PartOfSpeech)).ToList();
+    }
+
+    /// <summary>The taught phrases that contain the typed word, or start with what was typed.</summary>
+    private IEnumerable<WordEntry> PhraseEntries(string text)
+    {
+        var typed = text.ToLowerInvariant();
+        foreach (var unit in course.Units)
+            foreach (var phrase in unit.Phrases)
+            {
+                var words = Text.Tokenizer.Tokens(phrase.Sv).Select(w => w.ToLowerInvariant());
+                if (words.Contains(typed) || phrase.Sv.StartsWith(text, StringComparison.OrdinalIgnoreCase))
+                    yield return new WordEntry(phrase.Sv, phrase.Sv, "phrase", phrase.En,
+                        $"{unit.Id.ToUpperInvariant()} {unit.Title}", []);
+            }
     }
 
     /// <summary>The pack word behind a SALDO reading: same lemma, part of speech and gender.</summary>

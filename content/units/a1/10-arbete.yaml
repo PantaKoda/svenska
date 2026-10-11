@@ -11,8 +11,13 @@ new_words: [jobb, städare, lärare, kock, sjuksköterska, chaufför, snickare, 
             arbeta, börja, sluta, ledig, timme, morgon, kväll, heltid, som]
 new_grammar: []
 
+phrases:
+  - { sv: "Lycka till!", en: "Good luck!" }
+  - { sv: "Grattis!", en: "Congratulations!" }
+  - { sv: "Bra jobbat!", en: "Well done!" }
+
 core:
-  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 4
 
 model_dialogue:

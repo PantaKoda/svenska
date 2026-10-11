@@ -12,8 +12,15 @@ new_words: [inte, vi, när, idag, varje,
             frukost, lunch, middag, hemma]
 new_grammar: [wh_question, negation_inte]
 
+phrases:
+  - { sv: "Hur är läget?", en: "How is it going?" }
+  - { sv: "God natt!", en: "Good night!" }
+  - { sv: "Trevlig helg!", en: "Have a nice weekend!" }
+  - { sv: "Ingen fara.", en: "No problem." }
+  - { sv: "Det gör inget.", en: "It doesn't matter." }
+
 core:
-  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 4
 
 model_dialogue:

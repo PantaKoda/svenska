@@ -2,6 +2,54 @@
 # and run the generator again.
 unit: a1-09
 items:
+- type: listen_choose
+  sv: Vad kul!
+  answer: How fun!
+  options:
+  - How fun!
+  - That sounds good.
+  - Talk to you later!
+  frame: phrase
+- type: listen_choose
+  sv: Det låter bra.
+  answer: That sounds good.
+  options:
+  - That sounds good.
+  - How fun!
+  - Talk to you later!
+  frame: phrase
+- type: listen_choose
+  sv: Vi hörs!
+  answer: Talk to you later!
+  options:
+  - Talk to you later!
+  - How fun!
+  - That sounds good.
+  frame: phrase
+- type: translate
+  sv: Vad kul!
+  en: How fun!
+  frame: phrase
+- type: translate
+  sv: Det låter bra.
+  en: That sounds good.
+  frame: phrase
+- type: translate
+  sv: Vi hörs!
+  en: Talk to you later!
+  frame: phrase
+- type: dictation
+  sv: Vad kul!
+  en: How fun!
+  frame: phrase
+- type: dictation
+  sv: Det låter bra.
+  en: That sounds good.
+  frame: phrase
+- type: dictation
+  sv: Vi hörs!
+  en: Talk to you later!
+  frame: phrase
 - type: inflect
   answer: en film
   grammar:

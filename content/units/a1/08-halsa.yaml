@@ -13,8 +13,12 @@ new_words: [ont, huvud, mage, hals, rygg, ben, arm,
             kunna, skola, vilja, måste]
 new_grammar: [modal_vill_kan_ska]
 
+phrases:
+  - { sv: "Krya på dig!", en: "Get well soon!" }
+  - { sv: "Hur känns det?", en: "How does it feel?" }
+
 core:
-  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 4
 
 model_dialogue:

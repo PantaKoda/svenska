@@ -111,6 +111,19 @@ public sealed class ExerciseItem
 }
 
 /// <summary>
+/// A fixed everyday phrase ("Vi ses!", "Ingen fara."). It is learnt and counted as known
+/// as a whole, so its words need not be taught one by one.
+/// </summary>
+public sealed class Phrase
+{
+    public string Sv { get; set; } = "";
+    public string En { get; set; } = "";
+    /// <summary>Other Swedish phrases that are right when the learner translates `en`.</summary>
+    public List<string> Accept { get; set; } = [];
+    public bool Review { get; set; }
+}
+
+/// <summary>
 /// Words and grammar a unit takes as known from earlier units that are not written yet.
 /// Temporary: the validator warns while a unit has it.
 /// </summary>
@@ -132,6 +145,8 @@ public sealed class Unit
     public Assumes? Assumes { get; set; }
     public List<string> NewWords { get; set; } = [];
     public List<string> NewGrammar { get; set; } = [];
+    /// <summary>The everyday phrases this unit teaches.</summary>
+    public List<Phrase> Phrases { get; set; } = [];
     public List<string> Names { get; set; } = [];
     /// <summary>
     /// Meanings of the few words in the unit's listening texts that are not known yet

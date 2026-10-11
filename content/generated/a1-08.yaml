@@ -2,6 +2,38 @@
 # and run the generator again.
 unit: a1-08
 items:
+- type: listen_choose
+  sv: Krya på dig!
+  answer: Get well soon!
+  options:
+  - Get well soon!
+  - How does it feel?
+  - Have a nice day!
+  frame: phrase
+- type: listen_choose
+  sv: Hur känns det?
+  answer: How does it feel?
+  options:
+  - How does it feel?
+  - Get well soon!
+  - Have a nice day!
+  frame: phrase
+- type: translate
+  sv: Krya på dig!
+  en: Get well soon!
+  frame: phrase
+- type: translate
+  sv: Hur känns det?
+  en: How does it feel?
+  frame: phrase
+- type: dictation
+  sv: Krya på dig!
+  en: Get well soon!
+  frame: phrase
+- type: dictation
+  sv: Hur känns det?
+  en: How does it feel?
+  frame: phrase
 - type: inflect
   answer: en arm
   grammar:

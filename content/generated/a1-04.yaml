@@ -2,6 +2,70 @@
 # and run the generator again.
 unit: a1-04
 items:
+- type: listen_choose
+  sv: Varsågod.
+  answer: Here you are.
+  options:
+  - Here you are.
+  - Thank you very much!
+  - The same to you!
+  frame: phrase
+- type: listen_choose
+  sv: Tack så mycket!
+  answer: Thank you very much!
+  options:
+  - Thank you very much!
+  - Here you are.
+  - The same to you!
+  frame: phrase
+- type: listen_choose
+  sv: Tack detsamma!
+  answer: The same to you!
+  options:
+  - The same to you!
+  - Here you are.
+  - Thank you very much!
+  frame: phrase
+- type: listen_choose
+  sv: Ha en bra dag!
+  answer: Have a nice day!
+  options:
+  - Have a nice day!
+  - Here you are.
+  - Thank you very much!
+  frame: phrase
+- type: translate
+  sv: Varsågod.
+  en: Here you are.
+  frame: phrase
+- type: translate
+  sv: Tack så mycket!
+  en: Thank you very much!
+  frame: phrase
+- type: translate
+  sv: Tack detsamma!
+  en: The same to you!
+  frame: phrase
+- type: translate
+  sv: Ha en bra dag!
+  en: Have a nice day!
+  frame: phrase
+- type: dictation
+  sv: Varsågod.
+  en: Here you are.
+  frame: phrase
+- type: dictation
+  sv: Tack så mycket!
+  en: Thank you very much!
+  frame: phrase
+- type: dictation
+  sv: Tack detsamma!
+  en: The same to you!
+  frame: phrase
+- type: dictation
+  sv: Ha en bra dag!
+  en: Have a nice day!
+  frame: phrase
 - type: scene_click
   lemma: mjölk
   words:

@@ -11,6 +11,19 @@ new_words: [ja, nej, ha, en, för, på,
             år, gammal]
 new_grammar: [numbers_0_1000, yes_no_question]
 
+# Everyday phrases, learnt as a whole: what to say when you do not understand.
+phrases:
+  - { sv: "Ursäkta.", en: "Excuse me.", accept: ["Ursäkta mig."] }
+  - { sv: "Förlåt.", en: "Sorry." }
+  - { sv: "Jag förstår inte.", en: "I don't understand." }
+  - { sv: "Kan du säga det igen?", en: "Can you say that again?" }
+  - { sv: "Kan du tala långsammare?", en: "Can you speak more slowly?", accept: ["Kan du prata långsammare?"] }
+  - { sv: "Vad betyder det?", en: "What does that mean?" }
+
+core:
+  templates: [phrases]
+  items_per_template: 6
+
 # In the audio, phone numbers and personnummer are written the way they are said:
 # digit by digit or in pairs ("0 7 0, 1 2 3, 45 67").
 model_dialogue:
@@ -82,6 +95,9 @@ final_task:
     - { speaker: handläggare, sv: "Vad har du för adress?", en: "What is your address?" }
     - { speaker: du, en: "Say that you live at Storgatan 5.", answer: "Jag bor på Storgatan 5.",
         accept: ["Storgatan 5.", "Jag bor på Storgatan 5 i Göteborg."] }
+    - { speaker: handläggare, sv: "Vad har du för postnummer?", en: "What is your postcode?" }
+    - { speaker: du, en: "You did not catch that. Ask them to say it again.",
+        options: ["Kan du säga det igen?", "Vad betyder det?", "Jag heter Ali."], answer: "Kan du säga det igen?" }
     - { speaker: handläggare, sv: "Har du ett telefonnummer?", en: "Do you have a phone number?" }
     - { speaker: du, en: "Say yes and give your number.",
         options: ["Ja, det är 070-123 45 67.", "Nej, jag heter Ali.", "Ja, jag är 35 år."],

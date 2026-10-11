@@ -2,6 +2,86 @@
 # and run the generator again.
 unit: a1-03
 items:
+- type: listen_choose
+  sv: Hur är läget?
+  answer: How is it going?
+  options:
+  - How is it going?
+  - Good night!
+  - Have a nice weekend!
+  frame: phrase
+- type: listen_choose
+  sv: God natt!
+  answer: Good night!
+  options:
+  - Good night!
+  - How is it going?
+  - Have a nice weekend!
+  frame: phrase
+- type: listen_choose
+  sv: Trevlig helg!
+  answer: Have a nice weekend!
+  options:
+  - Have a nice weekend!
+  - How is it going?
+  - Good night!
+  frame: phrase
+- type: listen_choose
+  sv: Ingen fara.
+  answer: No problem.
+  options:
+  - No problem.
+  - How is it going?
+  - Good night!
+  frame: phrase
+- type: listen_choose
+  sv: Det gör inget.
+  answer: It doesn't matter.
+  options:
+  - It doesn't matter.
+  - How is it going?
+  - Good night!
+  frame: phrase
+- type: translate
+  sv: Hur är läget?
+  en: How is it going?
+  frame: phrase
+- type: translate
+  sv: God natt!
+  en: Good night!
+  frame: phrase
+- type: translate
+  sv: Trevlig helg!
+  en: Have a nice weekend!
+  frame: phrase
+- type: translate
+  sv: Ingen fara.
+  en: No problem.
+  frame: phrase
+- type: translate
+  sv: Det gör inget.
+  en: It doesn't matter.
+  frame: phrase
+- type: dictation
+  sv: Hur är läget?
+  en: How is it going?
+  frame: phrase
+- type: dictation
+  sv: God natt!
+  en: Good night!
+  frame: phrase
+- type: dictation
+  sv: Trevlig helg!
+  en: Have a nice weekend!
+  frame: phrase
+- type: dictation
+  sv: Ingen fara.
+  en: No problem.
+  frame: phrase
+- type: dictation
+  sv: Det gör inget.
+  en: It doesn't matter.
+  frame: phrase
 - type: inflect
   answer: jobbar
   grammar:

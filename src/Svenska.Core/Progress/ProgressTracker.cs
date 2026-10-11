@@ -16,6 +16,7 @@ public sealed record ReviewEntry(string Key, ExerciseItem Item);
 public sealed class ProgressTracker(Course course, ProgressStore store, IScheduler scheduler, Func<DateTime> now)
 {
     private const string WordPrefix = "word:";
+    private const string PhrasePrefix = "phrase:";
     private Dictionary<string, ExerciseItem>? _itemsByKey;
     private readonly Dictionary<string, Word> _words = Vocabulary.WordsByLemma(course);
 
@@ -48,9 +49,10 @@ public sealed class ProgressTracker(Course course, ProgressStore store, ISchedul
     {
         Record(unit.Id, item, correct);
         // The unit's words enter the review queue the first time the learner works on the unit.
-        foreach (var lemma in unit.NewWords.Where(_words.ContainsKey))
-            if (store.GetCard(WordPrefix + lemma) == null)
-                store.SaveCard(WordPrefix + lemma, scheduler.New(now(), dueNow: false));
+        foreach (var key in unit.NewWords.Where(_words.ContainsKey).Select(w => WordPrefix + w)
+                     .Concat(unit.Phrases.Select(p => PhrasePrefix + p.Sv)))
+            if (store.GetCard(key) == null)
+                store.SaveCard(key, scheduler.New(now(), dueNow: false));
     }
 
     // ---- final task ----
@@ -141,7 +143,11 @@ public sealed class ProgressTracker(Course course, ProgressStore store, ISchedul
         {
             var item = key.StartsWith(WordPrefix)
                 ? _words.TryGetValue(key[WordPrefix.Length..], out var word) ? WordItem(word) : null
-                : ItemsByKey().GetValueOrDefault(key);
+                : key.StartsWith(PhrasePrefix)
+                    ? course.Units.SelectMany(u => u.Phrases).FirstOrDefault(p => p.Sv == key[PhrasePrefix.Length..]) is { } phrase
+                        ? new ExerciseItem { Type = ExerciseText.Translate, En = phrase.En, Sv = phrase.Sv, Accept = [.. phrase.Accept], Hint = "a phrase" }
+                        : null
+                    : ItemsByKey().GetValueOrDefault(key);
             if (item != null)
                 entries.Add(new ReviewEntry(key, item));
             else

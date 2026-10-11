@@ -12,8 +12,13 @@ new_words: [väder, sol, regn, regna, varm, kall, fin, dålig,
             imorgon, ikväll, kanske, gärna]
 new_grammar: []
 
+phrases:
+  - { sv: "Vad kul!", en: "How fun!" }
+  - { sv: "Det låter bra.", en: "That sounds good." }
+  - { sv: "Vi hörs!", en: "Talk to you later!" }
+
 core:
-  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 4
 
 model_dialogue:

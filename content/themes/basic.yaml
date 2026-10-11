@@ -1,6 +1,7 @@
 theme: basic
 title: "Grundord"
 # Pronouns, common verbs and function words that every theme needs.
+# The fixed words of the generic frames (content/frames.yaml) must be in this pack.
 words:
   # pronouns
   - { lemma: jag, pos: pron, level: A1, gloss: I }
@@ -10,15 +11,25 @@ words:
   - { lemma: den, pos: pron, level: A1, gloss: "it (den for en-words, det for ett-words)" }
 
   # common verbs
-  - { lemma: vara, pos: verb, level: A1, gloss: to be }
-  - { lemma: ha,   pos: verb, level: A1, gloss: to have }
+  - { lemma: vara,   pos: verb, level: A1, gloss: "to be; past: was; pp: been" }
+  - { lemma: ha,     pos: verb, level: A1, gloss: "to have; past: had; pp: had" }
+  - { lemma: behöva, pos: verb, level: A1, gloss: to need }
+  - { lemma: ta,     pos: verb, tags: [action_object], level: A1, gloss: "to take; past: took; pp: taken",
+      forms: { inf: ta, pres: tar } }   # SALDO also lists the old taga, tager
+  - { lemma: vilja,  pos: verb, level: A1, gloss: to want }
+  - { lemma: kunna,  pos: verb, level: A1, gloss: "can, to be able to" }
+  - { lemma: skola,  pos: verb, level: A1, gloss: "shall, to be going to (ska)" }
 
   # function words
-  - { lemma: en,   pos: article, level: A1, gloss: "a, an (en or ett)" }
-  - { lemma: och,  pos: conj,    level: A1, gloss: and }
-  - { lemma: inte, pos: adv,     level: A1, gloss: not }
-  - { lemma: var,  pos: adv,     level: A1, gloss: where }
-  - { lemma: vad,  pos: pron,    level: A1, gloss: what }
+  - { lemma: en,    pos: article, level: A1, gloss: "a, an (en or ett)" }
+  - { lemma: och,   pos: conj,    level: A1, gloss: and }
+  - { lemma: inte,  pos: adv,     level: A1, gloss: not }
+  - { lemma: var,   pos: adv,     level: A1, gloss: where }
+  - { lemma: vad,   pos: pron,    level: A1, gloss: what }
+  - { lemma: där,   pos: adv,     level: A1, gloss: there }
+  - { lemma: med,   pos: prep,    level: A1, gloss: with }
+  - { lemma: vid,   pos: prep,    level: A1, gloss: "at, by" }
+  - { lemma: redan, pos: adv,     level: A2, gloss: already }
 
   # greetings and answers
   - { lemma: hej,  pos: interj, level: A1, gloss: hi }

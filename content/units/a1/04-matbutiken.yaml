@@ -18,6 +18,10 @@ new_words: [mjölk, kaffe, bröd, ost, smör, ägg, äpple,
 new_grammar: [def_singular]
 scene: svg/matbutik.svg
 
+core:
+  templates: [inflect, cloze, dictation, word_order, translate]
+  items_per_template: 6
+
 model_dialogue:
   - { speaker: du,       sv: "Hej! Var finns mjölken?",          en: "Hi! Where is the milk?" }
   - { speaker: personal, sv: "Mjölken finns där, vid osten.",    en: "The milk is there, by the cheese." }

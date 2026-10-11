@@ -140,7 +140,6 @@ public sealed class Unit
 public sealed class GeneratedFile
 {
     public string Unit { get; set; } = "";
-    public string InputsHash { get; set; } = "";
     public List<ExerciseItem> Items { get; set; } = [];
 }
 

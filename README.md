@@ -5,7 +5,8 @@ supermarket, book a doctor's time) through listening and writing exercises.
 The design and the milestones are in [AGENTS.md](AGENTS.md).
 
 Status: milestone M1. One unit works end to end: A1-04 *I matbutiken* (words, model dialogue with
-audio, dictation, cloze, inflect and word-order exercises).
+audio, dictation, cloze, inflect, word-order and translation exercises). The drill generator
+fills the unit's words into sentence frames; its output is in `content/generated/`.
 
 ## Install
 

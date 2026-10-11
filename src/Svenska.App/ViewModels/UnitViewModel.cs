@@ -2,6 +2,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Svenska.Core.Content;
 using Svenska.Core.Exercises;
+using Svenska.Core.Generation;
 
 namespace Svenska.App.ViewModels;
 
@@ -39,16 +40,18 @@ public partial class UnitViewModel : ObservableObject
             var word = packWords.GetValueOrDefault(lemma);
             // Nouns are learnt with their article: "en ost", "ett bröd".
             var swedish = word is { Pos: "noun", Gender: not null } ? $"{word.Gender} {lemma}" : lemma;
-            return new WordRow(swedish, word?.Gloss ?? "", new RelayCommand(() => services.Play(lemma)));
+            return new WordRow(swedish, word == null ? "" : English.Meaning(word), new RelayCommand(() => services.Play(lemma)));
         }).ToList();
 
         Dialogue = unit.ModelDialogue.Select(line => new LineRow(line.Speaker, line.Sv, line.En,
             new RelayCommand(() => services.Play(line.Sv)),
             new RelayCommand(() => services.Play(line.Sv, slow: true)))).ToList();
 
-        var count = unit.Exercises.Count(i => ExerciseText.Playable.Contains(i.Type));
-        HasExercises = count > 0;
-        StartText = $"Start exercises ({count})";
+        var pool = ExerciseSession.Pool(services.Course, unit).Count;
+        HasExercises = pool > 0;
+        StartText = pool > ExerciseSession.DefaultSize
+            ? $"Start exercises ({ExerciseSession.DefaultSize} of {pool})"
+            : $"Start exercises ({pool})";
     }
 
     [RelayCommand]

@@ -3,7 +3,7 @@ using Svenska.Core.Text;
 
 namespace Svenska.Core.Exercises;
 
-/// <summary>What an exercise item shows and expects, for the four written exercise types.</summary>
+/// <summary>What an exercise item shows and expects, for the written exercise types.</summary>
 public static class ExerciseText
 {
     public const string Gap = "___";
@@ -12,13 +12,15 @@ public static class ExerciseText
     public const string Cloze = "cloze";
     public const string Inflect = "inflect";
     public const string WordOrder = "word_order";
+    public const string Translate = "translate";
+    public const string SceneClick = "scene_click";
 
     /// <summary>The types the exercise player can run.</summary>
-    public static readonly string[] Playable = [Dictation, Cloze, Inflect, WordOrder];
+    public static readonly string[] Playable = [Dictation, Cloze, Inflect, WordOrder, Translate];
 
     /// <summary>All types of AGENTS.md; the others get their fields and player in M2 and M5.</summary>
     public static readonly string[] AllTypes =
-        [.. Playable, "translate", "scene_click", "listen_choose", "numbers", "dialogue", "free_write"];
+        [.. Playable, SceneClick, "listen_choose", "numbers", "dialogue", "free_write"];
 
     /// <summary>What the learner must type.</summary>
     public static string Expected(ExerciseItem item) => item.Type switch

@@ -19,13 +19,20 @@ words:
   - { lemma: krona,  pos: noun, gender: en,  level: A1, gloss: "krona (Swedish money)" }
 
   # verbs
-  - { lemma: kosta,  pos: verb, level: A1, gloss: to cost }
-  - { lemma: betala, pos: verb, tags: [action_intrans], level: A1, gloss: to pay }
-  - { lemma: behöva, pos: verb, tags: [action_object],  level: A1, gloss: to need }
-  - { lemma: köpa,   pos: verb, tags: [action_object],  level: A1, gloss: to buy }
-  - { lemma: finnas, pos: verb, level: A1, gloss: "to be there, to exist" }
+  - { lemma: kosta,  pos: verb, level: A1, gloss: "to cost; past: cost; pp: cost" }
+  - { lemma: betala, pos: verb, tags: [action_intrans], level: A1, gloss: "to pay; past: paid; pp: paid" }
+  - { lemma: köpa,   pos: verb, tags: [action_object],  level: A1, gloss: "to buy; past: bought; pp: bought" }
+  - { lemma: finnas, pos: verb, level: A1, gloss: "to be there, to exist",
+      forms: { pres: finns } }
 
-  # small words
-  - { lemma: med, pos: prep, level: A1, gloss: with }
-  - { lemma: vid, pos: prep, level: A1, gloss: "at, by" }
-  - { lemma: där, pos: adv,  level: A1, gloss: there }
+frames:
+  - { id: mat-01, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "Vad kostar {food|drink|container.def}?", en: "What does the {1} cost?" }
+  - { id: mat-02, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "Var finns {food|drink.def}?", en: "Where is the {1}?" }
+  - { id: mat-03, level: A1, grammar: [present_tense], review: true,
+      sv: "Jag köper {food|drink.indef} och {food|drink.indef}.", en: "I'm buying {1} and {2}." }
+  - { id: mat-04, level: A1, grammar: [yes_no_question], review: true,
+      sv: "Har ni {food|drink.indef}?", en: "Do you have {1}? (asking a shop)" }
+  - { id: mat-05, level: A1, grammar: [negation_inte, def_singular], review: true,
+      sv: "{food|drink.def} finns inte där.", en: "The {1} is not there." }

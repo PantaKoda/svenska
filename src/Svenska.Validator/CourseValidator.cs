@@ -1,14 +1,15 @@
 using Svenska.Core.Audio;
 using Svenska.Core.Content;
 using Svenska.Core.Exercises;
+using Svenska.Core.Generation;
 using Svenska.Core.Saldo;
 using Svenska.Core.Text;
 
 namespace Svenska.Validator;
 
 /// <summary>
-/// Checks a loaded course against the rules of AGENTS.md. Done so far: rules 1–6 and 9–11.
-/// Rules 7 and 8 (frame slots, generated files up to date) come with the drill generator in M2.
+/// Checks a loaded course against the rules of AGENTS.md. All eleven rules are checked;
+/// the word rules (2, 3, 8, 9, 10) need saldo.db.
 /// </summary>
 public sealed class CourseValidator
 {
@@ -41,9 +42,10 @@ public sealed class CourseValidator
         var validator = new CourseValidator(course, saldo, contentDir);
         validator.CheckGrammar();
         validator.CheckTags();
-        validator.CheckFrameIds();
+        validator.CheckFrames();
         validator.CheckPacks();
         validator.CheckUnits();
+        validator.CheckGenerated();
         validator.CheckReuse();
         validator.CheckAudio();
         return validator._issues;
@@ -101,11 +103,104 @@ public sealed class CourseValidator
             Error("tags.yaml", $"tag '{tag}' is listed twice");
     }
 
-    private void CheckFrameIds()
+    // ---- frames (rule 7, and rule 4 for their grammar) ----
+
+    private void CheckFrames()
     {
-        var ids = _course.Frames.Select(f => f.Id).Concat(_course.Packs.SelectMany(p => p.Frames).Select(f => f.Id));
-        foreach (var id in Duplicates(ids))
+        var all = _course.Frames.Select(f => (File: "frames.yaml", Frame: f))
+            .Concat(_course.Packs.SelectMany(p => p.Frames.Select(f => (File: $"themes/{p.Theme}.yaml", Frame: f))))
+            .ToList();
+        foreach (var id in Duplicates(all.Select(f => f.Frame.Id)))
             Error("frames", $"frame id '{id}' is used twice");
+
+        var packWords = _course.Packs.SelectMany(p => p.Words).ToList();
+        foreach (var (file, frame) in all)
+        {
+            var name = $"frame {frame.Id}";
+            if (string.IsNullOrWhiteSpace(frame.Id) || string.IsNullOrWhiteSpace(frame.Sv) || string.IsNullOrWhiteSpace(frame.En))
+                Error(file, $"{name}: needs id, sv and en");
+
+            foreach (var id in frame.Grammar)
+            {
+                if (!_grammar.TryGetValue(id, out var point))
+                    Error(file, $"{name}: grammar tag '{id}' is not in grammar.yaml");
+                else if (point.Level > frame.Level)
+                    Error(file, $"{name}: grammar '{id}' is {point.Level}, above the frame's level {frame.Level}", 4);
+            }
+
+            FrameTemplate template;
+            List<EnglishRef> english;
+            try
+            {
+                template = FrameTemplate.Parse(frame.Sv);
+                english = FrameTemplate.EnglishRefs(frame.En);
+            }
+            catch (FormatException e)
+            {
+                Error(file, $"{name}: {e.Message}", 7);
+                continue;
+            }
+            if (template.Slots.Count == 0)
+                Error(file, $"{name}: has no slot", 7);
+
+            foreach (var slot in template.Slots)
+            {
+                var text = $"{name}, slot {slot.Number}";
+                if (slot.Pos == null)
+                {
+                    Error(file, $"{text}: unknown form '{slot.Form}' (use {string.Join(", ", WordForms.Names)})", 7);
+                    continue;
+                }
+                if (slot.AgreesWith is { } target
+                    && (target < 1 || target > template.Slots.Count || template.Slots[target - 1].Pos != "noun"))
+                    Error(file, $"{text}: ~{target} must point to a noun slot", 7);
+
+                var allowed = slot.Pos switch { "noun" => _course.Tags.Nouns, "verb" => _course.Tags.Verbs, _ => _course.Tags.Adjectives };
+                foreach (var tag in slot.Tags.Where(t => !allowed.Contains(t)))
+                    Error(file, $"{text}: '{tag}' is not a {slot.Pos} tag in tags.yaml", 7);
+                if (!packWords.Any(w => w.Pos == slot.Pos && w.Tags.Intersect(slot.Tags).Any()))
+                    Error(file, $"{text}: no word in any pack can fill it", 7);
+                if (slot.Grammar != null && !frame.Grammar.Contains(slot.Grammar))
+                    Error(file, $"{text}: uses grammar '{slot.Grammar}', which the frame does not list", 4);
+            }
+
+            foreach (var reference in english)
+            {
+                if (reference.Slot < 1 || reference.Slot > template.Slots.Count)
+                    Error(file, $"{name}: en refers to slot {reference.Slot}, which does not exist", 7);
+                else if (reference.Modifier is "pp" or "past" && template.Slots[reference.Slot - 1].Pos != "verb")
+                    Error(file, $"{name}: en uses .{reference.Modifier} on slot {reference.Slot}, which is not a verb", 7);
+                else if (reference.Modifier == "a" && template.Slots[reference.Slot - 1].Pos != "noun")
+                    Error(file, $"{name}: en uses .a on slot {reference.Slot}, which is not a noun", 7);
+            }
+        }
+    }
+
+    /// <summary>Rule 8: the generated files are what the generator makes from the content now.</summary>
+    private void CheckGenerated()
+    {
+        foreach (var unit in _course.Units)
+        {
+            var file = $"generated/{unit.Id}.yaml";
+            var onDisk = _course.Generated.Any(g => g.Unit == unit.Id);
+            if (unit.Core == null)
+            {
+                if (onDisk)
+                    Error(file, "the unit has no core section; run the generator to remove the file", 8);
+                continue;
+            }
+            foreach (var template in unit.Core.Templates.Where(t => !DrillGenerator.Templates.Contains(t)))
+                Error($"units/{unit.Id}", $"core: unknown template '{template}' (use {string.Join(", ", DrillGenerator.Templates)})");
+
+            if (_saldo == null || _contentDir == null)
+                continue;
+            var path = Path.Combine(_contentDir, "generated", unit.Id + ".yaml");
+            var expected = DrillGenerator.ToYaml(new DrillGenerator(_course, _saldo).Generate(unit).File);
+            if (!File.Exists(path))
+                Error(file, "is missing; run the generator", 8);
+            else if (File.ReadAllText(path).ReplaceLineEndings("\n") != expected)
+                Error(file, "is out of date with its inputs; run the generator", 8);
+        }
     }
 
     // ---- theme packs ----
@@ -257,6 +352,11 @@ public sealed class CourseValidator
                     Error(file, $"{name}: needs sv with at least three words");
                 if (string.IsNullOrWhiteSpace(item.En))
                     Error(file, $"{name}: needs en, the sentence to build");
+                break;
+
+            case ExerciseText.Translate:
+                if (string.IsNullOrWhiteSpace(item.Sv) || string.IsNullOrWhiteSpace(item.En))
+                    Error(file, $"{name}: needs en (the prompt) and sv (the answer)");
                 break;
 
             case ExerciseText.Cloze:

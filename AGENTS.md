@@ -180,11 +180,15 @@ A frame is a sentence with slots. Generic frames work for every theme:
 ```
 Slot syntax: `{tags.form}`
 - `tags`: one or more tags joined with `|` (any of them fits).
-- `form`: `indef`, `def`, `pl`, `pl_def` (nouns); `inf`, `pres`, `past`, `sup`,
+- `form`: `indef`, `def`, `pl`, `pl_def`, `a` (nouns; `a` = with article: *en påse*,
+  *ett kvitto*); `inf`, `pres`, `past`, `sup`,
   `imp` (verbs); `~N` for an adjective that agrees with slot N (`trasig` / `trasigt` /
   `trasiga`).
-- In `en`, `{N}` is the gloss of slot N; `.a` adds a/an; `.pp` uses the past participle
-  (store it in the gloss as `pp:` when irregular).
+- In `en`, `{N}` is the gloss of slot N; `.a` adds a/an; `.pp` and `.past` use the past
+  participle and the past tense. Irregular English forms are stored in the gloss after
+  a semicolon: `gloss: "to buy; past: bought; pp: bought"`, `gloss: "loaf; pl: loaves"`.
+- The fixed words of a generic frame must be in the `basic` pack; a frame is only used
+  for a unit that knows all its fixed words and all its grammar.
 Each frame has `review: true` until I have checked it. One bad frame produces bad
 sentences in every theme, so frames are checked once, carefully.
 
@@ -238,6 +242,8 @@ Fields per type (the four written types, settled in M1):
 - `inflect`: `lemma`, `form` (same names as in frames: `def`, `pl`, `pres` …), `answer`.
   The validator checks the answer against SALDO.
 - `word_order`: `sv` (the tokens are shuffled by the app), `en`.
+- `translate`: `en` (the prompt), `sv` (the answer), `accept` for other good answers.
+  The generator fills `accept` with its other sentences that have the same English.
 
 Every item that checks an answer has `answer` and optional `accept: [..]`.
 Every item has `grammar: [..]` tags and optional `review: true`.
@@ -264,6 +270,9 @@ For unit U:
    unless the content changed.
 7. Each item records its source: `frame: gen-003, words: [hink, trasig]`.
    Items from a frame with `review: true` inherit `review: true`.
+
+Run it with `dotnet run --project src/Svenska.Generator`. To see what a theme pack gives
+without a unit, add `--theme stadning` (prints the drills, writes nothing).
 
 Generated files are committed and validated like any other content. The app draws
 randomly from this checked pool at runtime; it never generates sentences itself.

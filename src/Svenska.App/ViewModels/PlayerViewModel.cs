@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Svenska.Core.Answers;
 using Svenska.Core.Content;
 using Svenska.Core.Exercises;
+using Svenska.Core.Generation;
 using Svenska.Core.Saldo;
 
 namespace Svenska.App.ViewModels;
@@ -51,7 +52,7 @@ public partial class PlayerViewModel : ObservableObject
         _unit = unit;
         _checker = main.Services.CreateChecker();
         _packWords = Vocabulary.WordsByLemma(main.Services.Course);
-        _queue = unit.Exercises.Where(i => ExerciseText.Playable.Contains(i.Type)).ToList();
+        _queue = ExerciseSession.Pick(main.Services.Course, unit, Random.Shared);
         _total = _queue.Count;
         Show();
     }
@@ -100,7 +101,12 @@ public partial class PlayerViewModel : ObservableObject
                 var word = _packWords.GetValueOrDefault(item.Lemma ?? "");
                 Instruction = $"Write the {WordForms.Label(item.Form ?? "")} form.";
                 Prompt = word is { Pos: "noun", Gender: not null } ? $"{word.Gender} {item.Lemma}" : item.Lemma ?? "";
-                Translation = word?.Gloss ?? "";
+                Translation = word == null ? "" : English.Meaning(word);
+                break;
+            case ExerciseText.Translate:
+                Instruction = "Write this in Swedish.";
+                Prompt = item.En ?? "";
+                Translation = "";
                 break;
             case ExerciseText.WordOrder:
                 Instruction = "Put the words in order. Type the sentence or click the words.";

@@ -1,0 +1,40 @@
+theme: stadning
+title: "Städning"
+scene: svg/stadning.svg
+words:
+  # tools
+  - { lemma: dammsugare, pos: noun, gender: en, tags: [tool, device],    level: A1, gloss: vacuum cleaner, svg: w-dammsugare }
+  - { lemma: hink,       pos: noun, gender: en, tags: [tool, container], level: A1, gloss: bucket, svg: w-hink }
+  - { lemma: mopp,       pos: noun, gender: en, tags: [tool],            level: A1, gloss: mop,    svg: w-mopp }
+  - { lemma: trasa,      pos: noun, gender: en, tags: [tool],            level: A1, gloss: cloth,  svg: w-trasa }
+  - { lemma: soppåse,    pos: noun, gender: en, tags: [container],       level: A1, gloss: rubbish bag, svg: w-soppase }
+  - { lemma: rengöringsmedel, pos: noun, gender: ett, tags: [substance], level: A2, gloss: detergent }
+
+  # what you clean
+  - { lemma: golv,    pos: noun, gender: ett, tags: [surface],            level: A1, gloss: floor,  svg: w-golv }
+  - { lemma: bord,    pos: noun, gender: ett, tags: [surface, furniture], level: A1, gloss: table,  svg: w-bord }
+  - { lemma: fönster, pos: noun, gender: ett, tags: [surface],            level: A1, gloss: window, svg: w-fonster }
+  - { lemma: kök,     pos: noun, gender: ett, tags: [room], level: A1, gloss: kitchen }
+  - { lemma: badrum,  pos: noun, gender: ett, tags: [room], level: A1, gloss: bathroom }
+  - { lemma: toalett, pos: noun, gender: en,  tags: [room], level: A1, gloss: toilet }
+
+  # verbs
+  - { lemma: städa,    pos: verb, level: A1, gloss: to clean }
+  - { lemma: dammsuga, pos: verb, tags: [action_surface], level: A1, gloss: to vacuum }
+  - { lemma: torka,    pos: verb, tags: [action_surface], level: A1, gloss: to wipe }
+  - { lemma: moppa,    pos: verb, tags: [action_surface], level: A1, gloss: "to mop; past: mopped; pp: mopped" }
+
+  # adjectives
+  - { lemma: trasig,  pos: adj, tags: [state], level: A1, gloss: broken }
+  - { lemma: ren,     pos: adj, tags: [state], level: A1, gloss: clean }
+  - { lemma: smutsig, pos: adj, tags: [state], level: A1, gloss: dirty }
+
+frames:
+  - { id: stad-01, level: A1, grammar: [modal_vill_kan_ska, def_singular], review: true,
+      sv: "Jag ska {action_surface.inf} {surface.def}.", en: "I am going to {1} the {2}." }
+  - { id: stad-02, level: A1, grammar: [present_tense, def_singular], review: true,
+      sv: "Vi städar {room.def}.", en: "We are cleaning the {1}." }
+  - { id: stad-03, level: A1, grammar: [modal_vill_kan_ska, yes_no_question, def_singular], review: true,
+      sv: "Kan du {action_surface.inf} {surface.def}?", en: "Can you {1} the {2}?" }
+  - { id: stad-04, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "Var är {room.def}?", en: "Where is the {1}?" }

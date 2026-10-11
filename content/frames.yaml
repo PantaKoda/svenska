@@ -1,2 +1,44 @@
-# Generic sentence frames, usable with any theme. Written in M2.
-[]
+# Generic sentence frames, usable with any theme.
+# Slot: {tags.form} or {tag~N} (adjective agreeing with slot N). Fixed words must be in
+# the basic pack. Every frame keeps review: true until Themis has checked it.
+
+# ---- A1 ----
+- { id: gen-001, level: A1, grammar: [wh_question, def_singular], review: true,
+    sv: "Var är {tool|container|device|document|food|drink.def}?", en: "Where is the {1}?" }
+
+- { id: gen-002, level: A1, grammar: [yes_no_question, en_ett], review: true,
+    sv: "Har du {tool|container|device|document.a}?", en: "Do you have {1.a}?" }
+
+- { id: gen-003, level: A1, grammar: [adjective_agreement_basic, def_singular], review: true,
+    sv: "{tool|device|furniture|container|surface.def} är {state~1}.", en: "The {1} is {2}." }
+
+- { id: gen-004, level: A1, grammar: [negation_inte, def_singular], review: true,
+    sv: "Jag har inte {tool|container|document.def}.", en: "I don't have the {1}." }
+
+- { id: gen-005, level: A1, grammar: [present_tense, en_ett], review: true,
+    sv: "Jag behöver {tool|container|device|document.a}.", en: "I need {1.a}." }
+
+- { id: gen-006, level: A1, grammar: [yes_no_question, def_singular], review: true,
+    sv: "Har du {tool|container|document.def}?", en: "Do you have the {1}?" }
+
+- { id: gen-007, level: A1, grammar: [present_tense, def_singular], review: true,
+    sv: "{tool|container|device|document|food|drink.def} är där.", en: "The {1} is there." }
+
+- { id: gen-008, level: A1, grammar: [modal_vill_kan_ska, en_ett], review: true,
+    sv: "Jag vill ha {tool|container|device|document.a}.", en: "I want {1.a}." }
+
+- { id: gen-009, level: A1, grammar: [modal_vill_kan_ska, yes_no_question, def_singular], review: true,
+    sv: "Kan du {action_object.inf} {tool|container|food|drink.def}?", en: "Can you {1} the {2}?" }
+
+- { id: gen-010, level: A1, grammar: [present_tense, def_singular], review: true,
+    sv: "Jag {action_object.pres} {tool|container|food|drink.def}.", en: "I {1} the {2}." }
+
+- { id: gen-011, level: A1, grammar: [negation_inte, present_tense, def_singular], review: true,
+    sv: "Vi {action_object.pres} inte {tool|container|food|drink.def}.", en: "We don't {1} the {2}." }
+
+# ---- A2 ----
+- { id: gen-020, level: A2, grammar: [perfect_tense, def_singular], review: true,
+    sv: "Jag har redan {action_surface.sup} {surface.def}.", en: "I have already {1.pp} the {2}." }
+
+- { id: gen-021, level: A2, grammar: [past_tense, def_singular], review: true,
+    sv: "Jag {action_object.past} {tool|container|food|drink.def}.", en: "I {1.past} the {2}." }

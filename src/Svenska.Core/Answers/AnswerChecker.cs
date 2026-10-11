@@ -57,7 +57,8 @@ public sealed class AnswerChecker(ISaldoLexicon? saldo = null)
 
         var lines = new List<string>();
         if (missed.Count > 0)
-            lines.Add((extra.Count > 0 ? "Wrong or missing: " : "Missing: ") + string.Join(", ", missed) + ".");
+            lines.Add((extra.Count > 0 ? "Wrong or missing: " : "Missing: ")
+                      + string.Join(", ", wordMarks.Where(m => !m.Right).Select(m => m.Word)) + ".");
         else if (extra.Count > 0)
             lines.Add("Too many words: " + string.Join(", ", extra) + ".");
         if (wrongForms.Count > 0)

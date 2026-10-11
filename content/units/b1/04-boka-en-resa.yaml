@@ -7,8 +7,8 @@ can_do: "I can make and change a booking politely and talk about real and imagin
 names: [Sara, Stockholm, Göteborg, Grekland]
 
 new_words: [hotell, flyg, flygplats, pass, bagage, väska, försäkring, turist, karta, centrum, bekräftelse,
-            avboka, ingå, landa, utomlands, möjlig, extra, enkel, nära, långt, hem]
-new_grammar: [conditional_skulle]
+            avboka, ingå, landa, utomlands, möjlig, extra, enkel, nära, långt, hem, ju, desto]
+new_grammar: [conditional_skulle, ju_desto]
 
 phrases:
   - { sv: "Trevlig resa!", en: "Have a nice trip!" }
@@ -80,6 +80,12 @@ exercises:
   - { type: numbers, sv: "Rummet kostar 950 kronor.", hint: "the price in kronor", answer: "950", en: "The room costs 950 kronor." }
   - { type: numbers, sv: "Flyget landar kvart över 9.", hint: "the time, like 8.15", answer: "9.15", en: "The flight lands at quarter past 9.",
       grammar: [time_clock] }
+
+  # ju ... desto
+  - { type: cloze, sv: "Ju tidigare du bokar, ___ billigare blir det.", answer: desto, en: "The earlier you book, the cheaper it gets.", grammar: [ju_desto] }
+  - { type: word_order, sv: "Ju senare du bokar, desto dyrare blir det.", en: "The later you book, the more expensive it gets.", grammar: [ju_desto] }
+  - { type: dictation, sv: "Ju mer du reser, desto mer ser du.", en: "The more you travel, the more you see.", grammar: [ju_desto] }
+  - { type: translate, en: "The earlier, the better.", sv: "Ju tidigare, desto bättre.", grammar: [ju_desto] }
 
   # words from earlier units
   - { type: translate, en: "The ticket that I bought can be changed.", sv: "Biljetten som jag köpte kan ändras.",

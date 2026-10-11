@@ -151,6 +151,9 @@ words:
   - { lemma: emot,     pos: prep, level: B1, gloss: against }
   - { lemma: enligt,   pos: prep, level: B1, gloss: "according to" }
   - { lemma: inom,     pos: prep, level: B1, gloss: within }
+  - { lemma: hos,      pos: prep, level: B1, gloss: "at (someone's place): hos läkaren" }
+  - { lemma: ju,       pos: adv,  level: B1, gloss: "ju ... desto = the ... the" }
+  - { lemma: desto,    pos: adv,  level: B1, gloss: "ju ... desto = the ... the" }
   - { lemma: nära,     pos: adv,  level: B1, gloss: "near, close" }
   - { lemma: långt,    pos: adv,  level: B1, gloss: far }
   - { lemma: sak,      pos: noun, gender: en,  level: B1, gloss: thing }

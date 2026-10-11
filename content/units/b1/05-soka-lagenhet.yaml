@@ -8,7 +8,7 @@ names: [Sara, Ali, Göteborg, Hisingen]
 
 new_words: [annons, hyra, visning, kontrakt, hiss, våning, område, husdjur, förråd, parkering, värme,
             kvadratmeter, möbel, störa, tillåta, tyst, ljus, någon, ingen, annan, in, ut]
-new_grammar: [indefinite_pronouns]
+new_grammar: [indefinite_pronouns, superlative_definite]
 
 phrases:
   - { sv: "Det låter intressant.", en: "That sounds interesting." }
@@ -81,6 +81,12 @@ exercises:
       checklist: ["I say who I am and who will live there.", "I say why I am interested.", "I ask two questions (for example with någon, ingår or får man).", "I end with a greeting."],
       sv: "Hej! Jag heter Ali och jag såg din annons. Jag söker en lägenhet för mig och min fru, och vi är väldigt intresserade. Vi har inga husdjur och vi röker inte. Finns det någon tvättstuga, och ingår värme i hyran? Jag ser fram emot ditt svar. Med vänlig hälsning, Ali",
       grammar: [indefinite_pronouns] }
+
+  # the cheapest, the biggest, the best
+  - { type: cloze, sv: "Det är den ___ lägenheten i området.", hint: billig, answer: billigaste, en: "It is the cheapest flat in the area.", grammar: [superlative_definite] }
+  - { type: cloze, sv: "Det ___ rummet är ljust.", hint: stor, answer: största, en: "The biggest room is bright.", grammar: [superlative_definite] }
+  - { type: word_order, sv: "Vi tar den billigaste lägenheten.", en: "We will take the cheapest flat.", grammar: [superlative_definite] }
+  - { type: translate, en: "It is the best area in the city.", sv: "Det är det bästa området i staden.", accept: ["Det är stadens bästa område."], grammar: [superlative_definite] }
 
   # words from earlier units
   - { type: translate, en: "If the rent was cheaper, I would take the flat.", sv: "Om hyran var billigare, skulle jag ta lägenheten.",

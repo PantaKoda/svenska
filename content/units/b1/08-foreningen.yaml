@@ -8,7 +8,7 @@ names: [Sara, Göteborg]
 
 new_words: [förening, medlem, avgift, möte, åsikt, förslag, kör, idrott, lag, träning, tävling, hobby, musik, kurs, ledare,
             anmäla, delta, vinna, förlora, gratis, hålla, ihåg, viktig]
-new_grammar: [particle_verbs]
+new_grammar: [particle_verbs, tycka_tanka_tro]
 
 phrases:
   - { sv: "Ingen aning.", en: "No idea." }
@@ -81,6 +81,14 @@ exercises:
       checklist: ["I say what I like, with tycka om.", "I give my opinion and a reason (eftersom, trots att or så).", "I use at least one more verb with a particle.", "I say whether I would join a club (skulle)."],
       sv: "Jag tycker om att sjunga, trots att jag inte är så bra. Min åsikt är att musik är viktigt eftersom man blir glad. Jag kommer ihåg att jag sjöng mycket när jag var barn. Jag skulle vilja gå med i en kör, men jag tycker inte om tävlingar.",
       grammar: [particle_verbs, conjunctions_advanced] }
+
+  # tycker, tänker or tror?
+  - { type: cloze, sv: "Jag har gått kursen. Jag ___ att den är bra.", hint: "tycka / tro", answer: tycker, en: "I have taken the course. I think it is good.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag vet inte, men jag ___ att mötet börjar klockan 7.", hint: "tycka / tro", answer: tror, en: "I do not know, but I think the meeting starts at 7.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag ___ på min familj varje dag.", hint: "tänka / tycka", answer: tänker, en: "I think about my family every day.", grammar: [tycka_tanka_tro] }
+  - { type: translate, en: "I intend to join a club.", sv: "Jag tänker gå med i en förening.", grammar: [tycka_tanka_tro, particle_verbs] }
+  - { type: listen_choose, sv: "Jag tror att avgiften är 300 kronor.", en: "I think (but am not sure) that the fee is 300 kronor.",
+      options: ["She is not sure what the fee is.", "She finds the fee too high.", "She is planning to pay the fee."], answer: "She is not sure what the fee is." }
 
   # words from earlier units
   - { type: translate, en: "She asked if I wanted to take part.", sv: "Hon frågade om jag ville delta.", grammar: [indirect_speech] }

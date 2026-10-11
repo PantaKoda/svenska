@@ -4,8 +4,7 @@ A desktop app for learning Swedish by doing real tasks (buy a ticket, pay at the
 supermarket, book a doctor's time) through listening and writing exercises.
 The design and the milestones are in [AGENTS.md](AGENTS.md).
 
-Status: levels A1, A2 and B1 are written, ten units each, from greeting someone to a meeting at work
-(the B1 grammar list still has to be checked against the level guard). Each unit has its words, a model dialogue with
+Status: levels A1, A2 and B1 are written, ten units each, from greeting someone to a meeting at work. Each unit has its words, a model dialogue with
 audio, dictation, cloze, inflect, word-order, translation, listen-and-choose, numbers and
 click-in-the-scene exercises, and a final task as a dialogue). The drill generator
 fills the unit's words into sentence frames; its output is in `content/generated/`.

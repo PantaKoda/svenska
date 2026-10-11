@@ -574,3 +574,84 @@
     något / inget alone = something / nothing: Jag ser inget.
     man = people in general, "you":
         Man får inte röka här.
+
+- id: ju_desto
+  level: B1
+  requires: [comparison]
+  title: "Ju ... desto (the more, the better)"
+  card: |
+    ju + comparative ..., desto + comparative ...
+
+    Ju tidigare du bokar, desto billigare blir det.
+    Ju mer jag läser, desto mer förstår jag.
+
+    After ju: subject before verb (a subordinate clause).
+    After desto + comparative: verb before subject.
+        ju ... du bokar,   desto ... blir det
+
+    Short, without a verb: Ju tidigare, desto bättre.
+
+- id: allt_comparative
+  level: B1
+  requires: [comparison]
+  title: "Allt + comparative (more and more)"
+  card: |
+    allt + comparative: something keeps changing.
+
+    Det blir allt kallare.            colder and colder
+    Nätverket blir allt långsammare.  slower and slower
+    Jag förstår allt mer.             more and more
+    Allt fler arbetar hemma.          more and more people
+
+    Same meaning, more everyday:
+        Det blir kallare och kallare.
+
+- id: superlative_definite
+  level: B1
+  requires: [comparison, adjective_agreement_full]
+  title: "Superlative, definite form (den billigaste)"
+  card: |
+    After den/det/de, a possessive or a genitive:
+    -ast → -aste        billigast → den billigaste lägenheten
+    irregular → -a      störst → det största rummet
+                        bäst → min bästa vän
+                        äldst → Sveriges äldsta stad
+
+    The noun is definite after den/det/de, but not after
+    a possessive or a genitive:
+        den bästa dagen     min bästa dag
+
+    With mest: den mest intressanta annonsen.
+
+- id: tycka_tanka_tro
+  level: B1
+  requires: [subordinate_clause_basic]
+  title: "Tycker, tänker or tror?"
+  card: |
+    All three can be "think" in English.
+
+    tycker   an opinion; you know the thing
+             Jag tycker att kursen är bra.  (I have taken it)
+    tror     a belief; you are not sure
+             Jag tror att kursen är bra.    (I have not taken it)
+    tänker   thinking itself, or a plan
+             Jag tänker på dig.
+             Jag tänker gå en kurs.         (no att)
+
+    tycka om = like, tänka på = think about, tro på = believe in
+
+- id: prepositions_hos_till_pa
+  level: B1
+  requires: []
+  title: "Hos, till or på? Hemma or hem?"
+  card: |
+    hos + person: at someone's place
+        Jag är hos läkaren. Vi äter hos Sara.
+    till: movement to a person or a place
+        Jag går till läkaren. Vi åker till Göteborg.
+    på: at many places and activities
+        på jobbet, på vårdcentralen, på bio, på ett möte
+
+    hemma = where?      Jag är hemma.
+    hem   = where to?   Jag går hem.
+        hemma hos Sara      hem till Sara

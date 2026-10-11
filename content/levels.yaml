@@ -14,19 +14,21 @@ A2:
 #   relative_clause (5, 7), indirect_speech (5), conjunctions_advanced (3, 5),
 #   conditional_skulle (6), participles (4, 7, 11), particle_verbs (7),
 #   pluperfect (8, under tenses), passive_s (10), possessive_sin (11),
-#   modal_past (-), indefinite_pronouns (-).
+#   modal_past (-), indefinite_pronouns (-), ju_desto (3), allt_comparative (8),
+#   superlative_definite (9), tycka_tanka_tro (9), prepositions_hos_till_pa (5).
+# Themis, 2026-10-11: B1 is chapters 1-11 of that book; B2 starts at chapter 12.
 # The order of the units is by task, not by chapter.
 # Themis: correct the list if you disagree; moving a point means re-tagging its items.
 B1:
   grammar: [pluperfect, modal_past, conditional_skulle, passive_s, participles,
             relative_clause, indirect_speech, conjunctions_advanced, particle_verbs,
-            possessive_sin, indefinite_pronouns]
-# B2 is not written. The book does not say where B1 ends; a proposal from its later
-# chapters (12-18), to be turned into grammar points when B2 starts:
+            possessive_sin, indefinite_pronouns,
+            ju_desto, allt_comparative, superlative_definite, tycka_tanka_tro,
+            prepositions_hos_till_pa]
+# B2 is not written. A proposal from chapters 12-18, to be turned into grammar
+# points when B2 starts:
 #   sentence adverbs nog/väl/ju, conditional in the past (skulle ha + supine),
 #   question word + som helst, cleft sentences (det är ... som), adjectives and
 #   participles as nouns, demonstrative pronouns, perfect without har/hade,
 #   stå/ställa and ligga/lägga, place of unstressed object pronouns, compound
 #   adverbs, shortened clauses.
-# In chapters 1-11 but in no level yet: ju ... desto, allt + comparative,
-#   superlative in the definite form, tycker/tänker/tror, hos/till/på.

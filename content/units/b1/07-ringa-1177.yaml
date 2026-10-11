@@ -7,8 +7,8 @@ can_do: "I can describe symptoms and report what someone asked and said."
 names: [Sara]
 
 new_words: [symtom, yrsel, smärta, värk, besvär, undersökning, råd, hjärta, prov, resultat, ambulans, nummer,
-            akut, allvarlig, orolig, vanlig, illa, plötsligt, undra, mena, förklara]
-new_grammar: [indirect_speech]
+            akut, allvarlig, orolig, vanlig, illa, plötsligt, undra, mena, förklara, hos]
+new_grammar: [indirect_speech, prepositions_hos_till_pa]
 
 phrases:
   - { sv: "Hur kan jag hjälpa dig?", en: "How can I help you?" }
@@ -82,6 +82,13 @@ exercises:
   # listen for the number
   - { type: numbers, sv: "Ring 1 1 7 7 för råd.", hint: "the phone number", answer: "1177", en: "Call 1177 for advice." }
   - { type: numbers, sv: "Du får resultaten om 5 dagar.", hint: "in how many days", answer: "5", en: "You will get the results in 5 days." }
+
+  # hos, till or på? hemma or hem?
+  - { type: cloze, sv: "Jag var ___ läkaren igår.", answer: hos, en: "I was at the doctor's yesterday.", grammar: [prepositions_hos_till_pa] }
+  - { type: cloze, sv: "Du måste gå ___ vårdcentralen.", answer: till, en: "You must go to the health centre.", grammar: [prepositions_hos_till_pa] }
+  - { type: cloze, sv: "Hon arbetar ___ vårdcentralen.", answer: på, en: "She works at the health centre.", grammar: [prepositions_hos_till_pa] }
+  - { type: cloze, sv: "Jag är sjuk. Jag går ___ nu.", hint: "hemma / hem", answer: hem, en: "I am ill. I am going home now.", grammar: [prepositions_hos_till_pa] }
+  - { type: word_order, sv: "Jag är hemma hos min syster idag.", en: "I am at my sister's today.", grammar: [prepositions_hos_till_pa] }
 
   # words from earlier units
   - { type: translate, en: "If I were you, I would call the doctor.", sv: "Om jag var du, skulle jag ringa läkaren.", grammar: [conditional_skulle] }

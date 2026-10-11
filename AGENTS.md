@@ -112,9 +112,10 @@ A2:
 B1:
   grammar: [pluperfect, modal_past, conditional_skulle, passive_s, participles,
             relative_clause, indirect_speech, conjunctions_advanced, particle_verbs,
-            possessive_sin, indefinite_pronouns]
-# The B1 list is a proposal: Themis has NOT yet checked it against Rivstart B1+B2.
-# B2+ added later.
+            possessive_sin, indefinite_pronouns, ju_desto, allt_comparative,
+            superlative_definite, tycka_tanka_tro, prepositions_hos_till_pa]
+# B1 = chapters 1-11 of Rivstart B1+B2 (compared with its contents page, 2026-10-11).
+# B2 starts at chapter 12; a proposed list is in the comments of levels.yaml.
 ```
 
 ### grammar.yaml
@@ -455,13 +456,13 @@ Each unit has three or so everyday phrases and, where it fits, a `free_write`.
 | 01 | Jag (`jag`) | Present yourself in a short personal letter | relative_clause |
 | 02 | Vardag (`vardag`) | Compare your life before and now | pluperfect, modal_past |
 | 03 | Matbutiken (`matbutiken`) | Complain about something you bought, return it, understand the rules | passive_s, participles |
-| 04 | Buss & tåg (`resa`) | Book a hotel and a flight, say what you would do if something goes wrong | conditional_skulle |
-| 05 | Bostad (`bostad`) | Read a flat advert, go to a viewing, understand the contract | indefinite_pronouns |
+| 04 | Buss & tåg (`resa`) | Book a hotel and a flight, say what you would do if something goes wrong | conditional_skulle, ju_desto |
+| 05 | Bostad (`bostad`) | Read a flat advert, go to a viewing, understand the contract | indefinite_pronouns, superlative_definite |
 | 06 | Familjen (`familjen`) | Tell a longer story about a family holiday | possessive_sin, conjunctions_advanced |
-| 07 | Hälsa (`halsa`) | Describe symptoms on the phone, report what was said | indirect_speech |
-| 08 | Fritid (`fritid`) | Join a club, give and react to opinions | particle_verbs |
+| 07 | Hälsa (`halsa`) | Describe symptoms on the phone, report what was said | indirect_speech, prepositions_hos_till_pa |
+| 08 | Fritid (`fritid`) | Join a club, give and react to opinions | particle_verbs, tycka_tanka_tro |
 | 09 | Arbete (`arbete`) | Take part in a work meeting; rights and duties | – |
-| 10 | Data (`data`) | Explain a computer problem to support, follow instructions | – |
+| 10 | Data (`data`) | Explain a computer problem to support, follow instructions | allt_comparative |
 
 ---
 

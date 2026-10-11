@@ -9,7 +9,7 @@ names: [Sara, Ali]
 new_words: [dator, skärm, tangentbord, mus, skrivare, nätverk, program, uppdatering, support,
             lösenord, konto, fil, mapp, mejl, länk,
             logga, starta, ladda, klicka, bifoga, installera, uppdatera, skicka, långsam, ner]
-new_grammar: []
+new_grammar: [allt_comparative]
 
 phrases:
   - { sv: "Det funkar inte.", en: "It doesn't work." }
@@ -85,6 +85,12 @@ exercises:
       checklist: ["I say what does not work.", "I say since when.", "I say what I have already done (har + supine).", "I ask for help and end with a greeting."],
       sv: "Hej! Jag kan inte logga in på mitt konto sedan igår. Jag har startat om datorn och jag har installerat uppdateringen, men det funkar inte. Skärmen startar inte. Kan ni hjälpa mig? Med vänlig hälsning, Ali",
       grammar: [perfect_tense] }
+
+  # more and more
+  - { type: cloze, sv: "Nätverket blir ___ långsammare.", answer: allt, en: "The network is getting slower and slower.", grammar: [allt_comparative] }
+  - { type: word_order, sv: "Programmen blir allt större.", en: "The programs are getting bigger and bigger.", grammar: [allt_comparative] }
+  - { type: translate, en: "The computer is getting slower and slower.", sv: "Datorn blir allt långsammare.", accept: ["Datorn blir långsammare och långsammare."], grammar: [allt_comparative] }
+  - { type: dictation, sv: "Vi skickar allt mer mejl.", en: "We send more and more e-mail.", grammar: [allt_comparative] }
 
   # words from earlier units
   - { type: translate, en: "Support asked if I had restarted the computer.", sv: "Supporten frågade om jag hade startat om datorn.",

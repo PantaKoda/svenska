@@ -1,0 +1,95 @@
+name: Release
+
+# Push a tag like v0.2.0 to publish a release. The app's Update button installs the
+# latest one, so the zip names and SHA256SUMS.txt below are what the updater looks for.
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    strategy:
+      matrix:
+        include:
+          - { os: windows-latest, rid: win-x64 }
+          - { os: ubuntu-latest, rid: linux-x64 }
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - uses: ./.github/actions/saldo-db
+
+      - name: Version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Test
+        run: dotnet test Svenska.slnx -c Release
+
+      - name: Validate content
+        run: dotnet run -c Release --project src/Svenska.Validator
+
+      - name: Publish app
+        run: >
+          dotnet publish src/Svenska.App -c Release -r ${{ matrix.rid }} --self-contained true
+          -p:Version=${{ steps.version.outputs.version }} -o package
+
+      - name: Add content and word database
+        run: |
+          find package -name '*.pdb' -delete
+          cp -r content package/content
+          mkdir -p package/data
+          cp data/saldo.db package/data/saldo.db
+
+      - name: Zip (Windows)
+        if: runner.os == 'Windows'
+        working-directory: package
+        run: 7z a -tzip -bso0 "../Svenska-${{ steps.version.outputs.version }}-${{ matrix.rid }}.zip" .
+
+      - name: Zip (Linux)
+        if: runner.os != 'Windows'
+        working-directory: package
+        run: |
+          chmod +x Svenska.App
+          zip -r -q "../Svenska-${{ steps.version.outputs.version }}-${{ matrix.rid }}.zip" .
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: Svenska-${{ matrix.rid }}
+          path: Svenska-*.zip
+          if-no-files-found: error
+          compression-level: 0
+
+  release:
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: Svenska-*
+          merge-multiple: true
+
+      - name: Checksums
+        run: sha256sum Svenska-*.zip | tee SHA256SUMS.txt
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --verify-tag
+          --title "Svenska ${GITHUB_REF_NAME#v}" --generate-notes
+          Svenska-*.zip SHA256SUMS.txt

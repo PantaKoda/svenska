@@ -1,0 +1,8 @@
+nouns:  [person, place, room, furniture, tool, device, surface, food, drink,
+         container, clothing, body_part, vehicle, document, problem, time_unit,
+         substance]
+verbs:  [action_surface,   # dammsuga, torka, moppa (+ surface)
+         action_object,    # köpa, ta, lämna (+ concrete object)
+         action_intrans,   # sova, jobba, vänta
+         consume]          # äta, dricka (+ food/drink)
+adjectives: [state]        # trasig, ren, smutsig, tom, full

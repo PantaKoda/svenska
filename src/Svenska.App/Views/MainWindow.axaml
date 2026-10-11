@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Svenska.App.ViewModels"
+        x:Class="Svenska.App.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Svenska" Width="900" Height="600">
+    <DockPanel Margin="24">
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button DockPanel.Dock="Right" Content="Update" Command="{Binding UpdateCommand}" />
+            <TextBlock DockPanel.Dock="Right" Text="{Binding UpdateStatus}" VerticalAlignment="Center"
+                       Margin="12,0" FontSize="12" TextWrapping="Wrap" MaxWidth="480" />
+            <TextBlock Text="{Binding About}" Opacity="0.6" FontSize="12" VerticalAlignment="Center" />
+        </DockPanel>
+        <StackPanel Spacing="8">
+            <TextBlock Text="Svenska" FontSize="32" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding Status}" />
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,11 @@
+A1:
+  grammar: [pron_subject, present_tense, en_ett, def_singular, plural_indef,
+            v2_word_order, yes_no_question, wh_question, negation_inte,
+            numbers_0_1000, time_clock, modal_vill_kan_ska, possessive_basic,
+            adjective_agreement_basic]
+A2:
+  grammar: [past_tense, perfect_tense, future_ska_kommer_att, plural_def,
+            adjective_agreement_full, comparison, inversion_after_adverb,
+            subordinate_clause_basic, imperative, reflexive_basic,
+            preposition_time]
+# B1+ added later. Themis checks this list against the Rivstart contents.

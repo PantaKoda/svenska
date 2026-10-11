@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+*.user
+
+# built by tools/saldo_to_sqlite.py
+data/saldo.db
+data/raw/
+
+# level-guard reference books, never part of the repo
+*.pdf
+
+__pycache__/
+.venv/

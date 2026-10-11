@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Svenska.App/Svenska.App.csproj" />
+    <Project Path="src/Svenska.Core/Svenska.Core.csproj" />
+    <Project Path="src/Svenska.Generator/Svenska.Generator.csproj" />
+    <Project Path="src/Svenska.Tests/Svenska.Tests.csproj" />
+    <Project Path="src/Svenska.Validator/Svenska.Validator.csproj" />
+  </Folder>
+</Solution>

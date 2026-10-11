@@ -1,0 +1,25 @@
+name: SALDO database
+description: Builds data/saldo.db from SALDO's morphology (Språkbanken, CC-BY 4.0). Cached per script version.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '3.x'
+
+    - id: cache
+      uses: actions/cache@v6
+      with:
+        path: data/saldo.db
+        key: saldo-db-${{ runner.os }}-${{ hashFiles('tools/saldo_to_sqlite.py') }}
+
+    - name: Download SALDO and build saldo.db
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        mkdir -p data/raw
+        curl -L --fail --retry 3 -sS -o data/raw/saldom.xml \
+          https://svn.spraakbanken.gu.se/sb-arkiv/pub/lmf/saldom/saldom.xml
+        python tools/saldo_to_sqlite.py data/raw/saldom.xml data/saldo.db
+        rm data/raw/saldom.xml

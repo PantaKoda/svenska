@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Development version. A release build gets its version from the git tag (see release.yml). -->
+    <Version>0.0.0-dev</Version>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+</Project>

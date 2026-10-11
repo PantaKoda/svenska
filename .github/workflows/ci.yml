@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - uses: ./.github/actions/saldo-db
+
+      - name: Test the SALDO script
+        run: python -m unittest discover tools
+
+      - name: Build
+        run: dotnet build Svenska.slnx -c Release -warnaserror
+
+      - name: Test
+        run: dotnet test Svenska.slnx -c Release --no-build
+
+      - name: Generated drills are up to date
+        run: dotnet run -c Release --no-build --project src/Svenska.Generator
+
+      - name: Validate content
+        run: dotnet run -c Release --no-build --project src/Svenska.Validator

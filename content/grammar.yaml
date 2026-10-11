@@ -1,0 +1,127 @@
+# Grammar points. Cards are written in M3; a point without a card is a validator warning.
+
+# ---- A1 ----
+- id: pron_subject
+  level: A1
+  title: "Subject pronouns (jag, du, han, hon, vi, ni, de)"
+
+- id: present_tense
+  level: A1
+  title: "Present tense (talar, köper, bor)"
+
+- id: en_ett
+  level: A1
+  title: "En-words and ett-words (en bil, ett hus)"
+
+- id: def_singular
+  level: A1
+  requires: [en_ett]
+  title: "Definite form, singular (bilen, huset)"
+  card: |
+    en-word → add -en / -n: en bil → bilen, en kaka → kakan
+    ett-word → add -et / -t: ett hus → huset, ett äpple → äpplet
+
+- id: plural_indef
+  level: A1
+  requires: [en_ett]
+  title: "Indefinite plural (bilar, kakor, hus)"
+
+- id: v2_word_order
+  level: A1
+  requires: [present_tense]
+  title: "The verb comes second (Idag köper jag mjölk)"
+
+- id: yes_no_question
+  level: A1
+  requires: [present_tense]
+  title: "Yes/no questions (Har du en påse?)"
+
+- id: wh_question
+  level: A1
+  requires: [v2_word_order]
+  title: "Question words (vad, var, när, vem, hur)"
+
+- id: negation_inte
+  level: A1
+  requires: [present_tense]
+  title: "Negation with inte"
+
+- id: numbers_0_1000
+  level: A1
+  title: "Numbers 0–1000"
+
+- id: time_clock
+  level: A1
+  requires: [numbers_0_1000]
+  title: "Telling the time (Klockan är halv tre)"
+
+- id: modal_vill_kan_ska
+  level: A1
+  requires: [present_tense]
+  title: "Vill, kan, ska + infinitive"
+
+- id: possessive_basic
+  level: A1
+  requires: [en_ett]
+  title: "Possessives (min, mitt, mina; din, ditt, dina)"
+
+- id: adjective_agreement_basic
+  level: A1
+  requires: [en_ett]
+  title: "Adjective after är (stor, stort, stora)"
+
+# ---- A2 ----
+- id: past_tense
+  level: A2
+  requires: [present_tense]
+  title: "Past tense (talade, köpte, bodde, gick)"
+
+- id: perfect_tense
+  level: A2
+  requires: [present_tense]
+  title: "Perfect: har + supine (har talat, har köpt)"
+
+- id: future_ska_kommer_att
+  level: A2
+  requires: [modal_vill_kan_ska]
+  title: "Future: ska and kommer att"
+
+- id: plural_def
+  level: A2
+  requires: [plural_indef, def_singular]
+  title: "Definite plural (bilarna, kakorna, husen)"
+
+- id: adjective_agreement_full
+  level: A2
+  requires: [adjective_agreement_basic, def_singular]
+  title: "Adjective before a noun (en stor bil, den stora bilen)"
+
+- id: comparison
+  level: A2
+  requires: [adjective_agreement_basic]
+  title: "Comparison (stor, större, störst)"
+
+- id: inversion_after_adverb
+  level: A2
+  requires: [v2_word_order]
+  title: "Inversion after an adverbial (Sedan åker jag hem)"
+
+- id: subordinate_clause_basic
+  level: A2
+  requires: [v2_word_order, negation_inte]
+  title: "Subordinate clauses (att, eftersom, när; … att jag inte kan)"
+
+- id: imperative
+  level: A2
+  requires: [present_tense]
+  title: "Imperative (Vänta! Kom hit!)"
+
+- id: reflexive_basic
+  level: A2
+  requires: [pron_subject]
+  title: "Reflexive verbs (jag tvättar mig, hon sätter sig)"
+
+- id: preposition_time
+  level: A2
+  requires: [time_clock]
+  title: "Prepositions of time (i, på, om, för … sedan)"

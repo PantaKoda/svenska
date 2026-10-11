@@ -4,23 +4,59 @@
              x:Class="Svenska.App.Views.HomeView"
              x:DataType="vm:HomeViewModel">
     <ScrollViewer>
-        <StackPanel Margin="32,24" Spacing="16" MaxWidth="720" HorizontalAlignment="Left">
-            <TextBlock Text="Svenska" FontSize="32" FontWeight="SemiBold" />
+        <StackPanel Margin="32,24" Spacing="20" MaxWidth="720" HorizontalAlignment="Left">
+            <DockPanel>
+                <Button DockPanel.Dock="Right" Content="{Binding ReviewText}" Command="{Binding Review}"
+                        Classes="accent" Padding="16,8" VerticalAlignment="Center" />
+                <TextBlock Text="Svenska" FontSize="32" FontWeight="SemiBold" />
+            </DockPanel>
             <TextBlock Text="{Binding Status}" IsVisible="{Binding Status, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
-            <ItemsControl ItemsSource="{Binding Units}">
+
+            <ItemsControl ItemsSource="{Binding Levels}">
                 <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="vm:UnitRow">
-                        <Button Command="{Binding Open}" HorizontalAlignment="Stretch"
-                                HorizontalContentAlignment="Left" Padding="16,12" Margin="0,0,0,8">
-                            <StackPanel Spacing="2">
-                                <TextBlock Text="{Binding Number}" FontSize="12" Opacity="0.6" />
-                                <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="SemiBold" />
-                                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" Opacity="0.8" />
-                            </StackPanel>
-                        </Button>
+                    <DataTemplate x:DataType="vm:LevelGroup">
+                        <StackPanel Spacing="8" Margin="0,0,0,12">
+                            <TextBlock Text="{Binding Level}" FontSize="20" FontWeight="SemiBold" />
+                            <ItemsControl ItemsSource="{Binding Units}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:UnitRow">
+                                        <Button Command="{Binding Open}" HorizontalAlignment="Stretch"
+                                                HorizontalContentAlignment="Stretch" Padding="16,12" Margin="0,0,0,8">
+                                            <StackPanel Spacing="2">
+                                                <TextBlock Text="{Binding Number}" FontSize="12" Opacity="0.6" />
+                                                <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="SemiBold" />
+                                                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" Opacity="0.8" />
+                                                <ProgressBar Value="{Binding Percent}" Maximum="100" Height="4" Margin="0,8,0,2" />
+                                                <TextBlock Text="{Binding ProgressText}" FontSize="12" Opacity="0.6" />
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+
+            <StackPanel Spacing="8" IsVisible="{Binding Themes.Count}">
+                <TextBlock Text="Theme practice" FontSize="20" FontWeight="SemiBold" />
+                <ItemsControl ItemsSource="{Binding Themes}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:ThemeRow">
+                            <Button Command="{Binding Open}" Margin="0,0,8,8" Padding="16,10" Width="230"
+                                    HorizontalContentAlignment="Left">
+                                <StackPanel Spacing="2">
+                                    <TextBlock Text="{Binding Title}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.6" />
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

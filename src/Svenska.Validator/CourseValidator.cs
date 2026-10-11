@@ -186,6 +186,7 @@ public sealed class CourseValidator
     /// <summary>Rule 8: the generated files are what the generator makes from the content now.</summary>
     private void CheckGenerated()
     {
+        CheckThemeFiles();
         foreach (var unit in _course.Units)
         {
             var file = $"generated/{unit.Id}.yaml";
@@ -257,8 +258,9 @@ public sealed class CourseValidator
     {
         foreach (var id in Duplicates(_course.Units.Select(u => u.Id)))
             Error("units", $"unit id '{id}' is used twice");
-        foreach (var generated in _course.Generated.Where(g => _course.Units.All(u => u.Id != g.Unit)))
-            Error($"generated/{generated.Unit}", "there is no unit with this id");
+        foreach (var generated in _course.Generated.Where(g => _course.Units.All(u => u.Id != g.Unit)
+                     && _course.Packs.All(p => DrillGenerator.ThemePrefix + p.Theme != g.Unit)))
+            Error($"generated/{generated.Unit}", "there is no unit or theme pack with this id");
 
         var introduced = new HashSet<string>();
         var knownGrammar = new HashSet<string>();
@@ -410,6 +412,37 @@ public sealed class CourseValidator
             Error(file, $"{name}: SALDO has no {WordForms.Label(item.Form)} form of '{item.Lemma}'; add forms: to the pack");
         else if (!forms.Contains(item.Answer))
             Error(file, $"{name}: answer '{item.Answer}' is not the {WordForms.Label(item.Form)} form ({string.Join(" / ", forms)})");
+    }
+
+    /// <summary>
+    /// The theme practice files. They are checked by generating them again: the generator
+    /// only uses known words and allowed grammar, so an equal file obeys rules 2 and 4.
+    /// </summary>
+    private void CheckThemeFiles()
+    {
+        var allGrammar = _grammar.Keys.ToHashSet();
+        foreach (var pack in _course.Packs)
+        {
+            var id = DrillGenerator.ThemePrefix + pack.Theme;
+            var file = $"generated/{id}.yaml";
+            var onDisk = _course.Generated.FirstOrDefault(g => g.Unit == id);
+            foreach (var item in onDisk?.Items ?? [])
+                CheckItem(new Unit { Id = id }, file, item, allGrammar);
+
+            if (_saldo == null || _contentDir == null)
+                continue;
+            var expected = new DrillGenerator(_course, _saldo).GenerateTheme(pack).File;
+            var path = Path.Combine(_contentDir, "generated", id + ".yaml");
+            if (expected.Items.Count == 0)
+            {
+                if (File.Exists(path))
+                    Error(file, "the pack gives no drills; run the generator to remove the file", 8);
+            }
+            else if (!File.Exists(path))
+                Error(file, "is missing; run the generator", 8);
+            else if (File.ReadAllText(path).ReplaceLineEndings("\n") != DrillGenerator.ToYaml(expected))
+                Error(file, "is out of date with its inputs; run the generator", 8);
+        }
     }
 
     /// <summary>Rules 2 and 3: only known words in what the learner writes and hears.</summary>

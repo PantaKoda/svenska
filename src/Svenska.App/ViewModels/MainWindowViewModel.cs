@@ -38,7 +38,34 @@ public partial class MainWindowViewModel : ObservableObject
         Page = new UnitViewModel(this, unit);
     }
 
-    public void ShowExercises(Unit unit) => Page = new PlayerViewModel(this, unit);
+    public void ShowExercises(Unit unit) => Page = new PlayerViewModel(this, new PlayerSession(
+        unit.Title,
+        Services.Progress.UnitSession(unit, Random.Shared),
+        unit.Names,
+        (item, correct) => Services.Progress.RecordUnitAnswer(unit, item, correct),
+        () => ShowUnit(unit)));
+
+    public void ShowTheme(ThemePack pack) => Page = new ThemeViewModel(this, pack);
+
+    public void ShowThemeExercises(ThemePack pack, bool includeNewWords) => Page = new PlayerViewModel(this, new PlayerSession(
+        pack.Title,
+        Services.Progress.ThemeSession(pack, includeNewWords, Random.Shared),
+        [],
+        (item, correct) => Services.Progress.RecordThemeAnswer(pack, item, correct),
+        () => ShowTheme(pack)));
+
+    /// <summary>The words and missed items that are due.</summary>
+    public void ShowReview()
+    {
+        var entries = Services.Progress.ReviewSession();
+        var keys = entries.ToDictionary(e => e.Item, e => e.Key, ReferenceEqualityComparer.Instance);
+        Page = new PlayerViewModel(this, new PlayerSession(
+            "Review",
+            [.. entries.Select(e => e.Item)],
+            Services.Course.Units.SelectMany(u => u.Names).ToHashSet(),
+            (item, correct) => Services.Progress.RecordReviewAnswer(keys[item], correct),
+            ShowHome));
+    }
 
     /// <summary>Gets the latest published release, installs it and restarts the app.</summary>
     [RelayCommand]

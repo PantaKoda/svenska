@@ -56,8 +56,11 @@
 
             <StackPanel Spacing="8">
                 <TextBlock Text="3 · Exercises" FontSize="18" FontWeight="SemiBold" />
-                <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
-                        Classes="accent" Padding="20,10" />
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
+                            Classes="accent" Padding="20,10" />
+                    <TextBlock Text="{Binding ProgressText}" VerticalAlignment="Center" Opacity="0.7" />
+                </StackPanel>
             </StackPanel>
 
             <StackPanel Spacing="4" IsVisible="{Binding SpeakingPrompt, Converter={x:Static ObjectConverters.IsNotNull}}">

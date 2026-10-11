@@ -102,16 +102,45 @@ public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
                + serializer.Serialize(file);
     }
 
+    public const string ThemePrefix = "theme-";
+
     /// <summary>
-    /// A stand-in unit for practising a theme pack outside the unit order: the pack's words
-    /// up to <paramref name="level"/> are new, every other word and all grammar of the level are known.
+    /// Every file that belongs in content/generated/: one per unit with a core section and
+    /// one per theme pack that gives any drills.
     /// </summary>
-    public static Unit ThemeUnit(Course course, ThemePack pack, Level level, int itemsPerTemplate = 6)
+    public List<GenerationResult> GenerateAll() =>
+        course.Units.Where(u => u.Core != null).Select(Generate)
+            .Concat(course.Packs.Select(GenerateTheme).Where(r => r.File.Items.Count > 0))
+            .ToList();
+
+    /// <summary>
+    /// The drills for practising a theme pack outside the unit order (generated/theme-&lt;pack&gt;.yaml).
+    /// Made level by level, so that an A1 learner gets drills without A2 words or grammar.
+    /// </summary>
+    public GenerationResult GenerateTheme(ThemePack pack)
     {
-        var own = pack.Words.Where(w => w.Level <= level).Select(w => w.Lemma).ToList();
+        var items = new List<ExerciseItem>();
+        var notes = new SortedSet<string>(StringComparer.Ordinal);
+        foreach (var level in course.Levels.Keys.Order().Where(l => pack.Words.Any(w => w.Level == l)))
+        {
+            var result = Generate(ThemeUnit(course, pack, level));
+            items.AddRange(result.File.Items);
+            // Only what needs fixing in the content; that a frame has no new word here is normal.
+            notes.UnionWith(result.Notes.Where(n => n.Contains(" form")));
+        }
+        return new GenerationResult(new GeneratedFile { Unit = ThemePrefix + pack.Theme, Items = items }, [.. notes]);
+    }
+
+    /// <summary>
+    /// A stand-in unit for one level of a theme pack: the pack's words of that level are new,
+    /// every other word and all grammar up to the level are known.
+    /// </summary>
+    public static Unit ThemeUnit(Course course, ThemePack pack, Level level, int itemsPerTemplate = 8)
+    {
+        var own = pack.Words.Where(w => w.Level == level).Select(w => w.Lemma).ToList();
         return new Unit
         {
-            Id = "theme-" + pack.Theme,
+            Id = ThemePrefix + pack.Theme,
             Level = level,
             Theme = pack.Theme,
             Title = pack.Title,

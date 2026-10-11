@@ -4,10 +4,12 @@ A desktop app for learning Swedish by doing real tasks (buy a ticket, pay at the
 supermarket, book a doctor's time) through listening and writing exercises.
 The design and the milestones are in [AGENTS.md](AGENTS.md).
 
-Status: milestone M3. One unit works end to end: A1-04 *I matbutiken* (words, model dialogue with
+Status: milestone M4. One unit works end to end: A1-04 *I matbutiken* (words, model dialogue with
 audio, dictation, cloze, inflect, word-order and translation exercises). The drill generator
 fills the unit's words into sentence frames; its output is in `content/generated/`.
 The reference panel (F1) looks up any word form in SALDO and shows the grammar cards.
+Progress and the review queue (Leitner boxes) are kept in `progress.db` in your app-data
+folder; Theme practice runs the standard exercises on any theme pack.
 
 ## Install
 

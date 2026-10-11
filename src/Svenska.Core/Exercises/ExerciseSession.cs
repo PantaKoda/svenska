@@ -2,7 +2,7 @@ using Svenska.Core.Content;
 
 namespace Svenska.Core.Exercises;
 
-/// <summary>Chooses the items of one round of exercises for a unit.</summary>
+/// <summary>Chooses the items of one round of exercises.</summary>
 public static class ExerciseSession
 {
     public const int DefaultSize = 20;
@@ -14,15 +14,21 @@ public static class ExerciseSession
             .Where(i => ExerciseText.Playable.Contains(i.Type))
             .ToList();
 
-    /// <summary>A random draw from the pool, authored and generated items mixed.</summary>
-    public static List<ExerciseItem> Pick(Course course, Unit unit, Random random, int size = DefaultSize)
+    /// <summary>
+    /// A random draw from a pool. Items the learner has not yet answered right come first,
+    /// so every round brings something new until the pool is done.
+    /// </summary>
+    public static List<ExerciseItem> Pick(IEnumerable<ExerciseItem> pool, Random random, int size = DefaultSize,
+        Func<ExerciseItem, bool>? isDone = null)
     {
-        var pool = Pool(course, unit);
-        for (var i = pool.Count - 1; i > 0; i--)
+        var items = pool.ToList();
+        for (var i = items.Count - 1; i > 0; i--)
         {
             var j = random.Next(i + 1);
-            (pool[i], pool[j]) = (pool[j], pool[i]);
+            (items[i], items[j]) = (items[j], items[i]);
         }
-        return pool.Take(size).ToList();
+        if (isDone != null)
+            items = [.. items.Where(i => !isDone(i)), .. items.Where(isDone)];
+        return items.Take(size).ToList();
     }
 }

@@ -197,13 +197,14 @@ public class GeneratorTests
     public void Generated_file_loads_back_and_passes_the_validator()
     {
         using var dir = Course();
-        dir.Write("generated/a1-01.yaml", DrillGenerator.ToYaml(Generate(dir).File));
+        dir.WriteGenerated(Saldo());
 
         var (course, issues) = ContentLoader.Load(dir.Path);
         issues.AddRange(CourseValidator.Validate(course, Saldo(), dir.Path));
 
         Assert.Empty(issues.Where(i => i.Severity == Severity.Error));
-        Assert.Equal(20, course.Generated.Single().Items.Count);
+        Assert.Equal(20, course.Generated.Single(g => g.Unit == "a1-01").Items.Count);
+        Assert.NotEmpty(course.Generated.Single(g => g.Unit == "theme-shop").Items);
     }
 
     [Fact]
@@ -275,10 +276,11 @@ public class GeneratorTests
         var (course, _) = ContentLoader.Load(dir.Path);
 
         var unit = DrillGenerator.ThemeUnit(course, course.Packs[0], Level.A1);
-        var result = new DrillGenerator(course, Saldo()).Generate(unit);
+        var result = new DrillGenerator(course, Saldo()).GenerateTheme(course.Packs[0]);
 
         Assert.Contains("mjölk", unit.NewWords);
-        Assert.Contains(result.File.Items, i => i.Sv == "Var finns mjölken?" || i is { Lemma: "mjölk" } || i.Words!.Contains("mjölk"));
+        Assert.Equal("theme-shop", result.File.Unit);
+        Assert.Contains(result.File.Items, i => i.Words!.Contains("mjölk"));
     }
 
     [Fact]
@@ -289,9 +291,9 @@ public class GeneratorTests
         var (course, _) = ContentLoader.Load(dir.Path);
 
         var pool = Svenska.Core.Exercises.ExerciseSession.Pool(course, course.Units[0]);
-        var session = Svenska.Core.Exercises.ExerciseSession.Pick(course, course.Units[0], new Random(1), size: 5);
+        var session = Svenska.Core.Exercises.ExerciseSession.Pick(pool, new Random(1), size: 5);
 
-        Assert.Equal(1 + course.Generated[0].Items.Count, pool.Count);   // scene_click is not playable yet
+        Assert.Equal(1 + course.Generated.Single(g => g.Unit == "a1-01").Items.Count, pool.Count);   // scene_click is not playable yet
         Assert.Equal(5, session.Distinct().Count());
         Assert.All(session, i => Assert.Contains(i, pool));
     }

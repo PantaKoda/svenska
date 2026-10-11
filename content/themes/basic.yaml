@@ -11,14 +11,16 @@ words:
   - { lemma: den, pos: pron, level: A1, gloss: "it (den for en-words, det for ett-words)" }
 
   # common verbs
-  - { lemma: vara,   pos: verb, level: A1, gloss: "to be; past: was; pp: been" }
-  - { lemma: ha,     pos: verb, level: A1, gloss: "to have; past: had; pp: had" }
+  # forms: pins the usual form where SALDO also lists an old or unrelated one (haver, skall, varar).
+  - { lemma: vara,   pos: verb, level: A1, gloss: "to be; past: was; pp: been",
+      forms: { pres: är, past: var, sup: varit } }
+  - { lemma: ha,     pos: verb, level: A1, gloss: "to have; past: had; pp: had", forms: { pres: har } }
   - { lemma: behöva, pos: verb, level: A1, gloss: to need }
   - { lemma: ta,     pos: verb, tags: [action_object], level: A1, gloss: "to take; past: took; pp: taken",
       forms: { inf: ta, pres: tar } }   # SALDO also lists the old taga, tager
   - { lemma: vilja,  pos: verb, level: A1, gloss: to want }
   - { lemma: kunna,  pos: verb, level: A1, gloss: "can, to be able to" }
-  - { lemma: skola,  pos: verb, level: A1, gloss: "shall, to be going to (ska)" }
+  - { lemma: skola,  pos: verb, level: A1, gloss: "shall, to be going to (ska)", forms: { pres: ska } }
 
   # function words
   - { lemma: en,    pos: article, level: A1, gloss: "a, an (en or ett)" }

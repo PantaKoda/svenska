@@ -3,21 +3,19 @@ using Svenska.Core.Generation;
 using Svenska.Core.Saldo;
 
 // Usage: Svenska.Generator [content-dir]
-//   Writes content/generated/<unit>.yaml for every unit with a `core` section.
+//   Writes content/generated/<unit>.yaml for every unit with a `core` section, and
+//   content/generated/theme-<pack>.yaml for every theme pack (for Theme practice).
 //
 // Usage: Svenska.Generator [content-dir] --theme <name> [--level A1]
-//   Prints the drills a theme pack would give if all its words up to that level were
-//   new, with everything else of the level known. Writes nothing.
+//   Prints the drills of one theme pack without writing them.
 
 Console.OutputEncoding = new System.Text.UTF8Encoding(false);
 
 string? theme = null;
-var level = Level.A1;
 var positional = new List<string>();
 for (var i = 0; i < args.Length; i++)
 {
     if (args[i] == "--theme" && i + 1 < args.Length) theme = args[++i];
-    else if (args[i] == "--level" && i + 1 < args.Length) level = Enum.Parse<Level>(args[++i], ignoreCase: true);
     else positional.Add(args[i]);
 }
 
@@ -51,36 +49,35 @@ if (theme != null)
         Console.Error.WriteLine($"There is no theme pack '{theme}'.");
         return 2;
     }
-    var preview = generator.Generate(DrillGenerator.ThemeUnit(course, pack, level));
+    var preview = generator.GenerateTheme(pack);
     Console.Write(DrillGenerator.ToYaml(preview.File));
     Report($"theme {theme}", preview);
     return 0;
 }
 
-var units = course.Units.Where(u => u.Core != null).ToList();
-if (units.Count == 0)
-    Console.WriteLine("No units with a core section; nothing to generate.");
-
 var outputDir = Path.Combine(contentDir, "generated");
 Directory.CreateDirectory(outputDir);
-foreach (var unit in units)
+var written = new HashSet<string>();
+foreach (var result in generator.GenerateAll())
 {
-    var result = generator.Generate(unit);
-    var path = Path.Combine(outputDir, unit.Id + ".yaml");
+    var path = Path.Combine(outputDir, result.File.Unit + ".yaml");
     var yaml = DrillGenerator.ToYaml(result.File);
     var changed = !File.Exists(path) || File.ReadAllText(path).ReplaceLineEndings("\n") != yaml;
     if (changed)
         File.WriteAllText(path, yaml);
-    Report($"{unit.Id} ({(changed ? "written" : "unchanged")})", result);
+    written.Add(result.File.Unit);
+    Report($"{result.File.Unit} ({(changed ? "written" : "unchanged")})", result);
 }
 
-// A generated file whose unit is gone or no longer has a core section is stale.
+// A generated file that nothing generates any more is stale.
 foreach (var stale in Directory.EnumerateFiles(outputDir, "*.yaml")
-             .Where(f => units.All(u => u.Id != Path.GetFileNameWithoutExtension(f))))
+             .Where(f => !written.Contains(Path.GetFileNameWithoutExtension(f))))
 {
     File.Delete(stale);
-    Console.Error.WriteLine($"{Path.GetFileName(stale)}: deleted, no unit generates it");
+    Console.Error.WriteLine($"{Path.GetFileName(stale)}: deleted, nothing generates it");
 }
+if (written.Count == 0)
+    Console.WriteLine("No units with a core section and no theme drills; nothing to generate.");
 return 0;
 
 static void Report(string name, GenerationResult result)

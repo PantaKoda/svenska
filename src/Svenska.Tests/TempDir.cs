@@ -16,5 +16,13 @@ public sealed class TempDir : IDisposable
         return full;
     }
 
+    /// <summary>Runs the drill generator on the course in this folder, as the Generator program does.</summary>
+    public void WriteGenerated(Svenska.Core.Saldo.ISaldoLexicon saldo)
+    {
+        var (course, _) = Svenska.Core.Content.ContentLoader.Load(Path);
+        foreach (var result in new Svenska.Core.Generation.DrillGenerator(course, saldo).GenerateAll())
+            Write($"generated/{result.File.Unit}.yaml", Svenska.Core.Generation.DrillGenerator.ToYaml(result.File));
+    }
+
     public void Dispose() => Directory.Delete(Path, recursive: true);
 }

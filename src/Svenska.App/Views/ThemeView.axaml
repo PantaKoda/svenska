@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Svenska.App.ViewModels"
+             x:Class="Svenska.App.Views.ThemeView"
+             x:DataType="vm:ThemeViewModel">
+    <UserControl.Styles>
+        <Style Selector="Border.new"><Setter Property="Opacity" Value="0.55" /></Style>
+    </UserControl.Styles>
+    <ScrollViewer>
+        <StackPanel Margin="32,24" Spacing="20" MaxWidth="760" HorizontalAlignment="Left">
+            <Button Content="← Home" Command="{Binding BackCommand}" />
+
+            <StackPanel Spacing="4">
+                <TextBlock Text="{Binding Title}" FontSize="28" FontWeight="SemiBold" />
+                <TextBlock Text="Theme practice: the standard exercises on the words of this theme."
+                           TextWrapping="Wrap" Opacity="0.7" />
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <CheckBox Content="Also words I have not learned in a unit yet" IsChecked="{Binding IncludeNewWords}" />
+                <TextBlock Text="{Binding Note}" TextWrapping="Wrap" Opacity="0.7"
+                           IsVisible="{Binding Note, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
+                        Classes="accent" Padding="20,10" />
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="Words (faded = not learned yet)" FontSize="18" FontWeight="SemiBold" />
+                <ItemsControl ItemsSource="{Binding Words}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:ThemeWordRow">
+                            <Border Margin="0,0,8,8" Padding="12,6" Width="170" CornerRadius="4" BorderThickness="1"
+                                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                                    Classes.new="{Binding !Known}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding Gloss}" FontSize="12" Opacity="0.7" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

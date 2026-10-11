@@ -10,6 +10,12 @@ namespace Svenska.App.ViewModels;
 
 public sealed record TokenRow(string Text, IRelayCommand Add);
 
+/// <summary>One round for the player: the items, where the answers are recorded, and the way back.</summary>
+/// <param name="Names">Proper names in the items; they keep their capital in word-order exercises.</param>
+/// <param name="OnAnswer">Called once per item, with the learner's first answer.</param>
+public sealed record PlayerSession(string Title, IReadOnlyList<ExerciseItem> Items, IReadOnlyCollection<string> Names,
+    Action<ExerciseItem, bool> OnAnswer, Action Back);
+
 /// <summary>
 /// The exercise player: one item at a time. Enter checks the answer, Enter again goes on.
 /// An item answered wrongly comes back once at the end.
@@ -17,7 +23,7 @@ public sealed record TokenRow(string Text, IRelayCommand Add);
 public partial class PlayerViewModel : ObservableObject
 {
     private readonly MainWindowViewModel _main;
-    private readonly Unit _unit;
+    private readonly PlayerSession _session;
     private readonly AnswerChecker _checker;
     private readonly Dictionary<string, Word> _packWords;
     private readonly List<ExerciseItem> _queue;
@@ -43,15 +49,15 @@ public partial class PlayerViewModel : ObservableObject
     [ObservableProperty] private string _summary = "";
     [ObservableProperty] private string _submitText = "Check";
 
-    public string UnitTitle => _unit.Title;
+    public string Title => _session.Title;
 
-    public PlayerViewModel(MainWindowViewModel main, Unit unit)
+    public PlayerViewModel(MainWindowViewModel main, PlayerSession session)
     {
         _main = main;
-        _unit = unit;
+        _session = session;
         _checker = main.Services.CreateChecker();
         _packWords = Vocabulary.WordsByLemma(main.Services.Course);
-        _queue = ExerciseSession.Pick(main.Services.Course, unit, Random.Shared);
+        _queue = [.. session.Items];
         _total = _queue.Count;
         Show();
     }
@@ -102,7 +108,7 @@ public partial class PlayerViewModel : ObservableObject
                 Translation = word == null ? "" : English.Meaning(word);
                 break;
             case ExerciseText.Translate:
-                Instruction = "Write this in Swedish.";
+                Instruction = item.Hint == null ? "Write this in Swedish." : $"Write this in Swedish ({item.Hint}).";
                 Prompt = item.En ?? "";
                 Translation = "";
                 break;
@@ -110,7 +116,7 @@ public partial class PlayerViewModel : ObservableObject
                 Instruction = "Put the words in order. Type the sentence or click the words.";
                 Prompt = item.En ?? "";
                 Translation = "";
-                Tokens = ExerciseText.ShuffledTokens(item.Sv ?? "", _unit.Names)
+                Tokens = ExerciseText.ShuffledTokens(item.Sv ?? "", _session.Names)
                     .Select(t => new TokenRow(t, new RelayCommand(() => Answer = (Answer.TrimEnd() + " " + t).TrimStart())))
                     .ToList();
                 break;
@@ -147,6 +153,8 @@ public partial class PlayerViewModel : ObservableObject
             Translation = item.En ?? "";
 
         var firstTry = !_repeated.Contains(item);
+        if (firstTry)
+            _session.OnAnswer(item, result.IsCorrect);
         if (result.IsCorrect && firstTry)
             _rightFirstTime++;
         if (!result.IsCorrect && _repeated.Add(item))
@@ -178,5 +186,5 @@ public partial class PlayerViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void Back() => _main.ShowUnit(_unit);
+    private void Back() => _session.Back();
 }

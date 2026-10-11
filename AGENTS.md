@@ -273,8 +273,10 @@ For unit U:
 7. Each item records its source: `frame: gen-003, words: [hink, trasig]`.
    Items from a frame with `review: true` inherit `review: true`.
 
-Run it with `dotnet run --project src/Svenska.Generator`. To see what a theme pack gives
-without a unit, add `--theme stadning` (prints the drills, writes nothing).
+Run it with `dotnet run --project src/Svenska.Generator`. It also writes
+`content/generated/theme-<pack>.yaml` for every theme pack: the checked pool that
+Theme practice draws from (made level by level, each word of the pack as focus).
+`--theme stadning` prints one pack's drills without writing them.
 
 Generated files are committed and validated like any other content. The app draws
 randomly from this checked pool at runtime; it never generates sentences itself.
@@ -341,6 +343,10 @@ matches the proper-name code `pm`. Treat `pm` as a single-word proper name and o
    - Grammar cards, filtered to my current level by default.
 5. **Review:** spaced repetition of words and missed items. Start with a simple
    Leitner box scheduler; keep the interface so FSRS can replace it later.
+   (Done in M4: `Svenska.Core/Progress`. A unit's words become cards when the unit is
+   first worked on; a word card shows the meaning and asks for the word, nouns with
+   en/ett. A missed item becomes a card that is due at once. Boxes rest 1, 2, 4, 9 and
+   21 days. Set `SVENSKA_PROGRESS_DB` to use another progress file while testing.)
 6. **Theme practice:** pick any theme pack and practise its known words with the core
    templates, outside the unit order.
 

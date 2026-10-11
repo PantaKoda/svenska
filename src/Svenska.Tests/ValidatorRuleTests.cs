@@ -82,6 +82,7 @@ public class ValidatorRuleTests
     public void The_small_course_is_valid()
     {
         using var dir = Course();
+        dir.WriteGenerated(FakeSaldo.Shop());
         Assert.Empty(Errors(dir));
     }
 
@@ -98,6 +99,7 @@ public class ValidatorRuleTests
         using var dir = Course(unit: Unit
             .Replace("\"Mjölken finns inte.\"", "\"Osten kostar inte 45 Zlatan.\"")
             .Replace("new_grammar:", "names: [Zlatan]\nnew_grammar:"));
+        dir.WriteGenerated(FakeSaldo.Shop());
         Assert.Empty(Errors(dir));
     }
 

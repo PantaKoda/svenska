@@ -29,17 +29,22 @@ public static class AudioFiles
             foreach (var word in unit.NewWords)
                 lines.Add((word, false));
 
-            var generated = course.Generated.Where(g => g.Unit == unit.Id).SelectMany(g => g.Items);
-            var sentences = unit.ModelDialogue.Select(l => l.Sv)
-                .Concat(unit.Exercises.Concat(generated)
-                    .Where(i => i.Type == ExerciseText.Dictation && !string.IsNullOrWhiteSpace(i.Sv))
-                    .Select(i => i.Sv!));
+            Both(unit.ModelDialogue.Select(l => l.Sv).Concat(Dictation(unit.Exercises)));
+        }
+        // Unit drills and theme practice drills.
+        Both(Dictation(course.Generated.SelectMany(g => g.Items)));
+        return lines.Distinct().ToList();
+
+        void Both(IEnumerable<string> sentences)
+        {
             foreach (var sentence in sentences)
             {
                 lines.Add((sentence.Trim(), false));
                 lines.Add((sentence.Trim(), true));
             }
         }
-        return lines.Distinct().ToList();
+
+        static IEnumerable<string> Dictation(IEnumerable<ExerciseItem> items) =>
+            items.Where(i => i.Type == ExerciseText.Dictation && !string.IsNullOrWhiteSpace(i.Sv)).Select(i => i.Sv!);
     }
 }

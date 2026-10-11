@@ -27,6 +27,7 @@ public partial class UnitViewModel : ObservableObject
     public IReadOnlyList<LineRow> Dialogue { get; }
     public string StartText { get; }
     public bool HasExercises { get; }
+    public string ProgressText { get; }
 
     public UnitViewModel(MainWindowViewModel main, Unit unit)
     {
@@ -47,11 +48,12 @@ public partial class UnitViewModel : ObservableObject
             new RelayCommand(() => services.Play(line.Sv)),
             new RelayCommand(() => services.Play(line.Sv, slow: true)))).ToList();
 
-        var pool = ExerciseSession.Pool(services.Course, unit).Count;
+        var (done, pool) = services.Progress.UnitProgress(unit);
         HasExercises = pool > 0;
         StartText = pool > ExerciseSession.DefaultSize
             ? $"Start exercises ({ExerciseSession.DefaultSize} of {pool})"
             : $"Start exercises ({pool})";
+        ProgressText = done == 0 ? "" : $"{done} of {pool} done";
     }
 
     [RelayCommand]

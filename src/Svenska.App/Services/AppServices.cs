@@ -1,6 +1,7 @@
 using Svenska.Core.Answers;
 using Svenska.Core.Audio;
 using Svenska.Core.Content;
+using Svenska.Core.Progress;
 using Svenska.Core.Saldo;
 
 namespace Svenska.App.Services;
@@ -11,6 +12,19 @@ public sealed class AppServices : IDisposable
     private SaldoLexicon? _saldo;
     private IAudioPlayer? _audio;
     private bool _audioFailed;
+    private readonly ProgressStore _progressStore;
+
+    /// <summary>The learner's progress and review queue.</summary>
+    public ProgressTracker Progress { get; }
+
+    /// <summary>
+    /// progress.db in the user's app-data folder (%APPDATA%\Svenska, ~/.config/Svenska).
+    /// SVENSKA_PROGRESS_DB overrides the path, for trying things out without touching real progress.
+    /// </summary>
+    public static string ProgressPath =>
+        Environment.GetEnvironmentVariable("SVENSKA_PROGRESS_DB") is { Length: > 0 } custom
+            ? custom
+            : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Svenska", "progress.db");
 
     public string? ContentDir { get; }
     public Course Course { get; } = new();
@@ -19,11 +33,14 @@ public sealed class AppServices : IDisposable
     public AppServices()
     {
         ContentDir = ContentLoader.FindContentDir(AppContext.BaseDirectory);
-        if (ContentDir == null)
-            return;
-        var (course, issues) = ContentLoader.Load(ContentDir);
-        Course = course;
-        ContentErrors = issues.Count(i => i.Severity == Severity.Error);
+        if (ContentDir != null)
+        {
+            var (course, issues) = ContentLoader.Load(ContentDir);
+            Course = course;
+            ContentErrors = issues.Count(i => i.Severity == Severity.Error);
+        }
+        _progressStore = new ProgressStore(ProgressPath);
+        Progress = new ProgressTracker(Course, _progressStore, new LeitnerScheduler(), () => DateTime.UtcNow);
     }
 
     /// <summary>Null when data/saldo.db has not been built; answers are then checked without it.</summary>
@@ -76,6 +93,7 @@ public sealed class AppServices : IDisposable
     public void Dispose()
     {
         ReleaseFiles();
+        _progressStore.Dispose();
         _audio?.Dispose();
     }
 }

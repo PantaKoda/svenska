@@ -5,6 +5,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Svenska.App.Services;
 using Svenska.Core.Content;
+using Svenska.Core.Exercises;
 
 namespace Svenska.App.ViewModels;
 
@@ -43,7 +44,24 @@ public partial class MainWindowViewModel : ObservableObject
         Services.Progress.UnitSession(unit, Random.Shared),
         unit.Names,
         (item, correct) => Services.Progress.RecordUnitAnswer(unit, item, correct),
-        () => ShowUnit(unit)));
+        () => ShowUnit(unit),
+        Glosses: unit.Glosses));
+
+    /// <summary>The unit's final task: a scripted dialogue, one reply of the learner at a time.</summary>
+    public void ShowFinalTask(Unit unit)
+    {
+        if (unit.FinalTask == null)
+            return;
+        var steps = DialogueTask.Steps(unit.FinalTask).ToDictionary(s => s.Item, ReferenceEqualityComparer.Instance as IEqualityComparer<ExerciseItem>);
+        Page = new PlayerViewModel(this, new PlayerSession(
+            $"{unit.Title} · final task",
+            [.. steps.Keys],
+            unit.Names,
+            (item, correct) => Services.Progress.RecordFinalAnswer(unit, steps[item], correct),
+            () => ShowUnit(unit),
+            item => steps[item].Heard,
+            unit.Glosses));
+    }
 
     public void ShowTheme(ThemePack pack) => Page = new ThemeViewModel(this, pack);
 

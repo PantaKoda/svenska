@@ -18,8 +18,12 @@ new_words: [mjölk, kaffe, bröd, ost, smör, ägg, äpple,
 new_grammar: [def_singular]
 scene: svg/matbutik.svg
 
+# Words that are heard but not taught in this unit.
+glosses:
+  bli: "det blir 149 kronor = that comes to 149 kronor"
+
 core:
-  templates: [inflect, cloze, dictation, word_order, translate]
+  templates: [scene_click, inflect, cloze, dictation, word_order, translate, listen_choose]
   items_per_template: 6
 
 model_dialogue:
@@ -74,5 +78,40 @@ exercises:
       grammar: [negation_inte, def_singular] }
   - { type: word_order, sv: "Jag betalar inte med kort.", en: "I'm not paying by card.",
       grammar: [negation_inte] }
+
+  # listen for the price
+  - { type: numbers, sv: "Brödet kostar 25 kronor.", hint: "the price in kronor", answer: "25",
+      en: "The bread costs 25 kronor.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Osten kostar 62 kronor.", hint: "the price in kronor", answer: "62",
+      en: "The cheese costs 62 kronor.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Det blir 149 kronor.", hint: "the price in kronor", answer: "149",
+      en: "That comes to 149 kronor.", grammar: [numbers_0_1000] }
+
+  # listen and choose the answer that fits
+  - { type: listen_choose, sv: "Behöver du en påse?", en: "Do you need a bag?",
+      options: ["Ja tack.", "Vid kassan.", "Den kostar 3 kronor."], answer: "Ja tack.",
+      grammar: [yes_no_question] }
+  - { type: listen_choose, sv: "Var finns mjölken?", en: "Where is the milk?",
+      options: ["Där, vid osten.", "Ja tack.", "Med kort."], answer: "Där, vid osten.",
+      grammar: [wh_question] }
+
+# The task itself: find the coffee, then pay at the checkout.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: du, en: "Say hi and ask where the coffee is.",
+        answer: "Hej! Var finns kaffet?", accept: ["Hej! Var är kaffet?"] }
+    - { speaker: personal, sv: "Kaffet finns där, vid brödet.", en: "The coffee is there, by the bread." }
+    - { speaker: du, en: "Say thanks and ask if they have eggs.",
+        options: ["Tack! Har ni ägg?", "Tack! Vad kostar ägget?", "Ja tack. Jag behöver ägg."],
+        answer: "Tack! Har ni ägg?" }
+    - { speaker: personal, sv: "Ja, vid osten.", en: "Yes, by the cheese." }
+    - { speaker: kassör, sv: "Hej! Behöver du en påse?", en: "Hi! Do you need a bag?" }
+    - { speaker: du, en: "Say no thanks.", answer: "Nej tack." }
+    - { speaker: kassör, sv: "Det blir 149 kronor.", en: "That comes to 149 kronor." }
+    - { speaker: du, en: "Say that you pay by card.", answer: "Jag betalar med kort." }
+    - { speaker: kassör, sv: "Behöver du kvittot?", en: "Do you need the receipt?" }
+    - { speaker: du, en: "Say yes, please.",
+        options: ["Ja tack.", "Vid kassan.", "Jag köper kvittot."], answer: "Ja tack." }
 
 speaking_prompt: "Say aloud: ask where the milk is, then ask what the cheese costs, and say that you pay by card."

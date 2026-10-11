@@ -165,7 +165,9 @@ frames:            # theme-specific frames (3–6 per theme), same syntax as fra
   a unit lists it in `new_words`.
 - Inflected forms come from `saldo.db`. If a word is missing there, add `forms:` by hand.
 - `svg` is the element id in the theme scene (ids are `w-<lemma>`, ASCII only:
-  å→a, ä→a, ö→o).
+  å→a, ä→a, ö→o). Draw one group per word: `<g id="w-mjolk">…</g>`. A click counts for
+  the smallest word element under it, so a thing may lie on top of another.
+  `Svenska.App --scene content/svg/x.svg out.png` lists the elements it finds.
 
 ### Frames (`content/frames.yaml` and in packs)
 A frame is a sentence with slots. Generic frames work for every theme:
@@ -246,6 +248,20 @@ Fields per type (the four written types, settled in M1):
 - `word_order`: `sv` (the tokens are shuffled by the app), `en`.
 - `translate`: `en` (the prompt), `sv` (the answer), `accept` for other good answers.
   The generator fills `accept` with its other sentences that have the same English.
+- `scene_click`: `lemma`. The word is heard; the learner clicks its element (the word's
+  `svg` id) in the scene of the word's pack. The scene must be drawn.
+- `numbers`: `sv` (heard), `answer` in digits, `hint` (what to listen for), `en`.
+  Only the digits of the reply are compared.
+- `listen_choose`: `sv` (heard), `options`, `answer` (one of the options), `en`.
+  Options are English meanings (generated) or Swedish replies (authored).
+- `dialogue` (the `final_task`): `turns`. A turn of another speaker has `speaker`, `sv`,
+  `en` and is heard. A turn of `du` has `en` (what to say) and `answer`; with `options`
+  the reply is chosen, without it is typed (`accept` for other good replies).
+  The last turn must be the learner's.
+
+What is heard may contain a few words that are not known yet (rule 3). Give each one a
+meaning in the unit: `glosses: { bli: "det blir … = that comes to …" }`. The key is the
+base form or the form heard. The app shows the gloss with the transcript.
 
 Every item that checks an answer has `answer` and optional `accept: [..]`.
 Every item has `grammar: [..]` tags and optional `review: true`.

@@ -358,6 +358,126 @@ items:
   frame: gen-001
   words:
   - dammsugare
+- type: listen_choose
+  sv: Jag har inte trasan.
+  answer: I don't have the cloth.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the cloth.
+  - I don't have the bucket.
+  - I don't have the rubbish bag.
+  frame: gen-004
+  words:
+  - trasa
+- type: listen_choose
+  sv: Kan du torka golvet?
+  answer: Can you wipe the floor?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you wipe the floor?
+  - Can you mop the window?
+  - Can you vacuum the window?
+  frame: stad-03
+  words:
+  - torka
+  - golv
+- type: listen_choose
+  sv: Kan du ta moppen?
+  answer: Can you take the mop?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the mop?
+  - Can you buy the bucket?
+  - Can you take the cloth?
+  frame: gen-009
+  words:
+  - ta
+  - mopp
+- type: listen_choose
+  sv: Jag vill ha en trasa.
+  answer: I want a cloth.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a cloth.
+  - I want a mop.
+  - I want a vacuum cleaner.
+  frame: gen-008
+  words:
+  - trasa
+- type: listen_choose
+  sv: Vi tar inte soppåsen.
+  answer: We don't take the rubbish bag.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the rubbish bag.
+  - We don't buy the bucket.
+  - We don't take the bucket.
+  frame: gen-011
+  words:
+  - ta
+  - soppåse
+- type: listen_choose
+  sv: Jag köper dammsugaren.
+  answer: I buy the vacuum cleaner.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I buy the vacuum cleaner.
+  - I buy the rubbish bag.
+  - I take the rubbish bag.
+  frame: gen-010
+  words:
+  - köpa
+  - dammsugare
+- type: listen_choose
+  sv: Fönstret är rent.
+  answer: The window is clean.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  options:
+  - The window is clean.
+  - The mop is broken.
+  - The vacuum cleaner is clean.
+  frame: gen-003
+  words:
+  - fönster
+  - ren
+- type: listen_choose
+  sv: Jag har inte hinken.
+  answer: I don't have the bucket.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the bucket.
+  - I don't have the rubbish bag.
+  - I don't have the cloth.
+  frame: gen-004
+  words:
+  - hink
 - type: inflect
   answer: moppen
   grammar:

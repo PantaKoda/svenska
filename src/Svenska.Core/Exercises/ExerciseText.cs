@@ -3,7 +3,7 @@ using Svenska.Core.Text;
 
 namespace Svenska.Core.Exercises;
 
-/// <summary>What an exercise item shows and expects, for the written exercise types.</summary>
+/// <summary>What an exercise item shows and expects.</summary>
 public static class ExerciseText
 {
     public const string Gap = "___";
@@ -14,18 +14,27 @@ public static class ExerciseText
     public const string WordOrder = "word_order";
     public const string Translate = "translate";
     public const string SceneClick = "scene_click";
+    public const string ListenChoose = "listen_choose";
+    public const string Numbers = "numbers";
+    public const string Dialogue = "dialogue";
 
-    /// <summary>The types the exercise player can run.</summary>
-    public static readonly string[] Playable = [Dictation, Cloze, Inflect, WordOrder, Translate];
+    /// <summary>The types the exercise player can run as single items.</summary>
+    public static readonly string[] Playable =
+        [Dictation, Cloze, Inflect, WordOrder, Translate, SceneClick, ListenChoose, Numbers];
 
-    /// <summary>All types of AGENTS.md; the others get their fields and player in M2 and M5.</summary>
-    public static readonly string[] AllTypes =
-        [.. Playable, SceneClick, "listen_choose", "numbers", "dialogue", "free_write"];
+    /// <summary>The types where the learner writes Swedish: every word must be known (rule 2).</summary>
+    public static readonly string[] Written = [Dictation, Cloze, Inflect, WordOrder, Translate];
 
-    /// <summary>What the learner must type.</summary>
+    /// <summary>The types where the learner hears a Swedish sentence (`sv`) that has audio.</summary>
+    public static readonly string[] Heard = [Dictation, ListenChoose, Numbers];
+
+    /// <summary>All types of AGENTS.md. free_write has no player yet.</summary>
+    public static readonly string[] AllTypes = [.. Playable, Dialogue, "free_write"];
+
+    /// <summary>What the learner must type or choose.</summary>
     public static string Expected(ExerciseItem item) => item.Type switch
     {
-        Cloze or Inflect => item.Answer ?? "",
+        Cloze or Inflect or Numbers or ListenChoose => item.Answer ?? "",
         _ => item.Answer ?? item.Sv ?? "",
     };
 

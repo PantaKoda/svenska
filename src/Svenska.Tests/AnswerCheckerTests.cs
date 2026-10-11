@@ -27,6 +27,14 @@ public class AnswerCheckerTests
     }
 
     [Fact]
+    public void The_capital_of_a_second_sentence_does_not_matter_either()
+    {
+        Assert.True(_checker.Check("hej var finns kaffet", "Hej! Var finns kaffet?").IsCorrect);
+        Assert.True(_checker.Check("Ja tack. vad kostar påsen?", "Ja tack. Vad kostar påsen?").IsCorrect);
+        Assert.False(_checker.Check("Hej! Var finns Kaffet?", "Hej! Var finns kaffet?").IsCorrect);
+    }
+
+    [Fact]
     public void Accepted_alternatives_are_correct()
     {
         Assert.True(_checker.Check("Vad kostar brödet", "Vad kostar osten?", ["Vad kostar brödet?"]).IsCorrect);

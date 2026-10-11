@@ -60,8 +60,36 @@ public sealed class AppServices : IDisposable
 
     public AnswerChecker CreateChecker() => new(Saldo);
 
+    private int _playRequest;
+
     /// <summary>Plays the audio of a Swedish line. False if there is no file or no sound device.</summary>
     public bool Play(string text, bool slow = false)
+    {
+        _playRequest++; // ends a sequence that is still playing
+        return PlayFile(text, slow);
+    }
+
+    /// <summary>Plays several lines one after the other (what is heard before a dialogue reply).</summary>
+    public async void PlayAll(IReadOnlyList<string> texts)
+    {
+        var request = ++_playRequest;
+        foreach (var text in texts)
+        {
+            if (request != _playRequest || !PlayFile(text, slow: false))
+                continue;
+            while (request == _playRequest && _audio is { IsPlaying: true })
+                await Task.Delay(60);
+            await Task.Delay(250);
+        }
+    }
+
+    public void StopAudio()
+    {
+        _playRequest++;
+        _audio?.Stop();
+    }
+
+    private bool PlayFile(string text, bool slow)
     {
         if (ContentDir == null || _audioFailed)
             return false;

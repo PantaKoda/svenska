@@ -79,8 +79,8 @@ public sealed class DialogueLine
 }
 
 /// <summary>
-/// One exercise item, authored or generated. Only the fields AGENTS.md names are here;
-/// the per-type fields are settled in M1 and M5 when the exercise types are implemented.
+/// One exercise item, authored or generated. Which fields a type uses is listed in
+/// AGENTS.md ("Fields per type"); the validator checks it.
 /// </summary>
 public sealed class ExerciseItem
 {
@@ -94,8 +94,13 @@ public sealed class ExerciseItem
     public bool Review { get; set; }
     public List<ExerciseItem>? Turns { get; set; }
 
-    /// <summary>cloze: the base form of the missing word, shown as help.</summary>
+    /// <summary>
+    /// cloze: the base form of the missing word, shown as help.
+    /// numbers: what to listen for ("the price").
+    /// </summary>
     public string? Hint { get; set; }
+    /// <summary>listen_choose and a chosen dialogue turn: the choices; `answer` is one of them.</summary>
+    public List<string> Options { get; set; } = [];
     /// <summary>inflect: the word to inflect and the form asked for (indef, def, pl, pres …).</summary>
     public string? Lemma { get; set; }
     public string? Form { get; set; }
@@ -128,6 +133,11 @@ public sealed class Unit
     public List<string> NewWords { get; set; } = [];
     public List<string> NewGrammar { get; set; } = [];
     public List<string> Names { get; set; } = [];
+    /// <summary>
+    /// Meanings of the few words in the unit's listening texts that are not known yet
+    /// (word → meaning). Shown with the transcript.
+    /// </summary>
+    public Dictionary<string, string> Glosses { get; set; } = [];
     public string? Scene { get; set; }
     public CoreSpec? Core { get; set; }
     public List<DialogueLine> ModelDialogue { get; set; } = [];

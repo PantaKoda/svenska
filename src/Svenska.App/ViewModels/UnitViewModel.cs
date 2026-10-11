@@ -28,6 +28,10 @@ public partial class UnitViewModel : ObservableObject
     public string StartText { get; }
     public bool HasExercises { get; }
     public string ProgressText { get; }
+    public bool HasFinalTask => _unit.FinalTask != null;
+    public string FinalTaskText { get; }
+    /// <summary>The unit's glossed words, shown with the transcript: "bli: …".</summary>
+    public string GlossText => string.Join("\n", _unit.Glosses.Select(g => $"{g.Key}: {g.Value}"));
 
     public UnitViewModel(MainWindowViewModel main, Unit unit)
     {
@@ -54,6 +58,7 @@ public partial class UnitViewModel : ObservableObject
             ? $"Start exercises ({ExerciseSession.DefaultSize} of {pool})"
             : $"Start exercises ({pool})";
         ProgressText = done == 0 ? "" : $"{done} of {pool} done";
+        FinalTaskText = services.Progress.FinalTaskDone(unit) ? "Done. You can do it again." : unit.Task;
     }
 
     [RelayCommand]
@@ -61,4 +66,7 @@ public partial class UnitViewModel : ObservableObject
 
     [RelayCommand]
     private void Start() => _main.ShowExercises(_unit);
+
+    [RelayCommand]
+    private void StartFinalTask() => _main.ShowFinalTask(_unit);
 }

@@ -53,13 +53,30 @@ public sealed class ProgressTracker(Course course, ProgressStore store, ISchedul
                 store.SaveCard(WordPrefix + lemma, scheduler.New(now(), dueNow: false));
     }
 
+    // ---- final task ----
+
+    private static string FinalSource(Unit unit) => unit.Id + "/final";
+
+    public void RecordFinalAnswer(Unit unit, DialogueStep step, bool correct) =>
+        store.RecordResult(FinalSource(unit), $"{FinalSource(unit)}:{step.Index}", correct, now());
+
+    /// <summary>True when every reply of the unit's final task has been right at least once.</summary>
+    public bool FinalTaskDone(Unit unit)
+    {
+        if (unit.FinalTask == null)
+            return false;
+        var right = store.RightKeys(FinalSource(unit));
+        var steps = DialogueTask.Steps(unit.FinalTask);
+        return steps.Count > 0 && steps.All(s => right.Contains($"{FinalSource(unit)}:{s.Index}"));
+    }
+
     // ---- what the learner knows ----
 
     /// <summary>The units up to the last one the learner has worked on.</summary>
     private List<Unit> UnitsSoFar()
     {
         var started = store.StartedSources();
-        var last = course.Units.FindLastIndex(u => started.Contains(u.Id));
+        var last = course.Units.FindLastIndex(u => started.Contains(u.Id) || started.Contains(FinalSource(u)));
         return course.Units.Take(last + 1).ToList();
     }
 

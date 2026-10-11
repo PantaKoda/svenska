@@ -20,7 +20,10 @@ public static class AudioFiles
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(key)))[..20].ToLowerInvariant() + ".ogg";
     }
 
-    /// <summary>Every line that is played: new words, model dialogues and dictation sentences.</summary>
+    /// <summary>
+    /// Every line that is played: new words, model dialogues, the sentences of the listening
+    /// exercises and what the learner hears in the final task.
+    /// </summary>
     public static List<(string Text, bool Slow)> Lines(Course course)
     {
         var lines = new List<(string, bool)>();
@@ -29,10 +32,15 @@ public static class AudioFiles
             foreach (var word in unit.NewWords)
                 lines.Add((word, false));
 
-            Both(unit.ModelDialogue.Select(l => l.Sv).Concat(Dictation(unit.Exercises)));
+            Both(unit.ModelDialogue.Select(l => l.Sv).Concat(Heard(unit.Exercises)));
+            if (unit.FinalTask != null)
+                Both(DialogueTask.Steps(unit.FinalTask).SelectMany(s => s.Heard).Select(l => l.Sv));
         }
-        // Unit drills and theme practice drills.
-        Both(Dictation(course.Generated.SelectMany(g => g.Items)));
+        // Unit drills and theme practice drills. A scene_click word is heard too.
+        var generated = course.Generated.SelectMany(g => g.Items).ToList();
+        Both(Heard(generated));
+        foreach (var item in generated.Where(i => i.Type == ExerciseText.SceneClick && i.Lemma != null))
+            lines.Add((item.Lemma!, false));
         return lines.Distinct().ToList();
 
         void Both(IEnumerable<string> sentences)
@@ -44,7 +52,7 @@ public static class AudioFiles
             }
         }
 
-        static IEnumerable<string> Dictation(IEnumerable<ExerciseItem> items) =>
-            items.Where(i => i.Type == ExerciseText.Dictation && !string.IsNullOrWhiteSpace(i.Sv)).Select(i => i.Sv!);
+        static IEnumerable<string> Heard(IEnumerable<ExerciseItem> items) =>
+            items.Where(i => ExerciseText.Heard.Contains(i.Type) && !string.IsNullOrWhiteSpace(i.Sv)).Select(i => i.Sv!);
     }
 }

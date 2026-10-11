@@ -62,7 +62,7 @@ public class ValidatorRuleTests
           - { type: cloze, sv: "Vad kostar ___?", hint: ost, answer: osten, grammar: [def_singular] }
           - { type: inflect, lemma: ost, form: def, answer: osten }
           - { type: word_order, sv: "Mjölken finns inte.", en: "The milk is not there." }
-        final_task: { type: dialogue, turns: [] }
+        final_task: { type: dialogue, turns: [{ speaker: du, en: "Ask where the milk is.", answer: "Var finns mjölken?" }] }
         """;
 
     private static List<ContentIssue> Errors(TempDir dir)

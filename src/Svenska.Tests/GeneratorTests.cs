@@ -68,7 +68,7 @@ public class GeneratorTests
             core:
               templates: [cloze, dictation, word_order, translate, inflect]
               items_per_template: 4
-            final_task: { type: dialogue, turns: [] }
+            final_task: { type: dialogue, turns: [{ speaker: du, en: "Ask where the cheese is.", answer: "Var finns osten?" }] }
             {{unitExtra}}
             """);
         return dir;
@@ -286,14 +286,14 @@ public class GeneratorTests
     [Fact]
     public void A_session_draws_from_authored_and_generated_items()
     {
-        using var dir = Course(unitExtra: "exercises:\n  - { type: dictation, sv: \"Var finns osten?\" }\n  - { type: scene_click, lemma: ost }");
+        using var dir = Course(unitExtra: "exercises:\n  - { type: dictation, sv: \"Var finns osten?\" }\n  - { type: free_write }");
         dir.Write("generated/a1-01.yaml", DrillGenerator.ToYaml(Generate(dir).File));
         var (course, _) = ContentLoader.Load(dir.Path);
 
         var pool = Svenska.Core.Exercises.ExerciseSession.Pool(course, course.Units[0]);
         var session = Svenska.Core.Exercises.ExerciseSession.Pick(pool, new Random(1), size: 5);
 
-        Assert.Equal(1 + course.Generated.Single(g => g.Unit == "a1-01").Items.Count, pool.Count);   // scene_click is not playable yet
+        Assert.Equal(1 + course.Generated.Single(g => g.Unit == "a1-01").Items.Count, pool.Count);   // free_write is not playable
         Assert.Equal(5, session.Distinct().Count());
         Assert.All(session, i => Assert.Contains(i, pool));
     }

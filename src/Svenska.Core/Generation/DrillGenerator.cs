@@ -19,7 +19,7 @@ public sealed record GenerationResult(GeneratedFile File, List<string> Notes);
 public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
 {
     private static readonly string[] SentenceTemplates =
-        [ExerciseText.Cloze, ExerciseText.Dictation, ExerciseText.WordOrder, ExerciseText.Translate];
+        [ExerciseText.Cloze, ExerciseText.Dictation, ExerciseText.WordOrder, ExerciseText.Translate, ExerciseText.ListenChoose];
 
     /// <summary>The templates a unit may list under core.templates.</summary>
     public static readonly string[] Templates = [.. SentenceTemplates, ExerciseText.Inflect, ExerciseText.SceneClick];
@@ -75,6 +75,19 @@ public sealed class DrillGenerator(Course course, ISaldoLexicon saldo)
                     // Another sentence with the same English is an equally good translation.
                     if (template == ExerciseText.Translate)
                         item.Accept = [.. sentences.Where(s => s.En == best.En && s.Sv != best.Sv).Select(s => s.Sv).Order(StringComparer.Ordinal)];
+                    if (template == ExerciseText.ListenChoose)
+                    {
+                        // The meaning, with two wrong meanings: first from the same frame
+                        // (another word), then from sentences with the same word.
+                        var wrong = sentences.Where(s => s.En != best.En)
+                            .OrderBy(s => s.Frame.Id == best.Frame.Id ? 0 : s.Words.Intersect(best.Words).Any() ? 1 : 2)
+                            .Select(s => s.En).Distinct().Take(2).ToList();
+                        if (wrong.Count < 2)
+                            continue;
+                        item.Answer = best.En;
+                        item.Options = [best.En, .. wrong];
+                        item.En = null;
+                    }
                     items.Add(item);
                 }
                 var made = items.Count(i => i.Type == template);

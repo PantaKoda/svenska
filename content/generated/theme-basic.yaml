@@ -392,6 +392,131 @@ items:
   words:
   - ta
   - ost
+- type: listen_choose
+  sv: Jag tar äpplet.
+  answer: I take the apple.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I take the apple.
+  - I take the bag.
+  - I take the bread.
+  frame: gen-010
+  words:
+  - ta
+  - äpple
+- type: listen_choose
+  sv: Kan du ta smöret?
+  answer: Can you take the butter?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the butter?
+  - Can you take the vacuum cleaner?
+  - Can you take the apple?
+  frame: gen-009
+  words:
+  - ta
+  - smör
+- type: listen_choose
+  sv: Vi tar inte kaffet.
+  answer: We don't take the coffee.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the coffee.
+  - We don't take the milk.
+  - We don't take the apple.
+  frame: gen-011
+  words:
+  - ta
+  - kaffe
+- type: listen_choose
+  sv: Jag tar osten.
+  answer: I take the cheese.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I take the cheese.
+  - I take the bag.
+  - I take the bread.
+  frame: gen-010
+  words:
+  - ta
+  - ost
+- type: listen_choose
+  sv: Vi tar inte trasan.
+  answer: We don't take the cloth.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the cloth.
+  - We don't take the milk.
+  - We don't take the apple.
+  frame: gen-011
+  words:
+  - ta
+  - trasa
+- type: listen_choose
+  sv: Kan du ta påsen?
+  answer: Can you take the bag?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the bag?
+  - Can you take the vacuum cleaner?
+  - Can you take the apple?
+  frame: gen-009
+  words:
+  - ta
+  - påse
+- type: listen_choose
+  sv: Jag tar ägget.
+  answer: I take the egg.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I take the egg.
+  - I take the bag.
+  - I take the bread.
+  frame: gen-010
+  words:
+  - ta
+  - ägg
+- type: listen_choose
+  sv: Vi tar inte mjölken.
+  answer: We don't take the milk.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't take the milk.
+  - We don't take the apple.
+  - We don't take the mop.
+  frame: gen-011
+  words:
+  - ta
+  - mjölk
 - type: inflect
   answer: behöver
   grammar:

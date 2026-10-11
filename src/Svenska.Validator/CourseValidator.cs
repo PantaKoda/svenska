@@ -3,6 +3,7 @@ using Svenska.Core.Content;
 using Svenska.Core.Exercises;
 using Svenska.Core.Generation;
 using Svenska.Core.Saldo;
+using Svenska.Core.Scenes;
 using Svenska.Core.Text;
 
 namespace Svenska.Validator;
@@ -245,11 +246,67 @@ public sealed class CourseValidator
             }
         }
 
+        foreach (var pack in _course.Packs)
+            CheckScene(pack);
+
         foreach (var lemma in Duplicates(_course.Packs.SelectMany(p => p.Words).Select(w => w.Lemma)))
         {
             var packs = _course.Packs.Where(p => p.Words.Any(w => w.Lemma == lemma)).Select(p => p.Theme).Distinct();
             Error("themes", $"word '{lemma}' is listed more than once ({string.Join(", ", packs)})", 6);
         }
+    }
+
+    /// <summary>The word ids of a pack's drawn scene, or null if it is not drawn (or not checked).</summary>
+    private HashSet<string>? SceneIds(ThemePack? pack)
+    {
+        if (_contentDir == null || pack?.Scene == null)
+            return null;
+        var path = Path.Combine(_contentDir, pack.Scene);
+        if (!File.Exists(path))
+            return null;
+        try
+        {
+            return SceneMap.WordIds(path);
+        }
+        catch (System.Xml.XmlException)
+        {
+            return null; // reported by CheckScene
+        }
+    }
+
+    /// <summary>A word's `svg` id must be an element of the pack's scene, once the scene is drawn.</summary>
+    private void CheckScene(ThemePack pack)
+    {
+        var file = $"themes/{pack.Theme}.yaml";
+        var withSvg = pack.Words.Where(w => w.Svg != null).ToList();
+        if (_contentDir == null || (pack.Scene == null && withSvg.Count == 0))
+            return;
+        if (pack.Scene == null)
+        {
+            Error(file, "words have svg ids but the pack has no scene");
+            return;
+        }
+        var path = Path.Combine(_contentDir, pack.Scene);
+        if (!File.Exists(path))
+        {
+            Warning(file, $"the scene {pack.Scene} is not drawn yet; its words cannot be used in scene_click");
+            return;
+        }
+        HashSet<string> ids;
+        try
+        {
+            ids = SceneMap.WordIds(path);
+        }
+        catch (System.Xml.XmlException e)
+        {
+            Error(pack.Scene, $"is not valid SVG: {e.Message}");
+            return;
+        }
+        foreach (var word in withSvg.Where(w => !ids.Contains(w.Svg!)))
+            Error(file, $"'{word.Lemma}': the scene {pack.Scene} has no element with id '{word.Svg}'");
+        var unused = ids.Except(withSvg.Select(w => w.Svg!)).Order().ToList();
+        if (unused.Count > 0)
+            Warning(pack.Scene, $"elements that no word of the pack points to: {string.Join(", ", unused)}");
     }
 
     // ---- units ----
@@ -280,6 +337,7 @@ public sealed class CourseValidator
             CheckUnitWords(unit, file, introduced);
             CheckUnitGrammar(unit, file, knownGrammar);
 
+            CheckFinalTask(unit, file);
             var items = ItemsOf(unit).ToList();
             foreach (var item in items)
                 CheckItem(unit, file, item, knownGrammar);
@@ -329,12 +387,40 @@ public sealed class CourseValidator
                 Error(file, $"grammar '{id}' requires '{required}', which is not introduced yet", 4);
     }
 
+    /// <summary>The unit's authored and generated items, and the learner's replies in the final task.</summary>
     private IEnumerable<ExerciseItem> ItemsOf(Unit unit)
     {
         var items = unit.Exercises.AsEnumerable();
-        if (unit.FinalTask != null)
-            items = items.Append(unit.FinalTask).Concat(unit.FinalTask.Turns ?? []);
+        if (unit.FinalTask is { Type: ExerciseText.Dialogue } task)
+            items = items.Concat(DialogueTask.Steps(task).Select(s => s.Item));
         return items.Concat(_course.Generated.Where(g => g.Unit == unit.Id).SelectMany(g => g.Items));
+    }
+
+    private void CheckFinalTask(Unit unit, string file)
+    {
+        if (unit.FinalTask is not { } task)
+            return;
+        if (task.Type != ExerciseText.Dialogue)
+        {
+            Error(file, $"final_task: type '{task.Type}' is not supported (use dialogue)");
+            return;
+        }
+        var turns = task.Turns ?? [];
+        if (turns.Count == 0 || !DialogueTask.IsLearnerTurn(turns[^1]))
+            Error(file, $"final_task: needs turns, and the last one must be the learner's (speaker: {DialogueTask.Learner})");
+
+        foreach (var turn in turns)
+        {
+            if (string.IsNullOrWhiteSpace(turn.Speaker))
+                Error(file, "final_task: every turn needs a speaker");
+            else if (!DialogueTask.IsLearnerTurn(turn))
+            {
+                if (string.IsNullOrWhiteSpace(turn.Sv) || string.IsNullOrWhiteSpace(turn.En))
+                    Error(file, $"final_task: the turn of {turn.Speaker} needs sv and en");
+            }
+            else if (string.IsNullOrWhiteSpace(turn.En) || string.IsNullOrWhiteSpace(turn.Answer))
+                Error(file, $"final_task: a turn of {DialogueTask.Learner} needs en (what to say) and answer");
+        }
     }
 
     /// <summary>Rule 1 (the item has what its type needs) and rule 4 (grammar tags).</summary>
@@ -379,11 +465,52 @@ public sealed class CourseValidator
                 CheckInflectItem(file, item, name);
                 break;
 
+            case ExerciseText.Numbers:
+                if (string.IsNullOrWhiteSpace(item.Sv))
+                    Error(file, $"{name}: needs sv, the sentence that is heard");
+                if (!(item.Answer ?? "").Any(char.IsDigit))
+                    Error(file, $"{name}: answer must be the number in digits");
+                break;
+
+            case ExerciseText.ListenChoose:
+                // A reply in the final task has no sv: there the learner chooses what to say.
+                if (item.Options.Count < 2 || item.Options.Distinct().Count() != item.Options.Count)
+                    Error(file, $"{name}: needs at least two different options");
+                if (!item.Options.Contains(item.Answer ?? ""))
+                    Error(file, $"{name}: answer '{item.Answer}' is not one of the options");
+                break;
+
+            case ExerciseText.SceneClick:
+                CheckSceneClickItem(file, item);
+                break;
+
             default:
                 if (!ExerciseText.AllTypes.Contains(item.Type))
                     Error(file, $"{name}: unknown exercise type '{item.Type}'");
                 break;
         }
+    }
+
+    private void CheckSceneClickItem(string file, ExerciseItem item)
+    {
+        var name = $"scene_click {item.Lemma}";
+        if (item.Lemma == null || !_words.TryGetValue(item.Lemma, out var word))
+        {
+            Error(file, $"{name}: needs lemma, a word of a theme pack", 6);
+            return;
+        }
+        if (word.Svg == null)
+        {
+            Error(file, $"{name}: the word has no svg id in its pack");
+            return;
+        }
+        if (_contentDir == null)
+            return;
+        var pack = _course.Packs.FirstOrDefault(p => p.Words.Contains(word));
+        if (SceneIds(pack) is not { } ids)
+            Error(file, $"{name}: the scene of pack '{pack?.Theme}' is not drawn");
+        else if (!ids.Contains(word.Svg))
+            Error(file, $"{name}: the scene has no element with id '{word.Svg}'");
     }
 
     private void CheckInflectItem(string file, ExerciseItem item, string name)
@@ -452,23 +579,46 @@ public sealed class CourseValidator
             return;
         var known = _vocabulary.KnownWords(unit);
 
-        foreach (var item in items.Where(i => ExerciseText.Playable.Contains(i.Type)))
+        // Rule 2. What the learner writes: the written exercise types, and the replies of
+        // the final task. A chosen reply (a listen_choose without sv) has Swedish options.
+        static bool IsChosenReply(ExerciseItem i) => i.Type == ExerciseText.ListenChoose && string.IsNullOrEmpty(i.Sv);
+        foreach (var item in items.Where(i => ExerciseText.Written.Contains(i.Type) || IsChosenReply(i)))
         {
-            var texts = new[] { ExerciseText.FullSentence(item), item.Hint ?? "" }.Concat(item.Accept);
+            var texts = new[] { ExerciseText.FullSentence(item), item.Answer ?? "" }.Concat(item.Accept);
+            if (item.Type == ExerciseText.Cloze)
+                texts = texts.Append(item.Hint ?? "");
+            if (IsChosenReply(item))
+                texts = texts.Concat(item.Options);
             var unknown = texts.SelectMany(t => _vocabulary.UnknownTokens(t, known, unit.Names)).Distinct().ToList();
             if (unknown.Count > 0)
                 Error(file, $"{Describe(item)}: not known yet: {string.Join(", ", unknown)}", 2);
         }
 
-        // There is no gloss field yet (it comes with the listening exercises in M5), so a
-        // listening text cannot contain any unknown word.
-        foreach (var line in unit.ModelDialogue)
+        // Rule 3. What the learner hears: the model dialogue, the listening exercises and
+        // the other speakers of the final task. A few unknown words are allowed (under 5 %
+        // of all words heard in the unit) and each needs a gloss in the unit.
+        var heard = unit.ModelDialogue.Select(l => l.Sv)
+            .Concat(items.Where(i => i.Type is ExerciseText.ListenChoose or ExerciseText.Numbers).Select(i => i.Sv ?? ""))
+            .Concat(unit.FinalTask == null ? [] : DialogueTask.Steps(unit.FinalTask).SelectMany(s => s.Heard).Select(l => l.Sv))
+            .ToList();
+        var total = 0;
+        var unknownCount = 0;
+        foreach (var text in heard)
         {
-            var unknown = _vocabulary.UnknownTokens(line.Sv, known, unit.Names);
-            if (unknown.Count > 0)
-                Error(file, $"dialogue \"{line.Sv}\": unknown words without a gloss: {string.Join(", ", unknown)}", 3);
+            total += Tokenizer.Tokens(text).Count(t => !Tokenizer.IsNumber(t));
+            var unknown = _vocabulary.UnknownTokens(text, known, unit.Names);
+            unknownCount += unknown.Count;
+            var noGloss = unknown.Where(t => !HasGloss(unit, t)).ToList();
+            if (noGloss.Count > 0)
+                Error(file, $"listening \"{text}\": unknown words without a gloss: {string.Join(", ", noGloss)}", 3);
         }
+        if (total > 0 && unknownCount > 0.05 * total)
+            Error(file, $"{unknownCount} of the {total} words heard in the unit are unknown (at most 5 %)", 3);
     }
+
+    /// <summary>A gloss may be given for the form heard ("blir") or for its base form ("bli").</summary>
+    private bool HasGloss(Unit unit, string token) =>
+        unit.Glosses.ContainsKey(token.ToLowerInvariant()) || _vocabulary!.LemmasOf(token).Any(unit.Glosses.ContainsKey);
 
     /// <summary>Rule 9: every new word is practised in its own unit.</summary>
     private void CheckNewWordsAreUsed(Unit unit, string file, List<ExerciseItem> items)
@@ -502,7 +652,9 @@ public sealed class CourseValidator
         {
             if (item.Lemma != null)
                 used.Add(item.Lemma);
-            foreach (var token in Tokenizer.Tokens(ExerciseText.FullSentence(item)))
+            // A chosen reply of the final task has its Swedish in the answer, not in sv.
+            var text = string.IsNullOrEmpty(item.Sv) ? item.Answer ?? "" : ExerciseText.FullSentence(item);
+            foreach (var token in Tokenizer.Tokens(text))
                 used.UnionWith(_vocabulary!.LemmasOf(token));
         }
         return used;
@@ -520,9 +672,9 @@ public sealed class CourseValidator
     }
 
     private static string Describe(ExerciseItem item) =>
-        item.Type == ExerciseText.Inflect
-            ? $"inflect {item.Lemma}.{item.Form}"
-            : $"{item.Type} \"{item.Sv}\"";
+        item.Type == ExerciseText.Inflect ? $"inflect {item.Lemma}.{item.Form}"
+        : item.Type == ExerciseText.SceneClick ? $"scene_click {item.Lemma}"
+        : $"{item.Type} \"{item.Sv ?? item.Answer}\"";
 
     private static IEnumerable<string> Duplicates(IEnumerable<string> values) =>
         values.GroupBy(v => v).Where(g => g.Count() > 1).Select(g => g.Key);

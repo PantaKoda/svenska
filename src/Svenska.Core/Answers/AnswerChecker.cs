@@ -66,13 +66,34 @@ public sealed class AnswerChecker(ISaldoLexicon? saldo = null)
         return new(AnswerKind.Wrong, expected, string.Join("\n", lines), wordMarks);
     }
 
-    /// <summary>Lower-case first letter, no punctuation, single spaces, split into words.</summary>
+    /// <summary>
+    /// A number the learner heard (a price, a time, a phone number). Only the digits count:
+    /// "15.30", "15:30" and "1530" are the same answer.
+    /// </summary>
+    public static AnswerResult CheckNumber(string given, string expected)
+    {
+        static string Digits(string text) => new(text.Where(char.IsDigit).ToArray());
+        var right = Digits(given).Length > 0 && Digits(given) == Digits(expected);
+        return new(right ? AnswerKind.Correct : AnswerKind.Wrong, expected, right ? "" : $"It was {expected}.",
+            [new WordMark(expected, right)]);
+    }
+
+    /// <summary>
+    /// The words of an answer without punctuation. Unless <paramref name="keepCase"/>, the
+    /// first letter of every sentence is made lower-case ("Hej! Var finns …" → hej, var, finns).
+    /// </summary>
     private static List<string> Words(string text, bool keepCase = false)
     {
-        var cleaned = new string(text.Where(c => !Punctuation.Contains(c)).ToArray());
-        var words = cleaned.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries).ToList();
-        if (!keepCase && words.Count > 0)
-            words[0] = char.ToLowerInvariant(words[0][0]) + words[0][1..];
+        var words = new List<string>();
+        var sentenceStart = true;
+        foreach (var raw in text.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries))
+        {
+            var word = new string(raw.Where(c => !Punctuation.Contains(c)).ToArray());
+            if (word.Length > 0)
+                words.Add(sentenceStart && !keepCase ? char.ToLowerInvariant(word[0]) + word[1..] : word);
+            if (word.Length > 0 || raw.Length > 0)
+                sentenceStart = raw[^1] is '.' or '!' or '?' or '…';
+        }
         return words;
     }
 

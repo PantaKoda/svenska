@@ -2,6 +2,30 @@
 # and run the generator again.
 unit: a1-04
 items:
+- type: scene_click
+  lemma: mjölk
+  words:
+  - mjölk
+- type: scene_click
+  lemma: kaffe
+  words:
+  - kaffe
+- type: scene_click
+  lemma: bröd
+  words:
+  - bröd
+- type: scene_click
+  lemma: ost
+  words:
+  - ost
+- type: scene_click
+  lemma: smör
+  words:
+  - smör
+- type: scene_click
+  lemma: ägg
+  words:
+  - ägg
 - type: inflect
   answer: smöret
   grammar:
@@ -306,3 +330,88 @@ items:
   frame: gen-007
   words:
   - mjölk
+- type: listen_choose
+  sv: Jag har inte kvittot.
+  answer: I don't have the receipt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the receipt.
+  - I don't have the bag.
+  - Do you have a receipt?
+  frame: gen-004
+  words:
+  - kvitto
+- type: listen_choose
+  sv: Har du en påse?
+  answer: Do you have a bag?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a bag?
+  - Do you have a receipt?
+  - The bag is there.
+  frame: gen-002
+  words:
+  - påse
+- type: listen_choose
+  sv: Var finns brödet?
+  answer: Where is the bread?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the bread?
+  - Where is the egg?
+  - Where is the apple?
+  frame: mat-02
+  words:
+  - bröd
+- type: listen_choose
+  sv: Vad kostar smöret?
+  answer: What does the butter cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - What does the butter cost?
+  - What does the milk cost?
+  - What does the bread cost?
+  frame: mat-01
+  words:
+  - smör
+- type: listen_choose
+  sv: Jag köper osten.
+  answer: I buy the cheese.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I buy the cheese.
+  - I buy the apple.
+  - I buy the bread.
+  frame: gen-010
+  words:
+  - köpa
+  - ost
+- type: listen_choose
+  sv: Har du påsen?
+  answer: Do you have the bag?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Do you have the bag?
+  - Do you have the receipt?
+  - The bag is there.
+  frame: gen-006
+  words:
+  - påse

@@ -352,6 +352,122 @@ items:
   frame: mat-01
   words:
   - kaffe
+- type: listen_choose
+  sv: Jag vill ha en påse.
+  answer: I want a bag.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a bag.
+  - I want a receipt.
+  - Do you have a bag?
+  frame: gen-008
+  words:
+  - påse
+- type: listen_choose
+  sv: Var finns äpplet?
+  answer: Where is the apple?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the apple?
+  - Where is the butter?
+  - Where is the milk?
+  frame: mat-02
+  words:
+  - äpple
+- type: listen_choose
+  sv: Var är mjölken?
+  answer: Where is the milk?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the milk?
+  - Where is the butter?
+  - Where is the egg?
+  frame: gen-001
+  words:
+  - mjölk
+- type: listen_choose
+  sv: Osten är där.
+  answer: The cheese is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The cheese is there.
+  - The apple is there.
+  - The milk is there.
+  frame: gen-007
+  words:
+  - ost
+- type: listen_choose
+  sv: Smöret finns inte där.
+  answer: The butter is not there.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - The butter is not there.
+  - The egg is not there.
+  - The cheese is not there.
+  frame: mat-05
+  words:
+  - smör
+- type: listen_choose
+  sv: Har du ett kvitto?
+  answer: Do you have a receipt?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a receipt?
+  - Do you have a bag?
+  - I want a receipt.
+  frame: gen-002
+  words:
+  - kvitto
+- type: listen_choose
+  sv: Vi köper inte soppåsen.
+  answer: We don't buy the rubbish bag.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't buy the rubbish bag.
+  - We don't buy the coffee.
+  - We don't take the apple.
+  frame: gen-011
+  words:
+  - köpa
+  - soppåse
+- type: listen_choose
+  sv: Kan du ta ägget?
+  answer: Can you take the egg?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the egg?
+  - Can you buy the milk?
+  - Can you buy the rubbish bag?
+  frame: gen-009
+  words:
+  - ta
+  - ägg
 - type: inflect
   answer: ett äpple
   grammar:

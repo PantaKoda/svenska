@@ -46,7 +46,7 @@ public sealed class ProgressTests : IDisposable
                 new Unit
                 {
                     Id = "a1-01", Level = Level.A1, Title = "Shop", NewWords = ["ost", "köpa"], NewGrammar = ["def_singular"],
-                    Exercises = [Dictation("Var finns osten?"), Dictation("Jag köper osten."), new ExerciseItem { Type = "scene_click", Lemma = "ost" }],
+                    Exercises = [Dictation("Var finns osten?"), Dictation("Jag köper osten."), new ExerciseItem { Type = "free_write" }],
                 },
             ],
             Generated =
@@ -99,7 +99,7 @@ public sealed class ProgressTests : IDisposable
     [Fact]
     public void Unit_progress_counts_items_answered_right_at_least_once()
     {
-        Assert.Equal((0, 3), _progress.UnitProgress(Unit));   // two authored + one generated; scene_click is not playable
+        Assert.Equal((0, 3), _progress.UnitProgress(Unit));   // two authored + one generated; free_write is not playable
 
         _progress.RecordUnitAnswer(Unit, Unit.Exercises[0], correct: true);
         _progress.RecordUnitAnswer(Unit, Unit.Exercises[0], correct: true);

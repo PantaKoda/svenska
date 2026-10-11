@@ -1353,3 +1353,67 @@ items:
   form: pl
   words:
   - person
+- type: inflect
+  answer: en relation
+  grammar:
+  - en_ett
+  lemma: relation
+  form: a
+  words:
+  - relation
+- type: inflect
+  answer: egenskaper
+  grammar:
+  - plural_indef
+  lemma: egenskap
+  form: pl
+  words:
+  - egenskap
+- type: inflect
+  answer: känslorna
+  grammar:
+  - plural_def
+  lemma: känsla
+  form: pl_def
+  words:
+  - känsla
+- type: inflect
+  answer: längta
+  grammar:
+  - imperative
+  lemma: längta
+  form: imp
+  words:
+  - längta
+- type: inflect
+  answer: litat
+  grammar:
+  - perfect_tense
+  lemma: lita
+  form: sup
+  words:
+  - lita
+- type: inflect
+  answer: humören
+  grammar:
+  - plural_def
+  lemma: humör
+  form: pl_def
+  words:
+  - humör
+- type: inflect
+  answer: brytt
+  grammar:
+  - perfect_tense
+  lemma: bry
+  form: sup
+  words:
+  - bry
+- type: inflect
+  answer: verkat
+  grammar:
+  - perfect_tense
+  lemma: verka
+  form: sup
+  words:
+  - verka

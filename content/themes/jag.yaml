@@ -46,3 +46,26 @@ words:
   - { lemma: social,       pos: adj,  level: B1, gloss: sociable }
   - { lemma: positiv,      pos: adj,  level: B1, gloss: positive }
   - { lemma: vänlig,       pos: adj,  level: B1, gloss: "kind, friendly" }
+  # B2: feelings and personality
+  - { lemma: känsla,       pos: noun, gender: en,  level: B2, gloss: feeling }
+  - { lemma: personlighet, pos: noun, gender: en,  level: B2, gloss: personality }
+  - { lemma: egenskap,     pos: noun, gender: en,  level: B2, gloss: "quality, characteristic" }
+  - { lemma: humör,        pos: noun, gender: ett, level: B2, gloss: "mood, temper" }
+  - { lemma: relation,     pos: noun, gender: en,  level: B2, gloss: relationship }
+  - { lemma: rädd,         pos: adj,  level: B2, gloss: "afraid (rädd för)" }
+  - { lemma: arg,          pos: adj,  level: B2, gloss: "angry (arg på)" }
+  - { lemma: stolt,        pos: adj,  level: B2, gloss: "proud (stolt över)" }
+  - { lemma: nyfiken,      pos: adj,  level: B2, gloss: "curious (nyfiken på)" }
+  - { lemma: blyg,         pos: adj,  level: B2, gloss: shy }
+  - { lemma: ärlig,        pos: adj,  level: B2, gloss: honest }
+  - { lemma: envis,        pos: adj,  level: B2, gloss: stubborn }
+  - { lemma: generös,      pos: adj,  level: B2, gloss: generous }
+  - { lemma: tålmodig,     pos: adj,  level: B2, gloss: patient }
+  - { lemma: besviken,     pos: adj,  level: B2, gloss: "disappointed (besviken på)" }
+  - { lemma: förvånad,     pos: adj,  level: B2, gloss: "surprised (förvånad över)" }
+  - { lemma: nervös,       pos: adj,  level: B2, gloss: nervous }
+  - { lemma: avundsjuk,    pos: adj,  level: B2, gloss: "jealous, envious (avundsjuk på)" }
+  - { lemma: lita,         pos: verb, level: B2, gloss: "lita på = to trust" }
+  - { lemma: längta,       pos: verb, level: B2, gloss: "längta efter = to long for" }
+  - { lemma: verka,        pos: verb, level: B2, gloss: "to seem" }
+  - { lemma: bry,          pos: verb, level: B2, gloss: "bry sig om = to care about" }

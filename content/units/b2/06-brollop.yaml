@@ -1,0 +1,110 @@
+id: b2-06
+level: B2
+theme: familjen
+title: "Ett bröllop"
+task: "Be a guest at a wedding: react warmly to what you see, congratulate the couple, and say who gave what to whom."
+can_do: "I can react with exclamations, congratulate and thank, and use verbs with two objects."
+names: [Sara, Omar, Maria]
+
+new_words: [bröllop, brud, brudgum, par, ring, tal, inbjudan, kyrka, ceremoni, blomma, klänning, kostym,
+            överraskning, kärlek, gratulera, önska, skänka, låna, tacka, gifta, lycklig, vacker, underbar]
+new_grammar: [exclamations, direct_indirect_object]
+
+phrases:
+  - { sv: "Skål!", en: "Cheers!" }
+  - { sv: "Vad roligt!", en: "How nice! / What fun!" }
+  - { sv: "Vad snällt!", en: "How kind!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vilken fin ceremoni! Och vad vacker bruden är!",                    en: "What a lovely ceremony! And how beautiful the bride is!" }
+  - { speaker: du,   sv: "Ja, och vilken klänning! Var gifte de sig?",                        en: "Yes, and what a dress! Where did they get married?" }
+  - { speaker: Sara, sv: "I en liten kyrka vid havet. Har du gratulerat paret?",              en: "In a little church by the sea. Have you congratulated the couple?" }
+  - { speaker: du,   sv: "Inte än. Jag ska ge dem blommor och en present.",                   en: "Not yet. I am going to give them flowers and a present." }
+  - { speaker: Sara, sv: "Vad snällt! Jag skänkte pengar till deras resa.",                   en: "How kind! I gave money towards their trip." }
+  - { speaker: du,   sv: "Brudgummen lånade förresten min kostym.",                           en: "The bridegroom borrowed my suit, by the way." }
+  - { speaker: Sara, sv: "Vilken överraskning! Den passar honom bra.",                        en: "What a surprise! It suits him well." }
+  - { speaker: du,   sv: "Nu ska Maria hålla tal. Hon har lovat att berätta en rolig sak.",   en: "Now Maria is going to give a speech. She has promised to tell a funny story." }
+  - { speaker: Sara, sv: "Så roligt! Skål för kärleken!",                                     en: "What fun! Cheers to love!" }
+  - { speaker: du,   sv: "Skål! Jag önskar dem ett lyckligt liv tillsammans.",                en: "Cheers! I wish them a happy life together." }
+
+# Heard but not taught in this unit.
+glosses:
+  förresten: "by the way"
+  lova: "har lovat = has promised"
+
+exercises:
+  # react: vad, vilken, vilket, vilka or så?
+  - { type: cloze, sv: "___ vacker du är!", hint: "vad / vilken", answer: Vad, en: "How beautiful you are!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ fin klänning!", hint: "vad / vilken", answer: Vilken, en: "What a lovely dress!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ underbart tal!", hint: vilken, answer: Vilket, en: "What a wonderful speech!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ fina blommor!", hint: vilken, answer: Vilka, en: "What lovely flowers!", grammar: [exclamations] }
+  - { type: word_order, sv: "Vad lyckliga de är!", en: "How happy they are!", grammar: [exclamations] }
+  - { type: word_order, sv: "Så roligt att du kunde komma!", en: "How nice that you could come!", grammar: [exclamations] }
+  - { type: translate, en: "What a surprise!", sv: "Vilken överraskning!", grammar: [exclamations] }
+
+  # who gets what: two objects
+  - { type: word_order, sv: "Jag gav bruden blommorna.", en: "I gave the bride the flowers.", grammar: [direct_indirect_object] }
+  - { type: word_order, sv: "Jag gav blommorna till bruden.", en: "I gave the flowers to the bride.", grammar: [direct_indirect_object] }
+  - { type: word_order, sv: "Kan du visa mig ringen?", en: "Can you show me the ring?", grammar: [direct_indirect_object] }
+  - { type: cloze, sv: "Hon skänkte pengar ___ paret.", answer: till, en: "She gave money to the couple.", grammar: [direct_indirect_object] }
+  - { type: cloze, sv: "Jag gav dem ___ brudgummen.", answer: till, en: "I gave them to the bridegroom.", grammar: [direct_indirect_object] }
+  - { type: translate, en: "We wish you (plural) a happy life.", sv: "Vi önskar er ett lyckligt liv.", grammar: [direct_indirect_object] }
+  - { type: translate, en: "She sent us an invitation.", sv: "Hon skickade oss en inbjudan.", accept: ["Hon skickade en inbjudan till oss."], grammar: [direct_indirect_object] }
+
+  # listen and write
+  - { type: dictation, sv: "De gifte sig i en liten kyrka.", en: "They got married in a little church." }
+  - { type: dictation, sv: "Brudgummen lånade en kostym av sin bror.", en: "The bridegroom borrowed a suit from his brother." }
+  - { type: dictation, sv: "Vi fick en inbjudan till bröllopet.", en: "We got an invitation to the wedding." }
+  - { type: dictation, sv: "Bruden höll ett vackert tal om kärlek.", en: "The bride gave a beautiful speech about love." }
+  - { type: dictation, sv: "Jag vill tacka er för en underbar dag.", en: "I want to thank you for a wonderful day." }
+
+  # say it in Swedish
+  - { type: translate, en: "I want to congratulate the couple.", sv: "Jag vill gratulera paret." }
+  - { type: translate, en: "The ceremony was beautiful.", sv: "Ceremonin var vacker." }
+  - { type: translate, en: "They are getting married in the summer.", sv: "De gifter sig i sommar.", accept: ["De gifter sig på sommaren.", "De ska gifta sig i sommar."] }
+  - { type: translate, en: "Thank you for the flowers!", sv: "Tack för blommorna!" }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Vi ska gifta oss i sommar!", en: "We are getting married this summer!",
+      options: ["Grattis! Vad roligt!", "Lycka till! Det går över.", "Skål! Det stämmer."], answer: "Grattis! Vad roligt!" }
+  - { type: listen_choose, sv: "Maria lånade ut sin klänning till bruden.", en: "Maria lent her dress to the bride.",
+      options: ["The bride wore Maria's dress.", "Maria wore the bride's dress.", "Maria gave the bride a new dress."], answer: "The bride wore Maria's dress." }
+  - { type: listen_choose, sv: "Jag har intervju imorgon.", en: "I have an interview tomorrow.",
+      options: ["Lycka till!", "Skål!", "Grattis!"], answer: "Lycka till!" }
+
+  # write your own text
+  - { type: free_write, en: "Write a card to a couple after their wedding (5 or 6 sentences): congratulate them, react to the day, thank them, and wish them something.",
+      checklist: ["I congratulate the couple.", "I use two exclamations (vad, vilken or så).", "I thank them for something.", "I wish them something, with two objects (önskar er ...)."],
+      sv: "Grattis till er! Vilken underbar dag det var, och vad vackra ni var! Ceremonin i kyrkan var fin och talet om kärlek var roligt. Jag vill tacka er för inbjudan och för en fest som jag aldrig glömmer. Jag önskar er ett långt och lyckligt liv tillsammans. Skål för er!",
+      grammar: [exclamations, direct_indirect_object] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "The bride is proud of her dress.", sv: "Bruden är stolt över sin klänning.", grammar: [prepositions_feelings, possessive_sin] }
+  - { type: word_order, sv: "Det var Maria som höll det bästa talet.", en: "It was Maria who gave the best speech.", grammar: [cleft_sentence, superlative_definite] }
+  - { type: cloze, sv: "Blommorna ___ på bordet bredvid ringen.", hint: "stå / sitta", answer: står, en: "The flowers are on the table next to the ring.", grammar: [position_verbs] }
+  - { type: dictation, sv: "Hela släkten var på bröllopet.", en: "The whole family was at the wedding.", grammar: [hel_all] }
+
+# The task itself: you talk to the bride, Maria, at her wedding.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Maria, sv: "Hej! Så roligt att du kunde komma!", en: "Hello! How nice that you could come!" }
+    - { speaker: du, en: "Say: congratulations! How beautiful you are!", answer: "Grattis! Vad vacker du är!" }
+    - { speaker: Maria, sv: "Tack! Tyckte du om ceremonin?", en: "Thank you! Did you like the ceremony?" }
+    - { speaker: du, en: "Say: yes, what a wonderful ceremony!",
+        options: ["Ja, vilken underbar ceremoni!", "Ja, vilket underbar ceremoni!", "Ja, vad underbar ceremoni!"], answer: "Ja, vilken underbar ceremoni!" }
+    - { speaker: Maria, sv: "Vad snällt av dig att säga det.", en: "How kind of you to say so." }
+    - { speaker: du, en: "Say that you want to give her these flowers.",
+        options: ["Jag vill ge dig de här blommorna.", "Jag vill ge de här blommorna dig.", "Jag vill ge till dig de här blommorna."],
+        answer: "Jag vill ge dig de här blommorna." }
+    - { speaker: Maria, sv: "Vilka fina blommor! Tack!", en: "What lovely flowers! Thank you!" }
+    - { speaker: du, en: "Say that you wish them (her and him: you, plural) a happy life.", answer: "Jag önskar er ett lyckligt liv.",
+        accept: ["Jag önskar er ett lyckligt liv tillsammans."] }
+    - { speaker: Maria, sv: "Tack! Nu ska vi äta tårta. Skål!", en: "Thank you! Now we are going to eat cake. Cheers!" }
+    - { speaker: du, en: "Say: cheers to love!", answer: "Skål för kärleken!" }
+
+speaking_prompt: "Say aloud: a celebration you went to, five exclamations about it, and who gave what to whom."

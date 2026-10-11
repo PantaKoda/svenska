@@ -1,0 +1,33 @@
+theme: vard
+title: "Vård och omsorg"
+# Working in care: residents, aids, routines and the report at the end of the shift.
+words:
+  # people and places
+  - { lemma: äldreboende,   pos: noun, gender: ett, level: B2, gloss: "care home for the elderly" }
+  - { lemma: vårdtagare,    pos: noun, gender: en,  level: B2, gloss: "care recipient, resident" }
+  - { lemma: undersköterska, pos: noun, gender: en, level: B2, gloss: "assistant nurse" }
+  - { lemma: anhörig,       pos: adj,  level: B2, gloss: "related, en anhörig = a relative, next of kin" }
+  # things
+  - { lemma: rullstol,      pos: noun, gender: en,  level: B2, gloss: wheelchair }
+  - { lemma: rullator,      pos: noun, gender: en,  level: B2, gloss: "walking frame" }
+  - { lemma: hjälpmedel,    pos: noun, gender: ett, level: B2, gloss: "aid (a thing that helps)" }
+  - { lemma: larm,          pos: noun, gender: ett, level: B2, gloss: alarm }
+  - { lemma: journal,       pos: noun, gender: en,  level: B2, gloss: "patient record" }
+  - { lemma: rapport,       pos: noun, gender: en,  level: B2, gloss: report }
+  # care
+  - { lemma: hygien,        pos: noun, gender: en,  level: B2, gloss: hygiene }
+  - { lemma: måltid,        pos: noun, gender: en,  level: B2, gloss: meal }
+  - { lemma: aptit,         pos: noun, gender: en,  level: B2, gloss: appetite }
+  - { lemma: vätska,        pos: noun, gender: en,  level: B2, gloss: "fluid, liquid" }
+  - { lemma: stöd,          pos: noun, gender: ett, level: B2, gloss: support }
+  - { lemma: omsorg,        pos: noun, gender: en,  level: B2, gloss: care }
+  - { lemma: tystnadsplikt, pos: noun, gender: en,  level: B2, gloss: "duty of confidentiality" }
+  # what you do
+  - { lemma: falla,         pos: verb, level: B2, gloss: "to fall; past: fell; pp: fallen" }
+  - { lemma: larma,         pos: verb, level: B2, gloss: "to raise the alarm, to call for help" }
+  - { lemma: dokumentera,   pos: verb, level: B2, gloss: "to document" }
+  - { lemma: anteckna,      pos: verb, level: B2, gloss: "to note, to write down" }
+  - { lemma: mata,          pos: verb, level: B2, gloss: "to feed" }
+  - { lemma: vända,         pos: verb, level: B2, gloss: "to turn" }
+  # how someone is
+  - { lemma: förvirrad,     pos: adj,  level: B2, gloss: confused }

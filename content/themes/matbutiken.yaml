@@ -65,6 +65,26 @@ words:
   - { lemma: gälla,       pos: verb, level: B1, gloss: "to be valid, to apply" }
   - { lemma: nöjd,        pos: adj,  level: B1, gloss: "satisfied, pleased" }
   - { lemma: missnöjd,    pos: adj,  level: B1, gloss: dissatisfied }
+  # B2: consumer rights
+  - { lemma: konsument,   pos: noun, gender: en,  level: B2, gloss: consumer }
+  - { lemma: kvalitet,    pos: noun, gender: en,  level: B2, gloss: quality }
+  - { lemma: ångerrätt,   pos: noun, gender: en,  level: B2, gloss: "right to cancel a purchase" }
+  - { lemma: faktura,     pos: noun, gender: en,  level: B2, gloss: invoice }
+  - { lemma: leverans,    pos: noun, gender: en,  level: B2, gloss: delivery }
+  - { lemma: beställning, pos: noun, gender: en,  level: B2, gloss: order }
+  - { lemma: beställa,    pos: verb, level: B2, gloss: "to order" }
+  - { lemma: leverera,    pos: verb, level: B2, gloss: "to deliver" }
+  - { lemma: kräva,       pos: verb, level: B2, gloss: "to demand, to require" }
+  - { lemma: krav,        pos: noun, gender: ett, level: B2, gloss: "demand, requirement" }
+  - { lemma: erbjuda,     pos: verb, level: B2, gloss: "to offer" }
+  - { lemma: rabatt,      pos: noun, gender: en,  level: B2, gloss: discount }
+  - { lemma: kundtjänst,  pos: noun, gender: en,  level: B2, gloss: "customer service" }
+  - { lemma: ärende,      pos: noun, gender: ett, level: B2, gloss: "matter, case, errand" }
+  - { lemma: nät,         pos: noun, gender: ett, level: B2, gloss: "net, på nätet = online" }
+  - { lemma: orsak,       pos: noun, gender: en,  level: B2, gloss: "cause, reason" }
+  - { lemma: grund,       pos: noun, gender: en,  level: B2, gloss: "ground, på grund av = because of" }
+  - { lemma: påstå,       pos: verb, level: B2, gloss: "to claim" }
+  - { lemma: bevis,       pos: noun, gender: ett, level: B2, gloss: proof }
 
 frames:
   - { id: mat-01, level: A1, grammar: [wh_question, def_singular], review: true,

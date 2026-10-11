@@ -1,0 +1,110 @@
+id: b2-10
+level: B2
+theme: vard
+title: "På äldreboendet"
+task: "Work a shift in a care home: follow instructions, help a resident, and hand over to the next shift with a clear spoken and written report."
+can_do: "I can report what happened during a shift, in order and in few words, with för att, utan att and efter att ha."
+names: [Sara, Maria, Anna, Karl, Ali]
+
+new_words: [äldreboende, vårdtagare, undersköterska, anhörig, rullstol, rullator, hjälpmedel, larm, journal, rapport,
+            hygien, måltid, aptit, vätska, stöd, omsorg, tystnadsplikt, falla, larma, dokumentera, anteckna, mata,
+            vända, förvirrad, utan]
+new_grammar: [clause_shortening]
+
+phrases:
+  - { sv: "Hur har natten varit?", en: "How has the night been?" }
+  - { sv: "Inget särskilt att rapportera.", en: "Nothing special to report." }
+  - { sv: "Säg till om du behöver hjälp.", en: "Tell me if you need help." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Maria, sv: "God morgon! Hur har natten varit?",                                        en: "Good morning! How has the night been?" }
+  - { speaker: du,    sv: "Lugn. Inget särskilt att rapportera, men Anna i rum 3 är lite förvirrad.", en: "Calm. Nothing special to report, but Anna in room 3 is a little confused." }
+  - { speaker: Maria, sv: "Har hon ätit?",                                                            en: "Has she eaten?" }
+  - { speaker: du,    sv: "Hon har dålig aptit. Jag matade henne, men hon behöver mer vätska.",       en: "She has a poor appetite. I fed her, but she needs more fluid." }
+  - { speaker: Maria, sv: "Och Karl?",                                                                en: "And Karl?" }
+  - { speaker: du,    sv: "Han föll i badrummet klockan 5. Han larmade själv.",                       en: "He fell in the bathroom at 5. He raised the alarm himself." }
+  - { speaker: Maria, sv: "Skadade han sig?",                                                         en: "Did he hurt himself?" }
+  - { speaker: du,    sv: "Nej, men han gick utan att ta rullatorn.",                                 en: "No, but he walked without taking the walking frame." }
+  - { speaker: Maria, sv: "Har du dokumenterat det?",                                                 en: "Have you documented it?" }
+  - { speaker: du,    sv: "Ja. Efter att ha hjälpt honom skrev jag i journalen. Jag har också ringt hans anhöriga.", en: "Yes. After helping him I wrote in the record. I have also called his relatives." }
+  - { speaker: Maria, sv: "Bra. Säg till om du behöver hjälp. Gå hem och vila nu!",                   en: "Good. Tell me if you need help. Go home and rest now!" }
+
+exercises:
+  # shorter: för att, utan att, efter att ha
+  - { type: cloze, sv: "Jag kom ___ att hjälpa dig.", hint: "för / utan", answer: för, en: "I came to help you.", grammar: [clause_shortening] }
+  - { type: cloze, sv: "Han gick ut ___ att larma.", hint: "för / utan", answer: utan, en: "He went out without raising the alarm.", grammar: [clause_shortening] }
+  - { type: cloze, sv: "Efter att ha ___ frukost vilade hon.", hint: äta, answer: ätit, en: "After eating breakfast she rested.", grammar: [clause_shortening] }
+  - { type: cloze, sv: "Efter att ___ duschat Karl hjälpte jag Anna.", answer: ha, en: "After showering Karl I helped Anna.", grammar: [clause_shortening] }
+  - { type: word_order, sv: "Jag vänder honom för att han inte ska få ont.", en: "I turn him so that he will not be in pain.", grammar: [clause_shortening], review: true }
+  - { type: word_order, sv: "Hon använder rullator för att inte falla.", en: "She uses a walking frame so as not to fall.", grammar: [clause_shortening] }
+  - { type: word_order, sv: "Gå aldrig hem utan att skriva rapporten.", en: "Never go home without writing the report.", grammar: [clause_shortening] }
+  - { type: translate, en: "After helping him I wrote in the record.", sv: "Efter att ha hjälpt honom skrev jag i journalen.", grammar: [clause_shortening] }
+  - { type: translate, en: "I am calling to report a fall.", sv: "Jag ringer för att rapportera ett fall.", grammar: [clause_shortening], review: true }
+
+  # instructions: what do they mean?
+  - { type: listen_choose, sv: "Hjälp Anna med hygienen innan måltiden.", en: "Help Anna with her hygiene before the meal.",
+      options: ["First the hygiene, then the meal.", "First the meal, then the hygiene.", "Anna does not need help with the meal."], answer: "First the hygiene, then the meal." }
+  - { type: listen_choose, sv: "Karl får inte gå utan rullator.", en: "Karl must not walk without a walking frame.",
+      options: ["Karl must always use the walking frame.", "Karl does not need the walking frame.", "Karl must use the wheelchair."], answer: "Karl must always use the walking frame." }
+  - { type: listen_choose, sv: "Kom ihåg att du har tystnadsplikt.", en: "Remember that you have a duty of confidentiality.",
+      options: ["You must not tell others about the residents.", "You must be quiet at night.", "You must write everything in the record."],
+      answer: "You must not tell others about the residents." }
+  - { type: listen_choose, sv: "Hur har natten varit?", en: "How has the night been?",
+      options: ["Inget särskilt att rapportera.", "Säg till om du behöver hjälp.", "Krya på dig!"], answer: "Inget särskilt att rapportera." }
+
+  # listen and write
+  - { type: dictation, sv: "Jag arbetar som undersköterska på ett äldreboende.", en: "I work as an assistant nurse in a care home.", grammar: [noun_without_article] }
+  - { type: dictation, sv: "Anna har dålig aptit och behöver mer vätska.", en: "Anna has a poor appetite and needs more fluid." }
+  - { type: dictation, sv: "Karl föll i badrummet och larmade själv.", en: "Karl fell in the bathroom and raised the alarm himself." }
+  - { type: dictation, sv: "Rullstolen är ett viktigt hjälpmedel.", en: "The wheelchair is an important aid." }
+  - { type: dictation, sv: "Alla vårdtagare har rätt till god omsorg.", en: "All residents have the right to good care." }
+
+  # say it in Swedish
+  - { type: translate, en: "Have you documented the fall?", sv: "Har du dokumenterat fallet?", review: true }
+  - { type: translate, en: "I must write a report.", sv: "Jag måste skriva en rapport." }
+  - { type: translate, en: "She is confused and needs support.", sv: "Hon är förvirrad och behöver stöd." }
+  - { type: translate, en: "The relatives are coming at 3.", sv: "De anhöriga kommer klockan 3.", grammar: [adjective_as_noun] }
+  - { type: translate, en: "Note it in the record.", sv: "Anteckna det i journalen.", grammar: [imperative] }
+  - { type: translate, en: "I am feeding him, since he cannot eat by himself.", sv: "Jag matar honom, eftersom han inte kan äta själv." }
+
+  # listen for the number
+  - { type: numbers, sv: "Larmet gick klockan 4.15.", hint: "the time", answer: "4.15", en: "The alarm went off at 4.15." }
+  - { type: numbers, sv: "Anna i rum 12 behöver hjälp med måltiden.", hint: "the room", answer: "12", en: "Anna in room 12 needs help with the meal." }
+
+  # write your own text
+  - { type: free_write, en: "Write the report for the next shift (5 or 6 sentences): how the shift was, what happened to one resident, what you did, and what the next shift must do.",
+      checklist: ["I say how the shift was.", "I say what happened, with the time.", "I use efter att ha, för att or utan att.", "I say what the next shift must do."],
+      sv: "Natten har varit lugn. Karl föll i badrummet klockan 5 eftersom han gick utan att ta rullatorn. Han larmade själv och han är inte skadad. Efter att ha hjälpt honom till sängen ringde jag hans anhöriga och dokumenterade händelsen i journalen. Anna har dålig aptit och är lite förvirrad. Ge henne mer vätska och hjälp henne med måltiden.",
+      grammar: [clause_shortening] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "If he had used the walking frame, he would not have fallen.", sv: "Om han hade använt rullatorn, skulle han inte ha fallit.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Ställ rullstolen bredvid sängen.", en: "Put the wheelchair next to the bed.", grammar: [position_verbs] }
+  - { type: cloze, sv: "När du har ___ Anna, kan du ta rast.", hint: mata, answer: matat, en: "When you have fed Anna, you can take a break.", grammar: [perfect_for_future] }
+  - { type: cloze, sv: "De ___ måste få information.", hint: anhörig, answer: anhöriga, en: "The relatives must be given information.", grammar: [adjective_as_noun] }
+  - { type: dictation, sv: "Larma direkt om någon faller.", en: "Raise the alarm at once if someone falls." }
+
+# The task itself: you hand over to Maria at the end of the night shift.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Maria, sv: "God morgon! Hur har natten varit?", en: "Good morning! How has the night been?" }
+    - { speaker: du, en: "Say: calm, but Karl fell in the bathroom at 5.", answer: "Lugn, men Karl föll i badrummet klockan 5." }
+    - { speaker: Maria, sv: "Skadade han sig?", en: "Did he hurt himself?" }
+    - { speaker: du, en: "Say: no. He walked without taking the walking frame.",
+        options: ["Nej. Han gick utan att ta rullatorn.", "Nej. Han gick utan att tar rullatorn.", "Nej. Han gick för att ta rullatorn."], answer: "Nej. Han gick utan att ta rullatorn." }
+    - { speaker: Maria, sv: "Har du dokumenterat det?", en: "Have you documented it?" }
+    - { speaker: du, en: "Say: yes, after helping him I wrote in the record.",
+        options: ["Ja, efter att ha hjälpt honom skrev jag i journalen.", "Ja, efter att ha hjälpt honom jag skrev i journalen.", "Ja, efter att hjälpa honom skrev jag i journalen."],
+        answer: "Ja, efter att ha hjälpt honom skrev jag i journalen." }
+    - { speaker: Maria, sv: "Bra. Och Anna?", en: "Good. And Anna?" }
+    - { speaker: du, en: "Say that she has a poor appetite and needs more fluid.", answer: "Hon har dålig aptit och behöver mer vätska.",
+        accept: ["Hon har dålig aptit och hon behöver mer vätska."] }
+    - { speaker: Maria, sv: "Jag matar henne efter rapporten. Gå hem och vila nu!", en: "I will feed her after the report. Go home and rest now!" }
+    - { speaker: du, en: "Say thanks, and: tell me if you need help.", answer: "Tack. Säg till om du behöver hjälp.", accept: ["Tack! Säg till om du behöver hjälp."] }
+
+speaking_prompt: "Say aloud: a report of your last working day in order, with efter att ha, för att and utan att."

@@ -1,0 +1,110 @@
+id: b2-01
+level: B2
+theme: jag
+title: "Känslor och personlighet"
+task: "Describe a person you know well: what they are like, how they feel about things, and how you feel about them."
+can_do: "I can describe personality and feelings, with the right preposition after each feeling."
+names: [Sara, Omar, Maria, Sverige]
+
+new_words: [känsla, personlighet, egenskap, humör, relation, rädd, arg, stolt, nyfiken, blyg, ärlig, envis,
+            generös, tålmodig, besviken, förvånad, nervös, avundsjuk, lita, längta, verka, bry]
+new_grammar: [prepositions_feelings, hel_all]
+
+phrases:
+  - { sv: "Det var inte meningen.", en: "I didn't mean to." }
+  - { sv: "Det gör ingenting.", en: "It doesn't matter. (after an apology)" }
+  - { sv: "Jag menar allvar.", en: "I am serious." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Hur är din nya chef?",                                         en: "What is your new boss like?" }
+  - { speaker: du,   sv: "Hon verkar ärlig och generös, men hon är ganska envis.",       en: "She seems honest and generous, but she is rather stubborn." }
+  - { speaker: Sara, sv: "Är du nervös för mötet imorgon?",                              en: "Are you nervous about the meeting tomorrow?" }
+  - { speaker: du,   sv: "Lite. Jag är rädd för att säga fel.",                          en: "A little. I am afraid of saying the wrong thing." }
+  - { speaker: Sara, sv: "Du kan lita på henne. Hon bryr sig om sin personal.",          en: "You can trust her. She cares about her staff." }
+  - { speaker: du,   sv: "Jag vet. Hela kontoret tycker om henne.",                      en: "I know. The whole office likes her." }
+  - { speaker: Sara, sv: "Och din kollega, är han fortfarande arg på dig?",              en: "And your colleague, is he still angry with you?" }
+  - { speaker: du,   sv: "Nej, men han är besviken på schemat. Han har haft dåligt humör hela veckan.", en: "No, but he is disappointed with the schedule. He has been in a bad mood all week." }
+  - { speaker: Sara, sv: "Alla har en dålig dag ibland.",                                en: "Everyone has a bad day sometimes." }
+  - { speaker: du,   sv: "Ja. Jag längtar efter semestern!",                             en: "Yes. I am longing for the holiday!" }
+
+exercises:
+  # the feeling and its preposition
+  - { type: cloze, sv: "Jag är stolt ___ min dotter.", answer: över, en: "I am proud of my daughter.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Han är arg ___ sin chef.", answer: på, en: "He is angry with his boss.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Hon är rädd ___ sjukhus.", answer: för, en: "She is afraid of hospitals.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Jag är nyfiken ___ ditt nya jobb.", answer: på, en: "I am curious about your new job.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Vi är förvånade ___ resultatet.", answer: över, en: "We are surprised at the result.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Jag längtar ___ min familj.", answer: efter, en: "I am longing for my family.", grammar: [prepositions_feelings] }
+
+  # hel or all?
+  - { type: cloze, sv: "Jag har arbetat ___ dagen.", hint: hel, answer: hela, en: "I have worked all day.", grammar: [hel_all] }
+  - { type: cloze, sv: "___ barnen var glada.", hint: all, answer: Alla, en: "All the children were happy.", grammar: [hel_all] }
+  - { type: cloze, sv: "Vi väntade en ___ timme.", hint: hel, answer: hel, en: "We waited a whole hour.", grammar: [hel_all] }
+  - { type: cloze, sv: "Han drack ___ kaffet.", hint: all, answer: allt, en: "He drank all the coffee.", grammar: [hel_all] }
+
+  # build the sentence
+  - { type: word_order, sv: "Hon är besviken på sin bror.", en: "She is disappointed in her brother.", grammar: [prepositions_feelings] }
+  - { type: word_order, sv: "Hela familjen är stolt över henne.", en: "The whole family is proud of her.", grammar: [hel_all, prepositions_feelings] }
+  - { type: word_order, sv: "Han verkar blyg, men han är väldigt rolig.", en: "He seems shy, but he is very funny." }
+  - { type: word_order, sv: "Jag litar på henne eftersom hon alltid är ärlig.", en: "I trust her because she is always honest." }
+
+  # listen and write
+  - { type: dictation, sv: "Min syster har en stark personlighet.", en: "My sister has a strong personality." }
+  - { type: dictation, sv: "Han är tålmodig och generös.", en: "He is patient and generous." }
+  - { type: dictation, sv: "Vi har en bra relation.", en: "We have a good relationship." }
+  - { type: dictation, sv: "Hon bryr sig om alla sina vänner.", en: "She cares about all her friends." }
+  - { type: dictation, sv: "Jag är på dåligt humör idag.", en: "I am in a bad mood today." }
+
+  # say it in Swedish
+  - { type: translate, en: "Are you afraid of the doctor?", sv: "Är du rädd för läkaren?", grammar: [prepositions_feelings] }
+  - { type: translate, en: "He is jealous of his brother.", sv: "Han är avundsjuk på sin bror.", grammar: [prepositions_feelings] }
+  - { type: translate, en: "It is a good quality.", sv: "Det är en bra egenskap." }
+  - { type: translate, en: "I cannot describe my feelings.", sv: "Jag kan inte beskriva mina känslor." }
+  - { type: translate, en: "She seems nervous.", sv: "Hon verkar nervös." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Han är trött på sitt jobb.", en: "He is tired of his job.",
+      options: ["He is tired of his job.", "He is tired after his job.", "He is curious about his job."], answer: "He is tired of his job." }
+  - { type: listen_choose, sv: "Hon verkar arg, men hon är bara nervös.", en: "She seems angry, but she is only nervous.",
+      options: ["She seems angry, but she is only nervous.", "She is angry because she is nervous.", "She seems nervous, but she is angry."],
+      answer: "She seems angry, but she is only nervous." }
+  - { type: listen_choose, sv: "Förlåt att jag kom sent.", en: "Sorry that I came late.",
+      options: ["Det gör ingenting.", "Jag menar allvar.", "Jag längtar efter dig."], answer: "Det gör ingenting." }
+
+  # write your own text
+  - { type: free_write, en: "Describe a person you know well (5 or 6 sentences): what they are like, what they are proud of, afraid of or tired of, and how you feel about them.",
+      checklist: ["I use at least three words for personality.", "I use at least two feelings with the right preposition.", "I use hela or alla once.", "I say how I feel about the person."],
+      sv: "Min syster Maria är ärlig, generös och ganska envis. Hon verkar blyg när man inte känner henne, men hon är väldigt rolig. Hon är stolt över sina barn och hon bryr sig om hela familjen. Hon är rädd för sjukhus och trött på sitt jobb. Jag litar på henne och jag längtar efter henne när vi inte träffas.",
+      grammar: [prepositions_feelings, hel_all] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "She said that she was disappointed.", sv: "Hon sa att hon var besviken.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Ju mer jag träffar honom, desto mer litar jag på honom.", en: "The more I see him, the more I trust him.", grammar: [ju_desto] }
+  - { type: cloze, sv: "Han är den ___ personen som jag känner.", hint: ärlig, answer: ärligaste, en: "He is the most honest person I know.", grammar: [superlative_definite] }
+  - { type: dictation, sv: "Jag tror att hon är arg, men jag vet inte varför.", en: "I think she is angry, but I do not know why.", grammar: [tycka_tanka_tro] }
+
+# The task itself: Sara asks about your sister, who is coming to visit.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Din syster kommer hit i sommar. Hur är hon?", en: "Your sister is coming here this summer. What is she like?" }
+    - { speaker: du, en: "Say that she is honest and generous.", answer: "Hon är ärlig och generös." }
+    - { speaker: Sara, sv: "Är hon som du?", en: "Is she like you?" }
+    - { speaker: du, en: "Say: no, she seems shy, but she is very stubborn.",
+        options: ["Nej, hon verkar blyg, men hon är väldigt envis.", "Nej, hon verkar blyg, men är hon väldigt envis.", "Nej, hon blyg verkar, men hon är väldigt envis."],
+        answer: "Nej, hon verkar blyg, men hon är väldigt envis." }
+    - { speaker: Sara, sv: "Vad är hon rädd för?", en: "What is she afraid of?" }
+    - { speaker: du, en: "Say that she is afraid of hospitals.", answer: "Hon är rädd för sjukhus." }
+    - { speaker: Sara, sv: "Har ni en bra relation?", en: "Do you have a good relationship?" }
+    - { speaker: du, en: "Say: yes, I trust her and I am proud of her.",
+        options: ["Ja, jag litar på henne och jag är stolt över henne.", "Ja, jag litar över henne och jag är stolt på henne.", "Ja, jag litar henne och jag är stolt för henne."],
+        answer: "Ja, jag litar på henne och jag är stolt över henne." }
+    - { speaker: Sara, sv: "Hur länge stannar hon?", en: "How long is she staying?" }
+    - { speaker: du, en: "Say: the whole summer. I am longing for her!", answer: "Hela sommaren. Jag längtar efter henne!",
+        accept: ["Hela sommaren. Jag längtar efter henne.", "Hon stannar hela sommaren. Jag längtar efter henne!"] }
+
+speaking_prompt: "Say aloud: describe two people you know, three qualities each, and one thing each of them is proud of, afraid of or tired of."

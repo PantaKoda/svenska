@@ -1585,3 +1585,67 @@ items:
   form: pl_def
   words:
   - visning
+- type: inflect
+  answer: gardinen
+  grammar:
+  - def_singular
+  lemma: gardin
+  form: def
+  words:
+  - gardin
+- type: inflect
+  answer: tavlan
+  grammar:
+  - def_singular
+  lemma: tavla
+  form: def
+  words:
+  - tavla
+- type: inflect
+  answer: lyfter
+  grammar:
+  - present_tense
+  lemma: lyfta
+  form: pres
+  words:
+  - lyfta
+- type: inflect
+  answer: sätter
+  grammar:
+  - present_tense
+  lemma: sätta
+  form: pres
+  words:
+  - sätta
+- type: inflect
+  answer: ett hörn
+  grammar:
+  - en_ett
+  lemma: hörn
+  form: a
+  words:
+  - hörn
+- type: inflect
+  answer: garderober
+  grammar:
+  - plural_indef
+  lemma: garderob
+  form: pl
+  words:
+  - garderob
+- type: inflect
+  answer: kartongerna
+  grammar:
+  - plural_def
+  lemma: kartong
+  form: pl_def
+  words:
+  - kartong
+- type: inflect
+  answer: verktygen
+  grammar:
+  - plural_def
+  lemma: verktyg
+  form: pl_def
+  words:
+  - verktyg

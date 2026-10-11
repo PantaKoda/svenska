@@ -67,3 +67,26 @@ words:
   - { lemma: höja,        pos: verb, level: B1, gloss: "to raise" }
   - { lemma: rösta,       pos: verb, tags: [action_intrans], level: B1, gloss: to vote }
   - { lemma: anställd,    pos: adj,  level: B1, gloss: "employed; an employee" }
+  # B2: applying for a job
+  - { lemma: tjänst,       pos: noun, gender: en,  level: B2, gloss: "post, position, service" }
+  - { lemma: arbetsgivare, pos: noun, gender: en,  level: B2, gloss: employer }
+  - { lemma: merit,        pos: noun, gender: en,  level: B2, gloss: "qualification, merit" }
+  - { lemma: kompetens,    pos: noun, gender: en,  level: B2, gloss: "competence, skills" }
+  - { lemma: referens,     pos: noun, gender: en,  level: B2, gloss: reference }
+  - { lemma: personlig,    pos: adj,  level: B2, gloss: personal }
+  - { lemma: uppgift,      pos: noun, gender: en,  level: B2, gloss: "task, piece of information" }
+  - { lemma: anställning,  pos: noun, gender: en,  level: B2, gloss: employment }
+  - { lemma: vikariat,     pos: noun, gender: ett, level: B2, gloss: "temporary post (as a substitute)" }
+  - { lemma: vikarie,      pos: noun, gender: en,  level: B2, gloss: substitute }
+  - { lemma: fast,         pos: adj,  level: B2, gloss: "permanent, fixed" }
+  - { lemma: tillfällig,   pos: adj,  level: B2, gloss: temporary }
+  - { lemma: deltid,       pos: noun, gender: en,  level: B2, gloss: part-time }
+  - { lemma: bransch,      pos: noun, gender: en,  level: B2, gloss: "industry, line of business" }
+  - { lemma: yrke,         pos: noun, gender: ett, level: B2, gloss: "profession, occupation" }
+  - { lemma: praktik,      pos: noun, gender: en,  level: B2, gloss: "work placement, internship" }
+  - { lemma: arbetslös,    pos: adj,  level: B2, gloss: unemployed }
+  - { lemma: rekrytera,    pos: verb, level: B2, gloss: "to recruit" }
+  - { lemma: anställa,     pos: verb, level: B2, gloss: "to employ, to hire" }
+  - { lemma: ansvarig,     pos: adj,  level: B2, gloss: "responsible, in charge" }
+  - { lemma: flexibel,     pos: adj,  level: B2, gloss: flexible }
+  - { lemma: lämplig,      pos: adj,  level: B2, gloss: suitable }

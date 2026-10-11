@@ -1,0 +1,102 @@
+id: b2-05
+level: B2
+theme: bostad
+title: "Flytta in"
+task: "Direct the friends who help you move in: say where each thing stands, lies or hangs, where to put it, and which one you mean."
+can_do: "I can say exactly where things are and where to put them, and point out this one and that one."
+names: [Sara, Omar]
+
+new_words: [ställa, sätta, hänga, vägg, tak, hörn, hylla, garderob, matta, gardin, tavla, låda, kartong, flytt,
+            bära, lyfta, packa, verktyg, bredvid, framför, bakom, mellan, under, denna]
+new_grammar: [position_verbs, demonstrative_pronouns]
+
+phrases:
+  - { sv: "Akta dig!", en: "Watch out!" }
+  - { sv: "Var försiktig!", en: "Be careful!" }
+  - { sv: "Det går bra.", en: "That is fine." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Omar, sv: "Var ska jag ställa den här kartongen?",                             en: "Where shall I put this box?" }
+  - { speaker: du,   sv: "Ställ den i hörnet, bredvid garderoben.",                           en: "Put it in the corner, next to the wardrobe." }
+  - { speaker: Omar, sv: "Och mattan?",                                                       en: "And the rug?" }
+  - { speaker: du,   sv: "Lägg den på golvet framför soffan.",                                en: "Lay it on the floor in front of the sofa." }
+  - { speaker: Omar, sv: "Den där tavlan är fin. Ska den sitta på väggen?",                   en: "That picture is nice. Is it going on the wall?" }
+  - { speaker: du,   sv: "Ja, häng den mellan fönstren. Verktygen ligger i lådan.",           en: "Yes, hang it between the windows. The tools are in the drawer." }
+  - { speaker: Omar, sv: "Hyllan är stor. Kan du hjälpa mig att lyfta den?",                  en: "The shelf is big. Can you help me lift it?" }
+  - { speaker: du,   sv: "Ja. Vi bär den tillsammans och ställer den bakom dörren.",          en: "Yes. We will carry it together and put it behind the door." }
+  - { speaker: Omar, sv: "Var ska de här kartongerna stå?",                                   en: "Where should these boxes stand?" }
+  - { speaker: du,   sv: "Under bordet, tills jag har packat upp dem.",                       en: "Under the table, until I have unpacked them." }
+
+exercises:
+  # where it is: står, ligger, sitter or hänger?
+  - { type: cloze, sv: "Hyllan ___ i hörnet.", hint: "stå / ligga", answer: står, en: "The shelf is (stands) in the corner.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Mattan ___ på golvet.", hint: "stå / ligga", answer: ligger, en: "The rug is (lies) on the floor.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Tavlan ___ på väggen.", hint: "sitta / ligga", answer: sitter, en: "The picture is (fixed) on the wall.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Lampan ___ i taket.", hint: "hänga / stå", answer: hänger, en: "The lamp hangs from the ceiling.", grammar: [position_verbs] }
+
+  # putting it there: ställer, lägger or sätter?
+  - { type: cloze, sv: "Jag ___ kartongen under bordet.", hint: "ställa / stå", answer: ställer, en: "I am putting the box under the table.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Han ___ nycklarna i lådan igår.", hint: "lägga / ligga", answer: la, accept: [lade], en: "He put the keys in the drawer yesterday.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Vi har ___ upp gardinerna.", hint: "sätta / sitta", answer: satt, en: "We have put up the curtains.", grammar: [position_verbs] }
+  - { type: word_order, sv: "Ställ hyllan bredvid garderoben.", en: "Put the shelf next to the wardrobe.", grammar: [position_verbs, imperative] }
+  - { type: word_order, sv: "Lägg mattan framför soffan.", en: "Lay the rug in front of the sofa.", grammar: [position_verbs, imperative] }
+
+  # this one, that one
+  - { type: cloze, sv: "Den ___ lådan är ny, men den där är gammal.", answer: här, en: "This box is new, but that one is old.", grammar: [demonstrative_pronouns] }
+  - { type: cloze, sv: "___ kartong ska stå i köket.", hint: denna, answer: Denna, en: "This box is to stand in the kitchen. (formal)", grammar: [demonstrative_pronouns] }
+  - { type: cloze, sv: "___ verktyg är nytt.", hint: denna, answer: Detta, en: "This tool is new. (formal)", grammar: [demonstrative_pronouns] }
+  - { type: translate, en: "These boxes are mine.", sv: "De här kartongerna är mina.", accept: ["Dessa kartonger är mina."], grammar: [demonstrative_pronouns] }
+  - { type: translate, en: "I want that picture.", sv: "Jag vill ha den där tavlan.", grammar: [demonstrative_pronouns] }
+  - { type: listen_choose, sv: "Ta inte den här lådan, ta den där.", en: "Do not take this box, take that one.",
+      options: ["Take the box further away.", "Take the box nearest to the speaker.", "Take both boxes."], answer: "Take the box further away." }
+
+  # listen and write
+  - { type: dictation, sv: "Vi bär soffan tillsammans.", en: "We carry the sofa together." }
+  - { type: dictation, sv: "Garderoben står mellan sängen och fönstret.", en: "The wardrobe is between the bed and the window." }
+  - { type: dictation, sv: "Verktygen ligger bakom dörren.", en: "The tools are behind the door." }
+  - { type: dictation, sv: "Har du packat alla kartonger?", en: "Have you packed all the boxes?" }
+  - { type: dictation, sv: "Flytten tog hela helgen.", en: "The move took the whole weekend.", grammar: [hel_all] }
+
+  # say it in Swedish
+  - { type: translate, en: "Can you help me lift the shelf?", sv: "Kan du hjälpa mig att lyfta hyllan?", accept: ["Kan du hjälpa mig lyfta hyllan?"] }
+  - { type: translate, en: "The lamp hangs from the ceiling.", sv: "Lampan hänger i taket." }
+  - { type: translate, en: "Where shall I put the chairs?", sv: "Var ska jag ställa stolarna?", grammar: [position_verbs] }
+  - { type: translate, en: "The keys are under the rug.", sv: "Nycklarna ligger under mattan.", grammar: [position_verbs] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Kan jag ställa cykeln i hallen?", en: "Can I put the bicycle in the hall?",
+      options: ["Det går bra.", "Akta dig!", "Den hänger i taket."], answer: "Det går bra." }
+  - { type: listen_choose, sv: "Sätt upp hyllan på väggen bredvid dörren.", en: "Put up the shelf on the wall next to the door.",
+      options: ["The shelf goes on the wall next to the door.", "The shelf stands on the floor behind the door.", "The shelf hangs above the door."],
+      answer: "The shelf goes on the wall next to the door." }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "If I had had more time, I would have packed everything yesterday.", sv: "Om jag hade haft mer tid, skulle jag ha packat allt igår.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Du kan ställa väskan var som helst.", en: "You can put the bag anywhere.", grammar: [som_helst] }
+  - { type: cloze, sv: "Det var Omar ___ bar soffan.", answer: som, en: "It was Omar who carried the sofa.", grammar: [cleft_sentence] }
+  - { type: dictation, sv: "Jag känner dem inte, men de hjälper mig med flytten.", en: "I do not know them, but they are helping me with the move.", grammar: [object_pronoun_placement] }
+
+# The task itself: Sara helps you move in.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Var ska jag ställa den här hyllan?", en: "Where shall I put this shelf?" }
+    - { speaker: du, en: "Say: put it in the corner, next to the wardrobe.", answer: "Ställ den i hörnet, bredvid garderoben.",
+        accept: ["Ställ den i hörnet bredvid garderoben."] }
+    - { speaker: Sara, sv: "Och mattan?", en: "And the rug?" }
+    - { speaker: du, en: "Say: lay it in front of the sofa.",
+        options: ["Lägg den framför soffan.", "Ligg den framför soffan.", "Ställ den framför soffan."], answer: "Lägg den framför soffan." }
+    - { speaker: Sara, sv: "Var är verktygen?", en: "Where are the tools?" }
+    - { speaker: du, en: "Say that they are (lying) in that box.",
+        options: ["De ligger i den där lådan.", "De lägger i den där lådan.", "De ligger i den där låda."], answer: "De ligger i den där lådan." }
+    - { speaker: Sara, sv: "Ska tavlan sitta här?", en: "Is the picture going here?" }
+    - { speaker: du, en: "Say: no, hang it between the windows.", answer: "Nej, häng den mellan fönstren." }
+    - { speaker: Sara, sv: "Akta dig! Kartongen står bakom dig.", en: "Watch out! The box is behind you." }
+    - { speaker: du, en: "Say thanks, and that you will put it under the table.", answer: "Tack, jag ställer den under bordet.",
+        accept: ["Tack! Jag ställer den under bordet.", "Tack. Jag ställer den under bordet.", "Tack, jag ska ställa den under bordet."] }
+
+speaking_prompt: "Say aloud: walk through your home and say where ten things stand, lie, sit or hang, and move three of them."

@@ -1581,3 +1581,67 @@ items:
   form: def
   words:
   - jul
+- type: inflect
+  answer: kärlekar
+  grammar:
+  - plural_indef
+  lemma: kärlek
+  form: pl
+  words:
+  - kärlek
+- type: inflect
+  answer: brudgummarna
+  grammar:
+  - plural_def
+  lemma: brudgum
+  form: pl_def
+  words:
+  - brudgum
+- type: inflect
+  answer: kyrkor
+  grammar:
+  - plural_indef
+  lemma: kyrka
+  form: pl
+  words:
+  - kyrka
+- type: inflect
+  answer: lånat
+  grammar:
+  - perfect_tense
+  lemma: låna
+  form: sup
+  words:
+  - låna
+- type: inflect
+  answer: gratulera
+  grammar:
+  - imperative
+  lemma: gratulera
+  form: imp
+  words:
+  - gratulera
+- type: inflect
+  answer: en kostym
+  grammar:
+  - en_ett
+  lemma: kostym
+  form: a
+  words:
+  - kostym
+- type: inflect
+  answer: bruden
+  grammar:
+  - def_singular
+  lemma: brud
+  form: def
+  words:
+  - brud
+- type: inflect
+  answer: klänningarna
+  grammar:
+  - plural_def
+  lemma: klänning
+  form: pl_def
+  words:
+  - klänning

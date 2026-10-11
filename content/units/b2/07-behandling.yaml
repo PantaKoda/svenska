@@ -1,0 +1,106 @@
+id: b2-07
+level: B2
+theme: halsa
+title: "Behandling och livsstil"
+task: "Go to a follow-up visit after an operation: understand the treatment plan step by step, compare how you feel now and before, and agree on what to change."
+can_do: "I can follow a treatment plan, say what happens when something is finished, and compare with lika ... som and samma ... som."
+names: [Sara]
+
+new_words: [behandling, operation, operera, remiss, blodtryck, blod, vikt, kost, sjukdom, sjukgymnast, övning,
+            läka, återbesök, biverkning, dos, patient, mottagning, risk, förbättra, röra, nyttig, likna, lika, samma]
+new_grammar: [perfect_for_future, comparison_lika_som]
+
+phrases:
+  - { sv: "Det går över.", en: "It will pass." }
+  - { sv: "Sköt om dig!", en: "Look after yourself!" }
+  - { sv: "Det känns bättre.", en: "It feels better." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: sjuksköterska, sv: "Välkommen till mottagningen. Hur känns det efter operationen?",     en: "Welcome to the clinic. How does it feel after the operation?" }
+  - { speaker: du,            sv: "Bättre, men jag har inte lika mycket energi som förut.",            en: "Better, but I do not have as much energy as before." }
+  - { speaker: sjuksköterska, sv: "Det är vanligt. Ditt blodtryck är samma som förra veckan.",         en: "That is common. Your blood pressure is the same as last week." }
+  - { speaker: du,            sv: "Ska jag ta samma dos som förut?",                                   en: "Shall I take the same dose as before?" }
+  - { speaker: sjuksköterska, sv: "Ja. När du har tagit alla tabletter, får du en ny remiss.",         en: "Yes. When you have taken all the tablets, you will get a new referral." }
+  - { speaker: du,            sv: "Finns det några biverkningar?",                                     en: "Are there any side effects?" }
+  - { speaker: sjuksköterska, sv: "Du kan bli trött. Ring oss om symtomen liknar feber.",              en: "You may get tired. Call us if the symptoms are like a fever." }
+  - { speaker: du,            sv: "Och sjukgymnasten?",                                                en: "And the physiotherapist?" }
+  - { speaker: sjuksköterska, sv: "Du får övningar när benet har läkt.",                               en: "You will get exercises when the leg has healed." }
+  - { speaker: du,            sv: "Bra. Jag ska röra på mig mer och förbättra min kost.",              en: "Good. I am going to be more active and improve my diet." }
+
+exercises:
+  # first this is finished, then that happens
+  - { type: cloze, sv: "När du har ___ tabletterna, ska du vila.", hint: ta, answer: tagit, en: "When you have taken the tablets, you are to rest.", grammar: [perfect_for_future] }
+  - { type: cloze, sv: "Ring mig när du har ___ resultatet.", hint: få, answer: fått, en: "Call me when you have got the result.", grammar: [perfect_for_future] }
+  - { type: cloze, sv: "Du får gå hem när du ___ träffat läkaren.", answer: har, en: "You may go home when you have seen the doctor.", grammar: [perfect_for_future] }
+  - { type: word_order, sv: "Du får övningar när benet har läkt.", en: "You will get exercises when the leg has healed.", grammar: [perfect_for_future] }
+  - { type: word_order, sv: "Vänta här tills sjuksköterskan har kommit.", en: "Wait here until the nurse has come.", grammar: [perfect_for_future] }
+  - { type: translate, en: "When I have eaten, I will take my medicine.", sv: "När jag har ätit, tar jag min medicin.", accept: ["När jag har ätit, ska jag ta min medicin."], grammar: [perfect_for_future] }
+  - { type: listen_choose, sv: "När du har tagit provet, får du gå hem.", en: "When you have had the test taken, you may go home.",
+      options: ["First the test, then home.", "First home, then the test.", "You may go home instead of taking the test."], answer: "First the test, then home." }
+
+  # as ... as, the same ... as
+  - { type: cloze, sv: "Jag mår inte ___ bra som igår.", answer: lika, en: "I do not feel as well as yesterday.", grammar: [comparison_lika_som] }
+  - { type: cloze, sv: "Jag har ___ läkare som du.", answer: samma, en: "I have the same doctor as you.", grammar: [comparison_lika_som] }
+  - { type: cloze, sv: "Den här övningen är lika svår ___ den förra.", answer: som, en: "This exercise is as hard as the last one.", grammar: [comparison_lika_som] }
+  - { type: word_order, sv: "Hans symtom liknar mina.", en: "His symptoms are like mine.", grammar: [comparison_lika_som] }
+  - { type: translate, en: "Your blood pressure is the same as last week.", sv: "Ditt blodtryck är samma som förra veckan.", grammar: [comparison_lika_som] }
+  - { type: translate, en: "It is not as serious as it seems.", sv: "Det är inte lika allvarligt som det verkar.", accept: ["Det är inte så allvarligt som det verkar."], grammar: [comparison_lika_som] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag opererades för 2 veckor sedan.", en: "I was operated on 2 weeks ago.", grammar: [passive_s] }
+  - { type: dictation, sv: "Läkaren skrev en remiss till en sjukgymnast.", en: "The doctor wrote a referral to a physiotherapist." }
+  - { type: dictation, sv: "Finns det några risker med behandlingen?", en: "Are there any risks with the treatment?" }
+  - { type: dictation, sv: "Alla patienter får ett återbesök.", en: "All patients get a follow-up visit." }
+  - { type: dictation, sv: "Det är nyttigt att röra på sig varje dag.", en: "It is good for you to be active every day." }
+
+  # say it in Swedish
+  - { type: translate, en: "I want to improve my diet.", sv: "Jag vill förbättra min kost." }
+  - { type: translate, en: "Is it a common illness?", sv: "Är det en vanlig sjukdom?" }
+  - { type: translate, en: "The medicine has side effects.", sv: "Medicinen har biverkningar." }
+  - { type: translate, en: "I am afraid of blood.", sv: "Jag är rädd för blod.", grammar: [prepositions_feelings] }
+
+  # listen for the number
+  - { type: numbers, sv: "Ditt blodtryck är 130 över 85.", hint: "the first number", answer: "130", en: "Your blood pressure is 130 over 85." }
+  - { type: numbers, sv: "Ta en dos på 2 tabletter morgon och kväll.", hint: "tablets each time", answer: "2", en: "Take a dose of 2 tablets morning and evening." }
+  - { type: numbers, sv: "Din vikt är 72 kilo.", hint: "the weight in kilos", answer: "72", en: "Your weight is 72 kilos." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Jag ska opereras imorgon.", en: "I am having an operation tomorrow.",
+      options: ["Lycka till! Hur känns det?", "Grattis! Vad roligt!", "Skål!"], answer: "Lycka till! Hur känns det?" }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences to a friend about a treatment or a change of lifestyle: how you feel compared with before, and what happens when each step is done.",
+      checklist: ["I compare with lika ... som or samma ... som.", "I use när ... har + supine about a later step.", "I name one thing I am going to change.", "I say how it feels."],
+      sv: "Hej Sara! Jag opererades för 2 veckor sedan och det känns bättre nu. Jag har inte lika mycket energi som förut, men läkaren säger att det går över. När benet har läkt, får jag övningar av en sjukgymnast. Jag tar samma dos som förra veckan. Jag ska förbättra min kost och röra på mig mer när jag har fått mina resultat.",
+      grammar: [perfect_for_future, comparison_lika_som] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "If I had gone to the doctor earlier, I would have been healthy now.", sv: "Om jag hade gått till läkaren tidigare, skulle jag ha varit frisk nu.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Du kan ringa mottagningen när som helst.", en: "You can call the clinic at any time.", grammar: [som_helst] }
+  - { type: cloze, sv: "Jag är rädd ___ operationen.", answer: för, en: "I am afraid of the operation.", grammar: [prepositions_feelings] }
+  - { type: dictation, sv: "Det går nog över, men ring mig om det blir sämre.", en: "It will probably pass, but call me if it gets worse.", grammar: [sentence_adverbs_nog_val_ju] }
+
+# The task itself: your follow-up visit at the clinic.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: sjuksköterska, sv: "Välkommen. Hur känns det efter operationen?", en: "Welcome. How does it feel after the operation?" }
+    - { speaker: du, en: "Say: better, but I do not have as much energy as before.", answer: "Bättre, men jag har inte lika mycket energi som förut.",
+        accept: ["Bättre, men jag har inte så mycket energi som förut."] }
+    - { speaker: sjuksköterska, sv: "Det går över. Tar du din medicin?", en: "It will pass. Are you taking your medicine?" }
+    - { speaker: du, en: "Say: yes, the same dose as last week.",
+        options: ["Ja, samma dos som förra veckan.", "Ja, lika dos som förra veckan.", "Ja, samma dos än förra veckan."], answer: "Ja, samma dos som förra veckan." }
+    - { speaker: sjuksköterska, sv: "Bra. Har du några biverkningar?", en: "Good. Do you have any side effects?" }
+    - { speaker: du, en: "Say: no. When do I get exercises?", answer: "Nej. När får jag övningar?" }
+    - { speaker: sjuksköterska, sv: "När benet har läkt. Det tar ungefär 3 veckor.", en: "When the leg has healed. It takes about 3 weeks." }
+    - { speaker: du, en: "Ask: shall I call when I have taken all the tablets?",
+        options: ["Ska jag ringa när jag har tagit alla tabletter?", "Ska jag ringa när jag ska ta alla tabletter?", "Ska jag ringa när har jag tagit alla tabletter?"],
+        answer: "Ska jag ringa när jag har tagit alla tabletter?" }
+    - { speaker: sjuksköterska, sv: "Ja, då får du en tid för återbesök. Krya på dig!", en: "Yes, then you will get a time for a follow-up visit. Get well soon!" }
+    - { speaker: du, en: "Say: thank you. I am going to be more active.", answer: "Tack. Jag ska röra på mig mer.", accept: ["Tack! Jag ska röra på mig mer."] }
+
+speaking_prompt: "Say aloud: compare your health now and a year ago with lika ... som, and say three things you will do när du har ..."

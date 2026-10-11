@@ -1074,3 +1074,67 @@ items:
   form: past
   words:
   - förlora
+- type: inflect
+  answer: artikeln
+  grammar:
+  - def_singular
+  lemma: artikel
+  form: def
+  words:
+  - artikel
+- type: inflect
+  answer: delar
+  grammar:
+  - present_tense
+  lemma: dela
+  form: pres
+  words:
+  - dela
+- type: inflect
+  answer: vittnen
+  grammar:
+  - plural_indef
+  lemma: vittne
+  form: pl
+  words:
+  - vittne
+- type: inflect
+  answer: nyheterna
+  grammar:
+  - plural_def
+  lemma: nyhet
+  form: pl_def
+  words:
+  - nyhet
+- type: inflect
+  answer: publicerade
+  grammar:
+  - past_tense
+  lemma: publicera
+  form: past
+  words:
+  - publicera
+- type: inflect
+  answer: kommenterar
+  grammar:
+  - present_tense
+  lemma: kommentera
+  form: pres
+  words:
+  - kommentera
+- type: inflect
+  answer: journalisterna
+  grammar:
+  - plural_def
+  lemma: journalist
+  form: pl_def
+  words:
+  - journalist
+- type: inflect
+  answer: en brand
+  grammar:
+  - en_ett
+  lemma: brand
+  form: a
+  words:
+  - brand

@@ -1,0 +1,108 @@
+id: b2-03
+level: B2
+theme: matbutiken
+title: "Dina rättigheter som kund"
+task: "Argue your case with customer service after a bad delivery: say what happened, what caused it, what you demand and why."
+can_do: "I can argue for my rights as a consumer, give causes and contrasts, and put the weight on the important part."
+names: [Sara, Ali]
+
+new_words: [konsument, kvalitet, ångerrätt, faktura, leverans, beställning, beställa, leverera, kräva, krav,
+            erbjuda, rabatt, kundtjänst, ärende, nät, orsak, grund, påstå, bevis, däremot, därför, alltså]
+new_grammar: [cleft_sentence, contrast_cause]
+
+phrases:
+  - { sv: "Det är inte mitt fel.", en: "It is not my fault." }
+  - { sv: "Jag vill tala med en chef.", en: "I want to speak to a manager." }
+  - { sv: "Det stämmer.", en: "That is correct." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: kundtjänst, sv: "Kundtjänst, vad gäller ditt ärende?",                                 en: "Customer service, what is your matter about?" }
+  - { speaker: du,         sv: "Jag beställde en dator på nätet. Leveransen kom igår, men skärmen är trasig.", en: "I ordered a computer online. The delivery came yesterday, but the screen is broken." }
+  - { speaker: kundtjänst, sv: "Har du fakturan eller något annat bevis?",                            en: "Do you have the invoice or some other proof?" }
+  - { speaker: du,         sv: "Ja, jag har fakturan. Det var ni som skickade paketet.",              en: "Yes, I have the invoice. It was you who sent the parcel." }
+  - { speaker: kundtjänst, sv: "Vi kan erbjuda en rabatt på 500 kronor.",                             en: "We can offer a discount of 500 kronor." }
+  - { speaker: du,         sv: "Nej tack. Kvaliteten är dålig. Därför kräver jag en ny dator.",       en: "No thanks. The quality is bad. That is why I demand a new computer." }
+  - { speaker: kundtjänst, sv: "Orsaken kan vara leveransen.",                                        en: "The cause may be the delivery." }
+  - { speaker: du,         sv: "Det är inte mitt fel. Jag har alltså rätt till en ny dator eller pengarna tillbaka.", en: "It is not my fault. So I have the right to a new computer or my money back." }
+  - { speaker: kundtjänst, sv: "Det stämmer. Du har också ångerrätt i 14 dagar.",                     en: "That is correct. You also have the right to cancel for 14 days." }
+  - { speaker: du,         sv: "Bra. Då vill jag ha en ny dator.",                                    en: "Good. Then I want a new computer." }
+
+# Heard but not taught in this unit.
+glosses:
+  procent: "per cent"
+
+exercises:
+  # put the weight on one part
+  - { type: word_order, sv: "Det var jag som beställde datorn.", en: "It was I who ordered the computer.", grammar: [cleft_sentence] }
+  - { type: word_order, sv: "Det är kvaliteten som är problemet.", en: "It is the quality that is the problem.", grammar: [cleft_sentence] }
+  - { type: word_order, sv: "Det var igår som paketet kom.", en: "It was yesterday that the parcel came.", grammar: [cleft_sentence] }
+  - { type: translate, en: "It was you (plural) who sent the invoice.", sv: "Det var ni som skickade fakturan.", grammar: [cleft_sentence] }
+  - { type: translate, en: "It is the screen that does not work.", sv: "Det är skärmen som inte fungerar.", grammar: [cleft_sentence] }
+  - { type: listen_choose, sv: "Det var inte jag som öppnade paketet.", en: "It was not I who opened the parcel.",
+      options: ["Someone else opened the parcel.", "I opened something else.", "Nobody opened the parcel."], answer: "Someone else opened the parcel." }
+
+  # cause, result and contrast
+  - { type: cloze, sv: "Paketet kom inte. ___ vill jag ha pengarna tillbaka.", hint: "därför / däremot", answer: Därför, en: "The parcel did not come. That is why I want my money back.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "Priset är bra. Kvaliteten är ___ dålig.", hint: "alltså / däremot", answer: däremot, en: "The price is good. The quality, however, is bad.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "Du har kvittot. ___ har du rätt till en ny dator.", hint: "alltså / däremot", answer: Alltså, en: "You have the receipt. So you have the right to a new computer.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "Leveransen är sen på ___ av vädret.", answer: grund, en: "The delivery is late because of the weather.", grammar: [contrast_cause] }
+  - { type: word_order, sv: "Därför kräver jag pengarna tillbaka.", en: "That is why I demand my money back.", grammar: [contrast_cause] }
+  - { type: word_order, sv: "Trots garantin vill företaget inte byta skärmen.", en: "In spite of the guarantee the company does not want to replace the screen.", grammar: [contrast_cause] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag beställde en dator på nätet.", en: "I ordered a computer online." }
+  - { type: dictation, sv: "Som konsument har du ångerrätt i 14 dagar.", en: "As a consumer you have the right to cancel for 14 days." }
+  - { type: dictation, sv: "Jag har ett ärende om en faktura.", en: "I have a matter concerning an invoice." }
+  - { type: dictation, sv: "Företaget påstår att det är mitt fel.", en: "The company claims that it is my fault." }
+  - { type: dictation, sv: "Vad är orsaken till problemet?", en: "What is the cause of the problem?" }
+
+  # say it in Swedish
+  - { type: translate, en: "When do you deliver?", sv: "När levererar ni?" }
+  - { type: translate, en: "I have proof.", sv: "Jag har bevis.", accept: ["Jag har ett bevis."] }
+  - { type: translate, en: "Can you offer a discount?", sv: "Kan ni erbjuda en rabatt?", accept: ["Kan ni erbjuda rabatt?", "Kan du erbjuda en rabatt?", "Kan du erbjuda rabatt?"] }
+  - { type: translate, en: "What are your demands?", sv: "Vad är dina krav?", accept: ["Vilka är dina krav?", "Vad är era krav?", "Vilka är era krav?"] }
+  - { type: translate, en: "My order has not come.", sv: "Min beställning har inte kommit." }
+
+  # listen for the number
+  - { type: numbers, sv: "Du har ångerrätt i 14 dagar.", hint: "how many days", answer: "14", en: "You have the right to cancel for 14 days." }
+  - { type: numbers, sv: "Vi erbjuder 20 procent rabatt.", hint: "the discount in per cent", answer: "20", en: "We offer a 20 per cent discount." }
+
+  # write your own text
+  - { type: free_write, en: "Write a complaint to a company (5 or 6 sentences): what you ordered, what was wrong, what the company says, and what you demand.",
+      checklist: ["I say what I ordered and when.", "I use det var ... som or det är ... som once.", "I give a cause or a contrast (därför, däremot, alltså, på grund av).", "I say clearly what I demand."],
+      sv: "Hej! Jag beställde en dator på nätet förra veckan. Leveransen kom i tid, men skärmen var trasig. Er kundtjänst påstår att det är mitt fel. Det var däremot ni som skickade paketet, och jag har bevis. Därför kräver jag en ny dator eller pengarna tillbaka. Med vänlig hälsning, Ali",
+      grammar: [cleft_sentence, contrast_cause] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "The parcel was delivered yesterday.", sv: "Paketet levererades igår.", grammar: [passive_s] }
+  - { type: word_order, sv: "Kundtjänsten frågade om jag hade kvittot.", en: "Customer service asked if I had the receipt.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "Jag är besviken ___ kvaliteten.", answer: på, en: "I am disappointed with the quality.", grammar: [prepositions_feelings] }
+  - { type: dictation, sv: "Ni har nog skickat fel faktura.", en: "You have probably sent the wrong invoice.", grammar: [sentence_adverbs_nog_val_ju] }
+
+# The task itself: you call customer service.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: kundtjänst, sv: "Kundtjänst, vad gäller ditt ärende?", en: "Customer service, what is your matter about?" }
+    - { speaker: du, en: "Say that you ordered a computer online, but the screen is broken.", answer: "Jag beställde en dator på nätet, men skärmen är trasig.",
+        accept: ["Jag har beställt en dator på nätet, men skärmen är trasig."] }
+    - { speaker: kundtjänst, sv: "Har du öppnat paketet själv?", en: "Did you open the parcel yourself?" }
+    - { speaker: du, en: "Say: yes, but it was you (plural) who sent it.",
+        options: ["Ja, men det var ni som skickade det.", "Ja, men det var ni som det skickade.", "Ja, men ni var det som skickade det."],
+        answer: "Ja, men det var ni som skickade det." }
+    - { speaker: kundtjänst, sv: "Vi kan erbjuda en rabatt.", en: "We can offer a discount." }
+    - { speaker: du, en: "Say: no thanks. That is why I demand a new computer.",
+        options: ["Nej tack. Därför kräver jag en ny dator.", "Nej tack. Därför jag kräver en ny dator.", "Nej tack. Däremot kräver jag en ny dator."],
+        answer: "Nej tack. Därför kräver jag en ny dator." }
+    - { speaker: kundtjänst, sv: "Det måste jag fråga min chef om.", en: "I have to ask my manager about that." }
+    - { speaker: du, en: "Say that it is not your fault.", answer: "Det är inte mitt fel." }
+    - { speaker: kundtjänst, sv: "Det stämmer. Du får en ny dator inom en vecka.", en: "That is correct. You will get a new computer within a week." }
+    - { speaker: du, en: "Say: good. So I do not need to pay for the delivery?",
+        options: ["Bra. Jag behöver alltså inte betala för leveransen?", "Bra. Jag alltså behöver inte betala för leveransen?", "Bra. Jag behöver däremot inte betala för leveransen?"],
+        answer: "Bra. Jag behöver alltså inte betala för leveransen?" }
+
+speaking_prompt: "Say aloud: something you bought that was wrong, what the shop said, and what you demanded, with därför, däremot and det var ... som."

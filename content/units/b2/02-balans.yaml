@@ -1,0 +1,105 @@
+id: b2-02
+level: B2
+theme: vardag
+title: "Balans i vardagen"
+task: "Talk with a friend about stress, sleep and habits: say what you think is probably true, check that they agree, and give soft advice."
+can_do: "I can discuss my everyday balance and soften what I say with ju, väl and nog."
+names: [Sara, Omar]
+
+new_words: [nog, väl, balans, stress, sömn, vardag, rutin, fritid, motion, energi, paus, ovana,
+            orka, koppla, prioritera, planera, minska, öka, undvika, tillräckligt, egentligen, faktiskt]
+new_grammar: [sentence_adverbs_nog_val_ju, object_pronoun_placement]
+
+phrases:
+  - { sv: "Det har du rätt i.", en: "You are right about that." }
+  - { sv: "Jag orkar inte.", en: "I haven't got the energy." }
+  - { sv: "Ta det lugnt!", en: "Take it easy!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Du ser trött ut. Sover du tillräckligt?",                         en: "You look tired. Are you sleeping enough?" }
+  - { speaker: du,   sv: "Egentligen inte. Jag har ju börjat ett nytt jobb.",               en: "Not really. I have started a new job, as you know." }
+  - { speaker: Sara, sv: "Du behöver nog en paus. Hinner du med någon motion?",             en: "You probably need a break. Do you have time for any exercise?" }
+  - { speaker: du,   sv: "Nej, jag orkar inte efter jobbet. Jag kopplar av med en film.",   en: "No, I haven't got the energy after work. I relax with a film." }
+  - { speaker: Sara, sv: "Du kan väl ta en promenad på lunchen?",                           en: "You could take a walk at lunch, couldn't you?" }
+  - { speaker: du,   sv: "Det har du rätt i. Jag ska planera min vecka bättre.",            en: "You are right about that. I am going to plan my week better." }
+  - { speaker: Sara, sv: "Och din chef? Vet hon att du är stressad?",                       en: "And your boss? Does she know that you are stressed?" }
+  - { speaker: du,   sv: "Nej. Jag känner henne inte så bra.",                              en: "No. I do not know her that well." }
+  - { speaker: Sara, sv: "Berätta det för henne. Stressen minskar nog om du prioriterar sömnen.", en: "Tell her. The stress will probably go down if you prioritise sleep." }
+  - { speaker: du,   sv: "Jag ska faktiskt göra det.",                                      en: "I am actually going to do that." }
+
+exercises:
+  # ju, väl or nog?
+  - { type: cloze, sv: "Du vet ___ att jag börjar tidigt.", hint: "ju / väl", answer: ju, en: "You know (don't you) that I start early.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: cloze, sv: "Du kommer ___ imorgon?", hint: "nog / väl", answer: väl, en: "You are coming tomorrow, aren't you?", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: cloze, sv: "Jag vet inte, men det blir ___ bra.", hint: "ju / nog", answer: nog, en: "I do not know, but it will probably be fine.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: listen_choose, sv: "Hon har väl semester nu?", en: "She is on holiday now, isn't she?",
+      options: ["The speaker thinks so and wants you to confirm.", "The speaker knows it for sure.", "The speaker does not believe it."],
+      answer: "The speaker thinks so and wants you to confirm." }
+  - { type: listen_choose, sv: "Han är nog sjuk.", en: "He is probably ill.",
+      options: ["He is probably ill.", "He is ill, as we both know.", "He is ill enough."], answer: "He is probably ill." }
+  - { type: word_order, sv: "Du behöver nog en paus.", en: "You probably need a break.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: word_order, sv: "Vi har ju inte tid idag.", en: "We do not have time today, as you know.", grammar: [sentence_adverbs_nog_val_ju] }
+
+  # a short object before inte
+  - { type: word_order, sv: "Jag känner honom inte.", en: "I do not know him.", grammar: [object_pronoun_placement] }
+  - { type: word_order, sv: "Hon ringde mig aldrig.", en: "She never called me.", grammar: [object_pronoun_placement] }
+  - { type: word_order, sv: "Jag känner inte läkaren.", en: "I do not know the doctor.", grammar: [object_pronoun_placement] }
+  - { type: word_order, sv: "Jag har inte träffat henne.", en: "I have not met her.", grammar: [object_pronoun_placement] }
+  - { type: translate, en: "I do not understand them.", sv: "Jag förstår dem inte.", accept: ["Jag förstår inte dem."], grammar: [object_pronoun_placement] }
+  - { type: translate, en: "Why are you not helping her?", sv: "Varför hjälper du henne inte?", accept: ["Varför hjälper du inte henne?"], grammar: [object_pronoun_placement] }
+
+  # fill the gap
+  - { type: cloze, sv: "Jag ___ inte träna efter jobbet.", hint: orka, answer: orkar, en: "I haven't got the energy to exercise after work." }
+  - { type: cloze, sv: "Jag ___ av med en film på kvällen.", hint: koppla, answer: kopplar, en: "I relax with a film in the evening.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Du måste ___ stressen.", hint: minska, answer: minska, en: "You must reduce the stress." }
+  - { type: cloze, sv: "Sover du ___?", answer: tillräckligt, en: "Are you sleeping enough?" }
+
+  # listen and write
+  - { type: dictation, sv: "Jag behöver mer balans i vardagen.", en: "I need more balance in everyday life." }
+  - { type: dictation, sv: "Sömn och motion ger energi.", en: "Sleep and exercise give energy." }
+  - { type: dictation, sv: "Det är en ovana att arbeta på fritiden.", en: "It is a bad habit to work in your free time." }
+  - { type: dictation, sv: "Jag har faktiskt bra rutiner.", en: "I actually have good routines." }
+  - { type: dictation, sv: "Vi tar en paus klockan 10.", en: "We are taking a break at 10." }
+
+  # say it in Swedish
+  - { type: translate, en: "I am going to plan my week better.", sv: "Jag ska planera min vecka bättre." }
+  - { type: translate, en: "You must prioritise sleep.", sv: "Du måste prioritera sömnen.", accept: ["Du måste prioritera sömn."] }
+  - { type: translate, en: "I avoid coffee in the evening.", sv: "Jag undviker kaffe på kvällen." }
+  - { type: translate, en: "The stress is increasing.", sv: "Stressen ökar." }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences about your everyday balance: sleep, work, exercise and free time. Say what probably has to change.",
+      checklist: ["I say how I sleep and whether I exercise.", "I use ju, väl or nog at least twice.", "I name one bad habit.", "I say what I am going to change."],
+      sv: "Jag har ju ett nytt jobb, så jag är ganska stressad. Egentligen sover jag inte tillräckligt, och jag orkar inte träna efter jobbet. Min ovana är att jag läser mejl på fritiden. Det är nog inte bra för sömnen. Jag ska planera min vecka bättre och ta en promenad på lunchen. Då får jag nog mer energi.",
+      grammar: [sentence_adverbs_nog_val_ju] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "If I had more time, I would exercise every day.", sv: "Om jag hade mer tid, skulle jag träna varje dag.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Ju mer jag sover, desto mer energi har jag.", en: "The more I sleep, the more energy I have.", grammar: [ju_desto] }
+  - { type: cloze, sv: "Jag blir ___ tröttare.", answer: allt, en: "I am getting more and more tired.", grammar: [allt_comparative] }
+  - { type: dictation, sv: "Jag är trött på stress och nyfiken på nya rutiner.", en: "I am tired of stress and curious about new routines.", grammar: [prepositions_feelings] }
+
+# The task itself: your friend Omar looks tired.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Omar, sv: "Jag är så trött. Jag har arbetat hela helgen.", en: "I am so tired. I have worked the whole weekend." }
+    - { speaker: du, en: "Say: you probably need a break.", answer: "Du behöver nog en paus." }
+    - { speaker: Omar, sv: "Kanske. Men jag har ju så mycket att göra.", en: "Maybe. But I have so much to do, you know." }
+    - { speaker: du, en: "Ask (expecting yes): you are sleeping enough, aren't you?",
+        options: ["Du sover väl tillräckligt?", "Du sover nog tillräckligt?", "Sover väl du tillräckligt?"], answer: "Du sover väl tillräckligt?" }
+    - { speaker: Omar, sv: "Nej, egentligen inte. Och min chef ringer på kvällarna.", en: "No, not really. And my boss calls in the evenings." }
+    - { speaker: du, en: "Ask why he does not tell her.", answer: "Varför berättar du det inte för henne?",
+        accept: ["Varför berättar du inte det för henne?", "Varför säger du det inte till henne?", "Varför säger du inte det till henne?"] }
+    - { speaker: Omar, sv: "Jag känner henne inte så bra.", en: "I do not know her that well." }
+    - { speaker: du, en: "Say: take it easy! You must prioritise sleep.", answer: "Ta det lugnt! Du måste prioritera sömnen.",
+        accept: ["Ta det lugnt. Du måste prioritera sömnen.", "Ta det lugnt! Du måste prioritera sömn."] }
+    - { speaker: Omar, sv: "Det har du rätt i. Ska vi ta en promenad?", en: "You are right about that. Shall we take a walk?" }
+    - { speaker: du, en: "Say: gladly. It will probably be good for us.",
+        options: ["Gärna. Det blir nog bra för oss.", "Gärna. Det nog blir bra för oss.", "Gärna. Det blir bra nog för oss."], answer: "Gärna. Det blir nog bra för oss." }
+
+speaking_prompt: "Say aloud: how your week looks, what gives and takes energy, and three things you say with ju, väl and nog."

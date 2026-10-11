@@ -1266,3 +1266,67 @@ items:
   form: pl
   words:
   - smärta
+- type: inflect
+  answer: biverkningen
+  grammar:
+  - def_singular
+  lemma: biverkning
+  form: def
+  words:
+  - biverkning
+- type: inflect
+  answer: återbesök
+  grammar:
+  - plural_indef
+  lemma: återbesök
+  form: pl
+  words:
+  - återbesök
+- type: inflect
+  answer: sjukgymnasterna
+  grammar:
+  - plural_def
+  lemma: sjukgymnast
+  form: pl_def
+  words:
+  - sjukgymnast
+- type: inflect
+  answer: sjukdomen
+  grammar:
+  - def_singular
+  lemma: sjukdom
+  form: def
+  words:
+  - sjukdom
+- type: inflect
+  answer: vikter
+  grammar:
+  - plural_indef
+  lemma: vikt
+  form: pl
+  words:
+  - vikt
+- type: inflect
+  answer: patienter
+  grammar:
+  - plural_indef
+  lemma: patient
+  form: pl
+  words:
+  - patient
+- type: inflect
+  answer: en remiss
+  grammar:
+  - en_ett
+  lemma: remiss
+  form: a
+  words:
+  - remiss
+- type: inflect
+  answer: risker
+  grammar:
+  - plural_indef
+  lemma: risk
+  form: pl
+  words:
+  - risk

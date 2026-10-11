@@ -196,3 +196,21 @@ words:
   - { lemma: ny,      pos: adj, tags: [state], level: A1, gloss: new }
   - { lemma: stor,    pos: adj, tags: [state], level: A1, gloss: big }
   - { lemma: liten,   pos: adj, tags: [state], level: A1, gloss: small }
+  # B2: linking words and small words
+  - { lemma: däremot,  pos: adv,  level: B2, gloss: "on the other hand, however" }
+  - { lemma: därför,   pos: adv,  level: B2, gloss: "that is why, therefore" }
+  - { lemma: alltså,   pos: adv,  level: B2, gloss: "so, that is" }
+  - { lemma: helst,    pos: adv,  level: B2, gloss: "preferably, som helst = any ... at all" }
+  - { lemma: direkt,   pos: adv,  level: B2, gloss: "directly, at once" }
+  - { lemma: denna,    pos: pron, level: B2, gloss: "this (denna, detta, dessa)" }
+  - { lemma: bredvid,  pos: prep, level: B2, gloss: "beside, next to" }
+  - { lemma: framför,  pos: prep, level: B2, gloss: "in front of" }
+  - { lemma: bakom,    pos: prep, level: B2, gloss: behind }
+  - { lemma: mellan,   pos: prep, level: B2, gloss: between }
+  - { lemma: under,    pos: prep, level: B2, gloss: "under, during" }
+  - { lemma: utan,     pos: prep, level: B2, gloss: without }
+  - { lemma: lika,     pos: adv,  level: B2, gloss: "equally, lika ... som = as ... as" }
+  - { lemma: samma,    pos: pron, level: B2, gloss: "the same" }
+  - { lemma: därifrån, pos: adv,  level: B2, gloss: "from there" }
+  - { lemma: därefter, pos: adv,  level: B2, gloss: "after that" }
+  - { lemma: hittills, pos: adv,  level: B2, gloss: "so far, up to now" }

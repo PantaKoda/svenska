@@ -1184,3 +1184,67 @@ items:
   form: pl
   words:
   - vän
+- type: inflect
+  answer: vardagar
+  grammar:
+  - plural_indef
+  lemma: vardag
+  form: pl
+  words:
+  - vardag
+- type: inflect
+  answer: en paus
+  grammar:
+  - en_ett
+  lemma: paus
+  form: a
+  words:
+  - paus
+- type: inflect
+  answer: prioriterar
+  grammar:
+  - present_tense
+  lemma: prioritera
+  form: pres
+  words:
+  - prioritera
+- type: inflect
+  answer: balanser
+  grammar:
+  - plural_indef
+  lemma: balans
+  form: pl
+  words:
+  - balans
+- type: inflect
+  answer: planerat
+  grammar:
+  - perfect_tense
+  lemma: planera
+  form: sup
+  words:
+  - planera
+- type: inflect
+  answer: minska
+  grammar:
+  - imperative
+  lemma: minska
+  form: imp
+  words:
+  - minska
+- type: inflect
+  answer: ökat
+  grammar:
+  - perfect_tense
+  lemma: öka
+  form: sup
+  words:
+  - öka
+- type: inflect
+  answer: ovanor
+  grammar:
+  - plural_indef
+  lemma: ovana
+  form: pl
+  words:
+  - ovana

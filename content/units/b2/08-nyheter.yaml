@@ -1,0 +1,115 @@
+id: b2-08
+level: B2
+theme: fritid
+title: "Nyheter"
+task: "Follow a news story with a friend: retell what happened in order, say where the information comes from, and decide what is true before you share it."
+can_do: "I can understand and retell a short news item, including the written style that leaves out har and hade."
+names: [Sara, Göteborg]
+
+new_words: [nyhet, tidning, artikel, rubrik, journalist, källa, händelse, olycka, brand, polis, vittne,
+            uppge, rapportera, inträffa, publicera, dela, kommentera, inlägg, sann, falsk, rykte,
+            därifrån, därefter, hittills]
+new_grammar: [perfect_without_har, compound_adverbs]
+
+phrases:
+  - { sv: "Har du hört?", en: "Have you heard?" }
+  - { sv: "Det är inte sant!", en: "You can't be serious! (That's not true!)" }
+  - { sv: "Vad har hänt?", en: "What has happened?" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Har du hört? Det var en brand i centrum i natt.",                          en: "Have you heard? There was a fire in the centre last night." }
+  - { speaker: du,   sv: "Det är inte sant! Vad har hänt?",                                          en: "You can't be serious! What has happened?" }
+  - { speaker: Sara, sv: "Enligt tidningen började det i en restaurang. Därifrån gick branden till huset bredvid.", en: "According to the paper it started in a restaurant. From there the fire went to the house next door." }
+  - { speaker: du,   sv: "Är någon skadad?",                                                         en: "Is anyone hurt?" }
+  - { speaker: Sara, sv: "Polisen uppger att alla hunnit ut.",                                       en: "The police state that everyone got out in time." }
+  - { speaker: du,   sv: "Vilken tur! Vem är källan?",                                               en: "How lucky! Who is the source?" }
+  - { speaker: Sara, sv: "Ett vittne som bott i huset i 20 år.",                                     en: "A witness who has lived in the house for 20 years." }
+  - { speaker: du,   sv: "Jag såg ett inlägg på nätet om en olycka, men det var nog ett rykte.",     en: "I saw a post online about an accident, but that was probably a rumour." }
+  - { speaker: Sara, sv: "Dela inte inlägg innan du vet att de är sanna.",                           en: "Do not share posts before you know that they are true." }
+  - { speaker: du,   sv: "Det har du rätt i. Hittills har bara en journalist rapporterat om det.",   en: "You are right about that. So far only one journalist has reported on it." }
+
+# Heard but not taught in this unit.
+glosses:
+  hus: "huset = the house"
+  kvinna: "woman"
+
+exercises:
+  # news style: where is har or hade missing?
+  - { type: listen_choose, sv: "Polisen uppger att mannen lämnat platsen.", en: "The police state that the man has left the scene.",
+      options: ["The man has left the place.", "The man is leaving the place now.", "The man will leave the place."], answer: "The man has left the place." }
+  - { type: listen_choose, sv: "Kvinnan, som bott där i 10 år, såg branden.", en: "The woman, who had lived there for 10 years, saw the fire.",
+      options: ["She had lived there for 10 years.", "She will live there for 10 years.", "She moved there 10 years after the fire."], answer: "She had lived there for 10 years." }
+  - { type: cloze, sv: "Polisen säger att olyckan ___ inträffat klockan 3.", hint: "har / är", answer: har, en: "The police say that the accident happened at 3.", grammar: [perfect_without_har] }
+  - { type: cloze, sv: "Ett vittne uppger att bussen ___ vid hållplatsen.", hint: stanna, answer: stannat, en: "A witness states that the bus had stopped at the stop.", grammar: [perfect_without_har] }
+  - { type: word_order, sv: "Tidningen skriver att alla resenärer hunnit ut.", en: "The paper writes that all the passengers got out in time.", grammar: [perfect_without_har] }
+  - { type: translate, en: "The police say that the man has left the city. (say it the everyday way, with har)", sv: "Polisen säger att mannen har lämnat staden.",
+      accept: ["Polisen säger att mannen lämnat staden."], grammar: [perfect_without_har] }
+
+  # därifrån, därefter, hittills, därför
+  - { type: cloze, sv: "Branden började i köket. ___ gick den till hallen.", hint: "därifrån / hittills", answer: Därifrån, en: "The fire started in the kitchen. From there it went to the hall.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "Först kom polisen, ___ ambulansen.", hint: "därefter / därifrån", answer: därefter, en: "First came the police, after that the ambulance.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "___ har ingen sett något.", hint: "hittills / därifrån", answer: Hittills, en: "So far nobody has seen anything.", grammar: [compound_adverbs] }
+  - { type: word_order, sv: "Därefter publicerade tidningen en ny artikel.", en: "After that the paper published a new article.", grammar: [compound_adverbs] }
+  - { type: translate, en: "So far the police have no witnesses.", sv: "Hittills har polisen inga vittnen.", accept: ["Polisen har hittills inga vittnen."], grammar: [compound_adverbs] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag läser nyheterna varje morgon.", en: "I read the news every morning." }
+  - { type: dictation, sv: "Rubriken var falsk.", en: "The headline was false." }
+  - { type: dictation, sv: "En journalist rapporterade från platsen.", en: "A journalist reported from the scene." }
+  - { type: dictation, sv: "Olyckan inträffade klockan 3 i natt.", en: "The accident happened at 3 last night." }
+  - { type: dictation, sv: "Många kommenterade inlägget.", en: "Many people commented on the post." }
+
+  # say it in Swedish
+  - { type: translate, en: "Is the story true?", sv: "Är nyheten sann?" }
+  - { type: translate, en: "Who is the source?", sv: "Vem är källan?" }
+  - { type: translate, en: "It is only a rumour.", sv: "Det är bara ett rykte." }
+  - { type: translate, en: "Do not share the article.", sv: "Dela inte artikeln.", grammar: [imperative] }
+  - { type: translate, en: "It was an important event.", sv: "Det var en viktig händelse." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Det har inträffat en olycka på spårvagnen.", en: "There has been an accident on the tram.",
+      options: ["Det är inte sant! Vad har hänt?", "Vad roligt! Grattis!", "Det har du rätt i."], answer: "Det är inte sant! Vad har hänt?" }
+  - { type: listen_choose, sv: "Enligt en källa hos polisen är ingen skadad.", en: "According to a source at the police nobody is hurt.",
+      options: ["Someone at the police says that nobody is hurt.", "The police have hurt nobody.", "Nobody at the police wants to say anything."],
+      answer: "Someone at the police says that nobody is hurt." }
+
+  # listen for the number
+  - { type: numbers, sv: "Branden inträffade klockan 3.30 i natt.", hint: "the time", answer: "3.30", en: "The fire happened at 3.30 last night." }
+  - { type: numbers, sv: "Inlägget delades 4500 gånger.", hint: "how many times", answer: "4500", en: "The post was shared 4500 times." }
+
+  # write your own text
+  - { type: free_write, en: "Retell a news item in 5 or 6 sentences: what happened, where and when, who says so, and what happened next.",
+      checklist: ["I say what happened, where and when.", "I name the source (enligt ..., ... uppger att).", "I use därifrån, därefter or hittills.", "I keep the order of events clear."],
+      sv: "I natt inträffade en brand i en restaurang i centrum. Enligt polisen började den i köket klockan 3. Därifrån gick branden till butiken bredvid. Ett vittne uppger att alla hann ut och att ingen är skadad. Därefter kom en journalist till platsen och publicerade en artikel. Hittills vet ingen vad som orsakade branden.",
+      grammar: [compound_adverbs] }
+
+  # words and grammar from earlier levels
+  - { type: word_order, sv: "Det var ett vittne som ringde polisen.", en: "It was a witness who called the police.", grammar: [cleft_sentence] }
+  - { type: translate, en: "If the witness had not called, the fire would have been bigger.", sv: "Om vittnet inte hade ringt, skulle branden ha blivit större.",
+      accept: ["Om vittnet inte hade ringt, skulle branden ha varit större."], grammar: [conditional_past] }
+  - { type: cloze, sv: "Vem som ___ kan publicera ett inlägg på nätet.", answer: helst, en: "Anyone can publish a post online.", grammar: [som_helst] }
+  - { type: dictation, sv: "Artikeln är inte lika bra som rubriken.", en: "The article is not as good as the headline.", grammar: [comparison_lika_som] }
+
+# The task itself: you tell Sara about a news story you have read.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Du ser orolig ut. Vad har hänt?", en: "You look worried. What has happened?" }
+    - { speaker: du, en: "Say: have you heard? There has been an accident in the centre.", answer: "Har du hört? Det har inträffat en olycka i centrum.",
+        accept: ["Har du hört? Det har hänt en olycka i centrum."] }
+    - { speaker: Sara, sv: "Det är inte sant! Är någon skadad?", en: "You can't be serious! Is anyone hurt?" }
+    - { speaker: du, en: "Say that the police state that nobody is hurt.",
+        options: ["Polisen uppger att ingen är skadad.", "Polisen uppger att är ingen skadad.", "Polisen uppger om ingen är skadad."], answer: "Polisen uppger att ingen är skadad." }
+    - { speaker: Sara, sv: "Var läste du det?", en: "Where did you read it?" }
+    - { speaker: du, en: "Say: in the paper. So far only one journalist has reported on it.", answer: "I tidningen. Hittills har bara en journalist rapporterat om det." }
+    - { speaker: Sara, sv: "Jag såg ett inlägg om en brand också.", en: "I saw a post about a fire too." }
+    - { speaker: du, en: "Say that it is probably a rumour.",
+        options: ["Det är nog ett rykte.", "Det nog är ett rykte.", "Det är ju ett rykte?"], answer: "Det är nog ett rykte." }
+    - { speaker: Sara, sv: "Ska jag dela artikeln?", en: "Shall I share the article?" }
+    - { speaker: du, en: "Say: yes, the source is good and the story is true.", answer: "Ja, källan är bra och nyheten är sann." }
+
+speaking_prompt: "Say aloud: retell today's biggest news story in order (först, därefter, hittills) and say who the source is."

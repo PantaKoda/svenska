@@ -1599,3 +1599,67 @@ items:
   form: pl_def
   words:
   - garanti
+- type: inflect
+  answer: ärendet
+  grammar:
+  - def_singular
+  lemma: ärende
+  form: def
+  words:
+  - ärende
+- type: inflect
+  answer: en kvalitet
+  grammar:
+  - en_ett
+  lemma: kvalitet
+  form: a
+  words:
+  - kvalitet
+- type: inflect
+  answer: ett bevis
+  grammar:
+  - en_ett
+  lemma: bevis
+  form: a
+  words:
+  - bevis
+- type: inflect
+  answer: en orsak
+  grammar:
+  - en_ett
+  lemma: orsak
+  form: a
+  words:
+  - orsak
+- type: inflect
+  answer: grunder
+  grammar:
+  - plural_indef
+  lemma: grund
+  form: pl
+  words:
+  - grund
+- type: inflect
+  answer: ett krav
+  grammar:
+  - en_ett
+  lemma: krav
+  form: a
+  words:
+  - krav
+- type: inflect
+  answer: nät
+  grammar:
+  - plural_indef
+  lemma: nät
+  form: pl
+  words:
+  - nät
+- type: inflect
+  answer: erbjud
+  grammar:
+  - imperative
+  lemma: erbjuda
+  form: imp
+  words:
+  - erbjuda

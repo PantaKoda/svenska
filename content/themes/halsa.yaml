@@ -66,6 +66,29 @@ words:
   - { lemma: allvarlig,    pos: adj,  level: B1, gloss: serious }
   - { lemma: orolig,       pos: adj,  level: B1, gloss: worried }
   - { lemma: illa,         pos: adv,  level: B1, gloss: "badly (må illa = feel sick)" }
+  # B2: treatment and lifestyle
+  - { lemma: behandling,  pos: noun, gender: en,  level: B2, gloss: treatment }
+  - { lemma: operation,   pos: noun, gender: en,  level: B2, gloss: operation }
+  - { lemma: operera,     pos: verb, level: B2, gloss: "to operate" }
+  - { lemma: remiss,      pos: noun, gender: en,  level: B2, gloss: "referral (to a specialist)" }
+  - { lemma: blodtryck,   pos: noun, gender: ett, level: B2, gloss: "blood pressure" }
+  - { lemma: blod,        pos: noun, gender: ett, level: B2, gloss: blood }
+  - { lemma: vikt,        pos: noun, gender: en,  level: B2, gloss: weight }
+  - { lemma: kost,        pos: noun, gender: en,  level: B2, gloss: diet }
+  - { lemma: sjukdom,     pos: noun, gender: en,  level: B2, gloss: "illness, disease" }
+  - { lemma: sjukgymnast, pos: noun, gender: en,  level: B2, gloss: physiotherapist }
+  - { lemma: övning,      pos: noun, gender: en,  level: B2, gloss: exercise }
+  - { lemma: läka,        pos: verb, level: B2, gloss: "to heal" }
+  - { lemma: återbesök,   pos: noun, gender: ett, level: B2, gloss: "follow-up visit" }
+  - { lemma: biverkning,  pos: noun, gender: en,  level: B2, gloss: "side effect" }
+  - { lemma: dos,         pos: noun, gender: en,  level: B2, gloss: dose }
+  - { lemma: patient,     pos: noun, gender: en,  level: B2, gloss: patient }
+  - { lemma: mottagning,  pos: noun, gender: en,  level: B2, gloss: "clinic, surgery" }
+  - { lemma: risk,        pos: noun, gender: en,  level: B2, gloss: risk }
+  - { lemma: förbättra,   pos: verb, level: B2, gloss: "to improve" }
+  - { lemma: röra,        pos: verb, level: B2, gloss: "to move, röra på sig = to be active" }
+  - { lemma: nyttig,      pos: adj,  level: B2, gloss: "healthy, good for you" }
+  - { lemma: likna,       pos: verb, level: B2, gloss: "to resemble, to be like" }
 
 frames:
   - { id: hal-01, level: A1, grammar: [present_tense, def_singular], review: true,

@@ -56,3 +56,26 @@ words:
   - { lemma: stressad, pos: adj,  level: B1, gloss: stressed }
   - { lemma: frisk,    pos: adj,  level: B1, gloss: healthy }
   - { lemma: ensam,    pos: adj,  level: B1, gloss: "alone, lonely" }
+  # B2: balance in everyday life
+  - { lemma: nog,          pos: adv,  level: B2, gloss: "probably, enough" }
+  - { lemma: väl,          pos: adv,  level: B2, gloss: "I suppose, surely" }
+  - { lemma: balans,       pos: noun, gender: en,  level: B2, gloss: balance }
+  - { lemma: stress,       pos: noun, gender: en,  level: B2, gloss: stress }
+  - { lemma: sömn,         pos: noun, gender: en,  level: B2, gloss: sleep }
+  - { lemma: vardag,       pos: noun, gender: en,  level: B2, gloss: "everyday life, weekday" }
+  - { lemma: rutin,        pos: noun, gender: en,  level: B2, gloss: routine }
+  - { lemma: fritid,       pos: noun, gender: en,  level: B2, gloss: "free time" }
+  - { lemma: motion,       pos: noun, gender: en,  level: B2, gloss: "exercise (for health)" }
+  - { lemma: energi,       pos: noun, gender: en,  level: B2, gloss: energy }
+  - { lemma: paus,         pos: noun, gender: en,  level: B2, gloss: "break, pause" }
+  - { lemma: ovana,        pos: noun, gender: en,  level: B2, gloss: "bad habit" }
+  - { lemma: orka,         pos: verb, level: B2, gloss: "to have the energy to, to manage" }
+  - { lemma: koppla,       pos: verb, level: B2, gloss: "koppla av = to relax" }
+  - { lemma: prioritera,   pos: verb, level: B2, gloss: "to prioritise" }
+  - { lemma: planera,      pos: verb, level: B2, gloss: "to plan" }
+  - { lemma: minska,       pos: verb, level: B2, gloss: "to reduce, to decrease" }
+  - { lemma: öka,          pos: verb, level: B2, gloss: "to increase" }
+  - { lemma: undvika,      pos: verb, level: B2, gloss: "to avoid" }
+  - { lemma: tillräckligt, pos: adv,  level: B2, gloss: enough }
+  - { lemma: egentligen,   pos: adv,  level: B2, gloss: "really, actually (in fact)" }
+  - { lemma: faktiskt,     pos: adv,  level: B2, gloss: "actually, as a matter of fact" }

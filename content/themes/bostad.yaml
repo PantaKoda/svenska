@@ -62,6 +62,25 @@ words:
   - { lemma: tillåta,      pos: verb, level: B1, gloss: "to allow" }
   - { lemma: tyst,         pos: adj,  level: B1, gloss: quiet }
   - { lemma: ljus,         pos: adj,  level: B1, gloss: "light, bright" }
+  # B2: moving in
+  - { lemma: ställa,    pos: verb, level: B2, gloss: "to put (upright); past: put; pp: put" }
+  - { lemma: sätta,     pos: verb, level: B2, gloss: "to put, to fix; past: put; pp: put" }
+  - { lemma: hänga,     pos: verb, level: B2, gloss: "to hang; past: hung; pp: hung" }
+  - { lemma: vägg,      pos: noun, gender: en,  level: B2, gloss: wall }
+  - { lemma: tak,       pos: noun, gender: ett, level: B2, gloss: "ceiling, roof" }
+  - { lemma: hörn,      pos: noun, gender: ett, level: B2, gloss: corner }
+  - { lemma: hylla,     pos: noun, gender: en,  level: B2, gloss: shelf }
+  - { lemma: garderob,  pos: noun, gender: en,  level: B2, gloss: wardrobe }
+  - { lemma: matta,     pos: noun, gender: en,  level: B2, gloss: "rug, carpet" }
+  - { lemma: gardin,    pos: noun, gender: en,  level: B2, gloss: curtain }
+  - { lemma: tavla,     pos: noun, gender: en,  level: B2, gloss: "picture, painting" }
+  - { lemma: låda,      pos: noun, gender: en,  level: B2, gloss: "box, drawer" }
+  - { lemma: kartong,   pos: noun, gender: en,  level: B2, gloss: "cardboard box" }
+  - { lemma: flytt,     pos: noun, gender: en,  level: B2, gloss: "move (to a new home)" }
+  - { lemma: bära,      pos: verb, level: B2, gloss: "to carry; past: carried; pp: carried" }
+  - { lemma: lyfta,     pos: verb, level: B2, gloss: "to lift" }
+  - { lemma: packa,     pos: verb, level: B2, gloss: "to pack" }
+  - { lemma: verktyg,   pos: noun, gender: ett, level: B2, gloss: tool }
 
 frames:
   - { id: bos-01, level: A1, grammar: [present_tense, def_singular], review: true,

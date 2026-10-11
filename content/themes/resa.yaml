@@ -56,6 +56,27 @@ words:
   - { lemma: utomlands,   pos: adv,  level: B1, gloss: abroad }
   - { lemma: möjlig,      pos: adj,  level: B1, gloss: possible }
   - { lemma: extra,       pos: adj,  level: B1, gloss: extra }
+  # B2: when the trip goes wrong
+  - { lemma: anslutning,     pos: noun, gender: en,  level: B2, gloss: connection }
+  - { lemma: försening,      pos: noun, gender: en,  level: B2, gloss: delay }
+  - { lemma: resenär,        pos: noun, gender: en,  level: B2, gloss: "traveller, passenger" }
+  - { lemma: incheckning,    pos: noun, gender: en,  level: B2, gloss: check-in }
+  - { lemma: kontroll,       pos: noun, gender: en,  level: B2, gloss: "check, control" }
+  - { lemma: mellanlandning, pos: noun, gender: en,  level: B2, gloss: stopover }
+  - { lemma: ankomst,        pos: noun, gender: en,  level: B2, gloss: arrival }
+  - { lemma: avresa,         pos: noun, gender: en,  level: B2, gloss: departure }
+  - { lemma: orsaka,         pos: verb, level: B2, gloss: "to cause" }
+  - { lemma: rimlig,         pos: adj,  level: B2, gloss: reasonable }
+  - { lemma: nödvändig,      pos: adj,  level: B2, gloss: necessary }
+  - { lemma: tur,            pos: noun, gender: en,  level: B2, gloss: "luck, trip, turn" }
+  - { lemma: otur,           pos: noun, gender: en,  level: B2, gloss: "bad luck" }
+  - { lemma: situation,      pos: noun, gender: en,  level: B2, gloss: situation }
+  - { lemma: lösning,        pos: noun, gender: en,  level: B2, gloss: solution }
+  - { lemma: lösa,           pos: verb, level: B2, gloss: "to solve" }
+  - { lemma: alternativ,     pos: noun, gender: ett, level: B2, gloss: alternative }
+  - { lemma: blankett,       pos: noun, gender: en,  level: B2, gloss: form }
+  - { lemma: ansöka,         pos: verb, level: B2, gloss: "ansöka om = to apply for" }
+  - { lemma: strejk,         pos: noun, gender: en,  level: B2, gloss: strike }
 
 frames:
   - { id: res-01, level: A1, grammar: [wh_question, def_singular], review: true,

@@ -53,6 +53,30 @@ words:
   - { lemma: dansa,     pos: verb, tags: [action_intrans], level: B1, gloss: to dance }
   - { lemma: sjunga,    pos: verb, tags: [action_intrans], level: B1, gloss: "to sing; past: sang; pp: sung" }
   - { lemma: skild,     pos: adj,  level: B1, gloss: divorced }
+  # B2: a wedding
+  - { lemma: bröllop,      pos: noun, gender: ett, level: B2, gloss: wedding }
+  - { lemma: brud,         pos: noun, gender: en,  level: B2, gloss: bride }
+  - { lemma: brudgum,      pos: noun, gender: en,  level: B2, gloss: bridegroom }
+  - { lemma: par,          pos: noun, gender: ett, level: B2, gloss: "couple, pair" }
+  - { lemma: ring,         pos: noun, gender: en,  level: B2, gloss: ring }
+  - { lemma: tal,          pos: noun, gender: ett, level: B2, gloss: speech }
+  - { lemma: inbjudan,     pos: noun, gender: en,  level: B2, gloss: invitation }
+  - { lemma: kyrka,        pos: noun, gender: en,  level: B2, gloss: church }
+  - { lemma: ceremoni,     pos: noun, gender: en,  level: B2, gloss: ceremony }
+  - { lemma: blomma,       pos: noun, gender: en,  level: B2, gloss: flower }
+  - { lemma: klänning,     pos: noun, gender: en,  level: B2, gloss: dress }
+  - { lemma: kostym,       pos: noun, gender: en,  level: B2, gloss: suit }
+  - { lemma: överraskning, pos: noun, gender: en,  level: B2, gloss: surprise }
+  - { lemma: kärlek,       pos: noun, gender: en,  level: B2, gloss: love }
+  - { lemma: gratulera,    pos: verb, level: B2, gloss: "to congratulate" }
+  - { lemma: önska,        pos: verb, level: B2, gloss: "to wish" }
+  - { lemma: skänka,       pos: verb, level: B2, gloss: "to give (as a gift), to donate" }
+  - { lemma: låna,         pos: verb, level: B2, gloss: "to borrow, låna ut = to lend" }
+  - { lemma: tacka,        pos: verb, level: B2, gloss: "to thank" }
+  - { lemma: gifta,        pos: verb, level: B2, gloss: "gifta sig = to get married" }
+  - { lemma: lycklig,      pos: adj,  level: B2, gloss: happy }
+  - { lemma: vacker,       pos: adj,  level: B2, gloss: beautiful }
+  - { lemma: underbar,     pos: adj,  level: B2, gloss: wonderful }
 
 frames:
   - { id: fam-01, level: A1, grammar: [present_tense, en_ett], review: true,

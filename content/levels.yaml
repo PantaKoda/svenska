@@ -25,10 +25,20 @@ B1:
             possessive_sin, indefinite_pronouns,
             ju_desto, allt_comparative, superlative_definite, tycka_tanka_tro,
             prepositions_hos_till_pa]
-# B2 is not written. A proposal from chapters 12-18, to be turned into grammar
-# points when B2 starts:
-#   sentence adverbs nog/väl/ju, conditional in the past (skulle ha + supine),
-#   question word + som helst, cleft sentences (det är ... som), adjectives and
-#   participles as nouns, demonstrative pronouns, perfect without har/hade,
-#   stå/ställa and ligga/lägga, place of unstressed object pronouns, compound
-#   adverbs, shortened clauses.
+# B2 follows chapters 12-18 of the same book (it covers only the first part of B2).
+# Chapter in brackets. conditional_past is in chapter 11 there; it is taught here.
+#   sentence_adverbs_nog_val_ju (12), perfect_for_future (12), som_helst (12),
+#   comparison_lika_som (12), noun_without_article (13), exclamations (13),
+#   cleft_sentence (14), adjective_as_noun (15), demonstrative_pronouns (15),
+#   perfect_without_har (15), position_verbs (16), object_pronoun_placement (16),
+#   prepositions_feelings (16), hel_all (16), compound_adverbs (17),
+#   direct_indirect_object (17), clause_shortening (18), contrast_cause (18).
+# Not taken: slang and interjections (13), transitive/intransitive in general (14).
+B2:
+  grammar: [prepositions_feelings, hel_all, sentence_adverbs_nog_val_ju,
+            object_pronoun_placement, cleft_sentence, contrast_cause,
+            conditional_past, som_helst, position_verbs, demonstrative_pronouns,
+            exclamations, direct_indirect_object, perfect_for_future,
+            comparison_lika_som, perfect_without_har, compound_adverbs,
+            adjective_as_noun, noun_without_article, clause_shortening]
+# C1+ added later.

@@ -115,7 +115,15 @@ B1:
             possessive_sin, indefinite_pronouns, ju_desto, allt_comparative,
             superlative_definite, tycka_tanka_tro, prepositions_hos_till_pa]
 # B1 = chapters 1-11 of Rivstart B1+B2 (compared with its contents page, 2026-10-11).
-# B2 starts at chapter 12; a proposed list is in the comments of levels.yaml.
+B2:
+  grammar: [prepositions_feelings, hel_all, sentence_adverbs_nog_val_ju,
+            object_pronoun_placement, cleft_sentence, contrast_cause, conditional_past,
+            som_helst, position_verbs, demonstrative_pronouns, exclamations,
+            direct_indirect_object, perfect_for_future, comparison_lika_som,
+            perfect_without_har, compound_adverbs, adjective_as_noun,
+            noun_without_article, clause_shortening]
+# B2 = chapters 12-18 of the same book, which covers only the first part of B2.
+# The chapter of each point is noted in levels.yaml. C1+ added later.
 ```
 
 ### grammar.yaml
@@ -464,6 +472,22 @@ Each unit has three or so everyday phrases and, where it fits, a `free_write`.
 | 09 | Arbete (`arbete`) | Take part in a work meeting; rights and duties | – |
 | 10 | Data (`data`) | Explain a computer problem to support, follow instructions | allt_comparative |
 
+## B2 unit plan
+
+The same themes a fourth time: arguing, reporting, nuance and written style.
+
+| # | Theme (pack) | Task | New grammar |
+|---|---|---|---|
+| 01 | Jag (`jag`) | Describe a person: personality and feelings | prepositions_feelings, hel_all |
+| 02 | Vardag (`vardag`) | Talk about stress and habits, soften what you say | sentence_adverbs_nog_val_ju, object_pronoun_placement |
+| 03 | Matbutiken (`matbutiken`) | Argue your case with customer service | cleft_sentence, contrast_cause |
+| 04 | Buss & tåg (`resa`) | Sort out a missed connection, claim compensation | conditional_past, som_helst |
+| 05 | Bostad (`bostad`) | Direct the friends who help you move in | position_verbs, demonstrative_pronouns |
+| 06 | Familjen (`familjen`) | Be a guest at a wedding: react, congratulate, give | exclamations, direct_indirect_object |
+| 07 | Hälsa (`halsa`) | Follow a treatment plan at a follow-up visit | perfect_for_future, comparison_lika_som |
+| 08 | Fritid (`fritid`) | Follow and retell a news story | perfect_without_har, compound_adverbs |
+| 09 | Arbete (`arbete`) | Apply for a job: phone call and personal letter | adjective_as_noun, noun_without_article |
+| 10 | Vård (`vard`) | Work a shift in a care home and hand over | clause_shortening |
 ---
 
 ## Milestones

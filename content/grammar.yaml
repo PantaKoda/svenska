@@ -655,3 +655,335 @@
     hemma = where?      Jag är hemma.
     hem   = where to?   Jag går hem.
         hemma hos Sara      hem till Sara
+
+# ---- B2 ----
+- id: prepositions_feelings
+  level: B2
+  requires: []
+  title: "Feelings and their prepositions (rädd för, arg på)"
+  card: |
+    Learn the adjective together with its preposition.
+
+    för     rädd för, orolig för, nervös för
+    på      arg på, besviken på, avundsjuk på, nyfiken på,
+            trött på
+    över    glad över, stolt över, förvånad över, ledsen över
+    av      intresserad av
+
+    Jag är stolt över min dotter.
+    Han är arg på sin chef.
+
+    Verbs too: lita på, längta efter, bry sig om.
+
+- id: hel_all
+  level: B2
+  requires: [indefinite_pronouns]
+  title: "Hel or all? (hela dagen, alla dagar)"
+  card: |
+    hel = the whole of one thing. all = every one, or all of a mass.
+
+    hela + definite noun, no article in front:
+        hela dagen, hela huset, hela familjen
+    en hel / ett helt + indefinite noun:
+        en hel vecka, ett helt år
+
+    all, allt, alla:
+        all mat, allt kaffe (a mass)
+        alla barn (in general)   alla barnen (these ones)
+
+    Jag har arbetat hela dagen.   Jag arbetar alla dagar.
+
+- id: sentence_adverbs_nog_val_ju
+  level: B2
+  requires: [negation_inte]
+  title: "Nog, väl, ju: small words that change the tone"
+  card: |
+    Unstressed, in the same place as inte.
+
+    ju    "as we both know"
+          Du vet ju att jag börjar tidigt.
+    väl   "I suppose; don't you agree?"
+          Du kommer väl imorgon?
+    nog   "probably; I think so"
+          Det blir nog bra.
+
+    In a subordinate clause they stand before the verb:
+          ... eftersom du ju inte har tid.
+
+- id: object_pronoun_placement
+  level: B2
+  requires: [negation_inte]
+  title: "Jag ser honom inte: a short object before inte"
+  card: |
+    An unstressed object pronoun (mig, dig, honom, henne, den, det,
+    oss, er, dem) usually comes before inte:
+
+        Jag känner honom inte.
+        Hon ringde mig aldrig.
+
+    A noun stays after inte:
+        Jag känner inte läkaren.
+
+    Only when the verb is in one piece. With a helping verb the
+    pronoun comes after the main verb:
+        Jag har inte sett honom.   Jag kan inte hjälpa dig.
+
+- id: cleft_sentence
+  level: B2
+  requires: [relative_clause]
+  title: "Det är ... som: putting the weight on one part"
+  card: |
+    Neutral:   Jag beställde paketet igår.
+
+    Det var jag som beställde paketet.      (not someone else)
+    Det var paketet som jag beställde.      (not something else)
+    Det var igår som jag beställde paketet. (not today)
+
+    det är / det var + the important part + som + the rest.
+    The rest is a subordinate clause: inte before the verb.
+        Det är kvaliteten som inte är bra.
+
+    Very common in questions: Vem var det som ringde?
+
+- id: contrast_cause
+  level: B2
+  requires: [conjunctions_advanced, inversion_after_adverb]
+  title: "Därför, alltså, däremot, på grund av"
+  card: |
+    Cause and result
+    därför        Paketet kom inte. Därför vill jag ha pengarna
+                  tillbaka.
+    alltså        Du har kvitto. Alltså har du rätt.
+    på grund av   + noun: på grund av förseningen
+
+    Contrast
+    däremot       Priset är bra. Kvaliteten är däremot dålig.
+    trots         + noun: trots garantin
+
+    därför, alltså and däremot are adverbs: first in the
+    sentence they are followed by the verb.
+
+- id: conditional_past
+  level: B2
+  requires: [conditional_skulle, pluperfect]
+  title: "Skulle ha + supine: what would have happened"
+  card: |
+    Something that did not happen, and its result.
+
+    om + hade + supine,    skulle ha + supine
+
+    Om tåget hade kommit i tid, skulle jag ha hunnit.
+    Jag skulle ha ringt, om jag hade haft ditt nummer.
+
+    Compare:
+    Om jag hade tid, skulle jag komma.         (now: I have none)
+    Om jag hade haft tid, skulle jag ha kommit.  (then: I had none)
+
+    After the om-clause the verb comes first: ..., skulle jag ...
+
+- id: som_helst
+  level: B2
+  requires: [wh_question]
+  title: "Question word + som helst (any ... at all)"
+  card: |
+    vem som helst     anyone
+    vad som helst     anything
+    när som helst     at any time
+    var som helst     anywhere
+    hur som helst     anyhow; anyway
+    vilken / vilket / vilka som helst    any (one)
+
+    Du kan ringa när som helst.
+    Det kan hända vem som helst.
+    Ta vilket tåg som helst.
+
+    With a noun: hur mycket bagage som helst.
+
+- id: position_verbs
+  level: B2
+  requires: [past_tense]
+  title: "Står, ligger, sitter and ställer, lägger, sätter"
+  card: |
+    Where a thing is         Putting it there (+ object)
+    stå    upright           ställa   ställer, ställde, ställt
+    ligga  lying flat        lägga    lägger, la, lagt
+    sitta  fixed, attached   sätta    sätter, satte, satt
+
+    Hyllan står i hörnet.    Ställ hyllan i hörnet.
+    Mattan ligger på golvet. Lägg mattan på golvet.
+    Tavlan sitter på väggen. Sätt upp tavlan på väggen.
+
+    hänga is both: Lampan hänger i taket. Häng lampan där.
+    Swedish seldom says just "är" for where a thing is.
+
+- id: demonstrative_pronouns
+  level: B2
+  requires: [def_singular, plural_def]
+  title: "Den här, den där, denna (this, that)"
+  card: |
+    Everyday Swedish:
+              en-word     ett-word    plural
+    this      den här     det här     de här
+    that      den där     det där     de där
+    + definite noun: den här lådan, det där hörnet, de här lådorna
+
+    More formal, in writing:
+    this      denna       detta       dessa
+    + indefinite noun: denna låda, detta hörn, dessa lådor
+
+    Alone, without a noun:
+        Vad är det här?   Jag tar den där.
+
+- id: exclamations
+  level: B2
+  requires: [adjective_agreement_full]
+  title: "Vad fint! Vilken dag! (exclamations)"
+  card: |
+    vad + adjective (+ subject + verb)
+        Vad vacker du är!     Vad roligt!
+    vilken / vilket / vilka (+ adjective) + noun, no article
+        Vilken fin klänning!  Vilket tal!  Vilka fina blommor!
+    så + adjective
+        Så roligt att du kom!
+
+    The word order is that of a subordinate clause:
+        Vad vacker du är!     (not: Vad vacker är du!)
+    The adjective agrees: roligt after vad/så when it is about
+    the whole thing.
+
+- id: direct_indirect_object
+  level: B2
+  requires: [v2_word_order]
+  title: "Ge någon något: verbs with two objects"
+  card: |
+    ge, skicka, visa, låna, skänka, önska, berätta ...
+
+    person first, then the thing, no preposition:
+        Jag gav bruden blommorna.
+        Kan du visa mig ringen?
+    or the thing first, then till/för + person:
+        Jag gav blommorna till bruden.
+        Kan du visa ringen för mig?
+
+    When the thing is a pronoun, use the second way:
+        Jag gav dem till bruden.
+
+- id: perfect_for_future
+  level: B2
+  requires: [perfect_tense, subordinate_clause_basic]
+  title: "När du har ätit ...: perfect about the future"
+  card: |
+    After när, så fort, tills, innan: perfect for something that
+    will be finished before the next thing happens.
+
+    När du har tagit tabletterna, ska du vila.
+    Ring mig när du har fått resultatet.
+    Vänta tills läkaren har kommit.
+
+    English also says "when you have taken", never
+    "when you will have taken".
+    The main clause is present or future: ska vila, ring, får gå.
+
+- id: comparison_lika_som
+  level: B2
+  requires: [comparison]
+  title: "Lika ... som, samma ... som, likna"
+  card: |
+    lika + adjective + som      as ... as
+        Den här övningen är lika svår som den förra.
+        Jag mår inte lika bra som igår.
+    samma + noun + som          the same ... as
+        Jag har samma läkare som du.
+    likna + noun                resemble, be like
+        Symtomen liknar en vanlig förkylning.
+
+    After som: the subject form in writing (som jag), often the
+    object form in speech (som mig).
+    Different: annorlunda än, en annan ... än.
+
+- id: perfect_without_har
+  level: B2
+  requires: [perfect_tense, pluperfect, subordinate_clause_basic]
+  title: "Perfect without har/hade (news style)"
+  card: |
+    In a subordinate clause, written Swedish often leaves out
+    har or hade before the supine.
+
+    Polisen säger att mannen (har) lämnat platsen.
+    Kvinnan, som (hade) bott där i 10 år, såg brandröken.
+    Det är oklart vad som (har) hänt.
+
+    Only in subordinate clauses, never in a main clause:
+        Mannen har lämnat platsen.
+    Common in newspapers and reports. You need to understand
+    it; in speech, keep har and hade.
+
+- id: compound_adverbs
+  level: B2
+  requires: [inversion_after_adverb]
+  title: "Därifrån, därefter, hittills (compound adverbs)"
+  card: |
+    här / där / hit / dit + a small word, written together.
+
+    därifrån    from there      härifrån   from here
+    därefter    after that      därför     that is why
+    hittills    so far, up to now
+    dessutom    besides, also
+
+    Han gick till stationen. Därifrån tog han bussen.
+    Först kom polisen, därefter ambulansen.
+    Hittills har ingen sett något.
+
+    First in the sentence: the verb comes next.
+
+- id: adjective_as_noun
+  level: B2
+  requires: [adjective_agreement_full, participles]
+  title: "De anställda, den sökande: adjectives as nouns"
+  card: |
+    An adjective or participle can stand alone for a person
+    or a thing. It keeps its adjective endings.
+
+    en anställd     den anställda     de anställda
+    en sökande      den sökande       de sökande
+    en arbetslös    den arbetslösa    de arbetslösa
+    de unga, de gamla, de sjuka (people in general)
+
+    det + adjective: the ... thing
+        Det viktigaste är erfarenheten.
+        Det bästa med jobbet är kollegorna.
+
+- id: noun_without_article
+  level: B2
+  requires: [en_ett]
+  title: "Hon är lärare: nouns without en/ett"
+  card: |
+    No article:
+    profession, nationality, role after vara, bli, arbeta som
+        Hon är lärare.   Han arbetar som kock.
+    but with an adjective: Hon är en bra lärare.
+
+    the kind of thing, not one specific one
+        Jag söker jobb.   Har du körkort?   Vi har bil.
+        Hon åker buss.    Han bor i lägenhet.
+
+    Compare:
+        Har du bil?            (do you own one at all)
+        Har du en bil idag?    (one car, now)
+
+- id: clause_shortening
+  level: B2
+  requires: [subordinate_clause_basic]
+  title: "För att, utan att, efter att ha (shortened clauses)"
+  card: |
+    Same subject in both parts: preposition + att + infinitive.
+
+    för att      Jag kom för att hjälpa dig.     (in order to)
+    utan att     Hon gick ut utan att larma.     (without ...ing)
+    genom att    Du hjälper henne genom att lyssna.   (by ...ing)
+    efter att ha + supine
+                 Efter att ha ätit vilade hon.   (after ...ing)
+
+    Full clause instead, when the subjects differ:
+        Jag kom för att du skulle få hjälp.
+    inte comes before the infinitive: för att inte falla.

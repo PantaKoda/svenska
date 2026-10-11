@@ -1,0 +1,109 @@
+id: b2-09
+level: B2
+theme: arbete
+title: "Söka jobb"
+task: "Apply for a job: understand the advert, present your qualifications on the phone and in a personal letter, and ask about the terms."
+can_do: "I can describe my qualifications and ask about a post, and I know when a noun has no article and how adjectives stand for people."
+names: [Sara, Ali, Göteborg]
+
+new_words: [tjänst, arbetsgivare, merit, kompetens, referens, personlig, uppgift, anställning, vikariat, vikarie,
+            fast, tillfällig, deltid, bransch, yrke, praktik, arbetslös, rekrytera, anställa, ansvarig, flexibel, lämplig]
+new_grammar: [adjective_as_noun, noun_without_article]
+
+phrases:
+  - { sv: "Tack för din ansökan.", en: "Thank you for your application." }
+  - { sv: "Vi hör av oss.", en: "We will be in touch." }
+  - { sv: "Välkommen på intervju!", en: "Welcome to an interview!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: arbetsgivare, sv: "Tack för din ansökan. Vi söker en vikarie på deltid.",                 en: "Thank you for your application. We are looking for a part-time substitute." }
+  - { speaker: du,           sv: "Jag såg annonsen. Är tjänsten tillfällig?",                            en: "I saw the advert. Is the post temporary?" }
+  - { speaker: arbetsgivare, sv: "Ja, det är ett vikariat på 6 månader, men det kan bli en fast anställning.", en: "Yes, it is a temporary post for 6 months, but it may become permanent employment." }
+  - { speaker: du,           sv: "Jag är kock och har arbetat i branschen i 5 år.",                      en: "I am a chef and have worked in the industry for 5 years." }
+  - { speaker: arbetsgivare, sv: "Vilka är dina viktigaste meriter?",                                    en: "What are your most important qualifications?" }
+  - { speaker: du,           sv: "Jag är flexibel och noggrann, och jag har varit ansvarig för ett kök.", en: "I am flexible and careful, and I have been in charge of a kitchen." }
+  - { speaker: arbetsgivare, sv: "Har du körkort?",                                                      en: "Do you have a driving licence?" }
+  - { speaker: du,           sv: "Ja, och jag har bil.",                                                 en: "Yes, and I have a car." }
+  - { speaker: arbetsgivare, sv: "Bra. Kan du lämna 2 referenser?",                                      en: "Good. Can you give 2 references?" }
+  - { speaker: du,           sv: "Ja. Min förra arbetsgivare kan berätta om min kompetens.",             en: "Yes. My previous employer can tell you about my skills." }
+  - { speaker: arbetsgivare, sv: "Vi hör av oss. De sökande får svar nästa vecka.",                      en: "We will be in touch. The applicants get an answer next week." }
+
+exercises:
+  # with or without en/ett?
+  - { type: listen_choose, sv: "Hon är lärare.", en: "She is a teacher.",
+      options: ["Right: no article with a profession.", "Wrong: it must be en lärare."], answer: "Right: no article with a profession." }
+  - { type: word_order, sv: "Jag arbetar som kock på en restaurang.", en: "I work as a chef at a restaurant.", grammar: [noun_without_article] }
+  - { type: word_order, sv: "Hon är en mycket bra chef.", en: "She is a very good manager.", grammar: [noun_without_article] }
+  - { type: translate, en: "I am looking for a job.", sv: "Jag söker jobb.", accept: ["Jag söker ett jobb."], grammar: [noun_without_article] }
+  - { type: translate, en: "Do you have a driving licence?", sv: "Har du körkort?", grammar: [noun_without_article] }
+  - { type: translate, en: "He is a nurse.", sv: "Han är sjuksköterska.", grammar: [noun_without_article] }
+  - { type: translate, en: "He is a careful nurse.", sv: "Han är en noggrann sjuksköterska.", grammar: [noun_without_article] }
+
+  # adjectives that stand for people and things
+  - { type: cloze, sv: "De ___ får svar nästa vecka.", hint: söka, answer: sökande, en: "The applicants get an answer next week.", grammar: [adjective_as_noun] }
+  - { type: cloze, sv: "Alla ___ har rätt till rast.", hint: anställd, answer: anställda, en: "All employees have the right to a break.", grammar: [adjective_as_noun] }
+  - { type: cloze, sv: "Kursen är för unga ___.", hint: arbetslös, answer: arbetslösa, en: "The course is for young unemployed people.", grammar: [adjective_as_noun] }
+  - { type: cloze, sv: "Det ___ med jobbet är kollegorna.", hint: bra, answer: bästa, en: "The best thing about the job is the colleagues.", grammar: [adjective_as_noun] }
+  - { type: word_order, sv: "Det viktigaste är din erfarenhet.", en: "The most important thing is your experience.", grammar: [adjective_as_noun] }
+  - { type: translate, en: "Who is the person in charge?", sv: "Vem är den ansvariga?", accept: ["Vem är ansvarig?"], grammar: [adjective_as_noun] }
+
+  # listen and write
+  - { type: dictation, sv: "Tjänsten är ett vikariat på deltid.", en: "The post is a part-time temporary post." }
+  - { type: dictation, sv: "Företaget rekryterar 10 nya anställda.", en: "The company is recruiting 10 new employees." }
+  - { type: dictation, sv: "Erfarenhet från branschen är en merit.", en: "Experience from the industry is a qualification." }
+  - { type: dictation, sv: "Jag har gjort praktik på ett kontor.", en: "I have done a work placement at an office." }
+  - { type: dictation, sv: "Vilka uppgifter ingår i tjänsten?", en: "What tasks are included in the post?" }
+  - { type: dictation, sv: "Jag skickar ett personligt brev och 2 referenser.", en: "I am sending a personal letter and 2 references." }
+
+  # say it in Swedish
+  - { type: translate, en: "Is it a permanent post?", sv: "Är det en fast tjänst?", accept: ["Är det en fast anställning?"] }
+  - { type: translate, en: "What is your profession?", sv: "Vad har du för yrke?", accept: ["Vilket yrke har du?", "Vad är ditt yrke?"] }
+  - { type: translate, en: "I am flexible and independent.", sv: "Jag är flexibel och självständig." }
+  - { type: translate, en: "They want to hire a substitute.", sv: "De vill anställa en vikarie." }
+  - { type: translate, en: "I have the right skills for the post.", sv: "Jag har rätt kompetens för tjänsten." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Vi söker en person med erfarenhet från branschen.", en: "We are looking for a person with experience from the industry.",
+      options: ["You should have worked in this line of business before.", "You should be new to this line of business.", "You should have a university education."],
+      answer: "You should have worked in this line of business before." }
+  - { type: listen_choose, sv: "Du verkar lämplig för tjänsten.", en: "You seem suitable for the post.",
+      options: ["Välkommen på intervju!", "Krya på dig!", "Det är inte mitt fel."], answer: "Välkommen på intervju!" }
+  - { type: listen_choose, sv: "Anställningen är tillfällig.", en: "The employment is temporary.",
+      options: ["The job is for a limited time.", "The job is permanent.", "The job is part-time."], answer: "The job is for a limited time." }
+
+  # write your own text
+  - { type: free_write, en: "Write a personal letter for a job (6 or 7 sentences): which post, who you are, your qualifications and qualities, and what you hope for.",
+      checklist: ["I say which post I am applying for.", "I name my profession without en/ett.", "I describe my qualifications and two qualities.", "I offer references and end politely."],
+      sv: "Hej! Jag söker tjänsten som kock på er restaurang i Göteborg. Jag är kock och har arbetat i branschen i 5 år. På mitt förra jobb var jag ansvarig för köket och för 3 anställda. Jag är flexibel, noggrann och tycker om att samarbeta. Det viktigaste för mig är att lära mig nya saker. Min förra arbetsgivare lämnar gärna referenser. Jag ser fram emot ditt svar. Med vänlig hälsning, Ali",
+      grammar: [noun_without_article, adjective_as_noun] }
+
+  # words and grammar from earlier levels
+  - { type: translate, en: "If I had had a driving licence, I would have got the job.", sv: "Om jag hade haft körkort, skulle jag ha fått jobbet.", grammar: [conditional_past, noun_without_article] }
+  - { type: word_order, sv: "Det var min förra chef som skrev referensen.", en: "It was my previous manager who wrote the reference.", grammar: [cleft_sentence] }
+  - { type: cloze, sv: "Jag är nervös ___ intervjun.", answer: för, en: "I am nervous about the interview.", grammar: [prepositions_feelings] }
+  - { type: dictation, sv: "Hittills har jag sökt 10 tjänster.", en: "So far I have applied for 10 posts.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "När jag har ___ ansökan, ringer jag arbetsgivaren.", hint: skicka, answer: skickat, en: "When I have sent the application, I will call the employer.", grammar: [perfect_for_future] }
+
+# The task itself: the employer calls you about your application.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: arbetsgivare, sv: "Tack för din ansökan. Vad har du för yrke?", en: "Thank you for your application. What is your profession?" }
+    - { speaker: du, en: "Say that you are a chef.",
+        options: ["Jag är kock.", "Jag är en kock.", "Jag är kocken."], answer: "Jag är kock." }
+    - { speaker: arbetsgivare, sv: "Har du erfarenhet från branschen?", en: "Do you have experience from the industry?" }
+    - { speaker: du, en: "Say: yes, I have been in charge of a kitchen.", answer: "Ja, jag har varit ansvarig för ett kök." }
+    - { speaker: arbetsgivare, sv: "Tjänsten är ett vikariat. Går det bra?", en: "The post is a temporary one. Is that all right?" }
+    - { speaker: du, en: "Say: yes. Can it become permanent employment?", answer: "Ja. Kan det bli en fast anställning?",
+        accept: ["Ja, kan det bli en fast anställning?", "Ja. Kan det bli en fast tjänst?"] }
+    - { speaker: arbetsgivare, sv: "Kanske. Vad är det viktigaste för dig?", en: "Maybe. What is the most important thing for you?" }
+    - { speaker: du, en: "Say: the most important thing is good colleagues.",
+        options: ["Det viktigaste är bra kollegor.", "Den viktigaste är bra kollegor.", "Det viktigast är bra kollegor."], answer: "Det viktigaste är bra kollegor." }
+    - { speaker: arbetsgivare, sv: "Bra svar. Välkommen på intervju på måndag!", en: "Good answer. Welcome to an interview on Monday!" }
+    - { speaker: du, en: "Say: thank you! Shall I send references?", answer: "Tack! Ska jag skicka referenser?", accept: ["Tack. Ska jag skicka referenser?"] }
+
+speaking_prompt: "Say aloud: your profession, your three most important qualifications, and what the most important thing in a job is for you."

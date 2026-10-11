@@ -1,0 +1,111 @@
+id: b2-04
+level: B2
+theme: resa
+title: "Missad anslutning"
+task: "Sort out a missed connection: explain what happened, say what would have happened without the delay, find a new way and claim compensation."
+can_do: "I can explain a travel problem, talk about what would have happened, and ask for a solution and compensation."
+names: [Sara, Ali, Göteborg, Stockholm]
+
+new_words: [anslutning, försening, resenär, incheckning, kontroll, mellanlandning, ankomst, avresa, orsaka,
+            rimlig, nödvändig, tur, otur, situation, lösning, lösa, alternativ, blankett, ansöka, strejk,
+            helst, direkt]
+new_grammar: [conditional_past, som_helst]
+
+phrases:
+  - { sv: "Vilken otur!", en: "What bad luck!" }
+  - { sv: "Det var inte så farligt.", en: "It was not that bad." }
+  - { sv: "Bättre sent än aldrig.", en: "Better late than never." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: personal, sv: "Hur kan jag hjälpa dig?",                                               en: "How can I help you?" }
+  - { speaker: du,       sv: "Jag missade min anslutning på grund av förseningen från Göteborg.",     en: "I missed my connection because of the delay from Gothenburg." }
+  - { speaker: personal, sv: "Vilken otur! Förseningen orsakades av en strejk.",                      en: "What bad luck! The delay was caused by a strike." }
+  - { speaker: du,       sv: "Om flyget hade kommit i tid, skulle jag ha hunnit.",                    en: "If the flight had arrived on time, I would have made it." }
+  - { speaker: personal, sv: "Jag förstår. Jag kan boka om dig till ett flyg imorgon.",               en: "I understand. I can rebook you on a flight tomorrow." }
+  - { speaker: du,       sv: "Finns det inget alternativ idag? Jag kan åka när som helst.",           en: "Is there no alternative today? I can go at any time." }
+  - { speaker: personal, sv: "Det finns ett flyg med mellanlandning klockan 19.",                     en: "There is a flight with a stopover at 19." }
+  - { speaker: du,       sv: "Det tar jag. Kan jag ansöka om ersättning?",                            en: "I will take that. Can I apply for compensation?" }
+  - { speaker: personal, sv: "Ja, fyll i den här blanketten. Du har rätt till en rimlig ersättning.", en: "Yes, fill in this form. You have the right to reasonable compensation." }
+  - { speaker: du,       sv: "Tack. Det var en bra lösning.",                                         en: "Thank you. That was a good solution." }
+
+exercises:
+  # what would have happened
+  - { type: cloze, sv: "Om tåget hade kommit i tid, skulle jag ha ___.", hint: hinna, answer: hunnit, en: "If the train had come on time, I would have made it.", grammar: [conditional_past] }
+  - { type: cloze, sv: "Om jag hade ___ det, skulle jag ha tagit bussen.", hint: veta, answer: vetat, en: "If I had known that, I would have taken the bus.", grammar: [conditional_past] }
+  - { type: cloze, sv: "Jag skulle ___ bokat ett annat flyg.", answer: ha, en: "I would have booked another flight.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Om jag hade haft tur, skulle jag ha hunnit.", en: "If I had been lucky, I would have made it.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Vi skulle ha missat flyget om du inte hade hjälpt oss.", en: "We would have missed the flight if you had not helped us.", grammar: [conditional_past] }
+  - { type: translate, en: "If the flight had not been late, I would have been home now.", sv: "Om flyget inte hade varit försenat, skulle jag ha varit hemma nu.",
+      accept: ["Om flyget inte hade varit sent, skulle jag ha varit hemma nu."], grammar: [conditional_past] }
+  - { type: listen_choose, sv: "Om jag hade vetat om strejken, skulle jag ha åkt igår.", en: "If I had known about the strike, I would have gone yesterday.",
+      options: ["I did not know about the strike, and I did not go yesterday.", "I knew about the strike, so I went yesterday.", "I will go if there is a strike."],
+      answer: "I did not know about the strike, and I did not go yesterday." }
+
+  # any ... at all
+  - { type: cloze, sv: "Du kan ringa oss när som ___.", answer: helst, en: "You can call us at any time.", grammar: [som_helst] }
+  - { type: cloze, sv: "Jag kan sitta ___ som helst.", hint: "var / vem", answer: var, en: "I can sit anywhere.", grammar: [som_helst] }
+  - { type: cloze, sv: "Det kan hända ___ som helst.", hint: "var / vem", answer: vem, en: "It can happen to anyone.", grammar: [som_helst] }
+  - { type: word_order, sv: "Du kan ta vilket tåg som helst.", en: "You can take any train.", grammar: [som_helst] }
+  - { type: translate, en: "I can go at any time.", sv: "Jag kan åka när som helst.", accept: ["Jag kan resa när som helst."], grammar: [som_helst] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag missade min anslutning i Stockholm.", en: "I missed my connection in Stockholm." }
+  - { type: dictation, sv: "Förseningen orsakades av en strejk.", en: "The delay was caused by a strike.", grammar: [passive_s] }
+  - { type: dictation, sv: "Incheckningen stänger klockan 6.", en: "Check-in closes at 6." }
+  - { type: dictation, sv: "Tiden för avresa står på biljetten.", en: "The time of departure is on the ticket." }
+  - { type: dictation, sv: "Alla resenärer måste gå till kontrollen.", en: "All passengers must go to the check." }
+  - { type: dictation, sv: "Vi måste lösa situationen direkt.", en: "We must solve the situation at once." }
+
+  # say it in Swedish
+  - { type: translate, en: "Is there another alternative?", sv: "Finns det något annat alternativ?", accept: ["Finns det ett annat alternativ?"] }
+  - { type: translate, en: "I want to apply for compensation.", sv: "Jag vill ansöka om ersättning." }
+  - { type: translate, en: "Is it necessary to fill in the form?", sv: "Är det nödvändigt att fylla i blanketten?" }
+  - { type: translate, en: "That is a reasonable solution.", sv: "Det är en rimlig lösning." }
+  - { type: translate, en: "We were lucky with the weather.", sv: "Vi hade tur med vädret." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Ankomsten är försenad med 40 minuter.", en: "The arrival is delayed by 40 minutes.",
+      options: ["The arrival is delayed by 40 minutes.", "The departure is in 40 minutes.", "The stopover takes 40 minutes."], answer: "The arrival is delayed by 40 minutes." }
+  - { type: listen_choose, sv: "Jag missade tåget med 2 minuter.", en: "I missed the train by 2 minutes.",
+      options: ["Vilken otur!", "Det stämmer.", "Bättre sent än aldrig."], answer: "Vilken otur!" }
+
+  # listen for the number
+  - { type: numbers, sv: "Flyget har mellanlandning i Stockholm klockan 19.40.", hint: "the time", answer: "19.40", en: "The flight has a stopover in Stockholm at 19.40." }
+  - { type: numbers, sv: "Du får 2500 kronor i ersättning.", hint: "the compensation in kronor", answer: "2500", en: "You get 2500 kronor in compensation." }
+
+  # write your own text
+  - { type: free_write, en: "Write to a travel company (5 or 6 sentences) about a trip that went wrong: what happened, what would have happened otherwise, and what you want.",
+      checklist: ["I say what happened and why.", "I use om ... hade + supine, skulle ... ha + supine once.", "I use a word with som helst once.", "I ask for compensation or another solution."],
+      sv: "Hej! Jag reste från Göteborg igår, men flyget var en timme försenat på grund av en strejk. Därför missade jag min anslutning i Stockholm. Om flyget hade kommit i tid, skulle jag ha hunnit. Jag fick vänta 5 timmar på flygplatsen. Jag vill ansöka om en rimlig ersättning, och ni kan ringa mig när som helst. Med vänlig hälsning, Ali",
+      grammar: [conditional_past, som_helst] }
+
+  # words and grammar from earlier levels
+  - { type: word_order, sv: "Det var förseningen som orsakade problemet.", en: "It was the delay that caused the problem.", grammar: [cleft_sentence] }
+  - { type: cloze, sv: "Flyget var försenat. ___ missade jag anslutningen.", hint: "därför / däremot", answer: Därför, en: "The flight was late. That is why I missed the connection.", grammar: [contrast_cause] }
+  - { type: translate, en: "You have probably missed the train.", sv: "Du har nog missat tåget.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: dictation, sv: "Jag är orolig för att missa min anslutning.", en: "I am worried about missing my connection.", grammar: [prepositions_feelings] }
+
+# The task itself: you are at the airline's desk after a missed connection.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: personal, sv: "Hej! Vad har hänt?", en: "Hello! What has happened?" }
+    - { speaker: du, en: "Say that you missed your connection because of the delay.", answer: "Jag missade min anslutning på grund av förseningen.",
+        accept: ["Jag har missat min anslutning på grund av förseningen."] }
+    - { speaker: personal, sv: "Vilken otur! Det var en strejk i Göteborg.", en: "What bad luck! There was a strike in Gothenburg." }
+    - { speaker: du, en: "Say: if the flight had come on time, I would have made it.",
+        options: ["Om flyget hade kommit i tid, skulle jag ha hunnit.", "Om flyget hade kommit i tid, jag skulle ha hunnit.", "Om flyget skulle ha kommit i tid, hade jag hunnit."],
+        answer: "Om flyget hade kommit i tid, skulle jag ha hunnit." }
+    - { speaker: personal, sv: "Jag kan boka om dig. När vill du åka?", en: "I can rebook you. When do you want to go?" }
+    - { speaker: du, en: "Say that you can go at any time.", answer: "Jag kan åka när som helst.", accept: ["När som helst.", "Jag kan resa när som helst."] }
+    - { speaker: personal, sv: "Det finns ett flyg klockan 19, med mellanlandning.", en: "There is a flight at 19, with a stopover." }
+    - { speaker: du, en: "Say: I will take that. Can I apply for compensation?", answer: "Det tar jag. Kan jag ansöka om ersättning?",
+        accept: ["Jag tar det. Kan jag ansöka om ersättning?"] }
+    - { speaker: personal, sv: "Ja. Fyll i den här blanketten.", en: "Yes. Fill in this form." }
+    - { speaker: du, en: "Say: thank you. That is a reasonable solution.", answer: "Tack. Det är en rimlig lösning.", accept: ["Tack! Det är en rimlig lösning."] }
+
+speaking_prompt: "Say aloud: a trip that went wrong, what you would have done differently, and what you can do när som helst or var som helst."

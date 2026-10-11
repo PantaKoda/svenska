@@ -1528,3 +1528,67 @@ items:
   form: a
   words:
   - rast
+- type: inflect
+  answer: anställningen
+  grammar:
+  - def_singular
+  lemma: anställning
+  form: def
+  words:
+  - anställning
+- type: inflect
+  answer: en bransch
+  grammar:
+  - en_ett
+  lemma: bransch
+  form: a
+  words:
+  - bransch
+- type: inflect
+  answer: referensen
+  grammar:
+  - def_singular
+  lemma: referens
+  form: def
+  words:
+  - referens
+- type: inflect
+  answer: vikariatet
+  grammar:
+  - def_singular
+  lemma: vikariat
+  form: def
+  words:
+  - vikariat
+- type: inflect
+  answer: yrkena
+  grammar:
+  - plural_def
+  lemma: yrke
+  form: pl_def
+  words:
+  - yrke
+- type: inflect
+  answer: uppgifterna
+  grammar:
+  - plural_def
+  lemma: uppgift
+  form: pl_def
+  words:
+  - uppgift
+- type: inflect
+  answer: deltiderna
+  grammar:
+  - plural_def
+  lemma: deltid
+  form: pl_def
+  words:
+  - deltid
+- type: inflect
+  answer: rekryterat
+  grammar:
+  - perfect_tense
+  lemma: rekrytera
+  form: sup
+  words:
+  - rekrytera

@@ -1565,3 +1565,67 @@ items:
   form: a
   words:
   - flygplats
+- type: inflect
+  answer: förseningen
+  grammar:
+  - def_singular
+  lemma: försening
+  form: def
+  words:
+  - försening
+- type: inflect
+  answer: incheckningen
+  grammar:
+  - def_singular
+  lemma: incheckning
+  form: def
+  words:
+  - incheckning
+- type: inflect
+  answer: kontroller
+  grammar:
+  - plural_indef
+  lemma: kontroll
+  form: pl
+  words:
+  - kontroll
+- type: inflect
+  answer: turerna
+  grammar:
+  - plural_def
+  lemma: tur
+  form: pl_def
+  words:
+  - tur
+- type: inflect
+  answer: blanketterna
+  grammar:
+  - plural_def
+  lemma: blankett
+  form: pl_def
+  words:
+  - blankett
+- type: inflect
+  answer: oturen
+  grammar:
+  - def_singular
+  lemma: otur
+  form: def
+  words:
+  - otur
+- type: inflect
+  answer: orsakade
+  grammar:
+  - past_tense
+  lemma: orsaka
+  form: past
+  words:
+  - orsaka
+- type: inflect
+  answer: avresan
+  grammar:
+  - def_singular
+  lemma: avresa
+  form: def
+  words:
+  - avresa

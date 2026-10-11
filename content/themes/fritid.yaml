@@ -65,3 +65,25 @@ words:
   - { lemma: vinna,    pos: verb, level: B1, gloss: "to win; past: won; pp: won" }
   - { lemma: förlora,  pos: verb, level: B1, gloss: "to lose; past: lost; pp: lost" }
   - { lemma: gratis,   pos: adj,  level: B1, gloss: free (of charge) }
+  # B2: the news
+  - { lemma: nyhet,       pos: noun, gender: en,  level: B2, gloss: "news item, nyheter = news" }
+  - { lemma: tidning,     pos: noun, gender: en,  level: B2, gloss: newspaper }
+  - { lemma: artikel,     pos: noun, gender: en,  level: B2, gloss: article }
+  - { lemma: rubrik,      pos: noun, gender: en,  level: B2, gloss: headline }
+  - { lemma: journalist,  pos: noun, gender: en,  level: B2, gloss: journalist }
+  - { lemma: källa,       pos: noun, gender: en,  level: B2, gloss: source }
+  - { lemma: händelse,    pos: noun, gender: en,  level: B2, gloss: "event, incident" }
+  - { lemma: olycka,      pos: noun, gender: en,  level: B2, gloss: accident }
+  - { lemma: brand,       pos: noun, gender: en,  level: B2, gloss: fire }
+  - { lemma: polis,       pos: noun, gender: en,  level: B2, gloss: "police, police officer" }
+  - { lemma: vittne,      pos: noun, gender: ett, level: B2, gloss: witness }
+  - { lemma: uppge,       pos: verb, level: B2, gloss: "to state" }
+  - { lemma: rapportera,  pos: verb, level: B2, gloss: "to report" }
+  - { lemma: inträffa,    pos: verb, level: B2, gloss: "to happen, to occur" }
+  - { lemma: publicera,   pos: verb, level: B2, gloss: "to publish" }
+  - { lemma: dela,        pos: verb, level: B2, gloss: "to share, to divide" }
+  - { lemma: kommentera,  pos: verb, level: B2, gloss: "to comment on" }
+  - { lemma: inlägg,      pos: noun, gender: ett, level: B2, gloss: "post (online)" }
+  - { lemma: sann,        pos: adj,  level: B2, gloss: true }
+  - { lemma: falsk,       pos: adj,  level: B2, gloss: false }
+  - { lemma: rykte,       pos: noun, gender: ett, level: B2, gloss: rumour }

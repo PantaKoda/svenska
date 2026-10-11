@@ -58,7 +58,9 @@ public partial class MainWindowViewModel : ObservableObject
     public void ShowReview()
     {
         var entries = Services.Progress.ReviewSession();
-        var keys = entries.ToDictionary(e => e.Item, e => e.Key, ReferenceEqualityComparer.Instance);
+        var keys = new Dictionary<ExerciseItem, string>(ReferenceEqualityComparer.Instance);
+        foreach (var entry in entries)
+            keys[entry.Item] = entry.Key;
         Page = new PlayerViewModel(this, new PlayerSession(
             "Review",
             [.. entries.Select(e => e.Item)],

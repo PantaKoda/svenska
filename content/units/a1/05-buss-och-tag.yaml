@@ -1,0 +1,94 @@
+id: a1-05
+level: A1
+theme: resa
+title: "Buss och tåg"
+task: "Ask when the next bus or train leaves, understand the time and buy a ticket."
+can_do: "I can ask about departures, understand clock times and buy a ticket."
+names: [Hisingen, Stockholm, Göteborg]
+
+new_words: [buss, tåg, spårvagn, hållplats, station, spår, biljett,
+            gå, åka, ta, byta, vänta,
+            klocka, minut, halv, kvart, över, nästa,
+            till, nu, sedan, om]
+new_grammar: [time_clock, v2_word_order]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+# Clock times are written with digits, the way they are said: "halv 4" is 3.30.
+model_dialogue:
+  - { speaker: du,       sv: "Hej! När går nästa buss till Hisingen?",   en: "Hi! When does the next bus to Hisingen leave?" }
+  - { speaker: personal, sv: "Den går kvart över 3, om 5 minuter.",      en: "It leaves at quarter past 3, in 5 minutes." }
+  - { speaker: du,       sv: "Tack. Och när går nästa tåg till Stockholm?", en: "Thanks. And when does the next train to Stockholm leave?" }
+  - { speaker: personal, sv: "Klockan halv 4, från spår 2.",             en: "At half past 3, from platform 2." }
+  - { speaker: du,       sv: "Jag behöver en biljett till Stockholm.",   en: "I need a ticket to Stockholm." }
+  - { speaker: personal, sv: "Den kostar 450 kronor.",                   en: "It costs 450 kronor." }
+  - { speaker: du,       sv: "Jag betalar med kort. Var är spår 2?",     en: "I'll pay by card. Where is platform 2?" }
+  - { speaker: personal, sv: "Där. Nu väntar du vid spåret, sedan kommer tåget.", en: "There. Now you wait by the platform, then the train comes." }
+
+exercises:
+  # listen for the time: write it with digits, like 8.15
+  - { type: numbers, sv: "Bussen går kvart över 8.", hint: "the time, like 8.15", answer: "8.15",
+      en: "The bus leaves at quarter past 8.", grammar: [time_clock] }
+  - { type: numbers, sv: "Tåget går halv 4.", hint: "the time, like 8.15", answer: "3.30",
+      en: "The train leaves at half past 3.", grammar: [time_clock] }
+  - { type: numbers, sv: "Spårvagnen går 5 över 9.", hint: "the time, like 8.15", answer: "9.05",
+      en: "The tram leaves at 5 past 9.", grammar: [time_clock] }
+  - { type: numbers, sv: "Klockan är kvart i 7.", hint: "the time, like 8.15", answer: "6.45",
+      en: "It is quarter to 7.", grammar: [time_clock] }
+  - { type: numbers, sv: "Tåget går från spår 12.", hint: "the platform", answer: "12",
+      en: "The train leaves from platform 12.", grammar: [numbers_0_1000] }
+
+  - { type: numbers, sv: "Biljetten kostar 32 kronor.", hint: "the price in kronor", answer: "32",
+      en: "The ticket costs 32 kronor.", grammar: [numbers_0_1000] }
+
+  # listen and write
+  - { type: dictation, sv: "När går nästa buss?", en: "When does the next bus leave?", grammar: [wh_question] }
+  - { type: dictation, sv: "Jag behöver en biljett till Göteborg.", en: "I need a ticket to Gothenburg." }
+  - { type: dictation, sv: "Jag tar spårvagnen till stationen.", en: "I take the tram to the station.", grammar: [def_singular] }
+  - { type: dictation, sv: "Bussen går om 10 minuter.", en: "The bus leaves in 10 minutes." }
+
+  # the verb comes second
+  - { type: word_order, sv: "Nu går bussen.", en: "Now the bus is leaving.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Sedan tar jag spårvagnen.", en: "Then I take the tram.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Klockan 8 tar jag bussen.", en: "At 8 o'clock I take the bus.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Idag åker vi tåg.", en: "Today we are going by train.", grammar: [v2_word_order] }
+
+  # fill the gap
+  - { type: cloze, sv: "Var är ___?", hint: hållplats, answer: hållplatsen, en: "Where is the stop?", grammar: [def_singular] }
+  - { type: cloze, sv: "___ går klockan 9.", hint: tåg, answer: Tåget, en: "The train leaves at 9.", grammar: [def_singular] }
+  - { type: cloze, sv: "Du byter vid ___.", hint: station, answer: stationen, en: "You change at the station.", grammar: [def_singular] }
+  - { type: cloze, sv: "Bussen går ___ Hisingen.", answer: till, en: "The bus goes to Hisingen." }
+
+  # say it in Swedish
+  - { type: translate, en: "The tram is leaving now.", sv: "Spårvagnen går nu.", accept: ["Nu går spårvagnen."] }
+  - { type: translate, en: "I am waiting for the bus.", sv: "Jag väntar på bussen." }
+  - { type: translate, en: "I am buying a ticket at the checkout.", sv: "Jag köper en biljett i kassan.",
+      accept: ["Jag köper en biljett vid kassan."] }
+
+  # listen and choose the answer that fits
+  - { type: listen_choose, sv: "När går tåget?", en: "When does the train leave?",
+      options: ["Klockan halv 4.", "Från spår 2.", "450 kronor."], answer: "Klockan halv 4." }
+  - { type: listen_choose, sv: "Går bussen till Hisingen?", en: "Does the bus go to Hisingen?",
+      options: ["Ja, den går till Hisingen.", "Klockan 3.", "Med kort."], answer: "Ja, den går till Hisingen." }
+
+# The task itself: at the ticket office.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: du, en: "Ask when the next train to Stockholm leaves.",
+        answer: "När går nästa tåg till Stockholm?", accept: ["När går tåget till Stockholm?"] }
+    - { speaker: personal, sv: "Det går klockan halv 4.", en: "It leaves at half past 3." }
+    - { speaker: du, en: "Say that you need a ticket to Stockholm.",
+        options: ["Jag behöver en biljett till Stockholm.", "Jag behöver en buss till Stockholm.", "Jag tar spårvagnen."],
+        answer: "Jag behöver en biljett till Stockholm." }
+    - { speaker: personal, sv: "Den kostar 450 kronor.", en: "It costs 450 kronor." }
+    - { speaker: du, en: "Say that you pay by card.", answer: "Jag betalar med kort." }
+    - { speaker: personal, sv: "Tack. Tåget går från spår 2.", en: "Thanks. The train leaves from platform 2." }
+    - { speaker: du, en: "Ask where platform 2 is.",
+        options: ["Var är spår 2?", "När går spår 2?", "Vad kostar spår 2?"], answer: "Var är spår 2?" }
+    - { speaker: personal, sv: "Där, vid kassan.", en: "There, by the checkout." }
+    - { speaker: du, en: "Say thanks and goodbye.", answer: "Tack! Hej då!", accept: ["Tack, hej då!"] }
+
+speaking_prompt: "Say aloud: ask when the next bus leaves, say three clock times, and say that you need a ticket to Göteborg."

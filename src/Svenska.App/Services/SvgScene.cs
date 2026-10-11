@@ -36,20 +36,12 @@ public sealed class SvgScene : IDisposable
     }
 
     /// <summary>
-    /// The word element at a point of the drawing. First the shapes exactly under the point
-    /// (Svg.Skia's own hit test); of several, the smallest wins, so the card lying on the
-    /// counter is the card. Then the nearest box, so that a click just beside a small thing
-    /// still counts.
+    /// The word element at a point of the drawing: the smallest one whose box contains the
+    /// point, so the card lying on the counter is the card and a click between the legs of
+    /// the table is the table, not the room behind it. A click just beside a thing still counts.
+    /// (Svg.Skia can also test the exact shape with HitTestElements; boxes are kinder to click.)
     /// </summary>
-    public string? HitTest(double x, double y)
-    {
-        var exact = new HashSet<string>();
-        foreach (var element in _svg.HitTestElements(new ShimSkiaSharp.SKPoint((float)x, (float)y)))
-            for (var e = element; e != null; e = e.Parent)
-                if (e.ID != null && Map.Bounds.ContainsKey(e.ID))
-                    exact.Add(e.ID);
-        return exact.Count > 0 ? exact.MinBy(id => Map.Bounds[id].Area) : Map.Hit(x, y);
-    }
+    public string? HitTest(double x, double y) => Map.Hit(x, y, padding: 0) ?? Map.Hit(x, y);
 
     /// <summary>
     /// The scene as a PNG that fits in the given size, with a frame around some elements

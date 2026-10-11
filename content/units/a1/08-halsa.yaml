@@ -1,0 +1,107 @@
+id: a1-08
+level: A1
+theme: halsa
+title: "Hos läkaren"
+task: "Say what hurts, book a time at the health centre and understand simple instructions."
+can_do: "I can say how I feel and what hurts, and understand what I should do."
+names: [Sara]
+
+new_words: [ont, huvud, mage, hals, rygg, ben, arm,
+            sjuk, trött, feber,
+            läkare, vårdcentral, tid, tablett, vatten,
+            boka, hjälpa, vila, dricka,
+            kunna, skola, vilja, måste]
+new_grammar: [modal_vill_kan_ska]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: läkare, sv: "Hej! Hur mår du?",                                en: "Hi! How are you?" }
+  - { speaker: du,     sv: "Inte bra. Jag har ont i halsen och feber.",       en: "Not well. I have a sore throat and a fever." }
+  - { speaker: läkare, sv: "Har du ont i huvudet också?",                     en: "Do you have a headache too?" }
+  - { speaker: du,     sv: "Ja, och jag är trött.",                           en: "Yes, and I am tired." }
+  - { speaker: läkare, sv: "Du ska vila och dricka vatten. Du kan ta en tablett.", en: "You should rest and drink water. You can take a tablet." }
+  - { speaker: du,     sv: "Kan jag jobba idag?",                             en: "Can I work today?" }
+  - { speaker: läkare, sv: "Nej, du ska inte jobba. Du måste vila hemma.",    en: "No, you should not work. You must rest at home." }
+  - { speaker: du,     sv: "Jag vill boka en ny tid.",                        en: "I want to book a new appointment." }
+  - { speaker: läkare, sv: "Du kan komma på torsdag klockan halv 10.",        en: "You can come on Thursday at half past 9." }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Jag har ont i huvudet.", en: "I have a headache.", grammar: [def_singular] }
+  - { type: dictation, sv: "Jag är sjuk och trött.", en: "I am ill and tired." }
+  - { type: dictation, sv: "Du ska ta en tablett varje dag.", en: "You should take one tablet every day.", grammar: [modal_vill_kan_ska] }
+  - { type: dictation, sv: "Jag har ont i benet och armen.", en: "My leg and my arm hurt.", grammar: [def_singular] }
+
+  # where it hurts: the definite form
+  - { type: cloze, sv: "Jag har ont i ___.", hint: mage, answer: magen, en: "My stomach hurts.", grammar: [def_singular] }
+  - { type: cloze, sv: "Har du ont i ___?", hint: rygg, answer: ryggen, en: "Does your back hurt?", grammar: [def_singular] }
+
+  # vill, kan, ska or måste?
+  - { type: cloze, sv: "Du ___ vila hemma.", answer: måste, en: "You must rest at home.", grammar: [modal_vill_kan_ska] }
+  - { type: cloze, sv: "___ jag jobba idag?", answer: Kan, en: "Can I work today?", grammar: [modal_vill_kan_ska] }
+  - { type: cloze, sv: "Jag ___ boka en tid.", answer: vill, en: "I want to book an appointment.", grammar: [modal_vill_kan_ska] }
+
+  # after vill, kan, ska and måste: inte, then the infinitive
+  - { type: word_order, sv: "Du ska inte jobba idag.", en: "You should not work today.", grammar: [modal_vill_kan_ska, negation_inte] }
+  - { type: word_order, sv: "Jag kan inte sova.", en: "I cannot sleep.", grammar: [modal_vill_kan_ska, negation_inte] }
+  - { type: word_order, sv: "Jag vill boka en tid.", en: "I want to book an appointment.", grammar: [modal_vill_kan_ska] }
+  - { type: word_order, sv: "Kan du hjälpa mig?", en: "Can you help me?", grammar: [modal_vill_kan_ska, yes_no_question] }
+
+  # say it in Swedish
+  - { type: translate, en: "I have a sore throat.", sv: "Jag har ont i halsen.", grammar: [def_singular] }
+  - { type: translate, en: "You must drink water.", sv: "Du måste dricka vatten.", grammar: [modal_vill_kan_ska] }
+  - { type: translate, en: "The doctor is at the health centre.", sv: "Läkaren är på vårdcentralen.", grammar: [def_singular] }
+  - { type: translate, en: "I do not feel well and I cannot eat.", sv: "Jag mår inte bra och jag kan inte äta.",
+      grammar: [modal_vill_kan_ska, negation_inte] }
+
+  # listen and choose the meaning
+  - { type: listen_choose, sv: "Du ska vila hemma.", en: "You should rest at home.",
+      options: ["You should rest at home.", "You should work at home.", "You cannot rest at home."],
+      answer: "You should rest at home." }
+  - { type: listen_choose, sv: "Du kan komma på fredag.", en: "You can come on Friday.",
+      options: ["You can come on Friday.", "You must come on Friday.", "You cannot come on Friday."],
+      answer: "You can come on Friday." }
+  - { type: listen_choose, sv: "Har du feber?", en: "Do you have a fever?",
+      options: ["Ja, och jag är trött.", "Ja, på torsdag.", "Nej, jag vill boka en tid."], answer: "Ja, och jag är trött." }
+
+  # listen for the number
+  - { type: numbers, sv: "Du kan komma klockan kvart över 2.", hint: "the time, like 8.15", answer: "2.15",
+      en: "You can come at quarter past 2.", grammar: [time_clock] }
+  - { type: numbers, sv: "Du ska ta 3 tabletter varje dag.", hint: "how many tablets", answer: "3",
+      en: "You should take 3 tablets every day.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Min dotter är sjuk. Hon har ont i magen.", en: "My daughter is ill. Her stomach hurts." }
+  - { type: word_order, sv: "Du måste vänta 10 minuter.", en: "You must wait 10 minutes.", grammar: [modal_vill_kan_ska] }
+  - { type: translate, en: "You should rest in bed.", sv: "Du ska vila i sängen.", grammar: [modal_vill_kan_ska, def_singular] }
+  - { type: cloze, sv: "Vatten finns i ___.", hint: kylskåp, answer: kylskåpet, en: "There is water in the fridge.",
+      grammar: [def_singular] }
+  - { type: word_order, sv: "Hans mamma är också sjuk.", en: "His mum is ill too.", grammar: [possessive_basic] }
+  - { type: translate, en: "Now you can come.", sv: "Nu kan du komma.", grammar: [v2_word_order, modal_vill_kan_ska] }
+  - { type: word_order, sv: "Hur många tabletter ska jag ta?", en: "How many tablets should I take?",
+      grammar: [modal_vill_kan_ska, plural_indef] }
+  - { type: dictation, sv: "Min son är trött och kan inte stå.", en: "My son is tired and cannot stand.", grammar: [modal_vill_kan_ska] }
+
+# The task itself: you call the health centre.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: läkare, sv: "Vårdcentralen, hej! Kan jag hjälpa dig?", en: "The health centre, hello! Can I help you?" }
+    - { speaker: du, en: "Say that you want to book an appointment.", answer: "Jag vill boka en tid.",
+        accept: ["Hej! Jag vill boka en tid."] }
+    - { speaker: läkare, sv: "Hur mår du?", en: "How are you feeling?" }
+    - { speaker: du, en: "Say that your stomach hurts.",
+        options: ["Jag har ont i magen.", "Jag har en mage.", "Jag mår bra, tack."], answer: "Jag har ont i magen." }
+    - { speaker: läkare, sv: "Har du feber?", en: "Do you have a fever?" }
+    - { speaker: du, en: "Say yes, you have a fever.", answer: "Ja, jag har feber.", accept: ["Ja."] }
+    - { speaker: läkare, sv: "Du kan komma på torsdag klockan halv 10.", en: "You can come on Thursday at half past 9." }
+    - { speaker: du, en: "Say thanks, you can come on Thursday.",
+        options: ["Tack, jag kan komma på torsdag.", "Tack, jag ska vila på torsdag.", "Nej, jag måste jobba."],
+        answer: "Tack, jag kan komma på torsdag." }
+    - { speaker: läkare, sv: "Bra. Du ska vila och dricka vatten.", en: "Good. You should rest and drink water." }
+    - { speaker: du, en: "Say thanks and goodbye.", answer: "Tack! Hej då!", accept: ["Tack, hej då!"] }
+
+speaking_prompt: "Say aloud: how you feel, three things that hurt, and that you want to book a time with the doctor."

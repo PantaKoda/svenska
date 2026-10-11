@@ -1,0 +1,26 @@
+theme: fritid
+title: "Fritid & väder"
+# Free time and the weather: making a plan with a friend.
+words:
+  # weather
+  - { lemma: väder, pos: noun, gender: ett, level: A1, gloss: weather }
+  - { lemma: sol,   pos: noun, gender: en,  level: A1, gloss: sun }
+  - { lemma: regn,  pos: noun, gender: ett, level: A1, gloss: rain }
+  - { lemma: regna, pos: verb, level: A1, gloss: to rain }
+  - { lemma: varm,  pos: adj,  level: A1, gloss: warm }
+  - { lemma: kall,  pos: adj,  level: A1, gloss: cold }
+  - { lemma: fin,   pos: adj,  level: A1, gloss: "nice, fine" }
+  - { lemma: dålig, pos: adj,  level: A1, gloss: bad }
+
+  # things to do
+  - { lemma: promenad, pos: noun, gender: en, level: A1, gloss: walk }
+  - { lemma: park,     pos: noun, gender: en, tags: [place], level: A1, gloss: park }
+  - { lemma: bio,      pos: noun, gender: en, level: A1, gloss: "cinema (gå på bio = go to the cinema)" }
+  - { lemma: film,     pos: noun, gender: en, level: A1, gloss: film }
+  - { lemma: fotboll,  pos: noun, gender: en, level: A1, gloss: football }
+  - { lemma: helg,     pos: noun, gender: en, level: A1, gloss: "weekend (i helgen = this weekend)" }
+  - { lemma: fika,   pos: verb, tags: [action_intrans], level: A1, gloss: "to have a coffee break; past: had a coffee break" }
+  - { lemma: simma,  pos: verb, tags: [action_intrans], level: A1, gloss: "to swim; past: swam; pp: swum" }
+  - { lemma: spela,  pos: verb, level: A1, gloss: to play }
+  - { lemma: se,     pos: verb, level: A1, gloss: "to see, to watch; past: saw; pp: seen" }
+  - { lemma: gilla,  pos: verb, level: A1, gloss: to like }

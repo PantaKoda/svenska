@@ -3,48 +3,49 @@
 unit: theme-stadning
 items:
 - type: cloze
-  sv: Kan du köpa ___?
-  en: Can you buy the bucket?
-  answer: hinken
+  sv: Kan du ___ bordet?
+  en: Can you vacuum the table?
+  answer: dammsuga
   grammar:
   - modal_vill_kan_ska
   - yes_no_question
   - def_singular
   review: true
-  hint: hink
-  frame: gen-009
+  hint: dammsuga
+  frame: stad-03
   words:
-  - köpa
-  - hink
+  - dammsuga
+  - bord
 - type: cloze
-  sv: Jag köper ___.
-  en: I buy the rubbish bag.
-  answer: soppåsen
+  sv: Kan du ta ___?
+  en: Can you take the mop?
+  answer: moppen
   grammar:
-  - present_tense
+  - modal_vill_kan_ska
+  - yes_no_question
   - def_singular
   review: true
-  hint: soppåse
-  frame: gen-010
+  hint: mopp
+  frame: gen-009
   words:
-  - köpa
-  - soppåse
+  - ta
+  - mopp
 - type: cloze
-  sv: Påsen är ___.
-  en: The bag is broken.
-  answer: trasig
+  sv: ___ är stor.
+  en: The cloth is big.
+  answer: Trasan
   grammar:
   - adjective_agreement_basic
   - def_singular
   review: true
-  hint: trasig
+  hint: trasa
   frame: gen-003
   words:
-  - påse
-  - trasig
+  - trasa
+  - stor
 - type: cloze
-  sv: Vi köper inte ___.
-  en: We don't buy the vacuum cleaner.
+  sv: Vi tar inte ___.
+  en: We don't take the vacuum cleaner.
   answer: dammsugaren
   grammar:
   - negation_inte
@@ -54,70 +55,72 @@ items:
   hint: dammsugare
   frame: gen-011
   words:
-  - köpa
+  - ta
   - dammsugare
 - type: cloze
-  sv: Jag ska ___ fönstret.
-  en: I am going to wipe the window.
-  answer: torka
+  sv: Jag ska ___ bordet.
+  en: I am going to mop the table.
+  answer: moppa
   grammar:
   - modal_vill_kan_ska
   - def_singular
   review: true
-  hint: torka
+  hint: moppa
   frame: stad-01
   words:
-  - torka
-  - fönster
+  - moppa
+  - bord
 - type: cloze
-  sv: Har du ___?
-  en: Do you have a cloth?
-  answer: en trasa
-  grammar:
-  - yes_no_question
-  - en_ett
-  review: true
-  hint: trasa
-  frame: gen-002
-  words:
-  - trasa
-- type: cloze
-  sv: Jag behöver ___.
-  en: I need a mop.
-  answer: en mopp
+  sv: Jag tar ___.
+  en: I take the bucket.
+  answer: hinken
   grammar:
   - present_tense
+  - def_singular
+  review: true
+  hint: hink
+  frame: gen-010
+  words:
+  - ta
+  - hink
+- type: cloze
+  sv: Jag vill ha ___.
+  en: I want a rubbish bag.
+  answer: en soppåse
+  grammar:
+  - modal_vill_kan_ska
   - en_ett
   review: true
-  hint: mopp
-  frame: gen-005
+  hint: soppåse
+  frame: gen-008
   words:
-  - mopp
+  - soppåse
 - type: cloze
   sv: Var är ___?
-  en: Where is the kitchen?
-  answer: köket
+  en: Where is the toilet?
+  answer: toaletten
   grammar:
   - wh_question
   - def_singular
   review: true
-  hint: kök
+  hint: toalett
   frame: stad-04
   words:
-  - kök
+  - toalett
 - type: dictation
-  sv: Vi städar badrummet.
-  en: We are cleaning the bathroom.
+  sv: Fönstret är smutsigt.
+  en: The window is dirty.
   grammar:
-  - present_tense
+  - adjective_agreement_basic
   - def_singular
   review: true
-  frame: stad-02
+  frame: gen-003
   words:
-  - badrum
+  - fönster
+  - smutsig
 - type: dictation
-  sv: Kan du dammsuga bordet?
-  en: Can you vacuum the table?
+  sv: Kan du torka bordet?
+  en: Can you wipe the table?
   grammar:
   - modal_vill_kan_ska
   - yes_no_question
@@ -125,29 +128,48 @@ items:
   review: true
   frame: stad-03
   words:
-  - dammsuga
+  - torka
   - bord
 - type: dictation
-  sv: Påsen är ren.
-  en: The bag is clean.
-  grammar:
-  - adjective_agreement_basic
-  - def_singular
-  review: true
-  frame: gen-003
-  words:
-  - påse
-  - ren
-- type: dictation
-  sv: Har du hinken?
-  en: Do you have the bucket?
+  sv: Har du dammsugaren?
+  en: Do you have the vacuum cleaner?
   grammar:
   - yes_no_question
   - def_singular
   review: true
   frame: gen-006
   words:
+  - dammsugare
+- type: dictation
+  sv: Har du en hink?
+  en: Do you have a bucket?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
   - hink
+- type: dictation
+  sv: Trasan är där.
+  en: The cloth is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - trasa
+- type: dictation
+  sv: Jag behöver en mopp.
+  en: I need a mop.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - mopp
 - type: dictation
   sv: Var är soppåsen?
   en: Where is the rubbish bag?
@@ -159,47 +181,6 @@ items:
   words:
   - soppåse
 - type: dictation
-  sv: Jag ska moppa golvet.
-  en: I am going to mop the floor.
-  grammar:
-  - modal_vill_kan_ska
-  - def_singular
-  review: true
-  frame: stad-01
-  words:
-  - moppa
-  - golv
-- type: dictation
-  sv: Jag vill ha en mopp.
-  en: I want a mop.
-  grammar:
-  - modal_vill_kan_ska
-  - en_ett
-  review: true
-  frame: gen-008
-  words:
-  - mopp
-- type: dictation
-  sv: Trasan är där.
-  en: The cloth is there.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  frame: gen-007
-  words:
-  - trasa
-- type: word_order
-  sv: Jag har inte dammsugaren.
-  en: I don't have the vacuum cleaner.
-  grammar:
-  - negation_inte
-  - def_singular
-  review: true
-  frame: gen-004
-  words:
-  - dammsugare
-- type: word_order
   sv: Vi städar toaletten.
   en: We are cleaning the toilet.
   grammar:
@@ -210,29 +191,40 @@ items:
   words:
   - toalett
 - type: word_order
-  sv: Påsen är smutsig.
-  en: The bag is dirty.
+  sv: Jag ska dammsuga fönstret.
+  en: I am going to vacuum the window.
+  grammar:
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - dammsuga
+  - fönster
+- type: word_order
+  sv: Kylskåpet är rent.
+  en: The fridge is clean.
   grammar:
   - adjective_agreement_basic
   - def_singular
   review: true
   frame: gen-003
   words:
-  - påse
-  - smutsig
+  - kylskåp
+  - ren
 - type: word_order
-  sv: Var är badrummet?
-  en: Where is the bathroom?
+  sv: Jag har inte moppen.
+  en: I don't have the mop.
   grammar:
-  - wh_question
+  - negation_inte
   - def_singular
   review: true
-  frame: stad-04
+  frame: gen-004
   words:
-  - badrum
+  - mopp
 - type: word_order
-  sv: Kan du ta trasan?
-  en: Can you take the cloth?
+  sv: Kan du köpa soppåsen?
+  en: Can you buy the rubbish bag?
   grammar:
   - modal_vill_kan_ska
   - yes_no_question
@@ -240,19 +232,42 @@ items:
   review: true
   frame: gen-009
   words:
-  - ta
-  - trasa
+  - köpa
+  - soppåse
 - type: word_order
-  sv: Jag tar soppåsen.
-  en: I take the rubbish bag.
+  sv: Kan du moppa bordet?
+  en: Can you mop the table?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: stad-03
+  words:
+  - moppa
+  - bord
+- type: word_order
+  sv: Soffan är trasig.
+  en: The sofa is broken.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - soffa
+  - trasig
+- type: word_order
+  sv: Jag köper trasan.
+  en: I buy the cloth.
   grammar:
   - present_tense
   - def_singular
   review: true
   frame: gen-010
   words:
-  - ta
-  - soppåse
+  - köpa
+  - trasa
 - type: word_order
   sv: Vi köper inte hinken.
   en: We don't buy the bucket.
@@ -265,18 +280,48 @@ items:
   words:
   - köpa
   - hink
-- type: word_order
-  sv: Kan du moppa fönstret?
-  en: Can you mop the window?
+- type: translate
+  sv: Jag ska torka fönstret.
+  en: I am going to wipe the window.
   grammar:
   - modal_vill_kan_ska
+  - def_singular
+  review: true
+  frame: stad-01
+  words:
+  - torka
+  - fönster
+- type: translate
+  sv: Var är dammsugaren?
+  en: Where is the vacuum cleaner?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - dammsugare
+- type: translate
+  sv: Golvet är gammalt.
+  en: The floor is old.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - golv
+  - gammal
+- type: translate
+  sv: Har du trasan?
+  en: Do you have the cloth?
+  grammar:
   - yes_no_question
   - def_singular
   review: true
-  frame: stad-03
+  frame: gen-006
   words:
-  - moppa
-  - fönster
+  - trasa
 - type: translate
   sv: Jag behöver en dammsugare.
   en: I need a vacuum cleaner.
@@ -288,56 +333,25 @@ items:
   words:
   - dammsugare
 - type: translate
-  sv: Har du moppen?
-  en: Do you have the mop?
-  grammar:
-  - yes_no_question
-  - def_singular
-  review: true
-  frame: gen-006
-  words:
-  - mopp
-- type: translate
-  sv: Vi städar köket.
-  en: We are cleaning the kitchen.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  frame: stad-02
-  words:
-  - kök
-- type: translate
-  sv: Var är toaletten?
-  en: Where is the toilet?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: stad-04
-  words:
-  - toalett
-- type: translate
-  sv: Hinken är där.
-  en: The bucket is there.
+  sv: Moppen är där.
+  en: The mop is there.
   grammar:
   - present_tense
   - def_singular
   review: true
   frame: gen-007
   words:
-  - hink
+  - mopp
 - type: translate
-  sv: Jag ska dammsuga bordet.
-  en: I am going to vacuum the table.
+  sv: Jag vill ha en hink.
+  en: I want a bucket.
   grammar:
   - modal_vill_kan_ska
-  - def_singular
+  - en_ett
   review: true
-  frame: stad-01
+  frame: gen-008
   words:
-  - dammsuga
-  - bord
+  - hink
 - type: translate
   sv: Har du en soppåse?
   en: Do you have a rubbish bag?
@@ -348,122 +362,37 @@ items:
   frame: gen-002
   words:
   - soppåse
-- type: translate
-  sv: Var är dammsugaren?
-  en: Where is the vacuum cleaner?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: gen-001
-  words:
-  - dammsugare
 - type: listen_choose
-  sv: Jag har inte trasan.
-  answer: I don't have the cloth.
+  sv: Jag ska dammsuga bordet.
+  answer: I am going to vacuum the table.
   grammar:
-  - negation_inte
+  - modal_vill_kan_ska
   - def_singular
   review: true
   options:
-  - I don't have the cloth.
-  - I don't have the bucket.
-  - I don't have the rubbish bag.
-  frame: gen-004
+  - I am going to vacuum the table.
+  - I am going to vacuum the window.
+  - I am going to vacuum the floor.
+  frame: stad-01
   words:
-  - trasa
+  - dammsuga
+  - bord
 - type: listen_choose
-  sv: Kan du torka golvet?
-  answer: Can you wipe the floor?
+  sv: Kan du moppa fönstret?
+  answer: Can you mop the window?
   grammar:
   - modal_vill_kan_ska
   - yes_no_question
   - def_singular
   review: true
   options:
-  - Can you wipe the floor?
   - Can you mop the window?
-  - Can you vacuum the window?
+  - Can you vacuum the table?
+  - Can you wipe the table?
   frame: stad-03
   words:
-  - torka
-  - golv
-- type: listen_choose
-  sv: Kan du ta moppen?
-  answer: Can you take the mop?
-  grammar:
-  - modal_vill_kan_ska
-  - yes_no_question
-  - def_singular
-  review: true
-  options:
-  - Can you take the mop?
-  - Can you buy the bucket?
-  - Can you take the cloth?
-  frame: gen-009
-  words:
-  - ta
-  - mopp
-- type: listen_choose
-  sv: Jag vill ha en trasa.
-  answer: I want a cloth.
-  grammar:
-  - modal_vill_kan_ska
-  - en_ett
-  review: true
-  options:
-  - I want a cloth.
-  - I want a mop.
-  - I want a vacuum cleaner.
-  frame: gen-008
-  words:
-  - trasa
-- type: listen_choose
-  sv: Vi tar inte soppåsen.
-  answer: We don't take the rubbish bag.
-  grammar:
-  - negation_inte
-  - present_tense
-  - def_singular
-  review: true
-  options:
-  - We don't take the rubbish bag.
-  - We don't buy the bucket.
-  - We don't take the bucket.
-  frame: gen-011
-  words:
-  - ta
-  - soppåse
-- type: listen_choose
-  sv: Jag köper dammsugaren.
-  answer: I buy the vacuum cleaner.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  options:
-  - I buy the vacuum cleaner.
-  - I buy the rubbish bag.
-  - I take the rubbish bag.
-  frame: gen-010
-  words:
-  - köpa
-  - dammsugare
-- type: listen_choose
-  sv: Fönstret är rent.
-  answer: The window is clean.
-  grammar:
-  - adjective_agreement_basic
-  - def_singular
-  review: true
-  options:
-  - The window is clean.
-  - The mop is broken.
-  - The vacuum cleaner is clean.
-  frame: gen-003
-  words:
+  - moppa
   - fönster
-  - ren
 - type: listen_choose
   sv: Jag har inte hinken.
   answer: I don't have the bucket.
@@ -473,35 +402,88 @@ items:
   review: true
   options:
   - I don't have the bucket.
-  - I don't have the rubbish bag.
+  - I don't have the mop.
   - I don't have the cloth.
   frame: gen-004
   words:
   - hink
-- type: inflect
-  answer: moppen
+- type: listen_choose
+  sv: Soffan är ren.
+  answer: The sofa is clean.
   grammar:
+  - adjective_agreement_basic
   - def_singular
-  lemma: mopp
-  form: def
+  review: true
+  options:
+  - The sofa is clean.
+  - The bucket is dirty.
+  - The cloth is big.
+  frame: gen-003
   words:
+  - soffa
+  - ren
+- type: listen_choose
+  sv: Kan du köpa dammsugaren?
+  answer: Can you buy the vacuum cleaner?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you buy the vacuum cleaner?
+  - Can you take the mop?
+  - Can you buy the rubbish bag?
+  frame: gen-009
+  words:
+  - köpa
+  - dammsugare
+- type: listen_choose
+  sv: Jag köper moppen.
+  answer: I buy the mop.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I buy the mop.
+  - I buy the cloth.
+  - I take the vacuum cleaner.
+  frame: gen-010
+  words:
+  - köpa
   - mopp
-- type: inflect
-  answer: toaletter
+- type: listen_choose
+  sv: Vi köper inte trasan.
+  answer: We don't buy the cloth.
   grammar:
-  - plural_indef
-  lemma: toalett
-  form: pl
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - We don't buy the cloth.
+  - We don't take the vacuum cleaner.
+  - We don't take the mop.
+  frame: gen-011
   words:
-  - toalett
-- type: inflect
-  answer: golv
+  - köpa
+  - trasa
+- type: listen_choose
+  sv: Jag ska torka bordet.
+  answer: I am going to wipe the table.
   grammar:
-  - plural_indef
-  lemma: golv
-  form: pl
+  - modal_vill_kan_ska
+  - def_singular
+  review: true
+  options:
+  - I am going to wipe the table.
+  - I am going to vacuum the window.
+  - I am going to vacuum the floor.
+  frame: stad-01
   words:
-  - golv
+  - torka
+  - bord
 - type: inflect
   answer: en trasa
   grammar:
@@ -511,37 +493,61 @@ items:
   words:
   - trasa
 - type: inflect
-  answer: ett badrum
-  grammar:
-  - en_ett
-  lemma: badrum
-  form: a
-  words:
-  - badrum
-- type: inflect
-  answer: torkar
-  grammar:
-  - present_tense
-  lemma: torka
-  form: pres
-  words:
-  - torka
-- type: inflect
-  answer: dammsugare
+  answer: toaletter
   grammar:
   - plural_indef
-  lemma: dammsugare
+  lemma: toalett
   form: pl
   words:
-  - dammsugare
+  - toalett
 - type: inflect
-  answer: ett fönster
+  answer: hinken
+  grammar:
+  - def_singular
+  lemma: hink
+  form: def
+  words:
+  - hink
+- type: inflect
+  answer: golvet
+  grammar:
+  - def_singular
+  lemma: golv
+  form: def
+  words:
+  - golv
+- type: inflect
+  answer: en soppåse
   grammar:
   - en_ett
-  lemma: fönster
+  lemma: soppåse
   form: a
   words:
-  - fönster
+  - soppåse
+- type: inflect
+  answer: moppen
+  grammar:
+  - def_singular
+  lemma: mopp
+  form: def
+  words:
+  - mopp
+- type: inflect
+  answer: moppar
+  grammar:
+  - present_tense
+  lemma: moppa
+  form: pres
+  words:
+  - moppa
+- type: inflect
+  answer: städar
+  grammar:
+  - present_tense
+  lemma: städa
+  form: pres
+  words:
+  - städa
 - type: inflect
   answer: ett rengöringsmedel
   grammar:

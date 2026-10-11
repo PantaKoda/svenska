@@ -1,0 +1,37 @@
+theme: halsa
+title: "Hälsa"
+# Health: what hurts, the doctor, simple instructions.
+words:
+  # the body
+  - { lemma: huvud, pos: noun, gender: ett, tags: [body_part], level: A1, gloss: head, forms: { pl: huvuden } }
+  - { lemma: mage,  pos: noun, gender: en,  tags: [body_part], level: A1, gloss: stomach }
+  - { lemma: hals,  pos: noun, gender: en,  tags: [body_part], level: A1, gloss: throat }
+  - { lemma: rygg,  pos: noun, gender: en,  tags: [body_part], level: A1, gloss: back }
+  - { lemma: ben,   pos: noun, gender: ett, tags: [body_part], level: A1, gloss: leg }
+  - { lemma: arm,   pos: noun, gender: en,  tags: [body_part], level: A1, gloss: arm }
+
+  # being ill
+  - { lemma: ont,   pos: noun, gender: ett, level: A1, gloss: "pain (jag har ont i … = my … hurts)",
+      forms: { def: ontet } }
+  - { lemma: sjuk,  pos: adj,  level: A1, gloss: "ill, sick" }
+  - { lemma: trött, pos: adj,  level: A1, gloss: tired }
+  - { lemma: feber, pos: noun, gender: en, level: A1, gloss: fever }
+
+  # getting help
+  - { lemma: läkare,      pos: noun, gender: en,  level: A1, gloss: doctor }
+  - { lemma: vårdcentral, pos: noun, gender: en,  level: A1, gloss: health centre }
+  - { lemma: tid,         pos: noun, gender: en,  level: A1, gloss: "time, appointment" }
+  - { lemma: tablett,     pos: noun, gender: en,  level: A1, gloss: "tablet, pill" }
+  - { lemma: vatten,      pos: noun, gender: ett, tags: [drink], level: A1, gloss: water }
+  - { lemma: boka,        pos: verb, level: A1, gloss: to book }
+  - { lemma: hjälpa,      pos: verb, level: A1, gloss: to help }
+  - { lemma: vila,        pos: verb, tags: [action_intrans], level: A1, gloss: to rest }
+  - { lemma: dricka,      pos: verb, tags: [consume], level: A1, gloss: "to drink; past: drank; pp: drunk" }
+
+frames:
+  - { id: hal-01, level: A1, grammar: [present_tense, def_singular], review: true,
+      sv: "Jag har ont i {body_part.def}.", en: "My {1} hurts." }
+  - { id: hal-02, level: A1, grammar: [yes_no_question, def_singular], review: true,
+      sv: "Har du ont i {body_part.def}?", en: "Does your {1} hurt?" }
+  - { id: hal-03, level: A1, grammar: [negation_inte, def_singular], review: true,
+      sv: "Jag har inte ont i {body_part.def}.", en: "My {1} does not hurt." }

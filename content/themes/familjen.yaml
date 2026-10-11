@@ -1,0 +1,28 @@
+theme: familjen
+title: "Familjen"
+# Family members and how to talk about them.
+words:
+  - { lemma: familj, pos: noun, gender: en,  level: A1, gloss: family }
+  - { lemma: mamma,  pos: noun, gender: en,  tags: [person], level: A1, gloss: "mum, mother" }
+  - { lemma: pappa,  pos: noun, gender: en,  tags: [person], level: A1, gloss: "dad, father" }
+  - { lemma: bror,   pos: noun, gender: en,  tags: [person], level: A1, gloss: brother,
+      forms: { indef: bror, def: brodern, pl: bröder } }
+  - { lemma: syster, pos: noun, gender: en,  tags: [person], level: A1, gloss: sister }
+  - { lemma: syskon, pos: noun, gender: ett, level: A1, gloss: "sibling (brother or sister)" }
+  - { lemma: barn,   pos: noun, gender: ett, tags: [person], level: A1, gloss: "child; pl: children" }
+  - { lemma: son,    pos: noun, gender: en,  tags: [person], level: A1, gloss: son }
+  - { lemma: dotter, pos: noun, gender: en,  tags: [person], level: A1, gloss: daughter }
+  - { lemma: man,    pos: noun, gender: en,  tags: [person], level: A1, gloss: "husband, man; pl: men",
+      forms: { def: mannen, pl: män } }
+  - { lemma: fru,    pos: noun, gender: en,  tags: [person], level: A1, gloss: "wife; pl: wives" }
+  - { lemma: gift,   pos: adj,  level: A1, gloss: married }
+
+frames:
+  - { id: fam-01, level: A1, grammar: [present_tense, en_ett], review: true,
+      sv: "Jag har {person.a}.", en: "I have {1.a}." }
+  - { id: fam-02, level: A1, grammar: [yes_no_question, en_ett], review: true,
+      sv: "Har du {person.a}?", en: "Do you have {1.a}?" }
+  - { id: fam-03, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "Vad heter {person.def}?", en: "What is the {1}'s name?" }
+  - { id: fam-04, level: A1, grammar: [negation_inte, def_singular], review: true,
+      sv: "{person.def} bor inte hemma.", en: "The {1} does not live at home." }

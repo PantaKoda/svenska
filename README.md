@@ -4,7 +4,8 @@ A desktop app for learning Swedish by doing real tasks (buy a ticket, pay at the
 supermarket, book a doctor's time) through listening and writing exercises.
 The design and the milestones are in [AGENTS.md](AGENTS.md).
 
-Status: milestone M5. One unit works end to end: A1-04 *I matbutiken* (words, model dialogue with
+Status: milestone M6, level A1 is written: ten units, from greeting someone to talking about your
+job. Each unit has its words, a model dialogue with
 audio, dictation, cloze, inflect, word-order, translation, listen-and-choose, numbers and
 click-in-the-scene exercises, and a final task as a dialogue). The drill generator
 fills the unit's words into sentence frames; its output is in `content/generated/`.

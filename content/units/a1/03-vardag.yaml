@@ -1,0 +1,82 @@
+id: a1-03
+level: A1
+theme: vardag
+title: "Min vecka"
+task: "Say what you do on a normal day and on which days, and ask someone else."
+can_do: "I can talk about my week: what I do, when, and what I do not do."
+names: [Sara, Göteborg]
+
+new_words: [inte, vi, när, idag, varje,
+            dag, måndag, tisdag, onsdag, torsdag, fredag, lördag, söndag,
+            göra, jobba, sova, träna, handla, äta, läsa,
+            frukost, lunch, middag, hemma]
+new_grammar: [wh_question, negation_inte]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Hej! Vad gör du idag?",                    en: "Hi! What are you doing today?" }
+  - { speaker: du,   sv: "Jag jobbar idag. Och du?",                 en: "I am working today. And you?" }
+  - { speaker: Sara, sv: "Jag jobbar inte idag. Jag läser svenska.", en: "I am not working today. I am studying Swedish." }
+  - { speaker: du,   sv: "När jobbar du?",                           en: "When do you work?" }
+  - { speaker: Sara, sv: "Jag jobbar måndag, tisdag och onsdag.",    en: "I work Monday, Tuesday and Wednesday." }
+  - { speaker: du,   sv: "Vad gör du på lördag?",                    en: "What do you do on Saturday?" }
+  - { speaker: Sara, sv: "Jag tränar och handlar. Jag sover på söndag!", en: "I exercise and shop. I sleep on Sunday!" }
+  - { speaker: du,   sv: "Äter du lunch hemma idag?",                en: "Are you eating lunch at home today?" }
+  - { speaker: Sara, sv: "Nej, inte idag.",                          en: "No, not today." }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Vad gör du på måndag?", en: "What do you do on Monday?", grammar: [wh_question] }
+  - { type: dictation, sv: "Jag jobbar inte på söndag.", en: "I do not work on Sunday.", grammar: [negation_inte] }
+  - { type: dictation, sv: "Vi äter middag hemma.", en: "We eat dinner at home." }
+  - { type: dictation, sv: "Jag läser svenska varje dag.", en: "I study Swedish every day." }
+
+  # the question word
+  - { type: cloze, sv: "___ gör du på lördag?", answer: Vad, en: "What do you do on Saturday?", grammar: [wh_question] }
+  - { type: cloze, sv: "___ jobbar du? På tisdag och torsdag.", answer: När,
+      en: "When do you work? On Tuesday and Thursday.", grammar: [wh_question] }
+  - { type: cloze, sv: "___ bor du? I Göteborg.", answer: Var, en: "Where do you live? In Gothenburg.", grammar: [wh_question] }
+
+  # the verb
+  - { type: cloze, sv: "Jag ___ på onsdag.", hint: träna, answer: tränar, en: "I exercise on Wednesday.", grammar: [present_tense] }
+  - { type: cloze, sv: "Vi ___ frukost hemma.", hint: äta, answer: äter, en: "We eat breakfast at home.", grammar: [present_tense] }
+
+  # inte comes after the verb
+  - { type: word_order, sv: "Jag jobbar inte idag.", en: "I am not working today.", grammar: [negation_inte] }
+  - { type: word_order, sv: "Vi äter inte frukost hemma.", en: "We do not eat breakfast at home.", grammar: [negation_inte] }
+  - { type: word_order, sv: "När äter du lunch?", en: "When do you eat lunch?", grammar: [wh_question] }
+  - { type: word_order, sv: "Vad gör du på fredag?", en: "What do you do on Friday?", grammar: [wh_question] }
+  - { type: word_order, sv: "Jag sover inte på lördag.", en: "I do not sleep on Saturday.", grammar: [negation_inte] }
+
+  # say it in Swedish
+  - { type: translate, en: "I am not eating lunch today.", sv: "Jag äter inte lunch idag.", grammar: [negation_inte] }
+  - { type: translate, en: "We shop every day.", sv: "Vi handlar varje dag." }
+
+  # listen and choose the answer that fits
+  - { type: listen_choose, sv: "När jobbar du?", en: "When do you work?",
+      options: ["På måndag och tisdag.", "I Göteborg.", "Jag heter Sara."], answer: "På måndag och tisdag." }
+  - { type: listen_choose, sv: "Vad gör du idag?", en: "What are you doing today?",
+      options: ["Jag handlar.", "Bra, tack.", "På torsdag."], answer: "Jag handlar." }
+
+# The task itself: Sara asks about your week.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vad gör du på måndag?", en: "What do you do on Monday?" }
+    - { speaker: du, en: "Say that you work on Monday.", answer: "Jag jobbar på måndag.", accept: ["Jag jobbar."] }
+    - { speaker: Sara, sv: "Jobbar du på lördag?", en: "Do you work on Saturday?" }
+    - { speaker: du, en: "Say no, you do not work on Saturday.",
+        options: ["Nej, jag jobbar inte på lördag.", "Nej, jag inte jobbar på lördag.", "Ja, jag sover inte."],
+        answer: "Nej, jag jobbar inte på lördag." }
+    - { speaker: Sara, sv: "Vad gör du på lördag?", en: "What do you do on Saturday?" }
+    - { speaker: du, en: "Say that you exercise and shop.", answer: "Jag tränar och handlar.",
+        accept: ["Jag handlar och tränar."] }
+    - { speaker: Sara, sv: "Jag läser svenska på lördag.", en: "I study Swedish on Saturday." }
+    - { speaker: du, en: "Ask when she works.", answer: "När jobbar du?" }
+    - { speaker: Sara, sv: "Jag jobbar varje dag. Inte på söndag!", en: "I work every day. Not on Sunday!" }
+    - { speaker: du, en: "Say goodbye.", options: ["Hej då!", "Varje dag.", "Nej, inte idag."], answer: "Hej då!" }
+
+speaking_prompt: "Say aloud: what you do on each day of the week, and two things you do not do."

@@ -1,0 +1,22 @@
+theme: jag
+title: "Jag"
+# Who you are: name, country, language, and what you write on a form.
+words:
+  # about yourself
+  - { lemma: heta,  pos: verb, level: A1, gloss: "to be called (jag heter … = my name is …)" }
+  - { lemma: komma, pos: verb, tags: [action_intrans], level: A1, gloss: "to come; past: came; pp: come" }
+  - { lemma: bo,    pos: verb, level: A1, gloss: "to live (in a place)" }
+  - { lemma: tala,  pos: verb, level: A1, gloss: "to speak; past: spoke; pp: spoken" }
+  - { lemma: må,    pos: verb, level: A1, gloss: "to feel (hur mår du? = how are you?)", forms: { pres: mår } }
+  - { lemma: stava, pos: verb, level: A1, gloss: to spell }
+  - { lemma: svenska,  pos: noun, gender: en, level: A1, gloss: "Swedish (the language)" }
+  - { lemma: engelska, pos: noun, gender: en, level: A1, gloss: "English (the language)" }
+
+  # on a form
+  - { lemma: förnamn,       pos: noun, gender: ett, level: A1, gloss: first name }
+  - { lemma: efternamn,     pos: noun, gender: ett, level: A1, gloss: surname }
+  - { lemma: adress,        pos: noun, gender: en,  level: A1, gloss: address }
+  - { lemma: postnummer,    pos: noun, gender: ett, level: A1, gloss: postcode }
+  - { lemma: telefonnummer, pos: noun, gender: ett, level: A1, gloss: phone number }
+  - { lemma: personnummer,  pos: noun, gender: ett, level: A1, gloss: "personal identity number" }
+  - { lemma: år,            pos: noun, gender: ett, level: A1, gloss: year }

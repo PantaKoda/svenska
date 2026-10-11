@@ -371,20 +371,28 @@ shortcuts (e.g. Alt+a / Alt+e / Alt+o or similar).
 
 ---
 
-## A1 unit plan (draft – order may change)
+## A1 unit plan (written in M6)
 
-| # | Theme | Task |
-|---|---|---|
-| 01 | Jag | Greet, say your name, where you come from, spell your name |
-| 02 | Jag | Give phone number, address and personnummer on a form |
-| 03 | Vardag | Say what you do on a normal day; days of the week |
-| 04 | Matbutiken | Find groceries, understand prices, pay |
-| 05 | Buss & tåg | Buy a ticket, read departure times (clock time here) |
-| 06 | Bostad | Name rooms and things at home, say what is where |
-| 07 | Familjen | Talk about your family |
-| 08 | Hälsa | Say what hurts, understand simple instructions |
-| 09 | Fritid & väder | Make a simple plan with a friend, talk about the weather |
-| 10 | Arbete | Say what you work with and when |
+| # | Theme (pack) | Task | New grammar |
+|---|---|---|---|
+| 01 | Jag (`jag`) | Greet, say your name, where you come from, spell your name | pron_subject, present_tense |
+| 02 | Jag (`jag`) | Give phone number, address and personnummer on a form | numbers_0_1000, yes_no_question |
+| 03 | Vardag (`vardag`) | Say what you do on a normal day; days of the week | wh_question, negation_inte |
+| 04 | Matbutiken (`matbutiken`) | Find groceries, understand prices, pay | en_ett, def_singular |
+| 05 | Buss & tåg (`resa`) | Buy a ticket, read departure times (clock time here) | time_clock, v2_word_order |
+| 06 | Bostad (`bostad`) | Name rooms and things at home, say what is where | plural_indef, adjective_agreement_basic |
+| 07 | Familjen (`familjen`) | Talk about your family | possessive_basic |
+| 08 | Hälsa (`halsa`) | Say what hurts, understand simple instructions | modal_vill_kan_ska |
+| 09 | Fritid & väder (`fritid`) | Make a simple plan with a friend, talk about the weather | – |
+| 10 | Arbete (`arbete`) | Say what you work with and when | – |
+
+Conventions used in the units:
+- Numbers are written with digits in Swedish text (they are grammar, not vocabulary):
+  "2 rum", "klockan halv 4". Phone numbers and personnummer are written the way they are
+  said, so that the voice reads them right: "0 7 0, 1 2 3, 45 67".
+- Question words and yes/no questions appear as fixed phrases before their grammar point
+  is introduced ("Vad heter du?" in unit 01); such items carry no grammar tag for it.
+- Each unit from 06 on has a block "words from earlier units" to recycle vocabulary.
 
 A2 revisits the same themes with harder tasks (e.g. Bostad: book the tvättstuga,
 report a fault to the landlord; Buss & tåg: understand announcements and delays).

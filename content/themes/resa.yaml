@@ -1,0 +1,38 @@
+theme: resa
+title: "Buss & tåg"
+# Getting around: bus, tram and train, tickets and times.
+words:
+  # vehicles and places
+  - { lemma: buss,      pos: noun, gender: en,  tags: [vehicle], level: A1, gloss: bus }
+  - { lemma: tåg,       pos: noun, gender: ett, tags: [vehicle], level: A1, gloss: train }
+  - { lemma: spårvagn,  pos: noun, gender: en,  tags: [vehicle], level: A1, gloss: tram }
+  - { lemma: hållplats, pos: noun, gender: en,  tags: [place],   level: A1, gloss: "stop (bus or tram)" }
+  - { lemma: station,   pos: noun, gender: en,  tags: [place],   level: A1, gloss: station }
+  - { lemma: spår,      pos: noun, gender: ett, level: A1, gloss: "platform, track" }
+  - { lemma: biljett,   pos: noun, gender: en,  tags: [document], level: A1, gloss: ticket }
+
+  # verbs
+  - { lemma: gå,    pos: verb, tags: [action_intrans], level: A1, gloss: "to go, to leave; past: went; pp: gone" }
+  - { lemma: åka,   pos: verb, tags: [action_intrans], level: A1, gloss: "to go (by bus, train, car); past: went; pp: gone" }
+  - { lemma: byta,  pos: verb, level: A1, gloss: to change }
+  - { lemma: vänta, pos: verb, tags: [action_intrans], level: A1, gloss: to wait }
+
+  # time
+  - { lemma: klocka, pos: noun, gender: en, level: A1, gloss: "clock (klockan 3 = at 3 o'clock)" }
+  - { lemma: minut,  pos: noun, gender: en, tags: [time_unit], level: A1, gloss: minute, forms: { pl: minuter } }
+  - { lemma: halv,   pos: adj,  level: A1, gloss: "half (halv 4 = 3.30)" }
+  - { lemma: kvart,  pos: noun, gender: en, level: A1, gloss: "quarter (kvart över 3 = 3.15)", forms: { pl: kvartar } }
+  - { lemma: över,   pos: prep, level: A1, gloss: "past (5 över 3 = 3.05)" }
+  - { lemma: nästa,  pos: adj,  level: A1, gloss: next }
+
+frames:
+  - { id: res-01, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "När går {vehicle.def}?", en: "When does the {1} leave?" }
+  - { id: res-02, level: A1, grammar: [present_tense, def_singular], review: true,
+      sv: "Jag tar {vehicle.def} till {place.def}.", en: "I take the {1} to the {2}." }
+  - { id: res-03, level: A1, grammar: [v2_word_order, def_singular], review: true,
+      sv: "Nu går {vehicle.def}.", en: "The {1} is leaving now." }
+  - { id: res-04, level: A1, grammar: [present_tense, def_singular], review: true,
+      sv: "Jag väntar på {vehicle.def}.", en: "I am waiting for the {1}." }
+  - { id: res-05, level: A1, grammar: [yes_no_question, def_singular], review: true,
+      sv: "Går {vehicle.def} till {place.def}?", en: "Does the {1} go to the {2}?" }

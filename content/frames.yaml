@@ -36,6 +36,21 @@
 - { id: gen-011, level: A1, grammar: [negation_inte, present_tense, def_singular], review: true,
     sv: "Vi {action_object.pres} inte {tool|container|food|drink.def}.", en: "We don't {1} the {2}." }
 
+- { id: gen-012, level: A1, grammar: [present_tense, negation_inte], review: true,
+    sv: "Jag {action_intrans.pres} inte idag.", en: "I am not going to {1} today." }
+
+- { id: gen-013, level: A1, grammar: [present_tense, yes_no_question], review: true,
+    sv: "{action_intrans.pres} du idag?", en: "Are you going to {1} today?" }
+
+- { id: gen-014, level: A1, grammar: [present_tense, wh_question], review: true,
+    sv: "När {action_intrans.pres} du?", en: "When do you {1}?" }
+
+- { id: gen-015, level: A1, grammar: [modal_vill_kan_ska], review: true,
+    sv: "Vi kan {action_intrans.inf} imorgon.", en: "We can {1} tomorrow." }
+
+- { id: gen-016, level: A1, grammar: [modal_vill_kan_ska, yes_no_question], review: true,
+    sv: "Vill du {action_intrans.inf} ikväll?", en: "Do you want to {1} tonight?" }
+
 # ---- A2 ----
 - { id: gen-020, level: A2, grammar: [perfect_tense, def_singular], review: true,
     sv: "Jag har redan {action_surface.sup} {surface.def}.", en: "I have already {1.pp} the {2}." }

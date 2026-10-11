@@ -3,49 +3,48 @@
 unit: theme-matbutiken
 items:
 - type: cloze
-  sv: Kan du ___ soppåsen?
-  en: Can you buy the rubbish bag?
-  answer: köpa
+  sv: Jag köper vatten och ___.
+  en: I'm buying water and apple.
+  answer: äpple
+  grammar:
+  - present_tense
+  review: true
+  hint: äpple
+  frame: mat-03
+  words:
+  - vatten
+  - äpple
+- type: cloze
+  sv: Kan du ta ___?
+  en: Can you take the milk?
+  answer: mjölken
   grammar:
   - modal_vill_kan_ska
   - yes_no_question
   - def_singular
   review: true
-  hint: köpa
+  hint: mjölk
   frame: gen-009
   words:
-  - köpa
-  - soppåse
-- type: cloze
-  sv: Jag tar ___.
-  en: I take the cheese.
-  answer: osten
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  hint: ost
-  frame: gen-010
-  words:
   - ta
-  - ost
+  - mjölk
 - type: cloze
-  sv: Vi tar inte ___.
-  en: We don't take the apple.
-  answer: äpplet
+  sv: Vi ___ inte trasan.
+  en: We don't buy the cloth.
+  answer: köper
   grammar:
   - negation_inte
   - present_tense
   - def_singular
   review: true
-  hint: äpple
+  hint: köpa
   frame: gen-011
   words:
-  - ta
-  - äpple
+  - köpa
+  - trasa
 - type: cloze
-  sv: ___ är ren.
-  en: The bag is clean.
+  sv: ___ är ny.
+  en: The bag is new.
   answer: Påsen
   grammar:
   - adjective_agreement_basic
@@ -55,240 +54,145 @@ items:
   frame: gen-003
   words:
   - påse
-  - ren
+  - ny
 - type: cloze
-  sv: Jag vill ha ___.
-  en: I want a receipt.
-  answer: ett kvitto
+  sv: Jag tar ___.
+  en: I take the egg.
+  answer: ägget
   grammar:
-  - modal_vill_kan_ska
-  - en_ett
-  review: true
-  hint: kvitto
-  frame: gen-008
-  words:
-  - kvitto
-- type: cloze
-  sv: ___ finns inte där.
-  en: The egg is not there.
-  answer: Ägget
-  grammar:
-  - negation_inte
+  - present_tense
   - def_singular
   review: true
   hint: ägg
-  frame: mat-05
+  frame: gen-010
   words:
+  - ta
   - ägg
 - type: cloze
-  sv: Har ni ___?
-  en: Do you have coffee? (asking a shop)
-  answer: kaffe
+  sv: Vi kan ___ imorgon.
+  en: We can pay tomorrow.
+  answer: betala
   grammar:
-  - yes_no_question
+  - modal_vill_kan_ska
   review: true
-  hint: kaffe
-  frame: mat-04
+  hint: betala
+  frame: gen-015
   words:
-  - kaffe
+  - betala
 - type: cloze
-  sv: Var finns ___?
-  en: Where is the butter?
-  answer: smöret
+  sv: Vad kostar ___?
+  en: What does the coffee cost?
+  answer: kaffet
   grammar:
   - wh_question
   - def_singular
   review: true
-  hint: smör
-  frame: mat-02
+  hint: kaffe
+  frame: mat-01
   words:
-  - smör
-- type: dictation
-  sv: Jag köper mjölk och bröd.
-  en: I'm buying milk and bread.
+  - kaffe
+- type: cloze
+  sv: ___ är där.
+  en: The cheese is there.
+  answer: Osten
   grammar:
   - present_tense
+  - def_singular
   review: true
-  frame: mat-03
+  hint: ost
+  frame: gen-007
   words:
-  - mjölk
-  - bröd
+  - ost
 - type: dictation
-  sv: Har du en påse?
-  en: Do you have a bag?
+  sv: Har du ett kvitto?
+  en: Do you have a receipt?
   grammar:
   - yes_no_question
   - en_ett
   review: true
   frame: gen-002
   words:
-  - påse
-- type: dictation
-  sv: Vad kostar äpplet?
-  en: What does the apple cost?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: mat-01
-  words:
-  - äpple
-- type: dictation
-  sv: Var är smöret?
-  en: Where is the butter?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: gen-001
-  words:
-  - smör
-- type: dictation
-  sv: Mjölken är där.
-  en: The milk is there.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  frame: gen-007
-  words:
-  - mjölk
-- type: dictation
-  sv: Har du kvittot?
-  en: Do you have the receipt?
-  grammar:
-  - yes_no_question
-  - def_singular
-  review: true
-  frame: gen-006
-  words:
   - kvitto
 - type: dictation
-  sv: Kan du köpa dammsugaren?
-  en: Can you buy the vacuum cleaner?
-  grammar:
-  - modal_vill_kan_ska
-  - yes_no_question
-  - def_singular
-  review: true
-  frame: gen-009
-  words:
-  - köpa
-  - dammsugare
-- type: dictation
-  sv: Jag tar brödet.
-  en: I take the bread.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  frame: gen-010
-  words:
-  - ta
-  - bröd
-- type: word_order
-  sv: Vi tar inte kaffet.
-  en: We don't take the coffee.
-  grammar:
-  - negation_inte
-  - present_tense
-  - def_singular
-  review: true
-  frame: gen-011
-  words:
-  - ta
-  - kaffe
-- type: word_order
-  sv: Vad kostar ägget?
-  en: What does the egg cost?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: mat-01
-  words:
-  - ägg
-- type: word_order
-  sv: Har ni ost?
-  en: Do you have cheese? (asking a shop)
+  sv: Har ni smör?
+  en: Do you have butter? (asking a shop)
   grammar:
   - yes_no_question
   review: true
   frame: mat-04
   words:
-  - ost
-- type: word_order
-  sv: Jag har inte kvittot.
-  en: I don't have the receipt.
-  grammar:
-  - negation_inte
-  - def_singular
-  review: true
-  frame: gen-004
-  words:
-  - kvitto
-- type: word_order
-  sv: Jag behöver en påse.
-  en: I need a bag.
-  grammar:
-  - present_tense
-  - en_ett
-  review: true
-  frame: gen-005
-  words:
-  - påse
-- type: word_order
-  sv: Äpplet är där.
-  en: The apple is there.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  frame: gen-007
-  words:
-  - äpple
-- type: word_order
-  sv: Var är ägget?
-  en: Where is the egg?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: gen-001
-  words:
-  - ägg
-- type: word_order
-  sv: Var finns mjölken?
-  en: Where is the milk?
-  grammar:
-  - wh_question
-  - def_singular
-  review: true
-  frame: mat-02
-  words:
-  - mjölk
-- type: translate
-  sv: Osten finns inte där.
-  en: The cheese is not there.
+  - smör
+- type: dictation
+  sv: Brödet finns inte där.
+  en: The bread is not there.
   grammar:
   - negation_inte
   - def_singular
   review: true
   frame: mat-05
   words:
-  - ost
-- type: translate
-  sv: Jag köper soppåsen.
-  en: I buy the rubbish bag.
+  - bröd
+- type: dictation
+  sv: Var är osten?
+  en: Where is the cheese?
   grammar:
-  - present_tense
+  - wh_question
   - def_singular
   review: true
-  frame: gen-010
+  frame: gen-001
   words:
-  - köpa
-  - soppåse
-- type: translate
+  - ost
+- type: dictation
+  sv: Var finns äpplet?
+  en: Where is the apple?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-02
+  words:
+  - äpple
+- type: dictation
+  sv: När betalar du?
+  en: When do you pay?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - betala
+- type: dictation
+  sv: Har du påsen?
+  en: Do you have the bag?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - påse
+- type: dictation
+  sv: Jag vill ha ett kvitto.
+  en: I want a receipt.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - kvitto
+- type: word_order
+  sv: Jag köper smör och vatten.
+  en: I'm buying butter and water.
+  grammar:
+  - present_tense
+  review: true
+  frame: mat-03
+  words:
+  - smör
+  - vatten
+- type: word_order
   sv: Kan du ta kaffet?
   en: Can you take the coffee?
   grammar:
@@ -300,9 +204,20 @@ items:
   words:
   - ta
   - kaffe
-- type: translate
-  sv: Vi tar inte smöret.
-  en: We don't take the butter.
+- type: word_order
+  sv: Jag tar mjölken.
+  en: I take the milk.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - mjölk
+- type: word_order
+  sv: Vi köper inte hinken.
+  en: We don't buy the bucket.
   grammar:
   - negation_inte
   - present_tense
@@ -310,29 +225,38 @@ items:
   review: true
   frame: gen-011
   words:
-  - ta
-  - smör
-- type: translate
-  sv: Påsen är smutsig.
-  en: The bag is dirty.
-  grammar:
-  - adjective_agreement_basic
-  - def_singular
-  review: true
-  frame: gen-003
-  words:
-  - påse
-  - smutsig
-- type: translate
-  sv: Har ni bröd?
-  en: Do you have bread? (asking a shop)
+  - köpa
+  - hink
+- type: word_order
+  sv: Har ni ägg?
+  en: Do you have egg? (asking a shop)
   grammar:
   - yes_no_question
   review: true
   frame: mat-04
   words:
+  - ägg
+- type: word_order
+  sv: Jag har inte påsen.
+  en: I don't have the bag.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - påse
+- type: word_order
+  sv: Vad kostar brödet?
+  en: What does the bread cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-01
+  words:
   - bröd
-- type: translate
+- type: word_order
   sv: Jag behöver ett kvitto.
   en: I need a receipt.
   grammar:
@@ -343,45 +267,195 @@ items:
   words:
   - kvitto
 - type: translate
-  sv: Vad kostar kaffet?
-  en: What does the coffee cost?
+  sv: Betalar du idag?
+  en: Are you going to pay today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - betala
+- type: translate
+  sv: Kaffet finns inte där.
+  en: The coffee is not there.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: mat-05
+  words:
+  - kaffe
+- type: translate
+  sv: Smöret är där.
+  en: The butter is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - smör
+- type: translate
+  sv: Var är mjölken?
+  en: Where is the milk?
+  accept:
+  - Var finns mjölken?
   grammar:
   - wh_question
   - def_singular
   review: true
-  frame: mat-01
+  frame: gen-001
+  words:
+  - mjölk
+- type: translate
+  sv: Var finns osten?
+  en: Where is the cheese?
+  accept:
+  - Var är osten?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-02
+  words:
+  - ost
+- type: translate
+  sv: Jag betalar inte idag.
+  en: I am not going to pay today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - betala
+- type: translate
+  sv: Jag köper ägg och vatten.
+  en: I'm buying egg and water.
+  grammar:
+  - present_tense
+  review: true
+  frame: mat-03
+  words:
+  - ägg
+  - vatten
+- type: translate
+  sv: Vi köper inte moppen.
+  en: We don't buy the mop.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - mopp
+- type: listen_choose
+  sv: Påsen är ren.
+  answer: The bag is clean.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  options:
+  - The bag is clean.
+  - The bag is new.
+  - The bag is small.
+  frame: gen-003
+  words:
+  - påse
+  - ren
+- type: listen_choose
+  sv: Kan du ta brödet?
+  answer: Can you take the bread?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the bread?
+  - Can you buy the bread?
+  - Can you take the milk?
+  frame: gen-009
+  words:
+  - ta
+  - bröd
+- type: listen_choose
+  sv: Jag tar äpplet.
+  answer: I take the apple.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I take the apple.
+  - I take the milk.
+  - I buy the egg.
+  frame: gen-010
+  words:
+  - ta
+  - äpple
+- type: listen_choose
+  sv: Har du kvittot?
+  answer: Do you have the receipt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Do you have the receipt?
+  - Do you have the bag?
+  - Do you have a receipt?
+  frame: gen-006
+  words:
+  - kvitto
+- type: listen_choose
+  sv: Vill du betala ikväll?
+  answer: Do you want to pay tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to pay tonight?
+  - We can pay tomorrow.
+  - When do you pay?
+  frame: gen-016
+  words:
+  - betala
+- type: listen_choose
+  sv: Kaffet är där.
+  answer: The coffee is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The coffee is there.
+  - The cheese is there.
+  - The butter is there.
+  frame: gen-007
   words:
   - kaffe
 - type: listen_choose
-  sv: Jag vill ha en påse.
-  answer: I want a bag.
-  grammar:
-  - modal_vill_kan_ska
-  - en_ett
-  review: true
-  options:
-  - I want a bag.
-  - I want a receipt.
-  - Do you have a bag?
-  frame: gen-008
-  words:
-  - påse
-- type: listen_choose
-  sv: Var finns äpplet?
-  answer: Where is the apple?
+  sv: Vad kostar smöret?
+  answer: What does the butter cost?
   grammar:
   - wh_question
   - def_singular
   review: true
   options:
-  - Where is the apple?
-  - Where is the butter?
-  - Where is the milk?
-  frame: mat-02
+  - What does the butter cost?
+  - What does the coffee cost?
+  - What does the apple cost?
+  frame: mat-01
   words:
-  - äpple
+  - smör
 - type: listen_choose
-  sv: Var är mjölken?
+  sv: Var finns mjölken?
   answer: Where is the milk?
   grammar:
   - wh_question
@@ -389,146 +463,72 @@ items:
   review: true
   options:
   - Where is the milk?
-  - Where is the butter?
-  - Where is the egg?
-  frame: gen-001
+  - Where is the apple?
+  - Where is the cheese?
+  frame: mat-02
   words:
   - mjölk
-- type: listen_choose
-  sv: Osten är där.
-  answer: The cheese is there.
-  grammar:
-  - present_tense
-  - def_singular
-  review: true
-  options:
-  - The cheese is there.
-  - The apple is there.
-  - The milk is there.
-  frame: gen-007
-  words:
-  - ost
-- type: listen_choose
-  sv: Smöret finns inte där.
-  answer: The butter is not there.
-  grammar:
-  - negation_inte
-  - def_singular
-  review: true
-  options:
-  - The butter is not there.
-  - The egg is not there.
-  - The cheese is not there.
-  frame: mat-05
-  words:
-  - smör
-- type: listen_choose
-  sv: Har du ett kvitto?
-  answer: Do you have a receipt?
-  grammar:
-  - yes_no_question
-  - en_ett
-  review: true
-  options:
-  - Do you have a receipt?
-  - Do you have a bag?
-  - I want a receipt.
-  frame: gen-002
-  words:
-  - kvitto
-- type: listen_choose
-  sv: Vi köper inte soppåsen.
-  answer: We don't buy the rubbish bag.
-  grammar:
-  - negation_inte
-  - present_tense
-  - def_singular
-  review: true
-  options:
-  - We don't buy the rubbish bag.
-  - We don't buy the coffee.
-  - We don't take the apple.
-  frame: gen-011
-  words:
-  - köpa
-  - soppåse
-- type: listen_choose
-  sv: Kan du ta ägget?
-  answer: Can you take the egg?
-  grammar:
-  - modal_vill_kan_ska
-  - yes_no_question
-  - def_singular
-  review: true
-  options:
-  - Can you take the egg?
-  - Can you buy the milk?
-  - Can you buy the rubbish bag?
-  frame: gen-009
-  words:
-  - ta
-  - ägg
 - type: inflect
-  answer: ett äpple
-  grammar:
-  - en_ett
-  lemma: äpple
-  form: a
-  words:
-  - äpple
-- type: inflect
-  answer: kassor
+  answer: kaffen
   grammar:
   - plural_indef
-  lemma: kassa
-  form: pl
-  words:
-  - kassa
-- type: inflect
-  answer: en ost
-  grammar:
-  - en_ett
-  lemma: ost
-  form: a
-  words:
-  - ost
-- type: inflect
-  answer: betalar
-  grammar:
-  - present_tense
-  lemma: betala
-  form: pres
-  words:
-  - betala
-- type: inflect
-  answer: kort
-  grammar:
-  - plural_indef
-  lemma: kort
-  form: pl
-  words:
-  - kort
-- type: inflect
-  answer: smörer
-  grammar:
-  - plural_indef
-  lemma: smör
-  form: pl
-  words:
-  - smör
-- type: inflect
-  answer: kaffet
-  grammar:
-  - def_singular
   lemma: kaffe
-  form: def
+  form: pl
   words:
   - kaffe
 - type: inflect
-  answer: en påse
+  answer: ett kvitto
   grammar:
   - en_ett
-  lemma: påse
+  lemma: kvitto
   form: a
   words:
-  - påse
+  - kvitto
+- type: inflect
+  answer: ett smör
+  grammar:
+  - en_ett
+  lemma: smör
+  form: a
+  words:
+  - smör
+- type: inflect
+  answer: osten
+  grammar:
+  - def_singular
+  lemma: ost
+  form: def
+  words:
+  - ost
+- type: inflect
+  answer: en kassa
+  grammar:
+  - en_ett
+  lemma: kassa
+  form: a
+  words:
+  - kassa
+- type: inflect
+  answer: kronan
+  grammar:
+  - def_singular
+  lemma: krona
+  form: def
+  words:
+  - krona
+- type: inflect
+  answer: kortet
+  grammar:
+  - def_singular
+  lemma: kort
+  form: def
+  words:
+  - kort
+- type: inflect
+  answer: kostar
+  grammar:
+  - present_tense
+  lemma: kosta
+  form: pres
+  words:
+  - kosta

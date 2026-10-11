@@ -1,0 +1,112 @@
+id: a1-10
+level: A1
+theme: arbete
+title: "Mitt jobb"
+task: "Say what you work with, where, and when you start and finish."
+can_do: "I can talk about my job and my working hours and ask someone about theirs."
+names: [Sara, Maria, Göteborg]
+
+new_words: [jobb, städare, lärare, kock, sjuksköterska, chaufför, snickare, kollega, chef,
+            butik, restaurang, sjukhus, kontor,
+            arbeta, börja, sluta, ledig, timme, morgon, kväll, heltid, som]
+new_grammar: []
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vad jobbar du med?",                                   en: "What do you do for a living?" }
+  - { speaker: du,   sv: "Jag jobbar som kock på en restaurang. Och du?",        en: "I work as a cook at a restaurant. And you?" }
+  - { speaker: Sara, sv: "Jag är sjuksköterska. Jag arbetar på ett sjukhus.",    en: "I am a nurse. I work at a hospital." }
+  - { speaker: du,   sv: "När börjar du på morgonen?",                           en: "When do you start in the morning?" }
+  - { speaker: Sara, sv: "Jag börjar klockan 7 och slutar klockan 4. Och du?",   en: "I start at 7 and finish at 4. And you?" }
+  - { speaker: du,   sv: "Jag jobbar på kvällen. Jag börjar klockan 3.",         en: "I work in the evening. I start at 3." }
+  - { speaker: Sara, sv: "Jobbar du heltid?",                                    en: "Do you work full time?" }
+  - { speaker: du,   sv: "Ja, 8 timmar varje dag. Men jag är ledig på måndag.",  en: "Yes, 8 hours every day. But I am off on Monday." }
+  - { speaker: Sara, sv: "Har du en bra chef?",                                  en: "Do you have a good boss?" }
+  - { speaker: du,   sv: "Ja, min chef är bra. Och mina kollegor också.",        en: "Yes, my boss is good. And my colleagues too." }
+
+exercises:
+  # listen for the number
+  - { type: numbers, sv: "Jag börjar klockan halv 7.", hint: "the time, like 8.15", answer: "6.30",
+      en: "I start at half past 6.", grammar: [time_clock] }
+  - { type: numbers, sv: "Jag slutar kvart över 4.", hint: "the time, like 8.15", answer: "4.15",
+      en: "I finish at quarter past 4.", grammar: [time_clock] }
+  - { type: numbers, sv: "Jag jobbar 8 timmar varje dag.", hint: "how many hours", answer: "8",
+      en: "I work 8 hours every day.", grammar: [numbers_0_1000] }
+
+  # listen and write
+  - { type: dictation, sv: "Vad jobbar du med?", en: "What do you do for a living?", grammar: [wh_question] }
+  - { type: dictation, sv: "Jag jobbar som städare på ett kontor.", en: "I work as a cleaner at an office." }
+  - { type: dictation, sv: "Jag har ett nytt jobb.", en: "I have a new job.", grammar: [adjective_agreement_basic] }
+  - { type: dictation, sv: "Min kollega arbetar i kassan i en butik.", en: "My colleague works at the checkout in a shop." }
+
+  # fill the gap
+  - { type: cloze, sv: "Jag jobbar ___ lärare.", answer: som, en: "I work as a teacher." }
+  - { type: cloze, sv: "Jag arbetar ___ ett sjukhus.", answer: på, en: "I work at a hospital." }
+  - { type: cloze, sv: "Jag ___ klockan 8.", hint: börja, answer: börjar, en: "I start at 8.", grammar: [present_tense] }
+  - { type: cloze, sv: "Jag jobbar på ___.", hint: kväll, answer: kvällen, en: "I work in the evening.", grammar: [def_singular] }
+  - { type: cloze, sv: "Vi är ___ på lördag och söndag.", hint: ledig, answer: lediga, en: "We are off on Saturday and Sunday.",
+      grammar: [adjective_agreement_basic] }
+
+  # build the sentence
+  - { type: word_order, sv: "På måndag börjar jag klockan 7.", en: "On Monday I start at 7.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Jag slutar inte klockan 4 idag.", en: "I do not finish at 4 today.", grammar: [negation_inte] }
+  - { type: word_order, sv: "Min chef är snickare.", en: "My boss is a carpenter.", grammar: [possessive_basic] }
+  - { type: word_order, sv: "Jobbar du heltid?", en: "Do you work full time?", grammar: [yes_no_question] }
+  - { type: word_order, sv: "Jag äter lunch med mina kollegor.", en: "I eat lunch with my colleagues.", grammar: [possessive_basic] }
+
+  # say it in Swedish
+  - { type: translate, en: "I work as a driver.", sv: "Jag jobbar som chaufför.", accept: ["Jag arbetar som chaufför."] }
+  - { type: translate, en: "She is a teacher.", sv: "Hon är lärare." }
+  - { type: translate, en: "When do you finish?", sv: "När slutar du?", grammar: [wh_question] }
+  - { type: translate, en: "I speak Swedish and English at work.", sv: "Jag talar svenska och engelska på jobbet.",
+      grammar: [def_singular] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Jag jobbar inte på morgonen.", en: "I do not work in the morning.",
+      options: ["I do not work in the morning.", "I do not work in the evening.", "I work in the morning."],
+      answer: "I do not work in the morning." }
+  - { type: listen_choose, sv: "Vad jobbar du med?", en: "What do you do for a living?",
+      options: ["Jag är kock.", "Klockan 7.", "På måndag."], answer: "Jag är kock." }
+  - { type: listen_choose, sv: "Vad har du för telefonnummer på jobbet?", en: "What is your phone number at work?",
+      options: ["Det är 031-12 34 56.", "Storgatan 5.", "Jag heter Maria i förnamn."], answer: "Det är 031-12 34 56." }
+
+  # words from earlier units
+  - { type: dictation, sv: "Jag tar bussen till jobbet och byter vid stationen.", en: "I take the bus to work and change at the station." }
+  - { type: dictation, sv: "Vad heter du i förnamn och efternamn?", en: "What are your first name and surname?" }
+  - { type: word_order, sv: "Hennes man är chaufför.", en: "Her husband is a driver.", grammar: [possessive_basic] }
+  - { type: word_order, sv: "Min fru läser svenska på tisdag och onsdag.", en: "My wife studies Swedish on Tuesday and Wednesday.",
+      grammar: [possessive_basic] }
+  - { type: translate, en: "What is the restaurant's address?", sv: "Vad har restaurangen för adress?", grammar: [wh_question, def_singular] }
+  - { type: translate, en: "The office has 4 rooms and a big kitchen.", sv: "Kontoret har 4 rum och ett stort kök.",
+      grammar: [plural_indef, adjective_agreement_basic] }
+  - { type: translate, en: "My sister is a nurse.", sv: "Min syster är sjuksköterska.", grammar: [possessive_basic] }
+  - { type: dictation, sv: "Han tränar på morgonen och handlar på kvällen.", en: "He exercises in the morning and shops in the evening." }
+  - { type: dictation, sv: "På kontoret finns en lampa och 2 fönster.", en: "In the office there is a lamp and 2 windows.",
+      grammar: [v2_word_order, plural_indef] }
+  - { type: word_order, sv: "Vi äter middag på restaurangen.", en: "We eat dinner at the restaurant.", grammar: [def_singular] }
+  - { type: cloze, sv: "Min pappa väntar på nästa ___.", hint: spårvagn, answer: spårvagn, en: "My dad is waiting for the next tram." }
+
+# The task itself: a new neighbour asks about your work.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vad jobbar du med?", en: "What do you do for a living?" }
+    - { speaker: du, en: "Say that you work as a cook.", answer: "Jag jobbar som kock.",
+        accept: ["Jag är kock.", "Jag arbetar som kock."] }
+    - { speaker: Sara, sv: "Var jobbar du?", en: "Where do you work?" }
+    - { speaker: du, en: "Say: at a restaurant.",
+        options: ["På en restaurang.", "Som en restaurang.", "Klockan 3."], answer: "På en restaurang." }
+    - { speaker: Sara, sv: "När börjar du?", en: "When do you start?" }
+    - { speaker: du, en: "Say that you start at 3 o'clock.", answer: "Jag börjar klockan 3.", accept: ["Klockan 3."] }
+    - { speaker: Sara, sv: "Jobbar du på lördag?", en: "Do you work on Saturday?" }
+    - { speaker: du, en: "Say no, you are off on Saturday.",
+        options: ["Nej, jag är ledig på lördag.", "Nej, jag är kock på lördag.", "Ja, jag slutar lördag."],
+        answer: "Nej, jag är ledig på lördag." }
+    - { speaker: Sara, sv: "Jobbar du heltid?", en: "Do you work full time?" }
+    - { speaker: du, en: "Say yes, 8 hours every day.", answer: "Ja, 8 timmar varje dag.",
+        accept: ["Ja, jag jobbar 8 timmar varje dag.", "Ja."] }
+
+speaking_prompt: "Say aloud: what you work as, where you work, when you start and finish, and which days you are off."

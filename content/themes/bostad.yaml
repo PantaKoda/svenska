@@ -1,0 +1,39 @@
+theme: bostad
+title: "Bostad"
+scene: svg/bostad.svg
+# Home: the rooms and the things in them.
+words:
+  # rooms
+  - { lemma: lägenhet,   pos: noun, gender: en,  level: A1, gloss: "flat, apartment" }
+  - { lemma: rum,        pos: noun, gender: ett, level: A1, gloss: room }
+  - { lemma: kök,        pos: noun, gender: ett, tags: [room], level: A1, gloss: kitchen,     svg: w-kok }
+  - { lemma: badrum,     pos: noun, gender: ett, tags: [room], level: A1, gloss: bathroom,    svg: w-badrum }
+  - { lemma: sovrum,     pos: noun, gender: ett, tags: [room], level: A1, gloss: bedroom,     svg: w-sovrum }
+  - { lemma: vardagsrum, pos: noun, gender: ett, tags: [room], level: A1, gloss: living room, svg: w-vardagsrum }
+  - { lemma: hall,       pos: noun, gender: en,  tags: [room], level: A1, gloss: "hall, entrance" }
+  - { lemma: balkong,    pos: noun, gender: en,  level: A1, gloss: balcony }
+
+  # things
+  - { lemma: bord,    pos: noun, gender: ett, tags: [furniture, surface], level: A1, gloss: table,  svg: w-bord }
+  - { lemma: stol,    pos: noun, gender: en,  tags: [furniture], level: A1, gloss: chair,  svg: w-stol }
+  - { lemma: säng,    pos: noun, gender: en,  tags: [furniture], level: A1, gloss: bed,    svg: w-sang }
+  - { lemma: soffa,   pos: noun, gender: en,  tags: [furniture], level: A1, gloss: sofa,   svg: w-soffa }
+  - { lemma: lampa,   pos: noun, gender: en,  tags: [device],    level: A1, gloss: lamp,   svg: w-lampa }
+  - { lemma: kylskåp, pos: noun, gender: ett, tags: [device],    level: A1, gloss: "fridge; pl: fridges", svg: w-kylskap }
+  - { lemma: fönster, pos: noun, gender: ett, tags: [surface],   level: A1, gloss: window, svg: w-fonster }
+  - { lemma: dörr,    pos: noun, gender: en,  level: A1, gloss: door, svg: w-dorr }
+
+  # verbs
+  - { lemma: stå, pos: verb, level: A1, gloss: "to stand, to be (somewhere); past: stood; pp: stood" }
+
+frames:
+  - { id: bos-01, level: A1, grammar: [present_tense, def_singular], review: true,
+      sv: "{furniture|device.def} står i {room.def}.", en: "The {1} is in the {2}." }
+  - { id: bos-02, level: A1, grammar: [yes_no_question, plural_indef], review: true,
+      sv: "Har du 2 {furniture.pl}?", en: "Do you have 2 {1}?" }
+  - { id: bos-03, level: A1, grammar: [adjective_agreement_basic, def_singular], review: true,
+      sv: "{room.def} är {state~1}.", en: "The {1} is {2}." }
+  - { id: bos-04, level: A1, grammar: [wh_question, def_singular], review: true,
+      sv: "Var står {furniture|device.def}?", en: "Where is the {1}?" }
+  - { id: bos-05, level: A1, grammar: [plural_indef, def_singular], review: true,
+      sv: "Det finns 2 {furniture.pl} i {room.def}.", en: "There are 2 {1} in the {2}." }

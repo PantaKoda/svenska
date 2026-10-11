@@ -1,0 +1,112 @@
+id: a1-09
+level: A1
+theme: fritid
+title: "Vad gör vi i helgen?"
+task: "Make a simple plan with a friend and talk about the weather."
+can_do: "I can suggest doing something, agree on a day and a time, and say what the weather is like."
+names: [Sara, Grekland]
+
+new_words: [väder, sol, regn, regna, varm, kall, fin, dålig,
+            promenad, park, bio, film, fotboll, helg,
+            fika, simma, spela, se, gilla,
+            imorgon, ikväll, kanske, gärna]
+new_grammar: []
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Hej! Vad gör du i helgen?",                          en: "Hi! What are you doing this weekend?" }
+  - { speaker: du,   sv: "Jag jobbar inte. Och du?",                           en: "I am not working. And you?" }
+  - { speaker: Sara, sv: "Vill du ta en promenad i parken på lördag?",         en: "Do you want to go for a walk in the park on Saturday?" }
+  - { speaker: du,   sv: "Ja, gärna!",                                         en: "Yes, I'd love to!" }
+  - { speaker: Sara, sv: "Men det regnar på lördag. Det är kallt också.",      en: "But it is raining on Saturday. It is cold too." }
+  - { speaker: du,   sv: "Då kan vi gå på bio.",                               en: "Then we can go to the cinema." }
+  - { speaker: Sara, sv: "Bra! Jag gillar film. När går filmen?",              en: "Good! I like films. When does the film start?" }
+  - { speaker: du,   sv: "Klockan 7. Vi kan fika klockan 6.",                  en: "At 7. We can have a coffee at 6." }
+  - { speaker: Sara, sv: "Och på söndag är det sol. Då kan vi spela fotboll.", en: "And on Sunday it is sunny. Then we can play football." }
+  - { speaker: du,   sv: "Kanske! Hej då!",                                    en: "Maybe! Bye!" }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Vad gör du i helgen?", en: "What are you doing this weekend?", grammar: [wh_question] }
+  - { type: dictation, sv: "Det regnar idag.", en: "It is raining today." }
+  - { type: dictation, sv: "Jag gillar fotboll, men jag gillar inte regn.", en: "I like football, but I do not like rain." }
+  - { type: dictation, sv: "Vi tar en promenad i parken.", en: "We are going for a walk in the park." }
+
+  # the weather: det är + the ett-form
+  - { type: cloze, sv: "Det är ___ idag.", hint: kall, answer: kallt, en: "It is cold today.", grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Det är ___ i Grekland.", hint: varm, answer: varmt, en: "It is warm in Greece.",
+      grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Vädret är ___.", hint: fin, answer: fint, en: "The weather is nice.", grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Det är ___ väder idag.", hint: dålig, answer: dåligt, en: "The weather is bad today.",
+      grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Solen är ___.", hint: varm, answer: varm, en: "The sun is warm.", grammar: [adjective_agreement_basic] }
+
+  # build the sentence
+  - { type: word_order, sv: "Vill du fika imorgon?", en: "Do you want to have a coffee tomorrow?", grammar: [modal_vill_kan_ska] }
+  - { type: word_order, sv: "Imorgon regnar det.", en: "Tomorrow it will rain.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Vi kan gå på bio ikväll.", en: "We can go to the cinema tonight.", grammar: [modal_vill_kan_ska] }
+  - { type: word_order, sv: "Då kan vi spela fotboll.", en: "Then we can play football.", grammar: [v2_word_order, modal_vill_kan_ska] }
+
+  # say it in Swedish
+  - { type: translate, en: "Do you want to swim?", sv: "Vill du simma?", grammar: [modal_vill_kan_ska] }
+  - { type: translate, en: "Maybe tomorrow.", sv: "Kanske imorgon." }
+  - { type: translate, en: "We are having coffee and bread at home.", sv: "Vi fikar hemma med kaffe och bröd.",
+      accept: ["Vi fikar med kaffe och bröd hemma."], review: true }
+  - { type: translate, en: "What are you (all) doing on Sunday?", sv: "Vad gör ni på söndag?", grammar: [wh_question] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Vill du fika imorgon?", en: "Do you want to have a coffee tomorrow?",
+      options: ["Ja, gärna!", "Det är kallt.", "Jag heter Sara."], answer: "Ja, gärna!" }
+  - { type: listen_choose, sv: "Vad gör du ikväll?", en: "What are you doing tonight?",
+      options: ["Jag ska se en film.", "Det regnar.", "Ja, gärna."], answer: "Jag ska se en film." }
+  - { type: listen_choose, sv: "Det är sol och varmt idag.", en: "It is sunny and warm today.",
+      options: ["It is sunny and warm today.", "It is sunny and cold today.", "It is raining and warm today."],
+      answer: "It is sunny and warm today." }
+
+  # listen for the number
+  - { type: numbers, sv: "Filmen går klockan kvart över 7.", hint: "the time, like 8.15", answer: "7.15",
+      en: "The film starts at quarter past 7.", grammar: [time_clock] }
+  - { type: numbers, sv: "En biljett till filmen kostar 130 kronor.", hint: "the price in kronor", answer: "130",
+      en: "A ticket for the film costs 130 kronor.", grammar: [numbers_0_1000] }
+
+  - { type: translate, en: "I am going to watch a film tonight.", sv: "Jag ska se en film ikväll.",
+      accept: ["Ikväll ska jag se en film."], grammar: [modal_vill_kan_ska] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Vi kan ta spårvagnen till parken.", en: "We can take the tram to the park.", grammar: [modal_vill_kan_ska] }
+  - { type: dictation, sv: "Mina barn vill simma, men det är kallt.", en: "My children want to swim, but it is cold." }
+  - { type: word_order, sv: "Sedan kan vi fika hemma.", en: "Then we can have a coffee at home.", grammar: [v2_word_order, modal_vill_kan_ska] }
+  - { type: word_order, sv: "Vem vill spela fotboll på söndag?", en: "Who wants to play football on Sunday?", grammar: [wh_question] }
+  - { type: translate, en: "We eat breakfast on the balcony.", sv: "Vi äter frukost på balkongen.", grammar: [def_singular] }
+  - { type: translate, en: "My brother and my sister are coming on Sunday.", sv: "Min bror och min syster kommer på söndag.",
+      grammar: [possessive_basic] }
+  - { type: word_order, sv: "Kommer din familj på lördag?", en: "Is your family coming on Saturday?",
+      grammar: [yes_no_question, possessive_basic] }
+  - { type: dictation, sv: "Det finns ett bord och 4 stolar på balkongen.", en: "There is a table and 4 chairs on the balcony.",
+      grammar: [plural_indef] }
+  - { type: cloze, sv: "Det är kallt i ___.", hint: sovrum, answer: sovrummet, en: "It is cold in the bedroom.", grammar: [def_singular] }
+  - { type: cloze, sv: "Vi kan se film i ___.", hint: soffa, answer: soffan, en: "We can watch a film on the sofa.", grammar: [def_singular] }
+
+# The task itself: you and Sara plan Saturday.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Hej! Vad gör du på lördag?", en: "Hi! What are you doing on Saturday?" }
+    - { speaker: du, en: "Say that you are not working on Saturday.", answer: "Jag jobbar inte på lördag.",
+        accept: ["Jag jobbar inte."] }
+    - { speaker: Sara, sv: "Vill du fika?", en: "Do you want to have a coffee?" }
+    - { speaker: du, en: "Say yes, you would love to.",
+        options: ["Ja, gärna!", "Ja, det regnar.", "Nej, jag gillar film."], answer: "Ja, gärna!" }
+    - { speaker: Sara, sv: "Det är fint väder på lördag.", en: "The weather is nice on Saturday." }
+    - { speaker: du, en: "Say: then we can go for a walk.", answer: "Då kan vi ta en promenad.",
+        accept: ["Då kan vi ta en promenad i parken."] }
+    - { speaker: Sara, sv: "Bra! När?", en: "Good! When?" }
+    - { speaker: du, en: "Say at 2 o'clock in the park.",
+        options: ["Klockan 2 i parken.", "På bio ikväll.", "Kanske regn."], answer: "Klockan 2 i parken." }
+    - { speaker: Sara, sv: "Bra! Hej då!", en: "Good! Bye!" }
+    - { speaker: du, en: "Say goodbye.", answer: "Hej då!" }
+
+speaking_prompt: "Say aloud: what the weather is like today, what you like doing, and ask a friend to do something on Saturday."

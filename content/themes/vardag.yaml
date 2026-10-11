@@ -1,0 +1,29 @@
+theme: vardag
+title: "Vardag"
+# An ordinary week: what you do and on which day.
+words:
+  # days
+  - { lemma: dag,     pos: noun, gender: en, level: A1, gloss: day, forms: { def: dagen, pl: dagar } }
+  - { lemma: måndag,  pos: noun, gender: en, level: A1, gloss: Monday }
+  - { lemma: tisdag,  pos: noun, gender: en, level: A1, gloss: Tuesday }
+  - { lemma: onsdag,  pos: noun, gender: en, level: A1, gloss: Wednesday }
+  - { lemma: torsdag, pos: noun, gender: en, level: A1, gloss: Thursday }
+  - { lemma: fredag,  pos: noun, gender: en, level: A1, gloss: Friday }
+  - { lemma: lördag,  pos: noun, gender: en, level: A1, gloss: Saturday }
+  - { lemma: söndag,  pos: noun, gender: en, level: A1, gloss: Sunday }
+  - { lemma: varje,   pos: pron, level: A1, gloss: "every (varje dag = every day)" }
+
+  # what you do
+  - { lemma: göra,   pos: verb, level: A1, gloss: "to do; past: did; pp: done" }
+  - { lemma: jobba,  pos: verb, tags: [action_intrans], level: A1, gloss: to work }
+  - { lemma: sova,   pos: verb, tags: [action_intrans], level: A1, gloss: "to sleep; past: slept; pp: slept" }
+  - { lemma: träna,  pos: verb, tags: [action_intrans], level: A1, gloss: "to exercise, to work out" }
+  - { lemma: handla, pos: verb, tags: [action_intrans], level: A1, gloss: "to shop, to buy food" }
+  - { lemma: äta,    pos: verb, tags: [consume], level: A1, gloss: "to eat; past: ate; pp: eaten" }
+  - { lemma: läsa,   pos: verb, level: A1, gloss: "to read, to study; past: read; pp: read" }
+
+  # meals, home
+  - { lemma: frukost, pos: noun, gender: en, level: A1, gloss: breakfast }
+  - { lemma: lunch,   pos: noun, gender: en, level: A1, gloss: lunch }
+  - { lemma: middag,  pos: noun, gender: en, level: A1, gloss: dinner }
+  - { lemma: hemma,   pos: adv,  level: A1, gloss: at home }

@@ -1,0 +1,81 @@
+id: a1-01
+level: A1
+theme: jag
+title: "Hej! Jag heter …"
+task: "Greet someone, say your name, where you come from and where you live."
+can_do: "I can greet people and say who I am and where I am from."
+names: [Sara, Ali, Grekland, Sverige, Göteborg]
+
+new_words: [hej, då, tack, jag, du, den, och,
+            heta, komma, bo, tala, må, stava, vara,
+            från, i, vad, var, varifrån, hur, bra,
+            svenska, engelska]
+new_grammar: [pron_subject, present_tense]
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+model_dialogue:
+  - { speaker: Sara, sv: "Hej! Jag heter Sara. Vad heter du?",           en: "Hi! My name is Sara. What is your name?" }
+  - { speaker: du,   sv: "Hej! Jag heter Ali.",                          en: "Hi! My name is Ali." }
+  - { speaker: Sara, sv: "Varifrån kommer du?",                          en: "Where do you come from?" }
+  - { speaker: du,   sv: "Jag kommer från Grekland. Och du?",            en: "I come from Greece. And you?" }
+  - { speaker: Sara, sv: "Jag kommer från Sverige. Jag bor i Göteborg.", en: "I come from Sweden. I live in Gothenburg." }
+  - { speaker: du,   sv: "Jag bor i Göteborg och jag talar engelska och svenska.", en: "I live in Gothenburg and I speak English and Swedish." }
+  - { speaker: Sara, sv: "Bra! Hur mår du?",                             en: "Good! How are you?" }
+  - { speaker: du,   sv: "Bra, tack. Och du?",                           en: "Fine, thanks. And you?" }
+  - { speaker: Sara, sv: "Bra, tack. Hej då!",                           en: "Fine, thanks. Goodbye!" }
+  - { speaker: du,   sv: "Hej då!",                                      en: "Goodbye!" }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Jag heter Sara.", en: "My name is Sara.", grammar: [present_tense] }
+  - { type: dictation, sv: "Jag kommer från Grekland.", en: "I come from Greece.", grammar: [present_tense] }
+  - { type: dictation, sv: "Hur mår du?", en: "How are you?" }
+  - { type: dictation, sv: "Hej då!", en: "Goodbye!" }
+
+  # the verb in the present: one form for everyone, mostly with -r
+  - { type: cloze, sv: "Jag ___ Ali.", hint: heta, answer: heter, en: "My name is Ali.", grammar: [present_tense] }
+  - { type: cloze, sv: "Du ___ från Sverige.", hint: komma, answer: kommer, en: "You come from Sweden.", grammar: [present_tense, pron_subject] }
+  - { type: cloze, sv: "Jag ___ i Göteborg.", hint: bo, answer: bor, en: "I live in Gothenburg.", grammar: [present_tense] }
+  - { type: cloze, sv: "Du ___ svenska.", hint: tala, answer: talar, en: "You speak Swedish.", grammar: [present_tense, pron_subject] }
+  - { type: cloze, sv: "Det ___ bra.", hint: vara, answer: är, en: "That is good.", grammar: [present_tense] }
+
+  # build the question
+  - { type: word_order, sv: "Vad heter du?", en: "What is your name?" }
+  - { type: word_order, sv: "Varifrån kommer du?", en: "Where do you come from?" }
+  - { type: word_order, sv: "Var bor du?", en: "Where do you live?" }
+  - { type: word_order, sv: "Hur stavar du det?", en: "How do you spell that?" }
+  - { type: word_order, sv: "Jag talar svenska och engelska.", en: "I speak Swedish and English." }
+
+  # say it in Swedish
+  - { type: translate, en: "Thanks, I am fine.", sv: "Tack, jag mår bra.", accept: ["Tack, bra."] }
+  - { type: translate, en: "I live in Sweden.", sv: "Jag bor i Sverige.", grammar: [present_tense] }
+
+  # listen and choose the answer that fits
+  - { type: listen_choose, sv: "Vad heter du?", en: "What is your name?",
+      options: ["Jag heter Ali.", "Jag bor i Göteborg.", "Bra, tack."], answer: "Jag heter Ali." }
+  - { type: listen_choose, sv: "Hur mår du?", en: "How are you?",
+      options: ["Bra, tack.", "Jag heter Sara.", "Från Grekland."], answer: "Bra, tack." }
+  - { type: listen_choose, sv: "Var bor du?", en: "Where do you live?",
+      options: ["I Göteborg.", "Jag talar engelska.", "Hej då!"], answer: "I Göteborg." }
+
+# The task itself: you meet Sara for the first time.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Hej! Jag heter Sara. Vad heter du?", en: "Hi! My name is Sara. What is your name?" }
+    - { speaker: du, en: "Say hi and say that your name is Ali.", answer: "Hej! Jag heter Ali." }
+    - { speaker: Sara, sv: "Varifrån kommer du?", en: "Where do you come from?" }
+    - { speaker: du, en: "Say that you come from Greece.",
+        options: ["Jag kommer från Grekland.", "Jag heter Grekland.", "Jag talar Grekland."],
+        answer: "Jag kommer från Grekland." }
+    - { speaker: Sara, sv: "Var bor du?", en: "Where do you live?" }
+    - { speaker: du, en: "Say that you live in Gothenburg.", answer: "Jag bor i Göteborg." }
+    - { speaker: Sara, sv: "Talar du svenska?", en: "Do you speak Swedish?" }
+    - { speaker: du, en: "Say that you speak Swedish and English.", answer: "Jag talar svenska och engelska." }
+    - { speaker: Sara, sv: "Bra! Hej då!", en: "Good! Goodbye!" }
+    - { speaker: du, en: "Say goodbye.", options: ["Hej då!", "Hej!", "Tack, bra."], answer: "Hej då!" }
+
+speaking_prompt: "Say aloud: greet someone, say your name and spell it, say where you come from and where you live."

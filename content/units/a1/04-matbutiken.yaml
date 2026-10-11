@@ -5,17 +5,11 @@ title: "I matbutiken"
 task: "Find groceries, understand the price and pay at the checkout."
 can_do: "I can buy food and pay in a Swedish supermarket."
 
-# Units 01–03 are not written yet. Until they are, this unit takes these as known.
-assumes:
-  words: [jag, du, vi, ni, den, vara, ha, en, och, inte, var, vad, hej, tack, ja, nej]
-  grammar: [pron_subject, present_tense, en_ett, v2_word_order, yes_no_question,
-            wh_question, negation_inte, numbers_0_1000]
-
 new_words: [mjölk, kaffe, bröd, ost, smör, ägg, äpple,
             påse, kassa, kvitto, kort, krona,
             kosta, betala, behöva, köpa, finnas,
-            med, vid, där]
-new_grammar: [def_singular]
+            med, vid, där, ni]
+new_grammar: [en_ett, def_singular]
 scene: svg/matbutik.svg
 
 # Words that are heard but not taught in this unit.

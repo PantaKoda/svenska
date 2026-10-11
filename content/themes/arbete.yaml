@@ -1,0 +1,30 @@
+theme: arbete
+title: "Arbete"
+# Work: what you do, where and when.
+words:
+  # jobs
+  - { lemma: jobb,          pos: noun, gender: ett, level: A1, gloss: job }
+  - { lemma: städare,       pos: noun, gender: en,  level: A1, gloss: cleaner }
+  - { lemma: lärare,        pos: noun, gender: en,  level: A1, gloss: teacher }
+  - { lemma: kock,          pos: noun, gender: en,  level: A1, gloss: "cook, chef", forms: { pl: kockar } }
+  - { lemma: sjuksköterska, pos: noun, gender: en,  level: A1, gloss: nurse }
+  - { lemma: chaufför,      pos: noun, gender: en,  level: A1, gloss: driver, forms: { def: chauffören } }
+  - { lemma: snickare,      pos: noun, gender: en,  level: A1, gloss: carpenter }
+  - { lemma: kollega,       pos: noun, gender: en,  level: A1, gloss: colleague, forms: { pl: kollegor } }
+  - { lemma: chef,          pos: noun, gender: en,  level: A1, gloss: "boss, manager" }
+
+  # workplaces
+  - { lemma: butik,      pos: noun, gender: en,  level: A1, gloss: shop }
+  - { lemma: restaurang, pos: noun, gender: en,  level: A1, gloss: restaurant }
+  - { lemma: sjukhus,    pos: noun, gender: ett, level: A1, gloss: hospital }
+  - { lemma: kontor,     pos: noun, gender: ett, level: A1, gloss: office }
+
+  # working hours
+  - { lemma: arbeta, pos: verb, tags: [action_intrans], level: A1, gloss: to work }
+  - { lemma: börja,  pos: verb, tags: [action_intrans], level: A1, gloss: "to start; past: started; pp: started" }
+  - { lemma: sluta,  pos: verb, tags: [action_intrans], level: A1, gloss: "to finish, to stop", forms: { pres: slutar } }
+  - { lemma: ledig,  pos: adj,  level: A1, gloss: "free, off work" }
+  - { lemma: timme,  pos: noun, gender: en, tags: [time_unit], level: A1, gloss: hour }
+  - { lemma: morgon, pos: noun, gender: en, level: A1, gloss: morning, forms: { pl: morgnar } }
+  - { lemma: kväll,  pos: noun, gender: en, level: A1, gloss: evening }
+  - { lemma: heltid, pos: adv,  level: A1, gloss: "full time (jobba heltid = work full time)" }

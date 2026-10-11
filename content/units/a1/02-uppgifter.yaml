@@ -1,0 +1,94 @@
+id: a1-02
+level: A1
+theme: jag
+title: "Mina uppgifter"
+task: "Give your name, address, phone number and personnummer when someone fills in a form for you."
+can_do: "I can give my personal details and understand numbers said aloud."
+names: [Ali, Hassan, Storgatan, Göteborg, Sverige]
+
+new_words: [ja, nej, ha, en, för, på,
+            förnamn, efternamn, adress, postnummer, telefonnummer, personnummer,
+            år, gammal]
+new_grammar: [numbers_0_1000, yes_no_question]
+
+# In the audio, phone numbers and personnummer are written the way they are said:
+# digit by digit or in pairs ("0 7 0, 1 2 3, 45 67").
+model_dialogue:
+  - { speaker: handläggare, sv: "Hej! Vad heter du i förnamn?",           en: "Hi! What is your first name?" }
+  - { speaker: du,          sv: "Jag heter Ali.",                         en: "My name is Ali." }
+  - { speaker: handläggare, sv: "Och i efternamn?",                       en: "And your surname?" }
+  - { speaker: du,          sv: "Hassan.",                                en: "Hassan." }
+  - { speaker: handläggare, sv: "Vad har du för adress?",                 en: "What is your address?" }
+  - { speaker: du,          sv: "Jag bor på Storgatan 5 i Göteborg.",     en: "I live at Storgatan 5 in Gothenburg." }
+  - { speaker: handläggare, sv: "Har du ett personnummer?",               en: "Do you have a personnummer?" }
+  - { speaker: du,          sv: "Ja, det är 90 05 12, 12 34.",            en: "Yes, it is 900512-1234." }
+  - { speaker: handläggare, sv: "Vad har du för telefonnummer?",          en: "What is your phone number?" }
+  - { speaker: du,          sv: "Det är 0 7 0, 1 2 3, 45 67.",            en: "It is 070-123 45 67." }
+  - { speaker: handläggare, sv: "Hur gammal är du?",                      en: "How old are you?" }
+  - { speaker: du,          sv: "Jag är 35 år.",                          en: "I am 35 years old." }
+  - { speaker: handläggare, sv: "Tack!",                                  en: "Thank you!" }
+
+exercises:
+  # listen for the number
+  - { type: numbers, sv: "Jag bor på Storgatan 12.", hint: "the house number", answer: "12",
+      en: "I live at Storgatan 12.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Jag är 35 år.", hint: "the age", answer: "35",
+      en: "I am 35 years old.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Jag har postnummer 413 27.", hint: "the postcode", answer: "413 27",
+      en: "My postcode is 413 27.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Det är 0 7 0, 1 2 3, 45 67.", hint: "the phone number", answer: "070-123 45 67",
+      en: "It is 070-123 45 67.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Det är 90 05 12, 12 34.", hint: "the personnummer", answer: "900512-1234",
+      en: "It is 900512-1234.", grammar: [numbers_0_1000] }
+
+  # listen and write
+  - { type: dictation, sv: "Har du ett personnummer?", en: "Do you have a personnummer?", grammar: [yes_no_question] }
+  - { type: dictation, sv: "Vad har du för adress?", en: "What is your address?" }
+  - { type: dictation, sv: "Jag heter Hassan i efternamn.", en: "My surname is Hassan." }
+  - { type: dictation, sv: "Hur gammal är du?", en: "How old are you?" }
+
+  # i or på?
+  - { type: cloze, sv: "Jag bor ___ Storgatan 5.", answer: på, en: "I live at Storgatan 5." }
+  - { type: cloze, sv: "Jag bor ___ Göteborg.", answer: i, en: "I live in Gothenburg." }
+  - { type: cloze, sv: "___ du ett telefonnummer?", hint: ha, answer: Har, en: "Do you have a phone number?",
+      grammar: [yes_no_question] }
+
+  # a yes/no question starts with the verb
+  - { type: word_order, sv: "Har du ett telefonnummer?", en: "Do you have a phone number?", grammar: [yes_no_question] }
+  - { type: word_order, sv: "Bor du i Göteborg?", en: "Do you live in Gothenburg?", grammar: [yes_no_question] }
+  - { type: word_order, sv: "Är du 35 år?", en: "Are you 35 years old?", grammar: [yes_no_question] }
+  - { type: word_order, sv: "Heter du Ali i förnamn?", en: "Is your first name Ali?", grammar: [yes_no_question] }
+
+  # say it in Swedish
+  - { type: translate, en: "Yes, I have an address.", sv: "Ja, jag har en adress." }
+  - { type: translate, en: "No, thanks.", sv: "Nej tack." }
+
+  # listen and choose the answer that fits
+  - { type: listen_choose, sv: "Vad heter du i efternamn?", en: "What is your surname?",
+      options: ["Hassan.", "Storgatan 5.", "35 år."], answer: "Hassan." }
+  - { type: listen_choose, sv: "Hur gammal är du?", en: "How old are you?",
+      options: ["Jag är 35 år.", "Jag bor i Göteborg.", "Ja, tack."], answer: "Jag är 35 år." }
+  - { type: listen_choose, sv: "Vad har du för postnummer?", en: "What is your postcode?",
+      options: ["413 27.", "Storgatan.", "Nej."], answer: "413 27." }
+
+# The task itself: an official fills in a form with you.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: handläggare, sv: "Hej! Vad heter du i förnamn?", en: "Hi! What is your first name?" }
+    - { speaker: du, en: "Say that your name is Ali.", answer: "Jag heter Ali.", accept: ["Ali."] }
+    - { speaker: handläggare, sv: "Och i efternamn?", en: "And your surname?" }
+    - { speaker: du, en: "Give your surname, Hassan.", options: ["Hassan.", "Storgatan.", "Göteborg."], answer: "Hassan." }
+    - { speaker: handläggare, sv: "Vad har du för adress?", en: "What is your address?" }
+    - { speaker: du, en: "Say that you live at Storgatan 5.", answer: "Jag bor på Storgatan 5.",
+        accept: ["Storgatan 5.", "Jag bor på Storgatan 5 i Göteborg."] }
+    - { speaker: handläggare, sv: "Har du ett telefonnummer?", en: "Do you have a phone number?" }
+    - { speaker: du, en: "Say yes and give your number.",
+        options: ["Ja, det är 070-123 45 67.", "Nej, jag heter Ali.", "Ja, jag är 35 år."],
+        answer: "Ja, det är 070-123 45 67." }
+    - { speaker: handläggare, sv: "Har du ett personnummer?", en: "Do you have a personnummer?" }
+    - { speaker: du, en: "Say yes.", answer: "Ja.", accept: ["Ja, det har jag."] }
+    - { speaker: handläggare, sv: "Bra. Tack! Hej då!", en: "Good. Thank you! Goodbye!" }
+    - { speaker: du, en: "Say thanks and goodbye.", answer: "Tack! Hej då!", accept: ["Tack, hej då!", "Hej då!"] }
+
+speaking_prompt: "Say aloud: your first name and surname, your address, your phone number digit by digit, and how old you are."

@@ -1,0 +1,101 @@
+id: a1-06
+level: A1
+theme: bostad
+title: "Min lägenhet"
+task: "Describe your home: the rooms, the things in them and where they are."
+can_do: "I can name rooms and furniture and say what is where and what it is like."
+names: [Sara, Göteborg]
+
+new_words: [lägenhet, rum, kök, badrum, sovrum, vardagsrum, hall, balkong,
+            bord, stol, säng, soffa, lampa, kylskåp, fönster, dörr,
+            stå, stor, liten, ny, många, men, också]
+new_grammar: [plural_indef, adjective_agreement_basic]
+scene: svg/bostad.svg
+
+core:
+  templates: [scene_click, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Var bor du?",                                     en: "Where do you live?" }
+  - { speaker: du,   sv: "Jag bor i en lägenhet i Göteborg.",               en: "I live in a flat in Gothenburg." }
+  - { speaker: Sara, sv: "Är den stor?",                                    en: "Is it big?" }
+  - { speaker: du,   sv: "Nej, den är liten. Den har 2 rum och kök.",       en: "No, it is small. It has 2 rooms and a kitchen." }
+  - { speaker: Sara, sv: "Har du ett stort kök?",                           en: "Do you have a big kitchen?" }
+  - { speaker: du,   sv: "Nej, köket är litet. Men vardagsrummet är stort.", en: "No, the kitchen is small. But the living room is big." }
+  - { speaker: Sara, sv: "Vad finns i vardagsrummet?",                      en: "What is there in the living room?" }
+  - { speaker: du,   sv: "Det finns en soffa, ett bord och 2 lampor.",      en: "There is a sofa, a table and 2 lamps." }
+  - { speaker: Sara, sv: "Och i sovrummet?",                                en: "And in the bedroom?" }
+  - { speaker: du,   sv: "Där står en säng. Den är ny!",                    en: "There is a bed there. It is new!" }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Jag bor i en lägenhet.", en: "I live in a flat." }
+  - { type: dictation, sv: "Den har 2 rum och kök.", en: "It has 2 rooms and a kitchen.", grammar: [plural_indef] }
+  - { type: dictation, sv: "Kylskåpet står i köket.", en: "The fridge is in the kitchen.", grammar: [def_singular] }
+  - { type: dictation, sv: "Hallen är liten, men köket är stort.", en: "The hall is small, but the kitchen is big.",
+      grammar: [adjective_agreement_basic] }
+
+  # the adjective follows the noun: stor, stort, stora
+  - { type: cloze, sv: "Sovrummet är ___.", hint: liten, answer: litet, en: "The bedroom is small.",
+      grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Bordet är ___.", hint: gammal, answer: gammalt, en: "The table is old.",
+      grammar: [adjective_agreement_basic] }
+  - { type: cloze, sv: "Jag har 2 ___ lampor.", hint: ny, answer: nya, en: "I have 2 new lamps.",
+      grammar: [adjective_agreement_basic, plural_indef] }
+  - { type: cloze, sv: "Lägenheten har 3 ___ rum.", hint: stor, answer: stora, en: "The flat has 3 big rooms.",
+      grammar: [adjective_agreement_basic, plural_indef] }
+
+  # more than one
+  - { type: cloze, sv: "Det finns 6 ___ i köket.", hint: stol, answer: stolar, en: "There are 6 chairs in the kitchen.",
+      grammar: [plural_indef] }
+  - { type: cloze, sv: "Vi har 2 ___.", hint: säng, answer: sängar, en: "We have 2 beds.", grammar: [plural_indef] }
+
+  # build the sentence
+  - { type: word_order, sv: "Hur många rum har lägenheten?", en: "How many rooms does the flat have?", grammar: [wh_question] }
+  - { type: word_order, sv: "Sovrummet har 2 fönster och en dörr.", en: "The bedroom has 2 windows and a door.", grammar: [plural_indef] }
+  - { type: word_order, sv: "Badrummet är också litet.", en: "The bathroom is small too.", grammar: [adjective_agreement_basic] }
+  - { type: word_order, sv: "Köket är inte stort.", en: "The kitchen is not big.", grammar: [adjective_agreement_basic, negation_inte] }
+
+  # say it in Swedish
+  - { type: translate, en: "I have a new sofa.", sv: "Jag har en ny soffa.", grammar: [adjective_agreement_basic] }
+  - { type: translate, en: "The flat has a balcony.", sv: "Lägenheten har en balkong." }
+
+  # listen and choose the meaning
+  - { type: listen_choose, sv: "Bordet står i köket.", en: "The table is in the kitchen.",
+      options: ["The table is in the kitchen.", "The chair is in the kitchen.", "The table is in the bedroom."],
+      answer: "The table is in the kitchen." }
+  - { type: listen_choose, sv: "Lägenheten har 3 rum och en balkong.", en: "The flat has 3 rooms and a balcony.",
+      options: ["The flat has 3 rooms and a balcony.", "The flat has 3 rooms and a hall.", "The flat has 2 rooms and a balcony."],
+      answer: "The flat has 3 rooms and a balcony." }
+
+  # listen for the number
+  - { type: numbers, sv: "Lägenheten har 4 rum.", hint: "how many rooms", answer: "4",
+      en: "The flat has 4 rooms.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: translate, en: "The flat is by the tram stop.", sv: "Lägenheten är vid hållplatsen.", grammar: [def_singular] }
+  - { type: dictation, sv: "Jag tar nästa buss om 10 minuter.", en: "I take the next bus in 10 minutes." }
+  - { type: word_order, sv: "Nu står bordet i köket.", en: "Now the table is in the kitchen.", grammar: [v2_word_order] }
+
+# The task itself: Sara asks about your new flat.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Hur många rum har lägenheten?", en: "How many rooms does the flat have?" }
+    - { speaker: du, en: "Say that it has 2 rooms and a kitchen.", answer: "Den har 2 rum och kök.",
+        accept: ["Lägenheten har 2 rum och kök.", "2 rum och kök."] }
+    - { speaker: Sara, sv: "Är köket stort?", en: "Is the kitchen big?" }
+    - { speaker: du, en: "Say no, it is small.",
+        options: ["Nej, det är litet.", "Nej, den är liten.", "Nej, det är liten."], answer: "Nej, det är litet." }
+    - { speaker: Sara, sv: "Vad finns i vardagsrummet?", en: "What is there in the living room?" }
+    - { speaker: du, en: "Say that there is a sofa and a table.", answer: "Det finns en soffa och ett bord.",
+        accept: ["En soffa och ett bord."] }
+    - { speaker: Sara, sv: "Har du en balkong?", en: "Do you have a balcony?" }
+    - { speaker: du, en: "Say yes, you have a small balcony.",
+        options: ["Ja, jag har en liten balkong.", "Ja, jag har en litet balkong.", "Ja, jag har ett liten balkong."],
+        answer: "Ja, jag har en liten balkong." }
+    - { speaker: Sara, sv: "Är lägenheten ny?", en: "Is the flat new?" }
+    - { speaker: du, en: "Say no, it is old.", answer: "Nej, den är gammal." }
+
+speaking_prompt: "Say aloud: how many rooms your home has, what is in each room, and whether each room is big or small."

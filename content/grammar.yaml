@@ -112,7 +112,7 @@
 
 - id: wh_question
   level: A1
-  requires: [v2_word_order]
+  requires: [present_tense]
   title: "Question words (vad, var, när, vem, hur)"
   card: |
     Question word first, then the verb, then the subject.

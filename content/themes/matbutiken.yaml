@@ -13,7 +13,7 @@ words:
 
   # at the checkout
   - { lemma: påse,   pos: noun, gender: en,  tags: [container], level: A1, gloss: bag,      svg: w-pase }
-  - { lemma: kassa,  pos: noun, gender: en,  tags: [place],     level: A1, gloss: checkout, svg: w-kassa }
+  - { lemma: kassa,  pos: noun, gender: en,  level: A1, gloss: checkout, svg: w-kassa }
   - { lemma: kvitto, pos: noun, gender: ett, tags: [document],  level: A1, gloss: receipt,  svg: w-kvitto }
   - { lemma: kort,   pos: noun, gender: ett, level: A1, gloss: card, svg: w-kort }
   - { lemma: krona,  pos: noun, gender: en,  level: A1, gloss: "krona (Swedish money)" }

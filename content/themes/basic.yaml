@@ -2,39 +2,80 @@ theme: basic
 title: "Grundord"
 # Pronouns, common verbs and function words that every theme needs.
 # The fixed words of the generic frames (content/frames.yaml) must be in this pack.
+# forms: pins the usual form where SALDO also lists an old or unrelated one (haver, skall, varar).
 words:
   # pronouns
   - { lemma: jag, pos: pron, level: A1, gloss: I }
   - { lemma: du,  pos: pron, level: A1, gloss: you (one person) }
+  - { lemma: han, pos: pron, level: A1, gloss: he }
+  - { lemma: hon, pos: pron, level: A1, gloss: she }
   - { lemma: vi,  pos: pron, level: A1, gloss: we }
   - { lemma: ni,  pos: pron, level: A1, gloss: you (several people) }
+  - { lemma: de,  pos: pron, level: A1, gloss: they }
   - { lemma: den, pos: pron, level: A1, gloss: "it (den for en-words, det for ett-words)" }
+  - { lemma: min,    pos: pron, level: A1, gloss: "my (min, mitt, mina)" }
+  - { lemma: din,    pos: pron, level: A1, gloss: "your (din, ditt, dina)" }
+  - { lemma: hans,   pos: pron, level: A1, gloss: his }
+  - { lemma: hennes, pos: pron, level: A1, gloss: her }
 
   # common verbs
-  # forms: pins the usual form where SALDO also lists an old or unrelated one (haver, skall, varar).
   - { lemma: vara,   pos: verb, level: A1, gloss: "to be; past: was; pp: been",
       forms: { pres: är, past: var, sup: varit } }
   - { lemma: ha,     pos: verb, level: A1, gloss: "to have; past: had; pp: had", forms: { pres: har } }
   - { lemma: behöva, pos: verb, level: A1, gloss: to need }
   - { lemma: ta,     pos: verb, tags: [action_object], level: A1, gloss: "to take; past: took; pp: taken",
-      forms: { inf: ta, pres: tar } }   # SALDO also lists the old taga, tager
+      forms: { inf: ta, pres: tar } }
   - { lemma: vilja,  pos: verb, level: A1, gloss: to want }
   - { lemma: kunna,  pos: verb, level: A1, gloss: "can, to be able to" }
   - { lemma: skola,  pos: verb, level: A1, gloss: "shall, to be going to (ska)", forms: { pres: ska } }
+  - { lemma: måste,  pos: verb, level: A1, gloss: "must, to have to", forms: { pres: måste } }
 
-  # function words
-  - { lemma: en,    pos: article, level: A1, gloss: "a, an (en or ett)" }
-  - { lemma: och,   pos: conj,    level: A1, gloss: and }
-  - { lemma: inte,  pos: adv,     level: A1, gloss: not }
-  - { lemma: var,   pos: adv,     level: A1, gloss: where }
-  - { lemma: vad,   pos: pron,    level: A1, gloss: what }
-  - { lemma: där,   pos: adv,     level: A1, gloss: there }
-  - { lemma: med,   pos: prep,    level: A1, gloss: with }
-  - { lemma: vid,   pos: prep,    level: A1, gloss: "at, by" }
-  - { lemma: redan, pos: adv,     level: A2, gloss: already }
+  # question words
+  - { lemma: vad,      pos: pron, level: A1, gloss: what }
+  - { lemma: var,      pos: adv,  level: A1, gloss: where }
+  - { lemma: varifrån, pos: adv,  level: A1, gloss: where from }
+  - { lemma: hur,      pos: adv,  level: A1, gloss: how }
+  - { lemma: när,      pos: adv,  level: A1, gloss: when }
+  - { lemma: vem,      pos: pron, level: A1, gloss: who }
 
-  # greetings and answers
+  # small words
+  - { lemma: en,     pos: article, level: A1, gloss: "a, an (en or ett)" }
+  - { lemma: och,    pos: conj,    level: A1, gloss: and }
+  - { lemma: men,    pos: conj,    level: A1, gloss: but }
+  - { lemma: inte,   pos: adv,     level: A1, gloss: not }
+  - { lemma: också,  pos: adv,     level: A1, gloss: "also, too" }
+  - { lemma: kanske, pos: adv,     level: A1, gloss: maybe }
+  - { lemma: gärna,  pos: adv,     level: A1, gloss: "gladly (ja, gärna = yes, I'd love to)" }
+  - { lemma: många,  pos: pron,    level: A1, gloss: many }
+  - { lemma: som,    pos: adv,     level: A1, gloss: "as (jobba som = work as)" }
+  - { lemma: redan,  pos: adv,     level: A2, gloss: already }
+
+  # place and direction
+  - { lemma: i,    pos: prep, level: A1, gloss: in }
+  - { lemma: på,   pos: prep, level: A1, gloss: "on, at" }
+  - { lemma: från, pos: prep, level: A1, gloss: from }
+  - { lemma: till, pos: prep, level: A1, gloss: to }
+  - { lemma: med,  pos: prep, level: A1, gloss: with }
+  - { lemma: vid,  pos: prep, level: A1, gloss: "at, by" }
+  - { lemma: för,  pos: prep, level: A1, gloss: "for (vad har du för …? = what … do you have?)" }
+  - { lemma: där,  pos: adv,  level: A1, gloss: there }
+
+  # time
+  - { lemma: nu,      pos: adv,  level: A1, gloss: now }
+  - { lemma: idag,    pos: adv,  level: A1, gloss: today }
+  - { lemma: imorgon, pos: adv,  level: A1, gloss: tomorrow }
+  - { lemma: ikväll,  pos: adv,  level: A1, gloss: "tonight, this evening" }
+  - { lemma: sedan,   pos: adv,  level: A1, gloss: "then, after that" }
+  - { lemma: då,      pos: adv,  level: A1, gloss: "then (hej då = goodbye)" }
+  - { lemma: om,      pos: prep, level: A1, gloss: "in (om 5 minuter = in 5 minutes)" }
+
+  # greetings, answers, common adjectives
   - { lemma: hej,  pos: interj, level: A1, gloss: hi }
   - { lemma: tack, pos: interj, level: A1, gloss: thanks }
   - { lemma: ja,   pos: interj, level: A1, gloss: "yes" }
   - { lemma: nej,  pos: interj, level: A1, gloss: "no" }
+  - { lemma: bra,     pos: adj, level: A1, gloss: "good, well" }
+  - { lemma: gammal,  pos: adj, tags: [state], level: A1, gloss: old }
+  - { lemma: ny,      pos: adj, tags: [state], level: A1, gloss: new }
+  - { lemma: stor,    pos: adj, tags: [state], level: A1, gloss: big }
+  - { lemma: liten,   pos: adj, tags: [state], level: A1, gloss: small }

@@ -1,0 +1,105 @@
+id: a1-07
+level: A1
+theme: familjen
+title: "Min familj"
+task: "Tell someone about your family: who they are, their names, ages and where they live."
+can_do: "I can talk about my family and ask about someone else's."
+names: [Sara, Ali, Maria, Omar, Lina, Grekland, Sverige, Göteborg, Stockholm]
+
+new_words: [familj, mamma, pappa, bror, syster, syskon, barn, son, dotter, man, fru,
+            han, hon, de, min, din, hans, hennes, vem, gift]
+new_grammar: [possessive_basic]
+
+core:
+  templates: [inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vem är det?",                                    en: "Who is that?" }
+  - { speaker: du,   sv: "Det är min bror. Han heter Omar.",               en: "That is my brother. His name is Omar." }
+  - { speaker: Sara, sv: "Hur gammal är han?",                             en: "How old is he?" }
+  - { speaker: du,   sv: "Han är 30 år. Han bor i Grekland.",              en: "He is 30. He lives in Greece." }
+  - { speaker: Sara, sv: "Har du många syskon?",                           en: "Do you have many siblings?" }
+  - { speaker: du,   sv: "Jag har en bror och 2 systrar.",                 en: "I have a brother and 2 sisters." }
+  - { speaker: Sara, sv: "Är du gift?",                                    en: "Are you married?" }
+  - { speaker: du,   sv: "Ja. Min fru heter Maria. Vi har 2 barn.",        en: "Yes. My wife's name is Maria. We have 2 children." }
+  - { speaker: Sara, sv: "Vad heter dina barn?",                           en: "What are your children called?" }
+  - { speaker: du,   sv: "Min son heter Ali och min dotter heter Lina. De är 5 och 7 år.", en: "My son is called Ali and my daughter is called Lina. They are 5 and 7." }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Jag har en bror och 2 systrar.", en: "I have a brother and 2 sisters.", grammar: [plural_indef] }
+  - { type: dictation, sv: "Min fru heter Maria.", en: "My wife's name is Maria.", grammar: [possessive_basic] }
+  - { type: dictation, sv: "Hennes mamma bor i Göteborg.", en: "Her mum lives in Gothenburg.", grammar: [possessive_basic] }
+  - { type: dictation, sv: "Vi har 2 barn.", en: "We have 2 children." }
+
+  # min, mitt or mina? din, ditt or dina?
+  - { type: cloze, sv: "Det är ___ bror.", hint: min, answer: min, en: "That is my brother.", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Det är ___ barn. Hon heter Lina.", hint: min, answer: mitt, en: "That is my child. Her name is Lina.",
+      grammar: [possessive_basic] }
+  - { type: cloze, sv: "Det är ___ systrar.", hint: min, answer: mina, en: "Those are my sisters.", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Vad heter ___ fru?", hint: din, answer: din, en: "What is your wife's name?",
+      grammar: [possessive_basic] }
+  - { type: cloze, sv: "Var bor ___ bröder?", hint: din, answer: dina, en: "Where do your brothers live?",
+      grammar: [possessive_basic] }
+
+  # han, hon or de?
+  - { type: cloze, sv: "Min syster heter Lina. ___ bor i Sverige.", answer: Hon,
+      en: "My sister's name is Lina. She lives in Sweden.", grammar: [pron_subject] }
+  - { type: cloze, sv: "Min pappa är 70 år. ___ är gammal.", answer: Han,
+      en: "My dad is 70. He is old.", grammar: [pron_subject] }
+  - { type: cloze, sv: "Mina barn heter Ali och Lina. ___ är 5 och 7 år.", answer: De,
+      en: "My children are called Ali and Lina. They are 5 and 7.", grammar: [pron_subject] }
+
+  # build the sentence
+  - { type: word_order, sv: "Vem är det?", en: "Who is that?", grammar: [wh_question] }
+  - { type: word_order, sv: "Hans dotter är 8 år.", en: "His daughter is 8 years old.", grammar: [possessive_basic] }
+  - { type: word_order, sv: "Är du gift?", en: "Are you married?", grammar: [yes_no_question] }
+  - { type: word_order, sv: "Mina syskon bor inte i Sverige.", en: "My siblings do not live in Sweden.",
+      grammar: [possessive_basic, negation_inte] }
+
+  # say it in Swedish
+  - { type: translate, en: "My dad is 70 years old.", sv: "Min pappa är 70 år.", accept: ["Min pappa är 70 år gammal."],
+      grammar: [possessive_basic] }
+  - { type: translate, en: "Her son lives in Sweden.", sv: "Hennes son bor i Sverige.", grammar: [possessive_basic] }
+  - { type: translate, en: "That is my family.", sv: "Det är min familj.", grammar: [possessive_basic] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Min man jobbar inte idag.", en: "My husband is not working today.",
+      options: ["My husband is not working today.", "My wife is not working today.", "My husband is working today."],
+      answer: "My husband is not working today." }
+  - { type: listen_choose, sv: "Har du syskon?", en: "Do you have brothers or sisters?",
+      options: ["Ja, en bror.", "Ja, jag är gift.", "Han heter Omar."], answer: "Ja, en bror." }
+
+  # listen for the number
+  - { type: numbers, sv: "Min mamma är 68 år.", hint: "the age", answer: "68", en: "My mum is 68.", grammar: [numbers_0_1000] }
+  - { type: numbers, sv: "Jag har 4 syskon.", hint: "how many", answer: "4", en: "I have 4 siblings.", grammar: [numbers_0_1000] }
+
+  # words from earlier units
+  - { type: dictation, sv: "Min bror åker buss till stationen varje dag.", en: "My brother goes by bus to the station every day." }
+  - { type: translate, en: "His mum lives in a big flat.", sv: "Hans mamma bor i en stor lägenhet.",
+      grammar: [possessive_basic, adjective_agreement_basic] }
+  - { type: word_order, sv: "Mina barn har ett litet rum.", en: "My children have a small room.",
+      grammar: [possessive_basic, adjective_agreement_basic] }
+  - { type: cloze, sv: "Min syster väntar på ___.", hint: tåg, answer: tåget, en: "My sister is waiting for the train.",
+      grammar: [def_singular] }
+
+# The task itself: Sara asks about your family.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Har du syskon?", en: "Do you have brothers or sisters?" }
+    - { speaker: du, en: "Say yes, you have a brother.", answer: "Ja, jag har en bror.", accept: ["Ja, en bror."] }
+    - { speaker: Sara, sv: "Vad heter din bror?", en: "What is your brother's name?" }
+    - { speaker: du, en: "Say that his name is Omar.",
+        options: ["Han heter Omar.", "Hon heter Omar.", "De heter Omar."], answer: "Han heter Omar." }
+    - { speaker: Sara, sv: "Är du gift?", en: "Are you married?" }
+    - { speaker: du, en: "Say yes, your wife's name is Maria.", answer: "Ja, min fru heter Maria." }
+    - { speaker: Sara, sv: "Har ni barn?", en: "Do you have children?" }
+    - { speaker: du, en: "Say yes, you (two) have 2 children.",
+        options: ["Ja, vi har 2 barn.", "Ja, de har 2 barn.", "Ja, hon har 2 barn."], answer: "Ja, vi har 2 barn." }
+    - { speaker: Sara, sv: "Hur gamla är dina barn?", en: "How old are your children?" }
+    - { speaker: du, en: "Say that they are 5 and 7 years old.", answer: "De är 5 och 7 år.",
+        accept: ["De är 5 och 7.", "De är 5 och 7 år gamla."] }
+
+speaking_prompt: "Say aloud: who is in your family, what they are called, how old they are and where they live."

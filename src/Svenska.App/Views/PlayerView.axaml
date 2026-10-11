@@ -95,7 +95,8 @@
                         <Button Classes="round" Content="ö" Tag="ö" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+O" FontSize="18" />
                     </StackPanel>
                     <TextBox x:Name="AnswerBox" Text="{Binding Answer}" FontSize="20" IsReadOnly="{Binding IsChecked}"
-                             PlaceholderText="Your answer" />
+                             PlaceholderText="Your answer" AcceptsReturn="{Binding IsFreeWrite}" TextWrapping="Wrap"
+                             Classes.tall="{Binding IsFreeWrite}" />
                 </DockPanel>
 
                 <StackPanel Orientation="Horizontal" Spacing="12">
@@ -117,6 +118,18 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
+                    <!-- free writing: the learner checks the text against the list, then reads one way to write it -->
+                    <StackPanel Spacing="8" IsVisible="{Binding IsFreeWrite}">
+                        <ItemsControl ItemsSource="{Binding Checklist}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="x:String">
+                                    <CheckBox Content="{Binding}" Focusable="False" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <TextBlock Classes="label" Text="ONE WAY TO WRITE IT" Margin="0,8,0,0" />
+                        <TextBlock Text="{Binding ModelText}" TextWrapping="Wrap" />
+                    </StackPanel>
                     <TextBlock Classes="muted" Text="{Binding GlossText}" FontSize="13" TextWrapping="Wrap"
                                IsVisible="{Binding GlossText, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
 

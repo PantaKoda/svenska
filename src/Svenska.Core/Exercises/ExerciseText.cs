@@ -17,19 +17,23 @@ public static class ExerciseText
     public const string ListenChoose = "listen_choose";
     public const string Numbers = "numbers";
     public const string Dialogue = "dialogue";
+    public const string FreeWrite = "free_write";
 
     /// <summary>The types the exercise player can run as single items.</summary>
     public static readonly string[] Playable =
-        [Dictation, Cloze, Inflect, WordOrder, Translate, SceneClick, ListenChoose, Numbers];
+        [Dictation, Cloze, Inflect, WordOrder, Translate, SceneClick, ListenChoose, Numbers, FreeWrite];
 
-    /// <summary>The types where the learner writes Swedish: every word must be known (rule 2).</summary>
-    public static readonly string[] Written = [Dictation, Cloze, Inflect, WordOrder, Translate];
+    /// <summary>
+    /// The types where the learner writes Swedish: every word must be known (rule 2).
+    /// For free_write that is the model text in `sv`.
+    /// </summary>
+    public static readonly string[] Written = [Dictation, Cloze, Inflect, WordOrder, Translate, FreeWrite];
 
     /// <summary>The types where the learner hears a Swedish sentence (`sv`) that has audio.</summary>
     public static readonly string[] Heard = [Dictation, ListenChoose, Numbers];
 
-    /// <summary>All types of AGENTS.md. free_write has no player yet.</summary>
-    public static readonly string[] AllTypes = [.. Playable, Dialogue, "free_write"];
+    /// <summary>All types of AGENTS.md.</summary>
+    public static readonly string[] AllTypes = [.. Playable, Dialogue];
 
     /// <summary>What the learner must type or choose.</summary>
     public static string Expected(ExerciseItem item) => item.Type switch

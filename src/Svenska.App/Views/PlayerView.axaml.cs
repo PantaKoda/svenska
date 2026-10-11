@@ -57,7 +57,9 @@ public partial class PlayerView : UserControl
             return;
 
         var modifiers = e.KeyModifiers;
-        if (e.Key == Key.Enter && modifiers == KeyModifiers.None)
+        // In free writing Enter is a new line; Ctrl+Enter finishes.
+        var writing = vm is { IsFreeWrite: true, IsChecked: false };
+        if (e.Key == Key.Enter && (writing ? modifiers == KeyModifiers.Control : modifiers == KeyModifiers.None))
         {
             vm.SubmitCommand.Execute(null);
             e.Handled = true;

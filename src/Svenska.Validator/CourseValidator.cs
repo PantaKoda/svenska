@@ -501,6 +501,13 @@ public sealed class CourseValidator
                 CheckSceneClickItem(file, item);
                 break;
 
+            case ExerciseText.FreeWrite:
+                if (string.IsNullOrWhiteSpace(item.En) || item.Checklist.Count == 0)
+                    Error(file, $"{name}: needs en (what to write) and a checklist");
+                if (string.IsNullOrWhiteSpace(item.Sv))
+                    Error(file, $"{name}: needs sv, one way to write it (shown afterwards)");
+                break;
+
             default:
                 if (!ExerciseText.AllTypes.Contains(item.Type))
                     Error(file, $"{name}: unknown exercise type '{item.Type}'");

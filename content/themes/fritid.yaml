@@ -43,3 +43,25 @@ words:
   - { lemma: passa,   pos: verb, level: A2, gloss: "to suit (passar det? = does that suit you?)" }
   - { lemma: sommar,  pos: noun, gender: en,  level: A2, gloss: summer, forms: { def: sommaren, pl: somrar } }
   - { lemma: vinter,  pos: noun, gender: en,  level: A2, gloss: winter }
+
+  # B1: clubs and opinions
+  - { lemma: förening, pos: noun, gender: en,  level: B1, gloss: "club, association" }
+  - { lemma: medlem,   pos: noun, gender: en,  level: B1, gloss: member }
+  - { lemma: avgift,   pos: noun, gender: en,  level: B1, gloss: fee }
+  - { lemma: möte,     pos: noun, gender: ett, level: B1, gloss: meeting }
+  - { lemma: åsikt,    pos: noun, gender: en,  level: B1, gloss: opinion }
+  - { lemma: förslag,  pos: noun, gender: ett, level: B1, gloss: "suggestion, proposal" }
+  - { lemma: kör,      pos: noun, gender: en,  level: B1, gloss: choir }
+  - { lemma: idrott,   pos: noun, gender: en,  level: B1, gloss: sport }
+  - { lemma: lag,      pos: noun, gender: ett, level: B1, gloss: team }
+  - { lemma: träning,  pos: noun, gender: en,  level: B1, gloss: "training, practice" }
+  - { lemma: tävling,  pos: noun, gender: en,  level: B1, gloss: competition }
+  - { lemma: hobby,    pos: noun, gender: en,  level: B1, gloss: hobby, forms: { pl: hobbyer } }
+  - { lemma: musik,    pos: noun, gender: en,  level: B1, gloss: music }
+  - { lemma: kurs,     pos: noun, gender: en,  level: B1, gloss: course }
+  - { lemma: ledare,   pos: noun, gender: en,  level: B1, gloss: leader }
+  - { lemma: anmäla,   pos: verb, level: B1, gloss: "to sign up, to report" }
+  - { lemma: delta,    pos: verb, tags: [action_intrans], level: B1, gloss: "to take part; past: took part; pp: taken part" }
+  - { lemma: vinna,    pos: verb, level: B1, gloss: "to win; past: won; pp: won" }
+  - { lemma: förlora,  pos: verb, level: B1, gloss: "to lose; past: lost; pp: lost" }
+  - { lemma: gratis,   pos: adj,  level: B1, gloss: free (of charge) }

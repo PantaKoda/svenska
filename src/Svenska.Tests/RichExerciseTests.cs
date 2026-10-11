@@ -213,6 +213,27 @@ public class RichExerciseTests
         Assert.Contains(Errors(chosen), e => e.Rule == 2 && e.Message.Contains("bananen"));
     }
 
+    private const string FreeWrite = """
+          - { type: free_write, en: "Write where the milk is.", checklist: ["I use finnas."], sv: "Mjölken finns." }
+        """;
+
+    [Fact]
+    public void A_free_write_needs_a_prompt_a_checklist_and_a_model_text_in_known_words()
+    {
+        using var ok = Course(FreeWrite);
+        Assert.Empty(Errors(ok));
+        Assert.Contains(ExerciseText.FreeWrite, ExerciseText.Playable);
+
+        using var noList = Course(FreeWrite.Replace("checklist: [\"I use finnas.\"], ", ""));
+        Assert.Contains(Errors(noList), e => e.Message.Contains("needs en (what to write) and a checklist"));
+
+        using var noModel = Course(FreeWrite.Replace(", sv: \"Mjölken finns.\"", ""));
+        Assert.Contains(Errors(noModel), e => e.Message.Contains("needs sv, one way to write it"));
+
+        using var unknown = Course(FreeWrite.Replace("Mjölken finns.", "Bananen finns."));
+        Assert.Contains(Errors(unknown), e => e.Rule == 2 && e.Message.Contains("Bananen"));
+    }
+
     [Fact]
     public void A_final_task_must_end_with_the_learner_and_have_complete_turns()
     {

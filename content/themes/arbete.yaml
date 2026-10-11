@@ -47,3 +47,23 @@ words:
   - { lemma: snabb,       pos: adj,  level: A2, gloss: fast }
   - { lemma: noggrann,    pos: adj,  level: A2, gloss: "careful, thorough" }
   - { lemma: intresserad, pos: adj,  level: A2, gloss: interested }
+
+  # B1: a meeting at work
+  - { lemma: dagordning,  pos: noun, gender: en,  tags: [document], level: B1, gloss: agenda }
+  - { lemma: beslut,      pos: noun, gender: ett, level: B1, gloss: decision }
+  - { lemma: rättighet,   pos: noun, gender: en,  level: B1, gloss: right }
+  - { lemma: skyldighet,  pos: noun, gender: en,  level: B1, gloss: "duty, obligation" }
+  - { lemma: arbetsmiljö, pos: noun, gender: en,  level: B1, gloss: working environment }
+  - { lemma: övertid,     pos: noun, gender: en,  level: B1, gloss: overtime }
+  - { lemma: fack,        pos: noun, gender: ett, level: B1, gloss: "trade union" }
+  - { lemma: avtal,       pos: noun, gender: ett, tags: [document], level: B1, gloss: agreement }
+  - { lemma: rast,        pos: noun, gender: en,  level: B1, gloss: break }
+  - { lemma: punkt,       pos: noun, gender: en,  level: B1, gloss: "point, item" }
+  - { lemma: protokoll,   pos: noun, gender: ett, tags: [document], level: B1, gloss: minutes (of a meeting) }
+  - { lemma: ordförande,  pos: noun, gender: en,  level: B1, gloss: chairperson }
+  - { lemma: förändring,  pos: noun, gender: en,  level: B1, gloss: change }
+  - { lemma: säkerhet,    pos: noun, gender: en,  level: B1, gloss: safety }
+  - { lemma: diskutera,   pos: verb, level: B1, gloss: to discuss }
+  - { lemma: höja,        pos: verb, level: B1, gloss: "to raise" }
+  - { lemma: rösta,       pos: verb, tags: [action_intrans], level: B1, gloss: to vote }
+  - { lemma: anställd,    pos: adj,  level: B1, gloss: "employed; an employee" }

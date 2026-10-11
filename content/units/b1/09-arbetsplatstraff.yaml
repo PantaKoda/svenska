@@ -1,0 +1,107 @@
+id: b1-09
+level: B1
+theme: arbete
+title: "Möte på jobbet"
+task: "Follow a meeting at work, make a suggestion, agree or disagree, and understand your rights and duties."
+can_do: "I can take part in a simple work meeting and talk about rules, rights and decisions."
+names: [Sara, Maria, Ali]
+
+new_words: [dagordning, beslut, rättighet, skyldighet, arbetsmiljö, övertid, fack, avtal, rast, punkt, protokoll,
+            ordförande, förändring, säkerhet, diskutera, höja, rösta, anställd, bestämma, föreslå, emot, enligt]
+new_grammar: []
+
+phrases:
+  - { sv: "Precis!", en: "Exactly!" }
+  - { sv: "Jag har en fråga.", en: "I have a question." }
+  - { sv: "Kan jag få säga en sak?", en: "May I say something?" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: ordförande, sv: "Välkommen! Nästa punkt på dagordningen är arbetsmiljön.",       en: "Welcome! The next item on the agenda is the working environment." }
+  - { speaker: Maria,      sv: "Jag har en fråga. Vi arbetar mycket övertid. Det är inte bra för säkerheten.", en: "I have a question. We work a lot of overtime. That is not good for safety." }
+  - { speaker: ordförande, sv: "Vad föreslår du?",                                               en: "What do you suggest?" }
+  - { speaker: Maria,      sv: "Jag föreslår att schemat ändras, så att alla får en rast klockan 10.", en: "I suggest that the schedule is changed, so that everyone gets a break at 10." }
+  - { speaker: du,         sv: "Jag håller med. Enligt avtalet har alla anställda rätt till rast.", en: "I agree. According to the agreement all employees have the right to a break." }
+  - { speaker: ordförande, sv: "Det är en stor förändring. Vi måste diskutera den med facket.",  en: "That is a big change. We must discuss it with the union." }
+  - { speaker: du,         sv: "Kan vi rösta om förslaget idag?",                                en: "Can we vote on the proposal today?" }
+  - { speaker: ordförande, sv: "Ja. Vem är emot? Ingen. Då bestämmer vi det.",                   en: "Yes. Who is against? Nobody. Then we decide that." }
+  - { speaker: ordförande, sv: "Beslutet skrivs i protokollet. Det är viktigt att alla läser det.", en: "The decision is written in the minutes. It is important that everyone reads it." }
+
+exercises:
+  # the meeting: what does it mean?
+  - { type: listen_choose, sv: "Nästa punkt på dagordningen är säkerheten.", en: "The next item on the agenda is safety.",
+      options: ["The next item on the agenda is safety.", "The last item on the agenda was safety.", "Safety is not on the agenda."],
+      answer: "The next item on the agenda is safety." }
+  - { type: listen_choose, sv: "Enligt avtalet har du rätt till 25 dagar semester.", en: "According to the agreement you have the right to 25 days of holiday.",
+      options: ["According to the agreement you have the right to 25 days of holiday.", "According to the agreement you must work 25 days.", "The agreement is valid for 25 days."],
+      answer: "According to the agreement you have the right to 25 days of holiday." }
+  - { type: listen_choose, sv: "Vem är emot förslaget?", en: "Who is against the proposal?",
+      options: ["Jag håller inte med om förslaget.", "Klockan 10.", "Enligt protokollet."], answer: "Jag håller inte med om förslaget." }
+  - { type: listen_choose, sv: "Det är en skyldighet att använda handskar.", en: "It is a duty to use gloves.",
+      options: ["You must use gloves.", "You may use gloves if you want.", "You must not use gloves."], answer: "You must use gloves." }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag föreslår att vi tar en rast klockan 10.", en: "I suggest that we take a break at 10." }
+  - { type: word_order, sv: "Beslutet skrivs i protokollet.", en: "The decision is written in the minutes.", grammar: [passive_s] }
+  - { type: word_order, sv: "Vi måste diskutera övertiden med facket.", en: "We must discuss the overtime with the union." }
+  - { type: word_order, sv: "Det är viktigt att alla anställda deltar.", en: "It is important that all employees take part." }
+
+  # fill the gap
+  - { type: cloze, sv: "___ avtalet har alla rätt till rast.", answer: Enligt, en: "According to the agreement everyone has the right to a break." }
+  - { type: cloze, sv: "Vem är ___ förslaget?", answer: emot, en: "Who is against the proposal?" }
+  - { type: cloze, sv: "Facket vill ___ lönerna nästa år.", hint: höja, answer: höja, en: "The union wants to raise the wages next year." }
+  - { type: cloze, sv: "Förslaget är redan ___.", hint: diskutera, answer: diskuterat, en: "The proposal has already been discussed.",
+      grammar: [participles] }
+
+  # listen and write
+  - { type: dictation, sv: "Vi har ett möte om arbetsmiljön.", en: "We have a meeting about the working environment." }
+  - { type: dictation, sv: "Jag är medlem i facket.", en: "I am a member of the union." }
+  - { type: dictation, sv: "Ordföranden bestämmer inte ensam.", en: "The chairperson does not decide alone." }
+  - { type: dictation, sv: "Säkerheten är viktig för alla anställda.", en: "Safety is important for all employees." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have rights and duties.", sv: "Jag har rättigheter och skyldigheter." }
+  - { type: translate, en: "We are voting on the proposal.", sv: "Vi röstar om förslaget." }
+  - { type: translate, en: "It was a big change.", sv: "Det var en stor förändring." }
+  - { type: translate, en: "What is the next item?", sv: "Vad är nästa punkt?", accept: ["Vilken är nästa punkt?"] }
+  - { type: translate, en: "The decision is important.", sv: "Beslutet är viktigt." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences to your boss with a suggestion for your workplace. Say what the problem is, what you suggest and why.",
+      checklist: ["I say what the problem is.", "I make a suggestion with jag föreslår att.", "I give a reason (eftersom or så att).", "I ask for a meeting or a decision."],
+      sv: "Hej! Jag har ett förslag. Vi arbetar mycket övertid, och det är inte bra för arbetsmiljön. Jag föreslår att vi ändrar schemat, så att alla får en rast klockan 10. Kan vi diskutera det på nästa möte? Med vänlig hälsning, Ali",
+      grammar: [conjunctions_advanced] }
+
+  # words from earlier units
+  - { type: translate, en: "The chairperson asked if anyone was against.", sv: "Ordföranden frågade om någon var emot.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Om vi ändrade schemat, skulle alla vara nöjda.", en: "If we changed the schedule, everyone would be satisfied.",
+      grammar: [conditional_skulle] }
+  - { type: dictation, sv: "Facket hade redan diskuterat förslaget.", en: "The union had already discussed the proposal.", grammar: [pluperfect] }
+  - { type: cloze, sv: "Alla anställda måste läsa ___ avtal.", hint: sin, answer: sitt, en: "All employees must read their (own) agreement.",
+      grammar: [possessive_sin] }
+  - { type: translate, en: "I agree with the leader who made the suggestion.", sv: "Jag håller med ledaren som hade förslaget.",
+      grammar: [particle_verbs, relative_clause], review: true }
+
+# The task itself: you take part in the meeting.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: ordförande, sv: "Nästa punkt är arbetsmiljön. Vad tycker ni?", en: "The next item is the working environment. What do you think?" }
+    - { speaker: du, en: "Ask politely if you may say something.", answer: "Kan jag få säga en sak?" }
+    - { speaker: ordförande, sv: "Ja, varsågod.", en: "Yes, go ahead." }
+    - { speaker: du, en: "Say that you (all) work a lot of overtime.", answer: "Vi arbetar mycket övertid.", accept: ["Vi jobbar mycket övertid."] }
+    - { speaker: ordförande, sv: "Vad föreslår du?", en: "What do you suggest?" }
+    - { speaker: du, en: "Say that you suggest that everyone gets a break at 10.",
+        options: ["Jag föreslår att alla får en rast klockan 10.", "Jag föreslår att får alla en rast klockan 10.", "Jag föreslår om alla får en rast klockan 10."],
+        answer: "Jag föreslår att alla får en rast klockan 10." }
+    - { speaker: Maria, sv: "Jag håller med. Enligt avtalet har vi rätt till det.", en: "I agree. According to the agreement we have the right to that." }
+    - { speaker: du, en: "Say: exactly!", options: ["Precis!", "Emot!", "Ingen aning."], answer: "Precis!" }
+    - { speaker: ordförande, sv: "Bra. Vem är emot? Ingen. Då bestämmer vi det.", en: "Good. Who is against? Nobody. Then we decide that." }
+    - { speaker: du, en: "Ask if the decision is written in the minutes.",
+        options: ["Skrivs beslutet i protokollet?", "Skriver beslutet i protokollet?", "Beslutet skrivs i protokollet?"],
+        answer: "Skrivs beslutet i protokollet?" }
+
+speaking_prompt: "Say aloud: one thing you would change at work, your suggestion, and how you would agree or disagree politely."

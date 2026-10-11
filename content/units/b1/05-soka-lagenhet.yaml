@@ -1,0 +1,110 @@
+id: b1-05
+level: B1
+theme: bostad
+title: "Söka lägenhet"
+task: "Read a flat advert, go to a viewing, ask what there is and is not, and understand the main points of the contract."
+can_do: "I can ask about a flat with någon, ingen and man, and write a short reply to an advert."
+names: [Sara, Ali, Göteborg, Hisingen]
+
+new_words: [annons, hyra, visning, kontrakt, hiss, våning, område, husdjur, förråd, parkering, värme,
+            kvadratmeter, möbel, störa, tillåta, tyst, ljus, någon, ingen, annan, in, ut]
+new_grammar: [indefinite_pronouns]
+
+phrases:
+  - { sv: "Det låter intressant.", en: "That sounds interesting." }
+  - { sv: "Jag hör av mig.", en: "I will be in touch." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: du,        sv: "Hej! Jag såg annonsen. Är lägenheten fortfarande ledig?",       en: "Hello! I saw the advert. Is the flat still available?" }
+  - { speaker: hyresvärd, sv: "Ja. Den har 2 rum och kök, 60 kvadratmeter, på våning 3.",      en: "Yes. It has 2 rooms and a kitchen, 60 square metres, on floor 3." }
+  - { speaker: du,        sv: "Finns det någon hiss?",                                         en: "Is there a lift?" }
+  - { speaker: hyresvärd, sv: "Nej, det finns ingen hiss. Men det finns ett förråd och parkering.", en: "No, there is no lift. But there is a storeroom and parking." }
+  - { speaker: du,        sv: "Vad är hyran? Ingår värme?",                                    en: "What is the rent? Is heating included?" }
+  - { speaker: hyresvärd, sv: "8500 kronor i månaden. Värme och vatten ingår.",                en: "8500 kronor a month. Heating and water are included." }
+  - { speaker: du,        sv: "Får man ha husdjur?",                                           en: "Are you allowed to have pets?" }
+  - { speaker: hyresvärd, sv: "Nej, husdjur är inte tillåtna. Och man får inte röka inne.",    en: "No, pets are not allowed. And you may not smoke indoors." }
+  - { speaker: du,        sv: "Hur är området?",                                               en: "What is the area like?" }
+  - { speaker: hyresvärd, sv: "Det är tyst, och lägenheten är ljus. Vill du komma på visning?", en: "It is quiet, and the flat is bright. Do you want to come to a viewing?" }
+  - { speaker: du,        sv: "Det låter intressant. När kan jag flytta in?",                  en: "That sounds interesting. When can I move in?" }
+
+exercises:
+  # någon, något, några · ingen, inget, inga
+  - { type: cloze, sv: "Finns det ___ hiss?", hint: någon, answer: någon, en: "Is there a lift?", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Finns det ___ förråd?", hint: någon, answer: något, en: "Is there a storeroom?", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Har du ___ husdjur?", hint: någon, answer: några, en: "Do you have any pets?", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Nej, det finns ___ hiss.", hint: ingen, answer: ingen, en: "No, there is no lift.", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Jag har ___ möbler.", hint: ingen, answer: inga, en: "I have no furniture.", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "___ får inte röka i lägenheten.", answer: Man, en: "You (people) may not smoke in the flat.", grammar: [indefinite_pronouns] }
+
+  # build the sentence
+  - { type: word_order, sv: "Man får inte störa grannarna.", en: "You must not disturb the neighbours.", grammar: [indefinite_pronouns] }
+  - { type: word_order, sv: "Finns det något annat som ingår?", en: "Is there anything else that is included?", grammar: [indefinite_pronouns] }
+  - { type: word_order, sv: "När kan jag flytta in?", en: "When can I move in?" }
+  - { type: word_order, sv: "Husdjur är inte tillåtna här.", en: "Pets are not allowed here.", grammar: [participles] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag såg annonsen igår.", en: "I saw the advert yesterday." }
+  - { type: dictation, sv: "Vad är hyran?", en: "What is the rent?" }
+  - { type: dictation, sv: "Området är tyst och lägenheten är ljus.", en: "The area is quiet and the flat is bright." }
+  - { type: dictation, sv: "Kontraktet gäller i ett år.", en: "The contract is valid for a year." }
+  - { type: dictation, sv: "Lägenheten ligger på våning 3.", en: "The flat is on floor 3." }
+
+  # say it in Swedish
+  - { type: translate, en: "Is parking included in the rent?", sv: "Ingår parkering i hyran?" }
+  - { type: translate, en: "I have no pets.", sv: "Jag har inga husdjur.", grammar: [indefinite_pronouns] }
+  - { type: translate, en: "When must I move out?", sv: "När måste jag flytta ut?" }
+  - { type: translate, en: "Is there another flat?", sv: "Finns det någon annan lägenhet?", accept: ["Finns det en annan lägenhet?"],
+      grammar: [indefinite_pronouns] }
+  - { type: translate, en: "I would like to come to the viewing.", sv: "Jag skulle vilja komma på visningen.",
+      accept: ["Jag skulle vilja komma på visning.", "Jag vill komma på visningen."], grammar: [conditional_skulle] }
+
+  # the advert: what does it mean?
+  - { type: listen_choose, sv: "Lägenheten har 3 rum på 75 kvadratmeter. Värme ingår i hyran.", en: "The flat has 3 rooms of 75 square metres. Heating is included in the rent.",
+      options: ["The flat has 3 rooms of 75 square metres. Heating is included in the rent.", "The flat has 3 rooms. Heating costs 75 kronor extra.", "The flat is 3 square metres. Heating is not included."],
+      answer: "The flat has 3 rooms of 75 square metres. Heating is included in the rent." }
+  - { type: listen_choose, sv: "Ingen hiss. Inga husdjur.", en: "No lift. No pets.",
+      options: ["There is no lift, and pets are not allowed.", "There is a lift, but pets are not allowed.", "There is no lift, but pets are allowed."],
+      answer: "There is no lift, and pets are not allowed." }
+  - { type: listen_choose, sv: "Får man röka på balkongen?", en: "Are you allowed to smoke on the balcony?",
+      options: ["Nej, man får inte röka här.", "Ja, det finns ingen balkong.", "Nej, hyran är 8500 kronor."], answer: "Nej, man får inte röka här." }
+
+  # listen for the number
+  - { type: numbers, sv: "Hyran är 7900 kronor i månaden.", hint: "the rent in kronor", answer: "7900", en: "The rent is 7900 kronor a month." }
+  - { type: numbers, sv: "Lägenheten är 62 kvadratmeter.", hint: "how many square metres", answer: "62", en: "The flat is 62 square metres." }
+
+  # write your own text
+  - { type: free_write, en: "Write a short reply (4 or 5 sentences) to a flat advert. Say who you are, why you want the flat, and ask two questions.",
+      checklist: ["I say who I am and who will live there.", "I say why I am interested.", "I ask two questions (for example with någon, ingår or får man).", "I end with a greeting."],
+      sv: "Hej! Jag heter Ali och jag såg din annons. Jag söker en lägenhet för mig och min fru, och vi är väldigt intresserade. Vi har inga husdjur och vi röker inte. Finns det någon tvättstuga, och ingår värme i hyran? Jag ser fram emot ditt svar. Med vänlig hälsning, Ali",
+      grammar: [indefinite_pronouns] }
+
+  # words from earlier units
+  - { type: translate, en: "If the rent was cheaper, I would take the flat.", sv: "Om hyran var billigare, skulle jag ta lägenheten.",
+      grammar: [conditional_skulle, comparison] }
+  - { type: word_order, sv: "Hyran betalas varje månad.", en: "The rent is paid every month.", grammar: [passive_s] }
+  - { type: dictation, sv: "Jag hade bott i området i 5 år.", en: "I had lived in the area for 5 years.", grammar: [pluperfect] }
+  - { type: cloze, sv: "Det är en lägenhet ___ jag skulle trivas.", answer: där, en: "It is a flat where I would be happy.", grammar: [relative_clause] }
+
+# The task itself: you call about a flat.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: du, en: "Say that you saw the advert and ask if the flat is still available.",
+        options: ["Jag såg annonsen. Är lägenheten fortfarande ledig?", "Jag ser annonsen. Lägenheten är fortfarande ledig?", "Jag såg annonsen. Är lägenheten fortfarande ledigt?"],
+        answer: "Jag såg annonsen. Är lägenheten fortfarande ledig?" }
+    - { speaker: hyresvärd, sv: "Ja, den är ledig. Den ligger på våning 3.", en: "Yes, it is available. It is on floor 3." }
+    - { speaker: du, en: "Ask if there is a lift.", answer: "Finns det någon hiss?", accept: ["Finns det hiss?", "Finns det en hiss?"] }
+    - { speaker: hyresvärd, sv: "Nej, det finns ingen hiss.", en: "No, there is no lift." }
+    - { speaker: du, en: "Ask what the rent is.", answer: "Vad är hyran?", accept: ["Vad kostar hyran?", "Hur mycket är hyran?"] }
+    - { speaker: hyresvärd, sv: "8500 kronor i månaden. Värme ingår.", en: "8500 kronor a month. Heating is included." }
+    - { speaker: du, en: "Ask if you are allowed to have pets.",
+        options: ["Får man ha husdjur?", "Får man har husdjur?", "Man får ha husdjur?"], answer: "Får man ha husdjur?" }
+    - { speaker: hyresvärd, sv: "Nej, tyvärr. Vill du komma på visning på torsdag?", en: "No, unfortunately. Do you want to come to a viewing on Thursday?" }
+    - { speaker: du, en: "Say yes gladly, and that you will be in touch.", answer: "Ja, gärna. Jag hör av mig.",
+        accept: ["Ja gärna, jag hör av mig.", "Ja, gärna!"] }
+
+speaking_prompt: "Say aloud: describe the flat you want, and ask five questions you would ask at a viewing."

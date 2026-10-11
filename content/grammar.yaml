@@ -391,3 +391,186 @@
     i + month               i maj
     på + season, part of day   på sommaren, på morgonen
     klockan, no preposition    Vi ses klockan tre.
+
+# ---- B1 (proposed by the agent, not yet checked against Rivstart B1+B2) ----
+- id: pluperfect
+  level: B1
+  requires: [perfect_tense]
+  title: "Pluperfect: hade + supine (hade bott, hade ätit)"
+  card: |
+    hade + supine: something had happened before another thing
+    in the past.
+
+    När jag kom hem hade bussen redan gått.
+    Innan jag flyttade hit hade jag bott i Aten i 10 år.
+    Jag var trött eftersom jag inte hade sovit.
+
+    Compare:
+    Jag har bott här i 3 år.      (and I still do)
+    Jag hade bott där i 3 år.     (before something else happened)
+    inte comes after hade: Jag hade inte ätit.
+
+- id: modal_past
+  level: B1
+  requires: [modal_vill_kan_ska, past_tense]
+  title: "Modal verbs in the past (kunde, ville, skulle, borde)"
+  card: |
+    present   past      after it: the infinitive
+    kan       kunde     Jag kunde inte komma igår.
+    vill      ville     Hon ville arbeta heltid.
+    ska       skulle    Vi skulle träffas klockan 3.
+    måste     måste     Jag måste vänta i en timme.
+    får       fick      Vi fick inte parkera där.
+    bör       borde     Du borde vila. (advice, now or then)
+
+    skulle is also polite: Jag skulle vilja boka en tid.
+
+- id: conditional_skulle
+  level: B1
+  requires: [modal_past]
+  title: "Conditions with om and skulle"
+  card: |
+    Real and possible: present in both parts.
+        Om det regnar, stannar vi hemma.
+    Not real, only imagined: past + skulle.
+        Om jag hade tid, skulle jag resa mer.
+        Om jag var du, skulle jag ringa.
+
+    In the om-clause inte comes before the verb:
+        Om du inte kommer, ringer jag.
+    If the om-clause comes first, the main clause starts
+    with its verb.
+    Polite: Jag skulle vilja ha en biljett.
+
+- id: passive_s
+  level: B1
+  requires: [present_tense]
+  title: "Passive with -s (städas, stängdes, har bytts)"
+  card: |
+    Add -s to the verb when who does it is not important.
+
+    present   Lägenheten städas varje vecka.
+    past      Dörren stängdes klockan 8.
+    perfect   Kranen har lagats.
+    after a modal: Kvittot måste visas. Varan kan bytas.
+
+    Present in -er: take away the r, then add -s
+        stänger → stängs, köper → köps
+    av = by: Brevet skrevs av chefen.
+    Common on signs and in rules: Dörren stängs klockan 22.
+
+- id: participles
+  level: B1
+  requires: [adjective_agreement_full, perfect_tense]
+  title: "Participles as adjectives (stängd, stängt, stängda)"
+  card: |
+    The perfect participle describes a result. It follows
+    the noun like an adjective.
+
+    en-word   ett-word   plural / definite
+    stängd    stängt     stängda       (stänga)
+    lagad     lagat      lagade        (laga)
+    bokad     bokat      bokade        (boka)
+    skriven   skrivet    skrivna       (skriva)
+
+    Dörren är stängd. Fönstret är stängt. Butikerna är stängda.
+    en bokad tid · ett skrivet brev · den lagade kranen
+
+- id: relative_clause
+  level: B1
+  requires: [subordinate_clause_basic]
+  title: "Relative clauses (som, där, vars)"
+  card: |
+    som   who, which, that   Jag har en chef som alltid hjälper mig.
+    där   where              Det är huset där jag bor.
+    vars  whose              Det är grannen vars hund är sjuk.
+
+    som can be left out when it is not the subject:
+        Boken (som) jag läser är bra.
+    inte comes before the verb, as in other subordinate clauses:
+        Det är en film som jag inte har sett.
+    A preposition goes to the end:
+        Företaget som jag arbetar på är stort.
+
+- id: indirect_speech
+  level: B1
+  requires: [subordinate_clause_basic, past_tense]
+  title: "Reported speech and questions (Hon sa att …, Han frågade om …)"
+  card: |
+    Statement:        Hon sa att hon var sjuk.
+    Yes/no question:  Han frågade om jag hade tid.
+    Question word:    Hon undrade var jag bodde.
+
+    The word order is that of a subordinate clause:
+    subject first, and inte before the verb.
+        "Kommer du inte?"  →  Hon frågade om jag inte kom.
+    After sa, frågade: the tense usually moves back.
+        "Jag är trött."    →  Han sa att han var trött.
+        "Jag har ätit."    →  Hon sa att hon hade ätit.
+
+- id: conjunctions_advanced
+  level: B1
+  requires: [subordinate_clause_basic]
+  title: "More subjunctions (trots att, även om, så att, medan, tills)"
+  card: |
+    trots att   although       Vi gick ut trots att det regnade.
+    även om     even if        Jag kommer även om jag är trött.
+    så att      so that        Tala långsamt så att jag förstår.
+    medan       while          Jag lagar mat medan du dukar.
+    tills       until          Vänta här tills jag kommer.
+    innan       before         Ring innan du kommer.
+    efter att   after          Efter att vi hade ätit gick vi hem.
+
+    All start a subordinate clause: inte before the verb.
+        … trots att han inte var bjuden.
+
+- id: particle_verbs
+  level: B1
+  requires: [present_tense]
+  title: "Verbs with a particle (tycka om, hålla med, komma ihåg)"
+  card: |
+    Verb + a small stressed word, together one meaning.
+
+    tycka om     like           Jag tycker om att sjunga.
+    hålla med    agree          Jag håller med dig.
+    komma ihåg   remember       Kommer du ihåg mig?
+    känna igen   recognise      Jag känner igen honom.
+    hålla på     be busy with   Vad håller du på med?
+    stänga av    switch off     Stäng av datorn.
+
+    inte goes between verb and particle:
+        Jag tycker inte om kaffe.
+
+- id: possessive_sin
+  level: B1
+  requires: [possessive_basic]
+  title: "Sin, sitt, sina or hans, hennes, deras?"
+  card: |
+    sin / sitt / sina: the owner is the subject of the same clause.
+    hans, hennes, deras: the owner is someone else.
+
+    Anna träffar sin bror.       (Anna's own brother)
+    Anna träffar hennes bror.    (another woman's brother)
+    De älskar sina barn.
+
+    sin for en-words, sitt for ett-words, sina for plural.
+    Never in the subject itself:
+        Hans bror bor här.  (not: Sin bror bor här.)
+
+- id: indefinite_pronouns
+  level: B1
+  requires: [en_ett]
+  title: "Någon, ingen, man, all"
+  card: |
+    They follow the noun: en-word, ett-word or plural.
+
+              en-word   ett-word   plural
+    some/any  någon     något      några
+    no/none   ingen     inget      inga
+    all       all       allt       alla
+
+    Finns det någon hiss? Nej, det finns ingen hiss.
+    Jag har inga frågor. Har du några?
+    något / inget alone = something / nothing: Jag ser inget.
+    man = people in general, "you":
+        Man får inte röka här.

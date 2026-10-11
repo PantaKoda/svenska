@@ -49,6 +49,24 @@ words:
   - { lemma: stark,     pos: adj,  level: A2, gloss: strong }
   - { lemma: djup,      pos: adj,  level: A2, gloss: "deep (andas djupt = breathe deeply)" }
 
+
+  # B1: describing a problem on the phone
+  - { lemma: symtom,       pos: noun, gender: ett, level: B1, gloss: symptom }
+  - { lemma: yrsel,        pos: noun, gender: en,  level: B1, gloss: dizziness }
+  - { lemma: smärta,       pos: noun, gender: en,  level: B1, gloss: pain }
+  - { lemma: värk,         pos: noun, gender: en,  level: B1, gloss: ache }
+  - { lemma: besvär,       pos: noun, gender: ett, level: B1, gloss: "trouble, complaint" }
+  - { lemma: undersökning, pos: noun, gender: en,  level: B1, gloss: examination }
+  - { lemma: råd,          pos: noun, gender: ett, level: B1, gloss: advice }
+  - { lemma: hjärta,       pos: noun, gender: ett, tags: [body_part], level: B1, gloss: heart }
+  - { lemma: prov,         pos: noun, gender: ett, level: B1, gloss: "test, sample" }
+  - { lemma: resultat,     pos: noun, gender: ett, level: B1, gloss: result }
+  - { lemma: ambulans,     pos: noun, gender: en,  level: B1, gloss: ambulance }
+  - { lemma: akut,         pos: adj,  level: B1, gloss: "acute, urgent" }
+  - { lemma: allvarlig,    pos: adj,  level: B1, gloss: serious }
+  - { lemma: orolig,       pos: adj,  level: B1, gloss: worried }
+  - { lemma: illa,         pos: adv,  level: B1, gloss: "badly (må illa = feel sick)" }
+
 frames:
   - { id: hal-01, level: A1, grammar: [present_tense, def_singular], review: true,
       sv: "Jag har ont i {body_part.def}.", en: "My {1} hurts." }

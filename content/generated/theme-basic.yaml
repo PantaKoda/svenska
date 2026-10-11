@@ -630,3 +630,67 @@ items:
   form: past
   words:
   - tycka
+- type: inflect
+  answer: förklara
+  grammar:
+  - imperative
+  lemma: förklara
+  form: imp
+  words:
+  - förklara
+- type: inflect
+  answer: föreslår
+  grammar:
+  - present_tense
+  lemma: föreslå
+  form: pres
+  words:
+  - föreslå
+- type: inflect
+  answer: svaren
+  grammar:
+  - plural_def
+  lemma: svar
+  form: pl_def
+  words:
+  - svar
+- type: inflect
+  answer: undrar
+  grammar:
+  - present_tense
+  lemma: undra
+  form: pres
+  words:
+  - undra
+- type: inflect
+  answer: platser
+  grammar:
+  - plural_indef
+  lemma: plats
+  form: pl
+  words:
+  - plats
+- type: inflect
+  answer: skickar
+  grammar:
+  - present_tense
+  lemma: skicka
+  form: pres
+  words:
+  - skicka
+- type: inflect
+  answer: höll
+  grammar:
+  - past_tense
+  lemma: hålla
+  form: past
+  words:
+  - hålla
+- type: inflect
+  answer: beskrivit
+  grammar:
+  - perfect_tense
+  lemma: beskriva
+  form: sup
+  words:
+  - beskriva

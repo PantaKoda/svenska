@@ -46,6 +46,26 @@ words:
   - { lemma: stänga,  pos: verb, level: A2, gloss: "to close; past: closed; pp: closed" }
   - { lemma: öppna,   pos: verb, level: A2, gloss: to open }
 
+
+  # B1: complaints and returns
+  - { lemma: produkt,     pos: noun, gender: en,  level: B1, gloss: product }
+  - { lemma: pengar,      pos: noun, gender: en,  level: B1, gloss: money, forms: { indef: pengar, def: pengarna, pl: pengar, pl_def: pengarna } }
+  - { lemma: förpackning, pos: noun, gender: en,  tags: [container], level: B1, gloss: "package, packaging" }
+  - { lemma: garanti,     pos: noun, gender: en,  level: B1, gloss: "guarantee, warranty" }
+  - { lemma: datum,       pos: noun, gender: ett, level: B1, gloss: date, forms: { def: datumet, pl: datum } }
+  - { lemma: rätt,        pos: noun, gender: en,  level: B1, gloss: "right (ha rätt att = have the right to)" }
+  - { lemma: regel,       pos: noun, gender: en,  level: B1, gloss: rule }
+  - { lemma: personal,    pos: noun, gender: en,  level: B1, gloss: staff }
+  - { lemma: ersättning,  pos: noun, gender: en,  level: B1, gloss: compensation }
+  - { lemma: köp,         pos: noun, gender: ett, level: B1, gloss: purchase }
+  - { lemma: klaga,       pos: verb, tags: [action_intrans], level: B1, gloss: to complain }
+  - { lemma: skada,       pos: verb, level: B1, gloss: to damage }
+  - { lemma: smaka,       pos: verb, level: B1, gloss: to taste }
+  - { lemma: lukta,       pos: verb, level: B1, gloss: "to smell; past: smelled; pp: smelled" }
+  - { lemma: gälla,       pos: verb, level: B1, gloss: "to be valid, to apply" }
+  - { lemma: nöjd,        pos: adj,  level: B1, gloss: "satisfied, pleased" }
+  - { lemma: missnöjd,    pos: adj,  level: B1, gloss: dissatisfied }
+
 frames:
   - { id: mat-01, level: A1, grammar: [wh_question, def_singular], review: true,
       sv: "Vad kostar {food|drink|container.def}?", en: "What does the {1} cost?" }

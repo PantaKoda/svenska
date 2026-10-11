@@ -1,0 +1,111 @@
+id: b1-08
+level: B1
+theme: fritid
+title: "Gå med i en förening"
+task: "Find out about a club, sign up, and say what you think and whether you agree."
+can_do: "I can give and react to opinions and use common verbs with a particle."
+names: [Sara, Göteborg]
+
+new_words: [förening, medlem, avgift, möte, åsikt, förslag, kör, idrott, lag, träning, tävling, hobby, musik, kurs, ledare,
+            anmäla, delta, vinna, förlora, gratis, hålla, ihåg, viktig]
+new_grammar: [particle_verbs]
+
+phrases:
+  - { sv: "Ingen aning.", en: "No idea." }
+  - { sv: "Det spelar ingen roll.", en: "It doesn't matter." }
+  - { sv: "Det beror på.", en: "It depends." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vad håller du på med på fritiden?",                           en: "What do you do in your free time?" }
+  - { speaker: du,   sv: "Inte så mycket. Men jag tycker om musik. Jag vill gå med i en kör.", en: "Not so much. But I like music. I want to join a choir." }
+  - { speaker: Sara, sv: "Jag är medlem i en förening som har en kör. Vill du delta?",  en: "I am a member of a club that has a choir. Do you want to take part?" }
+  - { speaker: du,   sv: "Gärna! Hur anmäler man sig? Och vad är avgiften?",            en: "Gladly! How do you sign up? And what is the fee?" }
+  - { speaker: Sara, sv: "Det är gratis en gång. Sedan kostar det 300 kronor per år.",  en: "It is free once. Then it costs 300 kronor a year." }
+  - { speaker: du,   sv: "Det är billigt. Kommer du ihåg när ni träffas?",              en: "That is cheap. Do you remember when you meet?" }
+  - { speaker: Sara, sv: "På tisdag. Ledaren har ett förslag: en tävling i Göteborg.",  en: "On Tuesday. The leader has a suggestion: a competition in Gothenburg." }
+  - { speaker: du,   sv: "Jag tycker inte om tävlingar. Min åsikt är att musik är en hobby.", en: "I do not like competitions. My opinion is that music is a hobby." }
+  - { speaker: Sara, sv: "Jag håller med dig. Det spelar ingen roll om man vinner eller förlorar.", en: "I agree with you. It does not matter whether you win or lose." }
+
+# Heard but not taught in this unit.
+glosses:
+  fritid: "free time"
+  per: "per år = a year"
+
+exercises:
+  # verb + particle
+  - { type: cloze, sv: "Jag tycker ___ att sjunga.", answer: om, en: "I like singing.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Jag håller ___ dig.", answer: med, en: "I agree with you.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Kommer du ___ vad avgiften var?", answer: ihåg, en: "Do you remember what the fee was?", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Vad håller du ___ med?", answer: på, en: "What are you doing?", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Jag vill gå ___ i en förening.", answer: med, en: "I want to join a club.", grammar: [particle_verbs] }
+
+  # inte goes between the verb and the particle
+  - { type: word_order, sv: "Jag tycker inte om tävlingar.", en: "I do not like competitions.", grammar: [particle_verbs] }
+  - { type: word_order, sv: "Hon håller inte med ledaren.", en: "She does not agree with the leader.", grammar: [particle_verbs] }
+  - { type: word_order, sv: "Jag kommer inte ihåg vad kursen kostar.", en: "I do not remember what the course costs.", grammar: [particle_verbs] }
+  - { type: word_order, sv: "Hur anmäler man sig till kursen?", en: "How do you sign up for the course?" }
+
+  # listen and write
+  - { type: dictation, sv: "Jag är medlem i en förening.", en: "I am a member of a club." }
+  - { type: dictation, sv: "Vårt lag vann tävlingen.", en: "Our team won the competition.", review: true }
+  - { type: dictation, sv: "Träningen är på tisdag och torsdag.", en: "Practice is on Tuesday and Thursday." }
+  - { type: dictation, sv: "Min åsikt är att idrott är viktigt.", en: "My opinion is that sport is important.", review: true }
+  - { type: dictation, sv: "Det är gratis att delta en gång.", en: "It is free to take part once." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have a suggestion.", sv: "Jag har ett förslag." }
+  - { type: translate, en: "The meeting starts at 7.", sv: "Mötet börjar klockan 7." }
+  - { type: translate, en: "We lost, but it was fun.", sv: "Vi förlorade, men det var roligt." }
+  - { type: translate, en: "Music is my hobby.", sv: "Musik är min hobby." }
+  - { type: translate, en: "Do you agree with me?", sv: "Håller du med mig?", grammar: [particle_verbs] }
+
+  # opinions: what do they mean?
+  - { type: listen_choose, sv: "Jag håller inte med om att avgiften är billig.", en: "I do not agree that the fee is cheap.",
+      options: ["I do not agree that the fee is cheap.", "I agree that the fee is cheap.", "I do not remember what the fee is."],
+      answer: "I do not agree that the fee is cheap." }
+  - { type: listen_choose, sv: "Vad tycker du om förslaget?", en: "What do you think of the suggestion?",
+      options: ["Jag håller med.", "Ingen avgift.", "På tisdag."], answer: "Jag håller med." }
+  - { type: listen_choose, sv: "Kommer du ihåg vad ledaren heter?", en: "Do you remember what the leader is called?",
+      options: ["Ingen aning.", "Det är gratis.", "Jag tycker om det."], answer: "Ingen aning." }
+
+  # listen for the number
+  - { type: numbers, sv: "Avgiften är 350 kronor.", hint: "the fee in kronor", answer: "350", en: "The fee is 350 kronor." }
+  - { type: numbers, sv: "Föreningen har 120 medlemmar.", hint: "how many members", answer: "120", en: "The club has 120 members." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about something you like doing. Say what you think about it and why, and whether you would join a club.",
+      checklist: ["I say what I like, with tycka om.", "I give my opinion and a reason (eftersom, trots att or så).", "I use at least one more verb with a particle.", "I say whether I would join a club (skulle)."],
+      sv: "Jag tycker om att sjunga, trots att jag inte är så bra. Min åsikt är att musik är viktigt eftersom man blir glad. Jag kommer ihåg att jag sjöng mycket när jag var barn. Jag skulle vilja gå med i en kör, men jag tycker inte om tävlingar.",
+      grammar: [particle_verbs, conjunctions_advanced] }
+
+  # words from earlier units
+  - { type: translate, en: "She asked if I wanted to take part.", sv: "Hon frågade om jag ville delta.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Ledaren berättade om sin förening.", en: "The leader told us about his club.", grammar: [possessive_sin] }
+  - { type: dictation, sv: "Om jag hade tid, skulle jag gå en kurs.", en: "If I had time, I would take a course.", grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Det finns ___ avgift för barn.", hint: ingen, answer: ingen, en: "There is no fee for children.", grammar: [indefinite_pronouns] }
+
+# The task itself: you ask Sara about her club.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vad håller du på med på fritiden?", en: "What do you do in your free time?" }
+    - { speaker: du, en: "Say that you like music.", answer: "Jag tycker om musik.", accept: ["Jag gillar musik."] }
+    - { speaker: Sara, sv: "Min förening har en kör. Vill du delta?", en: "My club has a choir. Do you want to take part?" }
+    - { speaker: du, en: "Say gladly, and ask how you sign up.",
+        options: ["Gärna! Hur anmäler man sig?", "Gärna! Hur man anmäler sig?", "Gärna! Hur anmäler sig man?"],
+        answer: "Gärna! Hur anmäler man sig?" }
+    - { speaker: Sara, sv: "Jag anmäler dig. Avgiften är 300 kronor per år.", en: "I will sign you up. The fee is 300 kronor a year." }
+    - { speaker: du, en: "Ask if she remembers when they meet.", answer: "Kommer du ihåg när ni träffas?",
+        accept: ["Kommer du ihåg när ni ses?"] }
+    - { speaker: Sara, sv: "På tisdag. Ledaren vill ha en tävling. Vad tycker du?", en: "On Tuesday. The leader wants a competition. What do you think?" }
+    - { speaker: du, en: "Say that you do not like competitions.",
+        options: ["Jag tycker inte om tävlingar.", "Jag tycker om inte tävlingar.", "Jag inte tycker om tävlingar."],
+        answer: "Jag tycker inte om tävlingar." }
+    - { speaker: Sara, sv: "Jag håller med. Det spelar ingen roll om man vinner.", en: "I agree. It does not matter if you win." }
+    - { speaker: du, en: "Say that you agree.", answer: "Jag håller med.", accept: ["Jag håller med dig."] }
+
+speaking_prompt: "Say aloud: a club or activity you would join, what it costs, and three opinions with jag tycker and jag håller (inte) med."

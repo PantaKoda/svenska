@@ -105,6 +105,65 @@ words:
   - { lemma: sen,      pos: adj,  level: A2, gloss: late }
   - { lemma: klar,     pos: adj,  level: A2, gloss: "ready, done" }
 
+  # B1
+  - { lemma: förstå,   pos: verb, level: B1, gloss: "to understand; past: understood; pp: understood" }
+  - { lemma: tänka,    pos: verb, level: B1, gloss: "to think, to intend; past: thought; pp: thought" }
+  - { lemma: hoppas,   pos: verb, level: B1, gloss: "to hope" }
+  - { lemma: berätta,  pos: verb, level: B1, gloss: "to tell; past: told; pp: told" }
+  - { lemma: beskriva, pos: verb, level: B1, gloss: "to describe" }
+  - { lemma: förklara, pos: verb, level: B1, gloss: "to explain" }
+  - { lemma: undra,    pos: verb, level: B1, gloss: "to wonder" }
+  - { lemma: mena,     pos: verb, level: B1, gloss: "to mean; past: meant; pp: meant" }
+  - { lemma: böra,     pos: verb, level: B1, gloss: "ought to, should (bör, borde)", forms: { pres: bör, past: borde } }
+  - { lemma: hålla,    pos: verb, level: B1, gloss: "to hold (hålla med = agree); past: held; pp: held" }
+  - { lemma: ändra,    pos: verb, level: B1, gloss: "to change" }
+  - { lemma: bestämma, pos: verb, level: B1, gloss: "to decide" }
+  - { lemma: föreslå,  pos: verb, level: B1, gloss: "to suggest" }
+  - { lemma: skicka,   pos: verb, level: B1, gloss: "to send; past: sent; pp: sent" }
+  - { lemma: lämna,    pos: verb, level: B1, gloss: "to leave, to hand in; past: left; pp: left" }
+  - { lemma: spara,    pos: verb, level: B1, gloss: "to save, to keep" }
+  - { lemma: själv,    pos: pron, level: B1, gloss: "myself, yourself, … (dig själv)" }
+  - { lemma: någon,    pos: pron, level: B1, gloss: "some, any, someone (någon, något, några)" }
+  - { lemma: ingen,    pos: pron, level: B1, gloss: "no, none, nobody (ingen, inget, inga)" }
+  - { lemma: annan,    pos: pron, level: B1, gloss: "other, another (annan, annat, andra)" }
+  - { lemma: sin,      pos: pron, level: B1, gloss: "his, her, their own (sin, sitt, sina)" }
+  - { lemma: eller,    pos: conj, level: B1, gloss: or }
+  - { lemma: medan,    pos: subj, level: B1, gloss: while }
+  - { lemma: trots,    pos: prep, level: B1, gloss: "despite (trots att = although)" }
+  - { lemma: även,     pos: adv,  level: B1, gloss: "even, also (även om = even if)" }
+  - { lemma: tills,    pos: subj, level: B1, gloss: until }
+  - { lemma: så,       pos: adv,  level: B1, gloss: "so (så att = so that)" }
+  - { lemma: bara,     pos: adv,  level: B1, gloss: "only, just" }
+  - { lemma: väldigt,  pos: adv,  level: B1, gloss: very }
+  - { lemma: ganska,   pos: adv,  level: B1, gloss: "quite, rather" }
+  - { lemma: nästan,   pos: adv,  level: B1, gloss: almost }
+  - { lemma: fortfarande, pos: adv, level: B1, gloss: still }
+  - { lemma: förut,    pos: adv,  level: B1, gloss: "before, in the past" }
+  - { lemma: numera,   pos: adv,  level: B1, gloss: "nowadays" }
+  - { lemma: plötsligt, pos: adv, level: B1, gloss: suddenly }
+  - { lemma: tillsammans, pos: adv, level: B1, gloss: together }
+  - { lemma: annorlunda, pos: adv, level: B1, gloss: different }
+  - { lemma: in,       pos: adv,  level: B1, gloss: "in (to a place): flytta in, logga in" }
+  - { lemma: ut,       pos: adv,  level: B1, gloss: "out: flytta ut, skriva ut" }
+  - { lemma: ner,      pos: adv,  level: B1, gloss: "down: ladda ner" }
+  - { lemma: hem,      pos: adv,  level: B1, gloss: "home (to one's home)" }
+  - { lemma: ihåg,     pos: adv,  level: B1, gloss: "komma ihåg = remember" }
+  - { lemma: emot,     pos: prep, level: B1, gloss: against }
+  - { lemma: enligt,   pos: prep, level: B1, gloss: "according to" }
+  - { lemma: inom,     pos: prep, level: B1, gloss: within }
+  - { lemma: nära,     pos: adv,  level: B1, gloss: "near, close" }
+  - { lemma: långt,    pos: adv,  level: B1, gloss: far }
+  - { lemma: sak,      pos: noun, gender: en,  level: B1, gloss: thing }
+  - { lemma: plats,    pos: noun, gender: en,  level: B1, gloss: "place, seat, position" }
+  - { lemma: exempel,  pos: noun, gender: ett, level: B1, gloss: "example (till exempel = for example)" }
+  - { lemma: svar,     pos: noun, gender: ett, level: B1, gloss: "answer, reply" }
+  - { lemma: nummer,   pos: noun, gender: ett, level: B1, gloss: number }
+  - { lemma: viktig,   pos: adj,  level: B1, gloss: important }
+  - { lemma: vanlig,   pos: adj,  level: B1, gloss: "common, usual" }
+  - { lemma: enkel,    pos: adj,  level: B1, gloss: "simple, single" }
+  - { lemma: lugn,     pos: adj,  level: B1, gloss: calm }
+  - { lemma: hel,      pos: adj,  level: B1, gloss: "whole, undamaged" }
+
   # place and direction
   - { lemma: i,    pos: prep, level: A1, gloss: in }
   - { lemma: på,   pos: prep, level: A1, gloss: "on, at" }

@@ -8,4 +8,10 @@ A2:
             adjective_agreement_full, comparison, inversion_after_adverb,
             subordinate_clause_basic, imperative, reflexive_basic,
             preposition_time]
-# B1+ added later. Themis checks this list against the Rivstart contents.
+# B1 was proposed by the agent and is NOT yet checked against Rivstart B1+B2.
+# Themis: correct the list and the order; moving a point means re-tagging its items.
+B1:
+  grammar: [pluperfect, modal_past, conditional_skulle, passive_s, participles,
+            relative_clause, indirect_speech, conjunctions_advanced, particle_verbs,
+            possessive_sin, indefinite_pronouns]
+# B2+ added later. Themis checks these lists against the Rivstart contents.

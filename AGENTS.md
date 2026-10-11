@@ -109,7 +109,12 @@ A2:
             adjective_agreement_full, comparison, inversion_after_adverb,
             subordinate_clause_basic, imperative, reflexive_basic,
             preposition_time]
-# B1+ added later. Themis checks this list against the Rivstart contents.
+B1:
+  grammar: [pluperfect, modal_past, conditional_skulle, passive_s, participles,
+            relative_clause, indirect_speech, conjunctions_advanced, particle_verbs,
+            possessive_sin, indefinite_pronouns]
+# The B1 list is a proposal: Themis has NOT yet checked it against Rivstart B1+B2.
+# B2+ added later.
 ```
 
 ### grammar.yaml
@@ -269,6 +274,9 @@ Fields per type (the four written types, settled in M1):
   `en` and is heard. A turn of `du` has `en` (what to say) and `answer`; with `options`
   the reply is chosen, without it is typed (`accept` for other good replies).
   The last turn must be the learner's.
+- `free_write`: `en` (what to write), `checklist` (what the learner checks their own
+  text against), `sv` (one model text, shown afterwards; known words only). Nothing is
+  graded: the learner writes, presses Ctrl+Enter, and compares. It counts as done.
 
 What is heard may contain a few words that are not known yet (rule 3). Give each one a
 meaning in the unit: `glosses: { bli: "det blir … = that comes to …" }`. The key is the
@@ -436,6 +444,24 @@ report a fault to the landlord; Buss & tåg: understand announcements and delays
 | 10 | Städning (`stadning`) | Follow a cleaning checklist and report what is done | – |
 Work themes (städning, bygg, vård, data) are added as theme packs and used both in
 units and in Theme practice.
+
+## B1 unit plan
+
+The same themes a third time: longer, connected language (telling, reporting, arguing).
+Each unit has three or so everyday phrases and, where it fits, a `free_write`.
+
+| # | Theme (pack) | Task | New grammar |
+|---|---|---|---|
+| 01 | Jag (`jag`) | Present yourself in a short personal letter | relative_clause |
+| 02 | Vardag (`vardag`) | Compare your life before and now | pluperfect, modal_past |
+| 03 | Matbutiken (`matbutiken`) | Complain about something you bought, return it, understand the rules | passive_s, participles |
+| 04 | Buss & tåg (`resa`) | Book a hotel and a flight, say what you would do if something goes wrong | conditional_skulle |
+| 05 | Bostad (`bostad`) | Read a flat advert, go to a viewing, understand the contract | indefinite_pronouns |
+| 06 | Familjen (`familjen`) | Tell a longer story about a family holiday | possessive_sin, conjunctions_advanced |
+| 07 | Hälsa (`halsa`) | Describe symptoms on the phone, report what was said | indirect_speech |
+| 08 | Fritid (`fritid`) | Join a club, give and react to opinions | particle_verbs |
+| 09 | Arbete (`arbete`) | Take part in a work meeting; rights and duties | – |
+| 10 | Data (`data`) | Explain a computer problem to support, follow instructions | – |
 
 ---
 

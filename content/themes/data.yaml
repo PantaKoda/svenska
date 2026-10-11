@@ -1,0 +1,32 @@
+theme: data
+title: "Data"
+# Computers at work: accounts, files, e-mail and what to say when something does not work.
+words:
+  # things
+  - { lemma: dator,       pos: noun, gender: en,  tags: [device], level: B1, gloss: computer }
+  - { lemma: skärm,       pos: noun, gender: en,  tags: [device], level: B1, gloss: screen }
+  - { lemma: tangentbord, pos: noun, gender: ett, tags: [device], level: B1, gloss: keyboard }
+  - { lemma: mus,         pos: noun, gender: en,  tags: [device], level: B1, gloss: "mouse; pl: mice", forms: { def: musen, pl: möss } }
+  - { lemma: skrivare,    pos: noun, gender: en,  tags: [device], level: B1, gloss: printer }
+  - { lemma: nätverk,     pos: noun, gender: ett, level: B1, gloss: network }
+  - { lemma: program,     pos: noun, gender: ett, level: B1, gloss: program }
+  - { lemma: uppdatering, pos: noun, gender: en,  level: B1, gloss: update }
+  - { lemma: support,     pos: noun, gender: en,  level: B1, gloss: support }
+
+  # accounts and files
+  - { lemma: lösenord, pos: noun, gender: ett, level: B1, gloss: password }
+  - { lemma: konto,    pos: noun, gender: ett, level: B1, gloss: account }
+  - { lemma: fil,      pos: noun, gender: en,  tags: [document], level: B1, gloss: file }
+  - { lemma: mapp,     pos: noun, gender: en,  tags: [container], level: B1, gloss: folder }
+  - { lemma: mejl,     pos: noun, gender: ett, tags: [document], level: B1, gloss: e-mail, forms: { pl: mejl } }
+  - { lemma: länk,     pos: noun, gender: en,  level: B1, gloss: link }
+
+  # what you do
+  - { lemma: logga,      pos: verb, level: B1, gloss: "to log (logga in = log in)" }
+  - { lemma: starta,     pos: verb, level: B1, gloss: "to start (starta om = restart)" }
+  - { lemma: ladda,      pos: verb, level: B1, gloss: "to load, to charge (ladda ner = download)" }
+  - { lemma: klicka,     pos: verb, level: B1, gloss: to click }
+  - { lemma: bifoga,     pos: verb, level: B1, gloss: to attach }
+  - { lemma: installera, pos: verb, level: B1, gloss: to install }
+  - { lemma: uppdatera,  pos: verb, level: B1, gloss: to update }
+  - { lemma: långsam,    pos: adj,  level: B1, gloss: slow }

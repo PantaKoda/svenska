@@ -1,0 +1,119 @@
+id: b1-10
+level: B1
+theme: data
+title: "Datorn fungerar inte"
+task: "Describe a computer problem to support, follow their instructions, and write a short e-mail about it."
+can_do: "I can explain what does not work on a computer, follow step-by-step instructions and report what I have done."
+names: [Sara, Ali]
+
+new_words: [dator, skärm, tangentbord, mus, skrivare, nätverk, program, uppdatering, support,
+            lösenord, konto, fil, mapp, mejl, länk,
+            logga, starta, ladda, klicka, bifoga, installera, uppdatera, skicka, långsam, ner]
+new_grammar: []
+
+phrases:
+  - { sv: "Det funkar inte.", en: "It doesn't work." }
+  - { sv: "Vänta ett ögonblick.", en: "Wait a moment." }
+  - { sv: "Nu funkar det!", en: "Now it works!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: support, sv: "Supporten, hur kan jag hjälpa dig?",                              en: "Support, how can I help you?" }
+  - { speaker: du,      sv: "Hej. Jag kan inte logga in på mitt konto. Det funkar inte.",      en: "Hello. I cannot log in to my account. It doesn't work." }
+  - { speaker: support, sv: "Har du startat om datorn?",                                       en: "Have you restarted the computer?" }
+  - { speaker: du,      sv: "Ja, 2 gånger. Skärmen är bara svart.",                            en: "Yes, twice. The screen is just black." }
+  - { speaker: support, sv: "Vänta ett ögonblick. Det finns en uppdatering som måste installeras.", en: "Wait a moment. There is an update that must be installed." }
+  - { speaker: du,      sv: "Vad ska jag göra?",                                               en: "What should I do?" }
+  - { speaker: support, sv: "Stäng av datorn. Starta den igen och klicka på länken som jag skickar.", en: "Switch off the computer. Start it again and click the link that I send." }
+  - { speaker: du,      sv: "Jag har glömt mitt lösenord också.",                              en: "I have forgotten my password too." }
+  - { speaker: support, sv: "Då skickar jag ett nytt i ett mejl. Ladda ner programmet och logga in.", en: "Then I will send a new one in an e-mail. Download the program and log in." }
+  - { speaker: du,      sv: "Nu funkar det! Tack så mycket.",                                  en: "Now it works! Thank you very much." }
+
+# Heard but not taught in this unit.
+glosses:
+  svart: "black"
+
+exercises:
+  # instructions: what do they mean?
+  - { type: listen_choose, sv: "Stäng av datorn och starta den igen.", en: "Switch off the computer and start it again.",
+      options: ["Switch off the computer and start it again.", "Do not switch off the computer.", "Start the program again, not the computer."],
+      answer: "Switch off the computer and start it again." }
+  - { type: listen_choose, sv: "Klicka på länken i mejlet.", en: "Click the link in the e-mail.",
+      options: ["Click the link in the e-mail.", "Send the link in an e-mail.", "Attach the file to the e-mail."], answer: "Click the link in the e-mail." }
+  - { type: listen_choose, sv: "Programmet måste uppdateras innan du loggar in.", en: "The program must be updated before you log in.",
+      options: ["The program must be updated before you log in.", "You must log in before the program is updated.", "The program was updated when you logged in."],
+      answer: "The program must be updated before you log in." }
+  - { type: listen_choose, sv: "Har du startat om datorn?", en: "Have you restarted the computer?",
+      options: ["Ja, men det funkar inte.", "Ja, lösenordet är långsamt.", "Nej, jag har ingen mapp."], answer: "Ja, men det funkar inte." }
+
+  # give the instruction
+  - { type: cloze, sv: "___ på länken.", hint: klicka, answer: Klicka, en: "Click the link.", grammar: [imperative] }
+  - { type: cloze, sv: "___ ner programmet.", hint: ladda, answer: Ladda, en: "Download the program.", grammar: [imperative] }
+  - { type: cloze, sv: "___ in på ditt konto.", hint: logga, answer: Logga, en: "Log in to your account.", grammar: [imperative] }
+  - { type: cloze, sv: "___ om datorn.", hint: starta, answer: Starta, en: "Restart the computer.", grammar: [imperative] }
+
+  # say what is done, without saying by whom
+  - { type: cloze, sv: "Filen ___ i mappen.", hint: spara, answer: sparas, en: "The file is saved in the folder.", grammar: [passive_s] }
+  - { type: cloze, sv: "Programmet måste ___.", hint: uppdatera, answer: uppdateras, en: "The program must be updated.", grammar: [passive_s] }
+  - { type: cloze, sv: "Uppdateringen är redan ___.", hint: installera, answer: installerad, en: "The update is already installed.",
+      grammar: [participles] }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag kan inte logga in på mitt konto.", en: "I cannot log in to my account.", grammar: [particle_verbs] }
+  - { type: word_order, sv: "Jag har glömt mitt lösenord.", en: "I have forgotten my password.", grammar: [perfect_tense] }
+  - { type: word_order, sv: "Skrivaren fungerar inte sedan igår.", en: "The printer has not worked since yesterday." }
+  - { type: word_order, sv: "Jag har bifogat filen i mejlet.", en: "I have attached the file to the e-mail.", grammar: [perfect_tense] }
+
+  # listen and write
+  - { type: dictation, sv: "Min dator startar inte.", en: "My computer does not start." }
+  - { type: dictation, sv: "Nätverket är långsamt idag.", en: "The network is slow today." }
+  - { type: dictation, sv: "Skärmen och tangentbordet är nya.", en: "The screen and the keyboard are new." }
+  - { type: dictation, sv: "Skicka ett mejl till supporten.", en: "Send an e-mail to support.", grammar: [imperative] }
+
+  # say it in Swedish
+  - { type: translate, en: "The mouse does not work.", sv: "Musen fungerar inte." }
+  - { type: translate, en: "Where is the file saved?", sv: "Var sparas filen?", accept: ["Var är filen sparad?"], grammar: [passive_s] }
+  - { type: translate, en: "I need a new password.", sv: "Jag behöver ett nytt lösenord." }
+  - { type: translate, en: "Can you install the program?", sv: "Kan du installera programmet?" }
+  - { type: translate, en: "There is a new update.", sv: "Det finns en ny uppdatering." }
+
+  # write your own text
+  - { type: free_write, en: "Write a short e-mail (4 or 5 sentences) to support. Say what does not work, since when, and what you have already tried.",
+      checklist: ["I say what does not work.", "I say since when.", "I say what I have already done (har + supine).", "I ask for help and end with a greeting."],
+      sv: "Hej! Jag kan inte logga in på mitt konto sedan igår. Jag har startat om datorn och jag har installerat uppdateringen, men det funkar inte. Skärmen startar inte. Kan ni hjälpa mig? Med vänlig hälsning, Ali",
+      grammar: [perfect_tense] }
+
+  # words from earlier units
+  - { type: translate, en: "Support asked if I had restarted the computer.", sv: "Supporten frågade om jag hade startat om datorn.",
+      grammar: [indirect_speech, pluperfect] }
+  - { type: word_order, sv: "Om nätverket inte var så långsamt, skulle jag vara klar nu.", en: "If the network were not so slow, I would be done now.",
+      grammar: [conditional_skulle] }
+  - { type: dictation, sv: "Det är programmet som alla anställda använder.", en: "It is the program that all employees use.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Jag kommer inte ___ mitt lösenord.", answer: ihåg, en: "I do not remember my password.", grammar: [particle_verbs] }
+  - { type: translate, en: "Nobody has sent the file.", sv: "Ingen har skickat filen.", grammar: [indefinite_pronouns] }
+
+# The task itself: you call support.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: support, sv: "Supporten, hur kan jag hjälpa dig?", en: "Support, how can I help you?" }
+    - { speaker: du, en: "Say that you cannot log in to your account.", answer: "Jag kan inte logga in på mitt konto.",
+        accept: ["Jag kan inte logga in."] }
+    - { speaker: support, sv: "Har du startat om datorn?", en: "Have you restarted the computer?" }
+    - { speaker: du, en: "Say yes, but it doesn't work.", answer: "Ja, men det funkar inte.",
+        accept: ["Ja, men det fungerar inte."] }
+    - { speaker: support, sv: "Vänta ett ögonblick. Kommer du ihåg ditt lösenord?", en: "Wait a moment. Do you remember your password?" }
+    - { speaker: du, en: "Say no, you have forgotten your password.", answer: "Nej, jag har glömt mitt lösenord.",
+        accept: ["Nej, jag har glömt det.", "Nej, jag kommer inte ihåg det."] }
+    - { speaker: support, sv: "Jag skickar ett nytt i ett mejl. Klicka på länken.", en: "I am sending a new one in an e-mail. Click the link." }
+    - { speaker: du, en: "Ask if you should download the program.",
+        options: ["Ska jag ladda ner programmet?", "Ska jag laddar ner programmet?", "Ska jag programmet ladda ner?"],
+        answer: "Ska jag ladda ner programmet?" }
+    - { speaker: support, sv: "Ja, och sedan loggar du in igen.", en: "Yes, and then you log in again." }
+    - { speaker: du, en: "Say: now it works, thank you very much.", answer: "Nu funkar det! Tack så mycket.",
+        accept: ["Nu funkar det. Tack så mycket!", "Nu funkar det, tack så mycket!", "Nu funkar det!"] }
+
+speaking_prompt: "Say aloud: a problem you have had with a computer or phone, what you did, and what support told you to do."

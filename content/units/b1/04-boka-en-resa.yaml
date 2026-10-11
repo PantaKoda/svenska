@@ -1,0 +1,110 @@
+id: b1-04
+level: B1
+theme: resa
+title: "Boka en resa"
+task: "Book a hotel and a flight, ask what is included, and say what you would do if something goes wrong."
+can_do: "I can make and change a booking politely and talk about real and imagined conditions."
+names: [Sara, Stockholm, Göteborg, Grekland]
+
+new_words: [hotell, flyg, flygplats, pass, bagage, väska, försäkring, turist, karta, centrum, bekräftelse,
+            avboka, ingå, landa, utomlands, möjlig, extra, enkel, nära, långt, hem]
+new_grammar: [conditional_skulle]
+
+phrases:
+  - { sv: "Trevlig resa!", en: "Have a nice trip!" }
+  - { sv: "Det ordnar sig.", en: "It will work out." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: du,       sv: "Hej! Jag skulle vilja boka ett rum för 2 nätter.",              en: "Hello! I would like to book a room for 2 nights." }
+  - { speaker: personal, sv: "Ett rum för en person eller för 2?",                            en: "A room for one person or for 2?" }
+  - { speaker: du,       sv: "För 2. Ingår frukost i priset?",                                en: "For 2. Is breakfast included in the price?" }
+  - { speaker: personal, sv: "Ja, frukost ingår. Rummet kostar 950 kronor per natt.",         en: "Yes, breakfast is included. The room costs 950 kronor per night." }
+  - { speaker: du,       sv: "Är hotellet nära centrum?",                                     en: "Is the hotel near the centre?" }
+  - { speaker: personal, sv: "Ja, och det är inte långt till flygplatsen.",                   en: "Yes, and it is not far to the airport." }
+  - { speaker: du,       sv: "Om jag avbokar, får jag pengarna tillbaka då?",                 en: "If I cancel, do I get my money back then?" }
+  - { speaker: personal, sv: "Ja, om du avbokar inom en vecka. Annars behöver du en försäkring.", en: "Yes, if you cancel within a week. Otherwise you need insurance." }
+  - { speaker: du,       sv: "Om jag hade mer semester, skulle jag stanna längre.",           en: "If I had more holiday, I would stay longer." }
+  - { speaker: personal, sv: "Du får en bekräftelse på mejl. Trevlig resa!",                  en: "You will get a confirmation by e-mail. Have a nice trip!" }
+
+# Heard but not taught in this unit.
+glosses:
+  per: "per natt = per night"
+  annars: "otherwise"
+  mejl: "e-mail"
+
+exercises:
+  # om: real, or only imagined?
+  - { type: cloze, sv: "Om flyget är försenat, ___ vi tåget.", hint: missa, answer: missar, en: "If the flight is delayed, we will miss the train.",
+      grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Om jag hade mer pengar, ___ jag resa utomlands.", answer: skulle, en: "If I had more money, I would travel abroad.",
+      grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Om jag ___ du, skulle jag köpa en försäkring.", hint: vara, answer: var, en: "If I were you, I would buy insurance.",
+      grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Jag ___ vilja boka ett rum.", answer: skulle, en: "I would like to book a room.", grammar: [conditional_skulle] }
+
+  # build the sentence
+  - { type: word_order, sv: "Om du inte avbokar, måste du betala.", en: "If you do not cancel, you must pay.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Jag skulle vilja ändra min resa.", en: "I would like to change my trip.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Om vi hade en karta, skulle vi hitta hotellet.", en: "If we had a map, we would find the hotel.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Är det möjligt att få ett extra rum?", en: "Is it possible to get an extra room?" }
+
+  # listen and write
+  - { type: dictation, sv: "Ingår frukost i priset?", en: "Is breakfast included in the price?" }
+  - { type: dictation, sv: "Hotellet ligger nära centrum.", en: "The hotel is near the centre." }
+  - { type: dictation, sv: "Hur långt är det till flygplatsen?", en: "How far is it to the airport?" }
+  - { type: dictation, sv: "Mitt bagage har inte kommit.", en: "My luggage has not arrived.", grammar: [perfect_tense] }
+  - { type: dictation, sv: "Jag har tappat mitt pass och min väska.", en: "I have lost my passport and my bag.", grammar: [perfect_tense] }
+
+  # say it in Swedish
+  - { type: translate, en: "I would like to cancel my trip.", sv: "Jag skulle vilja avboka min resa.", grammar: [conditional_skulle] }
+  - { type: translate, en: "The flight lands at 8.", sv: "Flyget landar klockan 8." }
+  - { type: translate, en: "We are tourists and we need a simple map.", sv: "Vi är turister och vi behöver en enkel karta." }
+  - { type: translate, en: "When do you go home?", sv: "När åker du hem?", accept: ["När reser du hem?", "När går du hem?"] }
+  - { type: translate, en: "Have you got the confirmation?", sv: "Har du fått bekräftelsen?", grammar: [perfect_tense] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Om du avbokar inom en vecka, får du pengarna tillbaka.", en: "If you cancel within a week, you get your money back.",
+      options: ["If you cancel within a week, you get your money back.", "If you cancel after a week, you get your money back.", "You cannot cancel within a week."],
+      answer: "If you cancel within a week, you get your money back." }
+  - { type: listen_choose, sv: "Om jag hade tid, skulle jag resa mer.", en: "If I had time, I would travel more.",
+      options: ["If I had time, I would travel more.", "When I have time, I travel more.", "I had time, so I travelled more."],
+      answer: "If I had time, I would travel more." }
+  - { type: listen_choose, sv: "Är det möjligt att boka om resan?", en: "Is it possible to rebook the trip?",
+      options: ["Ja, men det kostar extra.", "Ja, den är nära centrum.", "Nej, jag har ett pass."], answer: "Ja, men det kostar extra." }
+
+  # listen for the number
+  - { type: numbers, sv: "Rummet kostar 950 kronor.", hint: "the price in kronor", answer: "950", en: "The room costs 950 kronor." }
+  - { type: numbers, sv: "Flyget landar kvart över 9.", hint: "the time, like 8.15", answer: "9.15", en: "The flight lands at quarter past 9.",
+      grammar: [time_clock] }
+
+  # words from earlier units
+  - { type: translate, en: "The ticket that I bought can be changed.", sv: "Biljetten som jag köpte kan ändras.",
+      accept: ["Biljetten jag köpte kan ändras."], grammar: [relative_clause, passive_s] }
+  - { type: word_order, sv: "Jag hade aldrig rest utomlands förut.", en: "I had never travelled abroad before.", grammar: [pluperfect] }
+  - { type: dictation, sv: "Jag var inte nöjd med hotellet, så jag klagade.", en: "I was not satisfied with the hotel, so I complained." }
+  - { type: cloze, sv: "Bagaget var ___ när det kom.", hint: skada, answer: skadat, en: "The luggage was damaged when it came.", grammar: [participles] }
+
+# The task itself: you book a hotel room on the phone.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: personal, sv: "Hotellet, hej! Vad kan jag göra för dig?", en: "The hotel, hello! What can I do for you?" }
+    - { speaker: du, en: "Say that you would like to book a room for 2 nights.", answer: "Jag skulle vilja boka ett rum för 2 nätter.",
+        accept: ["Jag vill boka ett rum för 2 nätter."] }
+    - { speaker: personal, sv: "Rummet kostar 950 kronor per natt.", en: "The room costs 950 kronor per night." }
+    - { speaker: du, en: "Ask if breakfast is included.",
+        options: ["Ingår frukost?", "Ingå frukost?", "Är frukost ingår?"], answer: "Ingår frukost?" }
+    - { speaker: personal, sv: "Ja, frukost ingår.", en: "Yes, breakfast is included." }
+    - { speaker: du, en: "Ask: if you cancel, do you get the money back?",
+        options: ["Om jag avbokar, får jag pengarna tillbaka?", "Om jag avbokar, jag får pengarna tillbaka?", "Om avbokar jag, får jag pengarna tillbaka?"],
+        answer: "Om jag avbokar, får jag pengarna tillbaka?" }
+    - { speaker: personal, sv: "Ja, om du avbokar inom en vecka.", en: "Yes, if you cancel within a week." }
+    - { speaker: du, en: "Ask if the hotel is near the centre.", answer: "Är hotellet nära centrum?", accept: ["Ligger hotellet nära centrum?"] }
+    - { speaker: personal, sv: "Ja, det är inte långt. Trevlig resa!", en: "Yes, it is not far. Have a nice trip!" }
+    - { speaker: du, en: "Say thank you very much.", answer: "Tack så mycket!", accept: ["Tack!"] }
+
+speaking_prompt: "Say aloud: book a room, ask three questions about it, and say what you would do if you had a month of holiday."

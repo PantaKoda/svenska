@@ -35,6 +35,25 @@ words:
   - { lemma: snäll,      pos: adj,  level: A2, gloss: kind }
   - { lemma: rolig,      pos: adj,  level: A2, gloss: "fun, funny" }
 
+
+  # B1: traditions and relationships
+  - { lemma: tradition, pos: noun, gender: en,  level: B1, gloss: tradition }
+  - { lemma: jul,       pos: noun, gender: en,  level: B1, gloss: Christmas }
+  - { lemma: midsommar, pos: noun, gender: en,  level: B1, gloss: Midsummer }
+  - { lemma: påsk,      pos: noun, gender: en,  level: B1, gloss: Easter }
+  - { lemma: högtid,    pos: noun, gender: en,  level: B1, gloss: "holiday, festival" }
+  - { lemma: släkt,     pos: noun, gender: en,  level: B1, gloss: "relatives, family" }
+  - { lemma: sambo,     pos: noun, gender: en,  level: B1, gloss: "live-in partner" }
+  - { lemma: förälder,  pos: noun, gender: en,  level: B1, gloss: parent }
+  - { lemma: minne,     pos: noun, gender: ett, level: B1, gloss: memory }
+  - { lemma: barndom,   pos: noun, gender: en,  level: B1, gloss: childhood }
+  - { lemma: julklapp,  pos: noun, gender: en,  level: B1, gloss: Christmas present }
+  - { lemma: älska,     pos: verb, level: B1, gloss: to love }
+  - { lemma: växa,      pos: verb, level: B1, gloss: "to grow (växa upp = grow up); past: grew; pp: grown" }
+  - { lemma: dansa,     pos: verb, tags: [action_intrans], level: B1, gloss: to dance }
+  - { lemma: sjunga,    pos: verb, tags: [action_intrans], level: B1, gloss: "to sing; past: sang; pp: sung" }
+  - { lemma: skild,     pos: adj,  level: B1, gloss: divorced }
+
 frames:
   - { id: fam-01, level: A1, grammar: [present_tense, en_ett], review: true,
       sv: "Jag har {person.a}.", en: "I have {1.a}." }

@@ -1010,3 +1010,67 @@ items:
   form: pl
   words:
   - sjö
+- type: inflect
+  answer: ett möte
+  grammar:
+  - en_ett
+  lemma: möte
+  form: a
+  words:
+  - möte
+- type: inflect
+  answer: hobbyn
+  grammar:
+  - def_singular
+  lemma: hobby
+  form: def
+  words:
+  - hobby
+- type: inflect
+  answer: lag
+  grammar:
+  - plural_indef
+  lemma: lag
+  form: pl
+  words:
+  - lag
+- type: inflect
+  answer: deltog
+  grammar:
+  - past_tense
+  lemma: delta
+  form: past
+  words:
+  - delta
+- type: inflect
+  answer: medlemmarna
+  grammar:
+  - plural_def
+  lemma: medlem
+  form: pl_def
+  words:
+  - medlem
+- type: inflect
+  answer: ledarna
+  grammar:
+  - plural_def
+  lemma: ledare
+  form: pl_def
+  words:
+  - ledare
+- type: inflect
+  answer: körerna
+  grammar:
+  - plural_def
+  lemma: kör
+  form: pl_def
+  words:
+  - kör
+- type: inflect
+  answer: förlorade
+  grammar:
+  - past_tense
+  lemma: förlora
+  form: past
+  words:
+  - förlora

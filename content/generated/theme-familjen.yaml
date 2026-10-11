@@ -1077,3 +1077,507 @@ items:
   form: pl
   words:
   - tårta
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to dance tonight?
+  answer: dansa
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: dansa
+  frame: gen-016
+  words:
+  - dansa
+- type: cloze
+  sv: När ___ du?
+  en: When do you sing?
+  answer: sjunger
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: sjunga
+  frame: gen-014
+  words:
+  - sjunga
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can sing tomorrow.
+  answer: sjunga
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: sjunga
+  frame: gen-015
+  words:
+  - sjunga
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to dance today?
+  answer: Dansar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: dansa
+  frame: gen-013
+  words:
+  - dansa
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to sing today.
+  answer: sjunger
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: sjunga
+  frame: gen-012
+  words:
+  - sjunga
+- type: cloze
+  sv: När ___ du?
+  en: When do you dance?
+  answer: dansar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: dansa
+  frame: gen-014
+  words:
+  - dansa
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to sing tonight?
+  answer: sjunga
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: sjunga
+  frame: gen-016
+  words:
+  - sjunga
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to dance today.
+  answer: dansar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: dansa
+  frame: gen-012
+  words:
+  - dansa
+- type: dictation
+  sv: Sjunger du idag?
+  en: Are you going to sing today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - sjunga
+- type: dictation
+  sv: Vi kan dansa imorgon.
+  en: We can dance tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - dansa
+- type: dictation
+  sv: Vill du dansa ikväll?
+  en: Do you want to dance tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - dansa
+- type: dictation
+  sv: När sjunger du?
+  en: When do you sing?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - sjunga
+- type: dictation
+  sv: Vi kan sjunga imorgon.
+  en: We can sing tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - sjunga
+- type: dictation
+  sv: Dansar du idag?
+  en: Are you going to dance today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - dansa
+- type: dictation
+  sv: Jag sjunger inte idag.
+  en: I am not going to sing today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - sjunga
+- type: dictation
+  sv: När dansar du?
+  en: When do you dance?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - dansa
+- type: word_order
+  sv: Vill du sjunga ikväll?
+  en: Do you want to sing tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - sjunga
+- type: word_order
+  sv: Jag dansar inte idag.
+  en: I am not going to dance today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - dansa
+- type: word_order
+  sv: Sjunger du idag?
+  en: Are you going to sing today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - sjunga
+- type: word_order
+  sv: Vi kan dansa imorgon.
+  en: We can dance tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - dansa
+- type: word_order
+  sv: Vill du dansa ikväll?
+  en: Do you want to dance tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - dansa
+- type: word_order
+  sv: När sjunger du?
+  en: When do you sing?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - sjunga
+- type: word_order
+  sv: Vi kan sjunga imorgon.
+  en: We can sing tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - sjunga
+- type: word_order
+  sv: Dansar du idag?
+  en: Are you going to dance today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - dansa
+- type: translate
+  sv: Jag sjunger inte idag.
+  en: I am not going to sing today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - sjunga
+- type: translate
+  sv: När dansar du?
+  en: When do you dance?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - dansa
+- type: translate
+  sv: Vill du sjunga ikväll?
+  en: Do you want to sing tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - sjunga
+- type: translate
+  sv: Jag dansar inte idag.
+  en: I am not going to dance today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - dansa
+- type: translate
+  sv: Sjunger du idag?
+  en: Are you going to sing today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - sjunga
+- type: translate
+  sv: Vi kan dansa imorgon.
+  en: We can dance tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - dansa
+- type: translate
+  sv: Vill du dansa ikväll?
+  en: Do you want to dance tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - dansa
+- type: translate
+  sv: När sjunger du?
+  en: When do you sing?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - sjunga
+- type: listen_choose
+  sv: Vi kan sjunga imorgon.
+  answer: We can sing tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can sing tomorrow.
+  - We can dance tomorrow.
+  - When do you sing?
+  frame: gen-015
+  words:
+  - sjunga
+- type: listen_choose
+  sv: Dansar du idag?
+  answer: Are you going to dance today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to dance today?
+  - Are you going to sing today?
+  - Do you want to dance tonight?
+  frame: gen-013
+  words:
+  - dansa
+- type: listen_choose
+  sv: Jag sjunger inte idag.
+  answer: I am not going to sing today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to sing today.
+  - I am not going to dance today.
+  - When do you sing?
+  frame: gen-012
+  words:
+  - sjunga
+- type: listen_choose
+  sv: När dansar du?
+  answer: When do you dance?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you dance?
+  - When do you sing?
+  - Do you want to dance tonight?
+  frame: gen-014
+  words:
+  - dansa
+- type: listen_choose
+  sv: Vill du sjunga ikväll?
+  answer: Do you want to sing tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to sing tonight?
+  - Do you want to dance tonight?
+  - When do you sing?
+  frame: gen-016
+  words:
+  - sjunga
+- type: listen_choose
+  sv: Jag dansar inte idag.
+  answer: I am not going to dance today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to dance today.
+  - I am not going to sing today.
+  - Do you want to dance tonight?
+  frame: gen-012
+  words:
+  - dansa
+- type: listen_choose
+  sv: Sjunger du idag?
+  answer: Are you going to sing today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to sing today?
+  - Are you going to dance today?
+  - When do you sing?
+  frame: gen-013
+  words:
+  - sjunga
+- type: listen_choose
+  sv: Vi kan dansa imorgon.
+  answer: We can dance tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can dance tomorrow.
+  - We can sing tomorrow.
+  - Do you want to dance tonight?
+  frame: gen-015
+  words:
+  - dansa
+- type: inflect
+  answer: högtider
+  grammar:
+  - plural_indef
+  lemma: högtid
+  form: pl
+  words:
+  - högtid
+- type: inflect
+  answer: föräldern
+  grammar:
+  - def_singular
+  lemma: förälder
+  form: def
+  words:
+  - förälder
+- type: inflect
+  answer: älskade
+  grammar:
+  - past_tense
+  lemma: älska
+  form: past
+  words:
+  - älska
+- type: inflect
+  answer: släkter
+  grammar:
+  - plural_indef
+  lemma: släkt
+  form: pl
+  words:
+  - släkt
+- type: inflect
+  answer: en midsommar
+  grammar:
+  - en_ett
+  lemma: midsommar
+  form: a
+  words:
+  - midsommar
+- type: inflect
+  answer: traditionerna
+  grammar:
+  - plural_def
+  lemma: tradition
+  form: pl_def
+  words:
+  - tradition
+- type: inflect
+  answer: sambon
+  grammar:
+  - def_singular
+  lemma: sambo
+  form: def
+  words:
+  - sambo
+- type: inflect
+  answer: julen
+  grammar:
+  - def_singular
+  lemma: jul
+  form: def
+  words:
+  - jul

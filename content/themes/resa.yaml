@@ -37,6 +37,26 @@ words:
   - { lemma: stanna,      pos: verb, tags: [action_intrans], level: A2, gloss: "to stop, to stay; past: stopped; pp: stopped" }
   - { lemma: resa,        pos: verb, tags: [action_intrans], level: A2, gloss: "to travel; past: travelled; pp: travelled" }
 
+
+  # B1: booking a trip
+  - { lemma: hotell,      pos: noun, gender: ett, tags: [place], level: B1, gloss: hotel }
+  - { lemma: flyg,        pos: noun, gender: ett, tags: [vehicle], level: B1, gloss: "flight, plane" }
+  - { lemma: flygplats,   pos: noun, gender: en,  tags: [place], level: B1, gloss: airport }
+  - { lemma: pass,        pos: noun, gender: ett, tags: [document], level: B1, gloss: passport }
+  - { lemma: bagage,      pos: noun, gender: ett, level: B1, gloss: luggage }
+  - { lemma: väska,       pos: noun, gender: en,  tags: [container], level: B1, gloss: bag }
+  - { lemma: försäkring,  pos: noun, gender: en,  level: B1, gloss: insurance }
+  - { lemma: turist,      pos: noun, gender: en,  level: B1, gloss: tourist }
+  - { lemma: karta,       pos: noun, gender: en,  tags: [document], level: B1, gloss: map }
+  - { lemma: centrum,     pos: noun, gender: ett, level: B1, gloss: "town centre", forms: { def: centrum, pl: centrum } }
+  - { lemma: bekräftelse, pos: noun, gender: en,  tags: [document], level: B1, gloss: confirmation }
+  - { lemma: avboka,      pos: verb, level: B1, gloss: "to cancel (a booking)" }
+  - { lemma: ingå,        pos: verb, level: B1, gloss: "to be included" }
+  - { lemma: landa,       pos: verb, level: B1, gloss: to land }
+  - { lemma: utomlands,   pos: adv,  level: B1, gloss: abroad }
+  - { lemma: möjlig,      pos: adj,  level: B1, gloss: possible }
+  - { lemma: extra,       pos: adj,  level: B1, gloss: extra }
+
 frames:
   - { id: res-01, level: A1, grammar: [wh_question, def_singular], review: true,
       sv: "När går {vehicle.def}?", en: "When does the {1} leave?" }

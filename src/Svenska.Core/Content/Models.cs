@@ -101,6 +101,8 @@ public sealed class ExerciseItem
     public string? Hint { get; set; }
     /// <summary>listen_choose and a chosen dialogue turn: the choices; `answer` is one of them.</summary>
     public List<string> Options { get; set; } = [];
+    /// <summary>free_write: what the learner checks their own text against.</summary>
+    public List<string> Checklist { get; set; } = [];
     /// <summary>inflect: the word to inflect and the form asked for (indef, def, pl, pres …).</summary>
     public string? Lemma { get; set; }
     public string? Form { get; set; }

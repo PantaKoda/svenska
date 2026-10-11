@@ -43,6 +43,26 @@ words:
   - { lemma: hända,        pos: verb, level: A2, gloss: to happen }
   - { lemma: tappa,        pos: verb, level: A2, gloss: "to drop, to lose; past: lost; pp: lost" }
 
+
+  # B1: looking for a flat
+  - { lemma: annons,       pos: noun, gender: en,  tags: [document], level: B1, gloss: "advertisement, ad" }
+  - { lemma: hyra,         pos: noun, gender: en,  level: B1, gloss: "rent (also a verb: to rent)" }
+  - { lemma: visning,      pos: noun, gender: en,  level: B1, gloss: viewing }
+  - { lemma: kontrakt,     pos: noun, gender: ett, tags: [document], level: B1, gloss: contract }
+  - { lemma: hiss,         pos: noun, gender: en,  level: B1, gloss: "lift, elevator" }
+  - { lemma: våning,       pos: noun, gender: en,  level: B1, gloss: floor (storey) }
+  - { lemma: område,       pos: noun, gender: ett, level: B1, gloss: "area, neighbourhood" }
+  - { lemma: husdjur,      pos: noun, gender: ett, level: B1, gloss: pet }
+  - { lemma: förråd,       pos: noun, gender: ett, level: B1, gloss: storeroom }
+  - { lemma: parkering,    pos: noun, gender: en,  level: B1, gloss: parking }
+  - { lemma: värme,        pos: noun, gender: en,  level: B1, gloss: heating }
+  - { lemma: kvadratmeter, pos: noun, gender: en,  level: B1, gloss: square metre, forms: { pl: kvadratmeter } }
+  - { lemma: möbel,        pos: noun, gender: en,  level: B1, gloss: piece of furniture }
+  - { lemma: störa,        pos: verb, level: B1, gloss: to disturb }
+  - { lemma: tillåta,      pos: verb, level: B1, gloss: "to allow" }
+  - { lemma: tyst,         pos: adj,  level: B1, gloss: quiet }
+  - { lemma: ljus,         pos: adj,  level: B1, gloss: "light, bright" }
+
 frames:
   - { id: bos-01, level: A1, grammar: [present_tense, def_singular], review: true,
       sv: "{furniture|device.def} står i {room.def}.", en: "The {1} is in the {2}." }

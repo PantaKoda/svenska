@@ -1,0 +1,113 @@
+id: b1-07
+level: B1
+theme: halsa
+title: "Ringa 1177"
+task: "Describe a health problem and its history on the phone, and tell someone else what the nurse asked and said."
+can_do: "I can describe symptoms and report what someone asked and said."
+names: [Sara]
+
+new_words: [symtom, yrsel, smärta, värk, besvär, undersökning, råd, hjärta, prov, resultat, ambulans, nummer,
+            akut, allvarlig, orolig, vanlig, illa, plötsligt, undra, mena, förklara]
+new_grammar: [indirect_speech]
+
+phrases:
+  - { sv: "Hur kan jag hjälpa dig?", en: "How can I help you?" }
+  - { sv: "Ta hand om dig!", en: "Take care of yourself!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: sjuksköterska, sv: "1177, hur kan jag hjälpa dig?",                              en: "1177, how can I help you?" }
+  - { speaker: du,            sv: "Hej. Jag mår illa och har yrsel. Det började plötsligt igår.", en: "Hello. I feel sick and dizzy. It started suddenly yesterday." }
+  - { speaker: sjuksköterska, sv: "Har du smärta i bröstet eller ont i hjärtat?",                en: "Do you have pain in your chest or in your heart?" }
+  - { speaker: du,            sv: "Nej, men jag har värk i huvudet. Jag är orolig.",             en: "No, but I have an ache in my head. I am worried." }
+  - { speaker: sjuksköterska, sv: "Det är vanliga symtom. Jag tror inte att det är allvarligt.", en: "Those are common symptoms. I do not think it is serious." }
+  - { speaker: du,            sv: "Vad menar du att jag ska göra?",                              en: "What do you mean I should do?" }
+  - { speaker: sjuksköterska, sv: "Mitt råd är att du vilar. Om besvären inte går över, bokar du en undersökning.", en: "My advice is that you rest. If the trouble does not pass, you book an examination." }
+  - { speaker: du,            sv: "Och om det blir akut?",                                       en: "And if it becomes urgent?" }
+  - { speaker: sjuksköterska, sv: "Då ringer du 112 och ber om en ambulans. Ta hand om dig!",    en: "Then you call 112 and ask for an ambulance. Take care of yourself!" }
+
+# Heard but not taught in this unit.
+glosses:
+  be: "ber om = asks for"
+
+exercises:
+  # report what was said: att, om, or a question word
+  - { type: cloze, sv: "Hon frågade ___ jag hade feber.", answer: om, en: "She asked if I had a fever.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "Hon sa ___ jag skulle vila.", answer: att, en: "She said that I should rest.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "Hon undrade ___ länge jag hade haft ont.", answer: hur, en: "She wondered how long I had been in pain.",
+      grammar: [indirect_speech] }
+  - { type: cloze, sv: "Läkaren frågade ___ det började.", answer: när, en: "The doctor asked when it started.", grammar: [indirect_speech] }
+
+  # the tense moves back
+  - { type: cloze, sv: "\"Jag är orolig.\" Han sa att han ___ orolig.", hint: vara, answer: var, en: "\"I am worried.\" He said that he was worried.",
+      grammar: [indirect_speech] }
+  - { type: cloze, sv: "\"Har du ätit?\" Hon frågade om jag ___ ätit.", hint: ha, answer: hade, en: "\"Have you eaten?\" She asked if I had eaten.",
+      grammar: [indirect_speech, pluperfect] }
+
+  # build the sentence
+  - { type: word_order, sv: "Hon frågade om jag hade feber.", en: "She asked if I had a fever.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Läkaren förklarade att det inte var allvarligt.", en: "The doctor explained that it was not serious.",
+      grammar: [indirect_speech] }
+  - { type: word_order, sv: "Jag undrade om jag behövde ta prover.", en: "I wondered if I needed to have tests taken.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Hon sa att resultaten kommer om en vecka.", en: "She said that the results will come in a week.", grammar: [indirect_speech] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag mår illa och har yrsel.", en: "I feel sick and dizzy." }
+  - { type: dictation, sv: "Det började plötsligt igår.", en: "It started suddenly yesterday." }
+  - { type: dictation, sv: "Det är vanliga symtom.", en: "Those are common symptoms." }
+  - { type: dictation, sv: "Vid akuta besvär ska du ringa en ambulans.", en: "With urgent trouble you should call an ambulance." }
+  - { type: dictation, sv: "Jag har värk i ryggen och smärta i benet.", en: "I have an ache in my back and pain in my leg." }
+
+  # say it in Swedish
+  - { type: translate, en: "What do you mean?", sv: "Vad menar du?" }
+  - { type: translate, en: "I am worried about my heart.", sv: "Jag är orolig för mitt hjärta." }
+  - { type: translate, en: "Can you give me some advice?", sv: "Kan du ge mig ett råd?", accept: ["Kan du ge mig råd?", "Kan du ge mig några råd?"] }
+  - { type: translate, en: "The examination is on Tuesday.", sv: "Undersökningen är på tisdag." }
+  - { type: translate, en: "What is the number of the health centre?", sv: "Vad har vårdcentralen för nummer?",
+      accept: ["Vilket nummer har vårdcentralen?", "Vad är numret till vårdcentralen?"] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Hon sa att det inte var allvarligt.", en: "She said that it was not serious.",
+      options: ["She said that it was not serious.", "She said that it was serious.", "She asked if it was serious."],
+      answer: "She said that it was not serious." }
+  - { type: listen_choose, sv: "Sjuksköterskan undrade om jag hade tagit någon medicin.", en: "The nurse wondered if I had taken any medicine.",
+      options: ["The nurse wondered if I had taken any medicine.", "The nurse said that I should take a medicine.", "The nurse explained which medicine I had taken."],
+      answer: "The nurse wondered if I had taken any medicine." }
+  - { type: listen_choose, sv: "Hur länge har du haft besvären?", en: "How long have you had the trouble?",
+      options: ["Sedan igår.", "På vårdcentralen.", "Ja, det är akut."], answer: "Sedan igår." }
+
+  # listen for the number
+  - { type: numbers, sv: "Ring 1 1 7 7 för råd.", hint: "the phone number", answer: "1177", en: "Call 1177 for advice." }
+  - { type: numbers, sv: "Du får resultaten om 5 dagar.", hint: "in how many days", answer: "5", en: "You will get the results in 5 days." }
+
+  # words from earlier units
+  - { type: translate, en: "If I were you, I would call the doctor.", sv: "Om jag var du, skulle jag ringa läkaren.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Hon ringde sin läkare trots att det var sent.", en: "She called her doctor although it was late.",
+      grammar: [possessive_sin, conjunctions_advanced] }
+  - { type: dictation, sv: "Proverna tas på vårdcentralen.", en: "The tests are taken at the health centre.", grammar: [passive_s] }
+  - { type: cloze, sv: "Det finns ___ läkare här idag.", hint: ingen, answer: ingen, en: "There is no doctor here today.", grammar: [indefinite_pronouns] }
+
+# The task itself: you tell Sara about your call to 1177.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Du ringde 1177 igår. Vad sa du?", en: "You called 1177 yesterday. What did you say?" }
+    - { speaker: du, en: "Say that you told them about your symptoms.", answer: "Jag berättade om mina symtom." }
+    - { speaker: Sara, sv: "Vad frågade sjuksköterskan?", en: "What did the nurse ask?" }
+    - { speaker: du, en: "Say that she asked if you had a fever.",
+        options: ["Hon frågade om jag hade feber.", "Hon frågade om hade jag feber.", "Hon frågade att jag hade feber."],
+        answer: "Hon frågade om jag hade feber." }
+    - { speaker: Sara, sv: "Var det allvarligt?", en: "Was it serious?" }
+    - { speaker: du, en: "Say that she said it was not serious.",
+        options: ["Hon sa att det inte var allvarligt.", "Hon sa att det var inte allvarligt.", "Hon sa om det inte var allvarligt."],
+        answer: "Hon sa att det inte var allvarligt." }
+    - { speaker: Sara, sv: "Vad ska du göra nu?", en: "What are you going to do now?" }
+    - { speaker: du, en: "Say that her advice was that you should rest.", answer: "Hennes råd var att jag skulle vila.",
+        accept: ["Hennes råd var att jag ska vila.", "Hon sa att jag skulle vila."] }
+    - { speaker: Sara, sv: "Bra. Ta hand om dig!", en: "Good. Take care of yourself!" }
+    - { speaker: du, en: "Say thanks, the same to you.", answer: "Tack detsamma!" }
+
+speaking_prompt: "Say aloud: describe a time you were ill, what you told the doctor, and what the doctor asked and said."

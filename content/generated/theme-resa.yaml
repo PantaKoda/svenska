@@ -1032,3 +1032,536 @@ items:
   form: pres
   words:
   - resa
+- type: cloze
+  sv: Går spårvagnen till ___?
+  en: Does the tram go to the airport?
+  answer: flygplatsen
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: flygplats
+  frame: res-05
+  words:
+  - spårvagn
+  - flygplats
+- type: cloze
+  sv: Jag tar ___ till stranden.
+  en: I take the flight to the beach.
+  answer: flyget
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: flyg
+  frame: res-02
+  words:
+  - flyg
+  - strand
+- type: cloze
+  sv: ___ är smutsig.
+  en: The bag is dirty.
+  answer: Väskan
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: väska
+  frame: gen-003
+  words:
+  - väska
+  - smutsig
+- type: cloze
+  sv: Har du ___?
+  en: Do you have the map?
+  answer: kartan
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: karta
+  frame: gen-006
+  words:
+  - karta
+- type: cloze
+  sv: Var är ___?
+  en: Where is the passport?
+  answer: passet
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: pass
+  frame: gen-001
+  words:
+  - pass
+- type: cloze
+  sv: Jag har inte ___.
+  en: I don't have the confirmation.
+  answer: bekräftelsen
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: bekräftelse
+  frame: gen-004
+  words:
+  - bekräftelse
+- type: cloze
+  sv: Går tåget till ___?
+  en: Does the train go to the hotel?
+  answer: hotellet
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: hotell
+  frame: res-05
+  words:
+  - tåg
+  - hotell
+- type: cloze
+  sv: Jag hittade ___.
+  en: I found the bag.
+  answer: väskan
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: väska
+  frame: gen-021
+  words:
+  - hitta
+  - väska
+- type: dictation
+  sv: Jag vill ha en karta.
+  en: I want a map.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - karta
+- type: dictation
+  sv: Har du ett pass?
+  en: Do you have a passport?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - pass
+- type: dictation
+  sv: När går flyget?
+  en: When does the flight leave?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: res-01
+  words:
+  - flyg
+- type: dictation
+  sv: Jag behöver en bekräftelse.
+  en: I need a confirmation.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - bekräftelse
+- type: dictation
+  sv: Jag köper väskan.
+  en: I buy the bag.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - köpa
+  - väska
+- type: dictation
+  sv: Jag tar spårvagnen till flygplatsen.
+  en: I take the tram to the airport.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: res-02
+  words:
+  - spårvagn
+  - flygplats
+- type: dictation
+  sv: Nu går flyget.
+  en: The flight is leaving now.
+  grammar:
+  - v2_word_order
+  - def_singular
+  review: true
+  frame: res-03
+  words:
+  - flyg
+- type: dictation
+  sv: Passet är där.
+  en: The passport is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - pass
+- type: word_order
+  sv: Kan du köpa väskan?
+  en: Can you buy the bag?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - köpa
+  - väska
+- type: word_order
+  sv: Jag tar tåget till hotellet.
+  en: I take the train to the hotel.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: res-02
+  words:
+  - tåg
+  - hotell
+- type: word_order
+  sv: Jag behöver en karta.
+  en: I need a map.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - karta
+- type: word_order
+  sv: Har du bekräftelsen?
+  en: Do you have the confirmation?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - bekräftelse
+- type: word_order
+  sv: Jag väntar på flyget.
+  en: I am waiting for the flight.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: res-04
+  words:
+  - flyg
+- type: word_order
+  sv: Går bussen till flygplatsen?
+  en: Does the bus go to the airport?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: res-05
+  words:
+  - buss
+  - flygplats
+- type: word_order
+  sv: Vi köper inte väskan.
+  en: We don't buy the bag.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - väska
+- type: word_order
+  sv: Var är kartan?
+  en: Where is the map?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - karta
+- type: translate
+  sv: Jag har inte passet.
+  en: I don't have the passport.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - pass
+- type: translate
+  sv: Har du en bekräftelse?
+  en: Do you have a confirmation?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - bekräftelse
+- type: translate
+  sv: Jag tar bilen till hotellet.
+  en: I take the car to the hotel.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: res-02
+  words:
+  - bil
+  - hotell
+- type: translate
+  sv: Kartan är där.
+  en: The map is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - karta
+- type: translate
+  sv: Jag vill ha en bekräftelse.
+  en: I want a confirmation.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - bekräftelse
+- type: translate
+  sv: Jag köpte väskan.
+  en: I bought the bag.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - köpa
+  - väska
+- type: translate
+  sv: Går bussen till hotellet?
+  en: Does the bus go to the hotel?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: res-05
+  words:
+  - buss
+  - hotell
+- type: translate
+  sv: Har du passet?
+  en: Do you have the passport?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - pass
+- type: listen_choose
+  sv: Kan du ta väskan?
+  answer: Can you take the bag?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Can you take the bag?
+  - Can you buy the bag?
+  - Can you find the bag?
+  frame: gen-009
+  words:
+  - ta
+  - väska
+- type: listen_choose
+  sv: Jag tar bilen till flygplatsen.
+  answer: I take the car to the airport.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I take the car to the airport.
+  - I take the flight to the beach.
+  - I take the flight to the lake.
+  frame: res-02
+  words:
+  - bil
+  - flygplats
+- type: listen_choose
+  sv: Jag har inte kartan.
+  answer: I don't have the map.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the map.
+  - I don't have the passport.
+  - I don't have the confirmation.
+  frame: gen-004
+  words:
+  - karta
+- type: listen_choose
+  sv: Var är bekräftelsen?
+  answer: Where is the confirmation?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the confirmation?
+  - Where is the map?
+  - Where is the passport?
+  frame: gen-001
+  words:
+  - bekräftelse
+- type: listen_choose
+  sv: Jag behöver ett pass.
+  answer: I need a passport.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need a passport.
+  - I need a map.
+  - I need a bag.
+  frame: gen-005
+  words:
+  - pass
+- type: listen_choose
+  sv: Går flyget till stationen?
+  answer: Does the flight go to the station?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Does the flight go to the station?
+  - Does the tram go to the airport?
+  - Does the train go to the hotel?
+  frame: res-05
+  words:
+  - flyg
+  - station
+- type: listen_choose
+  sv: Jag hittar väskan.
+  answer: I find the bag.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - I find the bag.
+  - I buy the bag.
+  - I take the bag.
+  frame: gen-010
+  words:
+  - hitta
+  - väska
+- type: listen_choose
+  sv: Har du en karta?
+  answer: Do you have a map?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a map?
+  - Do you have a passport?
+  - Do you have a bag?
+  frame: gen-002
+  words:
+  - karta
+- type: inflect
+  answer: ingå
+  grammar:
+  - imperative
+  lemma: ingå
+  form: imp
+  words:
+  - ingå
+- type: inflect
+  answer: bekräftelsen
+  grammar:
+  - def_singular
+  lemma: bekräftelse
+  form: def
+  words:
+  - bekräftelse
+- type: inflect
+  answer: landar
+  grammar:
+  - present_tense
+  lemma: landa
+  form: pres
+  words:
+  - landa
+- type: inflect
+  answer: hotellen
+  grammar:
+  - plural_def
+  lemma: hotell
+  form: pl_def
+  words:
+  - hotell
+- type: inflect
+  answer: ett pass
+  grammar:
+  - en_ett
+  lemma: pass
+  form: a
+  words:
+  - pass
+- type: inflect
+  answer: väskan
+  grammar:
+  - def_singular
+  lemma: väska
+  form: def
+  words:
+  - väska
+- type: inflect
+  answer: turisten
+  grammar:
+  - def_singular
+  lemma: turist
+  form: def
+  words:
+  - turist
+- type: inflect
+  answer: en flygplats
+  grammar:
+  - en_ett
+  lemma: flygplats
+  form: a
+  words:
+  - flygplats

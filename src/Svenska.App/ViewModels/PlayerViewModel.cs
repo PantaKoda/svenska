@@ -68,6 +68,9 @@ public partial class PlayerViewModel : ObservableObject
     [ObservableProperty] private bool _hasAudio;
     [ObservableProperty] private bool _isTyped = true;
     [ObservableProperty] private bool _isScene;
+    [ObservableProperty] private bool _isFreeWrite;
+    [ObservableProperty] private IReadOnlyList<string> _checklist = [];
+    [ObservableProperty] private string _modelText = "";
     [ObservableProperty] private Bitmap? _sceneImage;
     [ObservableProperty] private IReadOnlyList<TokenRow> _tokens = [];
     [ObservableProperty] private IReadOnlyList<OptionRow> _options = [];
@@ -128,6 +131,9 @@ public partial class PlayerViewModel : ObservableObject
         Translation = item.En ?? "";
         HasAudio = ExerciseText.Heard.Contains(item.Type) && !string.IsNullOrEmpty(item.Sv) || item.Type == ExerciseText.SceneClick;
         IsScene = item.Type == ExerciseText.SceneClick;
+        IsFreeWrite = item.Type == ExerciseText.FreeWrite;
+        Checklist = [];
+        ModelText = "";
         IsTyped = item.Type is not (ExerciseText.SceneClick or ExerciseText.ListenChoose);
 
         Heard = (_session.Heard?.Invoke(item) ?? []).Select(line => new HeardRow(line.Speaker, line.Sv, line.En,
@@ -159,6 +165,11 @@ public partial class PlayerViewModel : ObservableObject
                 Prompt = "";
                 Translation = "";
                 ShowScene(item);
+                break;
+            case ExerciseText.FreeWrite:
+                Instruction = "Write your own text. Ctrl+Enter when you are done; then you check it yourself.";
+                Prompt = item.En ?? "";
+                Translation = "";
                 break;
             case ExerciseText.Cloze:
                 Instruction = item.Hint == null ? "Write the missing word." : $"Write the missing word ({item.Hint}).";
@@ -214,6 +225,14 @@ public partial class PlayerViewModel : ObservableObject
             return;
 
         var item = Current;
+        if (item.Type == ExerciseText.FreeWrite)
+        {
+            // Free writing is not graded: the learner compares with the list and a model text.
+            Checklist = item.Checklist;
+            ModelText = item.Sv ?? "";
+            Finish(true, "Done. Check your text against the list.", []);
+            return;
+        }
         var result = item.Type == ExerciseText.Numbers
             ? AnswerChecker.CheckNumber(Answer, ExerciseText.Expected(item))
             : _checker.Check(Answer, ExerciseText.Expected(item), item.Accept);

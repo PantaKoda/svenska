@@ -845,3 +845,511 @@ items:
   form: pl_def
   words:
   - stad
+- type: cloze
+  sv: Var är ___?
+  en: Where is the letter?
+  answer: brevet
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: brev
+  frame: gen-001
+  words:
+  - brev
+- type: cloze
+  sv: När ___ du?
+  en: When do you cooperate?
+  answer: samarbetar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: samarbeta
+  frame: gen-014
+  words:
+  - samarbeta
+- type: cloze
+  sv: Har du ___?
+  en: Do you have the letter?
+  answer: brevet
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: brev
+  frame: gen-006
+  words:
+  - brev
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can cooperate tomorrow.
+  answer: samarbeta
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: samarbeta
+  frame: gen-015
+  words:
+  - samarbeta
+- type: cloze
+  sv: ___ är där.
+  en: The letter is there.
+  answer: Brevet
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: brev
+  frame: gen-007
+  words:
+  - brev
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to cooperate tonight?
+  answer: samarbeta
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: samarbeta
+  frame: gen-016
+  words:
+  - samarbeta
+- type: cloze
+  sv: Har du ___?
+  en: Do you have a letter?
+  answer: ett brev
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  hint: brev
+  frame: gen-002
+  words:
+  - brev
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to cooperate today?
+  answer: Samarbetar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: samarbeta
+  frame: gen-013
+  words:
+  - samarbeta
+- type: dictation
+  sv: Jag vill ha ett brev.
+  en: I want a letter.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - brev
+- type: dictation
+  sv: Jag samarbetar inte idag.
+  en: I am not going to cooperate today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - samarbeta
+- type: dictation
+  sv: Jag behöver ett brev.
+  en: I need a letter.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - brev
+- type: dictation
+  sv: Jag har inte brevet.
+  en: I don't have the letter.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - brev
+- type: dictation
+  sv: När samarbetar du?
+  en: When do you cooperate?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - samarbeta
+- type: dictation
+  sv: Vi kan samarbeta imorgon.
+  en: We can cooperate tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - samarbeta
+- type: dictation
+  sv: Var är brevet?
+  en: Where is the letter?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - brev
+- type: dictation
+  sv: Vill du samarbeta ikväll?
+  en: Do you want to cooperate tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - samarbeta
+- type: word_order
+  sv: Har du brevet?
+  en: Do you have the letter?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - brev
+- type: word_order
+  sv: Samarbetar du idag?
+  en: Are you going to cooperate today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - samarbeta
+- type: word_order
+  sv: Brevet är där.
+  en: The letter is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - brev
+- type: word_order
+  sv: Jag samarbetar inte idag.
+  en: I am not going to cooperate today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - samarbeta
+- type: word_order
+  sv: Har du ett brev?
+  en: Do you have a letter?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - brev
+- type: word_order
+  sv: Jag vill ha ett brev.
+  en: I want a letter.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - brev
+- type: word_order
+  sv: Jag behöver ett brev.
+  en: I need a letter.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - brev
+- type: word_order
+  sv: Jag har inte brevet.
+  en: I don't have the letter.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - brev
+- type: translate
+  sv: När samarbetar du?
+  en: When do you cooperate?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - samarbeta
+- type: translate
+  sv: Vi kan samarbeta imorgon.
+  en: We can cooperate tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - samarbeta
+- type: translate
+  sv: Vill du samarbeta ikväll?
+  en: Do you want to cooperate tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - samarbeta
+- type: translate
+  sv: Samarbetar du idag?
+  en: Are you going to cooperate today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - samarbeta
+- type: translate
+  sv: Var är brevet?
+  en: Where is the letter?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - brev
+- type: translate
+  sv: Jag samarbetar inte idag.
+  en: I am not going to cooperate today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - samarbeta
+- type: translate
+  sv: Har du brevet?
+  en: Do you have the letter?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - brev
+- type: translate
+  sv: Brevet är där.
+  en: The letter is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - brev
+- type: listen_choose
+  sv: Har du ett brev?
+  answer: Do you have a letter?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have a letter?
+  - Where is the letter?
+  - Do you have the letter?
+  frame: gen-002
+  words:
+  - brev
+- type: listen_choose
+  sv: Jag vill ha ett brev.
+  answer: I want a letter.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a letter.
+  - Where is the letter?
+  - Do you have the letter?
+  frame: gen-008
+  words:
+  - brev
+- type: listen_choose
+  sv: Jag behöver ett brev.
+  answer: I need a letter.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need a letter.
+  - Where is the letter?
+  - Do you have the letter?
+  frame: gen-005
+  words:
+  - brev
+- type: listen_choose
+  sv: Jag har inte brevet.
+  answer: I don't have the letter.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the letter.
+  - Where is the letter?
+  - Do you have the letter?
+  frame: gen-004
+  words:
+  - brev
+- type: listen_choose
+  sv: När samarbetar du?
+  answer: When do you cooperate?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you cooperate?
+  - We can cooperate tomorrow.
+  - Do you want to cooperate tonight?
+  frame: gen-014
+  words:
+  - samarbeta
+- type: listen_choose
+  sv: Vi kan samarbeta imorgon.
+  answer: We can cooperate tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can cooperate tomorrow.
+  - When do you cooperate?
+  - Do you want to cooperate tonight?
+  frame: gen-015
+  words:
+  - samarbeta
+- type: listen_choose
+  sv: Vill du samarbeta ikväll?
+  answer: Do you want to cooperate tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to cooperate tonight?
+  - When do you cooperate?
+  - We can cooperate tomorrow.
+  frame: gen-016
+  words:
+  - samarbeta
+- type: listen_choose
+  sv: Samarbetar du idag?
+  answer: Are you going to cooperate today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to cooperate today?
+  - When do you cooperate?
+  - We can cooperate tomorrow.
+  frame: gen-013
+  words:
+  - samarbeta
+- type: inflect
+  answer: samarbeta
+  grammar:
+  - imperative
+  lemma: samarbeta
+  form: imp
+  words:
+  - samarbeta
+- type: inflect
+  answer: hälsningar
+  grammar:
+  - plural_indef
+  lemma: hälsning
+  form: pl
+  words:
+  - hälsning
+- type: inflect
+  answer: ett brev
+  grammar:
+  - en_ett
+  lemma: brev
+  form: a
+  words:
+  - brev
+- type: inflect
+  answer: ett ansvar
+  grammar:
+  - en_ett
+  lemma: ansvar
+  form: a
+  words:
+  - ansvar
+- type: inflect
+  answer: kontaktade
+  grammar:
+  - past_tense
+  lemma: kontakta
+  form: past
+  words:
+  - kontakta
+- type: inflect
+  answer: intressen
+  grammar:
+  - plural_indef
+  lemma: intresse
+  form: pl
+  words:
+  - intresse
+- type: inflect
+  answer: målen
+  grammar:
+  - plural_def
+  lemma: mål
+  form: pl_def
+  words:
+  - mål
+- type: inflect
+  answer: personer
+  grammar:
+  - plural_indef
+  lemma: person
+  form: pl
+  words:
+  - person

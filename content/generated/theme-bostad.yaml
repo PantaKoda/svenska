@@ -1073,3 +1073,515 @@ items:
   form: past
   words:
   - hända
+- type: cloze
+  sv: Har du ___?
+  en: Do you have a contract?
+  answer: ett kontrakt
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  hint: kontrakt
+  frame: gen-002
+  words:
+  - kontrakt
+- type: cloze
+  sv: Jag vill ha ___.
+  en: I want an advertisement.
+  answer: en annons
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  hint: annons
+  frame: gen-008
+  words:
+  - annons
+- type: cloze
+  sv: Var är ___?
+  en: Where is the contract?
+  answer: kontraktet
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  hint: kontrakt
+  frame: gen-001
+  words:
+  - kontrakt
+- type: cloze
+  sv: Har du ___?
+  en: Do you have the advertisement?
+  answer: annonsen
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: annons
+  frame: gen-006
+  words:
+  - annons
+- type: cloze
+  sv: ___ är där.
+  en: The contract is there.
+  answer: Kontraktet
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: kontrakt
+  frame: gen-007
+  words:
+  - kontrakt
+- type: cloze
+  sv: Jag behöver ___.
+  en: I need an advertisement.
+  answer: en annons
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  hint: annons
+  frame: gen-005
+  words:
+  - annons
+- type: cloze
+  sv: Jag har inte ___.
+  en: I don't have the contract.
+  answer: kontraktet
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: kontrakt
+  frame: gen-004
+  words:
+  - kontrakt
+- type: cloze
+  sv: ___ är där.
+  en: The advertisement is there.
+  answer: Annonsen
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: annons
+  frame: gen-007
+  words:
+  - annons
+- type: dictation
+  sv: Jag vill ha ett kontrakt.
+  en: I want a contract.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - kontrakt
+- type: dictation
+  sv: Har du en annons?
+  en: Do you have an advertisement?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - annons
+- type: dictation
+  sv: Var är annonsen?
+  en: Where is the advertisement?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - annons
+- type: dictation
+  sv: Har du kontraktet?
+  en: Do you have the contract?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - kontrakt
+- type: dictation
+  sv: Jag behöver ett kontrakt.
+  en: I need a contract.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - kontrakt
+- type: dictation
+  sv: Jag har inte annonsen.
+  en: I don't have the advertisement.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - annons
+- type: dictation
+  sv: Har du ett kontrakt?
+  en: Do you have a contract?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - kontrakt
+- type: dictation
+  sv: Jag vill ha en annons.
+  en: I want an advertisement.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - annons
+- type: word_order
+  sv: Var är kontraktet?
+  en: Where is the contract?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - kontrakt
+- type: word_order
+  sv: Har du annonsen?
+  en: Do you have the advertisement?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - annons
+- type: word_order
+  sv: Kontraktet är där.
+  en: The contract is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - kontrakt
+- type: word_order
+  sv: Jag behöver en annons.
+  en: I need an advertisement.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - annons
+- type: word_order
+  sv: Jag har inte kontraktet.
+  en: I don't have the contract.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - kontrakt
+- type: word_order
+  sv: Annonsen är där.
+  en: The advertisement is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - annons
+- type: word_order
+  sv: Jag vill ha ett kontrakt.
+  en: I want a contract.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - kontrakt
+- type: word_order
+  sv: Har du en annons?
+  en: Do you have an advertisement?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - annons
+- type: translate
+  sv: Var är annonsen?
+  en: Where is the advertisement?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - annons
+- type: translate
+  sv: Har du kontraktet?
+  en: Do you have the contract?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - kontrakt
+- type: translate
+  sv: Jag behöver ett kontrakt.
+  en: I need a contract.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - kontrakt
+- type: translate
+  sv: Jag har inte annonsen.
+  en: I don't have the advertisement.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - annons
+- type: translate
+  sv: Har du ett kontrakt?
+  en: Do you have a contract?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - kontrakt
+- type: translate
+  sv: Jag vill ha en annons.
+  en: I want an advertisement.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - annons
+- type: translate
+  sv: Var är kontraktet?
+  en: Where is the contract?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - kontrakt
+- type: translate
+  sv: Har du annonsen?
+  en: Do you have the advertisement?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - annons
+- type: listen_choose
+  sv: Kontraktet är där.
+  answer: The contract is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The contract is there.
+  - The advertisement is there.
+  - Do you have a contract?
+  frame: gen-007
+  words:
+  - kontrakt
+- type: listen_choose
+  sv: Jag behöver en annons.
+  answer: I need an advertisement.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  options:
+  - I need an advertisement.
+  - I need a contract.
+  - I want an advertisement.
+  frame: gen-005
+  words:
+  - annons
+- type: listen_choose
+  sv: Jag har inte kontraktet.
+  answer: I don't have the contract.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the contract.
+  - I don't have the advertisement.
+  - Do you have a contract?
+  frame: gen-004
+  words:
+  - kontrakt
+- type: listen_choose
+  sv: Annonsen är där.
+  answer: The advertisement is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - The advertisement is there.
+  - The contract is there.
+  - I want an advertisement.
+  frame: gen-007
+  words:
+  - annons
+- type: listen_choose
+  sv: Jag vill ha ett kontrakt.
+  answer: I want a contract.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  options:
+  - I want a contract.
+  - I want an advertisement.
+  - Do you have a contract?
+  frame: gen-008
+  words:
+  - kontrakt
+- type: listen_choose
+  sv: Har du en annons?
+  answer: Do you have an advertisement?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  options:
+  - Do you have an advertisement?
+  - Do you have a contract?
+  - I want an advertisement.
+  frame: gen-002
+  words:
+  - annons
+- type: listen_choose
+  sv: Var är annonsen?
+  answer: Where is the advertisement?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the advertisement?
+  - Where is the contract?
+  - I want an advertisement.
+  frame: gen-001
+  words:
+  - annons
+- type: listen_choose
+  sv: Har du kontraktet?
+  answer: Do you have the contract?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Do you have the contract?
+  - Do you have the advertisement?
+  - Do you have a contract?
+  frame: gen-006
+  words:
+  - kontrakt
+- type: inflect
+  answer: en kvadratmeter
+  grammar:
+  - en_ett
+  lemma: kvadratmeter
+  form: a
+  words:
+  - kvadratmeter
+- type: inflect
+  answer: hissar
+  grammar:
+  - plural_indef
+  lemma: hiss
+  form: pl
+  words:
+  - hiss
+- type: inflect
+  answer: hyrorna
+  grammar:
+  - plural_def
+  lemma: hyra
+  form: pl_def
+  words:
+  - hyra
+- type: inflect
+  answer: annonser
+  grammar:
+  - plural_indef
+  lemma: annons
+  form: pl
+  words:
+  - annons
+- type: inflect
+  answer: kontraktet
+  grammar:
+  - def_singular
+  lemma: kontrakt
+  form: def
+  words:
+  - kontrakt
+- type: inflect
+  answer: området
+  grammar:
+  - def_singular
+  lemma: område
+  form: def
+  words:
+  - område
+- type: inflect
+  answer: ett förråd
+  grammar:
+  - en_ett
+  lemma: förråd
+  form: a
+  words:
+  - förråd
+- type: inflect
+  answer: visningarna
+  grammar:
+  - plural_def
+  lemma: visning
+  form: pl_def
+  words:
+  - visning

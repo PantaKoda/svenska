@@ -1,0 +1,112 @@
+id: b1-06
+level: B1
+theme: familjen
+title: "Traditioner"
+task: "Tell a longer story about a family holiday: who did what, with whom, and what happened in between."
+can_do: "I can tell a connected story with medan, trots att and tills, and say whose things are whose with sin."
+names: [Sara, Maria, Omar, Anna, Grekland, Sverige]
+
+new_words: [tradition, jul, midsommar, påsk, högtid, släkt, sambo, förälder, minne, barndom, julklapp,
+            älska, växa, dansa, sjunga, skild, sin, medan, trots, även, tills]
+new_grammar: [possessive_sin, conjunctions_advanced]
+
+phrases:
+  - { sv: "God jul!", en: "Merry Christmas!" }
+  - { sv: "Glad midsommar!", en: "Happy Midsummer!" }
+  - { sv: "Glad påsk!", en: "Happy Easter!" }
+  - { sv: "Grattis på födelsedagen!", en: "Happy birthday!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Hur firar du jul?",                                              en: "How do you celebrate Christmas?" }
+  - { speaker: du,   sv: "Med min sambo och hennes släkt. Det är en stor högtid för dem.", en: "With my partner and her relatives. It is a big holiday for them." }
+  - { speaker: Sara, sv: "Vad gör ni?",                                                    en: "What do you do?" }
+  - { speaker: du,   sv: "Medan vi lagar mat, öppnar barnen sina julklappar.",             en: "While we cook, the children open their Christmas presents." }
+  - { speaker: Sara, sv: "Firade du jul när du växte upp?",                                en: "Did you celebrate Christmas when you were growing up?" }
+  - { speaker: du,   sv: "Nej, men vi firade påsk. Det är mitt bästa minne från min barndom.", en: "No, but we celebrated Easter. It is my best memory from my childhood." }
+  - { speaker: Sara, sv: "Och midsommar?",                                                 en: "And Midsummer?" }
+  - { speaker: du,   sv: "Jag älskar midsommar! Vi dansar och sjunger, trots att det ofta regnar.", en: "I love Midsummer! We dance and sing, although it often rains." }
+  - { speaker: Sara, sv: "Stannar ni länge?",                                              en: "Do you stay long?" }
+  - { speaker: du,   sv: "Ja, tills alla har gått hem. Även om jag är trött!",             en: "Yes, until everyone has gone home. Even if I am tired!" }
+
+exercises:
+  # sin, sitt, sina or hans, hennes, deras?
+  - { type: cloze, sv: "Hon firar jul med ___ familj.", hint: sin, answer: sin, en: "She celebrates Christmas with her (own) family.",
+      grammar: [possessive_sin] }
+  - { type: cloze, sv: "Han träffar ___ föräldrar varje sommar.", hint: sin, answer: sina, en: "He meets his (own) parents every summer.",
+      grammar: [possessive_sin] }
+  - { type: cloze, sv: "Maria älskar ___ barn.", hint: sin, answer: sitt, en: "Maria loves her (own) child.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Omar är gift. ___ fru heter Maria.", answer: Hans, en: "Omar is married. His wife's name is Maria.",
+      grammar: [possessive_sin] }
+
+  # medan, trots att, tills, även om
+  - { type: cloze, sv: "Vi dansar ___ att det regnar.", answer: trots, en: "We dance although it is raining.", grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Barnen sjunger ___ vi lagar mat.", answer: medan, en: "The children sing while we cook.", grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Jag stannar ___ alla har gått hem.", answer: tills, en: "I am staying until everyone has gone home.",
+      grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Jag kommer ___ om jag är trött.", answer: även, en: "I will come even if I am tired.", grammar: [conjunctions_advanced] }
+
+  # build the sentence
+  - { type: word_order, sv: "Medan vi lagar mat, öppnar barnen sina julklappar.", en: "While we cook, the children open their Christmas presents.",
+      grammar: [conjunctions_advanced, possessive_sin] }
+  - { type: word_order, sv: "Vi firar midsommar trots att det inte är varmt.", en: "We celebrate Midsummer although it is not warm.",
+      grammar: [conjunctions_advanced] }
+  - { type: word_order, sv: "Jag växte upp i en liten stad.", en: "I grew up in a small town.", grammar: [past_tense] }
+  - { type: word_order, sv: "Hon bor med sin sambo och hans barn.", en: "She lives with her partner and his children.", grammar: [possessive_sin] }
+
+  # listen and write
+  - { type: dictation, sv: "Jul är en stor tradition i min släkt.", en: "Christmas is a big tradition in my family." }
+  - { type: dictation, sv: "Mina föräldrar är skilda.", en: "My parents are divorced." }
+  - { type: dictation, sv: "Det är mitt bästa minne från min barndom.", en: "It is my best memory from my childhood." }
+  - { type: dictation, sv: "Vi sjunger och dansar på midsommar.", en: "We sing and dance at Midsummer." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which holiday do you celebrate?", sv: "Vilken högtid firar du?" }
+  - { type: translate, en: "He loves his (own) children.", sv: "Han älskar sina barn.", grammar: [possessive_sin] }
+  - { type: translate, en: "Easter is a holiday.", sv: "Påsk är en högtid." }
+  - { type: translate, en: "I am waiting until you come.", sv: "Jag väntar tills du kommer.", grammar: [conjunctions_advanced] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Anna träffar sin bror, och sedan hans fru.", en: "Anna meets her own brother, and then his wife.",
+      options: ["Anna meets her own brother, and then his wife.", "Anna meets another woman's brother, and then her wife.", "Anna's brother meets his own wife."],
+      answer: "Anna meets her own brother, and then his wife." }
+  - { type: listen_choose, sv: "Vi gick ut trots att det regnade.", en: "We went out although it was raining.",
+      options: ["We went out although it was raining.", "We went out because it was raining.", "We did not go out because it was raining."],
+      answer: "We went out although it was raining." }
+  - { type: listen_choose, sv: "Hur firar du din födelsedag?", en: "How do you celebrate your birthday?",
+      options: ["Med min släkt och mina vänner.", "Tills alla har gått hem.", "God jul!"], answer: "Med min släkt och mina vänner." }
+
+  # words from earlier units
+  - { type: translate, en: "If I had no relatives here, I would celebrate Christmas alone.", sv: "Om jag inte hade någon släkt här, skulle jag fira jul ensam.",
+      accept: ["Om jag inte hade släkt här, skulle jag fira jul ensam."], grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Ingen hade berättat för mig om traditionen.", en: "Nobody had told me about the tradition.",
+      grammar: [pluperfect, indefinite_pronouns] }
+  - { type: dictation, sv: "Det var en person som jag inte hade träffat förut.", en: "It was a person that I had not met before.",
+      grammar: [relative_clause, pluperfect] }
+  - { type: cloze, sv: "Maten ___ medan gästerna dansar.", hint: laga, answer: lagas, en: "The food is cooked while the guests dance.",
+      grammar: [passive_s] }
+
+# The task itself: Sara asks about your Christmas.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Hur firar du jul?", en: "How do you celebrate Christmas?" }
+    - { speaker: du, en: "Say that you celebrate with your partner and her relatives.", answer: "Jag firar med min sambo och hennes släkt.",
+        accept: ["Med min sambo och hennes släkt.", "Jag firar jul med min sambo och hennes släkt."] }
+    - { speaker: Sara, sv: "Vad gör barnen?", en: "What do the children do?" }
+    - { speaker: du, en: "Say that they open their presents while you (all) cook.",
+        options: ["De öppnar sina julklappar medan vi lagar mat.", "De öppnar deras julklappar medan vi lagar mat.", "De öppnar sina julklappar medan lagar vi mat."],
+        answer: "De öppnar sina julklappar medan vi lagar mat." }
+    - { speaker: Sara, sv: "Dansar ni på midsommar?", en: "Do you dance at Midsummer?" }
+    - { speaker: du, en: "Say yes, although it often rains.",
+        options: ["Ja, trots att det ofta regnar.", "Ja, trots att det regnar ofta inte.", "Ja, trots det ofta regnar att."],
+        answer: "Ja, trots att det ofta regnar." }
+    - { speaker: Sara, sv: "Var växte du upp?", en: "Where did you grow up?" }
+    - { speaker: du, en: "Say that you grew up in Greece.", answer: "Jag växte upp i Grekland.", accept: ["I Grekland."] }
+    - { speaker: Sara, sv: "God jul då!", en: "Merry Christmas then!" }
+    - { speaker: du, en: "Wish her a merry Christmas.", answer: "God jul!" }
+
+speaking_prompt: "Say aloud: a holiday you celebrate, who is there, what each person does, and one memory from your childhood."

@@ -1,0 +1,111 @@
+id: b1-01
+level: B1
+theme: jag
+title: "Presentera dig"
+task: "Write a short letter to an employer: who you are, what you have done and what you hope for."
+can_do: "I can present myself in writing and describe people and places with som and där."
+names: [Sara, Ali, Grekland]
+
+new_words: [person, ansvar, mål, intresse, brev, hälsning, samarbeta, kontakta,
+            självständig, social, positiv, vänlig,
+            beskriva, berätta, förstå, tänka, hoppas, själv, eller, bara, väldigt,
+            sak, plats, exempel, svar]
+new_grammar: [relative_clause]
+
+phrases:
+  - { sv: "Med vänlig hälsning", en: "Kind regards" }
+  - { sv: "Jag ser fram emot ditt svar.", en: "I look forward to your reply." }
+  - { sv: "Tack på förhand!", en: "Thanks in advance!" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Vad skriver du?",                                             en: "What are you writing?" }
+  - { speaker: du,   sv: "Ett brev till ett företag som söker en kock. Kan du hjälpa mig?", en: "A letter to a company that is looking for a cook. Can you help me?" }
+  - { speaker: Sara, sv: "Gärna. Först ska du berätta vem du är.",                      en: "Gladly. First you should say who you are." }
+  - { speaker: du,   sv: "Jag är en person som tycker om att samarbeta.",               en: "I am a person who likes working with others." }
+  - { speaker: Sara, sv: "Bra. Beskriv också din erfarenhet.",                          en: "Good. Describe your experience too." }
+  - { speaker: du,   sv: "Jag har arbetat på en restaurang där jag hade mycket ansvar.", en: "I have worked at a restaurant where I had a lot of responsibility." }
+  - { speaker: Sara, sv: "Är du självständig?",                                         en: "Are you independent?" }
+  - { speaker: du,   sv: "Ja, men jag är också social. Jag tänker skriva det.",         en: "Yes, but I am sociable too. I am going to write that." }
+  - { speaker: Sara, sv: "Vad är ditt mål?",                                            en: "What is your goal?" }
+  - { speaker: du,   sv: "Jag hoppas få ett jobb där jag kan lära mig nya saker.",      en: "I hope to get a job where I can learn new things." }
+  - { speaker: Sara, sv: "Glöm inte en hälsning, och berätta hur de kan kontakta dig.", en: "Don't forget a greeting, and say how they can contact you." }
+
+exercises:
+  # som or där?
+  - { type: cloze, sv: "Jag är en person ___ tycker om att samarbeta.", answer: som, en: "I am a person who likes working with others.",
+      grammar: [relative_clause] }
+  - { type: cloze, sv: "Jag söker ett jobb ___ jag kan använda mina språk.", answer: där, en: "I am looking for a job where I can use my languages.",
+      grammar: [relative_clause] }
+  - { type: cloze, sv: "Det är chefen ___ ringde igår.", answer: som, en: "That is the boss who called yesterday.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Restaurangen ___ jag arbetade var liten.", answer: där, en: "The restaurant where I worked was small.",
+      grammar: [relative_clause] }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag har en chef som alltid hjälper mig.", en: "I have a boss who always helps me.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Jag hoppas få ett jobb där jag trivs.", en: "I hope to get a job where I am happy.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Det är en sak som jag inte förstår.", en: "That is a thing that I do not understand.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Vill du arbeta heltid eller bara på helgen?", en: "Do you want to work full time or only at the weekend?" }
+
+  # listen and write
+  - { type: dictation, sv: "Jag skriver ett brev till ett företag.", en: "I am writing a letter to a company." }
+  - { type: dictation, sv: "Jag har mycket ansvar på mitt jobb.", en: "I have a lot of responsibility at my job." }
+  - { type: dictation, sv: "Mitt mål är att bli kock.", en: "My goal is to become a cook." }
+  - { type: dictation, sv: "Jag är självständig, positiv och social.", en: "I am independent, positive and sociable." }
+  - { type: dictation, sv: "Jag är väldigt intresserad av jobbet.", en: "I am very interested in the job." }
+
+  # say it in Swedish
+  - { type: translate, en: "I am a person who likes working with customers.", sv: "Jag är en person som tycker om att arbeta med kunder.",
+      accept: ["Jag är en person som gillar att arbeta med kunder.", "Jag är en person som tycker om att jobba med kunder."],
+      grammar: [relative_clause] }
+  - { type: translate, en: "I hope to get an answer soon.", sv: "Jag hoppas få svar snart.",
+      accept: ["Jag hoppas att få svar snart.", "Jag hoppas få ett svar snart.", "Jag hoppas att jag får svar snart."] }
+  - { type: translate, en: "Can you describe yourself?", sv: "Kan du beskriva dig själv?" }
+  - { type: translate, en: "For example, I speak 3 languages.", sv: "Till exempel talar jag 3 språk.", accept: ["Jag talar till exempel 3 språk."] }
+  - { type: translate, en: "I am thinking of applying for the job.", sv: "Jag tänker söka jobbet." }
+  - { type: translate, en: "You can contact me on Monday.", sv: "Du kan kontakta mig på måndag." }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Jag söker en plats där jag kan samarbeta med mina kollegor.", en: "I am looking for a position where I can work together with my colleagues.",
+      options: ["I am looking for a position where I can work together with my colleagues.", "I am looking for a position where I can work on my own.", "I have a position where I work with my colleagues."],
+      answer: "I am looking for a position where I can work together with my colleagues." }
+  - { type: listen_choose, sv: "Berätta om ett intresse som du har.", en: "Tell me about an interest that you have.",
+      options: ["Jag tycker om fotboll.", "Jag heter Ali.", "Med vänlig hälsning."], answer: "Jag tycker om fotboll." }
+
+  # write your own text
+  - { type: free_write, en: "Write a short letter (4 to 6 sentences) to a company. Say who you are, what experience you have and what you hope for.",
+      checklist: ["I say who I am, with som or där at least once.", "I describe my experience (har + supine).", "I say what I hope for.", "I end with a greeting."],
+      sv: "Hej! Jag heter Ali och jag är en person som tycker om att samarbeta. Jag har arbetat som kock i 5 år på en restaurang där jag hade mycket ansvar. Jag är självständig och jag lär mig snabbt. Jag hoppas få ett jobb där jag kan lära mig nya saker. Jag ser fram emot ditt svar. Med vänlig hälsning, Ali",
+      grammar: [relative_clause, perfect_tense] }
+
+  # words from earlier units
+  - { type: translate, en: "I have studied at a university that is in Greece.", sv: "Jag har studerat på ett universitet som finns i Grekland.",
+      accept: ["Jag har studerat på ett universitet som är i Grekland."], grammar: [relative_clause, perfect_tense] }
+  - { type: word_order, sv: "Det är grannen som har tappat sin nyckel.", en: "It is the neighbour who has lost his key.", grammar: [relative_clause] }
+  - { type: dictation, sv: "Apoteket där jag köper min medicin stänger klockan 6.", en: "The pharmacy where I buy my medicine closes at 6.",
+      grammar: [relative_clause] }
+
+# The task itself: Sara asks, and you say what your letter says.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Vem är du? Beskriv dig själv.", en: "Who are you? Describe yourself." }
+    - { speaker: du, en: "Say that you are a person who likes working with others.",
+        options: ["Jag är en person som tycker om att samarbeta.", "Jag är en person där tycker om att samarbeta.", "Jag är en person som tycker om samarbetar."],
+        answer: "Jag är en person som tycker om att samarbeta." }
+    - { speaker: Sara, sv: "Vilken erfarenhet har du?", en: "What experience do you have?" }
+    - { speaker: du, en: "Say that you have worked as a cook for 5 years.", answer: "Jag har arbetat som kock i 5 år.",
+        accept: ["Jag har jobbat som kock i 5 år."] }
+    - { speaker: Sara, sv: "Vad hoppas du?", en: "What do you hope for?" }
+    - { speaker: du, en: "Say that you hope to get a job where you are happy.",
+        options: ["Jag hoppas få ett jobb där jag trivs.", "Jag hoppas få ett jobb som jag trivs.", "Jag hoppas få ett jobb där trivs jag."],
+        answer: "Jag hoppas få ett jobb där jag trivs." }
+    - { speaker: Sara, sv: "Hur kan de kontakta dig?", en: "How can they contact you?" }
+    - { speaker: du, en: "Say that they can call you.", answer: "De kan ringa mig.", accept: ["De kan ringa."] }
+    - { speaker: Sara, sv: "Bra. Och en hälsning?", en: "Good. And a greeting?" }
+    - { speaker: du, en: "End the letter: Kind regards.", answer: "Med vänlig hälsning" }
+
+speaking_prompt: "Say aloud: present yourself in five sentences, with som and där, as if you were at a job interview."

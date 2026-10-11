@@ -43,3 +43,16 @@ words:
   - { lemma: mat,    pos: noun, gender: en, level: A2, gloss: food }
   - { lemma: tv,     pos: noun, gender: en, level: A2, gloss: TV, forms: { indef: tv, def: "tv:n" } }
   - { lemma: pigg,   pos: adj,  level: A2, gloss: "alert, full of energy" }
+
+  # B1: then and now
+  - { lemma: vana,     pos: noun, gender: en,  level: B1, gloss: habit }
+  - { lemma: skillnad, pos: noun, gender: en,  level: B1, gloss: difference }
+  - { lemma: liv,      pos: noun, gender: ett, level: B1, gloss: "life; pl: lives" }
+  - { lemma: bil,      pos: noun, gender: en,  tags: [vehicle], level: B1, gloss: car }
+  - { lemma: vän,      pos: noun, gender: en,  tags: [person], level: B1, gloss: friend, forms: { pl: vänner } }
+  - { lemma: jämföra,  pos: verb, level: B1, gloss: to compare }
+  - { lemma: röka,     pos: verb, tags: [action_intrans], level: B1, gloss: to smoke }
+  - { lemma: sakna,    pos: verb, level: B1, gloss: to miss (someone) }
+  - { lemma: stressad, pos: adj,  level: B1, gloss: stressed }
+  - { lemma: frisk,    pos: adj,  level: B1, gloss: healthy }
+  - { lemma: ensam,    pos: adj,  level: B1, gloss: "alone, lonely" }

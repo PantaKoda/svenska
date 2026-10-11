@@ -845,3 +845,342 @@ items:
   form: pl
   words:
   - vecka
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to smoke today?
+  answer: Röker
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: röka
+  frame: gen-013
+  words:
+  - röka
+- type: cloze
+  sv: Vi kan ___ imorgon.
+  en: We can smoke tomorrow.
+  answer: röka
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  hint: röka
+  frame: gen-015
+  words:
+  - röka
+- type: cloze
+  sv: När ___ du?
+  en: When do you smoke?
+  answer: röker
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: röka
+  frame: gen-014
+  words:
+  - röka
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to smoke tonight?
+  answer: röka
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: röka
+  frame: gen-016
+  words:
+  - röka
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to smoke today.
+  answer: röker
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: röka
+  frame: gen-012
+  words:
+  - röka
+- type: dictation
+  sv: Röker du idag?
+  en: Are you going to smoke today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - röka
+- type: dictation
+  sv: Vi kan röka imorgon.
+  en: We can smoke tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - röka
+- type: dictation
+  sv: När röker du?
+  en: When do you smoke?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - röka
+- type: dictation
+  sv: Vill du röka ikväll?
+  en: Do you want to smoke tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - röka
+- type: dictation
+  sv: Jag röker inte idag.
+  en: I am not going to smoke today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - röka
+- type: word_order
+  sv: Röker du idag?
+  en: Are you going to smoke today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - röka
+- type: word_order
+  sv: Vi kan röka imorgon.
+  en: We can smoke tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - röka
+- type: word_order
+  sv: När röker du?
+  en: When do you smoke?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - röka
+- type: word_order
+  sv: Vill du röka ikväll?
+  en: Do you want to smoke tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - röka
+- type: word_order
+  sv: Jag röker inte idag.
+  en: I am not going to smoke today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - röka
+- type: translate
+  sv: Röker du idag?
+  en: Are you going to smoke today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  frame: gen-013
+  words:
+  - röka
+- type: translate
+  sv: Vi kan röka imorgon.
+  en: We can smoke tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - röka
+- type: translate
+  sv: När röker du?
+  en: When do you smoke?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  frame: gen-014
+  words:
+  - röka
+- type: translate
+  sv: Vill du röka ikväll?
+  en: Do you want to smoke tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  frame: gen-016
+  words:
+  - röka
+- type: translate
+  sv: Jag röker inte idag.
+  en: I am not going to smoke today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  frame: gen-012
+  words:
+  - röka
+- type: listen_choose
+  sv: Röker du idag?
+  answer: Are you going to smoke today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to smoke today?
+  - We can smoke tomorrow.
+  - When do you smoke?
+  frame: gen-013
+  words:
+  - röka
+- type: listen_choose
+  sv: Vi kan röka imorgon.
+  answer: We can smoke tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can smoke tomorrow.
+  - Are you going to smoke today?
+  - When do you smoke?
+  frame: gen-015
+  words:
+  - röka
+- type: listen_choose
+  sv: När röker du?
+  answer: When do you smoke?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you smoke?
+  - Are you going to smoke today?
+  - We can smoke tomorrow.
+  frame: gen-014
+  words:
+  - röka
+- type: listen_choose
+  sv: Vill du röka ikväll?
+  answer: Do you want to smoke tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to smoke tonight?
+  - Are you going to smoke today?
+  - We can smoke tomorrow.
+  frame: gen-016
+  words:
+  - röka
+- type: listen_choose
+  sv: Jag röker inte idag.
+  answer: I am not going to smoke today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to smoke today.
+  - Are you going to smoke today?
+  - We can smoke tomorrow.
+  frame: gen-012
+  words:
+  - röka
+- type: inflect
+  answer: röker
+  grammar:
+  - present_tense
+  lemma: röka
+  form: pres
+  words:
+  - röka
+- type: inflect
+  answer: jämförde
+  grammar:
+  - past_tense
+  lemma: jämföra
+  form: past
+  words:
+  - jämföra
+- type: inflect
+  answer: sakna
+  grammar:
+  - imperative
+  lemma: sakna
+  form: imp
+  words:
+  - sakna
+- type: inflect
+  answer: liv
+  grammar:
+  - plural_indef
+  lemma: liv
+  form: pl
+  words:
+  - liv
+- type: inflect
+  answer: vanorna
+  grammar:
+  - plural_def
+  lemma: vana
+  form: pl_def
+  words:
+  - vana
+- type: inflect
+  answer: skillnaderna
+  grammar:
+  - plural_def
+  lemma: skillnad
+  form: pl_def
+  words:
+  - skillnad
+- type: inflect
+  answer: bilar
+  grammar:
+  - plural_indef
+  lemma: bil
+  form: pl
+  words:
+  - bil
+- type: inflect
+  answer: vänner
+  grammar:
+  - plural_indef
+  lemma: vän
+  form: pl
+  words:
+  - vän

@@ -1034,3 +1034,235 @@ items:
   form: def
   words:
   - bröst
+- type: cloze
+  sv: Har du ont i ___?
+  en: Does your heart hurt?
+  answer: hjärtat
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  hint: hjärta
+  frame: hal-02
+  words:
+  - hjärta
+- type: cloze
+  sv: Jag har ont i ___.
+  en: My heart hurts.
+  answer: hjärtat
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: hjärta
+  frame: hal-01
+  words:
+  - hjärta
+- type: cloze
+  sv: Jag har inte ont i ___.
+  en: My heart does not hurt.
+  answer: hjärtat
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  hint: hjärta
+  frame: hal-03
+  words:
+  - hjärta
+- type: dictation
+  sv: Har du ont i hjärtat?
+  en: Does your heart hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - hjärta
+- type: dictation
+  sv: Jag har ont i hjärtat.
+  en: My heart hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - hjärta
+- type: dictation
+  sv: Jag har inte ont i hjärtat.
+  en: My heart does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - hjärta
+- type: word_order
+  sv: Har du ont i hjärtat?
+  en: Does your heart hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - hjärta
+- type: word_order
+  sv: Jag har ont i hjärtat.
+  en: My heart hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - hjärta
+- type: word_order
+  sv: Jag har inte ont i hjärtat.
+  en: My heart does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - hjärta
+- type: translate
+  sv: Har du ont i hjärtat?
+  en: Does your heart hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: hal-02
+  words:
+  - hjärta
+- type: translate
+  sv: Jag har ont i hjärtat.
+  en: My heart hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: hal-01
+  words:
+  - hjärta
+- type: translate
+  sv: Jag har inte ont i hjärtat.
+  en: My heart does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: hal-03
+  words:
+  - hjärta
+- type: listen_choose
+  sv: Har du ont i hjärtat?
+  answer: Does your heart hurt?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  options:
+  - Does your heart hurt?
+  - My heart hurts.
+  - My heart does not hurt.
+  frame: hal-02
+  words:
+  - hjärta
+- type: listen_choose
+  sv: Jag har ont i hjärtat.
+  answer: My heart hurts.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  options:
+  - My heart hurts.
+  - Does your heart hurt?
+  - My heart does not hurt.
+  frame: hal-01
+  words:
+  - hjärta
+- type: listen_choose
+  sv: Jag har inte ont i hjärtat.
+  answer: My heart does not hurt.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - My heart does not hurt.
+  - Does your heart hurt?
+  - My heart hurts.
+  frame: hal-03
+  words:
+  - hjärta
+- type: inflect
+  answer: besvär
+  grammar:
+  - plural_indef
+  lemma: besvär
+  form: pl
+  words:
+  - besvär
+- type: inflect
+  answer: värkarna
+  grammar:
+  - plural_def
+  lemma: värk
+  form: pl_def
+  words:
+  - värk
+- type: inflect
+  answer: symtomet
+  grammar:
+  - def_singular
+  lemma: symtom
+  form: def
+  words:
+  - symtom
+- type: inflect
+  answer: undersökningen
+  grammar:
+  - def_singular
+  lemma: undersökning
+  form: def
+  words:
+  - undersökning
+- type: inflect
+  answer: ett resultat
+  grammar:
+  - en_ett
+  lemma: resultat
+  form: a
+  words:
+  - resultat
+- type: inflect
+  answer: ett råd
+  grammar:
+  - en_ett
+  lemma: råd
+  form: a
+  words:
+  - råd
+- type: inflect
+  answer: ett prov
+  grammar:
+  - en_ett
+  lemma: prov
+  form: a
+  words:
+  - prov
+- type: inflect
+  answer: smärtor
+  grammar:
+  - plural_indef
+  lemma: smärta
+  form: pl
+  words:
+  - smärta

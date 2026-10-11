@@ -1064,3 +1064,538 @@ items:
   form: pl_def
   words:
   - kilo
+- type: cloze
+  sv: ___ är smutsig.
+  en: The package is dirty.
+  answer: Förpackningen
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  hint: förpackning
+  frame: gen-003
+  words:
+  - förpackning
+  - smutsig
+- type: cloze
+  sv: ___ du idag?
+  en: Are you going to complain today?
+  answer: Klagar
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  hint: klaga
+  frame: gen-013
+  words:
+  - klaga
+- type: cloze
+  sv: Vi hittar inte ___.
+  en: We don't find the package.
+  answer: förpackningen
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  hint: förpackning
+  frame: gen-011
+  words:
+  - hitta
+  - förpackning
+- type: cloze
+  sv: När ___ du?
+  en: When do you complain?
+  answer: klagar
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  hint: klaga
+  frame: gen-014
+  words:
+  - klaga
+- type: cloze
+  sv: Jag hittade ___.
+  en: I found the package.
+  answer: förpackningen
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  hint: förpackning
+  frame: gen-021
+  words:
+  - hitta
+  - förpackning
+- type: cloze
+  sv: Vill du ___ ikväll?
+  en: Do you want to complain tonight?
+  answer: klaga
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  hint: klaga
+  frame: gen-016
+  words:
+  - klaga
+- type: cloze
+  sv: Jag köper ___.
+  en: I buy the package.
+  answer: förpackningen
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  hint: förpackning
+  frame: gen-010
+  words:
+  - köpa
+  - förpackning
+- type: cloze
+  sv: Jag ___ inte idag.
+  en: I am not going to complain today.
+  answer: klagar
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  hint: klaga
+  frame: gen-012
+  words:
+  - klaga
+- type: dictation
+  sv: Kan du köpa förpackningen?
+  en: Can you buy the package?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - köpa
+  - förpackning
+- type: dictation
+  sv: Vi kan klaga imorgon.
+  en: We can complain tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  frame: gen-015
+  words:
+  - klaga
+- type: dictation
+  sv: Vad kostar förpackningen?
+  en: What does the package cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: mat-01
+  words:
+  - förpackning
+- type: dictation
+  sv: Jag har inte förpackningen.
+  en: I don't have the package.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  frame: gen-004
+  words:
+  - förpackning
+- type: dictation
+  sv: Var är förpackningen?
+  en: Where is the package?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  frame: gen-001
+  words:
+  - förpackning
+- type: dictation
+  sv: Jag vill ha en förpackning.
+  en: I want a package.
+  grammar:
+  - modal_vill_kan_ska
+  - en_ett
+  review: true
+  frame: gen-008
+  words:
+  - förpackning
+- type: dictation
+  sv: Har du en förpackning?
+  en: Do you have a package?
+  grammar:
+  - yes_no_question
+  - en_ett
+  review: true
+  frame: gen-002
+  words:
+  - förpackning
+- type: dictation
+  sv: Har du förpackningen?
+  en: Do you have the package?
+  grammar:
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-006
+  words:
+  - förpackning
+- type: word_order
+  sv: Jag behöver en förpackning.
+  en: I need a package.
+  grammar:
+  - present_tense
+  - en_ett
+  review: true
+  frame: gen-005
+  words:
+  - förpackning
+- type: word_order
+  sv: Förpackningen är där.
+  en: The package is there.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-007
+  words:
+  - förpackning
+- type: word_order
+  sv: Förpackningen är liten.
+  en: The package is small.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - liten
+- type: word_order
+  sv: Vi köper inte förpackningen.
+  en: We don't buy the package.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - köpa
+  - förpackning
+- type: word_order
+  sv: Jag köpte förpackningen.
+  en: I bought the package.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - köpa
+  - förpackning
+- type: word_order
+  sv: Kan du hitta förpackningen?
+  en: Can you find the package?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - hitta
+  - förpackning
+- type: word_order
+  sv: Jag tar förpackningen.
+  en: I take the package.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - ta
+  - förpackning
+- type: word_order
+  sv: Förpackningen är stor.
+  en: The package is big.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - stor
+- type: translate
+  sv: Vi tar inte förpackningen.
+  en: We don't take the package.
+  grammar:
+  - negation_inte
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-011
+  words:
+  - ta
+  - förpackning
+- type: translate
+  sv: Kan du ta förpackningen?
+  en: Can you take the package?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  - def_singular
+  review: true
+  frame: gen-009
+  words:
+  - ta
+  - förpackning
+- type: translate
+  sv: Jag hittar förpackningen.
+  en: I find the package.
+  grammar:
+  - present_tense
+  - def_singular
+  review: true
+  frame: gen-010
+  words:
+  - hitta
+  - förpackning
+- type: translate
+  sv: Jag tog förpackningen.
+  en: I took the package.
+  grammar:
+  - past_tense
+  - def_singular
+  review: true
+  frame: gen-021
+  words:
+  - ta
+  - förpackning
+- type: translate
+  sv: Förpackningen är ren.
+  en: The package is clean.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - ren
+- type: translate
+  sv: Förpackningen är gammal.
+  en: The package is old.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - gammal
+- type: translate
+  sv: Förpackningen är ny.
+  en: The package is new.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - ny
+- type: translate
+  sv: Förpackningen är trasig.
+  en: The package is broken.
+  grammar:
+  - adjective_agreement_basic
+  - def_singular
+  review: true
+  frame: gen-003
+  words:
+  - förpackning
+  - trasig
+- type: listen_choose
+  sv: Klagar du idag?
+  answer: Are you going to complain today?
+  grammar:
+  - present_tense
+  - yes_no_question
+  review: true
+  options:
+  - Are you going to complain today?
+  - When do you complain?
+  - Do you want to complain tonight?
+  frame: gen-013
+  words:
+  - klaga
+- type: listen_choose
+  sv: När klagar du?
+  answer: When do you complain?
+  grammar:
+  - present_tense
+  - wh_question
+  review: true
+  options:
+  - When do you complain?
+  - Are you going to complain today?
+  - Do you want to complain tonight?
+  frame: gen-014
+  words:
+  - klaga
+- type: listen_choose
+  sv: Vill du klaga ikväll?
+  answer: Do you want to complain tonight?
+  grammar:
+  - modal_vill_kan_ska
+  - yes_no_question
+  review: true
+  options:
+  - Do you want to complain tonight?
+  - Are you going to complain today?
+  - When do you complain?
+  frame: gen-016
+  words:
+  - klaga
+- type: listen_choose
+  sv: Jag klagar inte idag.
+  answer: I am not going to complain today.
+  grammar:
+  - present_tense
+  - negation_inte
+  review: true
+  options:
+  - I am not going to complain today.
+  - Are you going to complain today?
+  - When do you complain?
+  frame: gen-012
+  words:
+  - klaga
+- type: listen_choose
+  sv: Vi kan klaga imorgon.
+  answer: We can complain tomorrow.
+  grammar:
+  - modal_vill_kan_ska
+  review: true
+  options:
+  - We can complain tomorrow.
+  - Are you going to complain today?
+  - When do you complain?
+  frame: gen-015
+  words:
+  - klaga
+- type: listen_choose
+  sv: Vad kostar förpackningen?
+  answer: What does the package cost?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - What does the package cost?
+  - The package is dirty.
+  - We don't find the package.
+  frame: mat-01
+  words:
+  - förpackning
+- type: listen_choose
+  sv: Jag har inte förpackningen.
+  answer: I don't have the package.
+  grammar:
+  - negation_inte
+  - def_singular
+  review: true
+  options:
+  - I don't have the package.
+  - The package is dirty.
+  - We don't find the package.
+  frame: gen-004
+  words:
+  - förpackning
+- type: listen_choose
+  sv: Var är förpackningen?
+  answer: Where is the package?
+  grammar:
+  - wh_question
+  - def_singular
+  review: true
+  options:
+  - Where is the package?
+  - The package is dirty.
+  - We don't find the package.
+  frame: gen-001
+  words:
+  - förpackning
+- type: inflect
+  answer: pengar
+  grammar:
+  - plural_indef
+  lemma: pengar
+  form: pl
+  words:
+  - pengar
+- type: inflect
+  answer: köpen
+  grammar:
+  - plural_def
+  lemma: köp
+  form: pl_def
+  words:
+  - köp
+- type: inflect
+  answer: en produkt
+  grammar:
+  - en_ett
+  lemma: produkt
+  form: a
+  words:
+  - produkt
+- type: inflect
+  answer: ett datum
+  grammar:
+  - en_ett
+  lemma: datum
+  form: a
+  words:
+  - datum
+- type: inflect
+  answer: en förpackning
+  grammar:
+  - en_ett
+  lemma: förpackning
+  form: a
+  words:
+  - förpackning
+- type: inflect
+  answer: smakade
+  grammar:
+  - past_tense
+  lemma: smaka
+  form: past
+  words:
+  - smaka
+- type: inflect
+  answer: luktar
+  grammar:
+  - present_tense
+  lemma: lukta
+  form: pres
+  words:
+  - lukta
+- type: inflect
+  answer: garantierna
+  grammar:
+  - plural_def
+  lemma: garanti
+  form: pl_def
+  words:
+  - garanti

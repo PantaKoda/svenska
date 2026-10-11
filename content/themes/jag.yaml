@@ -32,3 +32,17 @@ words:
   - { lemma: språk,       pos: noun, gender: ett, level: A2, gloss: language }
   - { lemma: svår,        pos: adj,  level: A2, gloss: "difficult, hard" }
   - { lemma: lätt,        pos: adj,  level: A2, gloss: easy }
+
+  # B1: presenting yourself in writing
+  - { lemma: person,       pos: noun, gender: en,  level: B1, gloss: person }
+  - { lemma: ansvar,       pos: noun, gender: ett, level: B1, gloss: responsibility }
+  - { lemma: mål,          pos: noun, gender: ett, level: B1, gloss: goal }
+  - { lemma: intresse,     pos: noun, gender: ett, level: B1, gloss: interest }
+  - { lemma: brev,         pos: noun, gender: ett, tags: [document], level: B1, gloss: letter }
+  - { lemma: hälsning,     pos: noun, gender: en,  level: B1, gloss: greeting }
+  - { lemma: samarbeta,    pos: verb, tags: [action_intrans], level: B1, gloss: "to cooperate, to work together" }
+  - { lemma: kontakta,     pos: verb, level: B1, gloss: to contact }
+  - { lemma: självständig, pos: adj,  level: B1, gloss: independent }
+  - { lemma: social,       pos: adj,  level: B1, gloss: sociable }
+  - { lemma: positiv,      pos: adj,  level: B1, gloss: positive }
+  - { lemma: vänlig,       pos: adj,  level: B1, gloss: "kind, friendly" }

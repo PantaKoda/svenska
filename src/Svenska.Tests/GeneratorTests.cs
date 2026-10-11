@@ -286,14 +286,14 @@ public class GeneratorTests
     [Fact]
     public void A_session_draws_from_authored_and_generated_items()
     {
-        using var dir = Course(unitExtra: "exercises:\n  - { type: dictation, sv: \"Var finns osten?\" }\n  - { type: free_write }");
+        using var dir = Course(unitExtra: "exercises:\n  - { type: dictation, sv: \"Var finns osten?\" }\n  - { type: dialogue }");
         dir.Write("generated/a1-01.yaml", DrillGenerator.ToYaml(Generate(dir).File));
         var (course, _) = ContentLoader.Load(dir.Path);
 
         var pool = Svenska.Core.Exercises.ExerciseSession.Pool(course, course.Units[0]);
         var session = Svenska.Core.Exercises.ExerciseSession.Pick(pool, new Random(1), size: 5);
 
-        Assert.Equal(1 + course.Generated.Single(g => g.Unit == "a1-01").Items.Count, pool.Count);   // free_write is not playable
+        Assert.Equal(1 + course.Generated.Single(g => g.Unit == "a1-01").Items.Count, pool.Count);   // a dialogue is not a single item
         Assert.Equal(5, session.Distinct().Count());
         Assert.All(session, i => Assert.Contains(i, pool));
     }

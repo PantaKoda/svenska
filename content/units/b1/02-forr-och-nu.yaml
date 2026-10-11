@@ -1,0 +1,109 @@
+id: b1-02
+level: B1
+theme: vardag
+title: "Förr och nu"
+task: "Compare your life now with your life before: what you did, what you could and could not do, and what has changed."
+can_do: "I can talk about how things were before and what had already happened at a point in the past."
+names: [Sara, Grekland, Sverige]
+
+new_words: [förut, numera, fortfarande, nästan, så, ganska, tillsammans, annorlunda,
+            vana, skillnad, liv, bil, vän,
+            ändra, jämföra, röka, sakna, böra,
+            stressad, lugn, frisk, ensam]
+new_grammar: [pluperfect, modal_past]
+
+phrases:
+  - { sv: "Det var länge sedan!", en: "Long time no see!" }
+  - { sv: "Tiden går fort.", en: "Time flies." }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: Sara, sv: "Det var länge sedan! Hur är ditt liv numera?",                 en: "Long time no see! How is your life these days?" }
+  - { speaker: du,   sv: "Det är ganska annorlunda. Förut bodde jag i en stor stad.",    en: "It is quite different. Before, I lived in a big city." }
+  - { speaker: Sara, sv: "Var det svårt när du kom hit?",                                en: "Was it hard when you came here?" }
+  - { speaker: du,   sv: "Ja. Jag hade aldrig sett snö, och jag kunde inte tala svenska.", en: "Yes. I had never seen snow, and I could not speak Swedish." }
+  - { speaker: Sara, sv: "Ville du arbeta då?",                                          en: "Did you want to work then?" }
+  - { speaker: du,   sv: "Ja, men först måste jag lära mig språket. Jag var väldigt stressad.", en: "Yes, but first I had to learn the language. I was very stressed." }
+  - { speaker: Sara, sv: "Och nu?",                                                      en: "And now?" }
+  - { speaker: du,   sv: "Nu är jag lugn. Men jag saknar fortfarande mina vänner.",      en: "Now I am calm. But I still miss my friends." }
+  - { speaker: Sara, sv: "Har du ändrat dina vanor?",                                    en: "Have you changed your habits?" }
+  - { speaker: du,   sv: "Ja, jag har slutat röka. Min läkare sa att jag borde göra det.", en: "Yes, I have stopped smoking. My doctor said I ought to." }
+  - { speaker: Sara, sv: "Bra! Tiden går fort.",                                         en: "Good! Time flies." }
+
+exercises:
+  # hade + supine: before something else in the past
+  - { type: cloze, sv: "När jag kom hit hade jag aldrig ___ snö.", hint: se, answer: sett, en: "When I came here I had never seen snow.",
+      grammar: [pluperfect] }
+  - { type: cloze, sv: "Bussen hade redan ___ när vi kom.", hint: gå, answer: gått, en: "The bus had already left when we came.",
+      grammar: [pluperfect] }
+  - { type: cloze, sv: "Jag var trött eftersom jag inte hade ___.", hint: sova, answer: sovit, en: "I was tired because I had not slept.",
+      grammar: [pluperfect] }
+  - { type: cloze, sv: "Innan jag flyttade hade jag ___ som lärare i 10 år.", hint: arbeta, answer: arbetat,
+      en: "Before I moved I had worked as a teacher for 10 years.", grammar: [pluperfect] }
+
+  # kunde, ville, måste, borde
+  - { type: cloze, sv: "Förut ___ jag inte tala svenska.", hint: kunna, answer: kunde, en: "Before, I could not speak Swedish.",
+      grammar: [modal_past] }
+  - { type: cloze, sv: "Hon ___ arbeta, men hon var sjuk.", hint: vilja, answer: ville, en: "She wanted to work, but she was ill.",
+      grammar: [modal_past] }
+  - { type: cloze, sv: "Du ___ sluta röka.", hint: böra, answer: borde, en: "You ought to stop smoking.", grammar: [modal_past] }
+
+  # build the sentence
+  - { type: word_order, sv: "Förut bodde jag i en stor stad.", en: "Before, I lived in a big city.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Jag hade aldrig sett snö förut.", en: "I had never seen snow before.", grammar: [pluperfect] }
+  - { type: word_order, sv: "Vi kunde inte komma igår.", en: "We could not come yesterday.", grammar: [modal_past] }
+  - { type: word_order, sv: "Numera tar jag nästan alltid bilen.", en: "Nowadays I almost always take the car.", grammar: [inversion_after_adverb] }
+
+  # listen and write
+  - { type: dictation, sv: "Mitt liv är ganska annorlunda nu.", en: "My life is quite different now." }
+  - { type: dictation, sv: "Jag saknar fortfarande mina vänner.", en: "I still miss my friends." }
+  - { type: dictation, sv: "Det är en stor skillnad.", en: "There is a big difference." }
+  - { type: dictation, sv: "Förut var jag stressad, men nu är jag lugn.", en: "Before, I was stressed, but now I am calm." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have changed my habits.", sv: "Jag har ändrat mina vanor.", grammar: [perfect_tense] }
+  - { type: translate, en: "We do everything together.", sv: "Vi gör allt tillsammans." }
+  - { type: translate, en: "I was not alone, so I was happy.", sv: "Jag var inte ensam, så jag var glad." }
+  - { type: translate, en: "It is hard to compare 2 countries.", sv: "Det är svårt att jämföra 2 länder." }
+  - { type: translate, en: "He is healthy now.", sv: "Han är frisk nu.", accept: ["Nu är han frisk."] }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Jag hade bott där i 3 år när jag träffade min fru.", en: "I had lived there for 3 years when I met my wife.",
+      options: ["I had lived there for 3 years when I met my wife.", "I have lived there for 3 years with my wife.", "I lived there 3 years after I met my wife."],
+      answer: "I had lived there for 3 years when I met my wife." }
+  - { type: listen_choose, sv: "Du borde vila mer.", en: "You ought to rest more.",
+      options: ["You ought to rest more.", "You had to rest more.", "You could rest more."], answer: "You ought to rest more." }
+  - { type: listen_choose, sv: "Kunde du tala svenska när du kom hit?", en: "Could you speak Swedish when you came here?",
+      options: ["Nej, bara lite engelska.", "Ja, jag ska lära mig.", "Nej, jag hade en bil."], answer: "Nej, bara lite engelska." }
+
+  # words from earlier units
+  - { type: translate, en: "Before, I worked at a company where I did not have responsibility.", sv: "Förut arbetade jag på ett företag där jag inte hade ansvar.",
+      accept: ["Förut jobbade jag på ett företag där jag inte hade ansvar."], grammar: [relative_clause] }
+  - { type: word_order, sv: "Jag ville berätta en sak för dig.", en: "I wanted to tell you something.", grammar: [modal_past] }
+  - { type: dictation, sv: "Jag hoppas att du förstår mig nu.", en: "I hope that you understand me now." }
+
+# The task itself: an old friend asks how your life has changed.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: Sara, sv: "Det var länge sedan! Var bodde du förut?", en: "Long time no see! Where did you live before?" }
+    - { speaker: du, en: "Say that before, you lived in a big city.", answer: "Förut bodde jag i en stor stad.",
+        accept: ["Jag bodde i en stor stad förut.", "Jag bodde i en stor stad."] }
+    - { speaker: Sara, sv: "Kunde du tala svenska när du kom hit?", en: "Could you speak Swedish when you came here?" }
+    - { speaker: du, en: "Say no, you could not speak Swedish.",
+        options: ["Nej, jag kunde inte tala svenska.", "Nej, jag kan inte talade svenska.", "Nej, jag inte kunde tala svenska."],
+        answer: "Nej, jag kunde inte tala svenska." }
+    - { speaker: Sara, sv: "Hade du sett snö förut?", en: "Had you seen snow before?" }
+    - { speaker: du, en: "Say no, you had never seen snow.",
+        options: ["Nej, jag hade aldrig sett snö.", "Nej, jag har aldrig såg snö.", "Nej, jag hade aldrig se snö."],
+        answer: "Nej, jag hade aldrig sett snö." }
+    - { speaker: Sara, sv: "Hur är ditt liv numera?", en: "How is your life these days?" }
+    - { speaker: du, en: "Say that it is quite different.", answer: "Det är ganska annorlunda.", accept: ["Mitt liv är ganska annorlunda."] }
+    - { speaker: Sara, sv: "Saknar du dina vänner?", en: "Do you miss your friends?" }
+    - { speaker: du, en: "Say yes, you still miss them.", answer: "Ja, jag saknar dem fortfarande.",
+        accept: ["Ja, jag saknar fortfarande dem.", "Ja, jag saknar fortfarande mina vänner.", "Ja, fortfarande."] }
+
+speaking_prompt: "Say aloud: three things that were different before, two things you could not do then, and one thing you ought to change."

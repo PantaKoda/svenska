@@ -1,0 +1,112 @@
+id: b1-03
+level: B1
+theme: matbutiken
+title: "Jag vill klaga"
+task: "Complain about something you bought, return it, and understand the shop's rules."
+can_do: "I can explain what is wrong with a product and understand rules written in the passive."
+names: [Sara]
+
+new_words: [produkt, pengar, förpackning, garanti, datum, rätt, regel, personal, ersättning, köp,
+            klaga, skada, smaka, lukta, gälla, lämna, spara,
+            nöjd, missnöjd, hel, inom]
+new_grammar: [passive_s, participles]
+
+phrases:
+  - { sv: "Det stämmer inte.", en: "That is not right." }
+  - { sv: "Vad kan jag göra för dig?", en: "What can I do for you?" }
+
+core:
+  templates: [phrases, inflect, cloze, dictation, word_order, translate, listen_choose]
+  items_per_template: 4
+
+model_dialogue:
+  - { speaker: personal, sv: "Hej! Vad kan jag göra för dig?",                              en: "Hello! What can I do for you?" }
+  - { speaker: du,       sv: "Jag vill klaga på en produkt som jag köpte igår.",            en: "I want to complain about a product that I bought yesterday." }
+  - { speaker: personal, sv: "Vad är det för fel?",                                         en: "What is wrong with it?" }
+  - { speaker: du,       sv: "Mjölken luktar illa, trots att jag köpte den igår.",          en: "The milk smells bad, although I bought it yesterday." }
+  - { speaker: personal, sv: "Var förpackningen hel när du köpte den?",                     en: "Was the package undamaged when you bought it?" }
+  - { speaker: du,       sv: "Nej, den var skadad. Jag såg det hemma.",                     en: "No, it was damaged. I saw it at home." }
+  - { speaker: personal, sv: "Har du sparat kvittot? Kvittot måste visas.",                 en: "Have you kept the receipt? The receipt must be shown." }
+  - { speaker: du,       sv: "Ja, här. Kan jag få pengarna tillbaka?",                      en: "Yes, here. Can I get my money back?" }
+  - { speaker: personal, sv: "Ja. En skadad produkt kan lämnas tillbaka inom 30 dagar.",    en: "Yes. A damaged product can be returned within 30 days." }
+  - { speaker: du,       sv: "Bra. Då är jag nöjd.",                                        en: "Good. Then I am satisfied." }
+
+# Heard but not taught in this unit.
+glosses:
+  illa: "badly (lukta illa = smell bad)"
+  trots: "trots att = although"
+
+exercises:
+  # the passive: -s
+  - { type: cloze, sv: "Kvittot måste ___.", hint: visa, answer: visas, en: "The receipt must be shown.", grammar: [passive_s] }
+  - { type: cloze, sv: "Produkten kan ___ inom 30 dagar.", hint: byta, answer: bytas, en: "The product can be exchanged within 30 days.",
+      grammar: [passive_s] }
+  - { type: cloze, sv: "Butiken ___ klockan 9.", hint: stänga, answer: stängs, en: "The shop is closed at 9.", grammar: [passive_s] }
+  - { type: cloze, sv: "Pengarna ___ tillbaka inom en vecka.", hint: betala, answer: betalas, en: "The money is paid back within a week.",
+      grammar: [passive_s] }
+
+  # the participle: öppnad, öppnat, öppnade
+  - { type: cloze, sv: "Förpackningen var ___.", hint: skada, answer: skadad, en: "The package was damaged.", grammar: [participles] }
+  - { type: cloze, sv: "Paketet var ___.", hint: öppna, answer: öppnat, en: "The packet was opened.", grammar: [participles] }
+  - { type: cloze, sv: "Äpplena var ___.", hint: skada, answer: skadade, en: "The apples were damaged.", grammar: [participles] }
+  - { type: cloze, sv: "Jag har ett ___ kvitto.", hint: spara, answer: sparat, en: "I have a saved receipt.", grammar: [participles] }
+
+  # build the sentence
+  - { type: word_order, sv: "Jag vill klaga på en produkt.", en: "I want to complain about a product." }
+  - { type: word_order, sv: "En skadad produkt kan lämnas tillbaka.", en: "A damaged product can be returned.", grammar: [passive_s, participles] }
+  - { type: word_order, sv: "Garantin gäller i 2 år.", en: "The guarantee is valid for 2 years." }
+  - { type: word_order, sv: "Du har rätt att få pengarna tillbaka.", en: "You have the right to get your money back." }
+
+  # listen and write
+  - { type: dictation, sv: "Jag är inte nöjd med mitt köp.", en: "I am not satisfied with my purchase." }
+  - { type: dictation, sv: "Var förpackningen hel?", en: "Was the package undamaged?" }
+  - { type: dictation, sv: "Fisken luktar och smakar inte bra.", en: "The fish does not smell or taste good." }
+  - { type: dictation, sv: "Spara alltid kvittot.", en: "Always keep the receipt." }
+
+  # say it in Swedish
+  - { type: translate, en: "The customer is dissatisfied.", sv: "Kunden är missnöjd." }
+  - { type: translate, en: "Can I get compensation?", sv: "Kan jag få ersättning?" }
+  - { type: translate, en: "What is the date on the package?", sv: "Vad är datumet på förpackningen?", accept: ["Vilket datum är det på förpackningen?"] }
+  - { type: translate, en: "The staff know the rules.", sv: "Personalen kan reglerna.", review: true }
+
+  # rules: what do they mean?
+  - { type: listen_choose, sv: "Öppnade förpackningar kan inte bytas.", en: "Opened packages cannot be exchanged.",
+      options: ["Opened packages cannot be exchanged.", "Opened packages can be exchanged.", "Packages must be opened before they are exchanged."],
+      answer: "Opened packages cannot be exchanged." }
+  - { type: listen_choose, sv: "Pengarna betalas tillbaka inom 14 dagar.", en: "The money is paid back within 14 days.",
+      options: ["The money is paid back within 14 days.", "The money must be paid within 14 days.", "The money was paid back 14 days ago."],
+      answer: "The money is paid back within 14 days." }
+  - { type: listen_choose, sv: "Regeln gäller bara hela produkter.", en: "The rule only applies to undamaged products.",
+      options: ["The rule only applies to undamaged products.", "The rule applies to all products.", "The rule does not apply to undamaged products."],
+      answer: "The rule only applies to undamaged products." }
+
+  # listen for the number
+  - { type: numbers, sv: "Produkten kan bytas inom 30 dagar.", hint: "within how many days", answer: "30",
+      en: "The product can be exchanged within 30 days.", grammar: [passive_s] }
+  - { type: numbers, sv: "Du får 249 kronor tillbaka.", hint: "how many kronor", answer: "249", en: "You get 249 kronor back." }
+
+  # words from earlier units
+  - { type: translate, en: "I thought that the bread was fresh.", sv: "Jag trodde att brödet var färskt.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Förut kunde man byta nästan allt.", en: "Before, you could exchange almost everything.", grammar: [modal_past] }
+  - { type: dictation, sv: "Jag hade redan ätit nästan hela tårtan.", en: "I had already eaten almost the whole cake.", grammar: [pluperfect] }
+  - { type: cloze, sv: "Det är personalen ___ hjälper dig.", answer: som, en: "It is the staff who help you.", grammar: [relative_clause] }
+
+# The task itself: you return a product.
+final_task:
+  type: dialogue
+  turns:
+    - { speaker: personal, sv: "Hej! Vad kan jag göra för dig?", en: "Hello! What can I do for you?" }
+    - { speaker: du, en: "Say that you want to complain about a product.", answer: "Jag vill klaga på en produkt." }
+    - { speaker: personal, sv: "Vad är det för fel?", en: "What is wrong with it?" }
+    - { speaker: du, en: "Say that the package was damaged.",
+        options: ["Förpackningen var skadad.", "Förpackningen var skadat.", "Förpackningen var skada."], answer: "Förpackningen var skadad." }
+    - { speaker: personal, sv: "Har du sparat kvittot?", en: "Have you kept the receipt?" }
+    - { speaker: du, en: "Say yes, you have kept the receipt.", answer: "Ja, jag har sparat kvittot.", accept: ["Ja, här."] }
+    - { speaker: personal, sv: "Vill du byta produkten?", en: "Do you want to exchange the product?" }
+    - { speaker: du, en: "Say no, you want your money back.", answer: "Nej, jag vill ha pengarna tillbaka.",
+        accept: ["Nej, jag vill få pengarna tillbaka.", "Nej, jag vill ha mina pengar tillbaka."] }
+    - { speaker: personal, sv: "Pengarna betalas tillbaka till ditt kort.", en: "The money is paid back to your card." }
+    - { speaker: du, en: "Say thanks, then you are satisfied.", options: ["Tack, då är jag nöjd.", "Tack, då jag är nöjd.", "Tack, då är jag nöjt."],
+        answer: "Tack, då är jag nöjd." }
+
+speaking_prompt: "Say aloud: what you bought, what was wrong with it, and what you want the shop to do."

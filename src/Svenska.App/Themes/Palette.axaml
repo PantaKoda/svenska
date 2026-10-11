@@ -1,0 +1,39 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--
+      The app's colours. Calm on purpose: low saturation, a warm off-white instead of pure
+      white, tinted dark text instead of black, and one accent that is kept for the next
+      thing to do. Roughly 60 % background, 30 % surfaces, 10 % accent.
+      Text on its background keeps a contrast of at least 4.5 : 1.
+      The accent brushes (AccentBrush …) are set in code, see Services/Appearance.cs.
+    -->
+    <ResourceDictionary.ThemeDictionaries>
+        <!-- Day -->
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="AppBackgroundBrush" Color="#F4F1E6" />
+            <SolidColorBrush x:Key="SurfaceBrush" Color="#FBF9F1" />
+            <SolidColorBrush x:Key="SurfaceAltBrush" Color="#ECE7D8" />
+            <SolidColorBrush x:Key="LineBrush" Color="#D9D2BF" />
+            <SolidColorBrush x:Key="TextBrush" Color="#2B2A33" />
+            <SolidColorBrush x:Key="MutedBrush" Color="#656271" />
+            <!-- Right and wrong differ in lightness and carry a ✓ or ✗ too, not hue alone. -->
+            <SolidColorBrush x:Key="GoodBrush" Color="#2F6B52" />
+            <SolidColorBrush x:Key="GoodSoftBrush" Color="#DCE9DD" />
+            <SolidColorBrush x:Key="BadBrush" Color="#9C4034" />
+            <SolidColorBrush x:Key="BadSoftBrush" Color="#F1DDD5" />
+        </ResourceDictionary>
+        <!-- Evening: darker and warmer, very little bright blue -->
+        <ResourceDictionary x:Key="Dark">
+            <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1F1C22" />
+            <SolidColorBrush x:Key="SurfaceBrush" Color="#29252C" />
+            <SolidColorBrush x:Key="SurfaceAltBrush" Color="#342F37" />
+            <SolidColorBrush x:Key="LineBrush" Color="#473F4A" />
+            <SolidColorBrush x:Key="TextBrush" Color="#EDE6D8" />
+            <SolidColorBrush x:Key="MutedBrush" Color="#ABA39B" />
+            <SolidColorBrush x:Key="GoodBrush" Color="#93C9A8" />
+            <SolidColorBrush x:Key="GoodSoftBrush" Color="#2A3A31" />
+            <SolidColorBrush x:Key="BadBrush" Color="#E7A193" />
+            <SolidColorBrush x:Key="BadSoftBrush" Color="#42302C" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

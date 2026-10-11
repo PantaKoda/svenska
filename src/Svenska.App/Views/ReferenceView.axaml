@@ -4,10 +4,13 @@
              xmlns:reference="using:Svenska.Core.Reference"
              x:Class="Svenska.App.Views.ReferenceView"
              x:DataType="vm:ReferenceViewModel">
-    <DockPanel Margin="16,12">
+    <DockPanel Margin="22,18">
         <DockPanel DockPanel.Dock="Top" Margin="0,0,0,8">
-            <Button DockPanel.Dock="Right" Content="✕" Command="{Binding ToggleCommand}" ToolTip.Tip="Close (Esc)" />
-            <TextBlock Text="Reference" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" />
+            <Button DockPanel.Dock="Right" Classes="ghost" Content="✕" Command="{Binding ToggleCommand}" ToolTip.Tip="Close (Esc)" />
+            <StackPanel Spacing="2">
+                <TextBlock Classes="label" Text="LOOK IT UP" />
+                <TextBlock Classes="h2" Text="Reference" />
+            </StackPanel>
         </DockPanel>
 
         <TabControl SelectedIndex="{Binding SelectedTab}" Padding="0,8,0,0">
@@ -17,7 +20,7 @@
                              PlaceholderText="bilarna, köpte, större …" FontSize="16" />
                     <ScrollViewer Margin="0,10,0,0">
                         <StackPanel Spacing="10">
-                            <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Opacity="0.7"
+                            <TextBlock Classes="muted" Text="{Binding Message}" TextWrapping="Wrap"
                                        IsVisible="{Binding Message, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
                             <ItemsControl ItemsSource="{Binding Suggestions}">
                                 <ItemsControl.ItemsPanel>
@@ -32,22 +35,22 @@
                             <ItemsControl ItemsSource="{Binding Entries}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate x:DataType="reference:WordEntry">
-                                        <Border Padding="12" Margin="0,0,0,10" CornerRadius="6" BorderThickness="1"
-                                                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+                                        <Border Padding="16" Margin="0,0,0,10" CornerRadius="14" BorderThickness="1"
+                                                BorderBrush="{DynamicResource LineBrush}" Background="{DynamicResource AppBackgroundBrush}">
                                             <StackPanel Spacing="4">
                                                 <StackPanel Orientation="Horizontal" Spacing="8">
                                                     <TextBlock Text="{Binding Headword}" FontSize="18" FontWeight="SemiBold" />
-                                                    <TextBlock Text="{Binding PartOfSpeech}" Opacity="0.6" VerticalAlignment="Bottom" Margin="0,0,0,2" />
+                                                    <TextBlock Classes="label" Text="{Binding PartOfSpeech}" VerticalAlignment="Bottom" Margin="0,0,0,4" />
                                                 </StackPanel>
                                                 <TextBlock Text="{Binding Gloss}" TextWrapping="Wrap"
                                                            IsVisible="{Binding Gloss, Converter={x:Static ObjectConverters.IsNotNull}}" />
-                                                <TextBlock Text="{Binding TaughtIn, StringFormat='Unit: {0}'}" FontSize="12" Opacity="0.6"
+                                                <TextBlock Classes="accent" Text="{Binding TaughtIn, StringFormat='Unit: {0}'}" FontSize="12"
                                                            IsVisible="{Binding TaughtIn, Converter={x:Static ObjectConverters.IsNotNull}}" />
                                                 <ItemsControl ItemsSource="{Binding Forms}" Margin="0,4,0,0">
                                                     <ItemsControl.ItemTemplate>
                                                         <DataTemplate x:DataType="reference:FormRow">
                                                             <Grid ColumnDefinitions="130,*" Margin="0,1">
-                                                                <TextBlock Text="{Binding Label}" Opacity="0.6" FontSize="13" />
+                                                                <TextBlock Classes="muted" Text="{Binding Label}" FontSize="13" />
                                                                 <TextBlock Grid.Column="1" Text="{Binding Forms}" TextWrapping="Wrap" />
                                                             </Grid>
                                                         </DataTemplate>
@@ -66,7 +69,7 @@
             <TabItem Header="Grammar">
                 <DockPanel>
                     <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="8" Margin="0,0,0,8">
-                        <TextBlock Text="Up to level" VerticalAlignment="Center" Opacity="0.7" />
+                        <TextBlock Classes="muted" Text="Up to level" VerticalAlignment="Center" />
                         <ComboBox ItemsSource="{Binding Levels}" SelectedItem="{Binding SelectedLevel}" MinWidth="120" />
                     </StackPanel>
                     <ScrollViewer>

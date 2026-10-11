@@ -42,6 +42,15 @@ public sealed class AnswerChecker(ISaldoLexicon? saldo = null)
             return new(AnswerKind.MissingDiacritic, expected, $"Almost. Check å, ä and ö: {wrong}.", marks);
         }
 
+        // Only capital letters differ ("ali" for "Ali"): say so, it is not a wrong word.
+        if (target.Count == givenWords.Count
+            && target.Zip(givenWords).All(p => string.Equals(p.First, p.Second, StringComparison.OrdinalIgnoreCase)))
+        {
+            var marks = display.Select((w, i) => new WordMark(w, target[i] == givenWords[i])).ToList();
+            var wrong = string.Join(", ", marks.Where(m => !m.Right).Select(m => m.Word));
+            return new(AnswerKind.Wrong, expected, $"Almost. Check the capital letters: {wrong}.", marks);
+        }
+
         var common = CommonWords(givenWords, target);
         var missed = Remaining(target, common);
         var extra = Remaining(givenWords, common);

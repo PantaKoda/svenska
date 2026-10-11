@@ -5,64 +5,60 @@
              x:Class="Svenska.App.Views.PlayerView"
              x:DataType="vm:PlayerViewModel"
              Focusable="True">
-    <UserControl.Styles>
-        <Style Selector="TextBlock.right"><Setter Property="Foreground" Value="#2E9E5B" /></Style>
-        <Style Selector="TextBlock.wrong"><Setter Property="Foreground" Value="#D9534F" /></Style>
-        <Style Selector="TextBlock.wrong.mark"><Setter Property="FontWeight" Value="Bold" /></Style>
-        <Style Selector="Button.right"><Setter Property="BorderBrush" Value="#2E9E5B" /><Setter Property="BorderThickness" Value="3" /></Style>
-        <Style Selector="Button.wrong"><Setter Property="BorderBrush" Value="#D9534F" /><Setter Property="BorderThickness" Value="3" /></Style>
-    </UserControl.Styles>
-
     <ScrollViewer>
-        <StackPanel Margin="32,24" Spacing="16" MaxWidth="720">
+        <StackPanel Margin="40,28" Spacing="18" MaxWidth="760">
             <DockPanel>
-                <TextBlock DockPanel.Dock="Right" Text="{Binding Position}" Opacity="0.6" VerticalAlignment="Center"
+                <TextBlock DockPanel.Dock="Right" Classes="label" Text="{Binding Position}" VerticalAlignment="Center"
                            IsVisible="{Binding !IsFinished}" />
-                <Button Content="← Back" Command="{Binding BackCommand}" Focusable="False" />
-                <TextBlock Text="{Binding Title}" VerticalAlignment="Center" Margin="12,0" Opacity="0.7" />
+                <Button Classes="ghost" Content="←  Back" Command="{Binding BackCommand}" Focusable="False" Padding="0,6" />
+                <TextBlock Classes="muted" Text="{Binding Title}" VerticalAlignment="Center" Margin="16,0" />
             </DockPanel>
 
-            <!-- finished -->
-            <StackPanel Spacing="8" IsVisible="{Binding IsFinished}">
-                <TextBlock Text="Done" FontSize="28" FontWeight="SemiBold" />
-                <TextBlock Text="{Binding Summary}" FontSize="16" />
-            </StackPanel>
+            <!-- finished: a quiet end, the same every time -->
+            <Border Classes="card" IsVisible="{Binding IsFinished}">
+                <StackPanel Spacing="8">
+                    <TextBlock Classes="label" Text="ROUND FINISHED" />
+                    <TextBlock Classes="h1" Text="Done" />
+                    <TextBlock Text="{Binding Summary}" FontSize="16" />
+                </StackPanel>
+            </Border>
 
             <!-- one item -->
-            <StackPanel Spacing="14" IsVisible="{Binding !IsFinished}">
+            <Border Classes="card" IsVisible="{Binding !IsFinished}">
+            <StackPanel Spacing="16">
                 <!-- a dialogue: what the others say before the learner's reply -->
                 <ItemsControl ItemsSource="{Binding Heard}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate x:DataType="vm:HeardRow">
                             <Grid ColumnDefinitions="Auto,Auto,90,*" Margin="0,0,0,6">
-                                <Button Grid.Column="0" Content="▶" Command="{Binding Play}" Focusable="False" />
-                                <Button Grid.Column="1" Content="▶ slow" Command="{Binding PlaySlow}" Margin="4,0,12,0" Focusable="False" />
-                                <TextBlock Grid.Column="2" Text="{Binding Speaker}" Opacity="0.6" VerticalAlignment="Center" />
+                                <Button Grid.Column="0" Classes="round" Content="▶" Command="{Binding Play}" Focusable="False" />
+                                <Button Grid.Column="1" Classes="round" Content="▶ slow" Command="{Binding PlaySlow}" Margin="6,0,14,0" Focusable="False" />
+                                <TextBlock Grid.Column="2" Classes="label" Text="{Binding Speaker}" VerticalAlignment="Center" />
                                 <StackPanel Grid.Column="3" VerticalAlignment="Center"
                                             IsVisible="{Binding $parent[ItemsControl].((vm:PlayerViewModel)DataContext).IsChecked}">
                                     <TextBlock Text="{Binding Sv}" TextWrapping="Wrap" />
-                                    <TextBlock Text="{Binding En}" TextWrapping="Wrap" FontSize="12" Opacity="0.6" />
+                                    <TextBlock Classes="muted" Text="{Binding En}" TextWrapping="Wrap" FontSize="12" />
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <TextBlock Text="{Binding Instruction}" Opacity="0.7" TextWrapping="Wrap" />
-                <TextBlock Text="{Binding Prompt}" FontSize="26" TextWrapping="Wrap"
+                <TextBlock Classes="muted" Text="{Binding Instruction}" TextWrapping="Wrap" />
+                <TextBlock Classes="prompt" Text="{Binding Prompt}" TextWrapping="Wrap"
                            IsVisible="{Binding Prompt, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
                 <!-- empty until the answer is checked wherever it would give the answer away -->
-                <TextBlock Text="{Binding Translation}" Opacity="0.7" TextWrapping="Wrap"
+                <TextBlock Classes="muted" Text="{Binding Translation}" TextWrapping="Wrap"
                            IsVisible="{Binding Translation, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
 
                 <StackPanel Orientation="Horizontal" Spacing="8" IsVisible="{Binding HasAudio}">
-                    <Button Content="▶ Play (Ctrl+Space)" Command="{Binding PlayCommand}" Focusable="False" />
-                    <Button Content="▶ Slow (Ctrl+Shift+Space)" Command="{Binding PlaySlowCommand}" Focusable="False" />
+                    <Button Classes="round" Content="▶  Play" Command="{Binding PlayCommand}" Focusable="False" ToolTip.Tip="Ctrl+Space" />
+                    <Button Classes="round" Content="▶  Slow" Command="{Binding PlaySlowCommand}" Focusable="False" ToolTip.Tip="Ctrl+Shift+Space" />
                 </StackPanel>
 
                 <!-- scene_click -->
-                <Border IsVisible="{Binding IsScene}" BorderThickness="1" CornerRadius="6" ClipToBounds="True"
-                        BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+                <Border IsVisible="{Binding IsScene}" BorderThickness="1" CornerRadius="12" ClipToBounds="True"
+                        BorderBrush="{DynamicResource LineBrush}">
                     <Image x:Name="SceneImage" Source="{Binding SceneImage}" Stretch="Uniform" MaxHeight="360"
                            PointerPressed="OnScenePressed" Cursor="Hand" />
                 </Border>
@@ -73,7 +69,7 @@
                         <DataTemplate x:DataType="vm:OptionRow">
                             <Button Content="{Binding Label}" Command="{Binding Choose}" Focusable="False"
                                     HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                                    FontSize="18" Padding="14,10" Margin="0,0,0,8"
+                                    FontSize="17" Padding="18,12" Margin="0,0,0,8" CornerRadius="12"
                                     Classes.right="{Binding IsRight}" Classes.wrong="{Binding IsWrong}" />
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -86,7 +82,7 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate x:DataType="vm:TokenRow">
-                            <Button Content="{Binding Text}" Command="{Binding Add}" Margin="0,0,8,8" FontSize="18" Focusable="False" />
+                            <Button Classes="chip" Content="{Binding Text}" Command="{Binding Add}" Margin="0,0,8,8" FontSize="18" Focusable="False" />
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
@@ -94,18 +90,17 @@
                 <!-- typed answers -->
                 <DockPanel IsVisible="{Binding IsTyped}">
                     <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="4" Margin="8,0,0,0">
-                        <Button Content="å" Tag="å" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+A" FontSize="18" />
-                        <Button Content="ä" Tag="ä" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+E" FontSize="18" />
-                        <Button Content="ö" Tag="ö" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+O" FontSize="18" />
+                        <Button Classes="round" Content="å" Tag="å" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+A" FontSize="18" />
+                        <Button Classes="round" Content="ä" Tag="ä" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+E" FontSize="18" />
+                        <Button Classes="round" Content="ö" Tag="ö" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+O" FontSize="18" />
                     </StackPanel>
                     <TextBox x:Name="AnswerBox" Text="{Binding Answer}" FontSize="20" IsReadOnly="{Binding IsChecked}"
                              PlaceholderText="Your answer" />
                 </DockPanel>
 
                 <StackPanel Orientation="Horizontal" Spacing="12">
-                    <Button Content="{Binding SubmitText}" Command="{Binding SubmitCommand}" Classes="accent" Padding="20,8"
-                            Focusable="False" />
-                    <TextBlock Text="Enter" Opacity="0.5" VerticalAlignment="Center" FontSize="12" />
+                    <Button Content="{Binding SubmitText}" Command="{Binding SubmitCommand}" Classes="accent" Focusable="False" />
+                    <TextBlock Classes="label" Text="ENTER" VerticalAlignment="Center" />
                 </StackPanel>
 
                 <StackPanel Spacing="6" IsVisible="{Binding IsChecked}">
@@ -122,17 +117,18 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-                    <TextBlock Text="{Binding GlossText}" FontSize="13" Opacity="0.7" TextWrapping="Wrap"
+                    <TextBlock Classes="muted" Text="{Binding GlossText}" FontSize="13" TextWrapping="Wrap"
                                IsVisible="{Binding GlossText, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
 
                     <StackPanel Spacing="6" Margin="0,8,0,0"
                                 IsVisible="{Binding GrammarTitle, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
-                        <Button Command="{Binding ShowGrammarCommand}" Focusable="False" ToolTip.Tip="Open the grammar card">
-                            <TextBlock Text="{Binding GrammarTitle, StringFormat='Grammar: {0}'}" />
+                        <Button Classes="ghost" Command="{Binding ShowGrammarCommand}" Focusable="False" ToolTip.Tip="Open the grammar card" Padding="0,6">
+                            <TextBlock Classes="accent" Text="{Binding GrammarTitle, StringFormat='Grammar:  {0}  →'}" />
                         </Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

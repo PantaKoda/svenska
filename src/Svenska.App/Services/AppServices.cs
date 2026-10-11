@@ -26,6 +26,10 @@ public sealed class AppServices : IDisposable
             ? custom
             : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Svenska", "progress.db");
 
+    /// <summary>Theme and accent colour, kept in settings.json beside progress.db.</summary>
+    public Appearance Appearance { get; } =
+        new(Path.Combine(Path.GetDirectoryName(Path.GetFullPath(ProgressPath))!, "settings.json"));
+
     public string? ContentDir { get; }
     public Course Course { get; } = new();
     public int ContentErrors { get; }

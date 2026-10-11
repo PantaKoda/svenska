@@ -4,76 +4,110 @@
              x:Class="Svenska.App.Views.UnitView"
              x:DataType="vm:UnitViewModel">
     <ScrollViewer>
-        <StackPanel Margin="32,24" Spacing="20" MaxWidth="760" HorizontalAlignment="Left">
-            <Button Content="← Units" Command="{Binding BackCommand}" />
+        <StackPanel Margin="40,28" Spacing="18" MaxWidth="820">
+            <Button Classes="ghost" Content="←  Units" Command="{Binding BackCommand}" Padding="0,6" />
 
-            <StackPanel Spacing="4">
-                <TextBlock Text="{Binding Title}" FontSize="28" FontWeight="SemiBold" />
-                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" FontSize="16" />
-                <TextBlock Text="{Binding CanDo}" TextWrapping="Wrap" Opacity="0.7" />
+            <StackPanel Spacing="8" Margin="0,0,0,6">
+                <TextBlock Classes="h1" Text="{Binding Title}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" FontSize="17" />
+                <TextBlock Classes="muted" Text="{Binding CanDo}" TextWrapping="Wrap" />
             </StackPanel>
 
-            <StackPanel Spacing="8">
-                <TextBlock Text="1 · Words" FontSize="18" FontWeight="SemiBold" />
-                <ItemsControl ItemsSource="{Binding Words}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate x:DataType="vm:WordRow">
-                            <Button Command="{Binding Play}" Margin="0,0,8,8" Padding="12,6" Width="170"
-                                    HorizontalContentAlignment="Left" ToolTip.Tip="Play">
-                                <StackPanel>
-                                    <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
-                                    <TextBlock Text="{Binding Gloss}" FontSize="12" Opacity="0.7" TextTrimming="CharacterEllipsis" />
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-
-            <StackPanel Spacing="8">
-                <TextBlock Text="2 · Listen" FontSize="18" FontWeight="SemiBold" />
-                <CheckBox Content="Show the text" IsChecked="{Binding ShowTranscript}" />
-                <ItemsControl ItemsSource="{Binding Dialogue}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate x:DataType="vm:LineRow">
-                            <Grid ColumnDefinitions="Auto,Auto,90,*" Margin="0,0,0,6">
-                                <Button Grid.Column="0" Content="▶" Command="{Binding Play}" ToolTip.Tip="Play" />
-                                <Button Grid.Column="1" Content="▶ slow" Command="{Binding PlaySlow}" Margin="4,0,12,0" />
-                                <TextBlock Grid.Column="2" Text="{Binding Speaker}" Opacity="0.6" VerticalAlignment="Center" />
-                                <StackPanel Grid.Column="3" VerticalAlignment="Center"
-                                            IsVisible="{Binding $parent[ItemsControl].((vm:UnitViewModel)DataContext).ShowTranscript}">
-                                    <TextBlock Text="{Binding Sv}" TextWrapping="Wrap" />
-                                    <TextBlock Text="{Binding En}" TextWrapping="Wrap" FontSize="12" Opacity="0.6" />
-                                </StackPanel>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                <TextBlock Text="{Binding GlossText}" FontSize="13" Opacity="0.7" TextWrapping="Wrap" IsVisible="{Binding ShowTranscript}" />
-            </StackPanel>
-
-            <StackPanel Spacing="8">
-                <TextBlock Text="3 · Exercises" FontSize="18" FontWeight="SemiBold" />
-                <StackPanel Orientation="Horizontal" Spacing="12">
-                    <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
-                            Classes="accent" Padding="20,10" />
-                    <TextBlock Text="{Binding ProgressText}" VerticalAlignment="Center" Opacity="0.7" />
+            <!-- 1 words -->
+            <Border Classes="card">
+                <StackPanel Spacing="14">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Classes="step"><TextBlock Classes="accent" Text="1" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                        <TextBlock Classes="h2" Text="Words" VerticalAlignment="Center" />
+                        <TextBlock Classes="muted" Text="click a word to hear it" VerticalAlignment="Center" FontSize="12" />
+                    </StackPanel>
+                    <ItemsControl ItemsSource="{Binding Words}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:WordRow">
+                                <Button Classes="chip" Command="{Binding Play}" Margin="0,0,8,8" Width="178">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                        <TextBlock Classes="muted" Text="{Binding Gloss}" FontSize="12" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
-            </StackPanel>
+            </Border>
 
-            <StackPanel Spacing="8" IsVisible="{Binding HasFinalTask}">
-                <TextBlock Text="4 · Final task" FontSize="18" FontWeight="SemiBold" />
-                <TextBlock Text="{Binding FinalTaskText}" TextWrapping="Wrap" Opacity="0.8" />
-                <Button Content="Start the final task" Command="{Binding StartFinalTaskCommand}" Padding="20,10" />
-            </StackPanel>
+            <!-- 2 listen -->
+            <Border Classes="card">
+                <StackPanel Spacing="14">
+                    <DockPanel>
+                        <CheckBox DockPanel.Dock="Right" Content="Show the text" IsChecked="{Binding ShowTranscript}" />
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <Border Classes="step"><TextBlock Classes="accent" Text="2" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                            <TextBlock Classes="h2" Text="Listen" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Dialogue}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:LineRow">
+                                <Grid ColumnDefinitions="Auto,Auto,96,*" Margin="0,0,0,8">
+                                    <Button Grid.Column="0" Classes="round" Content="▶" Command="{Binding Play}" ToolTip.Tip="Play" />
+                                    <Button Grid.Column="1" Classes="round" Content="▶ slow" Command="{Binding PlaySlow}" Margin="6,0,14,0" />
+                                    <TextBlock Grid.Column="2" Classes="label" Text="{Binding Speaker}" VerticalAlignment="Center" />
+                                    <StackPanel Grid.Column="3" VerticalAlignment="Center"
+                                                IsVisible="{Binding $parent[ItemsControl].((vm:UnitViewModel)DataContext).ShowTranscript}">
+                                        <TextBlock Text="{Binding Sv}" TextWrapping="Wrap" />
+                                        <TextBlock Classes="muted" Text="{Binding En}" TextWrapping="Wrap" FontSize="12" />
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <TextBlock Classes="muted" Text="{Binding GlossText}" FontSize="13" TextWrapping="Wrap" IsVisible="{Binding ShowTranscript}" />
+                </StackPanel>
+            </Border>
 
-            <StackPanel Spacing="4" IsVisible="{Binding SpeakingPrompt, Converter={x:Static ObjectConverters.IsNotNull}}">
-                <TextBlock Text="5 · Speak (on your own)" FontSize="18" FontWeight="SemiBold" />
-                <TextBlock Text="{Binding SpeakingPrompt}" TextWrapping="Wrap" />
-            </StackPanel>
+            <!-- 3 exercises: the next step, so it carries the accent -->
+            <Border Classes="card">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Classes="accent" Content="{Binding StartText}" Command="{Binding StartCommand}"
+                            IsEnabled="{Binding HasExercises}" VerticalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Classes="step"><TextBlock Classes="accent" Text="3" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                        <TextBlock Classes="h2" Text="Exercises" VerticalAlignment="Center" />
+                        <TextBlock Classes="muted" Text="{Binding ProgressText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- 4 final task -->
+            <Border Classes="card" IsVisible="{Binding HasFinalTask}">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Content="Start the final task" Command="{Binding StartFinalTaskCommand}"
+                            VerticalAlignment="Center" Padding="18,10" />
+                    <StackPanel Spacing="6">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <Border Classes="step"><TextBlock Classes="accent" Text="4" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                            <TextBlock Classes="h2" Text="Final task" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <TextBlock Classes="muted" Text="{Binding FinalTaskText}" TextWrapping="Wrap" Margin="38,0,16,0" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- 5 speak -->
+            <Border Classes="card" IsVisible="{Binding SpeakingPrompt, Converter={x:Static ObjectConverters.IsNotNull}}">
+                <StackPanel Spacing="6">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Classes="step"><TextBlock Classes="accent" Text="5" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                        <TextBlock Classes="h2" Text="Speak" VerticalAlignment="Center" />
+                        <TextBlock Classes="muted" Text="on your own" VerticalAlignment="Center" FontSize="12" />
+                    </StackPanel>
+                    <TextBlock Text="{Binding SpeakingPrompt}" TextWrapping="Wrap" Margin="38,0,0,0" />
+                </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

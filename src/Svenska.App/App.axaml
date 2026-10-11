@@ -2,7 +2,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Svenska.App.App"
              RequestedThemeVariant="Default">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="/Themes/Palette.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
     <Application.Styles>
-        <FluentTheme />
+        <!-- The Fluent controls take the same calm colours as the rest of the app. -->
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" Accent="#2F6F73" RegionColor="#F4F1E6" ErrorText="#9C4034"
+                                       AltHigh="#FBF9F1" AltMediumHigh="#FBF9F1" AltMedium="#F4F1E6" AltMediumLow="#ECE7D8" AltLow="#ECE7D8"
+                                       BaseHigh="#2B2A33" BaseMediumHigh="#4A4856" BaseMedium="#656271" BaseMediumLow="#A8A295" BaseLow="#D9D2BF"
+                                       ChromeLow="#ECE7D8" ChromeMediumLow="#FBF9F1" ChromeMedium="#ECE7D8" ChromeHigh="#D9D2BF"
+                                       ListLow="#ECE7D8" ListMedium="#E0DAC8" />
+                <ColorPaletteResources x:Key="Dark" Accent="#86BDB8" RegionColor="#1F1C22" ErrorText="#E7A193"
+                                       AltHigh="#29252C" AltMediumHigh="#29252C" AltMedium="#1F1C22" AltMediumLow="#342F37" AltLow="#342F37"
+                                       BaseHigh="#EDE6D8" BaseMediumHigh="#D2CABD" BaseMedium="#ABA39B" BaseMediumLow="#6E6670" BaseLow="#473F4A"
+                                       ChromeLow="#342F37" ChromeMediumLow="#29252C" ChromeMedium="#342F37" ChromeHigh="#473F4A"
+                                       ListLow="#342F37" ListMedium="#3D3741" />
+            </FluentTheme.Palettes>
+        </FluentTheme>
+        <StyleInclude Source="/Themes/Controls.axaml" />
     </Application.Styles>
 </Application>

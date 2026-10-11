@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Svenska.App.Services;
@@ -9,7 +10,10 @@ using Svenska.Core.Exercises;
 
 namespace Svenska.App.ViewModels;
 
-/// <summary>The window: one page at a time (home, unit, exercises) and the footer with Update.</summary>
+/// <summary>A choice in the appearance menu: an accent colour, shown in its day shade.</summary>
+public sealed record AccentRow(string Name, IBrush Swatch, IRelayCommand Choose);
+
+/// <summary>The window: a header, one page at a time (home, unit, exercises), the reference panel.</summary>
 public partial class MainWindowViewModel : ObservableObject
 {
     [ObservableProperty]
@@ -22,12 +26,27 @@ public partial class MainWindowViewModel : ObservableObject
 
     public ReferenceViewModel Reference { get; }
 
-    public string About => $"Svenska {AppUpdater.CurrentVersion} · Data: SALDO, Språkbanken (CC-BY 4.0)";
+    public string About => $"Svenska {AppUpdater.CurrentVersion}  ·  Data: SALDO, Språkbanken (CC-BY 4.0)";
 
     public MainWindowViewModel(AppServices services)
     {
         Services = services;
         Reference = new ReferenceViewModel(services);
+        ShowHome();
+    }
+
+    /// <summary>The accent colours of the appearance menu.</summary>
+    public IReadOnlyList<AccentRow> Accents => [.. Appearance.Accents.Select(accent =>
+        new AccentRow(accent.Name, new SolidColorBrush(accent.Day), new RelayCommand(() => Services.Appearance.SetAccent(accent))))];
+
+    /// <summary>"system", "day" or "evening".</summary>
+    [RelayCommand]
+    private void SetTheme(string theme) => Services.Appearance.SetTheme(theme);
+
+    [RelayCommand]
+    private void Home()
+    {
+        Services.StopAudio();
         ShowHome();
     }
 

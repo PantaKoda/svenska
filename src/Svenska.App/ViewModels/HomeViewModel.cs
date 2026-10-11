@@ -3,7 +3,8 @@ using CommunityToolkit.Mvvm.Input;
 namespace Svenska.App.ViewModels;
 
 /// <param name="Percent">0–100: the share of the unit's items answered right at least once.</param>
-public sealed record UnitRow(string Number, string Title, string Task, string ProgressText, double Percent, IRelayCommand Open);
+/// <param name="IsNext">The first unit that is not finished: the one place the accent goes.</param>
+public sealed record UnitRow(string Number, string Title, string Task, string ProgressText, double Percent, bool IsNext, IRelayCommand Open);
 
 public sealed record LevelGroup(string Level, IReadOnlyList<UnitRow> Units);
 
@@ -23,6 +24,11 @@ public sealed class HomeViewModel
         var services = main.Services;
         var progress = services.Progress;
 
+        var next = services.Course.Units.FirstOrDefault(u =>
+        {
+            var (done, total) = progress.UnitProgress(u);
+            return done < total || (u.FinalTask != null && !progress.FinalTaskDone(u));
+        });
         Levels = services.Course.Units.GroupBy(u => u.Level).OrderBy(g => g.Key)
             .Select(group => new LevelGroup(group.Key.ToString(), group.Select(unit =>
             {
@@ -30,6 +36,7 @@ public sealed class HomeViewModel
                 return new UnitRow(unit.Id.ToUpperInvariant(), unit.Title, unit.Task,
                     done == 0 ? "Not started" : $"{done} of {total} exercises done",
                     total == 0 ? 0 : 100.0 * done / total,
+                    unit == next,
                     new RelayCommand(() => main.ShowUnit(unit)));
             }).ToList()))
             .ToList();

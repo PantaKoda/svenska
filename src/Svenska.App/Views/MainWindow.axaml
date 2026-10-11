@@ -4,7 +4,7 @@
         xmlns:views="using:Svenska.App.Views"
         x:Class="Svenska.App.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Title="Svenska" Width="1280" Height="780" MinWidth="560" MinHeight="480">
+        Title="Svenska" Width="1280" Height="800" MinWidth="560" MinHeight="480">
     <Window.DataTemplates>
         <DataTemplate DataType="vm:HomeViewModel"><views:HomeView /></DataTemplate>
         <DataTemplate DataType="vm:UnitViewModel"><views:UnitView /></DataTemplate>
@@ -13,21 +13,63 @@
     </Window.DataTemplates>
 
     <DockPanel>
-        <Border DockPanel.Dock="Bottom" Padding="24,8" BorderThickness="0,1,0,0"
-                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+        <!-- header: the wordmark leads home; the tools sit quietly on the right -->
+        <Border DockPanel.Dock="Top" Classes="bar" BorderThickness="0,0,0,1" Padding="28,10">
             <DockPanel>
-                <Button DockPanel.Dock="Right" Content="Update" Command="{Binding UpdateCommand}" />
-                <Button DockPanel.Dock="Right" Content="Reference (F1)" Margin="0,0,8,0"
-                        Command="{Binding Reference.ToggleCommand}" />
-                <TextBlock DockPanel.Dock="Right" Text="{Binding UpdateStatus}" VerticalAlignment="Center"
-                           Margin="12,0" FontSize="12" TextWrapping="Wrap" MaxWidth="420" />
-                <TextBlock Text="{Binding About}" Opacity="0.6" FontSize="12" VerticalAlignment="Center" />
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="4">
+                    <Button Classes="ghost" Content="Reference  F1" Command="{Binding Reference.ToggleCommand}" Focusable="False" />
+                    <Button Classes="ghost" Content="Appearance" Focusable="False">
+                        <Button.Flyout>
+                            <Flyout Placement="BottomEdgeAlignedRight">
+                                <StackPanel Spacing="12" Width="230" Margin="4">
+                                    <TextBlock Classes="label" Text="THEME" />
+                                    <StackPanel Orientation="Horizontal" Spacing="6">
+                                        <Button Content="System" Command="{Binding SetThemeCommand}" CommandParameter="system" />
+                                        <Button Content="Day" Command="{Binding SetThemeCommand}" CommandParameter="day" />
+                                        <Button Content="Evening" Command="{Binding SetThemeCommand}" CommandParameter="evening" />
+                                    </StackPanel>
+                                    <TextBlock Classes="label" Text="ACCENT" Margin="0,6,0,0" />
+                                    <ItemsControl ItemsSource="{Binding Accents}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate><StackPanel Orientation="Horizontal" Spacing="10" /></ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate x:DataType="vm:AccentRow">
+                                                <Button Classes="swatch" Background="{Binding Swatch}" Command="{Binding Choose}"
+                                                        ToolTip.Tip="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <Button Classes="ghost" Content="Update" Command="{Binding UpdateCommand}" Focusable="False" />
+                </StackPanel>
+
+                <Button Classes="ghost" Command="{Binding HomeCommand}" Focusable="False" Padding="0,6" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Width="22" Height="22" CornerRadius="7" Background="{DynamicResource AccentBrush}" VerticalAlignment="Center">
+                            <Border Width="8" Height="8" CornerRadius="4" Background="{DynamicResource OnAccentBrush}" />
+                        </Border>
+                        <TextBlock Text="SVENSKA" FontSize="14" FontWeight="SemiBold" LetterSpacing="4" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource TextBrush}" />
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+        </Border>
+
+        <!-- footer: version, data source, and what the updater says -->
+        <Border DockPanel.Dock="Bottom" Padding="28,7">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Right" Classes="muted" Text="{Binding UpdateStatus}" FontSize="12"
+                           TextWrapping="Wrap" MaxWidth="560" />
+                <TextBlock Classes="muted" Text="{Binding About}" FontSize="12" />
             </DockPanel>
         </Border>
 
         <!-- The reference panel sits beside the page and never covers it. -->
-        <Border DockPanel.Dock="Right" Width="560" BorderThickness="1,0,0,0" IsVisible="{Binding Reference.IsOpen}"
-                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+        <Border DockPanel.Dock="Right" Classes="bar" Width="560" BorderThickness="1,0,0,0" IsVisible="{Binding Reference.IsOpen}">
             <views:ReferenceView x:Name="ReferencePanel" DataContext="{Binding Reference}" />
         </Border>
 

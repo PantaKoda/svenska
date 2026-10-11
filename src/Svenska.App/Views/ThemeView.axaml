@@ -7,43 +7,52 @@
         <Style Selector="Border.new"><Setter Property="Opacity" Value="0.55" /></Style>
     </UserControl.Styles>
     <ScrollViewer>
-        <StackPanel Margin="32,24" Spacing="20" MaxWidth="760" HorizontalAlignment="Left">
-            <Button Content="← Home" Command="{Binding BackCommand}" />
-
-            <StackPanel Spacing="4">
-                <TextBlock Text="{Binding Title}" FontSize="28" FontWeight="SemiBold" />
-                <TextBlock Text="Theme practice: the standard exercises on the words of this theme."
-                           TextWrapping="Wrap" Opacity="0.7" />
-            </StackPanel>
+        <StackPanel Margin="40,28" Spacing="18" MaxWidth="820">
+            <Button Classes="ghost" Content="←  Home" Command="{Binding BackCommand}" Padding="0,6" />
 
             <StackPanel Spacing="8">
-                <CheckBox Content="Also words I have not learned in a unit yet" IsChecked="{Binding IncludeNewWords}" />
-                <TextBlock Text="{Binding Note}" TextWrapping="Wrap" Opacity="0.7"
-                           IsVisible="{Binding Note, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
-                <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
-                        Classes="accent" Padding="20,10" />
+                <TextBlock Classes="label" Text="THEME PRACTICE" />
+                <TextBlock Classes="h1" Text="{Binding Title}" />
+                <TextBlock Classes="muted" Text="The standard exercises on the words of this theme, in any order." TextWrapping="Wrap" />
             </StackPanel>
 
-            <StackPanel Spacing="8">
-                <TextBlock Text="Words (faded = not learned yet)" FontSize="18" FontWeight="SemiBold" />
-                <ItemsControl ItemsSource="{Binding Words}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate x:DataType="vm:ThemeWordRow">
-                            <Border Margin="0,0,8,8" Padding="12,6" Width="170" CornerRadius="4" BorderThickness="1"
-                                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
-                                    Classes.new="{Binding !Known}">
-                                <StackPanel>
-                                    <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
-                                    <TextBlock Text="{Binding Gloss}" FontSize="12" Opacity="0.7" TextTrimming="CharacterEllipsis" />
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
+            <Border Classes="card">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Classes="accent" Content="{Binding StartText}" Command="{Binding StartCommand}"
+                            IsEnabled="{Binding HasExercises}" VerticalAlignment="Center" />
+                    <StackPanel Spacing="8" Margin="0,0,16,0">
+                        <CheckBox Content="Also words I have not learned in a unit yet" IsChecked="{Binding IncludeNewWords}" />
+                        <TextBlock Classes="muted" Text="{Binding Note}" TextWrapping="Wrap"
+                                   IsVisible="{Binding Note, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <Border Classes="card">
+                <StackPanel Spacing="14">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBlock Classes="h2" Text="Words" />
+                        <TextBlock Classes="muted" Text="faded = not learned yet" VerticalAlignment="Center" FontSize="12" />
+                    </StackPanel>
+                    <ItemsControl ItemsSource="{Binding Words}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:ThemeWordRow">
+                                <Border Margin="0,0,8,8" Padding="14,8" Width="178" CornerRadius="12" BorderThickness="1"
+                                        BorderBrush="{DynamicResource LineBrush}" Background="{DynamicResource AppBackgroundBrush}"
+                                        Classes.new="{Binding !Known}">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                        <TextBlock Classes="muted" Text="{Binding Gloss}" FontSize="12" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

@@ -47,6 +47,16 @@ public class AnswerCheckerTests
     }
 
     [Fact]
+    public void A_wrong_capital_is_named_and_is_not_correct()
+    {
+        var result = _checker.Check("jag heter ali", "Jag heter Ali.");
+
+        Assert.False(result.IsCorrect);
+        Assert.Equal("Almost. Check the capital letters: Ali.", result.Feedback);
+        Assert.Equal([true, true, false], result.Words.Select(w => w.Right));
+    }
+
+    [Fact]
     public void Missing_diacritic_is_named_and_is_not_correct()
     {
         var result = _checker.Check("Var finns mjolken?", "Var finns mjölken?");

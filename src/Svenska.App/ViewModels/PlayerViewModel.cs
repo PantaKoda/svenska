@@ -220,6 +220,9 @@ public partial class PlayerViewModel : ObservableObject
         Finish(result.IsCorrect, result.IsCorrect ? "Right!" : result.Feedback, result.Words);
     }
 
+    // Right and wrong are told apart by a mark as well as by colour.
+    private static string Marked(bool correct, string feedback) => (correct ? "✓  " : "✗  ") + feedback;
+
     /// <summary>A choice was clicked, or its number key was pressed.</summary>
     public void ChooseOption(int number)
     {
@@ -261,7 +264,7 @@ public partial class PlayerViewModel : ObservableObject
         IsChecked = true;
         SubmitText = "Next";
         ExpectedWords = words;
-        Feedback = feedback;
+        Feedback = Marked(correct, feedback);
 
         // Now the learner may see what was heard.
         if (ExerciseText.Heard.Contains(item.Type) && !string.IsNullOrEmpty(item.Sv))

@@ -369,6 +369,18 @@ matches the proper-name code `pm`. Treat `pm` as a single-word proper name and o
 Swedish characters must be easy to type on any keyboard: buttons for å ä ö and
 shortcuts (e.g. Alt+a / Alt+e / Alt+o or similar).
 
+### Look (calm on purpose)
+The colours are in `Svenska.App/Themes/Palette.axaml`, the control styles in
+`Themes/Controls.axaml`, theme and accent choice in `Services/Appearance.cs`.
+- Low saturation, a warm off-white instead of white, tinted dark text instead of black.
+  Two themes: Day and Evening (darker, warmer, little blue).
+- One accent with a job: about 60 % background, 30 % surfaces, 10 % accent. The accent
+  marks the next thing to do (the next unit, the start button, check/next) and nothing else.
+- Right and wrong differ by a mark (✓ ✗), weight and underline as well as colour, never
+  red against green alone. Text keeps a contrast of at least 4.5 : 1.
+- No flashing, no pulsing, no confetti; the end of a round looks the same every time.
+  No streaks and nothing that punishes leaving.
+
 ---
 
 ## A1 unit plan (written in M6)

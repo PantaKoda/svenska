@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Svenska.App.ViewModels"
+             x:Class="Svenska.App.Views.UnitView"
+             x:DataType="vm:UnitViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="32,24" Spacing="20" MaxWidth="760" HorizontalAlignment="Left">
+            <Button Content="← Units" Command="{Binding BackCommand}" />
+
+            <StackPanel Spacing="4">
+                <TextBlock Text="{Binding Title}" FontSize="28" FontWeight="SemiBold" />
+                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" FontSize="16" />
+                <TextBlock Text="{Binding CanDo}" TextWrapping="Wrap" Opacity="0.7" />
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="1 · Words" FontSize="18" FontWeight="SemiBold" />
+                <ItemsControl ItemsSource="{Binding Words}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:WordRow">
+                            <Button Command="{Binding Play}" Margin="0,0,8,8" Padding="12,6" Width="170"
+                                    HorizontalContentAlignment="Left" ToolTip.Tip="Play">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding Gloss}" FontSize="12" Opacity="0.7" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="2 · Listen" FontSize="18" FontWeight="SemiBold" />
+                <CheckBox Content="Show the text" IsChecked="{Binding ShowTranscript}" />
+                <ItemsControl ItemsSource="{Binding Dialogue}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:LineRow">
+                            <Grid ColumnDefinitions="Auto,Auto,90,*" Margin="0,0,0,6">
+                                <Button Grid.Column="0" Content="▶" Command="{Binding Play}" ToolTip.Tip="Play" />
+                                <Button Grid.Column="1" Content="▶ slow" Command="{Binding PlaySlow}" Margin="4,0,12,0" />
+                                <TextBlock Grid.Column="2" Text="{Binding Speaker}" Opacity="0.6" VerticalAlignment="Center" />
+                                <StackPanel Grid.Column="3" VerticalAlignment="Center"
+                                            IsVisible="{Binding $parent[ItemsControl].((vm:UnitViewModel)DataContext).ShowTranscript}">
+                                    <TextBlock Text="{Binding Sv}" TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding En}" TextWrapping="Wrap" FontSize="12" Opacity="0.6" />
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="3 · Exercises" FontSize="18" FontWeight="SemiBold" />
+                <Button Content="{Binding StartText}" Command="{Binding StartCommand}" IsEnabled="{Binding HasExercises}"
+                        Classes="accent" Padding="20,10" />
+            </StackPanel>
+
+            <StackPanel Spacing="4" IsVisible="{Binding SpeakingPrompt, Converter={x:Static ObjectConverters.IsNotNull}}">
+                <TextBlock Text="4 · Speak (on your own)" FontSize="18" FontWeight="SemiBold" />
+                <TextBlock Text="{Binding SpeakingPrompt}" TextWrapping="Wrap" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

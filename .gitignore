@@ -12,3 +12,4 @@ data/raw/
 
 __pycache__/
 .venv/
+data/voices/

@@ -1,0 +1,31 @@
+theme: matbutiken
+title: "Matbutiken"
+scene: svg/matbutik.svg
+words:
+  # food and drink
+  - { lemma: mjölk, pos: noun, gender: en,  tags: [drink], level: A1, gloss: milk,   svg: w-mjolk }
+  - { lemma: kaffe, pos: noun, gender: ett, tags: [drink], level: A1, gloss: coffee, svg: w-kaffe }
+  - { lemma: bröd,  pos: noun, gender: ett, tags: [food],  level: A1, gloss: bread,  svg: w-brod }
+  - { lemma: ost,   pos: noun, gender: en,  tags: [food],  level: A1, gloss: cheese, svg: w-ost }
+  - { lemma: smör,  pos: noun, gender: ett, tags: [food],  level: A1, gloss: butter, svg: w-smor }
+  - { lemma: ägg,   pos: noun, gender: ett, tags: [food],  level: A1, gloss: egg,    svg: w-agg }
+  - { lemma: äpple, pos: noun, gender: ett, tags: [food],  level: A1, gloss: apple,  svg: w-apple }
+
+  # at the checkout
+  - { lemma: påse,   pos: noun, gender: en,  tags: [container], level: A1, gloss: bag,      svg: w-pase }
+  - { lemma: kassa,  pos: noun, gender: en,  tags: [place],     level: A1, gloss: checkout, svg: w-kassa }
+  - { lemma: kvitto, pos: noun, gender: ett, tags: [document],  level: A1, gloss: receipt,  svg: w-kvitto }
+  - { lemma: kort,   pos: noun, gender: ett, level: A1, gloss: card, svg: w-kort }
+  - { lemma: krona,  pos: noun, gender: en,  level: A1, gloss: "krona (Swedish money)" }
+
+  # verbs
+  - { lemma: kosta,  pos: verb, level: A1, gloss: to cost }
+  - { lemma: betala, pos: verb, tags: [action_intrans], level: A1, gloss: to pay }
+  - { lemma: behöva, pos: verb, tags: [action_object],  level: A1, gloss: to need }
+  - { lemma: köpa,   pos: verb, tags: [action_object],  level: A1, gloss: to buy }
+  - { lemma: finnas, pos: verb, level: A1, gloss: "to be there, to exist" }
+
+  # small words
+  - { lemma: med, pos: prep, level: A1, gloss: with }
+  - { lemma: vid, pos: prep, level: A1, gloss: "at, by" }
+  - { lemma: där, pos: adv,  level: A1, gloss: there }

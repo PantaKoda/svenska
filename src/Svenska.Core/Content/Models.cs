@@ -94,9 +94,25 @@ public sealed class ExerciseItem
     public bool Review { get; set; }
     public List<ExerciseItem>? Turns { get; set; }
 
+    /// <summary>cloze: the base form of the missing word, shown as help.</summary>
+    public string? Hint { get; set; }
+    /// <summary>inflect: the word to inflect and the form asked for (indef, def, pl, pres …).</summary>
+    public string? Lemma { get; set; }
+    public string? Form { get; set; }
+
     // Source of a generated item.
     public string? Frame { get; set; }
     public List<string>? Words { get; set; }
+}
+
+/// <summary>
+/// Words and grammar a unit takes as known from earlier units that are not written yet.
+/// Temporary: the validator warns while a unit has it.
+/// </summary>
+public sealed class Assumes
+{
+    public List<string> Words { get; set; } = [];
+    public List<string> Grammar { get; set; } = [];
 }
 
 /// <summary>content/units/&lt;level&gt;/*.yaml</summary>
@@ -108,6 +124,7 @@ public sealed class Unit
     public string Title { get; set; } = "";
     public string Task { get; set; } = "";
     public string CanDo { get; set; } = "";
+    public Assumes? Assumes { get; set; }
     public List<string> NewWords { get; set; } = [];
     public List<string> NewGrammar { get; set; } = [];
     public List<string> Names { get; set; } = [];

@@ -1,0 +1,74 @@
+id: a1-04
+level: A1
+theme: matbutiken
+title: "I matbutiken"
+task: "Find groceries, understand the price and pay at the checkout."
+can_do: "I can buy food and pay in a Swedish supermarket."
+
+# Units 01–03 are not written yet. Until they are, this unit takes these as known.
+assumes:
+  words: [jag, du, vi, ni, den, vara, ha, en, och, inte, var, vad, hej, tack, ja, nej]
+  grammar: [pron_subject, present_tense, en_ett, v2_word_order, yes_no_question,
+            wh_question, negation_inte, numbers_0_1000]
+
+new_words: [mjölk, kaffe, bröd, ost, smör, ägg, äpple,
+            påse, kassa, kvitto, kort, krona,
+            kosta, betala, behöva, köpa, finnas,
+            med, vid, där]
+new_grammar: [def_singular]
+scene: svg/matbutik.svg
+
+model_dialogue:
+  - { speaker: du,       sv: "Hej! Var finns mjölken?",          en: "Hi! Where is the milk?" }
+  - { speaker: personal, sv: "Mjölken finns där, vid osten.",    en: "The milk is there, by the cheese." }
+  - { speaker: du,       sv: "Tack! Har ni ägg?",                en: "Thanks! Do you have eggs?" }
+  - { speaker: personal, sv: "Ja, vid brödet.",                  en: "Yes, by the bread." }
+  - { speaker: kassör,   sv: "Hej! Behöver du en påse?",         en: "Hi! Do you need a bag?" }
+  - { speaker: du,       sv: "Ja tack. Vad kostar påsen?",       en: "Yes please. What does the bag cost?" }
+  - { speaker: kassör,   sv: "Den kostar 3 kronor.",             en: "It costs 3 kronor." }
+  - { speaker: kassör,   sv: "87 kronor, tack.",                 en: "87 kronor, please." }
+  - { speaker: du,       sv: "Jag betalar med kort.",            en: "I'll pay by card." }
+  - { speaker: kassör,   sv: "Behöver du kvittot?",              en: "Do you need the receipt?" }
+  - { speaker: du,       sv: "Nej tack.",                        en: "No thanks." }
+
+exercises:
+  # listen and write
+  - { type: dictation, sv: "Var finns mjölken?", en: "Where is the milk?",
+      grammar: [wh_question, def_singular] }
+  - { type: dictation, sv: "Vad kostar osten?", en: "What does the cheese cost?",
+      grammar: [wh_question, def_singular] }
+  - { type: dictation, sv: "Behöver du en påse?", en: "Do you need a bag?",
+      grammar: [yes_no_question, en_ett] }
+  - { type: dictation, sv: "Jag betalar med kort.", en: "I'll pay by card.",
+      grammar: [present_tense] }
+
+  # the definite form: one of each ending
+  - { type: inflect, lemma: ost,   form: def, answer: osten,  grammar: [def_singular] }
+  - { type: inflect, lemma: påse,  form: def, answer: påsen,  grammar: [def_singular] }
+  - { type: inflect, lemma: kassa, form: def, answer: kassan, grammar: [def_singular] }
+  - { type: inflect, lemma: ägg,   form: def, answer: ägget,  grammar: [def_singular] }
+  - { type: inflect, lemma: kaffe, form: def, answer: kaffet, grammar: [def_singular] }
+
+  # fill the gap
+  - { type: cloze, sv: "Var finns ___?", hint: smör, answer: smöret,
+      en: "Where is the butter?", grammar: [def_singular] }
+  - { type: cloze, sv: "___ finns där, vid kassan.", hint: bröd, answer: Brödet,
+      en: "The bread is there, by the checkout.", grammar: [def_singular] }
+  - { type: cloze, sv: "Jag köper ett äpple. ___ kostar 5 kronor.", hint: äpple, answer: Äpplet,
+      en: "I'm buying an apple. The apple costs 5 kronor.", grammar: [def_singular] }
+  - { type: cloze, sv: "Nej tack, jag behöver inte ___.", hint: kvitto, answer: kvittot,
+      en: "No thanks, I don't need the receipt.", grammar: [def_singular, negation_inte] }
+  - { type: cloze, sv: "Jag köper ___ bröd och en ost.", answer: ett,
+      en: "I'm buying a loaf of bread and a cheese.", grammar: [en_ett] }
+
+  # build the sentence
+  - { type: word_order, sv: "Vad kostar kaffet?", en: "What does the coffee cost?",
+      grammar: [wh_question, def_singular] }
+  - { type: word_order, sv: "Har ni smör och ägg?", en: "Do you have butter and eggs?",
+      grammar: [yes_no_question] }
+  - { type: word_order, sv: "Mjölken finns inte där.", en: "The milk is not there.",
+      grammar: [negation_inte, def_singular] }
+  - { type: word_order, sv: "Jag betalar inte med kort.", en: "I'm not paying by card.",
+      grammar: [negation_inte] }
+
+speaking_prompt: "Say aloud: ask where the milk is, then ask what the cheese costs, and say that you pay by card."

@@ -1,11 +1,17 @@
+using Svenska.Core.Audio;
 using Svenska.Core.Content;
+using Svenska.Core.Saldo;
 using Svenska.Validator;
 
-// Usage: Svenska.Validator [content-dir]
+// Usage: Svenska.Validator [content-dir] [--audio-list]
 // Exits 1 when there is at least one error.
+// --audio-list prints "<file>\t<normal|slow>\t<text>" for every line that needs audio
+// (read by tools/gen_audio.py) and does nothing else.
 
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.OutputEncoding = new System.Text.UTF8Encoding(false);
 
+var audioList = args.Contains("--audio-list");
+args = [.. args.Where(a => a != "--audio-list")];
 var contentDir = args.Length > 0 ? args[0] : ContentLoader.FindContentDir(Directory.GetCurrentDirectory());
 if (contentDir == null || !Directory.Exists(contentDir))
 {
@@ -14,7 +20,20 @@ if (contentDir == null || !Directory.Exists(contentDir))
 }
 
 var (course, issues) = ContentLoader.Load(contentDir);
-issues.AddRange(CourseValidator.Validate(course));
+
+if (audioList)
+{
+    foreach (var (text, slow) in AudioFiles.Lines(course))
+        Console.WriteLine($"{AudioFiles.FileName(text, slow)}\t{(slow ? "slow" : "normal")}\t{text}");
+    return issues.Any(i => i.Severity == Severity.Error) ? 1 : 0;
+}
+
+var saldoDb = Path.Combine(contentDir, "..", "data", "saldo.db");
+using var saldo = File.Exists(saldoDb) ? new SaldoLexicon(saldoDb) : null;
+if (saldo == null)
+    issues.Add(new ContentIssue(Severity.Warning, "data/saldo.db",
+        "not built (tools/saldo_to_sqlite.py): the word checks, rules 2, 3, 9 and 10, were skipped"));
+issues.AddRange(CourseValidator.Validate(course, saldo, contentDir));
 
 Console.WriteLine($"Content: {Path.GetFullPath(contentDir)}");
 Console.WriteLine();
@@ -26,10 +45,6 @@ if (course.Units.Count == 0)
     Console.WriteLine("No units yet.");
 Console.WriteLine();
 
-var saldoDb = Path.Combine(contentDir, "..", "data", "saldo.db");
-if (!File.Exists(saldoDb))
-    issues.Add(new ContentIssue(Severity.Warning, "data/saldo.db",
-        "not built yet (tools/saldo_to_sqlite.py); word checks need it"));
 
 foreach (var issue in issues.OrderByDescending(i => i.Severity))
     Console.WriteLine(issue);

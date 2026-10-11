@@ -4,7 +4,8 @@ A desktop app for learning Swedish by doing real tasks (buy a ticket, pay at the
 supermarket, book a doctor's time) through listening and writing exercises.
 The design and the milestones are in [AGENTS.md](AGENTS.md).
 
-Status: milestone M0 (skeleton). There are no units yet.
+Status: milestone M1. One unit works end to end: A1-04 *I matbutiken* (words, model dialogue with
+audio, dictation, cloze, inflect and word-order exercises).
 
 ## Install
 
@@ -30,6 +31,12 @@ mkdir -p data/raw
 curl -L -o data/raw/saldom.xml https://svn.spraakbanken.gu.se/sb-arkiv/pub/lmf/saldom/saldom.xml
 python tools/saldo_to_sqlite.py data/raw/saldom.xml data/saldo.db
 ```
+
+## Audio
+
+The spoken lines are generated offline with [Piper](https://github.com/OHF-Voice/piper1-gpl)
+and committed under `content/audio/`. After changing Swedish text, run
+`tools/gen_audio.py` (setup is described at the top of that file).
 
 ## Release a version
 

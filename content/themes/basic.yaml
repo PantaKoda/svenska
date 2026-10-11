@@ -1,0 +1,27 @@
+theme: basic
+title: "Grundord"
+# Pronouns, common verbs and function words that every theme needs.
+words:
+  # pronouns
+  - { lemma: jag, pos: pron, level: A1, gloss: I }
+  - { lemma: du,  pos: pron, level: A1, gloss: you (one person) }
+  - { lemma: vi,  pos: pron, level: A1, gloss: we }
+  - { lemma: ni,  pos: pron, level: A1, gloss: you (several people) }
+  - { lemma: den, pos: pron, level: A1, gloss: "it (den for en-words, det for ett-words)" }
+
+  # common verbs
+  - { lemma: vara, pos: verb, level: A1, gloss: to be }
+  - { lemma: ha,   pos: verb, level: A1, gloss: to have }
+
+  # function words
+  - { lemma: en,   pos: article, level: A1, gloss: "a, an (en or ett)" }
+  - { lemma: och,  pos: conj,    level: A1, gloss: and }
+  - { lemma: inte, pos: adv,     level: A1, gloss: not }
+  - { lemma: var,  pos: adv,     level: A1, gloss: where }
+  - { lemma: vad,  pos: pron,    level: A1, gloss: what }
+
+  # greetings and answers
+  - { lemma: hej,  pos: interj, level: A1, gloss: hi }
+  - { lemma: tack, pos: interj, level: A1, gloss: thanks }
+  - { lemma: ja,   pos: interj, level: A1, gloss: "yes" }
+  - { lemma: nej,  pos: interj, level: A1, gloss: "no" }

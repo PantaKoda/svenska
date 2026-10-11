@@ -17,7 +17,9 @@ public static class AppUpdater
         Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion)
         ?? new Version(0, 0, 0);
 
-    public static async Task<UpdateResult> UpdateAsync(IProgress<string>? status = null, CancellationToken ct = default)
+    /// <param name="beforeInstall">Called just before the files are replaced; close open files here.</param>
+    public static async Task<UpdateResult> UpdateAsync(IProgress<string>? status = null, Action? beforeInstall = null,
+        CancellationToken ct = default)
     {
         using var http = UpdateClient.CreateHttpClient();
         var client = new UpdateClient(http);
@@ -42,6 +44,7 @@ public static class AppUpdater
             var percent = new Progress<double>(p => status?.Report($"Downloading {latest.Version}… {p:P0}"));
             var zip = await client.DownloadAsync(latest, tempDir, percent, ct);
             status?.Report($"Installing {latest.Version}…");
+            beforeInstall?.Invoke();
             await Task.Run(() => UpdateInstaller.Install(zip, InstallDir), ct);
         }
         finally

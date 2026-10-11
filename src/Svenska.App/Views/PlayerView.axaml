@@ -1,0 +1,95 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Svenska.App.ViewModels"
+             xmlns:answers="using:Svenska.Core.Answers"
+             x:Class="Svenska.App.Views.PlayerView"
+             x:DataType="vm:PlayerViewModel">
+    <UserControl.Styles>
+        <Style Selector="TextBlock.right"><Setter Property="Foreground" Value="#2E9E5B" /></Style>
+        <Style Selector="TextBlock.wrong"><Setter Property="Foreground" Value="#D9534F" /></Style>
+        <Style Selector="TextBlock.wrong.mark"><Setter Property="FontWeight" Value="Bold" /></Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="32,24" Spacing="16" MaxWidth="720">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Right" Text="{Binding Position}" Opacity="0.6" VerticalAlignment="Center"
+                           IsVisible="{Binding !IsFinished}" />
+                <Button Content="← Back to the unit" Command="{Binding BackCommand}" />
+            </DockPanel>
+
+            <!-- finished -->
+            <StackPanel Spacing="8" IsVisible="{Binding IsFinished}">
+                <TextBlock Text="Done" FontSize="28" FontWeight="SemiBold" />
+                <TextBlock Text="{Binding Summary}" FontSize="16" />
+            </StackPanel>
+
+            <!-- one item -->
+            <StackPanel Spacing="14" IsVisible="{Binding !IsFinished}">
+                <TextBlock Text="{Binding Instruction}" Opacity="0.7" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding Prompt}" FontSize="26" TextWrapping="Wrap"
+                           IsVisible="{Binding Prompt, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                <TextBlock Text="{Binding Translation}" Opacity="0.7" TextWrapping="Wrap"
+                           IsVisible="{Binding Translation, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+
+                <StackPanel Orientation="Horizontal" Spacing="8" IsVisible="{Binding IsDictation}">
+                    <Button Content="▶ Play (Ctrl+Space)" Command="{Binding PlayCommand}" />
+                    <Button Content="▶ Slow (Ctrl+Shift+Space)" Command="{Binding PlaySlowCommand}" />
+                </StackPanel>
+
+                <ItemsControl ItemsSource="{Binding Tokens}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:TokenRow">
+                            <Button Content="{Binding Text}" Command="{Binding Add}" Margin="0,0,8,8" FontSize="18" Focusable="False" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="4" Margin="8,0,0,0">
+                        <Button Content="å" Tag="å" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+A" FontSize="18" />
+                        <Button Content="ä" Tag="ä" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+E" FontSize="18" />
+                        <Button Content="ö" Tag="ö" Click="OnLetterClick" Focusable="False" ToolTip.Tip="Alt+O" FontSize="18" />
+                    </StackPanel>
+                    <TextBox x:Name="AnswerBox" Text="{Binding Answer}" FontSize="20" IsReadOnly="{Binding IsChecked}"
+                             PlaceholderText="Your answer" />
+                </DockPanel>
+
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <Button Content="{Binding SubmitText}" Command="{Binding SubmitCommand}" Classes="accent" Padding="20,8" />
+                    <TextBlock Text="Enter" Opacity="0.5" VerticalAlignment="Center" FontSize="12" />
+                </StackPanel>
+
+                <StackPanel Spacing="6" IsVisible="{Binding IsChecked}">
+                    <TextBlock Text="{Binding Feedback}" TextWrapping="Wrap" FontSize="16"
+                               Classes.right="{Binding IsRight}" Classes.wrong="{Binding !IsRight}" />
+                    <ItemsControl ItemsSource="{Binding ExpectedWords}" IsVisible="{Binding !IsRight}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="answers:WordMark">
+                                <TextBlock Text="{Binding Word}" FontSize="22" Margin="0,0,8,0" Classes="mark"
+                                           Classes.right="{Binding Right}" Classes.wrong="{Binding !Right}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <StackPanel Spacing="6" Margin="0,8,0,0"
+                                IsVisible="{Binding GrammarTitle, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
+                        <Button Command="{Binding ToggleCardCommand}" Focusable="False">
+                            <TextBlock Text="{Binding GrammarTitle, StringFormat='Grammar: {0}'}" />
+                        </Button>
+                        <Border IsVisible="{Binding ShowCard}" Padding="12" CornerRadius="6" BorderThickness="1"
+                                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+                            <TextBlock Text="{Binding GrammarCard}" TextWrapping="Wrap" />
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

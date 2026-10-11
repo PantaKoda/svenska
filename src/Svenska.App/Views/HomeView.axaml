@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Svenska.App.ViewModels"
+             x:Class="Svenska.App.Views.HomeView"
+             x:DataType="vm:HomeViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="32,24" Spacing="16" MaxWidth="720" HorizontalAlignment="Left">
+            <TextBlock Text="Svenska" FontSize="32" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding Status}" IsVisible="{Binding Status, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+            <ItemsControl ItemsSource="{Binding Units}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:UnitRow">
+                        <Button Command="{Binding Open}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Left" Padding="16,12" Margin="0,0,0,8">
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="{Binding Number}" FontSize="12" Opacity="0.6" />
+                                <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="SemiBold" />
+                                <TextBlock Text="{Binding Task}" TextWrapping="Wrap" Opacity="0.8" />
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

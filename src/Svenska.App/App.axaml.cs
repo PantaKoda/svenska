@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Svenska.App.Services;
 using Svenska.App.ViewModels;
 using Svenska.App.Views;
 
@@ -13,7 +14,11 @@ public partial class App : Application
     public override void OnFrameworkInitializationCompleted()
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-            desktop.MainWindow = new MainWindow { DataContext = MainWindowViewModel.Load() };
+        {
+            var services = new AppServices();
+            desktop.MainWindow = new MainWindow { DataContext = new MainWindowViewModel(services) };
+            desktop.Exit += (_, _) => services.Dispose();
+        }
 
         base.OnFrameworkInitializationCompleted();
     }

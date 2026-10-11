@@ -214,6 +214,9 @@ final_task:                  # authored
   turns: [...]
 speaking_prompt: "Say aloud: ask where the milk is, then ask what the cheese costs."
 ```
+Temporary: a unit may have `assumes: { words: [..], grammar: [..] }` for what it takes as
+known from earlier units that are not written yet. The validator warns while it exists;
+remove it when units 01–03 are written (M6).
 
 ### Exercise types
 | type | skill | layer | what happens |
@@ -228,6 +231,13 @@ speaking_prompt: "Say aloud: ask where the milk is, then ask what the cheese cos
 | `numbers` | listen | authored | hear a price/time/phone number, type the digits |
 | `dialogue` | listen + write | authored | scripted task: each turn choose or type a reply |
 | `free_write` | write | authored | short free text + checklist (no auto-grading yet) |
+
+Fields per type (the four written types, settled in M1):
+- `dictation`: `sv` (played and expected), `en` (shown after checking).
+- `cloze`: `sv` with one gap `___`, `answer`, optional `hint` (the base form), `en`.
+- `inflect`: `lemma`, `form` (same names as in frames: `def`, `pl`, `pres` …), `answer`.
+  The validator checks the answer against SALDO.
+- `word_order`: `sv` (the tokens are shuffled by the app), `en`.
 
 Every item that checks an answer has `answer` and optional `accept: [..]`.
 Every item has `grammar: [..]` tags and optional `review: true`.

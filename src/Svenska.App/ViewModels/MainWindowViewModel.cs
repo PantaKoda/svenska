@@ -8,31 +8,30 @@ using Svenska.Core.Content;
 
 namespace Svenska.App.ViewModels;
 
+/// <summary>The window: one page at a time (home, unit, exercises) and the footer with Update.</summary>
 public partial class MainWindowViewModel : ObservableObject
 {
     [ObservableProperty]
-    private string _status = "";
+    private object? _page;
 
     [ObservableProperty]
     private string _updateStatus = "";
 
+    public AppServices Services { get; }
+
     public string About => $"Svenska {AppUpdater.CurrentVersion} · Data: SALDO, Språkbanken (CC-BY 4.0)";
 
-    public static MainWindowViewModel Load()
+    public MainWindowViewModel(AppServices services)
     {
-        var contentDir = ContentLoader.FindContentDir(AppContext.BaseDirectory);
-        if (contentDir == null)
-            return new MainWindowViewModel { Status = "No content folder found." };
-
-        var (course, issues) = ContentLoader.Load(contentDir);
-        var errors = issues.Count(i => i.Severity == Severity.Error);
-        return new MainWindowViewModel
-        {
-            Status = errors > 0
-                ? $"The content has {errors} errors. Run Svenska.Validator."
-                : $"{course.Units.Count} units, {course.Packs.Count} theme packs, {course.Grammar.Count} grammar points loaded.",
-        };
+        Services = services;
+        ShowHome();
     }
+
+    public void ShowHome() => Page = new HomeViewModel(this);
+
+    public void ShowUnit(Unit unit) => Page = new UnitViewModel(this, unit);
+
+    public void ShowExercises(Unit unit) => Page = new PlayerViewModel(this, unit);
 
     /// <summary>Gets the latest published release, installs it and restarts the app.</summary>
     [RelayCommand]
@@ -40,7 +39,7 @@ public partial class MainWindowViewModel : ObservableObject
     {
         try
         {
-            var result = await AppUpdater.UpdateAsync(new Progress<string>(s => UpdateStatus = s));
+            var result = await AppUpdater.UpdateAsync(new Progress<string>(s => UpdateStatus = s), Services.ReleaseFiles);
             UpdateStatus = result.Message;
             if (result.Outcome != UpdateOutcome.Installed)
                 return;

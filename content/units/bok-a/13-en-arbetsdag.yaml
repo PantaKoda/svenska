@@ -1,0 +1,57 @@
+id: bok-a-13
+level: A2
+book: "A1+A2"
+chapter: 13
+theme: bok_a
+title: "En arbetsdag"
+task: "Extra practice for chapter 13, on jobs and a working day, now and before."
+can_do: "I can choose between här, hit and härifrån, use time words for now and for then, use the perfect, and know when the infinitive needs att."
+focus: ["here, to here, from here", "time words: now and then", "the perfect", "infinitive with or without att"]
+names: [Sara, Omar]
+assumes: { words: [förut, numera, hem, eller, redan, flyga, hos] }
+
+new_words: [ingenjör, frisör, brandman, pilot, tandläkare, programmerare, säljare, elektriker, bagare, dit, härifrån, borta]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # where? where to? where from?
+  - { type: cloze, sv: "Jag arbetar ___.", hint: "här / hit", answer: här, en: "I work here." }
+  - { type: cloze, sv: "Piloten flyger ___ varje måndag.", hint: "här / hit", answer: hit, en: "The pilot flies here every Monday.", review: true }
+  - { type: cloze, sv: "Bussen går ___ klockan 7.", hint: "här / härifrån", answer: härifrån, en: "The bus leaves from here at 7." }
+  - { type: cloze, sv: "Kontoret ligger i centrum. Jag cyklar ___.", hint: "där / dit", answer: dit, en: "The office is in the centre. I cycle there." }
+  - { type: cloze, sv: "Chefen är ___ idag. Hon kommer tillbaka imorgon.", hint: "borta / hemma", answer: borta, en: "The boss is away today. She is coming back tomorrow." }
+
+  # now or then?
+  - { type: cloze, sv: "___ arbetade jag som säljare.", hint: "förut / numera", answer: Förut, en: "Before, I worked as a salesperson." }
+  - { type: cloze, sv: "___ är jag programmerare.", hint: "förut / numera", answer: Numera, en: "Nowadays I am a programmer." }
+  - { type: word_order, sv: "Då hade jag inget jobb, men nu är jag bagare.", en: "Then I had no job, but now I am a baker.", review: true }
+
+  # the perfect
+  - { type: cloze, sv: "Hon har ___ som tandläkare i 10 år.", hint: arbeta, answer: arbetat, en: "She has worked as a dentist for 10 years.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Elektrikern har redan ___.", hint: komma, answer: kommit, en: "The electrician has already come.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Jag har aldrig ___ hos en frisör.", hint: vara, answer: varit, en: "I have never been to a hairdresser.", grammar: [perfect_tense] }
+
+  # infinitive: with att, or without?
+  - { type: cloze, sv: "Jag vill ___ ingenjör.", hint: "bli / att bli", answer: bli, en: "I want to become an engineer.", grammar: [modal_vill_kan_ska] }
+  - { type: cloze, sv: "Jag tycker om ___ med kunder.", hint: "arbeta / att arbeta", answer: att arbeta, en: "I like working with customers." }
+  - { type: cloze, sv: "Det är roligt ___ bröd.", hint: "baka / att baka", answer: att baka, en: "It is fun to bake bread." }
+  - { type: cloze, sv: "En brandman måste ___ snabbt.", hint: "arbeta / att arbeta", answer: arbeta, en: "A firefighter must work fast.", grammar: [modal_vill_kan_ska] }
+
+  # listen and write
+  - { type: dictation, sv: "Min bror är pilot och min syster är frisör.", en: "My brother is a pilot and my sister is a hairdresser." }
+  - { type: dictation, sv: "Bagaren börjar klockan 4 på morgonen.", en: "The baker starts at 4 in the morning." }
+  - { type: dictation, sv: "Jag vill bli elektriker.", en: "I want to become an electrician." }
+
+  # say it in Swedish
+  - { type: translate, en: "What do you want to become?", sv: "Vad vill du bli?" }
+  - { type: translate, en: "I have a job as a salesperson.", sv: "Jag har ett jobb som säljare.", accept: ["Jag har jobb som säljare."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your working day now, and about what you did before.",
+      checklist: ["I use förut or då about the past.", "I use nu or numera about the present.", "I use har + supine once.", "I use att + infinitive once, and one infinitive without att."],
+      sv: "Förut arbetade jag som säljare i en butik. Numera är jag bagare. Jag börjar klockan 4 på morgonen och går hem klockan 12. Jag har arbetat här i 2 år. Jag tycker om att baka, men jag vill inte börja så tidigt.",
+      grammar: [perfect_tense] }

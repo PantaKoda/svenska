@@ -1,0 +1,55 @@
+id: bok-a-10
+level: A2
+book: "A1+A2"
+chapter: 10
+theme: bok_a
+title: "Fakta om Sverige"
+task: "Extra practice for chapter 10, on basic facts about Sweden."
+can_do: "I can understand and give simple facts with big numbers, directions and comparisons."
+focus: ["big numbers", "north, south, east, west", "review: comparing and the definite form"]
+names: [Sverige, Sveriges, Stockholm, Göteborg, Malmö, Norge, Finland, Grekland, Aten]
+
+new_words: [invånare, huvudstad, yta, norr, söder, öster, väster, kommun, flagga, älv, fjäll, miljon]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # listen for the number
+  - { type: numbers, sv: "Sverige har ungefär 10 miljoner invånare.", hint: "how many million", answer: "10", en: "Sweden has about 10 million inhabitants." }
+  - { type: numbers, sv: "Sverige har 290 kommuner.", hint: "how many municipalities", answer: "290", en: "Sweden has 290 municipalities." }
+  - { type: numbers, sv: "Från norr till söder tar det 20 timmar med tåg.", hint: "how many hours", answer: "20", en: "From north to south it takes 20 hours by train." }
+
+  # north, south, east, west
+  - { type: cloze, sv: "Fjällen ligger i ___.", hint: "norr / söder", answer: norr, en: "The mountains are in the north." }
+  - { type: cloze, sv: "Malmö ligger i ___.", hint: "söder / väster", answer: söder, en: "Malmö is in the south." }
+  - { type: cloze, sv: "Norge ligger ___ om Sverige.", hint: "väster / öster", answer: väster, en: "Norway lies to the west of Sweden." }
+  - { type: cloze, sv: "Finland ligger ___ om Sverige.", hint: "väster / öster", answer: öster, en: "Finland lies to the east of Sweden." }
+
+  # facts: comparing and the definite form
+  - { type: cloze, sv: "Stockholm är Sveriges ___ stad.", hint: stor, answer: största, en: "Stockholm is Sweden's biggest city.", grammar: [comparison] }
+  - { type: cloze, sv: "Göteborg är ___ än Stockholm.", hint: liten, answer: mindre, en: "Gothenburg is smaller than Stockholm.", grammar: [comparison] }
+  - { type: cloze, sv: "___ har 2 färger.", hint: flagga, answer: Flaggan, en: "The flag has 2 colours.", grammar: [def_singular] }
+  - { type: cloze, sv: "De största ___ ligger i norr.", hint: älv, answer: älvarna, en: "The biggest rivers are in the north.", grammar: [plural_def] }
+
+  # build the sentence
+  - { type: word_order, sv: "Stockholm är huvudstaden i Sverige.", en: "Stockholm is the capital of Sweden." }
+  - { type: word_order, sv: "I norr finns det många fjäll och älvar.", en: "In the north there are many mountains and rivers.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Landet har en stor yta men få invånare.", en: "The country has a big area but few inhabitants.", review: true }
+
+  # listen and write
+  - { type: dictation, sv: "Sverige är ett stort land i norr.", en: "Sweden is a big country in the north." }
+  - { type: dictation, sv: "Huvudstaden heter Stockholm.", en: "The capital is called Stockholm." }
+  - { type: dictation, sv: "Jag bor i en liten kommun i väster.", en: "I live in a small municipality in the west." }
+
+  # say it in Swedish
+  - { type: translate, en: "How many inhabitants does the city have?", sv: "Hur många invånare har staden?" }
+  - { type: translate, en: "What is the capital called?", sv: "Vad heter huvudstaden?" }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 facts about another country you know: where it lies, its capital, how many people live there, and its nature.",
+      checklist: ["I say where the country lies (norr, söder, öster, väster).", "I name the capital.", "I use a big number.", "I compare with Sweden once."],
+      sv: "Grekland är ett land i söder. Huvudstaden heter Aten. Landet har ungefär 10 miljoner invånare, och det är mindre än Sverige. Det finns många stränder och ett varmt hav. På sommaren är det mycket varmare än i Sverige.",
+      grammar: [comparison] }

@@ -1,0 +1,54 @@
+id: bok-a-02
+level: A1
+book: "A1+A2"
+chapter: 2
+theme: bok_a
+title: "Hälsa och gå på fest"
+task: "Extra practice for chapter 2, on greetings, a party and the things you carry."
+can_do: "I can join main clauses with och, men, eller and så, and use nouns with en/ett and in the definite form."
+focus: ["main clauses and conjunctions", "nouns: en or ett", "nouns: the definite form"]
+names: [Sara, Omar, Maria]
+assumes: { words: [eller, så, fest, nyckel, glad, väska, dansa, ligga, god] }
+
+new_words: [hälsa, öl, vin, saft, kaka, bulle, mobil, plånbok, penna, paraply, kamera]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # och, men, eller, så
+  - { type: cloze, sv: "Jag dricker saft, ___ Omar dricker öl.", hint: "men / eller", answer: men, en: "I drink squash, but Omar drinks beer." }
+  - { type: cloze, sv: "Vill du ha vin ___ öl?", hint: "men / eller", answer: eller, en: "Do you want wine or beer?" }
+  - { type: cloze, sv: "Det regnar, ___ jag tar ett paraply.", hint: "så / men", answer: så, en: "It is raining, so I am taking an umbrella." }
+  - { type: cloze, sv: "Sara äter en kaka ___ dricker kaffe.", hint: "och / eller", answer: och, en: "Sara eats a biscuit and drinks coffee." }
+  - { type: word_order, sv: "Jag hälsar på Maria, men hon ser mig inte.", en: "I say hello to Maria, but she does not see me." }
+
+  # en or ett?
+  - { type: cloze, sv: "Jag har ___ mobil och en kamera.", hint: "en / ett", answer: en, en: "I have a mobile and a camera.", grammar: [en_ett] }
+  - { type: cloze, sv: "Har du ___ paraply?", hint: "en / ett", answer: ett, en: "Do you have an umbrella?", grammar: [en_ett] }
+  - { type: cloze, sv: "Jag vill ha ___ bulle.", hint: "en / ett", answer: en, en: "I want a bun.", grammar: [en_ett] }
+
+  # the definite form
+  - { type: cloze, sv: "Jag har en plånbok. ___ är ny.", hint: plånbok, answer: Plånboken, en: "I have a wallet. The wallet is new.", grammar: [def_singular] }
+  - { type: cloze, sv: "Var är ___?", hint: paraply, answer: paraplyet, en: "Where is the umbrella?", grammar: [def_singular] }
+  - { type: cloze, sv: "___ ligger i väskan.", hint: mobil, answer: Mobilen, en: "The mobile is in the bag.", grammar: [def_singular], review: true }
+  - { type: cloze, sv: "___ är god.", hint: kaka, answer: Kakan, en: "The biscuit is good.", grammar: [def_singular], review: true }
+  - { type: translate, en: "The wine costs 90 kronor.", sv: "Vinet kostar 90 kronor.", grammar: [def_singular] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag har en penna och en mobil i väskan.", en: "I have a pen and a mobile in the bag." }
+  - { type: dictation, sv: "Vi dansar på festen.", en: "We dance at the party." }
+  - { type: dictation, sv: "Var är min plånbok?", en: "Where is my wallet?" }
+
+  # say it in Swedish
+  - { type: translate, en: "Do you want a bun?", sv: "Vill du ha en bulle?" }
+  - { type: translate, en: "I do not drink beer.", sv: "Jag dricker inte öl.", grammar: [negation_inte] }
+  - { type: translate, en: "The camera is new.", sv: "Kameran är ny.", grammar: [def_singular] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 sentences: what you have in your bag, and what you eat and drink at a party.",
+      checklist: ["I use en and ett correctly.", "I use one noun in the definite form.", "I join two clauses with och, men or så.", "I name three things."],
+      sv: "I min väska har jag en mobil, en plånbok och ett paraply. Mobilen är ny, men plånboken är gammal. På festen äter jag en kaka och dricker saft. Jag dricker inte vin.",
+      grammar: [en_ett, def_singular] }

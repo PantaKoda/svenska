@@ -489,7 +489,7 @@ The same themes a fourth time: arguing, reporting, nuance and written style.
 | 09 | Arbete (`arbete`) | Apply for a job: phone call and personal letter | adjective_as_noun, noun_without_article |
 | 10 | Vård (`vard`) | Work a shift in a care home and hand over | clause_shortening |
 
-## Book companion (`content/units/bok-b/`)
+## Book companion (`content/units/bok-a/`, `content/units/bok-b/`)
 
 Extra practice beside a course book, one companion chapter per book chapter. It is a
 separate track: its own section on the home screen, never "next", never part of the
@@ -507,6 +507,12 @@ task units.
 - Items are tagged with existing grammar points, so the reference cards are linked.
   A book topic without a card of ours gets no tag (and may get a card later).
 - Chapters 1-11 of the B1+B2 book are level B1, 12-18 are B2. All 18 are written.
+- The A1+A2 book has 20 chapters (pack `themes/bok_a.yaml`), all written. Chapters 1-4
+  are level A1 and 5-20 are level A2: from chapter 5 on the book uses the past tense,
+  which is A2 in `levels.yaml`.
+- A book may use a word earlier than the task units teach it. A companion chapter lists
+  such words under `assumes: { words: [...] }`; they only have to exist in a pack.
+  Item grammar tags in a companion chapter only link to cards and are not level-checked.
 ---
 
 ## Milestones

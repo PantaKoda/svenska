@@ -1,0 +1,54 @@
+id: bok-a-04
+level: A1
+book: "A1+A2"
+chapter: 4
+theme: bok_a
+title: "På kafé och på torget"
+task: "Extra practice for chapter 4, on ordering at a cafe and buying at the market."
+can_do: "I can use kan, vill, ska and måste with an infinitive, point with den här and den där, and make the plural of nouns."
+focus: ["helping verb + infinitive", "den här, den där + noun", "nouns: plural"]
+names: [Sara, Omar]
+assumes: { words: [här, beställa, frukt, grönsak, kilo, god, billig, dyr] }
+
+new_words: [kafé, te, smörgås, sallad, soppa, juice, kopp, meny, servitör, torg, apelsin, päron, gurka, lök, morot]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 10
+
+exercises:
+  # kan, vill, ska, måste + infinitive
+  - { type: cloze, sv: "Jag vill ___ en kopp te.", hint: ha, answer: ha, en: "I want a cup of tea.", grammar: [modal_vill_kan_ska] }
+  - { type: cloze, sv: "Kan jag ___ menyn?", hint: se, answer: se, en: "Can I see the menu?", grammar: [modal_vill_kan_ska] }
+  - { type: cloze, sv: "Vi ska ___ frukt på torget.", hint: köpa, answer: köpa, en: "We are going to buy fruit at the market.", grammar: [modal_vill_kan_ska] }
+  - { type: word_order, sv: "Du måste betala i kassan.", en: "You must pay at the till.", grammar: [modal_vill_kan_ska] }
+  - { type: word_order, sv: "Jag vill inte ha lök i salladen.", en: "I do not want onion in the salad.", grammar: [modal_vill_kan_ska, negation_inte] }
+  - { type: translate, en: "Can I order?", sv: "Kan jag beställa?", grammar: [modal_vill_kan_ska] }
+
+  # this one (near) and that one (further away): the noun is definite
+  - { type: cloze, sv: "Jag tar den ___ smörgåsen, inte den där.", answer: här, en: "I will take this sandwich, not that one." }
+  - { type: cloze, sv: "Vad kostar det där ___?", hint: päron, answer: päronet, en: "What does that pear cost?" }
+  - { type: cloze, sv: "De här ___ är billiga.", hint: apelsin, answer: apelsinerna, en: "These oranges are cheap.", review: true }
+
+  # plural
+  - { type: cloze, sv: "Jag vill ha 2 ___.", hint: gurka, answer: gurkor, en: "I want 2 cucumbers.", grammar: [plural_indef] }
+  - { type: cloze, sv: "Ett kilo ___, tack.", hint: morot, answer: morötter, en: "A kilo of carrots, please.", grammar: [plural_indef] }
+  - { type: cloze, sv: "Vi tar 2 ___ te.", hint: kopp, answer: koppar, en: "We will have 2 cups of tea.", grammar: [plural_indef] }
+  - { type: cloze, sv: "Hon köper 4 ___.", hint: päron, answer: päron, en: "She buys 4 pears. (ett-words ending in a consonant do not change)", grammar: [plural_indef] }
+  - { type: cloze, sv: "Kaféet har goda ___.", hint: smörgås, answer: smörgåsar, en: "The cafe has good sandwiches.", grammar: [plural_indef] }
+
+  # listen and write
+  - { type: dictation, sv: "En kopp kaffe och en smörgås, tack.", en: "A cup of coffee and a sandwich, please." }
+  - { type: dictation, sv: "Soppan kostar 75 kronor.", en: "The soup costs 75 kronor." }
+  - { type: dictation, sv: "Servitören kommer med menyn.", en: "The waiter comes with the menu." }
+
+  # say it in Swedish
+  - { type: translate, en: "I would like juice and a sandwich.", sv: "Jag vill ha juice och en smörgås." }
+  - { type: translate, en: "Is there a cafe at the square?", sv: "Finns det ett kafé på torget?", accept: ["Finns det ett kafé vid torget?"] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 sentences: what you order at a cafe and what you buy at the market.",
+      checklist: ["I use vill, kan or ska + infinitive twice.", "I use two nouns in the plural.", "I use den här or det här once.", "I say what something costs."],
+      sv: "På kaféet vill jag ha en kopp te och 2 smörgåsar. Sedan ska jag gå till torget. Där köper jag apelsiner, morötter och en gurka. De här apelsinerna kostar 30 kronor.",
+      grammar: [modal_vill_kan_ska, plural_indef] }

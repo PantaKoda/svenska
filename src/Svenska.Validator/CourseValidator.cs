@@ -332,7 +332,7 @@ public sealed class CourseValidator
             if (_course.Packs.All(p => p.Theme != unit.Theme))
                 Error(file, $"theme '{unit.Theme}' has no pack");
 
-            if (unit.Assumes is { } assumes)
+            if (unit.Assumes is { } assumes && !unit.IsCompanion)
                 Warning(file, $"assumes {assumes.Words.Count} words and {assumes.Grammar.Count} grammar points " +
                               "from units that are not written yet");
 
@@ -359,7 +359,13 @@ public sealed class CourseValidator
         if (unit.NewWords.Count > MaxNewWords)
             Error(file, $"{unit.NewWords.Count} new words (at most {MaxNewWords})", 5);
 
-        foreach (var lemma in unit.NewWords.Concat(unit.Assumes?.Words ?? []))
+        // A companion chapter follows its book, which may use a word earlier than the task
+        // units teach it: such words are listed under assumes and only have to exist.
+        if (unit.IsCompanion)
+            foreach (var lemma in (unit.Assumes?.Words ?? []).Where(l => !_words.ContainsKey(l)))
+                Error(file, $"word '{lemma}' is in no theme pack", 6);
+
+        foreach (var lemma in unit.NewWords.Concat(unit.IsCompanion ? [] : unit.Assumes?.Words ?? []))
         {
             if (!_words.TryGetValue(lemma, out var word))
                 Error(file, $"word '{lemma}' is in no theme pack", 6);

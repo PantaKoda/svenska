@@ -1,0 +1,57 @@
+id: bok-a-14
+level: A2
+book: "A1+A2"
+chapter: 14
+theme: bok_a
+title: "Semester och gott uppförande"
+task: "Extra practice for chapter 14, on holidays, being a guest and good manners."
+can_do: "I can report what someone asked or said, describe with som and där, use more subordinating words, and react with an exclamation."
+focus: ["direct and indirect speech", "som and där", "subordinating words", "exclamations"]
+names: [Sara, Omar, Maria]
+assumes: { words: [tacka, inbjudan, medan, undra, trevlig, innan, väldigt, packa, skicka] }
+
+new_words: [stuga, tält, camping, sola, bada, grilla, resväska, etikett, värd, vykort]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # what did they say? what did they ask?
+  - { type: word_order, sv: "Sara frågar om vi vill grilla ikväll.", en: "Sara asks if we want to barbecue tonight.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Värden undrar när gästerna kommer.", en: "The host wonders when the guests are coming.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Omar säger att han inte kan komma.", en: "Omar says that he cannot come.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "\"Vill ni bada?\" Hon frågar ___ vi vill bada.", hint: "om / att", answer: om, en: "\"Do you want to swim?\" She asks if we want to swim.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "\"Stugan är liten.\" Han säger ___ stugan är liten.", hint: "om / att", answer: att, en: "\"The cottage is small.\" He says that the cottage is small.", grammar: [indirect_speech] }
+
+  # som (which one) and där (the place where)
+  - { type: cloze, sv: "Vi har en stuga ___ ligger vid en sjö.", hint: "som / där", answer: som, en: "We have a cottage that lies by a lake.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Det är campingen ___ vi bodde förra året.", hint: "som / där", answer: där, en: "That is the campsite where we stayed last year.", grammar: [relative_clause] }
+  - { type: translate, en: "I have a tent that is very small.", sv: "Jag har ett tält som är mycket litet.", accept: ["Jag har ett tält som är väldigt litet."], grammar: [relative_clause] }
+
+  # när, innan, medan, eftersom, om
+  - { type: cloze, sv: "Ta av dig skorna ___ du går in.", hint: "innan / medan", answer: innan, en: "Take off your shoes before you go in.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Barnen badar ___ vi grillar.", hint: "innan / medan", answer: medan, en: "The children swim while we barbecue.", grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Vi solar ___ det är varmt.", hint: "eftersom / innan", answer: eftersom, en: "We sunbathe because it is warm.", grammar: [subordinate_clause_basic] }
+
+  # exclamations
+  - { type: cloze, sv: "___ fin stuga!", hint: "vad / vilken", answer: Vilken, en: "What a nice cottage!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ trevligt!", hint: "vad / vilken", answer: Vad, en: "How nice!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ stort tält!", hint: vilken, answer: Vilket, en: "What a big tent!", grammar: [exclamations] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag har packat min resväska.", en: "I have packed my suitcase.", review: true }
+  - { type: dictation, sv: "Vi skickar ett vykort från campingen.", en: "We are sending a postcard from the campsite." }
+  - { type: dictation, sv: "Det är god etikett att tacka värden.", en: "It is good manners to thank the host." }
+  - { type: dictation, sv: "På semestern vill jag sola och bada.", en: "On holiday I want to sunbathe and swim." }
+
+  # say it in Swedish
+  - { type: translate, en: "Thank you for the invitation!", sv: "Tack för inbjudan!" }
+  - { type: translate, en: "Shall we barbecue on Saturday?", sv: "Ska vi grilla på lördag?" }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a holiday: where you stayed, what you did, and what someone said or asked.",
+      checklist: ["I use som or där once.", "I report what someone said or asked (att, om).", "I use medan, innan or eftersom once.", "I use one exclamation."],
+      sv: "Förra sommaren bodde vi i en stuga som ligger vid en sjö. Barnen badade medan vi grillade. Vilken fin semester! Värden frågade om vi ville komma tillbaka nästa år. Vi sa att vi gärna kommer.",
+      grammar: [relative_clause, indirect_speech] }

@@ -1,0 +1,57 @@
+id: bok-a-17
+level: A2
+book: "A1+A2"
+chapter: 17
+theme: bok_a
+title: "Boende"
+task: "Extra practice for chapter 17, on how and where people live."
+can_do: "I can compare how things are done, say that two things are equal, say what something looks like, and say where things stand, lie and hang."
+focus: ["comparing adverbs", "lika ... som", "ser + adjective + ut", "står, ligger, hänger"]
+names: [Sara, Omar, Göteborg]
+assumes: { words: [lika, hyra, visning, hänga, vägg, lugn, nära, ljus, centrum, ut, hus, drömma] }
+
+new_words: [villa, radhus, hyresrätt, bostadsrätt, trädgård, källare, förort, bostad, mäklare, rymlig, trång, läge]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # comparing how: fort, fortare, fortast - gärna, hellre, helst
+  - { type: cloze, sv: "Jag bor ___ i en villa än i en lägenhet.", hint: gärna, answer: hellre, en: "I would rather live in a house than in a flat.", review: true }
+  - { type: cloze, sv: "Jag vill ___ bo vid havet.", hint: gärna, answer: helst, en: "Most of all I want to live by the sea.", review: true }
+  - { type: cloze, sv: "Det går ___ att hitta en hyresrätt i en liten stad.", hint: snabb, answer: snabbare, en: "It is quicker to find a rented flat in a small town.", grammar: [comparison] }
+  - { type: cloze, sv: "Vi bor ___ centrum än ni.", hint: nära, answer: närmare, en: "We live nearer the centre than you.", grammar: [comparison] }
+
+  # equal: lika ... som
+  - { type: cloze, sv: "Radhuset är ___ stort som villan.", answer: lika, en: "The terraced house is as big as the detached house.", grammar: [comparison_lika_som] }
+  - { type: cloze, sv: "Källaren är lika trång ___ hallen.", answer: som, en: "The cellar is as cramped as the hall.", grammar: [comparison_lika_som] }
+  - { type: translate, en: "The rent is not as high as in the city.", sv: "Hyran är inte lika dyr som i staden.", grammar: [comparison_lika_som], review: true }
+
+  # how does it look? ser + adjective + ut
+  - { type: word_order, sv: "Lägenheten ser rymlig ut.", en: "The flat looks spacious." }
+  - { type: word_order, sv: "Huset ser inte så nytt ut.", en: "The house does not look so new." }
+  - { type: cloze, sv: "Trädgården ___ fin ut.", hint: se, answer: ser, en: "The garden looks nice." }
+  - { type: cloze, sv: "Rummen ser ___ ut.", hint: ljus, answer: ljusa, en: "The rooms look bright.", grammar: [adjective_agreement_full] }
+
+  # står, ligger, hänger
+  - { type: cloze, sv: "Villan ___ i en lugn förort.", hint: "ligger / står", answer: ligger, en: "The house is in a quiet suburb.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Cyklarna ___ i källaren.", hint: "står / hänger", answer: står, en: "The bicycles are in the cellar.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Lampan ___ på väggen i hallen.", hint: "ligger / hänger", answer: hänger, en: "The lamp hangs on the wall in the hall.", grammar: [position_verbs] }
+
+  # listen and write
+  - { type: dictation, sv: "Vi har köpt en bostadsrätt i en förort.", en: "We have bought a flat in a suburb." }
+  - { type: dictation, sv: "Mäklaren visar villan på söndag.", en: "The estate agent is showing the house on Sunday." }
+  - { type: dictation, sv: "Lägenheten har ett bra läge.", en: "The flat has a good location." }
+  - { type: dictation, sv: "Jag drömmer om ett radhus med trädgård.", en: "I dream of a terraced house with a garden.", review: true }
+
+  # say it in Swedish
+  - { type: translate, en: "It is difficult to find a home.", sv: "Det är svårt att hitta en bostad.", accept: ["Det är svårt att hitta bostad."] }
+  - { type: translate, en: "The kitchen is spacious but the bathroom is cramped.", sv: "Köket är rymligt men badrummet är trångt." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about the home of your dreams: what kind, where, what it looks like, and compare it with where you live now.",
+      checklist: ["I name the kind of home.", "I use lika ... som or -are än.", "I use ser ... ut once.", "I say where it lies (ligger)."],
+      sv: "Jag vill bo i ett radhus med trädgård. Det ligger i en lugn förort, nära havet. Huset ser inte så stort ut, men köket är rymligt. Min lägenhet nu är inte lika ljus som huset. Jag bor hellre i ett litet hus än i en stor lägenhet.",
+      grammar: [comparison_lika_som, position_verbs] }

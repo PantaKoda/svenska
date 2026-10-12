@@ -1,0 +1,55 @@
+id: bok-a-11
+level: A2
+book: "A1+A2"
+chapter: 11
+theme: bok_a
+title: "Vänner, partner och mobilen"
+task: "Extra practice for chapter 11, on meeting people and everyday phone problems."
+can_do: "I can agree with också and inte heller, join clauses with conjunctions, and choose between the indefinite and the definite form."
+focus: ["också and inte heller", "conjunctions", "indefinite or definite form"]
+names: [Sara, Omar, Maria, Göteborg]
+assumes: { words: [eller, så, vän, lösenord, ladda, ner, skicka, logga, gratis, ensam] }
+
+new_words: [dejt, dejta, partner, pojkvän, flickvän, kär, profil, app, meddelande, chatta, heller, bild]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # också (after a yes-sentence), inte heller (after a no-sentence)
+  - { type: cloze, sv: "Jag har en profil. Det har Omar ___.", hint: "också / heller", answer: också, en: "I have a profile. So has Omar." }
+  - { type: cloze, sv: "Jag dejtar inte. Det gör inte Sara ___.", hint: "också / heller", answer: heller, en: "I do not date. Neither does Sara." }
+  - { type: cloze, sv: "Hon är kär, och han är ___ kär.", hint: "också / heller", answer: också, en: "She is in love, and he is in love too." }
+  - { type: word_order, sv: "Jag tycker inte heller om den appen.", en: "I do not like that app either." }
+  - { type: translate, en: "I do not have a boyfriend either.", sv: "Jag har inte heller någon pojkvän.", accept: ["Jag har ingen pojkvän heller."], review: true }
+
+  # och, men, eller, så, för
+  - { type: cloze, sv: "Jag skickade ett meddelande, ___ hon svarade inte.", hint: "men / eller", answer: men, en: "I sent a message, but she did not answer." }
+  - { type: cloze, sv: "Vill du chatta ___ ringa?", hint: "men / eller", answer: eller, en: "Do you want to chat or call?" }
+  - { type: cloze, sv: "Jag har glömt mitt lösenord, ___ jag kan inte logga in.", hint: "så / men", answer: så, en: "I have forgotten my password, so I cannot log in.", review: true }
+  - { type: cloze, sv: "Han är glad, ___ han har en dejt ikväll.", hint: "för / men", answer: för, en: "He is happy, for he has a date tonight." }
+
+  # first time: en/ett. Known: the definite form.
+  - { type: cloze, sv: "Jag har en ny app. ___ är gratis.", hint: app, answer: Appen, en: "I have a new app. The app is free.", grammar: [def_singular], review: true }
+  - { type: cloze, sv: "Hon skickade en bild. ___ var fin.", hint: bild, answer: Bilden, en: "She sent a picture. The picture was nice.", grammar: [def_singular] }
+  - { type: cloze, sv: "Har du läst ___ från Maria?", hint: meddelande, answer: meddelandet, en: "Have you read the message from Maria?", grammar: [def_singular] }
+  - { type: cloze, sv: "Jag har en ___ på lördag.", hint: dejt, answer: dejt, en: "I have a date on Saturday.", grammar: [en_ett] }
+  - { type: cloze, sv: "Det här är min ___.", hint: flickvän, answer: flickvän, en: "This is my girlfriend. (after min: no ending)", grammar: [possessive_basic] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag träffade min partner på en fest.", en: "I met my partner at a party." }
+  - { type: dictation, sv: "Vi chattar varje kväll.", en: "We chat every evening." }
+  - { type: dictation, sv: "Kan du ladda ner appen?", en: "Can you download the app?" }
+  - { type: dictation, sv: "Har du en bild på din pojkvän?", en: "Do you have a picture of your boyfriend?" }
+
+  # say it in Swedish
+  - { type: translate, en: "Are you in love?", sv: "Är du kär?" }
+  - { type: translate, en: "I am dating a teacher.", sv: "Jag dejtar en lärare." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences for a profile: who you are, what you like, and who you want to meet.",
+      checklist: ["I use också or inte heller once.", "I join two clauses with men, så or för.", "I use the definite form of one noun.", "I say who I want to meet."],
+      sv: "Jag är 30 år och bor i Göteborg. Jag tycker om film, och jag tycker också om att laga mat. Jag dricker inte kaffe, och jag dricker inte heller vin. Bilden i profilen är från förra sommaren. Jag vill träffa en glad partner, för jag vill inte vara ensam.",
+      grammar: [def_singular] }

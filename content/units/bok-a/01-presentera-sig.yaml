@@ -1,0 +1,59 @@
+id: bok-a-01
+level: A1
+book: "A1+A2"
+chapter: 1
+theme: bok_a
+title: "Namn, land och språk"
+task: "Extra practice for chapter 1, on saying who you are."
+can_do: "I can put the verb in second place, ask with question words, use subject pronouns, say no with inte, and use the present tense."
+focus: ["word order: the verb comes second", "question words", "subject pronouns", "inte", "present tense"]
+names: [Sara, Omar, Maria, Sverige, Grekland, Göteborg]
+assumes: { words: [land, språk, förstå, prata, eller, lite, här, vilken] }
+
+new_words: [namn, bokstav, ord, student, tyska, spanska, franska, arabiska, plugga, välkommen, svensk]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # the verb comes second
+  - { type: word_order, sv: "Jag kommer från Grekland.", en: "I come from Greece.", grammar: [present_tense] }
+  - { type: word_order, sv: "Nu pluggar jag svenska.", en: "Now I am studying Swedish.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "I Sverige talar man svenska.", en: "In Sweden people speak Swedish.", grammar: [v2_word_order] }
+
+  # question words
+  - { type: cloze, sv: "___ heter din lärare?", hint: "vad / var", answer: Vad, en: "What is your teacher called?", grammar: [wh_question] }
+  - { type: cloze, sv: "___ bor du?", hint: "vad / var", answer: Var, en: "Where do you live?", grammar: [wh_question] }
+  - { type: cloze, sv: "___ kommer du?", hint: "varifrån / vem", answer: Varifrån, en: "Where do you come from?", grammar: [wh_question] }
+  - { type: cloze, sv: "___ är student här?", hint: "vem / var", answer: Vem, en: "Who is a student here?", grammar: [wh_question], review: true }
+
+  # jag, du, han, hon, vi, ni, de
+  - { type: cloze, sv: "Det är Maria. ___ talar spanska.", hint: "han / hon", answer: Hon, en: "That is Maria. She speaks Spanish.", grammar: [pron_subject] }
+  - { type: cloze, sv: "Omar och jag är studenter. ___ pluggar svenska.", hint: "vi / de", answer: Vi, en: "Omar and I are students. We study Swedish.", grammar: [pron_subject] }
+  - { type: cloze, sv: "Sara och Omar bor i Göteborg. ___ är svenska.", hint: "vi / de", answer: De, en: "Sara and Omar live in Gothenburg. They are Swedish.", grammar: [pron_subject] }
+
+  # inte comes after the verb
+  - { type: word_order, sv: "Jag talar inte tyska.", en: "I do not speak German.", grammar: [negation_inte] }
+  - { type: word_order, sv: "Han är inte student.", en: "He is not a student.", grammar: [negation_inte] }
+  - { type: translate, en: "I do not understand.", sv: "Jag förstår inte.", grammar: [negation_inte] }
+
+  # present tense
+  - { type: cloze, sv: "Hon ___ franska och lite arabiska.", hint: tala, answer: talar, en: "She speaks French and a little Arabic.", grammar: [present_tense] }
+  - { type: cloze, sv: "Vad ___ ordet?", hint: heta, answer: heter, en: "What is the word called?", grammar: [present_tense], review: true }
+
+  # listen and write
+  - { type: dictation, sv: "Välkommen till Sverige!", en: "Welcome to Sweden!" }
+  - { type: dictation, sv: "Mitt namn har 4 bokstäver.", en: "My name has 4 letters." }
+  - { type: dictation, sv: "Talar du svenska eller engelska?", en: "Do you speak Swedish or English?" }
+
+  # say it in Swedish
+  - { type: translate, en: "How do you spell your name?", sv: "Hur stavar du ditt namn?" }
+  - { type: translate, en: "Which languages do you speak?", sv: "Vilka språk talar du?", accept: ["Vad talar du för språk?", "Vilka språk pratar du?"], review: true }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 sentences about yourself: your name, where you come from, which languages you speak, and one you do not speak.",
+      checklist: ["I say my name and where I come from.", "The verb is in second place.", "I use inte once.", "I name two languages."],
+      sv: "Jag heter Maria och jag kommer från Grekland. Nu bor jag i Göteborg. Jag talar engelska och lite svenska. Jag talar inte tyska.",
+      grammar: [present_tense, negation_inte] }

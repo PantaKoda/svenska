@@ -1,0 +1,57 @@
+id: bok-a-16
+level: A2
+book: "A1+A2"
+chapter: 16
+theme: bok_a
+title: "Skola och utbildning"
+task: "Extra practice for chapter 16, on school, education and plans for the future."
+can_do: "I can use more subordinating words, place inte in a som-clause, talk about the future, and order events with time words."
+focus: ["subordinating words", "som-clauses with inte, aldrig, alltid", "talking about the future", "time words"]
+names: [Sara, Omar]
+assumes: { words: [eller, medan, tills, plugga, först, sedan] }
+
+new_words: [förskola, grundskola, gymnasium, betyg, ämne, matematik, elev, klass, examen, framtid, plan, lov]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # när, innan, efter att, tills, eftersom
+  - { type: cloze, sv: "Barnen går i förskola ___ de börjar grundskolan.", hint: "innan / eftersom", answer: innan, en: "Children go to preschool before they start compulsory school.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Jag ska plugga ___ jag har fått min examen.", hint: "tills / eftersom", answer: tills, en: "I am going to study until I have got my degree.", grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Hon fick bra betyg ___ hon arbetade mycket.", hint: "eftersom / innan", answer: eftersom, en: "She got good grades because she worked a lot.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "___ jag gick i gymnasiet, tyckte jag om matematik.", hint: "när / tills", answer: När, en: "When I was at upper secondary school, I liked mathematics.", grammar: [subordinate_clause_basic] }
+
+  # inte, aldrig and alltid come before the verb in a som-clause
+  - { type: word_order, sv: "Det är ett ämne som jag inte förstår.", en: "It is a subject that I do not understand.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Hon är en elev som alltid gör sina läxor.", en: "She is a pupil who always does her homework.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Vi har en lärare som aldrig kommer för sent.", en: "We have a teacher who never comes late.", grammar: [relative_clause] }
+  - { type: translate, en: "It is a class that does not have many pupils.", sv: "Det är en klass som inte har många elever.", grammar: [relative_clause] }
+
+  # the future: ska, kommer att, tänker
+  - { type: cloze, sv: "Nästa år ___ jag börja på universitetet.", hint: "ska / kommer", answer: ska, en: "Next year I am going to start university.", grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Jag tror att det ___ att bli svårt.", hint: "ska / kommer", answer: kommer, en: "I think it is going to be difficult.", grammar: [future_ska_kommer_att] }
+  - { type: translate, en: "What are your plans for the future?", sv: "Vad har du för planer för framtiden?", accept: ["Vilka planer har du för framtiden?", "Vilka är dina planer för framtiden?"], review: true }
+
+  # first, then, later
+  - { type: cloze, sv: "___ gick jag i grundskolan, sedan i gymnasiet.", hint: "först / senare", answer: Först, en: "First I went to compulsory school, then to upper secondary school." }
+  - { type: cloze, sv: "Nu pluggar jag. ___ vill jag bli lärare.", hint: "först / senare", answer: Senare, en: "Now I am studying. Later I want to become a teacher." }
+  - { type: word_order, sv: "Sedan tog jag examen och började arbeta.", en: "Then I took my degree and started working.", grammar: [inversion_after_adverb] }
+
+  # listen and write
+  - { type: dictation, sv: "Mitt bästa ämne är matematik.", en: "My best subject is mathematics." }
+  - { type: dictation, sv: "Det går 25 elever i klassen.", en: "There are 25 pupils in the class." }
+  - { type: dictation, sv: "Barnen har lov i juli.", en: "The children are on holiday in July." }
+  - { type: dictation, sv: "Jag fick bra betyg i svenska.", en: "I got good grades in Swedish." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which subject do you like?", sv: "Vilket ämne tycker du om?", accept: ["Vilket ämne gillar du?"] }
+  - { type: translate, en: "I have a plan.", sv: "Jag har en plan." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your education and your plans: what you studied, in which order, and what you are going to do.",
+      checklist: ["I use först, sedan or senare.", "I use one som-clause with inte, aldrig or alltid.", "I use ska or kommer att about the future.", "I use innan, tills or eftersom once."],
+      sv: "Först gick jag i grundskolan i mitt land, och sedan pluggade jag matematik. Det var ett ämne som jag alltid tyckte om. Nu läser jag svenska eftersom jag vill arbeta här. Nästa år ska jag ta examen. Jag tror att framtiden kommer att bli bra.",
+      grammar: [future_ska_kommer_att, relative_clause] }

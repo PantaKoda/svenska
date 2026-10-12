@@ -1,0 +1,283 @@
+theme: bok_a
+title: "Bok A1+A2"
+# The words of the companion chapters (content/units/bok-a/). Our own selection for the
+# theme of each chapter; nothing is taken from the book.
+words:
+
+  # chapter 1: presenting yourself
+  - { lemma: namn, pos: noun, gender: ett, level: A1, gloss: "name" }
+  - { lemma: bokstav, pos: noun, gender: en, level: A1, gloss: "letter (of the alphabet)" }
+  - { lemma: ord, pos: noun, gender: ett, level: A1, gloss: "word" }
+  - { lemma: student, pos: noun, gender: en, level: A1, gloss: "student" }
+  - { lemma: tyska, pos: noun, gender: en, level: A1, gloss: "German (the language)" }
+  - { lemma: spanska, pos: noun, gender: en, level: A1, gloss: "Spanish (the language)" }
+  - { lemma: franska, pos: noun, gender: en, level: A1, gloss: "French (the language)" }
+  - { lemma: arabiska, pos: noun, gender: en, level: A1, gloss: "Arabic (the language)" }
+  - { lemma: plugga, pos: verb, level: A1, gloss: "to study (everyday word)" }
+  - { lemma: välkommen, pos: adj, level: A1, gloss: "welcome" }
+  - { lemma: svensk, pos: adj, level: A1, gloss: "Swedish" }
+
+  # chapter 2: greetings and a party
+  - { lemma: hälsa, pos: verb, level: A1, gloss: "to greet, to say hello" }
+  - { lemma: öl, pos: noun, gender: en, level: A1, gloss: "beer" }
+  - { lemma: vin, pos: noun, gender: ett, level: A1, gloss: "wine" }
+  - { lemma: saft, pos: noun, gender: en, level: A1, gloss: "fruit squash" }
+  - { lemma: kaka, pos: noun, gender: en, level: A1, gloss: "biscuit, cake" }
+  - { lemma: bulle, pos: noun, gender: en, level: A1, gloss: "bun" }
+  - { lemma: mobil, pos: noun, gender: en, level: A1, gloss: "mobile phone" }
+  - { lemma: plånbok, pos: noun, gender: en, level: A1, gloss: "wallet" }
+  - { lemma: penna, pos: noun, gender: en, level: A1, gloss: "pen, pencil" }
+  - { lemma: paraply, pos: noun, gender: ett, level: A1, gloss: "umbrella" }
+  - { lemma: kamera, pos: noun, gender: en, level: A1, gloss: "camera" }
+
+  # chapter 3: numbers and the clock
+  - { lemma: siffra, pos: noun, gender: en, level: A1, gloss: "figure, digit" }
+  - { lemma: räkna, pos: verb, level: A1, gloss: "to count" }
+  - { lemma: sekund, pos: noun, gender: en, level: A1, gloss: "second" }
+  - { lemma: kalender, pos: noun, gender: en, level: A1, gloss: "calendar, diary" }
+  - { lemma: somna, pos: verb, level: A1, gloss: "to fall asleep" }
+  - { lemma: borsta, pos: verb, level: A1, gloss: "to brush" }
+  - { lemma: tand, pos: noun, gender: en, level: A1, gloss: "tooth" }
+  - { lemma: lektion, pos: noun, gender: en, level: A1, gloss: "lesson" }
+  - { lemma: läxa, pos: noun, gender: en, level: A1, gloss: "homework" }
+
+  # chapter 4: cafe, shop and market
+  - { lemma: kafé, pos: noun, gender: ett, level: A1, gloss: "cafe" }
+  - { lemma: te, pos: noun, gender: ett, level: A1, gloss: "tea" }
+  - { lemma: smörgås, pos: noun, gender: en, level: A1, gloss: "sandwich" }
+  - { lemma: sallad, pos: noun, gender: en, level: A1, gloss: "salad" }
+  - { lemma: soppa, pos: noun, gender: en, level: A1, gloss: "soup" }
+  - { lemma: juice, pos: noun, gender: en, level: A1, gloss: "juice" }
+  - { lemma: kopp, pos: noun, gender: en, level: A1, gloss: "cup" }
+  - { lemma: meny, pos: noun, gender: en, level: A1, gloss: "menu" }
+  - { lemma: servitör, pos: noun, gender: en, level: A1, gloss: "waiter" }
+  - { lemma: torg, pos: noun, gender: ett, level: A1, gloss: "square, market place" }
+  - { lemma: apelsin, pos: noun, gender: en, level: A1, gloss: "orange" }
+  - { lemma: päron, pos: noun, gender: ett, level: A1, gloss: "pear" }
+  - { lemma: gurka, pos: noun, gender: en, level: A1, gloss: "cucumber" }
+  - { lemma: lök, pos: noun, gender: en, level: A1, gloss: "onion" }
+  - { lemma: morot, pos: noun, gender: en, level: A1, gloss: "carrot" }
+
+  # chapter 5: free time
+  - { lemma: teater, pos: noun, gender: en, level: A2, gloss: "theatre" }
+  - { lemma: konsert, pos: noun, gender: en, level: A2, gloss: "concert" }
+  - { lemma: museum, pos: noun, gender: ett, level: A2, gloss: "museum" }
+  - { lemma: bibliotek, pos: noun, gender: ett, level: A2, gloss: "library" }
+  - { lemma: fiska, pos: verb, level: A2, gloss: "to fish" }
+  - { lemma: måla, pos: verb, level: A2, gloss: "to paint" }
+  - { lemma: baka, pos: verb, level: A2, gloss: "to bake" }
+  - { lemma: gitarr, pos: noun, gender: en, level: A2, gloss: "guitar" }
+  - { lemma: piano, pos: noun, gender: ett, level: A2, gloss: "piano" }
+  - { lemma: schack, pos: noun, gender: ett, level: A2, gloss: "chess" }
+  - { lemma: spel, pos: noun, gender: ett, level: A2, gloss: "game" }
+
+  # chapter 6: relatives
+  - { lemma: farfar, pos: noun, gender: en, level: A2, gloss: "grandfather (father's father)" }
+  - { lemma: morfar, pos: noun, gender: en, level: A2, gloss: "grandfather (mother's father)" }
+  - { lemma: faster, pos: noun, gender: en, level: A2, gloss: "aunt (father's sister)" }
+  - { lemma: moster, pos: noun, gender: en, level: A2, gloss: "aunt (mother's sister)" }
+  - { lemma: farbror, pos: noun, gender: en, level: A2, gloss: "uncle (father's brother)" }
+  - { lemma: morbror, pos: noun, gender: en, level: A2, gloss: "uncle (mother's brother)" }
+  - { lemma: kusin, pos: noun, gender: en, level: A2, gloss: "cousin" }
+  - { lemma: barnbarn, pos: noun, gender: ett, level: A2, gloss: "grandchild" }
+  - { lemma: svärmor, pos: noun, gender: en, level: A2, gloss: "mother-in-law" }
+  - { lemma: svärfar, pos: noun, gender: en, level: A2, gloss: "father-in-law" }
+  - { lemma: tvilling, pos: noun, gender: en, level: A2, gloss: "twin" }
+  - { lemma: bebis, pos: noun, gender: en, level: A2, gloss: "baby" }
+
+  # chapter 7: shopping
+  - { lemma: varuhus, pos: noun, gender: ett, level: A2, gloss: "department store" }
+  - { lemma: affär, pos: noun, gender: en, level: A2, gloss: "shop" }
+  - { lemma: byxa, pos: noun, gender: en, level: A2, gloss: "byxor = trousers" }
+  - { lemma: tröja, pos: noun, gender: en, level: A2, gloss: "sweater, jumper" }
+  - { lemma: skjorta, pos: noun, gender: en, level: A2, gloss: "shirt" }
+  - { lemma: jacka, pos: noun, gender: en, level: A2, gloss: "jacket" }
+  - { lemma: sko, pos: noun, gender: en, level: A2, gloss: "shoe" }
+  - { lemma: kjol, pos: noun, gender: en, level: A2, gloss: "skirt" }
+  - { lemma: storlek, pos: noun, gender: en, level: A2, gloss: "size" }
+  - { lemma: färg, pos: noun, gender: en, level: A2, gloss: "colour" }
+  - { lemma: rea, pos: noun, gender: en, level: A2, gloss: "sale" }
+  - { lemma: prova, pos: verb, level: A2, gloss: "to try (on)" }
+  - { lemma: modern, pos: adj, level: A2, gloss: "modern" }
+  - { lemma: snygg, pos: adj, level: A2, gloss: "good-looking, nice" }
+  - { lemma: ful, pos: adj, level: A2, gloss: "ugly" }
+
+  # chapter 8: a first year: months and weather
+  - { lemma: januari, pos: noun, gender: en, level: A2, gloss: "January" }
+  - { lemma: juli, pos: noun, gender: en, level: A2, gloss: "July" }
+  - { lemma: december, pos: noun, gender: en, level: A2, gloss: "December" }
+  - { lemma: årstid, pos: noun, gender: en, level: A2, gloss: "season" }
+  - { lemma: vår, pos: noun, gender: en, level: A2, gloss: "spring" }
+  - { lemma: höst, pos: noun, gender: en, level: A2, gloss: "autumn" }
+  - { lemma: storm, pos: noun, gender: en, level: A2, gloss: "storm" }
+  - { lemma: dimma, pos: noun, gender: en, level: A2, gloss: "fog" }
+  - { lemma: åska, pos: noun, gender: en, level: A2, gloss: "thunder" }
+  - { lemma: uppleva, pos: verb, level: A2, gloss: "to experience" }
+  - { lemma: svettas, pos: verb, level: A2, gloss: "to sweat" }
+
+  # chapter 9: getting around
+  - { lemma: trafik, pos: noun, gender: en, level: A2, gloss: "traffic" }
+  - { lemma: tunnelbana, pos: noun, gender: en, level: A2, gloss: "underground, metro" }
+  - { lemma: färja, pos: noun, gender: en, level: A2, gloss: "ferry" }
+  - { lemma: taxi, pos: noun, gender: en, level: A2, gloss: "taxi" }
+  - { lemma: bro, pos: noun, gender: en, level: A2, gloss: "bridge" }
+  - { lemma: väg, pos: noun, gender: en, level: A2, gloss: "road, way" }
+  - { lemma: gata, pos: noun, gender: en, level: A2, gloss: "street" }
+  - { lemma: korsning, pos: noun, gender: en, level: A2, gloss: "crossing, junction" }
+  - { lemma: svänga, pos: verb, level: A2, gloss: "to turn" }
+  - { lemma: rak, pos: adj, level: A2, gloss: "straight (rakt fram = straight ahead)" }
+  - { lemma: vänster, pos: adj, level: A2, gloss: "left (till vänster = to the left)" }
+  - { lemma: höger, pos: adj, level: A2, gloss: "right (till höger = to the right)" }
+
+  # chapter 10: facts about Sweden
+  - { lemma: invånare, pos: noun, gender: en, level: A2, gloss: "inhabitant" }
+  - { lemma: huvudstad, pos: noun, gender: en, level: A2, gloss: "capital" }
+  - { lemma: yta, pos: noun, gender: en, level: A2, gloss: "area, surface" }
+  - { lemma: norr, pos: noun, gender: en, level: A2, gloss: "north" }
+  - { lemma: söder, pos: noun, gender: en, level: A2, gloss: "south" }
+  - { lemma: öster, pos: noun, gender: en, level: A2, gloss: "east" }
+  - { lemma: väster, pos: noun, gender: en, level: A2, gloss: "west" }
+  - { lemma: kommun, pos: noun, gender: en, level: A2, gloss: "municipality" }
+  - { lemma: flagga, pos: noun, gender: en, level: A2, gloss: "flag" }
+  - { lemma: älv, pos: noun, gender: en, level: A2, gloss: "(big) river" }
+  - { lemma: fjäll, pos: noun, gender: ett, level: A2, gloss: "mountain (in the north)" }
+  - { lemma: miljon, pos: noun, gender: en, level: A2, gloss: "million" }
+
+  # chapter 11: friends, partners and phones
+  - { lemma: dejt, pos: noun, gender: en, level: A2, gloss: "date" }
+  - { lemma: dejta, pos: verb, level: A2, gloss: "to date" }
+  - { lemma: partner, pos: noun, gender: en, level: A2, gloss: "partner" }
+  - { lemma: pojkvän, pos: noun, gender: en, level: A2, gloss: "boyfriend" }
+  - { lemma: flickvän, pos: noun, gender: en, level: A2, gloss: "girlfriend" }
+  - { lemma: kär, pos: adj, level: A2, gloss: "in love" }
+  - { lemma: profil, pos: noun, gender: en, level: A2, gloss: "profile" }
+  - { lemma: app, pos: noun, gender: en, level: A2, gloss: "app" }
+  - { lemma: meddelande, pos: noun, gender: ett, level: A2, gloss: "message" }
+  - { lemma: chatta, pos: verb, level: A2, gloss: "to chat (online)" }
+  - { lemma: heller, pos: adv, level: A2, gloss: "inte heller = not either" }
+  - { lemma: bild, pos: noun, gender: en, level: A2, gloss: "picture" }
+
+  # chapter 12: food
+  - { lemma: förrätt, pos: noun, gender: en, level: A2, gloss: "starter" }
+  - { lemma: efterrätt, pos: noun, gender: en, level: A2, gloss: "dessert" }
+  - { lemma: kyckling, pos: noun, gender: en, level: A2, gloss: "chicken" }
+  - { lemma: ris, pos: noun, gender: ett, level: A2, gloss: "rice" }
+  - { lemma: pasta, pos: noun, gender: en, level: A2, gloss: "pasta" }
+  - { lemma: sås, pos: noun, gender: en, level: A2, gloss: "sauce" }
+  - { lemma: salt, pos: noun, gender: ett, level: A2, gloss: "salt" }
+  - { lemma: peppar, pos: noun, gender: en, level: A2, gloss: "pepper" }
+  - { lemma: kniv, pos: noun, gender: en, level: A2, gloss: "knife" }
+  - { lemma: gaffel, pos: noun, gender: en, level: A2, gloss: "fork" }
+  - { lemma: sked, pos: noun, gender: en, level: A2, gloss: "spoon" }
+  - { lemma: tallrik, pos: noun, gender: en, level: A2, gloss: "plate" }
+  - { lemma: nota, pos: noun, gender: en, level: A2, gloss: "bill (at a restaurant)" }
+  - { lemma: hungrig, pos: adj, level: A2, gloss: "hungry" }
+  - { lemma: törstig, pos: adj, level: A2, gloss: "thirsty" }
+  - { lemma: mätt, pos: adj, level: A2, gloss: "full (after eating)" }
+
+  # chapter 13: a working day
+  - { lemma: ingenjör, pos: noun, gender: en, level: A2, gloss: "engineer" }
+  - { lemma: frisör, pos: noun, gender: en, level: A2, gloss: "hairdresser" }
+  - { lemma: brandman, pos: noun, gender: en, level: A2, gloss: "firefighter" }
+  - { lemma: pilot, pos: noun, gender: en, level: A2, gloss: "pilot" }
+  - { lemma: tandläkare, pos: noun, gender: en, level: A2, gloss: "dentist" }
+  - { lemma: programmerare, pos: noun, gender: en, level: A2, gloss: "programmer" }
+  - { lemma: säljare, pos: noun, gender: en, level: A2, gloss: "salesperson" }
+  - { lemma: elektriker, pos: noun, gender: en, level: A2, gloss: "electrician" }
+  - { lemma: bagare, pos: noun, gender: en, level: A2, gloss: "baker" }
+  - { lemma: dit, pos: adv, level: A2, gloss: "there (to that place)" }
+  - { lemma: härifrån, pos: adv, level: A2, gloss: "from here" }
+  - { lemma: borta, pos: adv, level: A2, gloss: "away" }
+
+  # chapter 14: holidays and manners
+  - { lemma: stuga, pos: noun, gender: en, level: A2, gloss: "cottage, cabin" }
+  - { lemma: tält, pos: noun, gender: ett, level: A2, gloss: "tent" }
+  - { lemma: camping, pos: noun, gender: en, level: A2, gloss: "campsite" }
+  - { lemma: sola, pos: verb, level: A2, gloss: "to sunbathe" }
+  - { lemma: bada, pos: verb, level: A2, gloss: "to bathe, to swim" }
+  - { lemma: grilla, pos: verb, level: A2, gloss: "to barbecue" }
+  - { lemma: resväska, pos: noun, gender: en, level: A2, gloss: "suitcase" }
+  - { lemma: etikett, pos: noun, gender: en, level: A2, gloss: "etiquette; label" }
+  - { lemma: värd, pos: noun, gender: en, level: A2, gloss: "host" }
+  - { lemma: vykort, pos: noun, gender: ett, level: A2, gloss: "postcard" }
+
+  # chapter 15: typical things and names
+  - { lemma: typisk, pos: adj, level: A2, gloss: "typical" }
+  - { lemma: ovanlig, pos: adj, level: A2, gloss: "unusual" }
+  - { lemma: smeknamn, pos: noun, gender: ett, level: A2, gloss: "nickname" }
+  - { lemma: kö, pos: noun, gender: en, level: A2, gloss: "queue" }
+  - { lemma: köa, pos: verb, level: A2, gloss: "to queue" }
+  - { lemma: lagom, pos: adj, level: A2, gloss: "just right, not too much" }
+  - { lemma: egen, pos: adj, level: A2, gloss: "own" }
+  - { lemma: utländsk, pos: adj, level: A2, gloss: "foreign" }
+
+  # chapter 16: school and education
+  - { lemma: förskola, pos: noun, gender: en, level: A2, gloss: "preschool" }
+  - { lemma: grundskola, pos: noun, gender: en, level: A2, gloss: "compulsory school (ages 6-16)" }
+  - { lemma: gymnasium, pos: noun, gender: ett, level: A2, gloss: "upper secondary school" }
+  - { lemma: betyg, pos: noun, gender: ett, level: A2, gloss: "grade, mark" }
+  - { lemma: ämne, pos: noun, gender: ett, level: A2, gloss: "subject" }
+  - { lemma: matematik, pos: noun, gender: en, level: A2, gloss: "mathematics" }
+  - { lemma: elev, pos: noun, gender: en, level: A2, gloss: "pupil" }
+  - { lemma: klass, pos: noun, gender: en, level: A2, gloss: "class" }
+  - { lemma: examen, pos: noun, gender: en, level: A2, gloss: "degree, exam" }
+  - { lemma: framtid, pos: noun, gender: en, level: A2, gloss: "future" }
+  - { lemma: plan, pos: noun, gender: en, level: A2, gloss: "plan" }
+  - { lemma: lov, pos: noun, gender: ett, level: A2, gloss: "school holiday" }
+
+  # chapter 17: housing
+  - { lemma: villa, pos: noun, gender: en, level: A2, gloss: "detached house" }
+  - { lemma: radhus, pos: noun, gender: ett, level: A2, gloss: "terraced house" }
+  - { lemma: hyresrätt, pos: noun, gender: en, level: A2, gloss: "rented flat" }
+  - { lemma: bostadsrätt, pos: noun, gender: en, level: A2, gloss: "flat you own a share in" }
+  - { lemma: trädgård, pos: noun, gender: en, level: A2, gloss: "garden" }
+  - { lemma: källare, pos: noun, gender: en, level: A2, gloss: "cellar, basement" }
+  - { lemma: förort, pos: noun, gender: en, level: A2, gloss: "suburb" }
+  - { lemma: bostad, pos: noun, gender: en, level: A2, gloss: "home, housing" }
+  - { lemma: mäklare, pos: noun, gender: en, level: A2, gloss: "estate agent" }
+  - { lemma: rymlig, pos: adj, level: A2, gloss: "spacious" }
+  - { lemma: trång, pos: adj, level: A2, gloss: "cramped, narrow" }
+  - { lemma: läge, pos: noun, gender: ett, level: A2, gloss: "location" }
+
+  # chapter 18: at the office
+  - { lemma: skrivbord, pos: noun, gender: ett, level: A2, gloss: "desk" }
+  - { lemma: pärm, pos: noun, gender: en, level: A2, gloss: "folder, binder" }
+  - { lemma: sax, pos: noun, gender: en, level: A2, gloss: "scissors" }
+  - { lemma: tejp, pos: noun, gender: en, level: A2, gloss: "tape" }
+  - { lemma: kopiator, pos: noun, gender: en, level: A2, gloss: "photocopier" }
+  - { lemma: anteckning, pos: noun, gender: en, level: A2, gloss: "note" }
+  - { lemma: hälft, pos: noun, gender: en, level: A2, gloss: "half (hälften = half of them)" }
+  - { lemma: tredjedel, pos: noun, gender: en, level: A2, gloss: "third" }
+  - { lemma: fjärdedel, pos: noun, gender: en, level: A2, gloss: "quarter" }
+  - { lemma: procent, pos: noun, gender: en, level: A2, gloss: "per cent" }
+  - { lemma: statistik, pos: noun, gender: en, level: A2, gloss: "statistics" }
+  - { lemma: samtal, pos: noun, gender: ett, level: A2, gloss: "call, conversation" }
+  - { lemma: telefon, pos: noun, gender: en, level: A2, gloss: "telephone" }
+
+  # chapter 19: the body
+  - { lemma: kropp, pos: noun, gender: en, level: A2, gloss: "body" }
+  - { lemma: hand, pos: noun, gender: en, level: A2, gloss: "hand" }
+  - { lemma: fot, pos: noun, gender: en, level: A2, gloss: "foot" }
+  - { lemma: finger, pos: noun, gender: ett, level: A2, gloss: "finger" }
+  - { lemma: knä, pos: noun, gender: ett, level: A2, gloss: "knee" }
+  - { lemma: axel, pos: noun, gender: en, level: A2, gloss: "shoulder" }
+  - { lemma: nacke, pos: noun, gender: en, level: A2, gloss: "neck (back of the neck)" }
+  - { lemma: hud, pos: noun, gender: en, level: A2, gloss: "skin" }
+  - { lemma: snuva, pos: noun, gender: en, level: A2, gloss: "runny nose" }
+  - { lemma: förkylning, pos: noun, gender: en, level: A2, gloss: "cold" }
+  - { lemma: sår, pos: noun, gender: ett, level: A2, gloss: "wound, sore" }
+  - { lemma: plåster, pos: noun, gender: ett, level: A2, gloss: "plaster" }
+  - { lemma: svullen, pos: adj, level: A2, gloss: "swollen" }
+
+  # chapter 20: news and weather
+  - { lemma: radio, pos: noun, gender: en, level: A2, gloss: "radio" }
+  - { lemma: prognos, pos: noun, gender: en, level: A2, gloss: "forecast" }
+  - { lemma: temperatur, pos: noun, gender: en, level: A2, gloss: "temperature" }
+  - { lemma: halka, pos: noun, gender: en, level: A2, gloss: "slippery roads, ice" }
+  - { lemma: solig, pos: adj, level: A2, gloss: "sunny" }
+  - { lemma: molnig, pos: adj, level: A2, gloss: "cloudy" }
+  - { lemma: blåsig, pos: adj, level: A2, gloss: "windy" }
+  - { lemma: recension, pos: noun, gender: en, level: A2, gloss: "review" }
+  - { lemma: omdöme, pos: noun, gender: ett, level: A2, gloss: "opinion, rating" }
+  - { lemma: stjärna, pos: noun, gender: en, level: A2, gloss: "star" }
+  - { lemma: lyssna, pos: verb, level: A2, gloss: "to listen" }

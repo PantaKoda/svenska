@@ -1,0 +1,56 @@
+id: bok-a-08
+level: A2
+book: "A1+A2"
+chapter: 8
+theme: bok_a
+title: "Det första året"
+task: "Extra practice for chapter 8, on what you have done and seen, the months and the weather."
+can_do: "I can say what I have done with har + supine, choose between the perfect and the past, and choose between här and hit, där and dit, hemma and hem."
+focus: ["verb groups", "the perfect: har + supine", "supine forms", "perfect or past", "being there or going there"]
+names: [Sara, Omar, Sverige, Stockholm]
+assumes: { words: [hem, dit, hel] }
+
+new_words: [januari, juli, december, årstid, vår, höst, storm, dimma, åska, uppleva, svettas]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # the supine
+  - { type: cloze, sv: "Jag har ___ i Sverige i ett år.", hint: bo, answer: bott, en: "I have lived in Sweden for a year.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Har du ___ snö?", hint: se, answer: sett, en: "Have you seen snow?", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Vi har ___ en storm.", hint: uppleva, answer: upplevt, en: "We have experienced a storm.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Hon har ___ till Stockholm 3 gånger.", hint: åka, answer: åkt, en: "She has gone to Stockholm 3 times.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Det har ___ hela veckan.", hint: regna, answer: regnat, en: "It has rained all week.", grammar: [perfect_tense] }
+
+  # perfect (no finished time) or past (a finished time)?
+  - { type: cloze, sv: "Jag ___ till Sverige i januari.", hint: "kom / har kommit", answer: kom, en: "I came to Sweden in January.", grammar: [past_tense] }
+  - { type: cloze, sv: "Jag ___ aldrig en så kall vinter.", hint: "upplevde / har upplevt", answer: har upplevt, en: "I have never experienced such a cold winter.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Igår ___ det åska.", hint: "var / har varit", answer: var, en: "Yesterday there was thunder.", grammar: [past_tense] }
+  - { type: listen_choose, sv: "Jag har varit i Stockholm.", en: "I have been to Stockholm.",
+      options: ["At some time; when is not said.", "At a time that is named.", "I am there now."], answer: "At some time; when is not said." }
+
+  # where you are, or where you are going
+  - { type: cloze, sv: "Kom ___!", hint: "här / hit", answer: hit, en: "Come here!" }
+  - { type: cloze, sv: "Jag bor ___.", hint: "här / hit", answer: här, en: "I live here." }
+  - { type: cloze, sv: "Jag går ___ nu.", hint: "hemma / hem", answer: hem, en: "I am going home now." }
+  - { type: cloze, sv: "Vi stannar ___ när det är dimma.", hint: "hemma / hem", answer: hemma, en: "We stay at home when it is foggy." }
+  - { type: cloze, sv: "Stockholm? Jag ska åka ___ i juli.", hint: "där / dit", answer: dit, en: "Stockholm? I am going there in July." }
+
+  # listen and write
+  - { type: dictation, sv: "Sverige har 4 årstider.", en: "Sweden has 4 seasons." }
+  - { type: dictation, sv: "På våren blir det varmare.", en: "In spring it gets warmer." }
+  - { type: dictation, sv: "I december är det kallt och i juli svettas jag.", en: "In December it is cold and in July I sweat.", review: true }
+  - { type: dictation, sv: "Hösten har många färger.", en: "Autumn has many colours." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which season do you like?", sv: "Vilken årstid tycker du om?", accept: ["Vilken årstid gillar du?"] }
+  - { type: translate, en: "I have never seen fog.", sv: "Jag har aldrig sett dimma." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your first time in a new place: when you came, what you have seen and done, and the weather.",
+      checklist: ["I use the past with a time (i januari, igår, förra ...).", "I use har + supine twice.", "I use hit, dit or hem once.", "I say something about the weather."],
+      sv: "Jag kom hit i januari. Det var kallt, och jag har aldrig upplevt så mycket snö. Jag har sett havet och jag har åkt till Stockholm. På våren blev det varmare. Nu har jag bott här i ett år, och jag vill inte åka hem.",
+      grammar: [perfect_tense, past_tense] }

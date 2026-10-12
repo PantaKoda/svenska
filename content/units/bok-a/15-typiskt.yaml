@@ -1,0 +1,56 @@
+id: bok-a-15
+level: A2
+book: "A1+A2"
+chapter: 15
+theme: bok_a
+title: "Typiskt och namn"
+task: "Extra practice for chapter 15, on what is typical, on names and on small talk."
+can_do: "I can say whose something is without repeating the noun, and choose between sin and hans, hennes, deras."
+focus: ["min, din, hans alone (it is mine)", "sin, sitt, sina"]
+names: [Sara, Omar, Maria, Sverige]
+assumes: { words: [sin, vanlig, eller, prata, mobil, plats, tur] }
+
+new_words: [typisk, ovanlig, smeknamn, kö, köa, lagom, egen, utländsk]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # mine, yours, his, hers: the form follows the thing
+  - { type: cloze, sv: "Är det din mobil? Ja, den är ___.", hint: jag, answer: min, en: "Is that your mobile? Yes, it is mine.", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Är det ditt paraply? Nej, det är inte ___.", hint: jag, answer: mitt, en: "Is that your umbrella? No, it is not mine.", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Mina barn har smeknamn. Har ___ också det?", hint: du, answer: dina, en: "My children have nicknames. Do yours too?", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Det är inte min plats i kön. Det är ___.", hint: hon, answer: hennes, en: "It is not my place in the queue. It is hers.", grammar: [possessive_basic] }
+  - { type: translate, en: "Is this bag yours?", sv: "Är den här väskan din?", grammar: [possessive_basic], review: true }
+
+  # sin, sitt, sina: the subject's own
+  - { type: cloze, sv: "Maria tycker om ___ smeknamn.", hint: "sitt / hennes", answer: sitt, en: "Maria likes her (own) nickname.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Omar har ett ovanligt namn. Jag tycker om ___ namn.", hint: "sitt / hans", answer: hans, en: "Omar has an unusual name. I like his name.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Alla väntar på ___ tur i kön.", hint: "sin / deras", answer: sin, en: "Everyone waits for their turn in the queue.", grammar: [possessive_sin], review: true }
+  - { type: cloze, sv: "Sara pratar med ___ grannar om vädret.", hint: "sina / hennes", answer: sina, en: "Sara talks to her (own) neighbours about the weather.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Han har ett ___ rum.", hint: egen, answer: eget, en: "He has a room of his own.", grammar: [adjective_agreement_full] }
+  - { type: word_order, sv: "Hon älskar sitt namn men inte sitt smeknamn.", en: "She loves her name but not her nickname.", grammar: [possessive_sin], review: true }
+
+  # listen and choose
+  - { type: listen_choose, sv: "Omar träffar Sara och hennes bror.", en: "Omar meets Sara and her brother.",
+      options: ["The brother is Sara's.", "The brother is Omar's.", "The brother is someone else's."], answer: "The brother is Sara's." }
+  - { type: listen_choose, sv: "Omar träffar Sara och sin bror.", en: "Omar meets Sara and his (own) brother.",
+      options: ["The brother is Omar's.", "The brother is Sara's.", "The brother is someone else's."], answer: "The brother is Omar's." }
+
+  # listen and write
+  - { type: dictation, sv: "Det är typiskt att köa i Sverige.", en: "It is typical to queue in Sweden." }
+  - { type: dictation, sv: "Jag har ett utländskt namn.", en: "I have a foreign name." }
+  - { type: dictation, sv: "Lagom är ett vanligt ord.", en: "Lagom is a common word." }
+  - { type: dictation, sv: "Vi pratar ofta om vädret i kön.", en: "We often talk about the weather in the queue." }
+
+  # say it in Swedish
+  - { type: translate, en: "Do you have a nickname?", sv: "Har du ett smeknamn?", accept: ["Har du något smeknamn?", "Har du smeknamn?"] }
+  - { type: translate, en: "It is an unusual name.", sv: "Det är ett ovanligt namn." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your name and about something that is typical where you live.",
+      checklist: ["I say something about my name.", "I use sin, sitt or sina once.", "I use min, mitt or mina alone once (den är min).", "I say what is typical."],
+      sv: "Jag heter Maria, och det är ett vanligt namn i mitt land. Min syster har ett smeknamn, men jag har inget eget. Hon tycker inte om sitt smeknamn. I Sverige är det typiskt att köa och att prata om vädret. Platsen i kön är min, och ingen tar den.",
+      grammar: [possessive_sin, possessive_basic] }

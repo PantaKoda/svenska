@@ -271,6 +271,21 @@ public class RichExerciseTests
     }
 
     [Fact]
+    public void A_companion_chapter_may_assume_a_word_that_the_task_units_teach_later_or_never()
+    {
+        const string fish = "  - { lemma: fisk, pos: noun, gender: en, level: A2, gloss: fish }";
+        string Head(string assumes) => "book: \"A1+A2\"\nchapter: 1\nfocus: [\"adverbs\"]" + assumes;
+
+        using var without = WithCompanion("Var finns fisk? Brödet kostar 45 kronor.", Head(""));
+        without.Write("themes/more.yaml", "theme: more\ntitle: More\nwords:\n" + fish + "\n");
+        Assert.Contains(Errors(without), e => e.Rule == 2 && e.Message.Contains("fisk"));
+
+        using var with = WithCompanion("Var finns fisk? Brödet kostar 45 kronor.", Head("\nassumes: { words: [fisk] }"));
+        with.Write("themes/more.yaml", "theme: more\ntitle: More\nwords:\n" + fish + "\n");
+        Assert.Empty(Errors(with));
+    }
+
+    [Fact]
     public void A_companion_chapter_needs_a_chapter_number_and_a_focus()
     {
         using var dir = WithCompanion("Brödet kostar 45 kronor.", head: "book: \"B1+B2\"");

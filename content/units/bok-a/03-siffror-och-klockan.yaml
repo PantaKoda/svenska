@@ -1,0 +1,56 @@
+id: bok-a-03
+level: A1
+book: "A1+A2"
+chapter: 3
+theme: bok_a
+title: "Siffror och klockan"
+task: "Extra practice for chapter 3, on numbers, the clock and an ordinary day."
+can_do: "I can ask about time, keep the verb second after a time word, use den and det, and give a simple instruction."
+focus: ["question words about time", "word order after a time word", "den or det", "the imperative"]
+names: [Sara, Omar]
+assumes: { words: [vakna, duscha, sen, tidig, tvätta, nummer, mycket, vilken, ligga] }
+
+new_words: [siffra, räkna, sekund, kalender, somna, borsta, tand, lektion, läxa]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # asking about time
+  - { type: cloze, sv: "___ börjar lektionen?", hint: "när / var", answer: När, en: "When does the lesson start?", grammar: [wh_question] }
+  - { type: cloze, sv: "Hur ___ är klockan?", hint: "mycket / många", answer: mycket, en: "What time is it?", grammar: [time_clock] }
+  - { type: cloze, sv: "Hur ___ minuter har en timme?", hint: "mycket / många", answer: många, en: "How many minutes does an hour have?", grammar: [wh_question] }
+  - { type: translate, en: "What time does the lesson end?", sv: "Hur dags slutar lektionen?", accept: ["När slutar lektionen?", "Vilken tid slutar lektionen?"], review: true }
+
+  # after a time word, the verb still comes second
+  - { type: word_order, sv: "Klockan 7 vaknar jag.", en: "At 7 I wake up.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "På kvällen gör jag min läxa.", en: "In the evening I do my homework.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "Sedan borstar jag tänderna.", en: "Then I brush my teeth.", grammar: [v2_word_order] }
+  - { type: word_order, sv: "På måndag har vi lektion klockan 9.", en: "On Monday we have a lesson at 9.", grammar: [v2_word_order] }
+
+  # den (en-words) or det (ett-words)
+  - { type: cloze, sv: "Jag har en kalender. ___ ligger på bordet.", hint: "den / det", answer: Den, en: "I have a calendar. It is on the table.", grammar: [en_ett] }
+  - { type: cloze, sv: "Vad är ditt nummer? ___ är 7.", hint: "den / det", answer: Det, en: "What is your number? It is 7.", grammar: [en_ett] }
+  - { type: cloze, sv: "Lektionen är 40 minuter. ___ slutar klockan 10.", hint: "den / det", answer: Den, en: "The lesson is 40 minutes. It ends at 10.", grammar: [en_ett] }
+
+  # tell someone to do it
+  - { type: cloze, sv: "___ till 10!", hint: räkna, answer: Räkna, en: "Count to 10!" }
+  - { type: cloze, sv: "___ tänderna nu!", hint: borsta, answer: Borsta, en: "Brush your teeth now!" }
+  - { type: cloze, sv: "___ inte så sent!", hint: somna, answer: Somna, en: "Do not fall asleep so late!" }
+
+  # listen for the number
+  - { type: numbers, sv: "Lektionen börjar klockan 9.15.", hint: "the time", answer: "9.15", en: "The lesson starts at 9.15." }
+  - { type: numbers, sv: "En minut har 60 sekunder.", hint: "how many seconds", answer: "60", en: "A minute has 60 seconds." }
+  - { type: numbers, sv: "Jag bor på nummer 48.", hint: "the number", answer: "48", en: "I live at number 48." }
+
+  # listen and write
+  - { type: dictation, sv: "Jag somnar klockan 11.", en: "I fall asleep at 11." }
+  - { type: dictation, sv: "Vilken siffra är det?", en: "Which figure is it?" }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your ordinary day, with times. Start two sentences with a time.",
+      checklist: ["I give three times.", "After a time word the verb comes second.", "I use den or det once.", "I say when I fall asleep."],
+      sv: "Klockan 7 vaknar jag och duschar. Sedan borstar jag tänderna och äter frukost. Lektionen börjar klockan 9. Den slutar klockan 12. På kvällen gör jag min läxa, och klockan 11 somnar jag.",
+      grammar: [v2_word_order, time_clock] }

@@ -1,0 +1,58 @@
+id: bok-a-19
+level: A2
+book: "A1+A2"
+chapter: 19
+theme: bok_a
+title: "Kroppen och doktorn"
+task: "Extra practice for chapter 19, on the body, seeing a doctor and giving advice."
+can_do: "I can say how often, give a short answer, and describe how something is done with an adverb."
+focus: ["how often: prepositions and expressions", "short answers", "adverbs"]
+names: [Sara, Omar]
+assumes: { words: [sällan, böra, illa, eller, råd, vanlig, allvarlig, läka, långsam, bara, hel] }
+
+new_words: [kropp, hand, fot, finger, knä, axel, nacke, hud, snuva, förkylning, sår, plåster, svullen]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # how often?
+  - { type: cloze, sv: "Jag tränar 3 gånger ___ veckan.", hint: "i / på", answer: i, en: "I exercise 3 times a week.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Ta en tablett 2 gånger ___ dagen.", hint: "om / på", answer: om, en: "Take one tablet twice a day.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag går till läkaren en gång ___ året.", hint: "om / på", answer: om, en: "I go to the doctor once a year.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag har ___ ont i nacken. Det händer nästan aldrig.", hint: "ofta / sällan", answer: sällan, en: "I seldom have a pain in my neck. It almost never happens." }
+  - { type: word_order, sv: "Jag har ofta ont i knät på morgonen.", en: "I often have a pain in my knee in the morning.", review: true }
+
+  # short answers: ja, det har jag / nej, det gör jag inte
+  - { type: listen_choose, sv: "Har du ont i axeln?", en: "Do you have a pain in your shoulder?",
+      options: ["Ja, det har jag.", "Ja, det är jag.", "Ja, det gör jag."], answer: "Ja, det har jag." }
+  - { type: listen_choose, sv: "Är foten svullen?", en: "Is the foot swollen?",
+      options: ["Ja, det är den.", "Ja, det har den.", "Ja, det gör den."], answer: "Ja, det är den." }
+  - { type: listen_choose, sv: "Tränar du?", en: "Do you exercise?",
+      options: ["Nej, det gör jag inte.", "Nej, det är jag inte.", "Nej, det har jag inte."], answer: "Nej, det gör jag inte." }
+  - { type: cloze, sv: "Kan du gå på foten? Ja, det ___ jag.", hint: "kan / gör", answer: kan, en: "Can you walk on the foot? Yes, I can." }
+  - { type: cloze, sv: "Sover du bra? Nej, det ___ jag inte.", hint: "är / gör", answer: gör, en: "Do you sleep well? No, I do not." }
+
+  # adverbs: how?
+  - { type: cloze, sv: "Såret läker ___.", hint: långsam, answer: långsamt, en: "The wound is healing slowly.", review: true }
+  - { type: cloze, sv: "Jag mår ___ idag.", hint: dålig, answer: dåligt, en: "I feel bad today." }
+  - { type: cloze, sv: "Tvätta händerna ___.", hint: noggrann, answer: noggrant, en: "Wash your hands carefully.", grammar: [imperative] }
+  - { type: cloze, sv: "Förkylningen kom ___.", hint: snabb, answer: snabbt, en: "The cold came quickly." }
+
+  # listen and write
+  - { type: dictation, sv: "Jag har ont i handen och i ett finger.", en: "I have a pain in my hand and in a finger." }
+  - { type: dictation, sv: "Du behöver ett plåster på såret.", en: "You need a plaster on the wound." }
+  - { type: dictation, sv: "Min hud är varm och svullen.", en: "My skin is warm and swollen." }
+  - { type: dictation, sv: "Jag har snuva och hosta.", en: "I have a runny nose and a cough." }
+
+  # say it in Swedish
+  - { type: translate, en: "It is only a cold.", sv: "Det är bara en förkylning.", review: true }
+  - { type: translate, en: "My whole body hurts.", sv: "Jag har ont i hela kroppen.", review: true }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences of advice to a friend who has a cold or a small injury.",
+      checklist: ["I say how often (gånger om dagen, i veckan).", "I use two adverbs in -t.", "I use the imperative twice.", "I name two parts of the body."],
+      sv: "Du har en vanlig förkylning. Vila mycket och drick vatten ofta. Ta en tablett 2 gånger om dagen om du har ont i huvudet. Tvätta händerna noggrant. Ring läkaren om du mår dåligt efter en vecka.",
+      grammar: [imperative, preposition_time] }

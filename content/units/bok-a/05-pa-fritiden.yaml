@@ -1,0 +1,57 @@
+id: bok-a-05
+level: A2
+book: "A1+A2"
+chapter: 5
+theme: bok_a
+title: "På fritiden"
+task: "Extra practice for chapter 5, on free time and plans."
+can_do: "I can talk about plans with ska, place words like ofta and aldrig, say what I like doing, give adjectives the right form, and use the past tense."
+focus: ["the future with ska", "the place of ofta, aldrig, inte", "tycker om (att)", "adjective forms", "the past tense"]
+names: [Sara, Omar]
+assumes: { words: [eller, så] }
+
+new_words: [teater, konsert, museum, bibliotek, fiska, måla, baka, gitarr, piano, schack, spel]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # plans: ska + infinitive
+  - { type: cloze, sv: "På lördag ska vi ___ på konsert.", hint: gå, answer: gå, en: "On Saturday we are going to a concert.", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Ikväll ska jag baka bröd.", en: "Tonight I am going to bake bread.", grammar: [future_ska_kommer_att] }
+  - { type: translate, en: "What are you going to do at the weekend?", sv: "Vad ska du göra i helgen?", accept: ["Vad ska du göra på helgen?"], grammar: [future_ska_kommer_att] }
+
+  # ofta, aldrig, alltid, inte: after the first verb
+  - { type: word_order, sv: "Jag går ofta på teater.", en: "I often go to the theatre." }
+  - { type: word_order, sv: "Han spelar aldrig schack.", en: "He never plays chess." }
+  - { type: word_order, sv: "På sommaren fiskar vi alltid i sjön.", en: "In summer we always fish in the lake.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Jag har aldrig spelat piano.", en: "I have never played the piano.", review: true }
+
+  # tycker om + noun, tycker om att + verb
+  - { type: cloze, sv: "Jag tycker om ___ måla.", answer: att, en: "I like painting." }
+  - { type: cloze, sv: "Tycker du ___ konserter?", answer: om, en: "Do you like concerts?" }
+  - { type: translate, en: "She likes to play the guitar.", sv: "Hon tycker om att spela gitarr.", accept: ["Hon gillar att spela gitarr."] }
+
+  # adjective forms
+  - { type: cloze, sv: "Det är ett ___ museum.", hint: stor, answer: stort, en: "It is a big museum.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Vi såg en ___ film.", hint: rolig, answer: rolig, en: "We saw a funny film.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Biblioteket har många ___ spel.", hint: ny, answer: nya, en: "The library has many new games.", grammar: [adjective_agreement_full] }
+
+  # the past tense
+  - { type: cloze, sv: "Igår ___ jag gitarr i 2 timmar.", hint: spela, answer: spelade, en: "Yesterday I played the guitar for 2 hours.", grammar: [past_tense] }
+  - { type: cloze, sv: "Förra veckan ___ vi en tårta.", hint: baka, answer: bakade, en: "Last week we baked a cake.", grammar: [past_tense] }
+  - { type: cloze, sv: "Vi ___ på konsert förra lördagen.", hint: vara, answer: var, en: "We were at a concert last Saturday.", grammar: [past_tense] }
+  - { type: cloze, sv: "Jag ___ en bra film igår.", hint: se, answer: såg, en: "I saw a good film yesterday.", grammar: [past_tense] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag läser ofta på biblioteket.", en: "I often read at the library." }
+  - { type: dictation, sv: "Vi var på museum igår.", en: "We were at a museum yesterday." }
+  - { type: dictation, sv: "Hon målar och spelar piano.", en: "She paints and plays the piano." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences: what you like doing, what you did last weekend, and what you are going to do next weekend.",
+      checklist: ["I use tycker om att once.", "I use the past tense twice.", "I use ska + infinitive once.", "I use ofta, aldrig or alltid once."],
+      sv: "Jag tycker om att måla och spela gitarr. Jag går ofta på konsert, men jag spelar aldrig schack. Förra helgen bakade jag bröd och var på ett stort museum. Nästa helg ska jag fiska med min bror.",
+      grammar: [past_tense, future_ska_kommer_att] }

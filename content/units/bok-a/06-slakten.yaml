@@ -1,0 +1,57 @@
+id: bok-a-06
+level: A2
+book: "A1+A2"
+chapter: 6
+theme: bok_a
+title: "Släkten"
+task: "Extra practice for chapter 6, on relatives and family."
+can_do: "I can describe relatives with som, say whose they are, use mig, dig, honom, henne, and make the adjective agree after är."
+focus: ["som in descriptions", "possessive pronouns", "object pronouns", "adjective after är and blir", "verb groups in the present"]
+names: [Sara, Omar, Maria, Göteborg, Sverige]
+assumes: { words: [släkt, eller, älska] }
+
+new_words: [farfar, morfar, faster, moster, farbror, morbror, kusin, barnbarn, svärmor, svärfar, tvilling, bebis]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # som: which one?
+  - { type: word_order, sv: "Jag har en kusin som bor i Göteborg.", en: "I have a cousin who lives in Gothenburg.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Min moster, som är lärare, har 3 barn.", en: "My aunt, who is a teacher, has 3 children.", grammar: [relative_clause] }
+  - { type: translate, en: "He has an uncle who is a chef.", sv: "Han har en farbror som är kock.", accept: ["Han har en morbror som är kock."], grammar: [relative_clause] }
+
+  # min, din, hans, hennes, deras
+  - { type: cloze, sv: "Det är Sara och ___ tvilling.", hint: "hennes / hans", answer: hennes, en: "That is Sara and her twin.", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Omar ringer ___ farfar varje söndag.", hint: "hans / sin", answer: sin, en: "Omar calls his (own) grandfather every Sunday.", grammar: [possessive_sin], review: true }
+  - { type: cloze, sv: "Är det ___ bebis?", hint: du, answer: din, en: "Is that your baby?", grammar: [possessive_basic] }
+  - { type: cloze, sv: "Jag älskar ___ barnbarn.", hint: jag, answer: mina, en: "I love my grandchildren.", grammar: [possessive_basic] }
+
+  # mig, dig, honom, henne, oss, er, dem
+  - { type: cloze, sv: "Min morfar är gammal. Jag hjälper ___ ofta.", hint: han, answer: honom, en: "My grandfather is old. I often help him." }
+  - { type: cloze, sv: "Min faster bor här. Jag träffar ___ varje vecka.", hint: hon, answer: henne, en: "My aunt lives here. I see her every week." }
+  - { type: cloze, sv: "Mina kusiner ringer ___ på lördagar.", hint: jag, answer: mig, en: "My cousins call me on Saturdays." }
+  - { type: cloze, sv: "Svärmor och svärfar kommer ikväll. Vi väntar på ___.", hint: de, answer: dem, en: "My parents-in-law are coming tonight. We are waiting for them." }
+
+  # the adjective agrees after är
+  - { type: cloze, sv: "Bebisen är ___.", hint: trött, answer: trött, en: "The baby is tired.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Barnbarnet är ___.", hint: glad, answer: glatt, en: "The grandchild is happy.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Tvillingarna är ___.", hint: snäll, answer: snälla, en: "The twins are kind.", grammar: [adjective_agreement_full] }
+
+  # present tense: -ar, -er, -r
+  - { type: cloze, sv: "Min farbror ___ i Göteborg.", hint: bo, answer: bor, en: "My uncle lives in Gothenburg.", grammar: [present_tense] }
+  - { type: cloze, sv: "Min moster ___ på ett sjukhus.", hint: arbeta, answer: arbetar, en: "My aunt works at a hospital.", grammar: [present_tense] }
+  - { type: cloze, sv: "Kusinerna ___ svenska varje dag.", hint: läsa, answer: läser, en: "The cousins study Swedish every day.", grammar: [present_tense] }
+
+  # listen and write
+  - { type: dictation, sv: "Min farfar och min morfar är födda i Sverige.", en: "Both my grandfathers were born in Sweden." }
+  - { type: dictation, sv: "Hon har 5 barnbarn.", en: "She has 5 grandchildren." }
+  - { type: dictation, sv: "Min svärmor är mycket snäll.", en: "My mother-in-law is very kind." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your relatives: who they are, where they live, and what they are like.",
+      checklist: ["I use som once.", "I use min, mitt or mina correctly.", "I use honom, henne or dem once.", "The adjective agrees after är."],
+      sv: "Jag har en moster som bor i Göteborg. Hennes barn är mina kusiner. De är snälla, och jag träffar dem varje sommar. Min farfar är gammal, men han är pigg. Jag ringer honom varje söndag.",
+      grammar: [relative_clause, possessive_basic] }

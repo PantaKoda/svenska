@@ -1,0 +1,57 @@
+id: bok-a-09
+level: A2
+book: "A1+A2"
+chapter: 9
+theme: bok_a
+title: "Ta sig fram"
+task: "Extra practice for chapter 9, on transport, directions and planning a trip."
+can_do: "I can choose between går and åker, use verbs with a particle, pick the preposition for a place, and say when with i, om and för ... sedan."
+focus: ["går or åker", "verbs with a particle", "prepositions for places", "the present about the future", "when: in the past and in the future"]
+names: [Sara, Omar, Göteborg, Stockholm]
+assumes: { words: [nummer, hem, centrum] }
+
+new_words: [trafik, tunnelbana, färja, taxi, bro, väg, gata, korsning, svänga, rak, vänster, höger]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # går (on foot) or åker (with a vehicle)?
+  - { type: cloze, sv: "Jag ___ till jobbet. Det tar 10 minuter att gå.", hint: "går / åker", answer: går, en: "I walk to work. It takes 10 minutes on foot." }
+  - { type: cloze, sv: "Vi ___ färja till Stockholm.", hint: "går / åker", answer: åker, en: "We are going by ferry to Stockholm." }
+  - { type: cloze, sv: "Hon ___ tunnelbana varje dag.", hint: "går / åker", answer: åker, en: "She takes the underground every day." }
+  - { type: translate, en: "Shall we walk or take a taxi?", sv: "Ska vi gå eller ta en taxi?", accept: ["Ska vi gå eller åka taxi?", "Ska vi gå eller ta taxi?"], review: true }
+
+  # verb + particle
+  - { type: cloze, sv: "Vi går ___ bussen vid nästa hållplats.", hint: "av / på", answer: av, en: "We get off the bus at the next stop.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Sväng ___ till vänster vid korsningen.", hint: "av / upp", answer: av, en: "Turn off to the left at the junction.", grammar: [particle_verbs], review: true }
+  - { type: cloze, sv: "När kommer vi ___?", hint: "fram / upp", answer: fram, en: "When do we arrive?", grammar: [particle_verbs] }
+
+  # where: i, på, vid, över, till
+  - { type: cloze, sv: "Jag bor ___ en liten gata.", hint: "på / i", answer: på, en: "I live in a small street." }
+  - { type: cloze, sv: "Hållplatsen ligger ___ bron.", hint: "vid / i", answer: vid, en: "The stop is by the bridge." }
+  - { type: cloze, sv: "Gå ___ bron och sväng till höger.", hint: "över / i", answer: över, en: "Go over the bridge and turn right." }
+  - { type: cloze, sv: "Det är mycket trafik ___ staden.", hint: "i / vid", answer: i, en: "There is a lot of traffic in the city." }
+  - { type: word_order, sv: "Gå rakt fram och sväng sedan till vänster.", en: "Go straight ahead and then turn left.", grammar: [imperative] }
+
+  # the present about the future, with a time word
+  - { type: word_order, sv: "Imorgon åker jag till Göteborg.", en: "Tomorrow I am going to Gothenburg.", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Färjan går klockan 8 på lördag.", en: "The ferry leaves at 8 on Saturday.", grammar: [future_ska_kommer_att] }
+
+  # when? för ... sedan (past), om (future), i (how long)
+  - { type: cloze, sv: "Tåget går ___ 10 minuter.", hint: "om / för", answer: om, en: "The train leaves in 10 minutes.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Vi kom fram för en timme ___.", answer: sedan, en: "We arrived an hour ago.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag väntade på taxin ___ 20 minuter.", hint: "i / om", answer: i, en: "I waited for the taxi for 20 minutes.", grammar: [preposition_time] }
+
+  # listen and write
+  - { type: dictation, sv: "Ta nästa gata till höger.", en: "Take the next street on the right." }
+  - { type: dictation, sv: "Vägen till stationen är rak.", en: "The road to the station is straight." }
+  - { type: dictation, sv: "Vi åker tunnelbana till centrum.", en: "We take the underground to the centre." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences that explain the way from your home to a place you often go, and how long it takes.",
+      checklist: ["I use går or åker correctly.", "I use vänster, höger or rakt fram.", "I use one verb with a particle (gå av, komma fram).", "I say how long it takes."],
+      sv: "Jag går från mitt hem till hållplatsen. Det tar 5 minuter. Sedan åker jag buss i 20 minuter och går av vid bron. Jag går över bron, svänger till vänster och går rakt fram. Jag kommer fram klockan 8.",
+      grammar: [particle_verbs, preposition_time] }

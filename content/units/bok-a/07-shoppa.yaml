@@ -1,0 +1,52 @@
+id: bok-a-07
+level: A2
+book: "A1+A2"
+chapter: 7
+theme: bok_a
+title: "Shoppa"
+task: "Extra practice for chapter 7, on shops, clothes and good and bad buys."
+can_do: "I can use någon and ingen, put nouns in the definite plural, and compare things."
+focus: ["någon and ingen", "nouns: definite plural", "comparing adjectives"]
+names: [Sara, Omar]
+assumes: { words: [någon, ingen, eller, möbel] }
+
+new_words: [varuhus, affär, byxa, tröja, skjorta, jacka, sko, kjol, storlek, färg, rea, prova, modern, snygg, ful]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 10
+
+exercises:
+  # någon, något, några and ingen, inget, inga
+  - { type: cloze, sv: "Har ni ___ jacka i min storlek?", hint: någon, answer: någon, en: "Do you have any jacket in my size?", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Jag hittar ___ skor som passar.", hint: ingen, answer: inga, en: "I cannot find any shoes that fit.", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Finns det ___ varuhus här?", hint: någon, answer: något, en: "Is there a department store here?", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Jag har ___ tröja i den färgen.", hint: ingen, answer: ingen, en: "I have no sweater in that colour.", grammar: [indefinite_pronouns] }
+  - { type: translate, en: "Do you have any trousers on sale?", sv: "Har ni några byxor på rea?", grammar: [indefinite_pronouns] }
+
+  # the definite plural
+  - { type: cloze, sv: "Jag vill prova de här ___.", hint: sko, answer: skorna, en: "I want to try on these shoes.", grammar: [plural_def] }
+  - { type: cloze, sv: "___ är för små.", hint: byxa, answer: Byxorna, en: "The trousers are too small.", grammar: [plural_def] }
+  - { type: cloze, sv: "Alla ___ i affären är på rea.", hint: skjorta, answer: skjortorna, en: "All the shirts in the shop are on sale.", grammar: [plural_def] }
+  - { type: cloze, sv: "Jag tycker inte om ___ i den här affären.", hint: färg, answer: färgerna, en: "I do not like the colours in this shop.", grammar: [plural_def] }
+
+  # comparing
+  - { type: cloze, sv: "Jackan är ___ än tröjan.", hint: dyr, answer: dyrare, en: "The jacket is more expensive than the sweater.", grammar: [comparison] }
+  - { type: cloze, sv: "Den här kjolen är ___ än den där.", hint: snygg, answer: snyggare, en: "This skirt is nicer than that one.", grammar: [comparison] }
+  - { type: cloze, sv: "Det är den ___ affären i staden.", hint: billig, answer: billigaste, en: "It is the cheapest shop in town.", grammar: [comparison] }
+  - { type: cloze, sv: "Har du en ___ storlek?", hint: stor, answer: större, en: "Do you have a bigger size?", grammar: [comparison] }
+  - { type: cloze, sv: "Skjortan är ___ modern än jackan.", hint: "mer / mest", answer: mer, en: "The shirt is more modern than the jacket.", grammar: [comparison] }
+  - { type: translate, en: "Which is better, the skirt or the trousers?", sv: "Vad är bättre, kjolen eller byxorna?", accept: ["Vilket är bättre, kjolen eller byxorna?"], grammar: [comparison], review: true }
+
+  # listen and write
+  - { type: dictation, sv: "Kan jag prova den här jackan?", en: "Can I try on this jacket?" }
+  - { type: dictation, sv: "Skorna är snygga men dyra.", en: "The shoes are nice but expensive." }
+  - { type: dictation, sv: "Jag tycker att färgen är ful.", en: "I think the colour is ugly." }
+  - { type: dictation, sv: "Varuhuset har rea den här veckan.", en: "The department store has a sale this week." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about something you bought: what, where, and why it was a good or a bad buy.",
+      checklist: ["I use någon or ingen once.", "I compare two things (-are än).", "I use one noun in the definite plural.", "I say why it was good or bad."],
+      sv: "Förra veckan köpte jag en jacka och skor på rea. Jackan var billigare än jag trodde, och färgen är snygg. Skorna är för små, och affären har inga i en större storlek. Jackan var ett bra köp, men skorna var ett dåligt köp.",
+      grammar: [comparison, plural_def] }

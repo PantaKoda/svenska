@@ -1,0 +1,55 @@
+id: bok-a-18
+level: A2
+book: "A1+A2"
+chapter: 18
+theme: bok_a
+title: "På jobbet"
+task: "Extra practice for chapter 18, on the office, the coffee break and the phone."
+can_do: "I can read and say simple fractions and percentages, and use the adjective in the definite form (den nya pärmen)."
+focus: ["fractions and per cent", "the adjective in the definite form"]
+names: [Sara, Omar, Maria]
+assumes: { words: [anställd, eller, mejl, skicka, bara, låna, möte, viktig, hälsning] }
+
+new_words: [skrivbord, pärm, sax, tejp, kopiator, anteckning, hälft, tredjedel, fjärdedel, procent, statistik, samtal, telefon]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # fractions and per cent
+  - { type: listen_choose, sv: "Hälften av de anställda cyklar till jobbet.", en: "Half of the employees cycle to work.",
+      options: ["50 per cent", "25 per cent", "33 per cent"], answer: "50 per cent" }
+  - { type: listen_choose, sv: "En fjärdedel av kollegorna dricker te.", en: "A quarter of the colleagues drink tea.",
+      options: ["25 per cent", "50 per cent", "75 per cent"], answer: "25 per cent" }
+  - { type: listen_choose, sv: "2 tredjedelar äter lunch på jobbet.", en: "Two thirds eat lunch at work.",
+      options: ["about 67 per cent", "about 33 per cent", "about 25 per cent"], answer: "about 67 per cent" }
+  - { type: numbers, sv: "80 procent av de anställda fikar varje dag.", hint: "the percentage", answer: "80", en: "80 per cent of the employees have a coffee break every day." }
+  - { type: cloze, sv: "50 procent är ___ av alla.", hint: "hälften / en tredjedel", answer: hälften, en: "50 per cent is half of them all." }
+  - { type: translate, en: "A third of the calls come in the morning.", sv: "En tredjedel av samtalen kommer på morgonen." }
+
+  # den/det/de + adjective + -a + definite noun
+  - { type: cloze, sv: "Den ___ kopiatorn fungerar inte.", hint: ny, answer: nya, en: "The new photocopier does not work.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Det ___ skrivbordet är mitt.", hint: stor, answer: stora, en: "The big desk is mine.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Var är de ___ pärmarna?", hint: gammal, answer: gamla, en: "Where are the old folders?", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Jag tar det ___ samtalet.", hint: nästa, answer: nästa, en: "I will take the next call. (nästa never changes, and the noun stays indefinite: nästa samtal)", review: true }
+  - { type: cloze, sv: "Har du läst den ___ statistiken?", hint: ny, answer: nya, en: "Have you read the new statistics?", grammar: [adjective_agreement_full] }
+  - { type: translate, en: "The little pair of scissors is on the desk.", sv: "Den lilla saxen ligger på skrivbordet.", grammar: [adjective_agreement_full] }
+  - { type: word_order, sv: "Den nya telefonen står på det gamla skrivbordet.", en: "The new telephone is on the old desk.", grammar: [adjective_agreement_full] }
+
+  # listen and write
+  - { type: dictation, sv: "Kan jag låna din sax och lite tejp?", en: "Can I borrow your scissors and some tape?", review: true }
+  - { type: dictation, sv: "Jag gör anteckningar på mötet.", en: "I take notes at the meeting.", review: true }
+  - { type: dictation, sv: "Telefonen ringer hela dagen.", en: "The telephone rings all day.", review: true }
+  - { type: dictation, sv: "Pärmen står på mitt skrivbord.", en: "The folder is on my desk." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have an important call at 2.", sv: "Jag har ett viktigt samtal klockan 2.", review: true }
+  - { type: translate, en: "The photocopier is broken.", sv: "Kopiatorn är trasig." }
+
+  # write your own text
+  - { type: free_write, en: "Write a short e-mail to a colleague (4 or 5 sentences): what is on your desk, what does not work, and one number about your workplace.",
+      checklist: ["I use den/det/de + adjective + -a + noun twice.", "I use a fraction or a percentage.", "I say what does not work.", "I start with Hej and end with a greeting."],
+      sv: "Hej Sara! Den nya kopiatorn fungerar inte, så jag använder den gamla. Kan du skicka statistiken till mig? Hälften av de anställda har svarat på mejlet. De gamla pärmarna står på mitt skrivbord. Hälsningar, Omar",
+      grammar: [adjective_agreement_full] }

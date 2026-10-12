@@ -11,6 +11,8 @@ fills the unit's words into sentence frames; its output is in `content/generated
 The reference panel (F1) looks up any word form in SALDO and shows the grammar cards.
 Progress and the review queue (Leitner boxes) are kept in `progress.db` in your app-data
 folder; Theme practice runs the standard exercises on any theme pack.
+A separate Book companion section has our own extra exercises for each chapter of two
+course books (A1+A2 and B1+B2); nothing in it is taken from the books.
 
 ## Install
 

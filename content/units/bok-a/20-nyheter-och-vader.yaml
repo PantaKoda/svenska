@@ -1,0 +1,57 @@
+id: bok-a-20
+level: A2
+book: "A1+A2"
+chapter: 20
+theme: bok_a
+title: "Nyheter och väder"
+task: "Extra practice for chapter 20, on short news, the weather forecast and saying what you think of something."
+can_do: "I can understand the main point of short news and weather reports, and write a short review."
+focus: ["understanding short news and weather", "review: past, perfect and comparing", "writing a short review"]
+names: [Sara, Omar, Göteborg, Stockholm, Sverige]
+assumes: { words: [nyhet, eller, väldigt, olycka, hel, personal] }
+
+new_words: [radio, prognos, temperatur, halka, solig, molnig, blåsig, recension, omdöme, stjärna, lyssna]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # the weather: what is the main point?
+  - { type: listen_choose, sv: "Imorgon blir det soligt i söder, men molnigt och blåsigt i norr.", en: "Tomorrow it will be sunny in the south, but cloudy and windy in the north.",
+      options: ["Sun in the south, clouds and wind in the north.", "Sun in the whole country.", "Clouds in the south, sun in the north."], answer: "Sun in the south, clouds and wind in the north." }
+  - { type: listen_choose, sv: "Det är halka på vägarna i väster.", en: "The roads are slippery in the west.",
+      options: ["The roads are slippery in the west.", "The roads are closed in the west.", "It is raining in the west."], answer: "The roads are slippery in the west." }
+  - { type: numbers, sv: "Temperaturen i Göteborg är 14 grader.", hint: "the temperature", answer: "14", en: "The temperature in Gothenburg is 14 degrees." }
+  - { type: numbers, sv: "I natt blir det 6 grader kallt i norr.", hint: "degrees below zero", answer: "6", en: "Tonight it will be 6 degrees below zero in the north." }
+
+  # short news: what is the main point?
+  - { type: listen_choose, sv: "Tågen från Göteborg till Stockholm är försenade idag eftersom det snöar.", en: "The trains from Gothenburg to Stockholm are delayed today because it is snowing.",
+      options: ["Trains are late because of snow.", "Trains are cancelled all week.", "There are no trains to Stockholm any more."], answer: "Trains are late because of snow." }
+  - { type: listen_choose, sv: "Ett nytt bibliotek öppnar i centrum på lördag.", en: "A new library opens in the centre on Saturday.",
+      options: ["A library opens on Saturday.", "A library closes on Saturday.", "A library opened last Saturday."], answer: "A library opens on Saturday." }
+
+  # review: past, perfect, comparing
+  - { type: cloze, sv: "Igår ___ det hela dagen.", hint: regna, answer: regnade, en: "Yesterday it rained all day.", grammar: [past_tense] }
+  - { type: cloze, sv: "Det har ___ kallare den här veckan.", hint: bli, answer: blivit, en: "It has got colder this week.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Idag är det ___ än igår.", hint: varm, answer: varmare, en: "Today it is warmer than yesterday.", grammar: [comparison] }
+  - { type: cloze, sv: "Juli är årets ___ månad.", hint: varm, answer: varmaste, en: "July is the warmest month of the year.", grammar: [comparison] }
+  - { type: word_order, sv: "Imorgon blir det soligare än idag.", en: "Tomorrow it will be sunnier than today.", grammar: [comparison, inversion_after_adverb] }
+
+  # saying what you think: a review
+  - { type: cloze, sv: "Jag ger filmen 4 ___ av 5.", hint: stjärna, answer: stjärnor, en: "I give the film 4 stars out of 5.", grammar: [plural_indef] }
+  - { type: translate, en: "I read a good review of the film.", sv: "Jag läste en bra recension av filmen." }
+  - { type: translate, en: "What is your opinion of the restaurant?", sv: "Vad är ditt omdöme om restaurangen?", review: true }
+
+  # listen and write
+  - { type: dictation, sv: "Jag lyssnar på radio varje morgon.", en: "I listen to the radio every morning." }
+  - { type: dictation, sv: "Prognosen säger att det blir regn.", en: "The forecast says that there will be rain." }
+  - { type: dictation, sv: "Det är blåsigt och molnigt idag.", en: "It is windy and cloudy today." }
+  - { type: dictation, sv: "Temperaturen är 5 grader i söder.", en: "The temperature is 5 degrees in the south." }
+
+  # write your own text
+  - { type: free_write, en: "Write a short review (4 or 5 sentences) of a film, a restaurant or a place: what it was, what was good and bad, and how many stars you give.",
+      checklist: ["I say what I am reviewing.", "I use the past tense.", "I compare with something (-are än).", "I give a number of stars."],
+      sv: "Förra veckan var jag på en ny restaurang i centrum. Maten var väldigt god, och personalen var snäll. Det var dyrare än jag trodde, och vi väntade länge på notan. Jag ger restaurangen 4 stjärnor av 5.",
+      grammar: [past_tense, comparison] }

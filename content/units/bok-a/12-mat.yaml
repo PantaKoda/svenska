@@ -1,0 +1,56 @@
+id: bok-a-12
+level: A2
+book: "A1+A2"
+chapter: 12
+theme: bok_a
+title: "Mat"
+task: "Extra practice for chapter 12, on favourite food and eating out."
+can_do: "I can build clauses with att, eftersom and när, choose between få/många and lite/mycket, between tror and tycker, and say where things sit, stand and lie."
+focus: ["subordinate clauses", "få, många, lite, mycket", "tror or tycker", "sitter, står, ligger"]
+names: [Sara, Omar]
+assumes: { words: [beställa, eller, bara, väldigt, bredvid] }
+
+new_words: [förrätt, efterrätt, kyckling, ris, pasta, sås, salt, peppar, kniv, gaffel, sked, tallrik, nota, hungrig, törstig, mätt]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # att, eftersom, när, om - and where inte goes
+  - { type: word_order, sv: "Jag äter inte efterrätt eftersom jag är mätt.", en: "I am not having dessert because I am full.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Hon säger att hon inte äter kött.", en: "She says that she does not eat meat.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "När jag är hungrig lagar jag pasta.", en: "When I am hungry I make pasta.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Jag dricker vatten ___ jag är törstig.", hint: "när / att", answer: när, en: "I drink water when I am thirsty.", grammar: [subordinate_clause_basic] }
+
+  # things you can count: få, många. A mass: lite, mycket.
+  - { type: cloze, sv: "Det är för ___ salt i soppan.", hint: "mycket / många", answer: mycket, en: "There is too much salt in the soup." }
+  - { type: cloze, sv: "Vi behöver ___ tallrikar.", hint: "mycket / många", answer: många, en: "We need many plates." }
+  - { type: cloze, sv: "Jag vill bara ha ___ sås.", hint: "lite / få", answer: lite, en: "I only want a little sauce." }
+  - { type: cloze, sv: "Restaurangen har ___ gäster idag.", hint: "lite / få", answer: få, en: "The restaurant has few guests today." }
+
+  # tror (not sure) or tycker (your opinion)?
+  - { type: cloze, sv: "Jag har ätit kycklingen. Jag ___ att den är god.", hint: "tror / tycker", answer: tycker, en: "I have eaten the chicken. I think it is good.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag vet inte, men jag ___ att restaurangen är dyr.", hint: "tror / tycker", answer: tror, en: "I do not know, but I think the restaurant is expensive.", grammar: [tycka_tanka_tro] }
+
+  # sitter, står, ligger
+  - { type: cloze, sv: "Tallrikarna ___ på bordet.", hint: "står / ligger", answer: står, en: "The plates are on the table.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Kniven och gaffeln ___ bredvid tallriken.", hint: "sitter / ligger", answer: ligger, en: "The knife and fork are beside the plate.", grammar: [position_verbs], review: true }
+  - { type: cloze, sv: "Gästerna ___ vid bordet.", hint: "sitter / ligger", answer: sitter, en: "The guests are sitting at the table.", grammar: [position_verbs] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag tar kyckling med ris.", en: "I will have chicken with rice." }
+  - { type: dictation, sv: "Kan vi få notan, tack?", en: "Can we have the bill, please?" }
+  - { type: dictation, sv: "Jag behöver en sked till soppan.", en: "I need a spoon for the soup." }
+  - { type: dictation, sv: "Vill du ha salt och peppar?", en: "Do you want salt and pepper?" }
+
+  # say it in Swedish
+  - { type: translate, en: "What do you want as a starter?", sv: "Vad vill du ha till förrätt?", accept: ["Vad vill du ha som förrätt?"] }
+  - { type: translate, en: "I am very hungry.", sv: "Jag är mycket hungrig.", accept: ["Jag är väldigt hungrig."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about your favourite food or a meal at a restaurant: what you eat and what you think of it.",
+      checklist: ["I use eftersom, att or när once.", "I use mycket or många correctly.", "I use tycker for my opinion.", "I name three kinds of food."],
+      sv: "Jag tycker att kyckling med ris är väldigt gott. Jag äter det ofta eftersom det är lätt att laga. Jag vill ha mycket sås men lite salt. När jag är på restaurang beställer jag alltid en förrätt, men jag äter inte efterrätt.",
+      grammar: [subordinate_clause_basic] }

@@ -1,0 +1,57 @@
+id: bok-b-06
+level: B1
+book: "B1+B2"
+chapter: 6
+theme: bok_b
+title: "Samhälle och politik"
+task: "Extra practice for chapter 6, on society and politics."
+can_do: "I can say what I would do if things were different, and talk about the future with ska, kommer att and the present."
+focus: ["conditional with skulle", "ways to talk about the future"]
+names: [Sara, Sverige, Stockholm]
+
+new_words: [politik, politiker, parti, val, regering, riksdag, statsminister, kung, demokrati, makt, skatt, samhälle, medborgare, förändra, styra]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # what would you do?
+  - { type: cloze, sv: "Om jag ___ makt, skulle jag förändra samhället.", hint: ha, answer: hade, en: "If I had power, I would change society.", grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Vad ___ du göra om du var statsminister?", answer: skulle, en: "What would you do if you were prime minister?", grammar: [conditional_skulle] }
+  - { type: cloze, sv: "Om jag ___ kung, skulle jag bo i Stockholm.", hint: vara, answer: var, accept: [vore], en: "If I were king, I would live in Stockholm.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Om vi betalade mer skatt, skulle skolan få mer pengar.", en: "If we paid more tax, the schools would get more money.", grammar: [conditional_skulle] }
+  - { type: word_order, sv: "Jag skulle rösta på ett annat parti om jag fick.", en: "I would vote for another party if I were allowed to.", grammar: [conditional_skulle] }
+  - { type: translate, en: "If I were a politician, I would raise the wages.", sv: "Om jag var politiker, skulle jag höja lönerna.", accept: ["Om jag vore politiker, skulle jag höja lönerna."], grammar: [conditional_skulle] }
+
+  # the future: ska (a plan), kommer att (a forecast), present + time
+  - { type: cloze, sv: "Vi ___ rösta på söndag. Det har vi bestämt.", hint: "ska / kommer", answer: ska, en: "We are going to vote on Sunday. We have decided that.", grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Valet ___ att bli spännande.", hint: "ska / kommer", answer: kommer, en: "The election is going to be exciting.", grammar: [future_ska_kommer_att] }
+  - { type: cloze, sv: "Jag tror att regeringen kommer ___ höja skatten.", answer: att, en: "I think the government is going to raise the tax.", grammar: [future_ska_kommer_att] }
+  - { type: word_order, sv: "Riksdagen röstar om förslaget imorgon.", en: "Parliament votes on the proposal tomorrow.", grammar: [future_ska_kommer_att] }
+  - { type: listen_choose, sv: "Regeringen ska höja skatten.", en: "The government is going to raise the tax.",
+      options: ["It is the government's plan.", "It is only the speaker's guess.", "It has already happened."], answer: "It is the government's plan." }
+  - { type: translate, en: "Who is going to win the election?", sv: "Vem kommer att vinna valet?", accept: ["Vem vinner valet?"], grammar: [future_ska_kommer_att] }
+
+  # listen and write
+  - { type: dictation, sv: "Sverige är en demokrati.", en: "Sweden is a democracy." }
+  - { type: dictation, sv: "Riksdagen har 349 platser.", en: "Parliament has 349 seats." }
+  - { type: dictation, sv: "Alla medborgare får rösta i valet.", en: "All citizens may vote in the election." }
+  - { type: dictation, sv: "Statsministern styr regeringen.", en: "The prime minister leads the government." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which party do you vote for?", sv: "Vilket parti röstar du på?" }
+  - { type: translate, en: "The king has no power.", sv: "Kungen har ingen makt." }
+  - { type: translate, en: "I am not interested in politics.", sv: "Jag är inte intresserad av politik.", accept: ["Jag intresserar mig inte för politik."] }
+  - { type: translate, en: "Politicians talk a lot.", sv: "Politiker pratar mycket." }
+
+  # listen for the number
+  - { type: numbers, sv: "Riksdagen har 349 platser.", hint: "how many seats", answer: "349", en: "Parliament has 349 seats." }
+  - { type: numbers, sv: "Det är val vart 4 år.", hint: "every how many years", answer: "4", en: "There is an election every 4 years.", review: true }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences: what would you change if you had power, and what do you think will happen after the next election?",
+      checklist: ["I use om ... + past, skulle + infinitive twice.", "I use ska for a plan.", "I use kommer att for what I think will happen.", "I name one thing I would change."],
+      sv: "Om jag var statsminister, skulle jag förändra skolan. Jag skulle höja lönerna för lärare, eftersom utbildning är viktigt för samhället. Om jag hade mer makt, skulle jag också göra tågen billigare. Jag ska rösta i nästa val. Jag tror att det kommer att bli ett spännande val, men att politiken inte kommer att förändras så mycket.",
+      grammar: [conditional_skulle, future_ska_kommer_att] }

@@ -56,6 +56,48 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
+            <!-- companion chapters: beside a course book, apart from the task units -->
+            <ItemsControl ItemsSource="{Binding Books}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:BookGroup">
+                        <Border Classes="book" Margin="0,0,0,22">
+                            <StackPanel Spacing="12">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <TextBlock Classes="h2" Text="Book companion" />
+                                    <TextBlock Classes="h2 muted" Text="{Binding Book}" />
+                                    <TextBlock Classes="label" Text="EXTRA PRACTICE BY CHAPTER" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <TextBlock Classes="muted" TextWrapping="Wrap" FontSize="13"
+                                           Text="Our own exercises on the grammar of each chapter, to do beside the book. They build on the task units of the same level." />
+                                <ItemsControl ItemsSource="{Binding Chapters}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="vm:UnitRow">
+                                            <Button Classes="tile" Command="{Binding Open}" Width="288" Height="118" Margin="0,0,12,12"
+                                                    VerticalContentAlignment="Stretch">
+                                                <DockPanel>
+                                                    <StackPanel DockPanel.Dock="Bottom" Spacing="5">
+                                                        <ProgressBar Value="{Binding Percent}" Maximum="100" />
+                                                        <TextBlock Classes="muted" Text="{Binding ProgressText}" FontSize="12" />
+                                                    </StackPanel>
+                                                    <StackPanel Spacing="2">
+                                                        <TextBlock Classes="label" Text="{Binding Number}" />
+                                                        <TextBlock Text="{Binding Title}" FontSize="16" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" />
+                                                        <TextBlock Classes="muted" Text="{Binding Task}" FontSize="12" TextTrimming="CharacterEllipsis" />
+                                                    </StackPanel>
+                                                </DockPanel>
+                                            </Button>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
             <StackPanel Spacing="12" IsVisible="{Binding Themes.Count}">
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <TextBlock Classes="h2" Text="Theme practice" />

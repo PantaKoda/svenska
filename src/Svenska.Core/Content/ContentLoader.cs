@@ -36,7 +36,11 @@ public static class ContentLoader
             Units = ReadAll<Unit>(contentDir, "units", issues),
             Generated = ReadAll<GeneratedFile>(contentDir, "generated", issues),
         };
-        course.Units = [.. course.Units.OrderBy(u => u.Level).ThenBy(u => u.Id, StringComparer.Ordinal)];
+        // The task units in course order, then the companion chapters book by book.
+        course.Units = [.. course.Units.OrderBy(u => u.IsCompanion)
+            .ThenBy(u => u.IsCompanion ? u.Book : "", StringComparer.Ordinal)
+            .ThenBy(u => u.IsCompanion ? u.Chapter : (int)u.Level)
+            .ThenBy(u => u.Id, StringComparer.Ordinal)];
         return (course, issues);
     }
 

@@ -1,0 +1,59 @@
+id: bok-b-05
+level: B1
+book: "B1+B2"
+chapter: 5
+theme: bok_b
+title: "Vardag och helg"
+task: "Extra practice for chapter 5, on weekdays, weekends and small talk."
+can_do: "I can report what someone said, choose the right subordinating word, pick the indefinite or definite form, and choose between the past and the perfect."
+focus: ["indirect speech", "subordinating words", "indefinite or definite form", "past or perfect"]
+names: [Sara, Omar, Maria]
+
+new_words: [prata, höra, godis, choklad, glass, söt, skvaller, skvallra, mysa, mysig, sovmorgon, bar, trevlig, tråkig]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # report it: the word order of a subordinate clause
+  - { type: word_order, sv: "Hon frågade om jag ville ha godis.", en: "She asked if I wanted sweets.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Han sa att han inte hade hört något skvaller.", en: "He said that he had not heard any gossip.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Maria undrade varför vi aldrig pratar med grannarna.", en: "Maria wondered why we never talk to the neighbours.", grammar: [indirect_speech] }
+  - { type: translate, en: "She asked where the bar was.", sv: "Hon frågade var baren låg.", accept: ["Hon frågade var baren var.", "Hon frågade var baren fanns."], grammar: [indirect_speech] }
+
+  # att, om, när, eftersom, innan, medan
+  - { type: cloze, sv: "Vi myser i soffan ___ det regnar ute.", hint: "medan / innan", answer: medan, en: "We have a cosy time on the sofa while it rains outside.", grammar: [conjunctions_advanced] }
+  - { type: cloze, sv: "Jag äter inte godis ___ det är lördag.", hint: "om / att", answer: om, en: "I do not eat sweets unless it is Saturday. (literally: if it is not ...)", grammar: [subordinate_clause_basic], review: true }
+  - { type: cloze, sv: "Jag har sovmorgon ___ jag är ledig imorgon.", hint: "eftersom / innan", answer: eftersom, en: "I am having a lie-in because I am free tomorrow.", grammar: [subordinate_clause_basic] }
+  - { type: cloze, sv: "Ring mig ___ du går till baren.", hint: "innan / att", answer: innan, en: "Call me before you go to the bar.", grammar: [subordinate_clause_basic] }
+
+  # first time: en/ett. Known or mentioned: definite.
+  - { type: cloze, sv: "Jag köpte en glass. ___ var väldigt god.", hint: glass, answer: Glassen, en: "I bought an ice cream. The ice cream was very good.", grammar: [def_singular] }
+  - { type: cloze, sv: "Vi var på en bar igår. ___ var mysig.", hint: bar, answer: Baren, en: "We were at a bar yesterday. The bar was cosy.", grammar: [def_singular] }
+  - { type: cloze, sv: "Har du hört ___? Chefen ska sluta.", hint: skvaller, answer: skvallret, en: "Have you heard the gossip? The boss is leaving.", grammar: [def_singular] }
+  - { type: cloze, sv: "Jag vill ha en ___ på lördag.", hint: sovmorgon, answer: sovmorgon, en: "I want a lie-in on Saturday.", grammar: [en_ett] }
+
+  # past (a finished time) or perfect (up to now)?
+  - { type: cloze, sv: "Jag ___ för mycket godis igår.", hint: äta, answer: åt, en: "I ate too many sweets yesterday.", grammar: [past_tense] }
+  - { type: cloze, sv: "Jag har aldrig ___ så god choklad.", hint: äta, answer: ätit, en: "I have never eaten such good chocolate.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Vi ___ länge med grannarna förra helgen.", hint: prata, answer: pratade, en: "We talked with the neighbours for a long time last weekend.", grammar: [past_tense] }
+  - { type: cloze, sv: "Har du ___ vad som har hänt?", hint: höra, answer: hört, en: "Have you heard what has happened?", grammar: [perfect_tense] }
+  - { type: listen_choose, sv: "Jag har bott här i 3 år.", en: "I have lived here for 3 years.",
+      options: ["I still live here.", "I do not live here any more.", "I will live here for 3 years."], answer: "I still live here." }
+
+  # listen and write
+  - { type: dictation, sv: "Det var en trevlig kväll.", en: "It was a nice evening." }
+  - { type: dictation, sv: "Filmen var tråkig, men godiset var gott.", en: "The film was boring, but the sweets were good." }
+  - { type: dictation, sv: "Vi pratar ofta om vädret.", en: "We often talk about the weather." }
+
+  # say it in Swedish
+  - { type: translate, en: "What a cute cat!", sv: "Vilken söt katt!" }
+  - { type: translate, en: "I do not like gossiping.", sv: "Jag tycker inte om att skvallra.", accept: ["Jag gillar inte att skvallra."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a normal Friday evening or a weekend: what you did last weekend, and what a friend said or asked.",
+      checklist: ["I use the past about last weekend.", "I use the perfect once (har + supine).", "I report what someone said or asked.", "I use medan, innan or eftersom."],
+      sv: "Förra helgen hade jag sovmorgon, eftersom jag var ledig. På kvällen myste vi i soffan med godis och en film medan det regnade ute. Sara ringde och frågade om jag ville gå till en bar. Jag sa att jag inte ville. Jag har aldrig haft en så lugn och trevlig helg.",
+      grammar: [past_tense, indirect_speech] }

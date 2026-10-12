@@ -144,6 +144,18 @@ public sealed class Unit
     public string Title { get; set; } = "";
     public string Task { get; set; } = "";
     public string CanDo { get; set; } = "";
+    /// <summary>
+    /// Set on a companion chapter: extra practice beside one chapter of a course book
+    /// ("B1+B2"). Companion chapters stand apart from the task units and never count
+    /// as known in them.
+    /// </summary>
+    public string? Book { get; set; }
+    /// <summary>The chapter of the book a companion chapter goes with.</summary>
+    public int Chapter { get; set; }
+    /// <summary>What a companion chapter practises, in a few words each.</summary>
+    public List<string> Focus { get; set; } = [];
+    [YamlDotNet.Serialization.YamlIgnore]
+    public bool IsCompanion => Book != null;
     public Assumes? Assumes { get; set; }
     public List<string> NewWords { get; set; } = [];
     public List<string> NewGrammar { get; set; } = [];

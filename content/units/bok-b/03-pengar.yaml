@@ -1,0 +1,55 @@
+id: bok-b-03
+level: B1
+book: "B1+B2"
+chapter: 3
+theme: bok_b
+title: "Pengar"
+task: "Extra practice for chapter 3, on money and dreams."
+can_do: "I can join ideas with paired conjunctions, compare with ju ... desto, and give an adjective the right form before a noun."
+focus: ["conjunctions", "ju ... desto", "adjective + noun"]
+names: [Sara, Omar]
+
+new_words: [lån, ränta, skuld, inkomst, utgift, budget, bank, ekonomi, dröm, drömma, tjäna, slösa, rik, fattig, både, antingen]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # och, men, eller, så, för - and the pairs både ... och, antingen ... eller
+  - { type: cloze, sv: "Hon är ___ rik och snäll.", hint: "både / antingen", answer: både, en: "She is both rich and kind." }
+  - { type: cloze, sv: "Du kan ___ spara pengarna eller slösa dem.", hint: "både / antingen", answer: antingen, en: "You can either save the money or waste it." }
+  - { type: cloze, sv: "Jag vill köpa en bil, ___ jag har inte råd.", hint: "men / så", answer: men, en: "I want to buy a car, but I cannot afford it." }
+  - { type: cloze, sv: "Räntan är dålig, ___ lånet blir dyrt.", hint: "men / så", answer: så, en: "The interest rate is bad, so the loan gets expensive." }
+  - { type: cloze, sv: "Jag sparar varje månad, ___ jag drömmer om en resa.", hint: "för / eller", answer: för, en: "I save every month, for I dream of a trip." }
+
+  # ju ... desto
+  - { type: word_order, sv: "Ju mer jag tjänar, desto mer sparar jag.", en: "The more I earn, the more I save.", grammar: [ju_desto] }
+  - { type: cloze, sv: "Ju större lån, desto ___ skuld.", hint: stor, answer: större, en: "The bigger the loan, the bigger the debt.", grammar: [ju_desto] }
+  - { type: translate, en: "The more you waste, the poorer you get.", sv: "Ju mer du slösar, desto fattigare blir du.", grammar: [ju_desto] }
+
+  # adjective + noun: en, ett, plural, and after den/det/de
+  - { type: cloze, sv: "Det är ett ___ lån.", hint: dyr, answer: dyrt, en: "It is an expensive loan.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Jag har många ___ utgifter.", hint: stor, answer: stora, en: "I have many big expenses.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Den ___ banken har bättre ränta.", hint: ny, answer: nya, en: "The new bank has better interest.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Det ___ landet behöver hjälp.", hint: fattig, answer: fattiga, en: "The poor country needs help.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Min ___ dröm är att resa.", hint: stor, answer: stora, en: "My big dream is to travel.", grammar: [adjective_agreement_full] }
+  - { type: translate, en: "He has a good income.", sv: "Han har en bra inkomst.", accept: ["Han har en god inkomst."], grammar: [adjective_agreement_full] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag gör en budget varje månad.", en: "I make a budget every month." }
+  - { type: dictation, sv: "Mina utgifter är större än min inkomst.", en: "My expenses are bigger than my income.", grammar: [comparison] }
+  - { type: dictation, sv: "Banken har höjt räntan igen.", en: "The bank has raised the interest rate again." }
+  - { type: dictation, sv: "Hon drömmer om en bättre ekonomi.", en: "She dreams of better finances." }
+
+  # say it in Swedish
+  - { type: translate, en: "I have no debts.", sv: "Jag har inga skulder." }
+  - { type: translate, en: "How much do you earn?", sv: "Hur mycket tjänar du?" }
+  - { type: translate, en: "Money does not make you happy.", sv: "Pengar gör dig inte glad." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about money in your life: what you spend on, what you save for, and one dream.",
+      checklist: ["I use både ... och or antingen ... eller.", "I use ju ... desto once.", "I use three adjectives before a noun, in the right form.", "I name one dream."],
+      sv: "Jag har både en bra inkomst och stora utgifter. Varje månad gör jag en budget, för jag vill inte ha några skulder. Ju mer jag sparar, desto lugnare känner jag mig. Min stora dröm är en resa till ett varmt land. Antingen reser jag nästa år eller så väntar jag tills jag har betalat mitt lån.",
+      grammar: [ju_desto, adjective_agreement_full] }

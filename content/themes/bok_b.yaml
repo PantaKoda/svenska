@@ -1,0 +1,107 @@
+theme: bok_b
+title: "Bok B1+B2"
+# The words of the companion chapters (content/units/bok-b/). Our own selection for the
+# theme of each chapter; nothing is taken from the book.
+words:
+  # chapter 1: free time and sport
+  - { lemma: sport,      pos: noun, gender: en,  level: B1, gloss: sport }
+  - { lemma: match,      pos: noun, gender: en,  level: B1, gloss: "match, game" }
+  - { lemma: spelare,    pos: noun, gender: en,  level: B1, gloss: player }
+  - { lemma: tränare,    pos: noun, gender: en,  level: B1, gloss: "coach, trainer" }
+  - { lemma: gym,        pos: noun, gender: ett, level: B1, gloss: gym }
+  - { lemma: simhall,    pos: noun, gender: en,  level: B1, gloss: "indoor swimming pool" }
+  - { lemma: lopp,       pos: noun, gender: ett, level: B1, gloss: race }
+  - { lemma: skida,      pos: noun, gender: en,  level: B1, gloss: "ski (åka skidor = to ski)" }
+  - { lemma: springa,    pos: verb, level: B1, gloss: "to run; past: ran; pp: run" }
+  - { lemma: hoppa,      pos: verb, level: B1, gloss: "to jump" }
+  - { lemma: duktig,     pos: adj,  level: B1, gloss: "good (at something), capable" }
+  - { lemma: aktiv,      pos: adj,  level: B1, gloss: active }
+  - { lemma: lat,        pos: adj,  level: B1, gloss: lazy }
+  - { lemma: spännande,  pos: adj,  level: B1, gloss: exciting }
+  - { lemma: sällan,     pos: adv,  level: B1, gloss: seldom }
+
+  # chapter 2: friends
+  - { lemma: kompis,      pos: noun, gender: en,  level: B1, gloss: "friend, mate" }
+  - { lemma: vänskap,     pos: noun, gender: en,  level: B1, gloss: friendship }
+  - { lemma: bekant,      pos: adj,  level: B1, gloss: "known, en bekant = an acquaintance" }
+  - { lemma: gemensam,    pos: adj,  level: B1, gloss: "common, shared" }
+  - { lemma: tillit,      pos: noun, gender: en,  level: B1, gloss: trust }
+  - { lemma: umgås,       pos: verb, level: B1, gloss: "to spend time together, to socialise" }
+  - { lemma: bråka,       pos: verb, level: B1, gloss: "to quarrel" }
+  - { lemma: skratta,     pos: verb, level: B1, gloss: "to laugh" }
+  - { lemma: stötta,      pos: verb, level: B1, gloss: "to support" }
+  - { lemma: ångra,       pos: verb, level: B1, gloss: "to regret (ångra sig = change one's mind)" }
+  - { lemma: intressera,  pos: verb, level: B1, gloss: "intressera sig för = to be interested in" }
+  - { lemma: koncentrera, pos: verb, level: B1, gloss: "koncentrera sig = to concentrate" }
+  - { lemma: lova,        pos: verb, level: B1, gloss: "to promise" }
+  - { lemma: sams,        pos: adj,  level: B1, gloss: "on good terms (bli sams = make up)" }
+  - { lemma: osams,       pos: adj,  level: B1, gloss: "on bad terms (bli osams = fall out)" }
+
+  # chapter 3: money
+  - { lemma: lån,       pos: noun, gender: ett, level: B1, gloss: loan }
+  - { lemma: ränta,     pos: noun, gender: en,  level: B1, gloss: "interest (on money)" }
+  - { lemma: skuld,     pos: noun, gender: en,  level: B1, gloss: debt }
+  - { lemma: inkomst,   pos: noun, gender: en,  level: B1, gloss: income }
+  - { lemma: utgift,    pos: noun, gender: en,  level: B1, gloss: expense }
+  - { lemma: budget,    pos: noun, gender: en,  level: B1, gloss: budget }
+  - { lemma: bank,      pos: noun, gender: en,  level: B1, gloss: bank }
+  - { lemma: ekonomi,   pos: noun, gender: en,  level: B1, gloss: "economy, finances" }
+  - { lemma: dröm,      pos: noun, gender: en,  level: B1, gloss: dream }
+  - { lemma: drömma,    pos: verb, level: B1, gloss: "to dream; past: dreamt; pp: dreamt" }
+  - { lemma: tjäna,     pos: verb, level: B1, gloss: "to earn" }
+  - { lemma: slösa,     pos: verb, level: B1, gloss: "to waste, to squander" }
+  - { lemma: rik,       pos: adj,  level: B1, gloss: rich }
+  - { lemma: fattig,    pos: adj,  level: B1, gloss: poor }
+  - { lemma: både,      pos: conj, level: B1, gloss: "både ... och = both ... and" }
+  - { lemma: antingen,  pos: conj, level: B1, gloss: "antingen ... eller = either ... or" }
+
+  # chapter 4: animals and nature
+  - { lemma: djur,    pos: noun, gender: ett, level: B1, gloss: animal }
+  - { lemma: hund,    pos: noun, gender: en,  level: B1, gloss: dog }
+  - { lemma: katt,    pos: noun, gender: en,  level: B1, gloss: cat }
+  - { lemma: häst,    pos: noun, gender: en,  level: B1, gloss: horse }
+  - { lemma: fågel,   pos: noun, gender: en,  level: B1, gloss: bird }
+  - { lemma: älg,     pos: noun, gender: en,  level: B1, gloss: "elk, moose" }
+  - { lemma: björn,   pos: noun, gender: en,  level: B1, gloss: bear }
+  - { lemma: varg,    pos: noun, gender: en,  level: B1, gloss: wolf }
+  - { lemma: orm,     pos: noun, gender: en,  level: B1, gloss: snake }
+  - { lemma: mygga,   pos: noun, gender: en,  level: B1, gloss: mosquito }
+  - { lemma: natur,   pos: noun, gender: en,  level: B1, gloss: nature }
+  - { lemma: vild,    pos: adj,  level: B1, gloss: wild }
+  - { lemma: jaga,    pos: verb, level: B1, gloss: "to hunt, to chase" }
+  - { lemma: bita,    pos: verb, level: B1, gloss: "to bite; past: bit; pp: bitten" }
+  - { lemma: flyga,   pos: verb, level: B1, gloss: "to fly; past: flew; pp: flown" }
+  - { lemma: skydda,  pos: verb, level: B1, gloss: "to protect" }
+
+  # chapter 5: weekday and weekend
+  - { lemma: prata,      pos: verb, level: B1, gloss: "to talk, to chat" }
+  - { lemma: höra,       pos: verb, level: B1, gloss: "to hear; past: heard; pp: heard" }
+  - { lemma: godis,      pos: noun, gender: ett, level: B1, gloss: sweets }
+  - { lemma: choklad,    pos: noun, gender: en,  level: B1, gloss: chocolate }
+  - { lemma: glass,      pos: noun, gender: en,  level: B1, gloss: "ice cream" }
+  - { lemma: söt,        pos: adj,  level: B1, gloss: "sweet, cute" }
+  - { lemma: skvaller,   pos: noun, gender: ett, level: B1, gloss: gossip }
+  - { lemma: skvallra,   pos: verb, level: B1, gloss: "to gossip" }
+  - { lemma: mysa,       pos: verb, level: B1, gloss: "to have a cosy time" }
+  - { lemma: mysig,      pos: adj,  level: B1, gloss: cosy }
+  - { lemma: sovmorgon,  pos: noun, gender: en,  level: B1, gloss: "lie-in (a morning when you sleep late)" }
+  - { lemma: bar,        pos: noun, gender: en,  level: B1, gloss: bar }
+  - { lemma: trevlig,    pos: adj,  level: B1, gloss: "nice, pleasant" }
+  - { lemma: tråkig,     pos: adj,  level: B1, gloss: boring }
+
+  # chapter 6: society and politics
+  - { lemma: politik,       pos: noun, gender: en,  level: B1, gloss: politics }
+  - { lemma: politiker,     pos: noun, gender: en,  level: B1, gloss: politician }
+  - { lemma: parti,         pos: noun, gender: ett, level: B1, gloss: "(political) party" }
+  - { lemma: val,           pos: noun, gender: ett, level: B1, gloss: "election, choice" }
+  - { lemma: regering,      pos: noun, gender: en,  level: B1, gloss: government }
+  - { lemma: riksdag,       pos: noun, gender: en,  level: B1, gloss: "parliament (the Swedish Riksdag)" }
+  - { lemma: statsminister, pos: noun, gender: en,  level: B1, gloss: "prime minister" }
+  - { lemma: kung,          pos: noun, gender: en,  level: B1, gloss: king }
+  - { lemma: demokrati,     pos: noun, gender: en,  level: B1, gloss: democracy }
+  - { lemma: makt,          pos: noun, gender: en,  level: B1, gloss: power }
+  - { lemma: skatt,         pos: noun, gender: en,  level: B1, gloss: tax }
+  - { lemma: samhälle,      pos: noun, gender: ett, level: B1, gloss: society }
+  - { lemma: medborgare,    pos: noun, gender: en,  level: B1, gloss: citizen }
+  - { lemma: förändra,      pos: verb, level: B1, gloss: "to change" }
+  - { lemma: styra,         pos: verb, level: B1, gloss: "to govern, to steer" }

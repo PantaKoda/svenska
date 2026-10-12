@@ -488,6 +488,25 @@ The same themes a fourth time: arguing, reporting, nuance and written style.
 | 08 | Fritid (`fritid`) | Follow and retell a news story | perfect_without_har, compound_adverbs |
 | 09 | Arbete (`arbete`) | Apply for a job: phone call and personal letter | adjective_as_noun, noun_without_article |
 | 10 | Vård (`vard`) | Work a shift in a care home and hand over | clause_shortening |
+
+## Book companion (`content/units/bok-b/`)
+
+Extra practice beside a course book, one companion chapter per book chapter. It is a
+separate track: its own section on the home screen, never "next", never part of the
+task units.
+
+- **Nothing is taken from the book.** Only the chapter number, the broad theme and the
+  list of grammar topics from its contents page are used. Every sentence, word list and
+  exercise is written here. Never copy or paraphrase the book's exercises or texts.
+- A companion chapter is a unit file with three extra fields:
+  `book: "B1+B2"`, `chapter: 3`, `focus: ["conjunctions", "ju ... desto"]`.
+  It has words and exercises, no model dialogue and no final task.
+- It knows the words and grammar of all task units up to its own `level`, plus the
+  earlier chapters of the same book. Task units never know companion words.
+- Its words live in the pack of the book (`themes/bok_b.yaml`), about 15 per chapter.
+- Items are tagged with existing grammar points, so the reference cards are linked.
+  A book topic without a card of ours gets no tag (and may get a card later).
+- Chapters 1-11 of the B1+B2 book are level B1, 12-18 are B2. Written so far: 1-6.
 ---
 
 ## Milestones

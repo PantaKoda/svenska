@@ -234,6 +234,49 @@ public class RichExerciseTests
         Assert.Contains(Errors(unknown), e => e.Rule == 2 && e.Message.Contains("Bananen"));
     }
 
+    // ---- companion chapters ----
+
+    private static TempDir WithCompanion(string exercise, string head = "book: \"B1+B2\"\nchapter: 1\nfocus: [\"adverbs\"]")
+    {
+        var dir = Course("", words: "  - { lemma: bröd, pos: noun, gender: ett, level: A1, gloss: bread }");
+        dir.Write("units/bok/01.yaml", $$"""
+            id: bok-01
+            level: A1
+            {{head}}
+            theme: shop
+            title: Chapter
+            task: Extra practice.
+            can_do: I can.
+            new_words: [bröd]
+            exercises:
+              - { type: dictation, sv: "{{exercise}}" }
+            """);
+        return dir;
+    }
+
+    [Fact]
+    public void A_companion_chapter_builds_on_the_task_units_but_they_never_know_its_words()
+    {
+        using var dir = WithCompanion("Brödet kostar 45 kronor.");
+        Assert.Empty(Errors(dir));
+
+        var (course, _) = ContentLoader.Load(dir.Path);
+        Assert.Equal(["a1-01", "bok-01"], course.Units.Select(u => u.Id));
+        Assert.True(course.Units[1].IsCompanion);
+
+        var vocabulary = new Vocabulary(course, FakeSaldo.Shop());
+        Assert.Contains("ost", vocabulary.KnownWords(course.Units[1]));
+        Assert.Contains("bröd", vocabulary.KnownWords(course.Units[1]));
+        Assert.DoesNotContain("bröd", vocabulary.KnownWords(course.Units[0]));
+    }
+
+    [Fact]
+    public void A_companion_chapter_needs_a_chapter_number_and_a_focus()
+    {
+        using var dir = WithCompanion("Brödet kostar 45 kronor.", head: "book: \"B1+B2\"");
+        Assert.Contains(Errors(dir), e => e.Message.Contains("a companion chapter needs chapter (1 or more) and focus"));
+    }
+
     [Fact]
     public void A_final_task_must_end_with_the_learner_and_have_complete_turns()
     {

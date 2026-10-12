@@ -22,6 +22,10 @@ public partial class UnitViewModel : ObservableObject
     public string Title => _unit.Title;
     public string Task => _unit.Task;
     public string CanDo => _unit.CanDo;
+    /// <summary>Shown above the title of a companion chapter, so it is never taken for a task unit.</summary>
+    public string? BookLabel => _unit.IsCompanion ? $"BOOK COMPANION  ·  {_unit.Book}  ·  CHAPTER {_unit.Chapter}" : null;
+    public string? FocusText => _unit.IsCompanion ? "Practises: " + string.Join(", ", _unit.Focus) : null;
+    public bool HasDialogue => _unit.ModelDialogue.Count > 0;
     public string? SpeakingPrompt => _unit.SpeakingPrompt;
     public IReadOnlyList<WordRow> Words { get; }
     public IReadOnlyList<LineRow> Dialogue { get; }

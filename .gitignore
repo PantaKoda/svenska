@@ -13,3 +13,7 @@ data/raw/
 __pycache__/
 .venv/
 data/voices/
+
+# course books kept beside the repo, never committed
+/A/
+/B/

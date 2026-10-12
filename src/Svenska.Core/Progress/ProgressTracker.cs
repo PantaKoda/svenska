@@ -78,8 +78,11 @@ public sealed class ProgressTracker(Course course, ProgressStore store, ISchedul
     private List<Unit> UnitsSoFar()
     {
         var started = store.StartedSources();
-        var last = course.Units.FindLastIndex(u => started.Contains(u.Id) || started.Contains(FinalSource(u)));
-        return course.Units.Take(last + 1).ToList();
+        bool Started(Unit u) => started.Contains(u.Id) || started.Contains(FinalSource(u));
+        var taskUnits = course.Units.Where(u => !u.IsCompanion).ToList();
+        var last = taskUnits.FindLastIndex(Started);
+        // A companion chapter counts only when it has been worked on itself.
+        return [.. taskUnits.Take(last + 1), .. course.Units.Where(u => u.IsCompanion && Started(u))];
     }
 
     public HashSet<string> KnownWords() =>

@@ -8,12 +8,16 @@ public sealed record UnitRow(string Number, string Title, string Task, string Pr
 
 public sealed record LevelGroup(string Level, IReadOnlyList<UnitRow> Units);
 
+/// <summary>The companion chapters of one course book: extra practice, apart from the task units.</summary>
+public sealed record BookGroup(string Book, IReadOnlyList<UnitRow> Chapters);
+
 public sealed record ThemeRow(string Title, string Detail, IRelayCommand Open);
 
 /// <summary>Home: the units by level with their progress, the review queue and the themes.</summary>
 public sealed class HomeViewModel
 {
     public IReadOnlyList<LevelGroup> Levels { get; }
+    public IReadOnlyList<BookGroup> Books { get; }
     public IReadOnlyList<ThemeRow> Themes { get; }
     public string Status { get; }
     public string ReviewText { get; }
@@ -24,12 +28,13 @@ public sealed class HomeViewModel
         var services = main.Services;
         var progress = services.Progress;
 
-        var next = services.Course.Units.FirstOrDefault(u =>
+        var taskUnits = services.Course.Units.Where(u => !u.IsCompanion).ToList();
+        var next = taskUnits.FirstOrDefault(u =>
         {
             var (done, total) = progress.UnitProgress(u);
             return done < total || (u.FinalTask != null && !progress.FinalTaskDone(u));
         });
-        Levels = services.Course.Units.GroupBy(u => u.Level).OrderBy(g => g.Key)
+        Levels = taskUnits.GroupBy(u => u.Level).OrderBy(g => g.Key)
             .Select(group => new LevelGroup(group.Key.ToString(), group.Select(unit =>
             {
                 var (done, total) = progress.UnitProgress(unit);
@@ -37,6 +42,19 @@ public sealed class HomeViewModel
                     done == 0 ? "Not started" : $"{done} of {total} exercises done",
                     total == 0 ? 0 : 100.0 * done / total,
                     unit == next,
+                    new RelayCommand(() => main.ShowUnit(unit)));
+            }).ToList()))
+            .ToList();
+
+        // Never "next": the companion is extra practice in any order.
+        Books = services.Course.Units.Where(u => u.IsCompanion).GroupBy(u => u.Book!)
+            .Select(group => new BookGroup(group.Key, group.Select(unit =>
+            {
+                var (done, total) = progress.UnitProgress(unit);
+                return new UnitRow($"CHAPTER {unit.Chapter}", unit.Title, string.Join(" · ", unit.Focus),
+                    done == 0 ? "Not started" : $"{done} of {total} exercises done",
+                    total == 0 ? 0 : 100.0 * done / total,
+                    false,
                     new RelayCommand(() => main.ShowUnit(unit)));
             }).ToList()))
             .ToList();

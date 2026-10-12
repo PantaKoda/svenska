@@ -1,0 +1,56 @@
+id: bok-b-02
+level: B1
+book: "B1+B2"
+chapter: 2
+theme: bok_b
+title: "Vänner"
+task: "Extra practice for chapter 2, on friends and friendship."
+can_do: "I can use reflexive verbs with the right pronoun and put inte in the right place in main and subordinate clauses."
+focus: ["reflexive verbs", "word order in main and subordinate clauses"]
+names: [Sara, Omar, Maria]
+
+new_words: [kompis, vänskap, bekant, gemensam, tillit, umgås, bråka, skratta, stötta, ångra, intressera, koncentrera, lova, sams, osams]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # the reflexive pronoun follows the subject
+  - { type: cloze, sv: "Jag ångrar ___.", hint: sig, answer: mig, en: "I have changed my mind.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Hon intresserar ___ för musik.", hint: sig, answer: sig, en: "She is interested in music.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Vi lärde ___ svenska tillsammans.", hint: sig, answer: oss, en: "We learnt Swedish together.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Har ni bestämt ___?", hint: sig, answer: er, en: "Have you (plural) made up your minds?", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Du måste koncentrera ___.", hint: sig, answer: dig, en: "You must concentrate.", grammar: [reflexive_basic] }
+  - { type: cloze, sv: "Mina kompisar känner ___ trötta idag.", hint: sig, answer: sig, en: "My friends feel tired today.", grammar: [reflexive_basic] }
+
+  # main clause: inte after the verb. Subordinate clause: inte before the verb.
+  - { type: word_order, sv: "Jag träffar inte mina kompisar så ofta.", en: "I do not see my friends so often.", grammar: [negation_inte] }
+  - { type: word_order, sv: "Jag är ledsen eftersom jag inte träffar mina kompisar.", en: "I am sad because I do not see my friends.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Hon säger att hon aldrig bråkar med sin syster.", en: "She says that she never quarrels with her sister.", grammar: [subordinate_clause_basic] }
+  - { type: word_order, sv: "Vi blev sams, trots att vi inte hade träffats på en vecka.", en: "We made up, although we had not seen each other for a week.", grammar: [conjunctions_advanced] }
+  - { type: word_order, sv: "Om du inte ångrar dig, kommer jag imorgon.", en: "If you do not change your mind, I will come tomorrow.", grammar: [subordinate_clause_basic, reflexive_basic] }
+  - { type: cloze, sv: "Han sa att han ___ kunde komma.", hint: "inte / om", answer: inte, en: "He said that he could not come.", grammar: [subordinate_clause_basic] }
+
+  # choose the right order
+  - { type: listen_choose, sv: "Hon kommer inte, eftersom hon inte har tid.", en: "She is not coming, because she does not have time.",
+      options: ["Right: inte before har in the eftersom-clause.", "Wrong: it must be eftersom hon har inte tid."], answer: "Right: inte before har in the eftersom-clause." }
+
+  # listen and write
+  - { type: dictation, sv: "Vi umgås ofta på helgerna.", en: "We often spend time together at weekends." }
+  - { type: dictation, sv: "En bra kompis stöttar dig när du är ledsen.", en: "A good friend supports you when you are sad." }
+  - { type: dictation, sv: "Vi har många gemensamma intressen.", en: "We have many interests in common." }
+  - { type: dictation, sv: "Tillit är viktigt i en vänskap.", en: "Trust is important in a friendship." }
+
+  # say it in Swedish
+  - { type: translate, en: "We laughed all evening.", sv: "Vi skrattade hela kvällen." }
+  - { type: translate, en: "I promise to come.", sv: "Jag lovar att komma." }
+  - { type: translate, en: "He is an acquaintance, not a friend.", sv: "Han är en bekant, inte en vän.", accept: ["Han är en bekant, inte en kompis."] }
+  - { type: translate, en: "They have fallen out.", sv: "De har blivit osams.", accept: ["De är osams."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a good friend: how you met, what you do together, and why you are friends.",
+      checklist: ["I use two reflexive verbs with the right pronoun.", "I use one eftersom- or att-clause with inte or aldrig.", "I say what we have in common.", "I say what a good friend does."],
+      sv: "Min bästa kompis heter Omar. Vi lärde oss svenska tillsammans, och nu umgås vi nästan varje helg. Vi intresserar oss för fotboll och musik, så vi har många gemensamma intressen. Jag tycker om honom eftersom han aldrig bråkar och alltid stöttar mig. Vi har lovat att vi inte ska glömma vår vänskap.",
+      grammar: [reflexive_basic, subordinate_clause_basic] }

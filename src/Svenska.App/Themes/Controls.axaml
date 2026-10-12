@@ -121,6 +121,13 @@
         <Setter Property="Padding" Value="20,16" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
+    <!-- the companion section: set apart by a frame, not by colour -->
+    <Style Selector="Border.book">
+        <Setter Property="BorderBrush" Value="{DynamicResource MutedBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="Padding" Value="22,18,10,8" />
+    </Style>
     <!-- the next unit: the accent frames it -->
     <Style Selector="Button.next">
         <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />

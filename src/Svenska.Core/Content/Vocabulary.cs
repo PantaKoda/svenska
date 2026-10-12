@@ -93,5 +93,13 @@ public sealed class Vocabulary
         return false;
     }
 
-    private IEnumerable<Unit> UnitsUpTo(Unit unit) => _course.Units.TakeWhile(u => u != unit).Append(unit);
+    /// <summary>
+    /// A task unit builds on the task units before it. A companion chapter builds on the
+    /// task units up to its own level and on the earlier chapters of its book.
+    /// </summary>
+    private IEnumerable<Unit> UnitsUpTo(Unit unit) => unit.IsCompanion
+        ? _course.Units.Where(u => !u.IsCompanion && u.Level <= unit.Level)
+            .Concat(_course.Units.Where(u => u.IsCompanion && u.Book == unit.Book).TakeWhile(u => u != unit))
+            .Append(unit)
+        : _course.Units.Where(u => !u.IsCompanion).TakeWhile(u => u != unit).Append(unit);
 }

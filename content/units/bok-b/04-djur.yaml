@@ -1,0 +1,57 @@
+id: bok-b-04
+level: B1
+book: "B1+B2"
+chapter: 4
+theme: bok_b
+title: "Djur och natur"
+task: "Extra practice for chapter 4, on animals and nature."
+can_do: "I can form the tenses of verbs from all groups, describe with a present participle, and choose between imperative, infinitive and present."
+focus: ["verbs of all groups", "present participle", "imperative, infinitive or present"]
+names: [Sara, Sverige]
+
+new_words: [djur, hund, katt, häst, fågel, älg, björn, varg, orm, mygga, natur, vild, jaga, bita, flyga, skydda]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # verbs of all groups: past and supine
+  - { type: cloze, sv: "Vargen ___ älgen hela natten.", hint: jaga, answer: jagade, en: "The wolf hunted the elk all night.", grammar: [past_tense] }
+  - { type: cloze, sv: "Hunden ___ mig i benet igår.", hint: bita, answer: bet, en: "The dog bit me in the leg yesterday.", grammar: [past_tense] }
+  - { type: cloze, sv: "Fågeln har ___ till ett varmare land.", hint: flyga, answer: flugit, en: "The bird has flown to a warmer country.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Jag har aldrig ___ en björn.", hint: se, answer: sett, en: "I have never seen a bear.", grammar: [perfect_tense] }
+  - { type: cloze, sv: "Katten ___ i soffan hela dagen igår.", hint: sova, answer: sov, en: "The cat slept on the sofa all day yesterday.", grammar: [past_tense] }
+  - { type: cloze, sv: "Vi ___ länge i skogen förra sommaren.", hint: vandra, answer: vandrade, en: "We hiked for a long time in the forest last summer.", grammar: [past_tense] }
+
+  # the present participle: -ande, -ende
+  - { type: cloze, sv: "Gå aldrig nära en ___ björn.", hint: sova, answer: sovande, en: "Never go near a sleeping bear.", grammar: [participles] }
+  - { type: cloze, sv: "Jag såg en ___ fågel.", hint: flyga, answer: flygande, en: "I saw a flying bird.", grammar: [participles] }
+  - { type: cloze, sv: "En ___ hund kom emot mig.", hint: springa, answer: springande, en: "A running dog came towards me.", grammar: [participles] }
+  - { type: listen_choose, sv: "Barnen kom springande.", en: "The children came running.",
+      options: ["The children came running.", "The children came to run.", "The children came after running."], answer: "The children came running." }
+
+  # imperative, infinitive or present?
+  - { type: cloze, sv: "___ naturen!", hint: skydda, answer: Skydda, en: "Protect nature!", grammar: [imperative] }
+  - { type: cloze, sv: "Det är viktigt att ___ vilda djur.", hint: skydda, answer: skydda, en: "It is important to protect wild animals." }
+  - { type: cloze, sv: "Sverige ___ sina vargar.", hint: skydda, answer: skyddar, en: "Sweden protects its wolves.", grammar: [present_tense] }
+  - { type: cloze, sv: "___ inte ormen!", hint: ta, answer: Ta, en: "Do not pick up the snake!", grammar: [imperative] }
+  - { type: cloze, sv: "Hästen vill ___ nu.", hint: äta, answer: äta, en: "The horse wants to eat now.", grammar: [modal_vill_kan_ska] }
+
+  # listen and write
+  - { type: dictation, sv: "Det finns många vilda djur i skogen.", en: "There are many wild animals in the forest." }
+  - { type: dictation, sv: "Myggorna biter på sommaren.", en: "The mosquitoes bite in summer." }
+  - { type: dictation, sv: "Min katt jagar fåglar.", en: "My cat chases birds." }
+
+  # say it in Swedish
+  - { type: translate, en: "Are there bears in Sweden?", sv: "Finns det björnar i Sverige?" }
+  - { type: translate, en: "The elk is a big animal.", sv: "Älgen är ett stort djur." }
+  - { type: translate, en: "I am afraid that the dog will bite.", sv: "Jag är orolig för att hunden ska bita.", review: true }
+  - { type: translate, en: "She likes horses.", sv: "Hon tycker om hästar.", accept: ["Hon gillar hästar."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about an animal: where it lives, what it does, and something you have seen or heard about it.",
+      checklist: ["I use the past of two verbs.", "I use har + supine once.", "I use one present participle (-ande/-ende).", "I give one piece of advice in the imperative."],
+      sv: "Älgen är ett stort vilt djur som bor i skogen. Förra sommaren såg jag en älg när jag vandrade med en kompis. Den stod vid en sjö och åt. Sedan kom en springande hund, och älgen gick in i skogen. Jag har aldrig sett ett så stort djur. Gå aldrig nära en älg!",
+      grammar: [past_tense, participles] }

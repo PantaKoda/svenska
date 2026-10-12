@@ -347,7 +347,9 @@ public sealed class CourseValidator
             CheckWordsAreKnown(unit, file, items);
             CheckNewWordsAreUsed(unit, file, items);
 
-            if (unit.FinalTask == null)
+            if (unit.IsCompanion && (unit.Chapter < 1 || unit.Focus.Count == 0))
+                Error(file, "a companion chapter needs chapter (1 or more) and focus");
+            if (unit.FinalTask == null && !unit.IsCompanion)
                 Warning(file, "has no final_task yet");
         }
     }

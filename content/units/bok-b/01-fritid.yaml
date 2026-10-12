@@ -1,0 +1,58 @@
+id: bok-b-01
+level: B1
+book: "B1+B2"
+chapter: 1
+theme: bok_b
+title: "Fritid och sport"
+task: "Extra practice for chapter 1, on free time and sport."
+can_do: "I can use the right form of an adjective, make adverbs from adjectives, and choose the preposition in time expressions."
+focus: ["adjective forms", "adverbs", "time prepositions"]
+names: [Sara, Omar]
+
+new_words: [sport, match, spelare, tränare, gym, simhall, lopp, skida, springa, hoppa, duktig, aktiv, lat, spännande, sällan]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # adjective forms: en, ett, plural
+  - { type: cloze, sv: "Vi har ett ___ lag.", hint: duktig, answer: duktigt, en: "We have a good team.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Laget har 2 ___ tränare.", hint: aktiv, answer: aktiva, en: "The team has 2 active coaches.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Det var ett ___ lopp.", hint: spännande, answer: spännande, en: "It was an exciting race. (words in -ande never change)", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Den ___ spelaren vill inte springa.", hint: lat, answer: lata, en: "The lazy player does not want to run.", grammar: [adjective_agreement_full] }
+  - { type: cloze, sv: "Mina barn är väldigt ___.", hint: aktiv, answer: aktiva, en: "My children are very active.", grammar: [adjective_agreement_full] }
+
+  # adverbs: how someone does it
+  - { type: cloze, sv: "Hon springer ___.", hint: snabb, answer: snabbt, en: "She runs fast." }
+  - { type: cloze, sv: "Han simmar ganska ___.", hint: långsam, answer: långsamt, en: "He swims rather slowly." }
+  - { type: cloze, sv: "Laget spelade ___ igår.", hint: dålig, answer: dåligt, en: "The team played badly yesterday." }
+  - { type: translate, en: "I seldom go to the gym.", sv: "Jag går sällan på gym.", accept: ["Jag går sällan till gym."] }
+
+  # time: i, på, om or för ... sedan?
+  - { type: cloze, sv: "Matchen börjar ___ en timme.", hint: "i / om", answer: om, en: "The match starts in an hour.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag har spelat fotboll ___ 10 år.", hint: "i / på", answer: i, en: "I have played football for 10 years.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag började träna ___ 2 år sedan.", hint: "för / om", answer: för, en: "I started exercising 2 years ago.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Vi tränar ___ tisdagar.", hint: "i / på", answer: på, en: "We train on Tuesdays.", grammar: [preposition_time] }
+  - { type: cloze, sv: "Jag har inte åkt skidor ___ 5 år.", hint: "i / på", answer: på, en: "I have not skied for 5 years. (på with inte)", grammar: [preposition_time] }
+
+  # build the sentence
+  - { type: word_order, sv: "På vintern åker vi ofta skidor.", en: "In winter we often ski.", grammar: [inversion_after_adverb] }
+  - { type: word_order, sv: "Barnen hoppar och springer hela dagen.", en: "The children jump and run all day." }
+
+  # listen and write
+  - { type: dictation, sv: "Vår tränare är väldigt duktig.", en: "Our coach is very good." }
+  - { type: dictation, sv: "Jag simmar i simhallen varje vecka.", en: "I swim at the pool every week." }
+  - { type: dictation, sv: "Det var en spännande match.", en: "It was an exciting match." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which sport do you like?", sv: "Vilken sport tycker du om?", accept: ["Vilken sport gillar du?"] }
+  - { type: translate, en: "He is a good player.", sv: "Han är en duktig spelare.", accept: ["Han är en bra spelare."] }
+  - { type: translate, en: "I am too lazy to run.", sv: "Jag är för lat för att springa." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about what you do when you are free: what, how often, how well, and since when.",
+      checklist: ["I use two adjectives in the right form.", "I use one adverb in -t.", "I use two time expressions (i, på, om, för ... sedan).", "I say how often (ofta, sällan, ibland)."],
+      sv: "Jag är ganska aktiv när jag är ledig. Jag har spelat fotboll i 10 år, och jag tränar på tisdagar med ett duktigt lag. För 2 år sedan började jag springa också. Jag springer inte snabbt, men det är roligt. Jag går sällan på gym, för jag tycker mer om att vara ute.",
+      grammar: [preposition_time] }

@@ -1,0 +1,55 @@
+id: bok-b-17
+level: B2
+book: "B1+B2"
+chapter: 17
+theme: bok_b
+title: "Vikingar och tro"
+task: "Extra practice for chapter 17, on the Vikings and old beliefs."
+can_do: "I can link events with compound adverbs, keep the tenses in step when I tell about now or about then, and use verbs with two objects."
+focus: ["compound adverbs", "tenses that go together: now or then", "direct and indirect object"]
+names: [Sara, Sverige, Oden, Tor]
+
+new_words: [viking, gud, skepp, segla, handel, plundra, krigare, myt, runsten, träd, öde, offra, grav, spöke, vidskeplig]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # därifrån, därefter, hittills, därför
+  - { type: cloze, sv: "Vikingarna seglade till en ö. ___ seglade de till ett nytt land.", hint: "därifrån / hittills", answer: Därifrån, en: "The Vikings sailed to an island. From there they sailed to a new land.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "Först plundrade de byn, ___ seglade de hem.", hint: "därefter / därifrån", answer: därefter, en: "First they plundered the village, after that they sailed home.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "___ har man hittat över 2000 runstenar i Sverige.", hint: "hittills / därefter", answer: Hittills, en: "So far more than 2000 rune stones have been found in Sweden.", grammar: [compound_adverbs] }
+  - { type: cloze, sv: "De trodde på ödet. ___ var de inte rädda för krig.", hint: "därför / därifrån", answer: Därför, en: "They believed in fate. That is why they were not afraid of war.", grammar: [compound_adverbs] }
+
+  # now-tenses together, then-tenses together
+  - { type: cloze, sv: "Hon säger att hon ___ sett ett spöke.", hint: "har / hade", answer: har, en: "She says that she has seen a ghost.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "Hon sa att hon ___ sett ett spöke.", hint: "har / hade", answer: hade, en: "She said that she had seen a ghost.", grammar: [indirect_speech, pluperfect] }
+  - { type: cloze, sv: "Krigarna trodde att gudarna ___ hjälpa dem.", hint: "ska / skulle", answer: skulle, en: "The warriors believed that the gods would help them.", grammar: [indirect_speech] }
+  - { type: cloze, sv: "Många tror att ett spöke ___ otur.", hint: "ger / gav", answer: ger, en: "Many believe that a ghost brings bad luck.", grammar: [indirect_speech] }
+  - { type: word_order, sv: "Han berättade att vikingarna hade seglat i 3 veckor.", en: "He told us that the Vikings had sailed for 3 weeks.", grammar: [indirect_speech, pluperfect] }
+
+  # who gets what
+  - { type: word_order, sv: "Vikingarna offrade djur till gudarna.", en: "The Vikings sacrificed animals to the gods.", grammar: [direct_indirect_object] }
+  - { type: word_order, sv: "Mormor berättade en myt för barnen.", en: "Grandmother told the children a myth.", grammar: [direct_indirect_object] }
+  - { type: word_order, sv: "Kungen gav krigaren ett skepp.", en: "The king gave the warrior a ship.", grammar: [direct_indirect_object] }
+  - { type: translate, en: "Can you show me the rune stone?", sv: "Kan du visa mig runstenen?", accept: ["Kan du visa runstenen för mig?"], grammar: [direct_indirect_object] }
+  - { type: translate, en: "He gave it to the gods.", sv: "Han gav den till gudarna.", accept: ["Han gav det till gudarna."], grammar: [direct_indirect_object] }
+
+  # listen and write
+  - { type: dictation, sv: "Vikingarna var kända för handel och krig.", en: "The Vikings were known for trade and war." }
+  - { type: dictation, sv: "Enligt myten bor gudarna i ett stort träd.", en: "According to the myth the gods live in a big tree.", review: true }
+  - { type: dictation, sv: "Krigaren fick en grav vid havet.", en: "The warrior was given a grave by the sea." }
+  - { type: dictation, sv: "Är du vidskeplig?", en: "Are you superstitious?" }
+
+  # say it in Swedish
+  - { type: translate, en: "Do you believe in ghosts?", sv: "Tror du på spöken?", grammar: [tycka_tanka_tro] }
+  - { type: translate, en: "The ship sailed to an island.", sv: "Skeppet seglade till en ö." }
+  - { type: translate, en: "Nobody knows their fate.", sv: "Ingen känner sitt öde.", accept: ["Ingen vet sitt öde."], grammar: [possessive_sin] }
+
+  # write your own text
+  - { type: free_write, en: "Write a summary in 5 or 6 sentences of what you know about the Vikings, or about an old belief where you come from.",
+      checklist: ["I use two compound adverbs (därifrån, därefter, hittills, därför).", "I keep to past tenses when I tell about then.", "I use one verb with two objects.", "I say what people believed."],
+      sv: "Vikingarna var både krigare och bönder. De seglade i sina skepp till många länder, och därifrån tog de hem nya saker. De trodde på många gudar och offrade djur till dem. Enligt myterna bestämde ödet hur livet skulle bli. Därför var krigarna modiga. Hittills har man hittat över 2000 runstenar som berättar om deras liv.",
+      grammar: [compound_adverbs, direct_indirect_object], review: true }

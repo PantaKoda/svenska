@@ -1,0 +1,58 @@
+id: bok-b-11
+level: B1
+book: "B1+B2"
+chapter: 11
+theme: bok_b
+title: "Brott"
+task: "Extra practice for chapter 11, on crime and difficult choices."
+can_do: "I can choose between sin and hans/hennes, use man and en, describe a state or a change with är/blir + participle, and use verbs that always end in -s."
+focus: ["sin, sitt, sina", "man, en, ens", "är or blir + perfect participle", "verbs in -s"]
+names: [Sara, Omar]
+
+new_words: [brott, straff, tjuv, inbrott, offer, fängelse, domstol, advokat, stjäla, döma, gripa, erkänna, lyckas, minnas, skyldig, oskyldig, misstänkt]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # sin, sitt, sina or hans, hennes, deras?
+  - { type: cloze, sv: "Tjuven erkände ___ brott.", hint: "sitt / hans", answer: sitt, en: "The thief confessed his (own) crime.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Advokaten talade med tjuven om ___ straff.", hint: "sitt / hans", answer: hans, en: "The lawyer talked to the thief about his (the thief's) punishment.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Hon ringde ___ advokat på kvällen.", hint: "sin / hennes", answer: sin, en: "She called her (own) lawyer in the evening.", grammar: [possessive_sin] }
+  - { type: cloze, sv: "Offren fick tillbaka ___ pengar.", hint: "sina / deras", answer: sina, en: "The victims got their money back.", grammar: [possessive_sin] }
+
+  # man (subject), en (object), ens (owner)
+  - { type: cloze, sv: "___ får inte stjäla.", hint: "man / en", answer: Man, en: "One must not steal.", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Det gör ___ ledsen när någon ljuger.", hint: "man / en", answer: en, en: "It makes you sad when someone lies.", grammar: [indefinite_pronouns] }
+  - { type: cloze, sv: "Det är viktigt att känna ___ rättigheter.", hint: "man / ens", answer: ens, en: "It is important to know one's rights.", grammar: [indefinite_pronouns], review: true }
+
+  # är (a state) or blir (a change) + participle
+  - { type: cloze, sv: "Tjuven ___ gripen igår kväll.", hint: "var / blev", answer: blev, en: "The thief was arrested yesterday evening.", grammar: [participles] }
+  - { type: cloze, sv: "Han ___ misstänkt för inbrott.", hint: "är / blir", answer: är, en: "He is suspected of burglary.", grammar: [participles] }
+  - { type: cloze, sv: "Hon blev ___ på stationen.", hint: gripa, answer: gripen, en: "She was arrested at the station.", grammar: [participles] }
+  - { type: cloze, sv: "Cykeln är ___.", hint: stjäla, answer: stulen, en: "The bicycle is stolen.", grammar: [participles] }
+  - { type: word_order, sv: "Efter inbrottet blev 3 personer gripna.", en: "After the burglary 3 people were arrested.", grammar: [participles] }
+
+  # verbs that always end in -s
+  - { type: cloze, sv: "Jag ___ inte vad som hände.", hint: minnas, answer: minns, en: "I do not remember what happened." }
+  - { type: cloze, sv: "Tjuven ___ inte öppna dörren igår.", hint: lyckas, answer: lyckades, en: "The thief did not manage to open the door yesterday." }
+  - { type: cloze, sv: "Jag ___ att han är oskyldig.", hint: hoppas, answer: hoppas, en: "I hope that he is innocent." }
+  - { type: translate, en: "There are no thieves here.", sv: "Det finns inga tjuvar här." }
+
+  # listen and write
+  - { type: dictation, sv: "Domstolen dömde honom till fängelse.", en: "The court sentenced him to prison." }
+  - { type: dictation, sv: "Hon är oskyldig till brottet.", en: "She is innocent of the crime." }
+  - { type: dictation, sv: "Det var ett inbrott hos grannen i natt.", en: "There was a burglary at the neighbour's last night." }
+
+  # say it in Swedish
+  - { type: translate, en: "Someone has stolen my bicycle.", sv: "Någon har stulit min cykel." }
+  - { type: translate, en: "Is he guilty?", sv: "Är han skyldig?" }
+  - { type: translate, en: "What punishment did she get?", sv: "Vilket straff fick hon?", accept: ["Vad fick hon för straff?"] }
+
+  # write your own text
+  - { type: free_write, en: "Write a short news item (4 or 5 sentences) about a small crime: what happened, who is suspected, and what happened afterwards.",
+      checklist: ["I use blev + participle once and är + participle once.", "I use sin/sitt/sina correctly.", "I use one verb in -s (lyckas, minnas, hoppas, finnas).", "I say what happened afterwards."],
+      sv: "I natt var det ett inbrott i en butik i centrum. Tjuven lyckades stjäla 3 datorer, men han glömde sin väska i butiken. En man blev gripen på morgonen, och han är misstänkt för brottet. Han minns inte vad som hände, säger hans advokat. Butiken hoppas få tillbaka sina datorer.",
+      grammar: [participles, possessive_sin] }

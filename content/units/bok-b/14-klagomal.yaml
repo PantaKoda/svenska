@@ -1,0 +1,54 @@
+id: bok-b-14
+level: B2
+book: "B1+B2"
+chapter: 14
+theme: bok_b
+title: "Klagomål"
+task: "Extra practice for chapter 14, on things that break and people who complain."
+can_do: "I can stress one part of a sentence with det är ... som, and choose between verb pairs like bränna and brinna."
+focus: ["cleft sentences (det är ... som)", "transitive and intransitive verb pairs"]
+names: [Sara, Omar]
+
+new_words: [klagomål, pessimist, optimist, gnälla, irriterad, reparera, spricka, apparat, sladd, batteri, knapp, bränna, brinna, väcka, tända, släcka, slockna]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # det är ... som
+  - { type: word_order, sv: "Det är batteriet som är trasigt.", en: "It is the battery that is broken.", grammar: [cleft_sentence] }
+  - { type: word_order, sv: "Det var inte jag som tog sönder knappen.", en: "It was not I who broke the button.", grammar: [cleft_sentence] }
+  - { type: word_order, sv: "Det är alltid han som gnäller.", en: "It is always he who moans.", grammar: [cleft_sentence] }
+  - { type: translate, en: "It was the cable that cracked.", sv: "Det var sladden som sprack.", grammar: [cleft_sentence] }
+  - { type: translate, en: "It was yesterday that the lamp went out.", sv: "Det var igår som lampan slocknade.", grammar: [cleft_sentence] }
+  - { type: translate, en: "Who was it that repaired the appliance?", sv: "Vem var det som reparerade apparaten?", grammar: [cleft_sentence] }
+
+  # someone does it to something (+ object), or it happens by itself
+  - { type: cloze, sv: "Lampan ___ plötsligt.", hint: "släcka / slockna", answer: slocknade, en: "The lamp suddenly went out." }
+  - { type: cloze, sv: "Kan du ___ lampan?", hint: "släcka / slockna", answer: släcka, en: "Can you switch off the lamp?" }
+  - { type: cloze, sv: "Det ___ i köket!", hint: "bränna / brinna", answer: brinner, en: "There is a fire in the kitchen!" }
+  - { type: cloze, sv: "Jag ___ maten igår.", hint: "bränna / brinna", answer: brände, en: "I burnt the food yesterday." }
+  - { type: cloze, sv: "Larmet ___ mig klockan 5.", hint: "väcka / vakna", answer: väckte, en: "The alarm woke me at 5." }
+  - { type: cloze, sv: "Jag ___ klockan 5 av larmet.", hint: "väcka / vakna", answer: vaknade, en: "I woke up at 5 because of the alarm." }
+  - { type: cloze, sv: "Glaset ___ när jag diskade det.", hint: spricka, answer: sprack, en: "The glass cracked when I washed it." }
+  - { type: listen_choose, sv: "Hon ställde apparaten på bordet, och nu står den där.", en: "She put the appliance on the table, and now it is standing there.",
+      options: ["ställa takes an object; stå does not.", "stå takes an object; ställa does not.", "Both verbs take an object."], answer: "ställa takes an object; stå does not." }
+
+  # listen and write
+  - { type: dictation, sv: "Jag vill lämna ett klagomål.", en: "I want to make a complaint." }
+  - { type: dictation, sv: "En pessimist ser bara problem.", en: "A pessimist sees only problems." }
+  - { type: dictation, sv: "Jag blir irriterad när apparaten inte startar.", en: "I get annoyed when the appliance does not start." }
+  - { type: dictation, sv: "Tänd lampan, det är mörkt här.", en: "Switch on the lamp, it is dark here." }
+
+  # say it in Swedish
+  - { type: translate, en: "Stop moaning!", sv: "Sluta gnälla!" }
+  - { type: translate, en: "I am an optimist.", sv: "Jag är optimist.", accept: ["Jag är en optimist."], grammar: [noun_without_article] }
+  - { type: translate, en: "Can it be repaired?", sv: "Kan den repareras?", accept: ["Kan det repareras?", "Går den att reparera?"], grammar: [passive_s] }
+
+  # write your own text
+  - { type: free_write, en: "Write a complaint in 5 or 6 sentences about a thing that broke: what happened, what exactly is wrong, and what you want.",
+      checklist: ["I use det är/var ... som twice.", "I use two of the verb pairs correctly (släcka/slockna, bränna/brinna, väcka/vakna).", "I say exactly what is broken.", "I say what I want the shop to do."],
+      sv: "Hej! Jag köpte en lampa hos er förra veckan. Redan samma kväll slocknade den när jag tände den. Det är inte batteriet som är problemet, utan sladden, som har spruckit. Det var er personal som sa att kvaliteten var bra. Jag är ganska irriterad, och jag vill att ni reparerar lampan eller ger mig pengarna tillbaka.",
+      grammar: [cleft_sentence], review: true }

@@ -105,3 +105,212 @@ words:
   - { lemma: medborgare,    pos: noun, gender: en,  level: B1, gloss: citizen }
   - { lemma: förändra,      pos: verb, level: B1, gloss: "to change" }
   - { lemma: styra,         pos: verb, level: B1, gloss: "to govern, to steer" }
+
+  # chapter 7: places and food
+  - { lemma: landskap, pos: noun, gender: ett, level: B1, gloss: "landscape, province" }
+  - { lemma: kust,     pos: noun, gender: en,  level: B1, gloss: coast }
+  - { lemma: ö,        pos: noun, gender: en,  level: B1, gloss: island }
+  - { lemma: berg,     pos: noun, gender: ett, level: B1, gloss: mountain }
+  - { lemma: by,       pos: noun, gender: en,  level: B1, gloss: village }
+  - { lemma: slott,    pos: noun, gender: ett, level: B1, gloss: "castle, palace" }
+  - { lemma: hus,      pos: noun, gender: ett, level: B1, gloss: house }
+  - { lemma: utsikt,   pos: noun, gender: en,  level: B1, gloss: view }
+  - { lemma: lax,      pos: noun, gender: en,  level: B1, gloss: salmon }
+  - { lemma: svamp,    pos: noun, gender: en,  level: B1, gloss: mushroom }
+  - { lemma: bär,      pos: noun, gender: ett, level: B1, gloss: berry }
+  - { lemma: smak,     pos: noun, gender: en,  level: B1, gloss: "taste, flavour" }
+  - { lemma: steka,    pos: verb, level: B1, gloss: "to fry" }
+  - { lemma: koka,     pos: verb, level: B1, gloss: "to boil" }
+  - { lemma: bygga,    pos: verb, level: B1, gloss: "to build; past: built; pp: built" }
+  - { lemma: känd,     pos: adj,  level: B1, gloss: "well-known, famous" }
+  - { lemma: vars,     pos: pron, level: B1, gloss: whose }
+
+  # chapter 8: history
+  - { lemma: historia,    pos: noun, gender: en,  level: B1, gloss: "history, story" }
+  - { lemma: krig,        pos: noun, gender: ett, level: B1, gloss: war }
+  - { lemma: fred,        pos: noun, gender: en,  level: B1, gloss: peace }
+  - { lemma: drottning,   pos: noun, gender: en,  level: B1, gloss: queen }
+  - { lemma: rike,        pos: noun, gender: ett, level: B1, gloss: "kingdom, realm" }
+  - { lemma: gräns,       pos: noun, gender: en,  level: B1, gloss: "border, limit" }
+  - { lemma: befolkning,  pos: noun, gender: en,  level: B1, gloss: population }
+  - { lemma: bonde,       pos: noun, gender: en,  level: B1, gloss: farmer }
+  - { lemma: fabrik,      pos: noun, gender: en,  level: B1, gloss: factory }
+  - { lemma: uppfinning,  pos: noun, gender: en,  level: B1, gloss: invention }
+  - { lemma: århundrade,  pos: noun, gender: ett, level: B1, gloss: century }
+  - { lemma: början,      pos: noun, gender: en,  level: B1, gloss: "beginning (i början av)" }
+  - { lemma: slut,        pos: noun, gender: ett, level: B1, gloss: "end (i slutet av, till slut)" }
+  - { lemma: emigrera,    pos: verb, level: B1, gloss: "to emigrate" }
+  - { lemma: grunda,      pos: verb, level: B1, gloss: "to found" }
+
+  # chapter 9: stories
+  - { lemma: berättelse,  pos: noun, gender: en,  level: B1, gloss: "story, tale" }
+  - { lemma: saga,        pos: noun, gender: en,  level: B1, gloss: "fairy tale" }
+  - { lemma: sanning,     pos: noun, gender: en,  level: B1, gloss: truth }
+  - { lemma: lögn,        pos: noun, gender: en,  level: B1, gloss: lie }
+  - { lemma: hemlighet,   pos: noun, gender: en,  level: B1, gloss: secret }
+  - { lemma: författare,  pos: noun, gender: en,  level: B1, gloss: "author, writer" }
+  - { lemma: bok,         pos: noun, gender: en,  level: B1, gloss: "book; pl: books" }
+  - { lemma: roman,       pos: noun, gender: en,  level: B1, gloss: novel }
+  - { lemma: fantasi,     pos: noun, gender: en,  level: B1, gloss: imagination }
+  - { lemma: hjälte,      pos: noun, gender: en,  level: B1, gloss: hero }
+  - { lemma: ljuga,       pos: verb, level: B1, gloss: "to lie; past: lied; pp: lied" }
+  - { lemma: lura,        pos: verb, level: B1, gloss: "to trick, to fool" }
+  - { lemma: avslöja,     pos: verb, level: B1, gloss: "to reveal" }
+  - { lemma: otrolig,     pos: adj,  level: B1, gloss: incredible }
+  - { lemma: verklig,     pos: adj,  level: B1, gloss: real }
+
+  # chapter 10: in the household
+  - { lemma: hushåll,    pos: noun, gender: ett, level: B1, gloss: household }
+  - { lemma: disk,       pos: noun, gender: en,  level: B1, gloss: "washing-up, dishes" }
+  - { lemma: diska,      pos: verb, level: B1, gloss: "to wash up" }
+  - { lemma: stryka,     pos: verb, level: B1, gloss: "to iron; past: ironed; pp: ironed" }
+  - { lemma: fläck,      pos: noun, gender: en,  level: B1, gloss: stain }
+  - { lemma: sopa,       pos: noun, gender: en,  level: B1, gloss: "sopor = rubbish" }
+  - { lemma: återvinna,  pos: verb, level: B1, gloss: "to recycle" }
+  - { lemma: sortera,    pos: verb, level: B1, gloss: "to sort" }
+  - { lemma: plast,      pos: noun, gender: en,  level: B1, gloss: plastic }
+  - { lemma: glas,       pos: noun, gender: ett, level: B1, gloss: glass }
+  - { lemma: papper,     pos: noun, gender: ett, level: B1, gloss: paper }
+  - { lemma: burk,       pos: noun, gender: en,  level: B1, gloss: "can, jar" }
+  - { lemma: förvara,    pos: verb, level: B1, gloss: "to keep, to store" }
+  - { lemma: frysa,      pos: verb, level: B1, gloss: "to freeze; past: froze; pp: frozen" }
+  - { lemma: ugn,        pos: noun, gender: en,  level: B1, gloss: oven }
+  - { lemma: blanda,     pos: verb, level: B1, gloss: "to mix" }
+
+  # chapter 11: crime
+  - { lemma: brott,      pos: noun, gender: ett, level: B1, gloss: crime }
+  - { lemma: straff,     pos: noun, gender: ett, level: B1, gloss: punishment }
+  - { lemma: tjuv,       pos: noun, gender: en,  level: B1, gloss: thief }
+  - { lemma: inbrott,    pos: noun, gender: ett, level: B1, gloss: burglary }
+  - { lemma: offer,      pos: noun, gender: ett, level: B1, gloss: victim }
+  - { lemma: fängelse,   pos: noun, gender: ett, level: B1, gloss: prison }
+  - { lemma: domstol,    pos: noun, gender: en,  level: B1, gloss: court }
+  - { lemma: advokat,    pos: noun, gender: en,  level: B1, gloss: lawyer }
+  - { lemma: stjäla,     pos: verb, level: B1, gloss: "to steal; past: stole; pp: stolen" }
+  - { lemma: döma,       pos: verb, level: B1, gloss: "to sentence, to judge" }
+  - { lemma: gripa,      pos: verb, level: B1, gloss: "to arrest, to seize" }
+  - { lemma: erkänna,    pos: verb, level: B1, gloss: "to confess, to admit" }
+  - { lemma: lyckas,     pos: verb, level: B1, gloss: "to succeed" }
+  - { lemma: minnas,     pos: verb, level: B1, gloss: "to remember" }
+  - { lemma: skyldig,    pos: adj,  level: B1, gloss: guilty }
+  - { lemma: oskyldig,   pos: adj,  level: B1, gloss: innocent }
+  - { lemma: misstänkt,  pos: adj,  level: B1, gloss: "suspected, en misstänkt = a suspect" }
+
+  # chapter 12: courage and conflicts
+  - { lemma: mod,          pos: noun, gender: ett, level: B2, gloss: courage }
+  - { lemma: modig,        pos: adj,  level: B2, gloss: brave }
+  - { lemma: feg,          pos: adj,  level: B2, gloss: cowardly }
+  - { lemma: våga,         pos: verb, level: B2, gloss: "to dare" }
+  - { lemma: äventyr,      pos: noun, gender: ett, level: B2, gloss: adventure }
+  - { lemma: konflikt,     pos: noun, gender: en,  level: B2, gloss: conflict }
+  - { lemma: kompromiss,   pos: noun, gender: en,  level: B2, gloss: compromise }
+  - { lemma: missförstånd, pos: noun, gender: ett, level: B2, gloss: misunderstanding }
+  - { lemma: ursäkt,       pos: noun, gender: en,  level: B2, gloss: "apology, excuse" }
+  - { lemma: förlåta,      pos: verb, level: B2, gloss: "to forgive; past: forgave; pp: forgiven" }
+  - { lemma: hota,         pos: verb, level: B2, gloss: "to threaten" }
+  - { lemma: hemland,      pos: noun, gender: ett, level: B2, gloss: "home country" }
+  - { lemma: anpassa,      pos: verb, level: B2, gloss: "anpassa sig = to adapt" }
+  - { lemma: gräl,         pos: noun, gender: ett, level: B2, gloss: "quarrel, row" }
+  - { lemma: be,           pos: verb, level: B2, gloss: "to ask (be om ursäkt = apologise); past: asked; pp: asked" }
+
+  # chapter 13: holidays of the year
+  - { lemma: helgdag,     pos: noun, gender: en,  level: B2, gloss: "public holiday" }
+  - { lemma: gran,        pos: noun, gender: en,  level: B2, gloss: "spruce, Christmas tree" }
+  - { lemma: tomte,       pos: noun, gender: en,  level: B2, gloss: "Father Christmas, gnome" }
+  - { lemma: pynta,       pos: verb, level: B2, gloss: "to decorate" }
+  - { lemma: sång,        pos: noun, gender: en,  level: B2, gloss: song }
+  - { lemma: sill,        pos: noun, gender: en,  level: B2, gloss: herring }
+  - { lemma: jordgubbe,   pos: noun, gender: en,  level: B2, gloss: strawberry }
+  - { lemma: krans,       pos: noun, gender: en,  level: B2, gloss: wreath }
+  - { lemma: fyrverkeri,  pos: noun, gender: ett, level: B2, gloss: fireworks }
+  - { lemma: nyår,        pos: noun, gender: ett, level: B2, gloss: "New Year" }
+  - { lemma: samlas,      pos: verb, level: B2, gloss: "to gather, to get together" }
+  - { lemma: stämning,    pos: noun, gender: en,  level: B2, gloss: "atmosphere, mood" }
+  - { lemma: mörk,        pos: adj,  level: B2, gloss: dark }
+  - { lemma: dikt,        pos: noun, gender: en,  level: B2, gloss: poem }
+
+  # chapter 14: complaints and broken things
+  - { lemma: klagomål,   pos: noun, gender: ett, level: B2, gloss: complaint }
+  - { lemma: pessimist,  pos: noun, gender: en,  level: B2, gloss: pessimist }
+  - { lemma: optimist,   pos: noun, gender: en,  level: B2, gloss: optimist }
+  - { lemma: gnälla,     pos: verb, level: B2, gloss: "to whine, to moan" }
+  - { lemma: irriterad,  pos: adj,  level: B2, gloss: "irritated, annoyed" }
+  - { lemma: reparera,   pos: verb, level: B2, gloss: "to repair" }
+  - { lemma: spricka,    pos: verb, level: B2, gloss: "to crack; past: cracked; pp: cracked" }
+  - { lemma: apparat,    pos: noun, gender: en,  level: B2, gloss: "appliance, device" }
+  - { lemma: sladd,      pos: noun, gender: en,  level: B2, gloss: "cord, cable" }
+  - { lemma: batteri,    pos: noun, gender: ett, level: B2, gloss: battery }
+  - { lemma: knapp,      pos: noun, gender: en,  level: B2, gloss: button }
+  - { lemma: bränna,     pos: verb, level: B2, gloss: "to burn (something); past: burnt; pp: burnt" }
+  - { lemma: brinna,     pos: verb, level: B2, gloss: "to burn, to be on fire; past: burnt; pp: burnt" }
+  - { lemma: väcka,      pos: verb, level: B2, gloss: "to wake (someone); past: woke; pp: woken" }
+  - { lemma: tända,      pos: verb, level: B2, gloss: "to light, to switch on; past: lit; pp: lit" }
+  - { lemma: släcka,     pos: verb, level: B2, gloss: "to put out, to switch off" }
+  - { lemma: slockna,    pos: verb, level: B2, gloss: "to go out (of a light or fire)" }
+
+  # chapter 15: work and applications
+  - { lemma: kandidat,         pos: noun, gender: en,  level: B2, gloss: candidate }
+  - { lemma: urval,            pos: noun, gender: ett, level: B2, gloss: selection }
+  - { lemma: kalla,            pos: verb, level: B2, gloss: "to call, to summon" }
+  - { lemma: styrka,           pos: noun, gender: en,  level: B2, gloss: strength }
+  - { lemma: svaghet,          pos: noun, gender: en,  level: B2, gloss: weakness }
+  - { lemma: motivera,         pos: verb, level: B2, gloss: "to motivate, to give reasons for" }
+  - { lemma: motivation,       pos: noun, gender: en,  level: B2, gloss: motivation }
+  - { lemma: utveckla,         pos: verb, level: B2, gloss: "to develop" }
+  - { lemma: utveckling,       pos: noun, gender: en,  level: B2, gloss: development }
+  - { lemma: karriär,          pos: noun, gender: en,  level: B2, gloss: career }
+  - { lemma: provanställning,  pos: noun, gender: en,  level: B2, gloss: "probationary employment" }
+  - { lemma: förmån,           pos: noun, gender: en,  level: B2, gloss: benefit }
+  - { lemma: uppsägning,       pos: noun, gender: en,  level: B2, gloss: "notice, dismissal" }
+  - { lemma: arbetsförmedling, pos: noun, gender: en,  level: B2, gloss: "employment office" }
+
+  # chapter 16: living together
+  - { lemma: ensamhet,      pos: noun, gender: en,  level: B2, gloss: loneliness }
+  - { lemma: gemenskap,     pos: noun, gender: en,  level: B2, gloss: "community, togetherness" }
+  - { lemma: singel,        pos: adj,  level: B2, gloss: single }
+  - { lemma: särbo,         pos: noun, gender: en,  level: B2, gloss: "partner you do not live with" }
+  - { lemma: ensamstående,  pos: adj,  level: B2, gloss: "single (parent), living alone" }
+  - { lemma: uppfostra,     pos: verb, level: B2, gloss: "to bring up (a child)" }
+  - { lemma: tonåring,      pos: noun, gender: en,  level: B2, gloss: teenager }
+  - { lemma: vuxen,         pos: adj,  level: B2, gloss: "adult, grown-up" }
+  - { lemma: tjata,         pos: verb, level: B2, gloss: "to nag" }
+  - { lemma: trygg,         pos: adj,  level: B2, gloss: "safe, secure" }
+  - { lemma: trygghet,      pos: noun, gender: en,  level: B2, gloss: "security, safety" }
+  - { lemma: förhållande,   pos: noun, gender: ett, level: B2, gloss: "relationship; condition" }
+  - { lemma: separera,      pos: verb, level: B2, gloss: "to separate" }
+  - { lemma: ihop,          pos: adv,  level: B2, gloss: "together (flytta ihop = move in together)" }
+
+  # chapter 17: Vikings and beliefs
+  - { lemma: viking,      pos: noun, gender: en,  level: B2, gloss: Viking }
+  - { lemma: gud,         pos: noun, gender: en,  level: B2, gloss: god }
+  - { lemma: skepp,       pos: noun, gender: ett, level: B2, gloss: ship }
+  - { lemma: segla,       pos: verb, level: B2, gloss: "to sail" }
+  - { lemma: handel,      pos: noun, gender: en,  level: B2, gloss: trade }
+  - { lemma: plundra,     pos: verb, level: B2, gloss: "to plunder" }
+  - { lemma: krigare,     pos: noun, gender: en,  level: B2, gloss: warrior }
+  - { lemma: myt,         pos: noun, gender: en,  level: B2, gloss: myth }
+  - { lemma: runsten,     pos: noun, gender: en,  level: B2, gloss: "rune stone" }
+  - { lemma: träd,        pos: noun, gender: ett, level: B2, gloss: tree }
+  - { lemma: öde,         pos: noun, gender: ett, level: B2, gloss: fate }
+  - { lemma: offra,       pos: verb, level: B2, gloss: "to sacrifice" }
+  - { lemma: grav,        pos: noun, gender: en,  level: B2, gloss: grave }
+  - { lemma: spöke,       pos: noun, gender: ett, level: B2, gloss: ghost }
+  - { lemma: vidskeplig,  pos: adj,  level: B2, gloss: superstitious }
+
+  # chapter 18: working life and culture
+  - { lemma: kultur,         pos: noun, gender: en,  level: B2, gloss: culture }
+  - { lemma: hierarki,       pos: noun, gender: en,  level: B2, gloss: hierarchy }
+  - { lemma: platt,          pos: adj,  level: B2, gloss: flat }
+  - { lemma: jämställdhet,   pos: noun, gender: en,  level: B2, gloss: "gender equality" }
+  - { lemma: punktlig,       pos: adj,  level: B2, gloss: punctual }
+  - { lemma: informell,      pos: adj,  level: B2, gloss: informal }
+  - { lemma: formell,        pos: adj,  level: B2, gloss: formal }
+  - { lemma: titel,          pos: noun, gender: en,  level: B2, gloss: title }
+  - { lemma: arbetsliv,      pos: noun, gender: ett, level: B2, gloss: "working life" }
+  - { lemma: framsteg,       pos: noun, gender: ett, level: B2, gloss: progress }
+  - { lemma: nyans,          pos: noun, gender: en,  level: B2, gloss: "nuance, shade" }
+  - { lemma: artig,          pos: adj,  level: B2, gloss: polite }
+  - { lemma: beröm,          pos: noun, gender: ett, level: B2, gloss: praise }
+  - { lemma: kritik,         pos: noun, gender: en,  level: B2, gloss: criticism }
+  - { lemma: bero,           pos: verb, level: B2, gloss: "bero på = to depend on, to be due to" }
+  - { lemma: låta,           pos: verb, level: B2, gloss: "to let; to sound; past: let; pp: let" }

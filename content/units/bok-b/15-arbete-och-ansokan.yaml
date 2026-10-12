@@ -1,0 +1,56 @@
+id: bok-b-15
+level: B2
+book: "B1+B2"
+chapter: 15
+theme: bok_b
+title: "Arbete och ansökan"
+task: "Extra practice for chapter 15, on work and applying for a job."
+can_do: "I can point with den här, den där and denna, read the written style without har and hade, and build relative clauses with som."
+focus: ["demonstrative pronouns", "perfect without har or hade", "the relative pronoun som"]
+names: [Sara, Ali]
+
+new_words: [kandidat, urval, kalla, styrka, svaghet, motivera, motivation, utveckla, utveckling, karriär, provanställning, förmån, uppsägning, arbetsförmedling]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # den här, den där, denna
+  - { type: cloze, sv: "Den ___ tjänsten passar mig bättre än den där.", answer: här, en: "This post suits me better than that one.", grammar: [demonstrative_pronouns] }
+  - { type: cloze, sv: "___ ansökan kom in för sent.", hint: denna, answer: Denna, en: "This application came in too late. (formal)", grammar: [demonstrative_pronouns] }
+  - { type: cloze, sv: "___ förmåner gäller alla anställda.", hint: denna, answer: Dessa, en: "These benefits apply to all employees. (formal)", grammar: [demonstrative_pronouns] }
+  - { type: translate, en: "These candidates have the right skills.", sv: "De här kandidaterna har rätt kompetens.", accept: ["Dessa kandidater har rätt kompetens."], grammar: [demonstrative_pronouns] }
+  - { type: translate, en: "I want that post, not this one.", sv: "Jag vill ha den där tjänsten, inte den här.", grammar: [demonstrative_pronouns] }
+
+  # the written style: har and hade left out
+  - { type: listen_choose, sv: "Kandidater som arbetat i branschen kallas till intervju.", en: "Candidates who have worked in the industry are called to an interview.",
+      options: ["Candidates who have worked in the industry.", "Candidates who work in the industry now.", "Candidates who will work in the industry."], answer: "Candidates who have worked in the industry." }
+  - { type: cloze, sv: "Vi söker dig som ___ utvecklat nya tjänster.", hint: "har / är", answer: har, en: "We are looking for you who have developed new services.", grammar: [perfect_without_har] }
+  - { type: word_order, sv: "Alla som sökt tjänsten får svar inom en vecka.", en: "Everyone who has applied for the post will get an answer within a week.", grammar: [perfect_without_har] }
+  - { type: translate, en: "He says that he has had three jobs. (the everyday way, with har)", sv: "Han säger att han har haft 3 jobb.", accept: ["Han säger att han haft 3 jobb."], grammar: [perfect_without_har] }
+
+  # som: subject or object of the clause
+  - { type: cloze, sv: "Det är kandidaten ___ vi vill anställa.", answer: som, en: "That is the candidate that we want to hire.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Jag söker ett jobb som ger mig utveckling.", en: "I am looking for a job that gives me development.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Det är en styrka som inte alla har.", en: "It is a strength that not everyone has.", grammar: [relative_clause] }
+  - { type: translate, en: "The employer who called me was friendly.", sv: "Arbetsgivaren som ringde mig var vänlig.", accept: ["Arbetsgivaren som kallade mig var vänlig."], grammar: [relative_clause] }
+
+  # listen and write
+  - { type: dictation, sv: "Vad är din största styrka?", en: "What is your greatest strength?" }
+  - { type: dictation, sv: "Jag har stor motivation och vill utveckla min karriär.", en: "I am highly motivated and want to develop my career." }
+  - { type: dictation, sv: "Tjänsten börjar med en provanställning på 6 månader.", en: "The post starts with a probationary period of 6 months." }
+  - { type: dictation, sv: "Arbetsförmedlingen hjälper arbetslösa att hitta jobb.", en: "The employment office helps unemployed people find work.", grammar: [adjective_as_noun] }
+
+  # say it in Swedish
+  - { type: translate, en: "Motivate your answer.", sv: "Motivera ditt svar.", grammar: [imperative] }
+  - { type: translate, en: "What are your weaknesses?", sv: "Vilka är dina svagheter?", accept: ["Vad är dina svagheter?"] }
+  - { type: translate, en: "She was called to an interview.", sv: "Hon kallades till intervju.", accept: ["Hon blev kallad till intervju.", "Hon kallades till en intervju."], grammar: [passive_s] }
+  - { type: translate, en: "The selection takes 2 weeks.", sv: "Urvalet tar 2 veckor." }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences answering an interviewer: your strength, one weakness, your motivation, and how you want to develop.",
+      checklist: ["I name one strength and one weakness.", "I use den här / det här or denna / detta once.", "I use two relative clauses with som.", "I say how I want to develop."],
+      sv: "Min största styrka är att jag är noggrann, vilket är viktigt i den här branschen. En svaghet som jag arbetar med är att jag har svårt att säga nej. Jag söker den här tjänsten eftersom jag vill utveckla min kompetens. Jag har stor motivation och lär mig snabbt. Det jag hoppas på är en arbetsgivare som ger mig ansvar.",
+      grammar: [demonstrative_pronouns, relative_clause], review: true }

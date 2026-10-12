@@ -1,0 +1,57 @@
+id: bok-b-13
+level: B2
+book: "B1+B2"
+chapter: 13
+theme: bok_b
+title: "Årets högtider"
+task: "Extra practice for chapter 13, on the holidays of the year."
+can_do: "I can leave out en/ett where Swedish does, say what would have happened, and react with an exclamation."
+focus: ["nouns without an article", "conditional in the past (skulle ha)", "exclamations"]
+names: [Sara, Maria, Sverige]
+
+new_words: [helgdag, gran, tomte, pynta, sång, sill, jordgubbe, krans, fyrverkeri, nyår, samlas, stämning, mörk, dikt]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # with or without en/ett?
+  - { type: listen_choose, sv: "Vi har gran i år.", en: "We have a Christmas tree this year.",
+      options: ["Right: the kind of thing, so no article.", "Wrong: it must be en gran."], answer: "Right: the kind of thing, so no article." }
+  - { type: word_order, sv: "Vi äter sill och jordgubbar på midsommar.", en: "We eat herring and strawberries at Midsummer.", grammar: [noun_without_article] }
+  - { type: word_order, sv: "Barnen väntar på tomten hela dagen.", en: "The children wait for Father Christmas all day.", grammar: [def_singular] }
+  - { type: translate, en: "Do you have a Christmas tree?", sv: "Har ni gran?", accept: ["Har du gran?", "Har ni en gran?", "Har du en gran?"], grammar: [noun_without_article] }
+  - { type: translate, en: "We have a very big Christmas tree.", sv: "Vi har en väldigt stor gran.", grammar: [noun_without_article] }
+  - { type: translate, en: "She writes poems.", sv: "Hon skriver dikter." }
+
+  # what would have happened
+  - { type: cloze, sv: "Om det inte hade regnat, skulle vi ha ___ ute.", hint: äta, answer: ätit, en: "If it had not rained, we would have eaten outside.", grammar: [conditional_past] }
+  - { type: cloze, sv: "Om jag hade ___ ledig, skulle jag ha firat med er.", hint: vara, answer: varit, en: "If I had been free, I would have celebrated with you.", grammar: [conditional_past] }
+  - { type: word_order, sv: "Vi skulle ha pyntat granen om vi hade haft tid.", en: "We would have decorated the tree if we had had time.", grammar: [conditional_past] }
+  - { type: translate, en: "If you had come, you would have seen the fireworks.", sv: "Om du hade kommit, skulle du ha sett fyrverkeriet.",
+      accept: ["Om du hade kommit, skulle du ha sett fyrverkerierna."], grammar: [conditional_past] }
+
+  # exclamations
+  - { type: cloze, sv: "___ fin krans!", hint: vilken, answer: Vilken, en: "What a lovely wreath!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ vackert fyrverkeri!", hint: vilken, answer: Vilket, en: "What beautiful fireworks!", grammar: [exclamations] }
+  - { type: cloze, sv: "___ mörkt det är!", hint: "vad / vilken", answer: Vad, en: "How dark it is!", grammar: [exclamations] }
+  - { type: word_order, sv: "Vad fint ni har pyntat!", en: "How nicely you have decorated!", grammar: [exclamations] }
+  - { type: translate, en: "What a wonderful atmosphere!", sv: "Vilken underbar stämning!", grammar: [exclamations] }
+
+  # listen and write
+  - { type: dictation, sv: "Hela släkten samlas på nyår.", en: "The whole family gets together at New Year." }
+  - { type: dictation, sv: "Vi sjunger en sång och dansar vid granen.", en: "We sing a song and dance by the tree." }
+  - { type: dictation, sv: "Vintern är mörk, men stämningen är mysig.", en: "Winter is dark, but the atmosphere is cosy." }
+  - { type: dictation, sv: "Midsommar är ingen helgdag, men alla är lediga.", en: "Midsummer is not a public holiday, but everyone is off.", review: true }
+
+  # say it in Swedish
+  - { type: translate, en: "When is the next public holiday?", sv: "När är nästa helgdag?" }
+  - { type: translate, en: "We decorate the house for Christmas.", sv: "Vi pyntar huset till jul." }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences about a holiday you celebrated: what you ate and did, one exclamation, and what you would have done if something had been different.",
+      checklist: ["I name food and things without en/ett where Swedish does.", "I use om ... hade + supine, skulle ha + supine.", "I use one exclamation with vad or vilken.", "I describe the atmosphere."],
+      sv: "På nyår samlades hela familjen hos min syster. Vi åt lax och drack kaffe, och barnen pyntade bordet. Vilken underbar stämning det var! Klockan 12 gick vi ut för att se fyrverkeriet. Om det inte hade regnat, skulle vi ha stannat ute längre. Det var den bästa helgdagen på länge.",
+      grammar: [conditional_past, exclamations, noun_without_article] }

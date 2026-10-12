@@ -1,0 +1,56 @@
+id: bok-b-16
+level: B2
+book: "B1+B2"
+chapter: 16
+theme: bok_b
+title: "Tillsammans eller själv"
+task: "Extra practice for chapter 16, on living alone and living together."
+can_do: "I can choose between stå/ställa and ligga/lägga, place inte and a short object pronoun correctly, and use the right preposition after a feeling."
+focus: ["stå, ställa, ligga, lägga", "word order: sentence adverb and object pronoun", "prepositions after feelings"]
+names: [Sara, Omar, Maria]
+
+new_words: [ensamhet, gemenskap, singel, särbo, ensamstående, uppfostra, tonåring, vuxen, tjata, trygg, trygghet, förhållande, separera, ihop]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # where it is, or putting it there?
+  - { type: cloze, sv: "Hans väska ___ alltid i hallen.", hint: "stå / ställa", answer: står, en: "His bag is always in the hall.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Kan du ___ disken i köket?", hint: "stå / ställa", answer: ställa, en: "Can you put the dishes in the kitchen?", grammar: [position_verbs] }
+  - { type: cloze, sv: "Tonåringen ___ i sängen hela dagen.", hint: "ligga / lägga", answer: ligger, en: "The teenager lies in bed all day.", grammar: [position_verbs] }
+  - { type: cloze, sv: "Jag ___ barnen klockan 8 igår.", hint: "ligga / lägga", answer: la, accept: [lade], en: "I put the children to bed at 8 yesterday.", grammar: [position_verbs] }
+  - { type: translate, en: "Put the keys on the table.", sv: "Lägg nycklarna på bordet.", grammar: [position_verbs, imperative] }
+
+  # inte and a short pronoun
+  - { type: word_order, sv: "Jag saknar honom inte.", en: "I do not miss him.", grammar: [object_pronoun_placement] }
+  - { type: word_order, sv: "Hon tjatar aldrig på sina barn.", en: "She never nags her children.", grammar: [negation_inte] }
+  - { type: word_order, sv: "Jag har inte träffat dem sedan de separerade.", en: "I have not seen them since they separated.", grammar: [object_pronoun_placement] }
+  - { type: word_order, sv: "Han säger att han inte saknar henne.", en: "He says that he does not miss her.", grammar: [subordinate_clause_basic] }
+  - { type: translate, en: "I do not know her.", sv: "Jag känner henne inte.", accept: ["Jag känner inte henne."], grammar: [object_pronoun_placement] }
+
+  # the feeling and its preposition
+  - { type: cloze, sv: "Hon är rädd ___ ensamheten.", answer: för, en: "She is afraid of loneliness.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Jag är trött ___ att du tjatar.", answer: på, en: "I am tired of you nagging.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "De är stolta ___ sina vuxna barn.", answer: över, en: "They are proud of their grown-up children.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Han är avundsjuk ___ sin brors förhållande.", answer: på, en: "He is jealous of his brother's relationship.", grammar: [prepositions_feelings] }
+  - { type: cloze, sv: "Barn behöver känna sig trygga. De längtar ___ gemenskap.", answer: efter, en: "Children need to feel safe. They long for togetherness.", grammar: [prepositions_feelings] }
+
+  # listen and write
+  - { type: dictation, sv: "Vi ska flytta ihop i sommar.", en: "We are moving in together this summer." }
+  - { type: dictation, sv: "Hon är ensamstående med 2 tonåringar.", en: "She is a single parent with 2 teenagers." }
+  - { type: dictation, sv: "Min särbo bor i en annan stad.", en: "My partner lives in another city." }
+  - { type: dictation, sv: "Trygghet är viktigare än pengar.", en: "Security is more important than money." }
+
+  # say it in Swedish
+  - { type: translate, en: "I am single.", sv: "Jag är singel." }
+  - { type: translate, en: "They separated last year.", sv: "De separerade förra året." }
+  - { type: translate, en: "It is not easy to bring up children.", sv: "Det är inte lätt att uppfostra barn." }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences: is it better to live alone or together? Give both sides and your own view.",
+      checklist: ["I use two feelings with the right preposition.", "I use inte or aldrig in a subordinate clause.", "I use stå/ställa or ligga/lägga once.", "I give my own view at the end."],
+      sv: "Många är rädda för ensamhet, men jag tycker att det finns bra saker med att bo själv. Ingen tjatar på mig, och mina saker ligger där jag har lagt dem. Däremot saknar jag gemenskapen när jag äter middag. Min syster säger att hon aldrig skulle vilja bo ensam. Jag tror att det viktigaste är att man känner sig trygg, med eller utan sambo.",
+      grammar: [prepositions_feelings, position_verbs] }

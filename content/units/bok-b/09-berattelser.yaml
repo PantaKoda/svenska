@@ -1,0 +1,55 @@
+id: bok-b-09
+level: B1
+book: "B1+B2"
+chapter: 9
+theme: bok_b
+title: "Berättelser"
+task: "Extra practice for chapter 9, on stories, truth and lies."
+can_do: "I can choose the right definite form of a noun, tell tycker, tänker and tror apart, and say the best, the biggest, the most incredible."
+focus: ["definite form of nouns", "tycker, tänker or tror", "superlative in the definite form"]
+names: [Sara, Omar]
+
+new_words: [berättelse, saga, sanning, lögn, hemlighet, författare, bok, roman, fantasi, hjälte, ljuga, lura, avslöja, otrolig, verklig]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # the definite form: singular and plural
+  - { type: cloze, sv: "Jag har läst en roman. ___ var otrolig.", hint: roman, answer: Romanen, en: "I have read a novel. The novel was incredible.", grammar: [def_singular] }
+  - { type: cloze, sv: "Säg ___!", hint: sanning, answer: sanningen, en: "Tell the truth!", grammar: [def_singular] }
+  - { type: cloze, sv: "Jag tycker om ___ i hans romaner.", hint: hjälte, answer: hjältarna, en: "I like the heroes in his novels.", grammar: [plural_def] }
+  - { type: cloze, sv: "Alla ___ på bordet är mina.", hint: bok, answer: böckerna, en: "All the books on the table are mine.", grammar: [plural_def] }
+  - { type: cloze, sv: "Barnen älskar ___ om björnen.", hint: saga, answer: sagan, en: "The children love the fairy tale about the bear.", grammar: [def_singular] }
+  - { type: cloze, sv: "Hon avslöjade alla mina ___.", hint: hemlighet, answer: hemligheter, en: "She revealed all my secrets.", grammar: [plural_indef] }
+
+  # tycker, tänker or tror?
+  - { type: cloze, sv: "Jag har läst boken. Jag ___ att den är bra.", hint: "tycka / tro", answer: tycker, en: "I have read the book. I think it is good.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag har inte läst boken, men jag ___ att den är bra.", hint: "tycka / tro", answer: tror, en: "I have not read the book, but I think it is good.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag ___ skriva en roman nästa år.", hint: "tänka / tro", answer: tänker, en: "I intend to write a novel next year.", grammar: [tycka_tanka_tro] }
+  - { type: cloze, sv: "Jag ___ inte på hans berättelse. Han ljuger ofta.", hint: "tänka / tro", answer: tror, en: "I do not believe his story. He often lies.", grammar: [tycka_tanka_tro] }
+  - { type: translate, en: "What are you thinking about?", sv: "Vad tänker du på?", grammar: [tycka_tanka_tro] }
+
+  # the best, the biggest: superlative after den/det/de/min
+  - { type: cloze, sv: "Det är den ___ boken som jag har läst.", hint: bra, answer: bästa, en: "It is the best book I have read.", grammar: [superlative_definite] }
+  - { type: cloze, sv: "Det var den ___ lögnen av alla.", hint: stor, answer: största, en: "It was the biggest lie of all.", grammar: [superlative_definite] }
+  - { type: cloze, sv: "Hon är landets ___ författare.", hint: känd, answer: mest kända, accept: [kändaste], en: "She is the country's best-known author.", grammar: [superlative_definite], review: true }
+  - { type: word_order, sv: "Det är den mest otroliga berättelsen som jag har hört.", en: "It is the most incredible story I have heard.", grammar: [superlative_definite] }
+
+  # listen and write
+  - { type: dictation, sv: "Är berättelsen verklig eller fantasi?", en: "Is the story real or imagination?" }
+  - { type: dictation, sv: "Han lurade oss med en lögn.", en: "He tricked us with a lie." }
+  - { type: dictation, sv: "Författaren har skrivit 10 romaner.", en: "The author has written 10 novels." }
+
+  # say it in Swedish
+  - { type: translate, en: "I never lie.", sv: "Jag ljuger aldrig." }
+  - { type: translate, en: "Can you keep a secret?", sv: "Kan du hålla en hemlighet?", review: true }
+  - { type: translate, en: "It is a true story.", sv: "Det är en verklig berättelse." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a book, a film or a story: what it is about, what you think of it, and the best thing in it.",
+      checklist: ["I use nouns in the definite form.", "I use tycker and tror correctly.", "I use one superlative after den/det/de.", "I say what the story is about."],
+      sv: "Jag har läst en roman om en hjälte som har en stor hemlighet. I början ljuger han för alla, men till slut avslöjar han sanningen. Jag tycker att boken är otrolig, och jag tror att det kommer en film snart. Det bästa i berättelsen är slutet. Det är den mest spännande roman som jag har läst.",
+      grammar: [tycka_tanka_tro, superlative_definite] }

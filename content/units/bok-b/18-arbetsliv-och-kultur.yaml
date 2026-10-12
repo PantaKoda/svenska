@@ -1,0 +1,55 @@
+id: bok-b-18
+level: B2
+book: "B1+B2"
+chapter: 18
+theme: bok_b
+title: "Arbetsliv och kultur"
+task: "Extra practice for chapter 18, on the culture of the workplace and the fine shades of the language."
+can_do: "I can shorten a clause to object + infinitive, and express contrast, cause and explanation in several ways."
+focus: ["object + infinitive (jag såg honom komma)", "expressing contrast", "expressing cause or explanation"]
+names: [Sara, Maria, Sverige]
+
+new_words: [kultur, hierarki, platt, jämställdhet, punktlig, informell, formell, titel, arbetsliv, framsteg, nyans, artig, beröm, kritik, bero, låta]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # see, hear, let + object + infinitive (no att)
+  - { type: word_order, sv: "Jag såg chefen komma in i rummet.", en: "I saw the manager come into the room.", grammar: [clause_shortening] }
+  - { type: word_order, sv: "Vi hörde henne skratta på mötet.", en: "We heard her laugh at the meeting.", grammar: [clause_shortening] }
+  - { type: word_order, sv: "Chefen lät oss gå hem tidigt.", en: "The manager let us go home early.", grammar: [clause_shortening] }
+  - { type: cloze, sv: "Jag hörde ___ ge kritik till en kollega.", hint: han, answer: honom, en: "I heard him criticise a colleague.", grammar: [clause_shortening] }
+  - { type: translate, en: "I saw her leave the office.", sv: "Jag såg henne lämna kontoret.", grammar: [clause_shortening] }
+  - { type: translate, en: "Let me explain.", sv: "Låt mig förklara.", grammar: [clause_shortening, imperative] }
+
+  # contrast: men, däremot, trots att, medan
+  - { type: cloze, sv: "Här är man informell. I mitt hemland är man ___ ganska formell.", hint: "däremot / därför", answer: däremot, en: "Here people are informal. In my home country, however, people are rather formal.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "___ att hierarkin är platt, är det chefen som bestämmer.", hint: "trots / eftersom", answer: Trots, en: "Although the hierarchy is flat, it is the manager who decides.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "Hon får ofta beröm, ___ han mest får kritik.", hint: "medan / eftersom", answer: medan, en: "She often gets praise, while he mostly gets criticism.", grammar: [contrast_cause] }
+
+  # cause and explanation: eftersom, därför att, på grund av, bero på
+  - { type: cloze, sv: "Mötet börjar alltid i tid, ___ alla är punktliga.", hint: "eftersom / trots att", answer: eftersom, en: "The meeting always starts on time, because everyone is punctual.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "Missförståndet beror ___ en nyans i språket.", answer: på, en: "The misunderstanding is due to a nuance in the language.", grammar: [contrast_cause] }
+  - { type: cloze, sv: "På ___ av jämställdheten delar många på jobbet i hushållet.", answer: grund, en: "Because of gender equality many share the work in the household.", grammar: [contrast_cause] }
+  - { type: word_order, sv: "Det beror på att kulturen är informell.", en: "It is because the culture is informal.", grammar: [contrast_cause] }
+  - { type: translate, en: "That is why nobody uses titles.", sv: "Därför använder ingen titlar.", accept: ["Det är därför ingen använder titlar."], grammar: [contrast_cause] }
+
+  # listen and write
+  - { type: dictation, sv: "I arbetslivet i Sverige är hierarkin ofta platt.", en: "In working life in Sweden the hierarchy is often flat." }
+  - { type: dictation, sv: "Det är artigt att vara punktlig.", en: "It is polite to be punctual." }
+  - { type: dictation, sv: "Jag har gjort stora framsteg i svenska.", en: "I have made great progress in Swedish." }
+  - { type: dictation, sv: "Det låter som en bra kompromiss.", en: "That sounds like a good compromise." }
+
+  # say it in Swedish
+  - { type: translate, en: "It depends on the culture.", sv: "Det beror på kulturen." }
+  - { type: translate, en: "She gave me praise for my report.", sv: "Hon gav mig beröm för min rapport.", grammar: [direct_indirect_object] }
+  - { type: translate, en: "Gender equality is important in working life.", sv: "Jämställdhet är viktigt i arbetslivet.", accept: ["Jämställdhet är viktig i arbetslivet."] }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences comparing the culture at a Swedish workplace with one you know from before. Explain the differences.",
+      checklist: ["I express contrast twice (däremot, medan, trots att, men).", "I give a cause twice (eftersom, därför, beror på, på grund av).", "I use see/hear/let + object + infinitive once.", "I say what I think about the difference."],
+      sv: "På mitt förra jobb var kulturen formell, och alla använde titlar. Här är man däremot informell, vilket beror på att hierarkin är platt. Förra veckan hörde jag en kollega ge kritik till chefen, trots att hon var ny. Det skulle aldrig hända i mitt hemland, eftersom chefen bestämmer allt där. Jag tycker om det svenska arbetslivet, men det tog tid att förstå alla nyanser.",
+      grammar: [contrast_cause, clause_shortening] }

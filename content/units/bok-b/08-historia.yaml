@@ -1,0 +1,59 @@
+id: bok-b-08
+level: B1
+book: "B1+B2"
+chapter: 8
+theme: bok_b
+title: "Historia"
+task: "Extra practice for chapter 8, on history and time."
+can_do: "I can say what had happened before something else, what was going to happen later, and place events in time."
+focus: ["pluperfect", "the future seen from the past (skulle)", "time expressions"]
+names: [Sara, Sverige, Amerika, Göteborg]
+
+new_words: [historia, krig, fred, drottning, rike, gräns, befolkning, bonde, fabrik, uppfinning, århundrade, början, slut, emigrera, grunda]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # what had happened before: hade + supine
+  - { type: cloze, sv: "När kriget började, ___ landet haft fred i 50 år.", answer: hade, en: "When the war started, the country had had peace for 50 years.", grammar: [pluperfect] }
+  - { type: cloze, sv: "Bonden hade ___ i byn hela sitt liv.", hint: bo, answer: bott, en: "The farmer had lived in the village all his life.", grammar: [pluperfect] }
+  - { type: cloze, sv: "Innan fabriken byggdes, hade alla ___ som bönder.", hint: arbeta, answer: arbetat, en: "Before the factory was built, everyone had worked as farmers.", grammar: [pluperfect] }
+  - { type: word_order, sv: "När drottningen kom, hade kriget redan slutat.", en: "When the queen arrived, the war had already ended.", grammar: [pluperfect] }
+  - { type: translate, en: "Many had emigrated before the war started.", sv: "Många hade emigrerat innan kriget började.", grammar: [pluperfect] }
+
+  # what was going to happen later: skulle + infinitive
+  - { type: cloze, sv: "Ingen visste att kriget ___ ta slut så snart.", answer: skulle, en: "Nobody knew that the war was going to end so soon." }
+  - { type: word_order, sv: "Hon visste inte att hon skulle bli drottning.", en: "She did not know that she was going to be queen." }
+  - { type: word_order, sv: "Staden skulle senare bli känd för sina fabriker.", en: "The city would later become known for its factories." }
+  - { type: listen_choose, sv: "De trodde att freden skulle komma snart.", en: "They thought that peace would come soon.",
+      options: ["They expected peace in the near future.", "Peace had already come.", "They did not want peace."], answer: "They expected peace in the near future." }
+
+  # when? time expressions
+  - { type: cloze, sv: "Fabriken grundades för 100 år ___.", answer: sedan, en: "The factory was founded 100 years ago.", grammar: [preposition_time] }
+  - { type: cloze, sv: "I ___ av århundradet var nästan alla bönder.", hint: "början / slut", answer: början, en: "At the beginning of the century almost everyone was a farmer." }
+  - { type: cloze, sv: "Till ___ blev det fred.", hint: "början / slut", answer: slut, en: "In the end there was peace." }
+  - { type: cloze, sv: "Först kom fabrikerna. ___ växte städerna.", hint: "sedan / innan", answer: Sedan, en: "First came the factories. Then the cities grew.", grammar: [inversion_after_adverb] }
+  - { type: cloze, sv: "Kriget tog slut ___ 1945.", hint: "år / på", answer: år, en: "The war ended in 1945.", grammar: [preposition_time] }
+
+  # listen and write
+  - { type: dictation, sv: "Jag är intresserad av historia.", en: "I am interested in history." }
+  - { type: dictation, sv: "Sverige har haft fred i över 200 år.", en: "Sweden has had peace for over 200 years." }
+  - { type: dictation, sv: "Befolkningen växte snabbt.", en: "The population grew fast." }
+  - { type: dictation, sv: "Det var en viktig uppfinning.", en: "It was an important invention." }
+
+  # say it in Swedish
+  - { type: translate, en: "Where is the border?", sv: "Var går gränsen?", accept: ["Var är gränsen?", "Var ligger gränsen?"] }
+  - { type: translate, en: "Who founded the city?", sv: "Vem grundade staden?" }
+  - { type: translate, en: "Many farmers emigrated to America.", sv: "Många bönder emigrerade till Amerika." }
+
+  # listen for the number
+  - { type: numbers, sv: "Göteborg grundades år 1621.", hint: "the year", answer: "1621", en: "Gothenburg was founded in 1621." }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a time in the history of a country or a family you know: what had happened before, what happened, and what would come later.",
+      checklist: ["I use hade + supine once.", "I use skulle + infinitive about what came later.", "I use three time expressions (för ... sedan, i början av, till slut, sedan, år ...).", "The order of events is clear."],
+      sv: "För 100 år sedan var min släkt bönder i en liten by. De hade bott där i 3 århundraden. I början av århundradet byggdes en fabrik, och sedan flyttade många till staden. Ingen visste att nästan alla senare skulle lämna byn. Till slut emigrerade min farmors bror till Amerika.",
+      grammar: [pluperfect, preposition_time] }

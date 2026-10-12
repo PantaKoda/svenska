@@ -1,0 +1,56 @@
+id: bok-b-07
+level: B1
+book: "B1+B2"
+chapter: 7
+theme: bok_b
+title: "Platser och mat"
+task: "Extra practice for chapter 7, on special places and regional food."
+can_do: "I can describe a place with som, där and vars, use verbs with a particle and a preposition, and give a perfect participle the right form."
+focus: ["relative pronouns and adverbs", "verb particle + preposition", "perfect participle and its forms"]
+names: [Sara, Omar, Sverige, Göteborg]
+
+new_words: [landskap, kust, ö, berg, by, slott, hus, utsikt, lax, svamp, bär, smak, steka, koka, bygga, känd, vars]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # som, där, vars or vilket?
+  - { type: cloze, sv: "Det är en by ___ ligger vid kusten.", hint: "som / där", answer: som, en: "It is a village that lies on the coast.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Det är en ö ___ det inte finns några bilar.", hint: "som / där", answer: där, en: "It is an island where there are no cars.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Jag har en kompis ___ familj bor i ett slott.", hint: "som / vars", answer: vars, en: "I have a friend whose family lives in a castle.", grammar: [relative_clause] }
+  - { type: cloze, sv: "Det regnade hela veckan, ___ var tråkigt.", hint: "som / vilket", answer: vilket, en: "It rained all week, which was boring.", grammar: [relative_clause] }
+  - { type: word_order, sv: "Det är berget som vi vandrade på förra sommaren.", en: "It is the mountain that we hiked on last summer.", grammar: [relative_clause] }
+  - { type: translate, en: "This is the village where I grew up.", sv: "Det här är byn där jag växte upp.", accept: ["Det här är byn som jag växte upp i."], grammar: [relative_clause] }
+
+  # verb + particle + preposition
+  - { type: cloze, sv: "Jag ser fram ___ resan till kusten.", answer: emot, en: "I am looking forward to the trip to the coast.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Jag håller med dig ___ att utsikten är fin.", answer: om, en: "I agree with you that the view is nice.", grammar: [particle_verbs] }
+  - { type: cloze, sv: "Tycker du ___ svamp?", answer: om, en: "Do you like mushrooms?", grammar: [particle_verbs] }
+  - { type: word_order, sv: "Vi kom fram till byn sent på kvällen.", en: "We arrived at the village late in the evening.", grammar: [particle_verbs] }
+
+  # the perfect participle agrees like an adjective
+  - { type: cloze, sv: "Jag vill ha ___ lax.", hint: steka, answer: stekt, en: "I want fried salmon.", grammar: [participles] }
+  - { type: cloze, sv: "Vi åt ___ potatis med smör.", hint: koka, answer: kokt, en: "We ate boiled potatoes with butter.", grammar: [participles] }
+  - { type: cloze, sv: "Slottet är ___ på ett berg.", hint: bygga, answer: byggt, en: "The castle is built on a mountain.", grammar: [participles] }
+  - { type: cloze, sv: "Husen i byn är ___ för länge sedan.", hint: bygga, answer: byggda, en: "The houses in the village were built long ago.", grammar: [participles] }
+  - { type: cloze, sv: "Landskapet är ___ för sina sjöar.", hint: känd, answer: känt, en: "The province is known for its lakes.", grammar: [participles] }
+  - { type: cloze, sv: "Restaurangen är ___ på måndagar.", hint: stänga, answer: stängd, en: "The restaurant is closed on Mondays.", grammar: [participles] }
+
+  # listen and write
+  - { type: dictation, sv: "Från berget har man en fin utsikt.", en: "From the mountain you have a nice view." }
+  - { type: dictation, sv: "På sommaren äter vi bär och svamp från skogen.", en: "In summer we eat berries and mushrooms from the forest." }
+  - { type: dictation, sv: "Jag tycker om smaken av färsk lax.", en: "I like the taste of fresh salmon." }
+
+  # say it in Swedish
+  - { type: translate, en: "Which province do you come from?", sv: "Vilket landskap kommer du från?", accept: ["Från vilket landskap kommer du?"] }
+  - { type: translate, en: "The island is known for its fish.", sv: "Ön är känd för sin fisk." }
+  - { type: translate, en: "Boil the potatoes for 20 minutes.", sv: "Koka potatisen i 20 minuter.", grammar: [imperative] }
+
+  # write your own text
+  - { type: free_write, en: "Write 4 or 5 sentences about a place you like: where it is, what it is known for, and what people eat there.",
+      checklist: ["I use som and där once each.", "I use one verb with particle and preposition.", "I use two perfect participles in the right form.", "I say what the place is known for."],
+      sv: "Den plats som jag tycker mest om är en liten by som ligger vid kusten. Det är en plats där man kan vandra och se havet från berget. Byn är känd för sin lax, som man äter stekt med kokt potatis. Husen är byggda nära vattnet. Jag ser fram emot att åka tillbaka varje sommar.",
+      grammar: [relative_clause, participles] }

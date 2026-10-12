@@ -506,7 +506,7 @@ task units.
 - Its words live in the pack of the book (`themes/bok_b.yaml`), about 15 per chapter.
 - Items are tagged with existing grammar points, so the reference cards are linked.
   A book topic without a card of ours gets no tag (and may get a card later).
-- Chapters 1-11 of the B1+B2 book are level B1, 12-18 are B2. Written so far: 1-6.
+- Chapters 1-11 of the B1+B2 book are level B1, 12-18 are B2. All 18 are written.
 ---
 
 ## Milestones

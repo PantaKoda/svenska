@@ -1,0 +1,57 @@
+id: bok-b-12
+level: B2
+book: "B1+B2"
+chapter: 12
+theme: bok_b
+title: "Mod och konflikter"
+task: "Extra practice for chapter 12, on daring, starting again in a new country, and conflicts."
+can_do: "I can soften what I say with nog, väl and ju, say what happens once something is done, and use som helst."
+focus: ["nog, väl, ju", "perfect about the future", "question word + som helst"]
+names: [Sara, Omar, Sverige]
+
+new_words: [mod, modig, feg, våga, äventyr, konflikt, kompromiss, missförstånd, ursäkt, förlåta, hota, hemland, anpassa, gräl, be]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 6
+
+exercises:
+  # nog, väl or ju?
+  - { type: cloze, sv: "Du vågar ___ fråga henne? Du är ju inte feg.", hint: "väl / nog", answer: väl, en: "You dare ask her, don't you? You are not a coward, after all.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: cloze, sv: "Det var ___ bara ett missförstånd, tror jag.", hint: "nog / ju", answer: nog, en: "It was probably just a misunderstanding, I think.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: cloze, sv: "Vi har ___ redan pratat om det, som du vet.", hint: "ju / väl", answer: ju, en: "We have already talked about it, as you know.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: word_order, sv: "Hon förlåter dig nog om du ber om ursäkt.", en: "She will probably forgive you if you apologise.", grammar: [sentence_adverbs_nog_val_ju] }
+  - { type: listen_choose, sv: "Du kommer väl ihåg vårt gräl?", en: "You remember our quarrel, don't you?",
+      options: ["The speaker expects the answer yes.", "The speaker is sure and is not asking.", "The speaker thinks the answer is no."], answer: "The speaker expects the answer yes." }
+
+  # first it is done, then ...
+  - { type: cloze, sv: "När vi har ___ konflikten, kan vi arbeta igen.", hint: lösa, answer: löst, en: "When we have solved the conflict, we can work again.", grammar: [perfect_for_future] }
+  - { type: cloze, sv: "Jag ringer dig när jag har ___ mig.", hint: bestämma, answer: bestämt, en: "I will call you when I have decided.", grammar: [perfect_for_future] }
+  - { type: word_order, sv: "Du känner dig bättre när du har bett om ursäkt.", en: "You will feel better when you have apologised.", grammar: [perfect_for_future] }
+  - { type: translate, en: "When I have adapted, I will feel at home here.", sv: "När jag har anpassat mig, kommer jag att känna mig hemma här.",
+      accept: ["När jag har anpassat mig, känner jag mig hemma här."], grammar: [perfect_for_future] }
+
+  # any ... at all
+  - { type: cloze, sv: "Den som är modig kan flytta ___ som helst.", hint: "var / vem", answer: var, en: "Someone who is brave can move anywhere.", grammar: [som_helst] }
+  - { type: cloze, sv: "Ett missförstånd kan hända ___ som helst.", hint: "vad / vem", answer: vem, en: "A misunderstanding can happen to anyone.", grammar: [som_helst] }
+  - { type: cloze, sv: "Du får säga ___ som helst, men hota mig inte.", hint: "vad / var", answer: vad, en: "You may say anything, but do not threaten me.", grammar: [som_helst] }
+  - { type: translate, en: "You can call me at any time.", sv: "Du kan ringa mig när som helst.", grammar: [som_helst] }
+
+  # listen and write
+  - { type: dictation, sv: "Det krävs mod för att lämna sitt hemland.", en: "It takes courage to leave your home country.", review: true }
+  - { type: dictation, sv: "Vi hittade en kompromiss efter ett långt gräl.", en: "We found a compromise after a long quarrel.", review: true }
+  - { type: dictation, sv: "Livet i ett nytt land är ett äventyr.", en: "Life in a new country is an adventure." }
+  - { type: dictation, sv: "Han vågade inte säga sanningen.", en: "He did not dare tell the truth." }
+
+  # say it in Swedish
+  - { type: translate, en: "Can you forgive me?", sv: "Kan du förlåta mig?" }
+  - { type: translate, en: "She is brave, but I am a coward.", sv: "Hon är modig, men jag är feg." }
+  - { type: translate, en: "It was a misunderstanding.", sv: "Det var ett missförstånd." }
+  - { type: translate, en: "Nobody may threaten you.", sv: "Ingen får hota dig." }
+
+  # write your own text
+  - { type: free_write, en: "Write 5 or 6 sentences about something you dared to do, or about a conflict that ended well.",
+      checklist: ["I use nog, väl or ju twice.", "I use när ... har + supine once.", "I use a word with som helst.", "I say how it ended."],
+      sv: "Att flytta till Sverige var det modigaste som jag har gjort. Jag visste ju inte mycket om landet, och jag var rädd för att göra fel. I början hade jag ett gräl med en granne, men det var nog bara ett missförstånd. Jag bad om ursäkt, och han förlät mig. När jag har anpassat mig, kommer jag att kunna bo var som helst.",
+      grammar: [sentence_adverbs_nog_val_ju, perfect_for_future, som_helst] }

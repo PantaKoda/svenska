@@ -1,0 +1,58 @@
+id: bok-b-10
+level: B1
+book: "B1+B2"
+chapter: 10
+theme: bok_b
+title: "I hushållet"
+task: "Extra practice for chapter 10, on everyday household tips."
+can_do: "I can say how things are done without saying who does them, with the s-passive in the present, past and after helping verbs."
+focus: ["s-passive", "the forms of the s-passive"]
+names: [Sara, Sverige]
+
+new_words: [hushåll, disk, diska, stryka, fläck, sopa, återvinna, sortera, plast, glas, papper, burk, förvara, frysa, ugn, blanda]
+new_grammar: []
+
+core:
+  templates: [inflect]
+  items_per_template: 8
+
+exercises:
+  # present: what is done, in general
+  - { type: cloze, sv: "Soporna ___ varje vecka.", hint: sortera, answer: sorteras, en: "The rubbish is sorted every week.", grammar: [passive_s] }
+  - { type: cloze, sv: "Mjölken ___ i kylskåpet.", hint: förvara, answer: förvaras, en: "The milk is kept in the fridge.", grammar: [passive_s] }
+  - { type: cloze, sv: "Glas och papper ___ i Sverige.", hint: återvinna, answer: återvinns, en: "Glass and paper are recycled in Sweden.", grammar: [passive_s] }
+  - { type: cloze, sv: "Smöret och äggen ___ först.", hint: blanda, answer: blandas, en: "The butter and the eggs are mixed first.", grammar: [passive_s] }
+
+  # past and perfect
+  - { type: cloze, sv: "Disken ___ igår kväll.", hint: diska, answer: diskades, en: "The washing-up was done yesterday evening.", grammar: [passive_s], review: true }
+  - { type: cloze, sv: "Brödet ___ i ugnen i en timme.", hint: laga, answer: lagades, en: "The bread was cooked in the oven for an hour.", grammar: [passive_s], review: true }
+  - { type: cloze, sv: "Burkarna har redan ___.", hint: sortera, answer: sorterats, en: "The cans have already been sorted.", grammar: [passive_s] }
+
+  # after a helping verb: infinitive + s
+  - { type: cloze, sv: "Fisken kan ___ i 3 månader.", hint: frysa, answer: frysas, en: "The fish can be frozen for 3 months.", grammar: [passive_s] }
+  - { type: cloze, sv: "Plast ska ___ från papper.", hint: sortera, answer: sorteras, en: "Plastic is to be sorted from paper.", grammar: [passive_s] }
+  - { type: cloze, sv: "Fläcken måste ___ snabbt.", hint: tvätta, answer: tvättas, en: "The stain must be washed quickly.", grammar: [passive_s] }
+
+  # active to passive
+  - { type: translate, en: "The bread is kept in a bag.", sv: "Brödet förvaras i en påse.", grammar: [passive_s] }
+  - { type: word_order, sv: "Maten lagas i ugnen i 40 minuter.", en: "The food is cooked in the oven for 40 minutes.", grammar: [passive_s] }
+  - { type: word_order, sv: "Papper och plast får inte blandas.", en: "Paper and plastic must not be mixed.", grammar: [passive_s] }
+  - { type: listen_choose, sv: "Burkarna återvinns.", en: "The cans are recycled.",
+      options: ["Someone recycles the cans.", "The cans recycle something.", "The cans were thrown away."], answer: "Someone recycles the cans." }
+
+  # listen and write
+  - { type: dictation, sv: "Vem diskar i ditt hushåll?", en: "Who does the washing-up in your household?" }
+  - { type: dictation, sv: "Jag stryker aldrig mina kläder.", en: "I never iron my clothes.", review: true }
+  - { type: dictation, sv: "Det är en fläck på glaset.", en: "There is a stain on the glass." }
+  - { type: dictation, sv: "Vi sorterar plast, glas och papper.", en: "We sort plastic, glass and paper." }
+
+  # say it in Swedish
+  - { type: translate, en: "Where shall I keep the bread?", sv: "Var ska jag förvara brödet?" }
+  - { type: translate, en: "The oven is hot.", sv: "Ugnen är varm." }
+  - { type: translate, en: "Can you freeze milk?", sv: "Kan man frysa mjölk?", accept: ["Kan mjölk frysas?"] }
+
+  # write your own text
+  - { type: free_write, en: "Write a household tip in 4 or 5 sentences (for example how to keep food fresh or how to sort rubbish). Do not say who does it.",
+      checklist: ["I use the s-passive in the present three times.", "I use one s-passive after kan, ska or måste.", "The steps are in a clear order.", "I do not use jag or du."],
+      sv: "Så här sorteras soporna i ett hushåll. Glas, papper och plast läggs i 3 påsar. Burkar diskas innan de återvinns. Mat som inte äts upp kan frysas i burkar av plast. Påsarna lämnas sedan på en plats där allt återvinns.",
+      grammar: [passive_s], review: true }

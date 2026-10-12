@@ -3,66 +3,130 @@
 unit: theme-bok_b
 items:
 - type: inflect
-  answer: skratta
+  answer: lurade
   grammar:
-  - imperative
-  lemma: skratta
-  form: imp
+  - past_tense
+  lemma: lura
+  form: past
   words:
-  - skratta
+  - lura
 - type: inflect
-  answer: jagar
+  answer: glassen
   grammar:
-  - present_tense
-  lemma: jaga
-  form: pres
+  - def_singular
+  lemma: glass
+  form: def
   words:
-  - jaga
+  - glass
 - type: inflect
-  answer: en natur
+  answer: en simhall
   grammar:
   - en_ett
-  lemma: natur
+  lemma: simhall
   form: a
   words:
-  - natur
+  - simhall
 - type: inflect
-  answer: björnarna
+  answer: huset
+  grammar:
+  - def_singular
+  lemma: hus
+  form: def
+  words:
+  - hus
+- type: inflect
+  answer: landskapen
   grammar:
   - plural_def
-  lemma: björn
+  lemma: landskap
   form: pl_def
   words:
-  - björn
+  - landskap
 - type: inflect
-  answer: utgiften
+  answer: en hjälte
+  grammar:
+  - en_ett
+  lemma: hjälte
+  form: a
+  words:
+  - hjälte
+- type: inflect
+  answer: en roman
+  grammar:
+  - en_ett
+  lemma: roman
+  form: a
+  words:
+  - roman
+- type: inflect
+  answer: en spelare
+  grammar:
+  - en_ett
+  lemma: spelare
+  form: a
+  words:
+  - spelare
+- type: inflect
+  answer: brände
+  grammar:
+  - past_tense
+  lemma: bränna
+  form: past
+  words:
+  - bränna
+- type: inflect
+  answer: utvecklingen
   grammar:
   - def_singular
-  lemma: utgift
+  lemma: utveckling
   form: def
   words:
-  - utgift
+  - utveckling
 - type: inflect
-  answer: springer
-  grammar:
-  - present_tense
-  lemma: springa
-  form: pres
-  words:
-  - springa
-- type: inflect
-  answer: samhället
-  grammar:
-  - def_singular
-  lemma: samhälle
-  form: def
-  words:
-  - samhälle
-- type: inflect
-  answer: hundar
+  answer: runstenar
   grammar:
   - plural_indef
-  lemma: hund
+  lemma: runsten
   form: pl
   words:
-  - hund
+  - runsten
+- type: inflect
+  answer: vikingarna
+  grammar:
+  - plural_def
+  lemma: viking
+  form: pl_def
+  words:
+  - viking
+- type: inflect
+  answer: gemenskaperna
+  grammar:
+  - plural_def
+  lemma: gemenskap
+  form: pl_def
+  words:
+  - gemenskap
+- type: inflect
+  answer: utvecklade
+  grammar:
+  - past_tense
+  lemma: utveckla
+  form: past
+  words:
+  - utveckla
+- type: inflect
+  answer: tänt
+  grammar:
+  - perfect_tense
+  lemma: tända
+  form: sup
+  words:
+  - tända
+- type: inflect
+  answer: ett gräl
+  grammar:
+  - en_ett
+  lemma: gräl
+  form: a
+  words:
+  - gräl

@@ -406,6 +406,11 @@ The colours are in `Svenska.App/Themes/Palette.axaml`, the control styles in
   marks the next thing to do (the next unit, the start button, check/next) and nothing else.
 - Right and wrong differ by a mark (✓ ✗), weight and underline as well as colour, never
   red against green alone. Text keeps a contrast of at least 4.5 : 1.
+- Two colour sets, chosen under Appearance: **Calm** (the above, with a free accent) and
+  **Sverige** (light "Björk", dark "Vinternatt"): softened flag blue marks the next thing
+  to do, softened flag yellow fills progress bars, and nouns in the word list are blue
+  for en-words and yellow-brown for ett-words. Its colours are in `Appearance.cs`
+  (`SverigeColours`) and override Palette.axaml while it is chosen.
 - No flashing, no pulsing, no confetti; the end of a round looks the same every time.
   No streaks and nothing that punishes leaving.
 

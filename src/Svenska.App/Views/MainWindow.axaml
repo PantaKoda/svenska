@@ -28,7 +28,13 @@
                                         <Button Content="Day" Command="{Binding SetThemeCommand}" CommandParameter="day" />
                                         <Button Content="Evening" Command="{Binding SetThemeCommand}" CommandParameter="evening" />
                                     </StackPanel>
-                                    <TextBlock Classes="label" Text="ACCENT" Margin="0,6,0,0" />
+                                    <TextBlock Classes="label" Text="COLOURS" Margin="0,6,0,0" />
+                                    <StackPanel Orientation="Horizontal" Spacing="6">
+                                        <Button Content="Calm" Command="{Binding SetPaletteCommand}" CommandParameter="calm" />
+                                        <Button Content="Sverige" Command="{Binding SetPaletteCommand}" CommandParameter="sverige"
+                                                ToolTip.Tip="Flag blue and yellow, softened: Björk by day, Vinternatt in the evening" />
+                                    </StackPanel>
+                                    <TextBlock Classes="label" Text="ACCENT (CALM)" Margin="0,6,0,0" />
                                     <ItemsControl ItemsSource="{Binding Accents}">
                                         <ItemsControl.ItemsPanel>
                                             <ItemsPanelTemplate><StackPanel Orientation="Horizontal" Spacing="10" /></ItemsPanelTemplate>

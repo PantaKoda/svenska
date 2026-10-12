@@ -31,7 +31,8 @@
                             <DataTemplate x:DataType="vm:WordRow">
                                 <Button Classes="chip" Command="{Binding Play}" Margin="0,0,8,8" Width="178">
                                     <StackPanel>
-                                        <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold" />
+                                        <TextBlock Text="{Binding Swedish}" FontWeight="SemiBold"
+                                                   Classes.en="{Binding IsEn}" Classes.ett="{Binding IsEtt}" />
                                         <TextBlock Classes="muted" Text="{Binding Gloss}" FontSize="12" TextTrimming="CharacterEllipsis" />
                                     </StackPanel>
                                 </Button>

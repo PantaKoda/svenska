@@ -184,8 +184,15 @@
         <Setter Property="MinHeight" Value="150" />
         <Setter Property="FontSize" Value="16" />
     </Style>
+    <!-- en-words and ett-words: coloured in the Swedish colour set, plain otherwise -->
+    <Style Selector="TextBlock.en">
+        <Setter Property="Foreground" Value="{DynamicResource EnWordBrush}" />
+    </Style>
+    <Style Selector="TextBlock.ett">
+        <Setter Property="Foreground" Value="{DynamicResource EttWordBrush}" />
+    </Style>
     <Style Selector="ProgressBar">
-        <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource ProgressBrush}" />
         <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
         <Setter Property="CornerRadius" Value="3" />
         <Setter Property="MinHeight" Value="6" />

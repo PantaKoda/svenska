@@ -6,7 +6,12 @@ using Svenska.Core.Generation;
 
 namespace Svenska.App.ViewModels;
 
-public sealed record WordRow(string Swedish, string Gloss, IRelayCommand Play);
+/// <param name="Article">"en" or "ett" for a noun, so the word can carry its colour; else empty.</param>
+public sealed record WordRow(string Swedish, string Gloss, IRelayCommand Play, string Article = "")
+{
+    public bool IsEn => Article == "en";
+    public bool IsEtt => Article == "ett";
+}
 
 public sealed record LineRow(string Speaker, string Sv, string En, IRelayCommand Play, IRelayCommand PlaySlow);
 
@@ -52,7 +57,8 @@ public partial class UnitViewModel : ObservableObject
             var word = packWords.GetValueOrDefault(lemma);
             // Nouns are learnt with their article: "en ost", "ett bröd".
             var swedish = word is { Pos: "noun", Gender: not null } ? $"{word.Gender} {lemma}" : lemma;
-            return new WordRow(swedish, word == null ? "" : English.Meaning(word), new RelayCommand(() => services.Play(lemma)));
+            return new WordRow(swedish, word == null ? "" : English.Meaning(word), new RelayCommand(() => services.Play(lemma)),
+                word is { Pos: "noun" } ? word.Gender ?? "" : "");
         }).ToList();
 
         Phrases = unit.Phrases.Select(p => new WordRow(p.Sv, p.En, new RelayCommand(() => services.Play(p.Sv)))).ToList();

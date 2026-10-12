@@ -43,6 +43,10 @@ public partial class MainWindowViewModel : ObservableObject
     [RelayCommand]
     private void SetTheme(string theme) => Services.Appearance.SetTheme(theme);
 
+    /// <summary>"calm" or "sverige".</summary>
+    [RelayCommand]
+    private void SetPalette(string palette) => Services.Appearance.SetPalette(palette);
+
     [RelayCommand]
     private void Home()
     {
